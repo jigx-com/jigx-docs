@@ -1,5 +1,5 @@
 ---
-title: Getting started (Space 2)
+title: Space 2
 ---
 
 

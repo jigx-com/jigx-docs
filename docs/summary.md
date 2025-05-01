@@ -8,3 +8,12 @@
 ## Building Apps with Jigx
  
 - [Additional functionality](<Building Apps with Jigx/Additional functionality.md>)
+
+
+## Space 1
+
+- [Space 1](<space-1/space-1.md>)
+
+## Space 2
+
+- [Space 2](<space-2/space-2.md>)
