@@ -10,7 +10,7 @@ You can access your profile either by clicking on your name in the bottom left o
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" size="60" width="1582" height="1598" darkWidth="1582" darkHeight="1598" position="center" caption="User Profile screen" alt="User Profile screen"}
 
-![User Profile screen](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png "User Profile screen")
+![User Profile screen](../../assets/user-profile-screen.png "User Profile screen")
 
 ### Organization Role
 
