@@ -1,0 +1,16 @@
+root: docs
+structure:
+  - "*"
+  # summary: summary.md
+  # assets: assets
+publishSpace: false
+# headerIncludes:  |
+# <script>
+#   document.getElementById("demo").innerHTML = "Hello JavaScript!";
+# </script>
+
+
+# This will include all code files from your repo
+# shadowDocs: 
+#   - "*"
+# root: quickstart
