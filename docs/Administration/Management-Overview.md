@@ -12,7 +12,8 @@ Jigx Management can be found at <a href="https://manage.jigx.com" target="_blank
 
 Your Jigx user account has to be in the ADMIN, OWNER, or CREATOR  on a organization role level to be able to log into the Jigx Management. The user who signed up for Jigx is the initial OWNER of the organization and can manage user roles in the [Users](./Users.md) section of the portal. You can assign roles to users in the [Users](./Users.md) section of Jigx Management. See [Permissions - User Roles](<./Permissions - User Roles.md>) to learn more about the different roles.
 
-::Image[]{alt="Management log in" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/04eGEsHDKX61nq8Y-lTbF_jm-login.png" size="62" width="1538" height="1684" caption="Management log in" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O1IGT48ThIAeY1nnEcnAf_jm-logindark.png" position="center" darkWidth="1542" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/04eGEsHDKX61nq8Y-lTbF_jm-login.png" darkHeight="1692"}
+<!-- ::Image[]{alt="Management log in" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/04eGEsHDKX61nq8Y-lTbF_jm-login.png" size="62" width="1538" height="1684" caption="Management log in" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O1IGT48ThIAeY1nnEcnAf_jm-logindark.png" position="center" darkWidth="1542" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/04eGEsHDKX61nq8Y-lTbF_jm-login.png" darkHeight="1692"} -->
+![Log into Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O1IGT48ThIAeY1nnEcnAf_jm-logindark.png "Log into Jigx Management")
 
 ## Log out of the Jigx Management
 
