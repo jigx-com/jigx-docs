@@ -7,4 +7,4 @@
  
 ## Building Apps with Jigx
  
-- [Additional functionality](Building Apps with Jigx/Additional functionality.md)
+- [Additional functionality](Building-Apps-with-Jigx/Additional-functionality.md)
