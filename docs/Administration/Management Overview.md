@@ -1,6 +1,6 @@
 # Management Overview
 
-Jigx Management can be found at <a href="https://manage.jigx.com" target="_blank">https\://manage.jigx.com</a>[https://manage.jigx.com](https://manage.jigx.com)  and is the central site for managing users, and solutions, sending push notifications, and viewing usage metrics of your organization. **Test content in GitHub**
+Jigx Management can be found at [https://manage.jigx.com](https://manage.jigx.com)  and is the central site for managing users, and solutions, sending push notifications, and viewing usage metrics of your organization. **Test content in GitHub**
 
 ## Log into Jigx Management
 

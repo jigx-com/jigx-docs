@@ -3,7 +3,7 @@
 ## Administration
  
 - [Management Overview](<Administration/Management Overview.md>)
-- [My profile](Administration/My-profile.md)
+- [My profile](<Administration/My profile.md>)
  
 ## Building Apps with Jigx
  
