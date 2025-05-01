@@ -9,6 +9,7 @@ updatedAt: Wed Oct 02 2024 12:18:36 GMT+0000 (Coordinated Universal Time)
 You can access your profile either by clicking on your name in the bottom left of the screen and selecting *My profile* from the menu, or by finding and clicking on your name in the [Users](./Users.md) list. You can easily change *organization roles*, quickly *switch between organizations*, *disable a user*, or* remove a user from an organization*.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" size="60" width="1582" height="1598" darkWidth="1582" darkHeight="1598" position="center" caption="User Profile screen" alt="User Profile screen"}
+
 ["User Profile screen"](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png "User Profile screen")
 
 ### Organization Role
