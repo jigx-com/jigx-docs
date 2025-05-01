@@ -1,0 +1,24 @@
+---
+title: Microsoft Graph OAuth
+slug: LkgK-microsoft-graph
+description: Learn how to integrate Jigx with Microsoft Graph using REST API. This comprehensive guide covers essential code samples and step-by-step instructions for authentication, including setting up an administrative account for Microsoft AAD and configuring Jigx
+createdAt: Sun Mar 26 2023 16:59:31 GMT+0000 (Coordinated Universal Time)
+updatedAt: Mon May 06 2024 15:10:22 GMT+0000 (Coordinated Universal Time)
+---
+
+This section contains steps to create an OAuth app for MS Graph, add the OAuth configuration to Jigx Management and then use the configuration in a Jigx solution.  Various code samples showing how to use the Microsoft Graph API with the REST data provider are provided.
+
+:::hint{type="info"}
+To use Jigx with Microsoft Graph you will need an administrative account for Microsoft AAD to configure a Jigx Enterprise App, allowing Jigx to use OAuth authentication with Microsoft Graph.
+
+Follow the steps in [Configuring OAuth for MS Graph](<./Microsoft Graph OAuth/Configuring OAuth for MS Graph.md>) to configure OAuth for the Microsoft environment being used and add the necessary settings to Jigx Cloud.
+:::
+
+## Examples and code snippets
+
+1. [Graph User Profile]() - provides sample code to get a user's profile information from Microsoft Graph. It includes a [code sample]() for updating a user's profile picture in Microsoft Graph.&#x20;
+2. [Graph Calendar]() - provides sample code to get a list of the user's calendars and renders a calendar in a schedule view on a jig. It includes a code sample on adding calendar entries to a user's Microsoft 365 calendar in Exchange.&#x20;
+3. [Graph Mail]() - provides sample code to get a list of emails for a user and displays the emails in a list jig. Press on an email to view the content of the email.&#x20;
+4. [Graph tasks]() - provides sample code to get a list of To-do tasks for a user and displays the tasks in a list jig.
+5. [Graph Insights]() - provides sample code to get insights that include a list of documents trending around the user and displays the list in a list jig.
+

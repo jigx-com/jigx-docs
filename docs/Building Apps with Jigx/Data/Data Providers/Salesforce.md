@@ -1,0 +1,77 @@
+---
+title: Salesforce
+slug: yT-b-sales
+description: Learn how to integrate the {{Jigx}} Salesforce provider with your Salesforce instance for seamless data sharing. This document covers everything from managing customer information, sales processes, and marketing campaigns to utilizing CRUD methods and acc
+createdAt: Tue Jul 18 2023 06:51:21 GMT+0000 (Coordinated Universal Time)
+updatedAt: Fri Nov 24 2023 11:51:09 GMT+0000 (Coordinated Universal Time)
+---
+
+Jigx easily integrates with your Salesforce instance, allowing you to share data about customers, sales processes, marketing campaigns, and more. The Jigx Salesforce provider exposes the standard and custom Salesforce objects. You can manage your customer data, such as leads, contacts, accounts, and opportunities, using CRUD methods.&#x20;
+
+::embed[]{url="https://vimeo.com/846066533"}
+
+::::VerticalSplit{layout="middle"}
+:::VerticalSplitItem
+The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](), [lists](), [widgets](./../../../Administration/Solutions/Widgets.md), or [steppers]().
+:::
+
+:::VerticalSplitItem
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" size="76" width="1240" height="2500" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard"}
+:::
+::::
+
+## Architecture
+
+The Salesforce provider uses the Jigx Cloud service, where the data passes through the service and is not stored. There is an intermediate layer between the mobile device and Salesforce. Many records can exist in Salesforce; as a result, Jigx fetches the records in batches.
+
+## Prerequisites
+
+1. You must have an active Salesforce account.&#x20;
+2. Permissions set in Salesforce are adhered to in the Jigx App. This means you can see the same data in the app as in Salesforce. When viewing the data in the Jigx App you will be prompted to sign in with your Salesforce credentials.
+3. Building apps using the Salesforce provider requires a pre-existing knowledge of Salesforce objects, their records, fields, tables, and variables. Take note of the required fields for each table. An overview of Salesforce objects is available in the Salesforce platform; follow the path Settings > Setup Home > Object Manager > Schema Builder or refer to the <a href="https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm" target="_blank">Salesforce object reference</a> documentation. Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data.
+
+## Supported methods:&#x20;
+
+- [Create]()
+- [Delete]()
+- [Save]()
+- [Update]()
+- [Read/list]()
+
+## Syncing data&#x20;
+
+By default, the provider returns all Salesforce fields and columns. Consider the data size shown in the app and the number of columns you want returned. Salesforce can have many records, and showing large numbers of records can impact the performance of the app, your data plan, and your mobile device. Try to return just the data you require in the app and restrict the columns; this is achievable using queries. Below is an example of a query returning data between specific dates from the Salesforce Opportunity object.
+
+```yaml
+type: datasource.sqlite
+options:
+  provider: DATA_PROVIDER_LOCAL
+  entities:
+    - Opportunity
+  query: >
+    select id , sum(json_extract(data , '$.Amount')) as totalsales  from
+    Opportunity
+    where 
+    json_extract(data, '$.StageName') = 'Closed Won'
+    and json_extract(data, '$.CloseDate') between '2020-01-01' and '2020-03-31'
+```
+
+## Considerations
+
+1. The permission set assigned to a user in Salesforce determining what they can view and interact with is adhered to in the Jigx App allowing the user to view and interact with only the data they have rights to.
+2. Limitation - you can use the Salesforce provider to create a list of reports in Salesforce but cannot run the report from the app.&#x20;
+3. See [Using the Salesforce provider](<./Salesforce/Using the Salesforce provider.md>) section for code examples on referencing multiple Salesforce objects, queries that define the data to be returned and creating joins between objects using expressions.&#x20;
+4. Salesforce is set up for your individual organization and each instance will be different, the examples in th section are provided for guidance on using the Salesforce provider's methods and must be adapted to work with your specific instance.  &#x20;
+5. Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data. You can copy and paste the queries into Jigx Builder.
+
+
+
+## &#x20;Examples and code snippets
+
+The following examples with code snippets are provided:
+
+- [Create records in objects]()
+- [Delete records in objects]()
+- [Save & update records in objects]()
+- [List records in objects]()
+
