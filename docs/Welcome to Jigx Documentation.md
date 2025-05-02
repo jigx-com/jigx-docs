@@ -10,7 +10,7 @@ updatedAt: Thu May 01 2025 07:09:29 GMT+0000 (Coordinated Universal Time)
 :::CtaButton{url="docId:7TJh3NYYZH1yL05Dem4j4" label="Getting started"}
 
 :::
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" size="94" width="1280" height="720" position="center" caption}
 [Jigx Landing Page](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif "Jigx Landing Page")
 ***
 
