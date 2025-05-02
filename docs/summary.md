@@ -1,5 +1,3 @@
-# Table of contents
-
 - [Welcome to Jigx Documentation](<Welcome to Jigx Documentation.md>)
 
 ## Getting started
