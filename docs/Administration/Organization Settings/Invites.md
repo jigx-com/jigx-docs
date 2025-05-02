@@ -11,7 +11,7 @@ When you create an organization in Jigx Management, a default invite is automati
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
 <!-- ::Image[image]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" size="92" width="1886" height="1500" position="center" caption="Invite email template" alt="Invite email template"} -->
-<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" size="92" width="1886" height="1500" position="center" caption="Invite email template" alt="Invite email template" />
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" size="92" position="center" caption="Invite email template" alt="Invite email template" />
 :::
 
 :::VerticalSplitItem
