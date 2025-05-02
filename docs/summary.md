@@ -2,11 +2,11 @@
 
 ## Getting started
 
-- [Creating an account](<Creating an account/Creating an account.md>)
-- [Install the Jigx Builder](<Install the Jigx Builder/Install the Jigx Builder.md>)
-- [Use templates to create apps](<Use templates to create apps/Use templates to create apps.md>)
-- [Create an app from scratch](<Create an app from scratch/Create an app from scratch.md>)
-  - [Create the Hello Jigx solution project](<Create the Hello Jigx solution project/Create the Hello Jigx solution project.md>)
+- [Creating an account](<Getting started/Creating an account.md>)
+- [Install the Jigx Builder](<Getting started/Install the Jigx Builder.md>)
+- [Use templates to create apps](<Getting started/Use templates to create apps.md>)
+- [Create an app from scratch](<Getting started/Create an app from scratch.md>)
+  - [Create the Hello Jigx solution project](<Getting started/Create an app from scratch/Create the Hello Jigx solution project.md>)
 
 
 ## Understanding the basics
