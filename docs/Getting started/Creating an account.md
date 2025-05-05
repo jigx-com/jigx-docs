@@ -20,7 +20,9 @@ Register at <a href="http://manage.jigx.com/register" target="_blank">manage.jig
 Registering with a non-work email e.g. Gmail does not check for existing organizations or allow other people to find your organization during registration. To join or share your organization you need to invite people from Jigx Management.
 :::
 
-::Image[]{alt="Registration screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L_register1.png" size="62" width="1070" height="1300" caption="Registration screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L_register1.png"}
+<!-- ::Image[]{alt="Registration screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L_register1.png" size="62" width="1070" height="1300" caption="Registration screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L_register1.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L_register1.png" size="62" width="1070" height="1300" caption="Registration screen" position="center" alt="Registration screen" />
+
 
 ### Verify your email&#x20;
 
@@ -28,7 +30,8 @@ Registering with a non-work email e.g. Gmail does not check for existing organiz
 2. Create a **password** following the Jigx password requirements (as displayed on the screen) and click **Continue**.
 
 
-::Image[]{alt="Registration Pin code" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0_register2.png" size="62" width="523" height="787" caption="Registration Pin code" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0_register2.png"}
+<!-- ::Image[]{alt="Registration Pin code" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0_register2.png" size="62" width="523" height="787" caption="Registration Pin code" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0_register2.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0_register2.png" size="62" width="523" height="787" caption="Registration Pin code" alt="Registration Pin code" position="center" />
 
 ### Join  or create an organization
 
@@ -36,15 +39,18 @@ Registering with a non-work email e.g. Gmail does not check for existing organiz
 2. Alternatively, you can choose to create a new organization by clicking the link, providing a name, and deciding who can see or join your organization based on the email domain.
 3. Next Jigx Management opens on the **Quick Start** screen. Now you are ready to start building, using, and administering Jigx solutions.
 
-::Image[]{alt="Join an organization" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S_register3.png" size="62" width="1152" height="1230" caption="Join an organization" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S_register3.png"}
+<!-- ::Image[]{alt="Join an organization" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S_register3.png" size="62" width="1152" height="1230" caption="Join an organization" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S_register3.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S_register3.png" size="62" width="1152" height="1230" caption="Join an organization" alt="Join an organization" position="center" />
 
-::Image[]{alt="Create an organization" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz_register4.png" size="72" width="1362" height="1254" caption="Create an organization" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz_register4.png"}
+<!-- ::Image[]{alt="Create an organization" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz_register4.png" size="72" width="1362" height="1254" caption="Create an organization" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz_register4.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz_register4.png" size="72" width="1362" height="1254" caption="Create an organization" alt="Create an organization" position="center" />
 
 ## Invitation
 
 Your organization's Jigx administrator sends an onboarding email invitation to your inbox. This invitation includes instructions on how to download your Jigx app.&#x20;
 
-::Image[]{alt="Jigx invitation email" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2_screenshot-2023-04-11-at-153649.png" size="50" width="1178" height="1276" caption="Jigx invitation email" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2_screenshot-2023-04-11-at-153649.png"}
+<!-- ::Image[]{alt="Jigx invitation email" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2_screenshot-2023-04-11-at-153649.png" size="50" width="1178" height="1276" caption="Jigx invitation email" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2_screenshot-2023-04-11-at-153649.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2_screenshot-2023-04-11-at-153649.png" size="50" width="1178" height="1276" caption="Jigx invitation email" alt="Jigx invitation email" position="center" />
 
 The Jigx app is available on your iOS and Android apps and works on any device.
 
@@ -74,7 +80,8 @@ Now tap the **Get Started** button and fill in your email address&#x20;
 
 Once you tap the **Continue** button an email with your 6-digit long pin code is sent to your inbox.&#x20;
 
-::Image[]{alt="Jigx app verification email" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png" size="50" width="1168" height="1022" caption="Jigx app verification email" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png"}
+<!-- ::Image[]{alt="Jigx app verification email" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png" size="50" width="1168" height="1022" caption="Jigx app verification email" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png" size="50" width="1168" height="1022" caption="Jigx app verification email" position="center" alt="Jigx app verification email"/>
 
 Enter the One-Time Password (OTP) received in the email into the 2-Step verification screen. After entering your OTP code the password setup screen opens. Create a password following the Jigx password requirements (as displayed on the screen).
 
