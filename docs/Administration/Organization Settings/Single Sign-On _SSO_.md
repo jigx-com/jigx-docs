@@ -12,7 +12,10 @@ Single Sign-On is set on an organizational level in Jigx Management, allowing us
 
 SSO is only applicable when signing in on the Jigx App. To log in to Jigx Management (<a href="https://manage.jigx.com" target="_blank">manage.jigx.com</a>) the organization `OWNER`* *and `ADMIN` must use their Jigx accounts.&#x20;
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" size="82" width="496" height="720" position="center" caption}
+<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" size="82" width="496" height="720" position="center" caption} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" size="82" width="496" height="720" position="center" />
+
+
 
 ## Domain configuration support
 

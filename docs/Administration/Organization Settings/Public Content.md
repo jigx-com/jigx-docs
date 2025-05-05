@@ -7,7 +7,8 @@ updatedAt: Tue Jun 18 2024 08:43:13 GMT+0000 (Coordinated Universal Time)
 
 Public content lets you specify what is accessible to the public on your organization's branded app before a user has onboarded or logged in.&#x20;
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY_U7Y_OzQFvmW_m-publiccontentex2.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY_U7Y_OzQFvmW_m-publiccontentex2.png" size="80" width="3762" height="2496" position="center" caption="Public content in app " alt="Public content in app "}
+<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY_U7Y_OzQFvmW_m-publiccontentex2.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY_U7Y_OzQFvmW_m-publiccontentex2.png" size="80" width="3762" height="2496" position="center" caption="Public content in app " alt="Public content in app "} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY_U7Y_OzQFvmW_m-publiccontentex2.png" size="80" width="3762" height="2496" position="center" caption="Public content in app " alt="Public content in app " />
 
 1. Configure jigs and widgets that anyone can access without needing to log in or be authorized. &#x20;
 2. Configure links related to security
