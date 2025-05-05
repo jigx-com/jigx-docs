@@ -26,7 +26,7 @@ Install the Jigx Builder extension in Microsoft Visual Studio and create your Ji
 :::
 
 :::LinkArrayItem{headerImage headerColor}
-&#x20;     [Build](<./Building Apps with Jigx/Jigx Builder _code editor_.md>)&#x20;
+<i class="fa-solid fa-code"></i>     [Build](<./Building Apps with Jigx/Jigx Builder _code editor_.md>)&#x20;
 
 Start creating your mobile apps, use intellisense prompts and code completion to speed up development.
 :::
