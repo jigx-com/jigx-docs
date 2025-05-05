@@ -64,13 +64,15 @@ Now tap the **Get Started** button and fill in your email address&#x20;
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Jigx welcome screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png" size="80" width="1570" height="2932" caption="Jigx welcome screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png"}
+<!-- ::Image[]{alt="Jigx welcome screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png" size="80" width="1570" height="2932" caption="Jigx welcome screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png" size="80" width="1570" height="2932" caption="Jigx welcome screen" alt="Jigx welcome screen" position="center" />
 
 
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Sign in screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png" size="80" width="1570" height="2932" caption="Sign in screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png"}
+<!-- ::Image[]{alt="Sign in screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png" size="80" width="1570" height="2932" caption="Sign in screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png" size="80" width="1570" height="2932" caption="Sign in screen" alt="Sign in screen" position="center" />
 
 
 :::
@@ -81,19 +83,21 @@ Now tap the **Get Started** button and fill in your email address&#x20;
 Once you tap the **Continue** button an email with your 6-digit long pin code is sent to your inbox.&#x20;
 
 <!-- ::Image[]{alt="Jigx app verification email" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png" size="50" width="1168" height="1022" caption="Jigx app verification email" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png"} -->
-<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png" size="50" width="1168" height="1022" caption="Jigx app verification email" position="center" alt="Jigx app verification email"/>
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp_ZwsE2teIx5f_screenshot-2023-04-11-at-153852.png" size="50" width="1168" height="1022" caption="Jigx app verification email" position="center" alt="Jigx app verification email" />
 
 Enter the One-Time Password (OTP) received in the email into the 2-Step verification screen. After entering your OTP code the password setup screen opens. Create a password following the Jigx password requirements (as displayed on the screen).
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="2-Step verification screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW_1_KET5luAwixS2KAg_microsoftteams-image-9.png" size="80" width="1570" height="2932" caption="2-Step verification screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW_1_KET5luAwixS2KAg_microsoftteams-image-9.png"}
+<!-- ::Image[]{alt="2-Step verification screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW_1_KET5luAwixS2KAg_microsoftteams-image-9.png" size="80" width="1570" height="2932" caption="2-Step verification screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW_1_KET5luAwixS2KAg_microsoftteams-image-9.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW_1_KET5luAwixS2KAg_microsoftteams-image-9.png" size="80" width="1570" height="2932" caption="2-Step verification screen" alt="2-Step verification screen" position="center" />
 
 
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="New Password screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0_microsoftteams-image-8.png" size="80" width="1570" height="2932" caption="New Password screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0_microsoftteams-image-8.png"}
+<!-- ::Image[]{alt="New Password screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0_microsoftteams-image-8.png" size="80" width="1570" height="2932" caption="New Password screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0_microsoftteams-image-8.png"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0_microsoftteams-image-8.png" size="80" width="1570" height="2932" caption="New Password screen" alt="New Password screen" position="center" />
 
 
 :::
@@ -108,14 +112,15 @@ Once your new password is set, the [Home Hub](<./../Building Apps with Jigx/UI/H
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mv_nC_LnaktPRC1YuyP1C_img8613iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mv_nC_LnaktPRC1YuyP1C_img8613iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Empty Home Hub" alt="Empty Home Hub"}
+<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mv_nC_LnaktPRC1YuyP1C_img8613iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mv_nC_LnaktPRC1YuyP1C_img8613iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Empty Home Hub" alt="Empty Home Hub"} -->
+<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Mv_nC_LnaktPRC1YuyP1C_img8613iphone13blueportrait.png" size="82" width="1570" height="2932" position="center" caption="Empty Home Hub" alt="Empty Home Hub" />
 
 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sXjveVnrMG6lX3_o05ObS-20240808-090048.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sXjveVnrMG6lX3_o05ObS-20240808-090048.PNG" size="62" width="1240" height="2500" position="center" caption="Solution on home hub" alt="Solution on home hub"}
-
+<!-- ::Image[]{src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sXjveVnrMG6lX3_o05ObS-20240808-090048.PNG" signedSrc="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sXjveVnrMG6lX3_o05ObS-20240808-090048.PNG" size="62" width="1240" height="2500" position="center" caption="Solution on home hub" alt="Solution on home hub"} -->
+<img src="https://archbee-doc-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-sXjveVnrMG6lX3_o05ObS-20240808-090048.PNG" size="62" width="1240" height="2500" position="center" caption="Solution on home hub" alt="Solution on home hub" />
 
 :::
 ::::
