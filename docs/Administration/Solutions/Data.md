@@ -16,8 +16,9 @@ Use [Row Level Security](<./Row Level Security.md>) to protect and secure your d
 
 :::hint{type="info"}
 Tables will only show if the solution is published in Jigx Builder includes [Dynamic Data](<./../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>) table definitions.
+:::
 
-:::![Contents of the Products tablets](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vLG_i97La3Jsm2i2VwFP9_jm-datal.png "Contents of the Products table")
+![Contents of the Products tablets](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vLG_i97La3Jsm2i2VwFP9_jm-datal.png "Contents of the Products table")
 
 ## Adding new Records
 You can add records to a data table manually or by uploading a JSON or CSV file to populate the records in the columns in the table. To *manually* create a record:
@@ -50,7 +51,9 @@ To delete a table, follow these steps:
 3. The table is visible in the **Unused** tab.
 4. Optional: make a table backup by clicking the **Download** button. A JSON file containing the data records is downloaded.
 5. Click the **Delete Table** button at the top of the screen.
-6. Confirm you want to delete the table.### What you need to know about deleting tables* You can only delete a table not currently used in a solution.&#x20;
+6. Confirm you want to delete the table.
+### What you need to know about deleting tables
+* You can only delete a table not currently used in a solution.&#x20;
 * Deleting tables will delete all data records in the table, which is not recoverable. Delete tables with caution.&#x20;
 * Only the solution `owner` can delete a table.
 * The *Unused tab* is only visible to the solution `owner`.&#x20;
@@ -62,9 +65,13 @@ To delete a table, follow these steps:
 * Existing records in the unused table can be edited, but you cannot add new records.
 * [Row Level Security](docId\:xy4a9JXqIEBPICKan-N0M) access can be applied to existing records in the unused table.
 * You cannot apply [Data policies](docId\:es3EARyGcuVJpv8KFQDx4) to unused tables.
-* If you want to use the table in the solution again, simply add the table back to the *default.jigx *file and publish the solution. The table moves back to the **Available** tab in the Jigx Management>Data.&#x20;## Column SettingsThe **gear icon** at the top of the screen allows you to configure the columns in a table. The columns displayed in the Column settings side pane are the aggregated set of all columns for all records in that table. The `rid` and `Authorised Users` column are system columns, which are not shown by default.
+* If you want to use the table in the solution again, simply add the table back to the *default.jigx *file and publish the solution. The table moves back to the **Available** tab in the Jigx Management>Data.&#x20;
+## Column Settings
+The **gear icon** at the top of the screen allows you to configure the columns in a table. The columns displayed in the Column settings side pane are the aggregated set of all columns for all records in that table. The `rid` and `Authorised Users` column are system columns, which are not shown by default.
  1. **Visibilty** - check the checkbox next  to the column you want displayed in the table records. Similarily uncheck the column you want to hide in the table records. The `rid` and `Authorised Users` column is hidden by default. You can select to show the id if required. Click **Apply** at the bottom of the pane.
-2. **Column order**- change the order of the columns in the table by grabbing the hamburger icon on the right of the column name and drag it to the required position in the table.## Exporting / Downloading a table&#x20;You might require the data from the table for various reasons such as reporting or to backup the table before you delete it. Use the **Download** button at the top of the screen to download the data into a **JSON file**. ## Importing / Uploading data to a table (JSON or CSV)If you have multiple records to add to a table you can import the data by uploading a CSV or JSON file that will populate the records in the columns in the table. 
+ 2. **Column order**- change the order of the columns in the table by grabbing the hamburger icon on the right of the column name and drag it to the required position in the table.
+ ## Exporting / Downloading a table
+ You might require the data from the table for various reasons such as reporting or to backup the table before you delete it. Use the **Download** button at the top of the screen to download the data into a **JSON file**. ## Importing / Uploading data to a table (JSON or CSV)If you have multiple records to add to a table you can import the data by uploading a CSV or JSON file that will populate the records in the columns in the table. 
 1. Click on the **Upload** button at the top of the screen.
 2. By default the JSON upload window is shown. You can switch to upload CSV using the **Switch to CSV** button in the top right. Provide the property name for the unique identifier otherwise by default the rid property is used. Drag and drop the file in the designated area.&#x20;
 3. For CSV uploads select the type of **comma-delimited** used in the **CSV file.** Drag and drop the file in the designated area.&#x20;
