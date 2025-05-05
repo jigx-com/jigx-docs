@@ -26,7 +26,9 @@ You can add records to a data table manually or by uploading a JSON or CSV file 
 2. Click on the blue **New record** button. If you already have records in the table, you will see all existing columns of all records.&#x20;
 3. In the **New record** pane add the data values for each column.&#x20;
 4. **Add new columns** to your record by defining a column name and clicking on the **+** button right next to the new column name. As you add data the field displays the type under the entry, such as number, string or boolean.
-5. Once you set the data values of the fields you want to include in your record, click **Save**.## Editing a RecordEdit an exisitng data record by:
+5. Once you set the data values of the fields you want to include in your record, click **Save**.
+## Editing a Record
+Edit an exisitng data record by:
 1. Clicking on the table in the right-hand **Tables** pane that you want to edit a record in.
 2. Click on the **record** entry to be updated, the **Edit record **side pane with the record's fields displays.&#x20;
 3. Update the data values as required.&#x20;
@@ -61,7 +63,7 @@ To delete a table, follow these steps:
 * &#x20;If there are no unused tables the *Unused tab* is not visible in the Data option.
 * [Row Level Security](docId\:xy4a9JXqIEBPICKan-N0M) still applies to the data records in the unused table. Even as the solution owner, you will only see data records you are authorized to see. It is important to note that even though you cannot see all the data, deleting the table will delete *ALL* records and the table.
 * You can choose to only delete the records in the unused table by selecting the checkbox in front of the record. The **Delete Selected** button appears at the top.
-* Make a backup of the unused table's data** **by** **clicking the** Download** button at the top of the screen. The data is downloaded in a JSON file. If needed, you can reuse the data by importing (upload) data into a new table. *Important*: the data in the downloaded JSON file is the data you are authorized to see.
+* Make a backup of the unused table's data by clicking the **Download** button at the top of the screen. The data is downloaded in a JSON file. If needed, you can reuse the data by importing (upload) data into a new table. *Important*: the data in the downloaded JSON file is the data you are authorized to see.
 * Existing records in the unused table can be edited, but you cannot add new records.
 * [Row Level Security](docId\:xy4a9JXqIEBPICKan-N0M) access can be applied to existing records in the unused table.
 * You cannot apply [Data policies](docId\:es3EARyGcuVJpv8KFQDx4) to unused tables.
@@ -69,9 +71,11 @@ To delete a table, follow these steps:
 ## Column Settings
 The **gear icon** at the top of the screen allows you to configure the columns in a table. The columns displayed in the Column settings side pane are the aggregated set of all columns for all records in that table. The `rid` and `Authorised Users` column are system columns, which are not shown by default.
  1. **Visibilty** - check the checkbox next  to the column you want displayed in the table records. Similarily uncheck the column you want to hide in the table records. The `rid` and `Authorised Users` column is hidden by default. You can select to show the id if required. Click **Apply** at the bottom of the pane.
- 2. **Column order**- change the order of the columns in the table by grabbing the hamburger icon on the right of the column name and drag it to the required position in the table.
+ 2. **Column order** - change the order of the columns in the table by grabbing the hamburger icon on the right of the column name and drag it to the required position in the table.
  ## Exporting / Downloading a table
- You might require the data from the table for various reasons such as reporting or to backup the table before you delete it. Use the **Download** button at the top of the screen to download the data into a **JSON file**. ## Importing / Uploading data to a table (JSON or CSV)If you have multiple records to add to a table you can import the data by uploading a CSV or JSON file that will populate the records in the columns in the table. 
+ You might require the data from the table for various reasons such as reporting or to backup the table before you delete it. Use the **Download** button at the top of the screen to download the data into a **JSON file**.
+ ## Importing / Uploading data to a table (JSON or CSV)
+ If you have multiple records to add to a table you can import the data by uploading a CSV or JSON file that will populate the records in the columns in the table. 
 1. Click on the **Upload** button at the top of the screen.
 2. By default the JSON upload window is shown. You can switch to upload CSV using the **Switch to CSV** button in the top right. Provide the property name for the unique identifier otherwise by default the rid property is used. Drag and drop the file in the designated area.&#x20;
 3. For CSV uploads select the type of **comma-delimited** used in the **CSV file.** Drag and drop the file in the designated area.&#x20;
