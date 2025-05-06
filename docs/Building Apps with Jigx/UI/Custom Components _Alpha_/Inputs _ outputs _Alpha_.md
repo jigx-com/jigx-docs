@@ -6,11 +6,11 @@ updatedAt: Tue Feb 04 2025 14:30:52 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.&#x20;
+This feature is currently in its **Alpha **stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.&#x20;
-- In this phase, the feature may contain bugs or behave unpredictably.&#x20;
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.&#x20;
+- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+- In this phase, the feature may contain bugs or behave unpredictably.
+- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 :::
 
@@ -445,18 +445,18 @@ children:
 
 ## Outputs
 
-- The `output` and `input` work in conjunction with each other.&#x20;
+- The `output` and `input` work in conjunction with each other.
 - Define `outputs` in the custom component, then in the jig using the custom component, provide the data/context (`input`) by referencing the custom-component `instanceId`.
 - An `instanceId` is required for the custom component that is exposing an `output` in order to access the output via `state`.
 - The `output` requires an `output-key` and a data value that is available in the custom component.
 - Accessing `outputs` uses the format similar to:
-  `=@ctx.components.[instanceId].outputs.output-key`. Use IntelliSense to assist with configuration.&#x20;
+  `=@ctx.components.[instanceId].outputs.output-key`. Use IntelliSense to assist with configuration.
 
 ### Examples and code snippets
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-In this simple example, the custom component is configured with a `form` in a `card` component. An `output` property is added to the custom component. This allows for the data entered into the custom component's `form` on the jig to be transferred to the `title` property of the `image` component on the jig. &#x20;
+In this simple example, the custom component is configured with a `form` in a `card` component. An `output` property is added to the custom component. This allows for the data entered into the custom component's `form` on the jig to be transferred to the `title` property of the `image` component on the jig.
 
 
 :::
@@ -526,6 +526,6 @@ children:
 
 ### See also
 
-- [Passing data using inputs](<./../Jigs _screens_/Passing data using inputs.md>)&#x20;
-- [Passing data using outputs](<./../Jigs _screens_/Passing data using outputs.md>)&#x20;
+- [Passing data using inputs](<./../Jigs _screens_/Passing data using inputs.md>)
+- [Passing data using outputs](<./../Jigs _screens_/Passing data using outputs.md>)
 

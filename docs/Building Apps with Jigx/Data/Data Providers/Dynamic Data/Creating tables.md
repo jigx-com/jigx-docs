@@ -13,9 +13,9 @@ First step in creating Dynamic Data for a solution is to create the tables that 
 ![Tables in Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SpVXMM26nqpr1MZ15x34m_dd-tables.png "Tables in Dynamic Data")
 
 1. Open an existing solution or [create a new solution](<./../../../Jigx Builder _code editor_/Create a new Jigx Solution.md>) in Jigx Builder.
-2. &#x20;Expand the database folder and click on the **default.jigx** file.
+2. Expand the database folder and click on the **default.jigx** file.
 3. Use IntelliSense (ctrl+space) in the editor, select **tables**, and press enter.
-4. Type the name of your table and provide a null value, for example, `employee: null`. Take note of the table name formats below:&#x20;
+4. Type the name of your table and provide a null value, for example, `employee: null`. Take note of the table name formats below:
    - Table names must be in lowercase
    - The first character must start with a letter
    - The name can contain alphanumeric or symbols '-' and '\\\_'
@@ -24,13 +24,13 @@ First step in creating Dynamic Data for a solution is to create the tables that 
    - The name cannot end with special characters
    - The length must be between 2-50 characters
 5. Add multiple tables by adding the table names under each other in the default.jigx file.
-6. [Publish](<./../../../Jigx Builder _code editor_/Publishing a solution.md>) the solution to create the tables.&#x20;
+6. [Publish](<./../../../Jigx Builder _code editor_/Publishing a solution.md>) the solution to create the tables.
 7. In [Jigx Management](<./../../../../Administration/Management Overview.md>) browse to your solution and navigate to the [Data](https://docs.jigx.com/data) menu to view your tables. Note that only the tables have been created; next, you must create the [columns and data](<./Creating columns _ data records.md>).
 
 ### Considerations
 
-- If *default.jigx* does not exist, simply use the file / new capability to add a new file called *default.jigx *and place it within a folder called databases as per the VS Code folder layout shown in the image at the top of this page.
-- If you remove a table in the default.jigx file and publish the solution, the table becomes *unused *in the solution. To include the table and it's records again in the solution, simply add the table back to the default.jigx file and republish the solution.&#x20;
+- If *default.jigx* does not exist, simply use the file / new capability to add a new file called *default.jigx* and place it within a folder called databases as per the VS Code folder layout shown in the image at the top of this page.
+- If you remove a table in the default.jigx file and publish the solution, the table becomes *unused* in the solution. To include the table and it's records again in the solution, simply add the table back to the default.jigx file and republish the solution.
 - A table must be *unused* before you can [delete ](<./Deleting tables.md>) the entire table.&#x20;
 
 ### Examples and code snippets

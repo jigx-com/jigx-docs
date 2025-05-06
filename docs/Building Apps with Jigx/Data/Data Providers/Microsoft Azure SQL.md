@@ -7,7 +7,7 @@ updatedAt: Tue May 28 2024 07:29:50 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. 
 :::
 
 ::embed[]{url="https://vimeo.com/833354418?share=copy"}
@@ -18,18 +18,18 @@ Jigx integrates with Microsoft Azure SQL through the SQL data provider, allowing
 
 To use the SQL data provider in Jigx , follow these high-level steps:
 
-1. **Choose your Azure SQL  database **
+1. **Choose your Azure SQL  database**
    - Identify the SQL table you will use as your data source. Ensure you understand its structure and data.
-2. **Configure the SQL connection **
+2. **Configure the SQL connection**
    - [Configure a new Azure SQL connection ](<./Microsoft Azure SQL/Configuring the SQL Connection.md>) for the solution in Jigx Management before adding the Jigx cloud IP addresses to the allowlist IP addresses in Azure SQL.
-3. **Define the SQL query or stored procedure in a **Jigx** function  in **Jigx Builder
+3. **Define the SQL query or stored procedure in a **Jigx** function in **Jigx Builder**
    - Navigate to the [functions](./REST.md) folder in Jigx Builder.
    - Use [IntelliSense](<./../../Jigx Builder _code editor_/Editor.md>) to configure the SQL data provider.
    - Enter the name of the connection set up in Jigx Management.
 4. **Define data methods in the function**:
    - Configure a method to use to interact with the data. There are two options:
      - EXECUTE - used with stored procedures
-     - QUERY - used to write SQL queries&#x20;
+     - QUERY - used to write SQL queries
    - For each method, create a new function file.
 5. **Reference the Jigx functions in **jig**s**:
    - Reference the function in your jigs. This step is crucial for integrating the SQL data seamlessly into your Jigx solution.
@@ -48,9 +48,9 @@ For security, all SQL calls from a  Jigx App are routed through the Jigx cloud t
 
 Data from remote data sources such as Azure SQL or REST web services are stored in a local SQLite database on the device from where it is used in the Jigx application.
 
-To fetch data onto the device and into the local SQLite table, Jigx executes a function that sends an SQL command to Azure SQL. This command can include an SQL statement that will be executed or a stored procedure.&#x20;
+To fetch data onto the device and into the local SQLite table, Jigx executes a function that sends an SQL command to Azure SQL. This command can include an SQL statement that will be executed or a stored procedure.
 
-The function's result is returned to the Jigx app on the device as a JSON array. Each record in the array is stored as a row in the local SQLite database.&#x20;
+The function's result is returned to the Jigx app on the device as a JSON array. Each record in the array is stored as a row in the local SQLite database.
 
 The Jigx solution uses SQL as a query language to access and manipulate data in the local SQLite database.
 
@@ -106,7 +106,7 @@ procedure: sp_GetAllCustomers
 
 ## Parameters
 
-Function parameters are used to pass data into the function definition from the jig that uses the function. See the [Datasources](./../Datasources.md) section of the documentation. Parameters are defined by naming them and describing the properties of that parameter. Parameter names are used when the parameters are referred to in the SQL query.&#x20;
+Function parameters are used to pass data into the function definition from the jig that uses the function. See the [Datasources](./../Datasources.md) section of the documentation. Parameters are defined by naming them and describing the properties of that parameter. Parameter names are used when the parameters are referred to in the SQL query.
 
 ### Function parameter properties
 
@@ -167,7 +167,7 @@ conversions:
 
 ## Referencing a Jigx function
 
-Here is an example of a Jigx solution screen that calls the function in the `OnFocus` event with a `sync-entities` action to sync the data from SQL to the local SQLite database, which returns the customers' details. &#x20;
+Here is an example of a Jigx solution screen that calls the function in the `OnFocus` event with a `sync-entities` action to sync the data from SQL to the local SQLite database, which returns the customers' details. 
 
 :::CodeblockTabs
 list-customers.jigx

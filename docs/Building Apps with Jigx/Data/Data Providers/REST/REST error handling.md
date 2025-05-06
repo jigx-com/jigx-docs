@@ -15,7 +15,7 @@ REST errors returned by the endpoints in an app are often too technical for end-
 - Log error details for more effective debugging.
 - Create more robust and user-friendly error solutions.
 
-## Key features &#x20;
+## Key features
 
 - **Custom error messages**: Control the message shown to users when a REST error occurs.
 - **User-friendly retry options**: Allow users to retry an action when an error occurs.&#x20;
@@ -215,7 +215,7 @@ The commandQueue is a system table, when a device is offline items are queued on
 There are two actions related specifically to the commandQueue namely:
 
 - `action.retry-queue-command` - executes a retry of the REST function called.
-- `action.delete-queue-command` - Only deletes the item from the commandQueue. The record will still be saved locally on the device. You need to provide separately for the deleting of the local data, which can be achieved through an `action.sync-entity/entities` or executing a delete method on the local data provider.&#x20;
+- `action.delete-queue-command` - Only deletes the item from the commandQueue. The record will still be saved locally on the device. You need to provide separately for the deleting of the local data, which can be achieved through an `action.sync-entity/entities` or executing a delete method on the local data provider.
 
 **Action configuration:**
 

@@ -6,9 +6,9 @@ createdAt: Tue Jun 07 2022 09:44:38 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 22 2024 18:50:10 GMT+0000 (Coordinated Universal Time)
 ---
 
-Apps need data, while <a href="https://app.archbee.io/docs/8V3ZMfuUrYN39zECOfqs5/Bn6YYLjSwkrsJ1-bbwSs1" target="_blank">Static data</a> allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app. &#x20;
+Apps need data, while <a href="https://app.archbee.io/docs/8V3ZMfuUrYN39zECOfqs5/Bn6YYLjSwkrsJ1-bbwSs1" target="_blank">Static data</a> allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app. 
 
-The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record.&#x20;
+The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record.
 
 We can visualize how dynamic data works by following the steps below:
 
@@ -18,7 +18,7 @@ We can visualize how dynamic data works by following the steps below:
 2. Data is immediately synced with the Dynamic Data database in the Jigx cloud.
 3. These changes are immediately reflected on any other device that shares the same data (Device 2).
 
-## &#x20;Capabilities
+## Capabilities
 
 - A Jigx cloud-hosted NoSQL database that syncs automatically with data on the device.
 - A web-based [management](https://docs.jigx.com/data) interface for viewing the Dynamic data tables, browsing and editing data and setting [Data policies](<./../../../Administration/Solutions/Row Level Security/Data policies.md>) in these tables.
@@ -34,10 +34,10 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 
 ## How to create Dynamic Data
 
-To create and use Dynamic data see the following:&#x20;
+To create and use Dynamic data see the following:
 
 1. [Creating tables](<./Dynamic Data/Creating tables.md>)
-2. [Creating columns & data records](<./Dynamic Data/Creating columns _ data records.md>)&#x20;
+2. [Creating columns & data records](<./Dynamic Data/Creating columns _ data records.md>)
 3. [Deleting tables](<./Dynamic Data/Deleting tables.md>)
 4. [Using Dynamic Data](<./Dynamic Data/Using Dynamic Data.md>)
 

@@ -19,14 +19,14 @@ Solutions must be published from Jigx Builder to show up in the solutions list o
 Click on the solution's name in the list, the solutions menu opens and the options are visible in the left navigation pane. Here you can manage various features and settings of the solution. These include:
 
 - Visibility of [Widgets](./Solutions/Widgets.md) based on group membership
-- [Groups](./Solutions/Groups.md)&#x20;
-- User [Permissions](./Solutions/Permissions.md) and group memberships&#x20;
-- [Data]() stored in Dynamic Data tables&#x20;
+- [Groups](./Solutions/Groups.md)
+- User [Permissions](./Solutions/Permissions.md) and group memberships
+- [Data]() stored in Dynamic Data tables
 - [Credentials](./Solutions/Credentials.md) such as API Keys
 - [Connections](./Solutions/Connections.md) such as Azure SQL DB connections
 - [SQL Functions](<./Solutions/SQL Functions.md>) / Stored Procedures including a "Run now" feature
-- [REST Functions](<./Solutions/REST Functions.md>) including a "Run now" feature&#x20;
-- &#x20;[SOAP Functions](<./Solutions/SOAP Functions.md>) including a "Run now" feature
+- [REST Functions](<./Solutions/REST Functions.md>) including a "Run now" feature
+- [SOAP Functions](<./Solutions/SOAP Functions.md>) including a "Run now" feature
 
 ## Favorite solutions
 

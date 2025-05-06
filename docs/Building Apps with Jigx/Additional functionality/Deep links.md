@@ -8,7 +8,7 @@ updatedAt: Mon Aug 05 2024 15:48:26 GMT+0000 (Coordinated Universal Time)
 Deep linking in mobile apps is a powerful tool that enhances user experience by creating seamless navigation between the app and external sources. Deep linking allows you to land directly on specific content or pages within an app, bypassing the need to navigate through a series of menus. This is particularly useful in marketing campaigns, social media links, or emails where you want to direct a person to a specific product, article, or feature within your app.
 
 :::hint{type="success"}
-Contact *support\@jigx.com* to get your branded app's deep link.&#x20;
+Contact *support\@jigx.com* to get your branded app's deep link.
 :::
 
 ## Format
@@ -21,7 +21,7 @@ An example of a built-up deep link:
 
 [https://app.jigx.com/jigx/app/solution/8e535f78-4e36-4716-8c01-4567bea60bj9/jig/support-form?email=support@jigx.com](https://app.jigx.com/jigx/app/solution/8e535f78-4e36-4716-8c01-4567bea60bj9/jig/support-form?email=john@global.com)
 
-The URI is built up with the following values:&#x20;
+The URI is built up with the following values:
 
 | **URI elements** | **Description**                                                                                                                                                 |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ To open a Jigx or branded app, use the following deep link:
 
 `https://{app.jigx.com}/{jigx}/app/`
 
-- If you are logged out of the app and click the link, you will be directed to the login screen.&#x20;
+- If you are logged out of the app and click the link, you will be directed to the login screen.
 - If you are currently logged into the app, the link will open the app and display the Home Hub.
 
 ### Link to a jig screen (basic deep link)
@@ -49,7 +49,7 @@ A deep link to a jig screen directs you to a specific location within the app if
 
 ### Link to a jig with inputs (contextual deep link)
 
-** **A contextual deep link includes additional information, such as user data, input value, or a parameter, providing a personalized experience. For example, a link that opens a form and prepopulates a field with an email address.
+A contextual deep link includes additional information, such as user data, input value, or a parameter, providing a personalized experience. For example, a link that opens a form and prepopulates a field with an email address.
 
 **Input:**
 
@@ -97,7 +97,7 @@ datasources:
 
 ### Link to an external app from a jig
 
-Add a deep link in a jig that directs you to a different mobile application, even to a specific location within that application. This link allows you to navigate seamlessly from one app directly to a particular page or piece of content in another app, without having to navigate through the app's homepage or menu. For example, tapping on an address link in a contacts jig could directly open Google Maps showing the location.&#x20;
+Add a deep link in a jig that directs you to a different mobile application, even to a specific location within that application. This link allows you to navigate seamlessly from one app directly to a particular page or piece of content in another app, without having to navigate through the app's homepage or menu. For example, tapping on an address link in a contacts jig could directly open Google Maps showing the location.
 
 **Considerations**
 

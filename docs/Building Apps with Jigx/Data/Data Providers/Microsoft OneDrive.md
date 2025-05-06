@@ -20,15 +20,15 @@ A Graph OAuth token is required for a solution to integrate with OneDrive. Set t
 ## Integration support includes:
 
 - **Folder sync** - syncs metadata and not file contents
-- **Location paths** - shared and my files (root)&#x20;
+- **Location paths** - shared and my files (root)
 - **Methods **- create, update, save, delete, and download
 - **Download to documents folder** (private to Jigx app) - depends on the device's operating system. See [device storage location ]()for the exact location
 
 ## Specifying the file path
 
-When working with the OneDrive data provider use `entity` to specify the file path, for example, `entity: myfiles/Finance/Invoices`. The specified file path with the folders must already exist in OneDrive.&#x20;
+When working with the OneDrive data provider use `entity` to specify the file path, for example, `entity: myfiles/Finance/Invoices`. The specified file path with the folders must already exist in OneDrive.
 
-There are two supported base entities myfiles and shared.&#x20;
+There are two supported base entities myfiles and shared.
 
 1. `entity: myfiles`, and `myfiles` with additional paths e.g. `entity: myfiles/Finance/Invoices`
 2. `entity: shared/path`, a `shared` entity always requires a path e.g. `entity: shared/HR/Global/Forms`
@@ -42,12 +42,12 @@ There are two supported base entities myfiles and shared.&#x20;
 - [List]()
 - [Download]()
 
-## Properties :&#x20;
+## Properties:
 
-- `file` - reference the physical file&#x20;
-- `fileName` - add the file name with the extension, e.g. Invoice.pdf&#x20;
+- `file` - reference the physical file
+- `fileName` - add the file name with the extension, e.g. Invoice.pdf
 - `tokenType` - OAuth token credentials name
-- `method` - the CRUD method to use&#x20;
+- `method` - the CRUD method to use
 
 ## Examples and code snippets
 

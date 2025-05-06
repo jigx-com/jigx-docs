@@ -6,11 +6,11 @@ createdAt: Tue Jun 20 2023 08:33:08 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Apr 23 2025 07:44:10 GMT+0000 (Coordinated Universal Time)
 ---
 
-To accelerate the build experience, Jigx Builder has a YAML editor that includes IntelliSense for code completion, predefined code snippets, and preloads with scaffolding ready to add your Jigx files in the correct structure needed to build app solutions.&#x20;
+To accelerate the build experience, Jigx Builder has a YAML editor that includes IntelliSense for code completion, predefined code snippets, and preloads with scaffolding ready to add your Jigx files in the correct structure needed to build app solutions.
 
 ## Solution scaffolding
 
-By default Jigx creates scaffolding when loading a new project in Jigx Builder. We recommend avoiding naming new files with the same name in the scaffolding. Words used by the Jigx system include actions, components, jig, databases, datasources, functions, and index. &#x20;
+By default Jigx creates scaffolding when loading a new project in Jigx Builder. We recommend avoiding naming new files with the same name in the scaffolding. Words used by the Jigx system include actions, components, jig, databases, datasources, functions, and index. 
 
 | Folder              | Default File         | Description                                                                                                                                                                                                                                                                                                           |
 | ------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,13 +39,13 @@ In Jigx Builder the YAML code snippets use indentation. The nested structure of 
 
 ## Code snippets
 
-Code snippets are there to help you develop quicker by providing you with recommended  properties to use for a jig type, component, action, or widget. You do not need to use all the code snippets provided; you can remove the unwanted properties.&#x20;
+Code snippets are there to help you develop quicker by providing you with recommended  properties to use for a jig type, component, action, or widget. You do not need to use all the code snippets provided; you can remove the unwanted properties.
 
 ![IntelliSense & code snippets](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kr7nZdObHWrTB_Fo7vYDJ_jb-intellisensecode.gif "IntelliSense & code snippets")
 
-## Validation&#x20;
+## Validation
 
-Jigx validates the structure and values in the `.jigx` YAML files and shows the issues that you need to fix. &#x20;
+Jigx validates the structure and values in the `.jigx` YAML files and shows the issues that you need to fix. 
 
 ![Validation ](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SX0T3-ddqxxV15RWT7Lpg_jb-validation.png "Validation ")
 
@@ -53,7 +53,7 @@ Validation issues are shown in:
 
 - The **file name** in the side bar will be red, with the number of issues in the file shown by a red number on the right of the file name.
 - **Red squiggles** appear under the YAML. Hover over the YAML for more information, if we can detect what the value should be we offer a quick-fix link. Clicking on the link will fix the issue and resolve the validation.
-- In the **Problems tab** of the Jigx Dev tools window, the file and a description of the issue is shown. Click on the item to go to the exact ssue in the file
+- In the **Problems tab** of the Jigx Dev tools window, the file and a description of the issue is shown. Click on the item to go to the exact ssue in the file.
 
 :::hint{type="warning"}
 Validation does not always prevent you from publishing your solution. The solution on the mobile app might not function as expected if the validation issues are not resolved.
@@ -61,9 +61,9 @@ Validation does not always prevent you from publishing your solution. The soluti
 
 ## Navigating code definitions & references
 
-This feature is particularly useful in large projects or when working with unfamiliar codebases, as it helps you understand how and where certain pieces of code are implemented without manually searching through files. If the code has multiple definitions or references, VS Code presents a list of all these instances, allowing you to choose the one you're interested in.&#x20;
+This feature is particularly useful in large projects or when working with unfamiliar codebases, as it helps you understand how and where certain pieces of code are implemented without manually searching through files. If the code has multiple definitions or references, VS Code presents a list of all these instances, allowing you to choose the one you're interested in.
 
-The following code definitions and references can be navigated:&#x20;
+The following code definitions and references can be navigated:
 
 - fileId references
   - jigs
@@ -91,5 +91,5 @@ Place your cursor on the code and press **F12** or right-click and select **Go t
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/cShnfmtfqWELAanH7yGDT_jb-f12-goref.gif)
 
-Place your cursor on the code and press **Shift + F12** or right-click and select **Go to References **from the menu options, VS Code displays a preview window that lists all the lines of code in your project where that code is used or referenced. If there are multiple references, you can click on any of the listed references in the preview window to go directly to that location in the code.&#x20;
+Place your cursor on the code and press **Shift + F12** or right-click and select **Go to References **from the menu options, VS Code displays a preview window that lists all the lines of code in your project where that code is used or referenced. If there are multiple references, you can click on any of the listed references in the preview window to go directly to that location in the code.
 

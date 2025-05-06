@@ -7,9 +7,9 @@ updatedAt: Wed Nov 20 2024 07:16:58 GMT+0000 (Coordinated Universal Time)
 
 ## Working with REST IDs
 
-- When a REST service returns an id, the Jigx local data provider can automatically be synced with this id, eliminating the need to add a `sync-entities` action to the jig.&#x20;
-- The id property must be added in the `outputTransform` of the REST data provider function.&#x20;
-- This is useful on a POST (create) as a temp\_id is created in the local data provider for the record when it is created. If the id is in the POST function `outputTransform`, the temp\_id is automatically updated with the REST id once it is created on the REST side.&#x20;
+- When a REST service returns an id, the Jigx local data provider can automatically be synced with this id, eliminating the need to add a `sync-entities` action to the jig.
+- The id property must be added in the `outputTransform` of the REST data provider function.
+- This is useful on a POST (create) as a temp\_id is created in the local data provider for the record when it is created. If the id is in the POST function `outputTransform`, the temp\_id is automatically updated with the REST id once it is created on the REST side.
 - The below image shows how the local data provider creates a temp\_id when a new customer is added. Then, it is automatically synced with the REST `id` because the `id` is in the function's `outputTransform`.
   ![Syncing temp_Id](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VuOMkHMSZXXZRlH7jloeo_rest-id.png "Syncing temp_Id")
 

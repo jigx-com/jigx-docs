@@ -7,7 +7,7 @@ updatedAt: Fri Sep 13 2024 06:57:37 GMT+0000 (Coordinated Universal Time)
 
 Often, you need to transfer or pass data between jigs to provide context and data, for example, when pressing on a customer in a list, the customer ID is passed to the order form, prepopulating the customer's details. This is accomplished by utilizing [inputs](<./Passing data using inputs.md>) and outputs.
 
-## Outputs&#x20;
+## Outputs
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" size="74" width="356" height="308" position="center" caption="Output and inputs " alt="Output and inputs "}
 
@@ -15,15 +15,15 @@ Outputs are configured in a jig and are then used as an input in a composite jig
 
 ### Considerations
 
-- &#x20;An `instanceId` is required for the jig that is exposing an `output` in order to access the output via `state` from another jig.
-- The data from configuring `outputs` can only be used in composite jigs.&#x20;
+- An `instanceId` is required for the jig that is exposing an `output` in order to access the output via `state` from another jig.
+- The data from configuring `outputs` can only be used in composite jigs.
 - Using the `output` property must be reciprocated with an `input` property in the composite jig.
 - The `output` requires an `output-key` and a data value that is available in that jig.
-- The receiving jig configuration uses the format similar to  `=@ctx.solution.state.output-key`. Use IntelliSense  (ctrl+space) to assist with configuration.&#x20;
+- The receiving jig configuration uses the format similar to  `=@ctx.solution.state.output-key`. Use IntelliSense  (ctrl+space) to assist with configuration.
 
 ### YAML code
 
-The `output` and `input` work in conjunction with each other.&#x20;
+The `output` and `input` work in conjunction with each other.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -35,8 +35,8 @@ In the jig containing the data you want to transfer, configure the output-key. E
 :::
 
 :::VerticalSplitItem
-**Input:
-**In the receiving [jig.composite]() configure the input for the data. Example:
+**Input:**
+In the receiving [jig.composite]() configure the input for the data. Example:
 
 `inputs:
    id: =@ctx.solution.state.servicesId`
@@ -48,7 +48,7 @@ In the jig containing the data you want to transfer, configure the output-key. E
 :::::ExpandableHeading
 ### Passing data via outputs to connect two jigs data in a composite jig
 
-In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the *List of available services *the *service details* for that specific service populates.&#x20;
+In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the *List of available services *the *service details* for that specific service populates.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" width="648" height="1300" position="center" caption="Passing data using outputs" alt="Passing data using outputs"}
 
@@ -153,7 +153,7 @@ options:
 ```
 :::
 
-** Jig - service details **
+**Jig - service details**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem

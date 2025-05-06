@@ -6,7 +6,7 @@ createdAt: Tue Jun 07 2022 10:00:03 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:18:00 GMT+0000 (Coordinated Universal Time)
 ---
 
-Users who have access to a solution can be assigned to* Groups* within the scope of that solution. *Groups* can then be used to toggle the visibility of [Widgets](./Widgets.md).&#x20;
+Users who have access to a solution can be assigned to *Groups* within the scope of that solution. *Groups* can then be used to toggle the visibility of [Widgets](./Widgets.md).&#x20;
 
 For example, a CRM app configured with two Groups: Managers and *Employees*. Managers should have access to widgets that display metrics about all sales opportunities across all employees and employees should only have access to see widgets with information about their own sales opportunities.
 
@@ -35,7 +35,7 @@ The new group is displayed in the list. Next you need to add users to your group
 
 ## Removing Groups
 
-In the event that you want to remove a group from the solution, click the **remove** link next to the group in the Groups list and click **Ok **to the remove message.&#x20;
+In the event that you want to remove a group from the solution, click the **remove** link next to the group in the Groups list and click **Ok** to the remove message.&#x20;
 
 You can remove groups but keep in mind that [Widgets](./Widgets.md) that had these groups assigned previously will be hidden to users in the removed groups.
 
@@ -44,7 +44,7 @@ You can remove groups but keep in mind that [Widgets](./Widgets.md) that had the
 Each group requires members. The members must have access to the solution to be visible in the **Add user to group** pane.
 
 1. Click on the name of the group you want to add users to.
-2. Click on the **Add users to Group: *****Name*** button in the top right of the screen.
+2. Click on the **Add users to Group:** *Name* button in the top right of the screen.
 3. Select the checkbox of the users to be added to the group.
 4. Click **Apply**.
 

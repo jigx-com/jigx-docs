@@ -7,12 +7,12 @@ updatedAt: Tue May 21 2024 15:05:21 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. &#x20;
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId\:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId\:eOUi2cPYynsdRuK-TobDp) for more information. 
 :::
 
-Jigx will route all calls to Azure SQL Server from a Jigx mobile app through the Jigx cloud. No data is stored or cached in Jigx cloud. The encrypted SQL connection information is stored in non-user-readable secure storage in Jigx cloud and allows for IP allowlisting for Azure SQL database servers. &#x20;
+Jigx will route all calls to Azure SQL Server from a Jigx mobile app through the Jigx cloud. No data is stored or cached in Jigx cloud. The encrypted SQL connection information is stored in non-user-readable secure storage in Jigx cloud and allows for IP allowlisting for Azure SQL database servers. 
 
-To complete these steps, the user will need Jigx credentials with **admin** privileges for the solution being configured and **Azure SQL administrative credentials** to configure the allowlisted IP addresses for the Azure SQL Server being used in the Jigx solution.&#x20;
+To complete these steps, the user will need Jigx credentials with **admin** privileges for the solution being configured and **Azure SQL administrative credentials** to configure the allowlisted IP addresses for the Azure SQL Server being used in the Jigx solution.
 
 Following these steps to configure a new Azure SQL connection for the solution in Jigx cloud before adding the Jigx cloud IP addresses to the allowlisted IP addresses in Azure SQL.
 
@@ -40,7 +40,7 @@ Following these steps to configure a new Azure SQL connection for the solution i
 - In **Password** enter a valid password for the SQL Server.
 - In **Options** configure other connection options such as non-standard ports or other specific connection information that the database server may need. 
 
-5\. Before saving or testing the connection, click the** IP allowlist** link in the middle of the new connection screen. Note the two IP addresses listed. The calls from Jigx Cloud to Azure SQL will always originate from one of these IP addresses. These IP addresses will be added to the Azure SQL Server.
+5\. Before saving or testing the connection, click the **IP allowlist** link in the middle of the new connection screen. Note the two IP addresses listed. The calls from Jigx Cloud to Azure SQL will always originate from one of these IP addresses. These IP addresses will be added to the Azure SQL Server.
 
 :::hint{type="info"}
 These IP addresses will vary depending on the Jigx cloud region being used.

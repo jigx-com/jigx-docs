@@ -6,30 +6,30 @@ createdAt: Thu Oct 26 2023 15:35:18 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:28:39 GMT+0000 (Coordinated Universal Time)
 ---
 
-Actions refer to specific controls or operations that respond to an event or input. They range from simple operations like clicking a submit button or navigating to a previous screen to more complex tasks like data interaction.&#x20;
+Actions refer to specific controls or operations that respond to an event or input. They range from simple operations like clicking a submit button or navigating to a previous screen to more complex tasks like data interaction.
 
 - Actions can be configured locally within a jig or globally to be re-used in multiple jigs.
 - Actions can be configured at the root level of a jig, inside a component or in the index file.
 
-## Types of actions&#x20;
+## Types of actions
 
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
 - *Execution - *actions to interact with data.
-  - [execute-entity]()&#x20;
-  - [execute-entities]()&#x20;
-  - [submit-form]()&#x20;
+  - [execute-entity]()
+  - [execute-entities]()
+  - [submit-form]()
   - [sync-entities]() for getting data to the device.
-- *Navigational* - actions used to navigate to another jig or Home Hub .
+- *Navigational* - actions used to navigate to another jig or Home Hub.
   - [go-to]()
   - [go-back]()
 - Actions to *open* components.
   - [open-scanner]()
   - [open-url]()
-- *State -* actions used to determine a specific status or value of a property or component.
+- *State* - actions used to determine a specific status or value of a property or component.
   - [set-state]()
   - [reset-state]()
-- *Events - *actions that execute after a user or device performs a trigger.&#x20;
+- *Events* - actions that execute after a user or device performs a trigger.
   - onRefresh
   - onFocus
   - onPress
@@ -40,7 +40,7 @@ Actions allow you to do many things in an app; below are the types of actions th
 
 For the complete list and code examples of available actions, see [actions]().
 
-## Where to add actions&#x20;
+## Where to add actions
 
 ### In a Jig
 
@@ -64,7 +64,7 @@ actions:
 
 ### In a list
 
-A combination of differnet actions can be configured throughout a list jig, as shown in the example below. Use parameters or expressions such as `=@ctx.current.item.value` to get the context specific detail you need. Actions can also be added to the `swipeable` elements of a list for example, swipe left to delete a list item.  &#x20;
+A combination of differnet actions can be configured throughout a list jig, as shown in the example below. Use parameters or expressions such as `=@ctx.current.item.value` to get the context specific detail you need. Actions can also be added to the `swipeable` elements of a list for example, swipe left to delete a list item.
 
 :::CodeblockTabs
 actions-list
@@ -162,7 +162,7 @@ actions:
 
 ### In the index file
 
-For best performance when working with data, is to get the data when the solution loads in the Jigx App. This is achieved by using the `onLoad` action in the index file which will ensure the data is available from the beginning and throughout the rest of the app.&#x20;
+For best performance when working with data, is to get the data when the solution loads in the Jigx App. This is achieved by using the `onLoad` action in the index file which will ensure the data is available from the beginning and throughout the rest of the app.
 
 :::CodeblockTabs
 index.jigx
@@ -191,7 +191,7 @@ onLoad:
 
 ## Executing multiple actions
 
-To execute a series of actions use the [action-list](), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.&#x20;
+To execute a series of actions use the [action-list](), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
 
 - `False` executes the actions randomly
 - `True` executes the actions from the top down and waits for the action to complete before executing the next action in the list, making it important to list the actions in the correct order.

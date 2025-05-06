@@ -20,10 +20,10 @@ The *Solution Settings* and [Solution Details](<./Solution Details.md>) tab func
 
 The settings on this screen include:
 
-- **Allow copy of solution - **By default the option is set to *Off*.&#x20;
-  - **Within current organization - **enables copying the solution to the organization you are currently using in Jigx Management
+- **Allow copy of solution** - By default the option is set to *Off*.
+  - **Within current organization** - enables copying the solution to the organization you are currently using in Jigx Management
   - **To any organization** - enables you to choose when you copy the solution which organization you want it copied to. The list of organizations you belong to will be displayed when you copy the solution
-- **Permit copy of data** - Select whether the data of the solution can be copied. You can copy data unprotected or protected. &#x20;
+- **Permit copy of data** - Select whether the data of the solution can be copied. You can copy data unprotected or protected.
   - **Unprotected** - only tables without [Data policies](<./Row Level Security/Data policies.md>) restrictions will be copied.
   - **Protected** - includes all data, regardless of the data policy setting. This allows the solution owner to determine what can be copied without having to disable the current policies to accomplish it.
 
@@ -31,13 +31,12 @@ The following is **included** when copying a solution:
 
 - Data (if selected)
 - Permissions
-- Groups, and access settings&#x20;
+- Groups, and access settings
 
 The following is **not** included when copying a solution:
 
 - Credentials
-- Connections&#x20;
-
+- Connections
 Once you have made your selection on this screen go to the [Solution Details](<./Solution Details.md>) screen and use the red Copy solution button.
 
 ## Sourcecode repository
@@ -46,4 +45,4 @@ Store the details of your Jigx solution's sourcecode repository, allowing people
 
 ## Custom variables
 
-Defining custom variables enables you to create reusable values that can be dynamically controlled, for example production or development enviroment details. For more information see [Custom variables](<./Solution Settings/Custom variables.md>).&#x20;
+Defining custom variables enables you to create reusable values that can be dynamically controlled, for example production or development enviroment details. For more information see [Custom variables](<./Solution Settings/Custom variables.md>).

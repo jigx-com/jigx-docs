@@ -7,17 +7,17 @@ updatedAt: Tue Feb 04 2025 14:23:15 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.&#x20;
+This feature is currently in its **Alpha **stage of development.
 
-- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.&#x20;
-- In this phase, the feature may contain bugs or behave unpredictably.&#x20;
-- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.&#x20;
+- As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
+- In this phase, the feature may contain bugs or behave unpredictably.
+- Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
 :::
 
 ## File Location
 
-In a Jigx project all custom components are created in the **components** folder with the .jigx extension,  for example, custom-card.jigx. You can create subfolders inside the component folder if required. Ensure you use a unique naming convention for each file in each folder. If files have the same name Jigx Builder uses the first file found in the components folder with that name and shows it in the IntelliSense code snippet in a jig file. If you have a components folder under jigs or elsewhere in your project, Jigx Builder sees it as components and validates the jigs against the rules of components.&#x20;
+In a Jigx project all custom components are created in the **components** folder with the .jigx extension,  for example, custom-card.jigx. You can create subfolders inside the component folder if required. Ensure you use a unique naming convention for each file in each folder. If files have the same name Jigx Builder uses the first file found in the components folder with that name and shows it in the IntelliSense code snippet in a jig file. If you have a components folder under jigs or elsewhere in your project, Jigx Builder sees it as components and validates the jigs against the rules of components.
 
 ![Component folder](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_OYOwk6ShiIrcLFqDCZu9-20241119-124255.png "Component folder")
 
@@ -28,19 +28,19 @@ All custom component files start with:
 `type: component.default`
 `children:`
 
-Under `children:` you add the components you want to customize. Invoke** IntelliSense** to see the list of available components.&#x20;
+Under `children:` you add the components you want to customize. Invoke **IntelliSense** to see the list of available components.
 
-Between `options:` and `children:` you can add predefined styling elements depending on the component selected. The components that allow customization are [Card (Alpha)](), [View (Alpha)](), [Text (Alpha)](), [Icon (Alpha)](), and [Button (Alpha)](). Use **IntelliSense** to view the available list.&#x20;
+Between `options:` and `children:` you can add predefined styling elements depending on the component selected. The components that allow customization are [Card (Alpha)](), [View (Alpha)](), [Text (Alpha)](), [Icon (Alpha)](), and [Button (Alpha)](). Use **IntelliSense** to view the available list.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" size="70" width="1120" height="542" position="center" caption="Card Styling options" alt="Card Styling options"}
 
-For `component.view` the `options:` followed by `style:` are required before `children:`. All available styling elements are listed under the `style:` property using **IntelliSense. **
+For `component.view` the `options:` followed by `style:` are required before `children:`. All available styling elements are listed under the `style:` property using **IntelliSense**.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" size="70" width="1162" height="794" position="center" caption="View styling options" alt="View styling options"}
 
 ## Using custom component files in jigs
 
-You can use the custom component files in multiple jig files by referencing `component.custom-component` and using the `componentId:` property to reference the name of the custom component file. Adding an `instanceId` allows the same custom component to be used in different instances and enables the use of [outputs](<./Inputs _ outputs _Alpha_.md>). &#x20;
+You can use the custom component files in multiple jig files by referencing `component.custom-component` and using the `componentId:` property to reference the name of the custom component file. Adding an `instanceId` allows the same custom component to be used in different instances and enables the use of [outputs](<./Inputs _ outputs _Alpha_.md>).
 
 :::CodeblockTabs
 use-custom-component.jigx
@@ -139,4 +139,4 @@ children:
 
 ## Examples and code snippets
 
-In the Reference & Examples tab, you can see code examples for each [custom component]().&#x20;
+In the Reference & Examples tab, you can see code examples for each [custom component]().

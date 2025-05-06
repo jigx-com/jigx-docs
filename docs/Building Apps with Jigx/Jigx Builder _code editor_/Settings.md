@@ -18,7 +18,7 @@ It is important to configure which app you want to connect to as the [debugging]
 To configure the **Jigx: App name** setting follow the steps below:
 
 1. When connecting to the Jigx App available from the Play or App stores leave the setting empty.
-2. When connecting to a Jigx branded app, go to** **Jigx Management**&#x20;
+2. When connecting to a Jigx branded app, go to** **Jigx Management**
    / Branding/ App configuration **and copy the **App Name**, then paste the name in the **Jigx: App name** setting in Jigx Builder.
    ![App Name in Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1vG3k44iWYNDS7iSojxCA_jb-appnamemanagel.png "App Name in Jigx Management")
 3. Regenerate the QR code when changing app names in settings by clicking the **Refresh QR code** icon in Jigx Dev tools - **Connect to Device** pane.

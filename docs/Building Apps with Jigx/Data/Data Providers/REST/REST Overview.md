@@ -69,7 +69,7 @@ All files created by the Swagger parser function saves in your functions folder.
 
 ### Variable replacement
 
-You can replace variables in your Postman collection, for example, replacing the *baseUrl*. As you add the value 'google.com' to the variable all functions requiring this variable will be updated.&#x20;
+You can replace variables in your Postman collection, for example, replacing the *baseUrl*. As you add the value 'google.com' to the variable all functions requiring this variable will be updated.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -309,7 +309,7 @@ Pass the values you want to test as input parameters. In this example, minmag an
 ![forRowsInRange](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LrOy1JWzQmiy1wh5ksaO0_image.png "forRowsInRange")
 
 :::hint{type="info"}
-- You can combine `forRowswithValues` and `forRowsInRange` as per the example below. &#x20;
+- You can combine `forRowswithValues` and `forRowsInRange` as per the example below. 
 - You **cannot combine **`forRowsWithMatchingIds` with any other range or value check.
 :::
 

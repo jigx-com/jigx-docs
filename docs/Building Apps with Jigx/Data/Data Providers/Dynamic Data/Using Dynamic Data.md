@@ -17,7 +17,7 @@ Dynamic Data can be:
 
 ### As a datasource
 
-The Dynamic Data provider is used in Jigx Builder in the SQLite datasource either inside a single jig (locally) or under the datasources folder structure (global), allowing the data to be called once and reused throughout the solution in multiple jigs. Write SQLite queries to return the exact data you need to work with. &#x20;
+The Dynamic Data provider is used in Jigx Builder in the SQLite datasource either inside a single jig (locally) or under the datasources folder structure (global), allowing the data to be called once and reused throughout the solution in multiple jigs. Write SQLite queries to return the exact data you need to work with. 
 
 :::CodeblockTabs
 sqlite-datasource-dd
@@ -85,9 +85,9 @@ children:
 
 ***Execution**** *actions are designed to interact with specifically with data. The following actions can be used with the Dynamic Data provider either to create, update, delete, or sync data.
 
-- [execute-entity]()&#x20;
-- [execute-entities]()&#x20;
-- [submit-form]()&#x20;
+- [execute-entity]()
+- [execute-entities]()
+- [submit-form]()
 - [sync-entities]() for getting data to the device.
 
 ***Events**** *actions execute after an event is performed by a user or device. This event can be configured to use the Dynamic Data provider, for example, when refreshing a list jigby pulling down (onRefresh) use the `action.sync-entities` with the provider to refresh the data in the list. The following event actions are available.

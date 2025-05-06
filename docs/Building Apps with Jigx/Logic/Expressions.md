@@ -132,7 +132,7 @@ datasources:
 ```
 :::
 
-## Expression structure&#x20;
+## Expression structure
 
 :::hint{type="warning"}
 Avoid using state keywords, such as `component`, as `instanceId` values in expressions. Doing so will cause an "Expression is not valid" error in the app.
@@ -171,7 +171,7 @@ Expressions can be used in many ways when creating apps, here are common use cas
 
 Advanced expressions are helpful when you need to filter an array of records to display specific data and perform expression transformations over the data. So, instead of writing complicated procedures and statements, you can run [JSONata expressions]() to get the result. You can format the expression strings and have them inline or multiline.
 
-### Inline&#x20;
+### Inline
 
 When you are writing advanced expressions, make sure you have the expression starting with '=' inside the quotes, as shown below:&#x20;
 
@@ -185,7 +185,7 @@ text: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
 ```
 :::
 
-### Multiline&#x20;
+### Multiline
 
 You can write advanced expressions as multiline, for better readability and cleaner code formatting. When writing a multiline expression, make sure you have the expression in quotes and the next line must be indented on the same level as shown below.
 
@@ -219,10 +219,10 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 
 - Open a solution in Jigx Builder.
 - Create a new file under the **scripts/expressions** folder and save it with a .js extension, for example, functions.js.
-- Within this file, you can define your functions.&#x20;
+- Within this file, you can define your functions.
   - For a single functions, you simply write the function definition.
   - &#x20;For multiple functions, you can define each function in a single file or separate then into their own files.
-- Each function must be prefixed with **export**, for example,&#x20;
+- Each function must be prefixed with **export**, for example,
   `export function helloWorld() {
   return 'Hello World'
   }`
@@ -238,18 +238,18 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 
 **Call the JavaScript function in an expression**
 
-- In a jig, where you configure an expression, use IntelliSense to surface the defined functions from the script/expression js files. &#x20;
+- In a jig, where you configure an expression, use IntelliSense to surface the defined functions from the script/expression js files. 
 - IntelliSense provides the javascript language options for selection starting with the  `=$` shortcut followed by the JavaScript file name and then the function name, such as `=$functionFileName.functionName`, for example, `=$jsfunctions.helloWorld()`.
 
 ### Considerations
 
 - One or more functions can be defined in a single JavaScript file. This caters for the exporting of files.
-- Multiple JavaScript files can be added under the script > expression folder.&#x20;
+- Multiple JavaScript files can be added under the script > expression folder.
 - In an expression, you can have functions inside functions, see [tax calculation]() for an example.
 - JavaScript files are recognized throughout the solution and can by reused in multiple jigs.
 - JavaScript functions are not a replacement for JSONata expressions. Each has its purpose; combining the two will empower you while creating apps. In certain instances, JSONata is inline and can be quicker and easier than using a JavaScript function, such as concatenating first and last names.
-- JavaScript functions can be used instead of regex expressions used for validation. For example, JavaScript functions can be used to format a phone number rather than regex to validate if it is in the correct format.&#x20;
-- Use *F12* to navigate from an expression to the JavaScript function script file. See [Go to Definition](<./../Jigx Builder _code editor_/Editor.md>).&#x20;
+- JavaScript functions can be used instead of regex expressions used for validation. For example, JavaScript functions can be used to format a phone number rather than regex to validate if it is in the correct format.
+- Use *F12* to navigate from an expression to the JavaScript function script file. See [Go to Definition](<./../Jigx Builder _code editor_/Editor.md>).
 - From the script file use *shift + F12* or right-click and select [Go to References](<./../Jigx Builder _code editor_/Editor.md>) to see where all the script file is used in expressions.
 
 ## JSONata and Regular expressions
@@ -258,7 +258,7 @@ In Jigx you can combine a JSONata expression with a Regex expression to create a
 
 ## Expression examples
 
-Expressions are a powerful and flexible way to transform and extract data for use in a Jigx App. Below are links to examples showing how JSONata expressions can be used when creating apps.&#x20;
+Expressions are a powerful and flexible way to transform and extract data for use in a Jigx App. Below are links to examples showing how JSONata expressions can be used when creating apps.
 
 | **JSONata expressions**    | **Example of use**                                                                                                                                                                                                        |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -281,5 +281,5 @@ Expressions are a powerful and flexible way to transform and extract data for us
 - [Expressions - cheatsheet](<./Expressions/Expressions - cheatsheet.md>)
 - [Expression Examples ]()
 - [Regex expressions]()
-- [JavaScript expressions]()&#x20;
+- [JavaScript expressions]()
 

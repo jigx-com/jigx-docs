@@ -6,7 +6,7 @@ createdAt: Thu May 25 2023 06:10:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:55:49 GMT+0000 (Coordinated Universal Time)
 ---
 
-Jigx provides a template gallery that you can use as a base when creating solutions. Jigx templates are available when creating jigs, adding components** **and widgets to a jig.&#x20;
+Jigx provides a template gallery that you can use as a base when creating solutions. Jigx templates are available when creating jigs, adding components** **and widgets to a jig.
 
 Using templates has many benefits, such as:&#x20;
 
@@ -25,16 +25,16 @@ While templates offer numerous benefits, it's important to remember that they ma
 ::embed[]{url="https://youtu.be/Sn0YICgtS60"}
 
 :::hint{type="info"}
-Jig templates either use [Static Data]() or  [Dynamic Data](<./../../Data/Data Providers/Dynamic Data.md>).  You can easily customize the template to use other [datasources](./../../../Administration/Solutions/Data.md) instead.&#x20;
+Jig templates either use [Static Data]() or  [Dynamic Data](<./../../Data/Data Providers/Dynamic Data.md>).  You can easily customize the template to use other [datasources](./../../../Administration/Solutions/Data.md) instead.
 :::
 
 Each jig type has a set of templates to choose from. Follow the steps below to select a template.
 
-1. In Explorer in the **jigs** folder, right-click and create a new jig file with the .jigx extension. The Jigx IntelliSense popup displays listing the available jig types and the **Use template** option.  Use **ctrl+space **to open the jig IntelliSense popup**.**
+1. In Explorer in the **jigs** folder, right-click and create a new jig file with the .jigx extension. The Jigx IntelliSense popup displays listing the available jig types and the **Use template** option. Use **ctrl+space **to open the jig IntelliSense popup**.**
 
 ![Jig template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GoeoJRsy4pw59kUTSl5Tv_templatesjigcode.png "Jig template option")
 
-1. Click **Use template. **The templates gallery opens providing the templates for all jig types. Use the* Search* and *Category* fields to find the template you want or browse the gallery by scrolling through the options.
+1. Click **Use template**. The templates gallery opens providing the templates for all jig types. Use the *Search* and *Category* fields to find the template you want or browse the gallery by scrolling through the options.
 2. Once you have chosen a template, hover over the template, there are two options:
 
 **1. Insert**
@@ -45,24 +45,24 @@ Each jig type has a set of templates to choose from. Follow the steps below to s
 2. Check the YAML code for comments that specify additional steps you must take on the template, such as *#Create new table invoices in databases/default.jigx*. Here you will manually need to add the table to the `default.jigx` file under the database folder.
 3. Add your jigId to the `index.jigx` file.
 4. Publish your project and view the jig in the app.
-5. Now you can customize the jig by changing the static data to dynamic data or adding additional components using the component templates described below.&#x20;
+5. Now you can customize the jig by changing the static data to dynamic data or adding additional components using the component templates described below.
 
 **2. Configure**
 
 ![Template Configure jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yD3-Ltvoz-MPpTWaSml9v_t-configure.gif "Template Configure jig")
 
-1. Click the blue **Configure** button.&#x20;
-2. Next, choose the size of the widget that will display on the Home Hub.&#x20;
+1. Click the blue **Configure** button.
+2. Next, choose the size of the widget that will display on the Home Hub.
 3. Now choose the type of [widget](), for example, [chart]() or [avatar]() widget.
 4. The selected template YAML will be inserted into your jig file.
 5. Check the YAML code for comments that specify additional steps you must take on the template, such as *#Create new table invoices in databases/default.jigx*. Here, you will manually need to add the table to the `default.jigx` file under the database folder.
 6. The`jigId` are **automatically** added to the index.jigx file.
 7. Publish your solution and view the widget and jig in the app.
-8. Now you can customize the jig by changing the static data to dynamic data or adding additional components using the component templates described below.  &#x20;
+8. Now you can customize the jig by changing the static data to dynamic data or adding additional components using the component templates described below.  
 
 ## Scenario templates
 
-You can use the scenario templates to create a functioning solution. For example insert the **Content management** scenario template and publish out the solution to the app. The scenario includes four jigs and adds the contacts Dynamic Data table.&#x20;
+You can use the scenario templates to create a functioning solution. For example insert the **Content management** scenario template and publish out the solution to the app. The scenario includes four jigs and adds the contacts Dynamic Data table.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RCSQgz3TqyiydLH0ibmBS_t-scenario.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RCSQgz3TqyiydLH0ibmBS_t-scenario.png" size="68" width="1050" height="1262" position="center" caption="Scenario templates" alt="Scenario templates"}
 

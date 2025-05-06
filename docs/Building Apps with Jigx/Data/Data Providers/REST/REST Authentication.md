@@ -301,7 +301,7 @@ item:
 
 ### &#x20;Local REST Calls
 
-A local REST function** **call allows the mobile app to perform all the processing locally and call the third-party service directly. As a result, data is only transferred between the mobile app and the third-party REST service. Only OAuth authentication can be used with Local REST calls. For more information see [Local REST Calls](<./Local REST Calls.md>).&#x20;
+A local REST function** **call allows the mobile app to perform all the processing locally and call the third-party service directly. As a result, data is only transferred between the mobile app and the third-party REST service. Only OAuth authentication can be used with Local REST calls. For more information see [Local REST Calls](<./Local REST Calls.md>).
 
 ## See Also
 

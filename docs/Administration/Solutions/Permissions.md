@@ -21,7 +21,7 @@ Access to the solution is managed on the **Permissions** tab. Here, you can give
 To remove user's access to the solution:
 
 1. Click on the **Remove** link in the last column next to the user you want to remove.
-2. Click the red **Remove selected users **button in the top-right of the screen.
+2. Click the red **Remove selected users** button in the top-right of the screen.
 3. Click **Ok** to the message.&#x20;
 4. The user is removed from the list and no longer has access to the solution. The user will only be removed from the solution, but remains a user in the organization's global user list.
 
@@ -55,7 +55,7 @@ If you want to assign users to [Groups](./Groups.md) in your solution that will 
 1. Select the user to assign to a group.
 2. Click on the **Edit Groups** link on the right.
 3. In the group membership pane select the group(s) the user will be in.
-4. &#x20;Click **Change**.
+4. Click **Change**.
 
 ![Assigning user to groups](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YLJgBVr86VoQ0t9wBIj7X_jm-editgroups.png "Assigning user to groups")
 

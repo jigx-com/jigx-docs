@@ -6,7 +6,7 @@ createdAt: Wed Jul 19 2023 12:43:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Nov 24 2023 11:51:32 GMT+0000 (Coordinated Universal Time)
 ---
 
-When working with the Salesforce provider, it is helpful to know how to reference more than one Salesforce object at a time, filter the columns you require, join data from different objects, and use it in a jig. Below are code examples of each.&#x20;
+When working with the Salesforce provider, it is helpful to know how to reference more than one Salesforce object at a time, filter the columns you require, join data from different objects, and use it in a jig. Below are code examples of each.
 
 ## Using IntelliSense
 

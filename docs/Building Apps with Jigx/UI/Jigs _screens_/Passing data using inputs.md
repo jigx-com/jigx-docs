@@ -20,7 +20,7 @@ You can define the following for inputs:
 
 - The data type
 - Whether the input is required or not
-- A default value if no input is provided.&#x20;
+- A default value if no input is provided.
 
 ## Configuration options
 
@@ -55,8 +55,8 @@ Example:
 :::
 
 :::VerticalSplitItem
-**Input:
-**In the receiving jig configure the input type and specify the data in the field or data property using an expression.&#x20;
+**Input:**
+In the receiving jig configure the input type and specify the data in the field or data property using an expression.
 
 Example of the *input type*:
 `inputs:
@@ -87,7 +87,7 @@ Example:
 :::VerticalSplitItem
 **Input:**
 In the receiving jig configure the component to recieve the data from the parameter.
-Example:&#x20;
+Example:
 `title: =@ctx.jig.inputs.packageName`
 :::
 ::::
@@ -96,20 +96,20 @@ Example:&#x20;
 ## Considerations
 
 - You can specify a default value that can be used as a placeholder if no input value is found in the configuration. Use the `default` property when defining the input types.
-- With inputs, `parameters` are configured in the first jig (sending jig) with the `input` used in the receiving jig.&#x20;
-- The `parameter` and `input` work in conjunction with each other.&#x20;
-- The `parameter` requires a `parameterName` and a data value that is available in that jig. &#x20;
+- With inputs, `parameters` are configured in the first jig (sending jig) with the `input` used in the receiving jig.
+- The `parameter` and `input` work in conjunction with each other.
+- The `parameter` requires a `parameterName` and a data value that is available in that jig.
 - Multiple `parameters` can be passed through at once.
-- The receiving jig configuration uses the format `=@ctx.jig.inputs.parameterName`. Use IntelliSense (ctrl+space) to assist with configuration.&#x20;
+- The receiving jig configuration uses the format `=@ctx.jig.inputs.parameterName`. Use IntelliSense (ctrl+space) to assist with configuration.
 - In a jig, you can access all data sent from other jigs using the expression `@ctx.jig.inputs.[parameter]`, for example, `=@ctx.datasources.contacts[customerId = @ctx.jig.inputs.customerId]`
-- Inputs can be used for passing values from a [composite]() jig to its children jigs.&#x20;
+- Inputs can be used for passing values from a [composite]() jig to its children jigs.
 - If you are in a list-item component, you don't need to list all the parameters, simply use:
   `parameters:                     
       customer: =@ctx.current.item`
 
 ## Examples
 
-### Passing data directly from index.jigx to a jig&#x20;
+### Passing data directly from index.jigx to a jig
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -274,7 +274,7 @@ widgets:
 
 ### Dynamically pass data from another jig's components
 
-Jig input definitions are configured directly in the jig and the input values returned from components configured in another jig. In the example below a form captures the student details, the *Student Details* form links to the *Student Card* jig and uses parameters to pass the values required in the *Student Card* inputs.&#x20;
+Jig input definitions are configured directly in the jig and the input values returned from components configured in another jig. In the example below a form captures the student details, the *Student Details* form links to the *Student Card* jig and uses parameters to pass the values required in the *Student Card* inputs.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" size="70" width="2540" height="2500" position="center" caption="Dynamic input" alt="Dynamic input"}
 
@@ -475,13 +475,13 @@ actions:
 :::
 
 :::::ExpandableHeading
-### &#x20;Passing data from one jig to another&#x20;
+### &#x20;Passing data from one jig to another
 
 In this example, the **sending** jig list called* Island Holiday Packages* is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" size="58" width="2503" height="2520" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig"}
 
-**Sending Jig **
+**Sending Jig**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -563,7 +563,7 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Create a `jig.default` for the receiving jig. In the `title:` property configure the input using  =`@ctx.jig.inputs.packageName`, in the `component.countdown: expiresAt` property add the input expression `=@ctx.jig.inputs.packageDate` and in the `action-confirm: title` property add the input expression `=@ctx.jig.inputs.packagePrice & " - BUY"`.&#x20;
+Create a `jig.default` for the receiving jig. In the `title:` property configure the input using  =`@ctx.jig.inputs.packageName`, in the `component.countdown: expiresAt` property add the input expression `=@ctx.jig.inputs.packageDate` and in the `action-confirm: title` property add the input expression `=@ctx.jig.inputs.packagePrice & " - BUY"`.
 
 
 :::
@@ -623,7 +623,7 @@ In this example, three jigs contain various information for all customers, namel
 2. *customer-contact.jigx* - A list of the customer contact person.
 3. *customer-orders.jigx* - A list of orders.
 
-When you click on a customer in the list (1) shown on the left screen below, a new jig opens combining the details from contact (2) and orders (3) into one screen (composite jig), shown on the right screen below and filters the data to show the selected customer's details. The composite jig is called *customer-overview\.jigx. *&#x20;
+When you click on a customer in the list (1) shown on the left screen below, a new jig opens combining the details from contact (2) and orders (3) into one screen (composite jig), shown on the right screen below and filters the data to show the selected customer's details. The composite jig is called *customer-overview\.jigx*.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" size="60" width="2551" height="2535" position="center" caption="Send and receiving jigs" alt="Send and receiving jigs"}
 
@@ -700,10 +700,10 @@ item:
 
 **Supporting Jigs **
 
-Create two basic list jigs one for *customer-contacts* and the other for the *customer-orders*.&#x20;
+Create two basic list jigs one for *customer-contacts* and the other for the *customer-orders*.
 
 1. For the `data` property in both jig s add the `customerId` as an input
-   `data:  =@ctx.datasources.datasourcename[customerId = @ctx.jig.inputs.customerId]`. Define the input type as string under the `inputs` property.&#x20;
+   `data:  =@ctx.datasources.datasourcename[customerId = @ctx.jig.inputs.customerId]`. Define the input type as string under the `inputs` property.
 2. In the *customer-contacts.jigx* also add the `customerName` as an input with the type string.
 
 :::CodeblockTabs

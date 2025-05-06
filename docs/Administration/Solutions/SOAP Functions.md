@@ -13,7 +13,7 @@ SOAP functions are only visible in the list if the Solution Creator defined func
 You can try out all functions of the solutions that use the SOAP data provider.&#x20;
 
 1. On the left side, you will see all input parameters of the function including the initial set values.
-2. &#x20;Enter values into the input parameter fields and click the **Preview** button at the top of the screen. The JSON editor on the right side will show the result returned by the function.&#x20;
+2. Enter values into the input parameter fields and click the **Preview** button at the top of the screen. The JSON editor on the right side will show the result returned by the function.&#x20;
 3. Click on **Show schema** to view the function definition.
 
 :::hint{type="success"}

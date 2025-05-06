@@ -295,9 +295,9 @@ export function formatCurrency(amount, currencySymbol) {
 ```
 :::
 
-### JavaScript checking any value for false&#x20;
+### JavaScript checking any value for false
 
-Checks for undefined, false, empty string, empty objects, null, empty array, and boolean false. It is better than using (`jsonataTruthy`) or `$empty` or `$exist` in JSONata as it checks for all scenarios and returns false in a single function, whereas using a combination of JSONata functions is necessary to return false.&#x20;
+Checks for undefined, false, empty string, empty objects, null, empty array, and boolean false. It is better than using (`jsonataTruthy`) or `$empty` or `$exist` in JSONata as it checks for all scenarios and returns false in a single function, whereas using a combination of JSONata functions is necessary to return false.
 
 ```javascript
 export function juthy(input) {

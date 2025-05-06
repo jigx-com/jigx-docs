@@ -6,11 +6,11 @@ createdAt: Tue Apr 04 2023 12:00:55 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 29 2025 11:11:26 GMT+0000 (Coordinated Universal Time)
 ---
 
-In the `index.jigx` file, you set solution settings, including the primary information about the solution, the [Home Hub](<./../Home Hub.md>) set up, and properties reusable throughout the solution. &#x20;
+In the `index.jigx` file, you set solution settings, including the primary information about the solution, the [Home Hub](<./../Home Hub.md>) set up, and properties reusable throughout the solution.
 
 ## Name, title, category, description
 
-- **Name** - Your internal solution name.&#x20;
+- **Name** - Your internal solution name.
 - **Title** - This name will be displayed in your app and <a href="https://manage.jigx.com" target="_blank">management</a>.
 - **Category** -  A predefined list of solution categories to choose from.
 - **Description** - A description you provide for your solution.
@@ -28,10 +28,10 @@ description: A solution displaying all features and functions available in Jigx.
 
 ## Tabs
 
-- Tabs are properties used to build your navigation bar that displays at the bottom of the Home Hub.&#x20;
+- Tabs are properties used to build your navigation bar that displays at the bottom of the Home Hub.
 - You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the *More* (ellipsis) button is tapped.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-- Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen. &#x20;
+- Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
 | ### Core Structure | ****                                                                             |
 | ------------------ | -------------------------------------------------------------------------------- |

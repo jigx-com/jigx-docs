@@ -9,7 +9,7 @@ updatedAt: Mon Feb 24 2025 09:27:39 GMT+0000 (Coordinated Universal Time)
 
 ### Existing solutions
 
-Existing solutions will continue to function in the mobile app as before.&#x20;
+Existing solutions will continue to function in the mobile app as before.
 The navigation menu at the bottom of the app will now display as a bar and includes the profile icon that has been moved from the top right-hand corner into the navigation bar. In Jigx Builder, deprecated or changed YAML properties are highlighted with a red squiggle. Before making changes, carefully review the **affected areas** and the **migration steps** outlined below. Plan your updates thoroughly, as multiple files may be impacted and require updates or code relocation to new files.
 
 ::::VerticalSplit{layout="middle"}
@@ -26,9 +26,9 @@ The navigation menu at the bottom of the app will now display as a bar and inclu
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-New solutions now offer greater versatility.&#x20;
+New solutions now offer greater versatility.
 
-1. The updated index.jigx with `tabs`, and new [jig.grid]()  functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.&#x20;
+1. The updated index.jigx with `tabs`, and new [jig.grid]()  functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
 2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.
 
 
@@ -59,21 +59,21 @@ The table below outlines the areas impacted by the introduction of bottom tab na
 
 ### index.jigx
 
-1. Remove the **
-   **- Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
-   \- To replicate this functionality, consider using the [video-player]()  or [carousel]() components.&#x20;
-2. Replace the 
+1. Remove the `stories` property.
+    - Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
+    - To replicate this functionality, consider using the [video-player]() or [carousel]() components.
+2. Replace the `widgets` property.
    - Replace the `widgets` property with a new `tabs` property.
-   - Define the `tabs` you want to display in the bottom tab navigation.&#x20;
+   - Define the `tabs` you want to display in the bottom tab navigation.
      Note:
      - A maximum of four tabs can be rendered.
      - The last tab will display the user avatar, linking to the user profile (previously located in the top-right corner).
      - The first jig listed under the `tabs` property will become the initial screen shown when the app is opened, the Home Hub .
-3. Configure the 
+3. Configure the `tabs` property.
    - For each tab, specify the following required properties: `Tab Name`, `jigId`, and `icon`.
    - Optional properties include `badge` and `when`.
    - `Inputs` previously specified in the index.jigx file must now be defined within the corresponding jig or in the `grid-item`.
-4. Remove the 
+4. Remove the `home` property.
    - Reference the custom Home Hub `jigId` in the first `tabs` property to maintain the same functionality.
 5. Unchanged properties.
    - All other properties, such as `expressions`, `onLoad`, `onRefresh`, and `scripts`, remain unchanged.

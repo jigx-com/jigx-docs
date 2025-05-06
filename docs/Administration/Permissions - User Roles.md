@@ -6,11 +6,10 @@ createdAt: Thu Jun 09 2022 09:26:39 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 08:36:42 GMT+0000 (Coordinated Universal Time)
 ---
 
-Permissions on the Jigx platform are managed with **User Roles**. There are two types namely, **Organization **and **Solution** roles. Roles describe what features and content a user can access and/or manage.&#x20;
+Permissions on the Jigx platform are managed with **User Roles**. There are two types namely, **Organization** and **Solution** roles. Roles describe what features and content a user can access and/or manage.
 
 :::hint{type="info"}
-If you do not see the tabs described in this section of the Jigx Management documentation, check that you have the correct permissions as described below.&#x20;
-:::
+If you do not see the tabs described in this section of the Jigx Management documentation, check that you have the correct permissions as described below.
 
 ## Organization Roles
 

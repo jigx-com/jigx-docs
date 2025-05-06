@@ -16,7 +16,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
 
 1. **Choose your data source **
    - Identify the REST API you will use as your data source. Ensure you understand its endpoint structure, request requirements (like headers and query parameters), and the format of the data it returns.
-2. **Define a REST Service in a **Jigx** function  in **Jigx Builder:&#x20;
+2. **Define a REST Service in a **Jigx** function  in **Jigx Builder:
    - Navigate to the [functions]() folder in Jigx Builder.
    - Use [IntelliSense](<./../../Jigx Builder _code editor_/Editor.md>) to configure the REST data provider.
    - Enter the base URL of the REST API.
@@ -77,7 +77,7 @@ parameters:
 
 ## Referencing a Jigx function
 
-Here is an example of a Jigx solution screen that calls the sendmail function. We have not shown the entire jig, but you can see the call to the REST service within the **actions **section of the form below, which calls the function **rest-send-email **and sends each field in the form as a parameter to the REST service.
+Here is an example of a Jigx solution screen that calls the sendmail function. We have not shown the entire jig, but you can see the call to the REST service within the **actions** section of the form below, which calls the function **rest-send-email** and sends each field in the form as a parameter to the REST service.
 
 ```yaml
 title: Email Employee
@@ -227,7 +227,7 @@ The same logic can be applied to the output from a REST service. The output tran
 
 ## JSONata in Input and Output Transforms
 
-In addition to applying basic “structural” transforms, the JSONata scripting capability is available to apply further functions, and logic transforms within the input and output transforms. More detail on JSONata can be found here: <a href="https://www.jsonata.org" target="_blank">https\://www\.jsonata.org</a>. Below is an example of a JSONata function applied within an output transform that returns videos from the Google YouTube API. Note the use of the $trim() and $substring()** **functions which provide further rich capability for JSON transforms.
+In addition to applying basic “structural” transforms, the JSONata scripting capability is available to apply further functions, and logic transforms within the input and output transforms. More detail on JSONata can be found here: <a href="https://www.jsonata.org" target="_blank">https\://www\.jsonata.org</a>. Below is an example of a JSONata function applied within an output transform that returns videos from the Google YouTube API. Note the use of the $trim() and $substring() functions which provide further rich capability for JSON transforms.
 
 ```yaml
 provider: DATA_PROVIDER_REST
@@ -263,7 +263,7 @@ parameters:
     required: true
 ```
 
-Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr).  When using the returned data in a list jig the $.eval() is used to return the individual ingredients. &#x20;
+Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr).  When using the returned data in a list jig the $.eval() is used to return the individual ingredients. 
 
 :::CodeblockTabs
 ```yaml

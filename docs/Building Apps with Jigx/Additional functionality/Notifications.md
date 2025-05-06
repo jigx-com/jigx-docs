@@ -18,7 +18,7 @@ Notifications are a powerful way to grab your user's attention. With Jigx, notif
 :::
 ::::
 
-There are three different ways to create notifications:&#x20;
+There are three different ways to create notifications:
 
 :::ExpandableHeading
 ## Send notifications using Jigx Management
@@ -42,7 +42,7 @@ You can send notifications from within your solution to other users. There are t
 
 You can use the Jigx REST API to send notifications to other users within your organization.
 
-Add a function definition (*send-notification.jigx)* to the *functions* folder of your solution  Replace the \{organizationId} in the `url` with your organization's Id.&#x20;
+Add a function definition (*send-notification.jigx)* to the *functions* folder of your solution  Replace the \{organizationId} in the `url` with your organization's Id.
 
 See the code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification.jigx" target="_blank">GitHub</a>.
 
@@ -123,7 +123,7 @@ In your jig, you can either invoke the above function using an [execute-entity](
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion:
 
-For this, you need a REST function definition, a Jig that invokes the REST function, and a target jig that will be displayed when the user taps on the notification. See [Notifications]() for the code example.&#x20;
+For this, you need a REST function definition, a Jig that invokes the REST function, and a target jig that will be displayed when the user taps on the notification. See [Notifications]() for the code example.
 ::::
 
 :::ExpandableHeading
@@ -135,7 +135,7 @@ See [External push notifications (API)]() for more information and examples.
 :::ExpandableHeading
 ## Send notifications using a Webhook
 
-For external systems that should send Jigx notifications you can use Webhooks provided by the Jigx platform.&#x20;
+For external systems that should send Jigx notifications you can use Webhooks provided by the Jigx platform.
 
 Reach out to the <a href="" target="_blank">Jigx Support</a> team to receive the technical details and security credentials for your organization to get started with Webhooks.
 :::
@@ -151,9 +151,9 @@ The following examples with code snippets are provided:
 - [Notification sent when submitting a form]()
 - [Send notification with execute-entity]()
 - [End notification with a target jig  with input parameters]()
-- [Send notification to users (USR)]()&#x20;
-- [Send notification to all solution users (SLN)]()&#x20;
-- [Send notification to solution groups (SLN\_GRP)]()&#x20;
-- [Send notification to the organization (ORG)]()&#x20;
-- [Target a specific jig with inputs]()&#x20;
+- [Send notification to users (USR)]()
+- [Send notification to all solution users (SLN)]()
+- [Send notification to solution groups (SLN\_GRP)]()
+- [Send notification to the organization (ORG)]()
+- [Target a specific jig with inputs]()
 

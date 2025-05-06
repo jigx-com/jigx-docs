@@ -7,7 +7,7 @@ updatedAt: Mon Apr 29 2024 13:12:03 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="info"}
-This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx requires an OAuth app to authenticate with Microsoft Graph.&#x20;
+This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx requires an OAuth app to authenticate with Microsoft Graph.
 
 **To successfully complete these steps, you will need a Microsoft Office 365 Administrator account with access to the Azure Active Directory Administration portal.**
 :::
@@ -60,7 +60,7 @@ This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx 
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W5kGnKf2yXFW0s7tPDmSt_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W5kGnKf2yXFW0s7tPDmSt_image.png" size="40" width="978" height="486" position="center" caption alt="Authentication"}
 
-15\. Click on **Mobile and desktop applications**. **Do not** select iOS/macOS or Android.&#x20;
+15\. Click on **Mobile and desktop applications**. **Do not** select iOS/macOS or Android.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m3H4MSa6irQtbns5rtwb_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m3H4MSa6irQtbns5rtwb_image.png" size="40" width="1036" height="704" position="center" caption="Applications" alt="Applications"}
 
@@ -99,7 +99,7 @@ If you are planning on using **Postman** to test calls to Microsoft Graph using 
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7gbvElByph-l-owDoc2Lc_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7gbvElByph-l-owDoc2Lc_image.png" size="44" width="1118" height="368" position="center" caption="Application ID" alt="Application ID"}
 
-24\. Click on **Endpoints **in the toolbar. Select the **portion of the URL** up to the / after v2.0 of the OpenID Connect metadata document field and save this for later.
+24\. Click on **Endpoints** in the toolbar. Select the **portion of the URL** up to the / after v2.0 of the OpenID Connect metadata document field and save this for later.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6x96Q3sKcuVvuBxNVWa9r_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6x96Q3sKcuVvuBxNVWa9r_image.png" size="80" width="1679" height="896" position="center" caption="Endpoints" alt="Endpoints"}
 

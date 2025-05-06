@@ -5,7 +5,7 @@ createdAt: Fri May 24 2024 13:27:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:20:30 GMT+0000 (Coordinated Universal Time)
 ---
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. Queue operations provide the functionality needed when the device regains network connectivity and manages a sequence of elements in a specific order. The commands in the queue can be manipulated to reduce the number of calls to the remote data store.&#x20;
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. Queue operations provide the functionality needed when the device regains network connectivity and manages a sequence of elements in a specific order. The commands in the queue can be manipulated to reduce the number of calls to the remote data store.
 
 ## What happens to data when you are offline?
 
@@ -20,7 +20,7 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 ## How to configure the queue
 
-&#x20;In the [execute-entity](), [execute-entities]() , and [submit-form]() actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
+In the [execute-entity](), [execute-entities]() , and [submit-form]() actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
 
 | **Property** | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -84,7 +84,7 @@ actions:
 ```
 :::
 
-Examples of configuring the required `id` property when using `queueOperation: replace`.&#x20;
+Examples of configuring the required `id` property when using `queueOperation: replace`.
 
 :::CodeblockTabs
 execute-entity-data-id
@@ -166,9 +166,9 @@ actions:
 
 ## Queue handling for delete methods
 
-&#x20;When using the `replace` property with a `delete` method, all commands on the queue for the specified record are removed. The delete method will still delete the local entity record as expected, for example while offline a record is created with a tempId, then updated, and then deleted with a `queueOperations: replace`, the commands for that record are removed from the queue and local entity will also be deleted. This avoids the need for the full cycle of calls to be sent to the backend (create, update, delete) if the end result is that the record is deleted.&#x20;
+When using the `replace` property with a `delete` method, all commands on the queue for the specified record are removed. The delete method will still delete the local entity record as expected, for example while offline a record is created with a tempId, then updated, and then deleted with a `queueOperations: replace`, the commands for that record are removed from the queue and local entity will also be deleted. This avoids the need for the full cycle of calls to be sent to the backend (create, update, delete) if the end result is that the record is deleted.
 
-If the record to be delete has a valid Id then the `queueOperations: add` is used to add the record to the queue, when the device is back online the queue is processed and the record is deleted using the function.&#x20;
+If the record to be delete has a valid Id then the `queueOperations: add` is used to add the record to the queue, when the device is back online the queue is processed and the record is deleted using the function.
 
 If you want to cater for both tempId and avalid Id records when offline in one `queueOperation` configuration use the following expression `=$isTempId(@ctx.current.item.id) ? replace:add`
 
@@ -786,7 +786,7 @@ inputTransform: |
 
 ### Execute-entity with queueOperation (add)
 
-In this example, when the device is offline and a customer record is updated multiple times , all the update commands are queued. When the device is back online the queue is cleared.&#x20;
+In this example, when the device is offline and a customer record is updated multiple times , all the update commands are queued. When the device is back online the queue is cleared.
 
 :::CodeblockTabs
 update-customer.jigx
@@ -1219,9 +1219,9 @@ parameters:
 
 In this example, the remote data store does not return an id, and we need to sync the data before we get the correct backend id for the record.  We need to be careful not to create and update the same record on the queue because the backend cannot associate the records after the sync. To accomodate for this in the update-customer jig we configure two `execute-entity` actions.
 
-- The first action checks to see if a record has a tempId by using the following expression `when: =$isTempId(@ctx.jig.inputs.customer.id)`. If the record on the queue has a tempId, we replace it using the **create** method with a new item that will be placed on the queue. &#x20;
-- The second action checks to see if the record has a valid Id rather than a tempId by using the following expression&#x20;
-  `when: =$not($isTempId(@ctx.jig.inputs.customer.id))`. If the record on the queue has a valid id, we replace it using the **update** method with an item that will be placed on the queue. &#x20;
+- The first action checks to see if a record has a tempId by using the following expression `when: =$isTempId(@ctx.jig.inputs.customer.id)`. If the record on the queue has a tempId, we replace it using the **create** method with a new item that will be placed on the queue.
+- The second action checks to see if the record has a valid Id rather than a tempId by using the following expression
+  `when: =$not($isTempId(@ctx.jig.inputs.customer.id))`. If the record on the queue has a valid id, we replace it using the **update** method with an item that will be placed on the queue.
 
 :::CodeblockTabs
 new-customer.jigx
@@ -1728,7 +1728,7 @@ inputTransform: |
 
 ### Clear all commands in the queue for record
 
-In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`. &#x20;
+In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`.
 
 :::CodeblockTabs
 clear-customer-updates.jigx
@@ -1935,7 +1935,7 @@ actions:
 
 ### Testing and debugging queues
 
-As you add the `queueOperation` property to actions, it is helpful to test or debug that the commands are being executed as configured. Here is a jig that can help you see the commands being queued when the device is offline, and then see the queue clear when the device is back online.&#x20;
+As you add the `queueOperation` property to actions, it is helpful to test or debug that the commands are being executed as configured. Here is a jig that can help you see the commands being queued when the device is offline, and then see the queue clear when the device is back online.
 
 :::CodeblockTabs
 debugging-queues

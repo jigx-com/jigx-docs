@@ -5,11 +5,11 @@ createdAt: Tue Mar 05 2024 09:05:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 14:25:18 GMT+0000 (Coordinated Universal Time)
 ---
 
-Validating fields (text or other) is crucial for ensuring that data entered by users meets specific criteria or formats and for maintaining data integrity and security.&#x20;
+Validating fields (text or other) is crucial for ensuring that data entered by users meets specific criteria or formats and for maintaining data integrity and security.
 
-In Jigx Builder you can use regular expressions (regex) for text validation. They allow for pattern matching and can enforce complex rules for text fields such as email addresses, phone numbers, usernames, passwords, and more. When applied to text validation, regex can be used to check if the input text matches the desired format. If it is not valid, an invalid message is displayed.&#x20;
+In Jigx Builder you can use regular expressions (regex) for text validation. They allow for pattern matching and can enforce complex rules for text fields such as email addresses, phone numbers, usernames, passwords, and more. When applied to text validation, regex can be used to check if the input text matches the desired format. If it is not valid, an invalid message is displayed.
 
-In Jigx you combine a [JSONata expression](./Expressions.md) with a [Regex expressions]() to create a validation pattern and provide a message if the pattern does not match.&#x20;
+In Jigx you combine a [JSONata expression](./Expressions.md) with a [Regex expressions]() to create a validation pattern and provide a message if the pattern does not match.
 
 ## Creating the validation expression:
 

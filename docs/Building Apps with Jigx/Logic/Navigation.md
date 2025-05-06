@@ -26,13 +26,13 @@ Configure the `LinkTo` property with the jig name you want to open next.
 :::
 
 :::WorkflowBlockItem
-Configure `inputs` if you are wanting to pass data between jigs.&#x20;
+Configure `inputs` if you are wanting to pass data between jigs.
 :::
 ::::
 
 ## Considerations:&#x20;
 
-- By adding an `instanceId` to the `go-to` action, you choose if you want to create a *new state *or you want to *reuse the existing state* of a jig. Do not confuse this with the `behaviour` property's functionality.&#x20;
+- By adding an `instanceId` to the `go-to` action, you choose if you want to create a *new state *or you want to *reuse the existing state* of a jig. Do not confuse this with the `behaviour` property's functionality.
 - If no `inputs` and `instanceId` are specified, the `instanceId` of the jig is set to `no-inputs`.
 - If an `instanceId` is specified, but `inputs` are not, then the `instanceId` uses the one specified.
 - If an `instanceId` and `inputs` are specified the `instanceId` uses the one specified.
@@ -244,7 +244,6 @@ actions:
 :::
 :::::
 
-###
 
 
 

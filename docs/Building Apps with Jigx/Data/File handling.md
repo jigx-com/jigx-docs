@@ -12,7 +12,7 @@ Type of files:
 - Images
 - Documents
 
-Image files can be used in the following functionality:&#x20;
+Image files can be used in the following functionality:
 
 | **Data**                        | **Conversion configuration**                                   | **Result**                                                                     |
 | ------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -52,7 +52,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 ::::ExpandableHeading
 ### REST & SQL function&#x20;
 
-In the examples below, the file conversions are configured in the** REST and SQL (GET) functions **to convert the incoming files.&#x20;
+In the examples below, the file conversions are configured in the** REST and SQL (GET) functions **to convert the incoming files.
 
 :::CodeblockTabs
 rest-function-in
@@ -112,7 +112,7 @@ conversions:
 ::::ExpandableHeading
 ### REST & SQL function&#x20;
 
-In the examples below, the file conversions are configured in the **REST and** **SQL ****(SAVE/CREATE/UPDATE) ****functions** to convert the files that are outgoing to REST and SQL.&#x20;
+In the examples below, the file conversions are configured in the **REST and** **SQL ****(SAVE/CREATE/UPDATE) ****functions** to convert the files that are outgoing to REST and SQL.
 
 :::CodeblockTabs
 rest-function-out
@@ -188,7 +188,7 @@ conversions:
 
 ## Datasource conversion&#x20;
 
-In this example, the Dynamic Data image file conversion is configured in the datasource to convert the files to be used in the solution.&#x20;
+In this example, the Dynamic Data image file conversion is configured in the datasource to convert the files to be used in the solution.
 
 :::CodeblockTabs
 datasource-conversion
@@ -277,7 +277,7 @@ options:
 
 ## Add multiple files with SQL data provider
 
-This example uses the `text-field` with `mediaType: image` and `isMultiple: true` to add multiple images to SQL. The `conversion` of the files is done in the SQL function.&#x20;
+This example uses the `text-field` with `mediaType: image` and `isMultiple: true` to add multiple images to SQL. The `conversion` of the files is done in the SQL function.
 
 :::CodeblockTabs
 sql-add-widget-multiple-function.jigx

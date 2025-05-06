@@ -14,19 +14,17 @@ To logout of Jigx Management click on your name in the bottom left corner and se
 
 ## Switching between Light/Dark mode
 
-To toggle between light and dark mode, click on your name in the bottom left corner and toggle the  Dark mode switch on or off.&#x20;
+To toggle between light and dark mode, click on your name in the bottom left corner and toggle the  Dark mode switch on or off.
 
 ![Light/Dark mode](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dCM7XqJC5xkJ-FaOp86tM_jm-lightmode.png "Light/Dark mode")
 
 ## Your User Profile
 
-Click on your name in the bottom left corner and select **My profile** to view and update your personal profile.&#x20;
-
-
+Click on your name in the bottom left corner and select **My profile** to view and update your personal profile.
 
 From your user profile you can access:
 
 1. **User Solutions** - Displays Jigxsolutions that you are the owner or creator of. You can add or remove solutions to your profile.
-2. &#x20;**Troubleshooting** - Allows you to troubleshoot issues your solutions encounter in the last hour, day, week or month.  Identify the solution using its correlation ID.
+2. **Troubleshooting** - Allows you to troubleshoot issues your solutions encounter in the last hour, day, week or month.  Identify the solution using its correlation ID.
 3. **Personal Access Token** - Create your personal access token.
 

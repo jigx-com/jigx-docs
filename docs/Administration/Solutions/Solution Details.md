@@ -46,15 +46,15 @@ Making a copy of a solution has many benefits to speed up the development proces
 
 By default, the *Copy Solution* button is not visible. To enable this feature follow the steps below:
 
-1. &#x20;Navigate to the [Solution Settings](<./Solution Settings.md>) tab.
+1. Navigate to the [Solution Settings](<./Solution Settings.md>) tab.
 2. In the Allow copy of solution dropdown, select either **Within current organization** or **To any organization***.*
 3. Check the **Permit copy of data **if you want to copy the solution's data along with the solution definition.
 4. Click **Save**.
 5. Navigate back to the Solution Details tab, the red **Copy Solution** button will be visible.
 6. Click the red **Copy Solution** button, and give the solution a new or updated **title.**
 7. Verify the name is available by clicking on the **Verify name** button.
-8. Choose to include or exclude the current solution's data with the copy. This option is only visible if you checked the **Permit copy of data **checkbox in step 3 above.&#x20;
-9. Once copied the new solution is displayed in the [Solutions](./../Solutions.md) list.&#x20;
+8. Choose to include or exclude the current solution's data with the copy. This option is only visible if you checked the **Permit copy of data** checkbox in step 3 above.
+9. Once copied the new solution is displayed in the [Solutions](./../Solutions.md) list.
 10. For audit purposes the copied solution's details page will have a field displaying the solution GUID of the orginal solution.
 
 **

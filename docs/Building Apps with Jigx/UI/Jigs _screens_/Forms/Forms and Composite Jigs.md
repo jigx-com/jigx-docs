@@ -8,7 +8,7 @@ updatedAt: Wed May 17 2023 14:21:09 GMT+0000 (Coordinated Universal Time)
 
 In this section, we will have a look at how you can create and update forms using composite jigs. For more information see the [jig.composite]() topic.
 
-1\) First we need to create a new jig with type composite.
+1. First we need to create a new jig with type composite.
 
 :::CodeblockTabs
 composite-form.jigx
@@ -23,7 +23,7 @@ children:
 ```
 :::
 
-2\) Now we create two new jigs with a form as we did on the top of this section where we created our first form. For the first, we put just tow text-fields one for the Firstname and the second for the Lastname. Let's call this jig name-form.jigx
+2. Now we create two new jigs with a form as we did on the top of this section where we created our first form. For the first, we put just tow text-fields one for the Firstname and the second for the Lastname. Let's call this jig name-form.jigx
 
 :::CodeblockTabs
 name-form.jigx
@@ -81,7 +81,7 @@ children:
 ```
 :::
 
-3\) Now we have two jigs where we have two forms. Let's back to the composite jig that we create at the start on the top of this section. Change the myjig1 and 2 to the name-form and personal-info-form and add the instanceId: thanks to instanceId we can refer to the children in the specific jig.
+3. Now we have two jigs where we have two forms. Let's back to the composite jig that we create at the start on the top of this section. Change the myjig1 and 2 to the name-form and personal-info-form and add the instanceId: thanks to instanceId we can refer to the children in the specific jig.
 
 :::CodeblockTabs
 composite-form.jigx
@@ -98,7 +98,7 @@ children:
 ```
 :::
 
-4\) For saving our data from we need to create action with action.execute-entity but now our section data will look a little different. The syntax for first-name will be as follows -&#x20;
+4. For saving our data from we need to create action with action.execute-entity but now our section data will look a little different. The syntax for first-name will be as follows -
 ***firstname: =@ctx.jigs.names.components.first-name.state.value***
 ***=@ctx.jigs.names*** - will refer to the specific jig
 ***components.first-name.state.value*** - will refer to the specific component inside the jig that we refer before.

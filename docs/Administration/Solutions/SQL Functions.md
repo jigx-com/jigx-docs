@@ -7,13 +7,13 @@ updatedAt: Tue May 23 2023 10:10:45 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="info"}
-SQL functions are only visible in the list if the Solution Creator defined functions that use the SQL data provider, see [Microsoft Azure SQL](<./../../Building Apps with Jigx/Data/Data Providers/Microsoft Azure SQL.md>). Make sure that your SQL connection is set up correctly in [Connections](./Connections.md).&#x20;
+SQL functions are only visible in the list if the Solution Creator defined functions that use the SQL data provider, see [Microsoft Azure SQL](<./../../Building Apps with Jigx/Data/Data Providers/Microsoft Azure SQL.md>). Make sure that your SQL connection is set up correctly in [Connections](./Connections.md).
 :::
 
-You can try out all functions of the solutions that use the SQL data provider.&#x20;
+You can try out all functions of the solutions that use the SQL data provider.
 
 1. On the left side, you will see all input parameters of the function including the initial set values.
-2. Enter values into the input parameter fields and click the **Run** button at the top of the screen. The JSON editor on the right side will show the results returned by the function.&#x20;
+2. Enter values into the input parameter fields and click the **Run** button at the top of the screen. The JSON editor on the right side will show the results returned by the function.
 3. Click on **Show schema** to view the function definition.
 
 :::hint{type="success"}

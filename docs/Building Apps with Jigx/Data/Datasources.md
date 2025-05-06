@@ -5,13 +5,13 @@ createdAt: Wed Nov 22 2023 07:06:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Mar 31 2025 09:44:42 GMT+0000 (Coordinated Universal Time)
 ---
 
-Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](<./Data Providers.md>).&#x20;
+Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](<./Data Providers.md>).
 
 ## Types
 
 There are three types of datasources available in Jigx Builder.
 
-1. **SQLite **- Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite]().
+1. **SQLite** - Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite]().
 2. **Static** - Static lists are typically used when data needs to be accessed but hardly ever changed. Static Data is helpful because it can be created quickly inside the jig, and there is no need to specify any database connections or set up tables. The amount of records that can be created in Static data is unlimited. Static data is commonly used to bind data to the UI components. For code examples and snippets, see [Static]().
 3. **System** - The system datasource is used to get a list of icons for jig components. For code examples and snippets, see [system]().
 
@@ -286,12 +286,12 @@ Complex JSON
 
 ### In a Global file
 
-Datasources are defined once and are available throughout your solution to be reused in multiple jigs. Adding a global datasource improves performance as the data is retrieved once rather than multiple times.&#x20;
+Datasources are defined once and are available throughout your solution to be reused in multiple jigs. Adding a global datasource improves performance as the data is retrieved once rather than multiple times.
 
 ![Global datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RKfB1NkVqQCckqcWoR-cR_ds-global.gif "Global datasource")
 
 1. Open your solution in Jigx Builder and navigate to the **datasources** folder of your solution.
-2. &#x20;Create a new file called *\<your\_datasource\_name>.jigx.*
+2. Create a new file called *\<your\_datasource\_name>.jigx.*
 3. Invoke IntelliSense (ctrl+space) for the list of available datasources.
 4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the solution.
 5. Next, open the jigs where you want to use the data, use expressions with the datasource option to reference the global datasource file, for example, `=@ctx.datasources.employee`.
@@ -303,7 +303,7 @@ The data sets are defined in the datasources inside the individual jig generally
 ![Local datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fnvUAIdPdJV8GV1y_MOg-_ds-local.gif "Local datasource")
 
 1. Open your solution in Jigx Builder and navigate to the jig.
-2. &#x20;Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.&#x20;
+2. Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.
 3. Invoke IntelliSense (ctrl+space) next to the `mydata:` property for the list of available datasources.
 4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the jig. *Tip*: only return the specific data you need in the datasource.
 5. The data is now available to use in that jig by using expressions with the datasource option to reference the local datasource using the unique name you gave it, for example, `=@ctx.datasources.contact`.

@@ -12,5 +12,5 @@ The following sections provide the steps to configure OAuth in Microsoft Azure A
 
 1. Configure OAuth access for Microsoft Graph in Microsoft Azure's admin portal by following the steps in [Create and configure a new OAuth app in Microsoft Azure AAD](<./Configuring OAuth for MS Graph/Create and configure a new OAuth app in Microsoft Azure AAD.md>).
 2. Add a credential configuration to your Jigx solution in the Jigx Management by following the steps in [Adding the OAuth Configuration to the solution in Jigx Management](<./Configuring OAuth for MS Graph/Adding the OAuth Configuration to the solution in Jigx Management.md>).
-3. Implement a function that calls Microsoft Graph and displays the results on a jig by using the YAML examples in [Using the OAuth configuration in a Jigx solution](<./Configuring OAuth for MS Graph/Using the OAuth configuration in a Jigx solution.md>)&#x20;
+3. Implement a function that calls Microsoft Graph and displays the results on a jig by using the YAML examples in [Using the OAuth configuration in a Jigx solution](<./Configuring OAuth for MS Graph/Using the OAuth configuration in a Jigx solution.md>)
 

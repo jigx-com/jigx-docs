@@ -5,7 +5,7 @@ createdAt: Tue Dec 12 2023 12:00:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:42:25 GMT+0000 (Coordinated Universal Time)
 ---
 
-When it comes to ordering YAML elements, it's crucial to structure your Jigx file in a clear and logical manner. By doing so, you can ensure that your YAML data is easy to read, maintain, and troubleshoot, and sometimes, even the performance and order of execution are determined by the order.&#x20;
+When it comes to ordering YAML elements, it's crucial to structure your Jigx file in a clear and logical manner. By doing so, you can ensure that your YAML data is easy to read, maintain, and troubleshoot, and sometimes, even the performance and order of execution are determined by the order.
 
 Here are the best practices for ordering YAML elements in a jig file and the recommended structure for items in a section, for example, components.
 
@@ -123,7 +123,7 @@ widgets:
 
 Order of items within a section, for example when defining a component we should aim to standardise as follows:
 
-- Type is always the first thing to be defined so that we know what we are dealing with&#x20;
+- Type is always the first thing to be defined so that we know what we are dealing with
 - Meta elements for the list (data)
 - Item definition
 - Title
@@ -131,8 +131,8 @@ Order of items within a section, for example when defining a component we should
 - Description
 - Left element , Right element , Label
 - action
-- OnPress&#x20;
-- Swipeable&#x20;
+- OnPress
+- Swipeable
 
 :::CodeblockTabs
 section-order

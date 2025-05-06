@@ -5,7 +5,7 @@ createdAt: Mon Nov 20 2023 10:59:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:22:22 GMT+0000 (Coordinated Universal Time)
 ---
 
-There are three methods to create columns in Dynamic Data tables, and it all depends on where your data comes from if it is pre-existing or new data to be added while the app is in use.&#x20;
+There are three methods to create columns in Dynamic Data tables, and it all depends on where your data comes from if it is pre-existing or new data to be added while the app is in use.
 
 1. Create a jig in Jigx Builder with the columns and save data to your table.
 2. Create your columns and data manually in Jigx Management.
@@ -17,7 +17,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 
 ## Creating columns and records via Jigx Builder
 
-You can create columns in the table by creating a jig, then define the columns you require in the table by using the Dynamic Data provider's `create` or `save` method.&#x20;
+You can create columns in the table by creating a jig, then define the columns you require in the table by using the Dynamic Data provider's `create` or `save` method.
 Here are scenarios commonly used to create columns and data from a jig.
 
 ### **Create a **[**form**](https://docs.jigx.com/examples/form)** and use the **[**submit form**](https://docs.jigx.com/examples/submit-form)** action**&#x20;
@@ -30,16 +30,15 @@ The columns and data records are created when the form is completed and submitte
 
 ![Form creates column and data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jjL4vN_lEb3UbFsv42yPN_dd-column-form.png "Form creates column and data record")
 
-1. Add a `component.form` to a jig and give it a `formId`.&#x20;
-2. Add any of the available form properties, such as [text-field](), [date-picker](), [number-field]()&#x20;
-3. Give each form property an `instanceId`.&#x20;
+1. Add a `component.form` to a jig and give it a `formId`.
+2. Add any of the available form properties, such as [text-field](), [date-picker](), [number-field]().
 4. Add the `submit.form` action.
 5. Specify the same `formId` used in the `component.form`.
 6. Use the `DATA_PROVIDER_DYNAMIC` with the `create` or `save` method.
 7. In the `entity` property, specify the table where the columns and data must be added.
-8. &#x20;Publish the solution.
+8. Publish the solution.
 9. Open the solution in Jigx App and complete the form, click the submit button.
-10. Browse to Jigx Management> *solution* >data> *table *to see the* *new record and columns.
+10. Browse to Jigx Management> *solution* >data> *table* to see the* *new record and columns.
 
 :::CodeblockTabs
 employee-form.jigx
@@ -112,7 +111,7 @@ actions:
 In this scenario you can use actions in a jig that interact with data to add columns and data records. The columns and data are configured in the `data:` property the action.Use the following actions with the Dynamic Data provider's `create` and `save` methods:
 
 - `action.execute-entity` - used to add a **single** data record
-- `action.execute.entities` - used to add **multiple** data :Comment[records]{resolved="false" docCommentId="yM3gZjO6_qJOpZEe5H7Gl"} &#x20;
+- `action.execute.entities` - used to add **multiple** data
 
 :::CodeblockTabs
 execute-entity-action
@@ -150,29 +149,29 @@ type: action.execute-entities
 
 ![Creating columns](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-v-otw_CzhfHNQXOJf403_dd-column-mngt.gif "Creating columns")
 
-1. Open [Jigx Management](<./../../../../Administration/Management Overview.md>), navigate to your solution and select the **Data** option.&#x20;
+1. Open [Jigx Management](<./../../../../Administration/Management Overview.md>), navigate to your solution and select the **Data** option.
 2. Click on the table you want to add a record to in the right-hand **Tables** pane.
-3. Click on the blue **New record** button. If you already have records in the table, you will see all existing columns of all records.&#x20;
-4. In the **New record** pane add the data values for each column.&#x20;
-5. **Add new columns **to your record by defining a column name and clicking on the **+** button next to the new column name. As you add data in the column the field displays the type under the entry, such as number, string or boolean.
+3. Click on the blue **New record** button. If you already have records in the table, you will see all existing columns of all records.
+4. In the **New record** pane add the data values for each column.
+5. **Add new columns** to your record by defining a column name and clicking on the **+** button next to the new column name. As you add data in the column the field displays the type under the entry, such as number, string or boolean.
 6. Enter data values in the column fields and click **Save**.
 
 :::hint{type="info"}
-You do not need to specify an rid column. Dynamic Data will create a GUID based id column for you automatically. You can optionally view the rid column by selecting the settings button and checking the id column as a visible column.&#x20;
+You do not need to specify an rid column. Dynamic Data will create a GUID based id column for you automatically. You can optionally view the rid column by selecting the settings button and checking the id column as a visible column.
 :::
 
 ### Importing data using a JSON or CSV file
 
-If you have pre-existing data or a large data set with multiple records to add to a table you can import the data by uploading a CSV or JSON file that will create the columns and populate the data records.&#x20;
+If you have pre-existing data or a large data set with multiple records to add to a table you can import the data by uploading a CSV or JSON file that will create the columns and populate the data records.
 
 ![Add data with JSON file](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VxJ6gOJHXhZK-UOxQvsf9_dd-addjson.gif "Add data with JSON file")
 
-1. Open [Jigx Management](<./../../../../Administration/Management Overview.md>), navigate to your solution and select the **Data** option.&#x20;
+1. Open [Jigx Management](<./../../../../Administration/Management Overview.md>), navigate to your solution and select the **Data** option.
 2. Click on the table you want to add a record to in the right-hand **Tables** pane.
 3. Click on the **Upload** button at the top of the screen.
-4. By default the JSON upload window is shown. You can toggle to upload CSV using the **Switch to CSV** button in the top right. Provide the property name for the unique identifier, otherwise by default the rid (GUID based id) property will automatically be created for you. Drag and drop the file in the designated area.&#x20;
+4. By default the JSON upload window is shown. You can toggle to upload CSV using the **Switch to CSV** button in the top right. Provide the property name for the unique identifier, otherwise by default the rid (GUID based id) property will automatically be created for you. Drag and drop the file in the designated area.
 5. Click **Save**.
-6. For CSV uploads select the type of **comma-delimited** used in the **CSV file.** Drag and drop the file in the designated area.&#x20;
+6. For CSV uploads select the type of **comma-delimited** used in the **CSV file.** Drag and drop the file in the designated area.
 7. Click **Add**.
 8. Click **Save**.
 

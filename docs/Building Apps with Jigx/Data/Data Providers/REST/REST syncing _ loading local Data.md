@@ -11,25 +11,25 @@ updatedAt: Wed Nov 20 2024 06:53:29 GMT+0000 (Coordinated Universal Time)
 **Key:**
 
 1. **Sync data from the cloud**
-   Use a `sync-entities` action to fetch data from the cloud and store it in the local SQLite database.&#x20;
-   Use the `onLoad`, `onFocus`, `onRefresh`, or any other event where actions are defined.&#x20;
+   Use a `sync-entities` action to fetch data from the cloud and store it in the local SQLite database.
+   Use the `onLoad`, `onFocus`, `onRefresh`, or any other event where actions are defined.
 2. **Load data from SQLite to use on a jig**
-   Use the `DATA_PROVIDER_LOCAL` in the datasource defined in the jig or a global datasource to execute an SQLite query.&#x20;
+   Use the `DATA_PROVIDER_LOCAL` in the datasource defined in the jig or a global datasource to execute an SQLite query.
 3. **Save data to SQLite ONLY**
    To save data locally only and not sync to the cloud, use an `execute-entity` action with the `DATA_PROVIDER_LOCAL`.
 4. **Save data to SQLite and sync data to the cloud**
    Update the local SQLite and sync to the cloud in a single action to ensure high-performing user experiences without lag.
    Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST`.
    Specify the function call to make, the local entity/table to update, and the method to perform on the local table. If the method is an update, delete, or save, specify the record's ID.
-5. **Save data to the cloud ONLY
-   **Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST`. Set the method to the functionCall and specify the function to be called. The local tables will not be updated; you must sync the data from the cloud before it is available to display on a jig.
+5. **Save data to the cloud ONLY**
+   Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST`. Set the method to the functionCall and specify the function to be called. The local tables will not be updated; you must sync the data from the cloud before it is available to display on a jig.
 
 ## Using sync-entities action
 
-1. Use the `sync-entities` action to sync data from the REST data store to the local SQLite data provider. Syncing data locally results in high performance with minimal lag and ensures all data is available in the app when the device is offline.&#x20;
-2. Best practice is to configure a global action, the `sync-entities` action, with the REST data provider, allowing reuse throughout the solution.&#x20;
-3. Add the global sync action to the `onFocus` and `onLoad` events in the index.jigx file ensures data is synced to the local data provider as soon as the app loads or is focused on the device.&#x20;
-4. Add the global sync action to the `onRefresh` or `onFocus` events in a jig when data is changed, for example, on the list of customers, this ensures that when a new customer is created, the list is updated immediately when navigating to it or refreshing the list with a downward swipe.&#x20;
+1. Use the `sync-entities` action to sync data from the REST data store to the local SQLite data provider. Syncing data locally results in high performance with minimal lag and ensures all data is available in the app when the device is offline.
+2. Best practice is to configure a global action, the `sync-entities` action, with the REST data provider, allowing reuse throughout the solution.
+3. Add the global sync action to the `onFocus` and `onLoad` events in the index.jigx file ensures data is synced to the local data provider as soon as the app loads or is focused on the device.
+4. Add the global sync action to the `onRefresh` or `onFocus` events in a jig when data is changed, for example, on the list of customers, this ensures that when a new customer is created, the list is updated immediately when navigating to it or refreshing the list with a downward swipe.
 
 ## Using Execute-entity/entities action
 

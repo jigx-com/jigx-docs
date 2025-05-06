@@ -6,7 +6,7 @@ createdAt: Sun Nov 20 2022 19:03:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 09:27:17 GMT+0000 (Coordinated Universal Time)
 ---
 
-Understanding the data lifecycle in a Jigx solution is essential to help you plan your data calls and when and why to make them. The diagrams below describe when and why data is loaded when a jig is accessed.&#x20;
+Understanding the data lifecycle in a Jigx solution is essential to help you plan your data calls and when and why to make them. The diagrams below describe when and why data is loaded when a jig is accessed.
 
 ## Navigating to a Jig for the first time
 

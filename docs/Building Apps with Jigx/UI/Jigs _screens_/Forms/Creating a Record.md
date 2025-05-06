@@ -27,7 +27,7 @@ children:
 
 ## Adding a form to the Jig
 
-We need to add a *form* component to our Jig, as it will be the container for the form input components.&#x20;
+We need to add a *form* component to our Jig, as it will be the container for the form input components.
 
 1. Go ahead and use IntelliSense (**Ctrl+Space**) to add a [form]() component to the `children` option of your Jig.
 2. Note the empty `instanceId` option. This is the unique identifier of your form. Set it to *simple-form* as we need it later to submit the form.
@@ -143,12 +143,12 @@ Now we need to set our *submit-form* action to the form component:
 
 1. `formId` - Remember that we set the identifier of our form component (`instanceId`) to *simple-form* earlier. We will use this identifier to connect our action to the form. Set `formId` to *simple-form*, you can use** **Ctrl+Space for this as well.
 2. `provider` - As we want to store our form data in a Dynamic Data table, we can leave this value as is.
-3. `title` - The title will be displayed on the action button at the bottom of our Jig. Set it to *Submit form.*
+3. `title` - The title will be displayed on the action button at the bottom of our Jig. Set it to *Submit form*.
 4. `entity` - This is the entity table that will be used to store the data. Use Ctrl + Space to select the *default/form* table we defined at the beginning of the guide.
 5. `method` - We want to create a new record, therefore we leave this value set to create.
 6. `go-back` - After the record is created, we want to navigate back to the previous screen. Note that there are more options available.
 
-Our YAML looks like this now :&#x20;
+Our YAML looks like this now :
 
 :::CodeblockTabs
 form.jigx
@@ -204,7 +204,7 @@ The execute-entity action allows for more control over how your data is stored. 
 As you can see in below example, the action exposes a `data` option that allows you to specify each column that will be used in the payload. Each column value can be bound to an expression and state of your components. In this example we are accessing state for each field (remember, **Ctrl+Space **is your best friend). It's very helpful to learn more about [State](./../../../Logic/State.md) in general when using this type of action.
 
 :::hint{type="info"}
-You could also use JSONata [expression](./../../../Logic/Expressions.md) to transform the state values before binding them to the columns. An example for this would be:&#x20;
+You could also use JSONata [expression](./../../../Logic/Expressions.md) to transform the state values before binding them to the columns. An example for this would be:
 
 *lastname: =$uppercase(@ctx.components.lastname.state.value)*
 :::

@@ -6,15 +6,15 @@ createdAt: Thu Jul 28 2022 09:09:06 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 14 2024 11:28:48 GMT+0000 (Coordinated Universal Time)
 ---
 
-This section covers installing the Jigx Builder extension, versions, updates, uninstalling, and the recommended source control. The numbered image below indicates each of these areas in the Jigx Builder.&#x20;
+This section covers installing the Jigx Builder extension, versions, updates, uninstalling, and the recommended source control. The numbered image below indicates each of these areas in the Jigx Builder.
 
 ![Jigx Builder installed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F0M0aR2ftgSINpjbqd9yV_jb-extension.png "Jigx Builder installed")
 
 ## 1. Install steps
 
 1. Start by downloading and installing VS Code on your development machine. The download is available from [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
-2. The Jigx Builder extension is in the <a href="https://marketplace.visualstudio.com/items?itemName=Jigx.jigx-builder" target="_blank">Microsoft Visual Studio Marketplace</a>. Click on the VS Code extension icon in the left navigation bar and search for Jigx Builder.&#x20;
-3. Click the blue **install **button.
+2. The Jigx Builder extension is in the <a href="https://marketplace.visualstudio.com/items?itemName=Jigx.jigx-builder" target="_blank">Microsoft Visual Studio Marketplace</a>. Click on the VS Code extension icon in the left navigation bar and search for Jigx Builder.
+3. Click the blue **install** button.
 4. The Jigx Builder now appears under your list of installed extensions, and is automatically added to the side bar, and is identifiable by its unique icon.
 
 ## 2. Versions

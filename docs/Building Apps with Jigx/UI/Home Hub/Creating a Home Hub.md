@@ -5,13 +5,13 @@ createdAt: Tue Nov 21 2023 06:45:29 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 29 2025 11:13:53 GMT+0000 (Coordinated Universal Time)
 ---
 
-Creating a home screen (hub) for a mobile app can be a great way to enhance the user experience and provide more functionality. In this section, we will explore the benefits of creating a home screen and the steps involved in configuring one.&#x20;
+Creating a home screen (hub) for a mobile app can be a great way to enhance the user experience and provide more functionality. In this section, we will explore the benefits of creating a home screen and the steps involved in configuring one.
 
 ## How to create a  Home Hub
 
 Steps to customize your Home Hub:
 
-1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default]() or [jig.grid]() are great options to use.&#x20;
+1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default]() or [jig.grid]() are great options to use.
 2. Use IntelliSense (ctrl+space) to open the list of available options in the index.jigx file, and select `tabs`.
 3. In the `jigId` property, use IntelliSense again to choose the jig you configured as your Home Hub.
 4. Choose an icon that will represent the Home Hub.  The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
@@ -24,7 +24,7 @@ Steps to customize your Home Hub:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Here is an example of a Home Hub designed for its simplicity with no titles and no widgets. A `jig.default` is used with a `component.image` and `component.list`.&#x20;
+Here is an example of a Home Hub designed for its simplicity with no titles and no widgets. A `jig.default` is used with a `component.image` and `component.list`.
 :::
 
 :::VerticalSplitItem
@@ -115,7 +115,7 @@ children:
 :::
 
 :::VerticalSplitItem
-In this example a jig.default is created with a `component.image` , `component.section`, `component.countdown` and `component.grid`. The grid component references four jigs and shows them as widgets that when tapped opens the jigs.&#x20;
+In this example a jig.default is created with a `component.image` , `component.section`, `component.countdown` and `component.grid`. The grid component references four jigs and shows them as widgets that when tapped opens the jigs.
 :::
 ::::
 
@@ -438,7 +438,7 @@ children:
 ## Best practice
 
 - Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item]() to create the gallery.
-- Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data. &#x20;
-- The `onload` event must be configured on the index.jigx file for syncing data to the device.&#x20;
-- When deciding on the type of jig to use as the Home Hub it is recommended to use the  [jig.default]() or [jig.grid]() as they provide the broadest scope of components, actions, and widgets. &#x20;
+- Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data.
+- The `onload` event must be configured on the index.jigx file for syncing data to the device.
+- When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default]() or [jig.grid]() as they provide the broadest scope of components, actions, and widgets.
 
