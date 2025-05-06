@@ -1,10 +1,4 @@
----
-title: Single Sign-On (SSO)
-slug: xvrH-sso
-description: Learn how to set up and configure Single Sign-On (SSO) in JigxApp with this comprehensive document. Discover how SSO enables users to log in using their email addresses authenticated against 3rd party identity providers. Explore domain configuration suppo
-createdAt: Wed Jun 07 2023 07:26:21 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Apr 05 2024 08:52:12 GMT+0000 (Coordinated Universal Time)
----
+# Single Sign-On (SSO)
 
 ## Introduction
 
@@ -12,8 +6,7 @@ Single Sign-On is set on an organizational level in Jigx Management, allowing us
 
 SSO is only applicable when signing in on the Jigx App. To log in to Jigx Management (<a href="https://manage.jigx.com" target="_blank">manage.jigx.com</a>) the organization `OWNER` and `ADMIN` must use their Jigx accounts.
 
-<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" size="82" width="496" height="720" position="center" caption} -->
-<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif" size="82" width="496" height="720" position="center" />
+![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif)
 
 ## Domain configuration support
 
@@ -47,7 +40,7 @@ The table below describes the combinations possible when enabiling SSO.
 
 1. In Jigx Management under the Organization icon, select the **Single Sign-On** option. You require `ADMIN` or `OWNER` permissions to see and access the organization settings.
 2. Select the **Single Sign-On enabled** checkbox. The configuration options show.
-3. Required - Click on **+ link to OAuth configuration **to open the** Choose OAuth configurations for SSO **panel on the right. Select the checkboxes next to the available OAuth configurations that you want to use with SSO. If there are no available OAuth configurations in the pane go to [OAuth Configurations](<./OAuth Configurations.md>) to set one up.
+3. Required - Click on \*\*+ link to OAuth configuration **to open the** Choose OAuth configurations for SSO \*\*panel on the right. Select the checkboxes next to the available OAuth configurations that you want to use with SSO. If there are no available OAuth configurations in the pane go to [OAuth Configurations](<./OAuth Configurations.md>) to set one up.
 4. Selecting the **Auto-create users after successful authentication** checkbox, creates new users that sign into the Jigx App with the organization's email address as a Jigx user after authenticating the user against the 3rd party identity provider.
    - The users are automatically created with `User` rights (ability to use solutions on the  app) in Jigx.
    - For Jigx to automatically create these users in an organization an email address  belonging to an existing user with `Admin` or `Owner` rights must be added to the **New users will be created by** field, think of it as the organization's admin creating the users. By default the user who enables the Auto create users after successul authentication checkbox email address is shown in this field.
@@ -63,8 +56,7 @@ Once signed in to the app and the user is authenticated against the 3rd party in
 :::
 
 :::VerticalSplitItem
-<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" size="74" width="1240" height="2500" position="center" caption="SSO Authenticaton successful" alt="SSO Authenticaton successful"} -->
-::<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" size="74" width="1240" height="2500" position="center" caption="SSO Authenticaton successful" alt="SSO Authenticaton successful" />
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" size="66" width="1240" height="2500" position="center" caption="SSO Authenticaton successful" alt="SSO Authenticaton successful"}
 :::
 ::::
 
@@ -72,10 +64,7 @@ Once signed in to the app and the user is authenticated against the 3rd party in
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" size="76" width="1253" height="2500" position="center" caption="IDP sign out" alt="IDP sign out"} -->
-::<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" size="76" width="1253" height="2500" position="center" caption="IDP sign out" alt="IDP sign out" />
-
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" size="66" width="1253" height="2500" position="center" caption="IDP sign out" alt="IDP sign out"}
 :::
 
 :::VerticalSplitItem
