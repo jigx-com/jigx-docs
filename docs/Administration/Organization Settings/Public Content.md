@@ -71,7 +71,7 @@ The Public Solution tab is a definition file configured similiarly to creating t
 3. jigs
 4. title
 5. category
-6. widgets&#x20;
+6. widgets
 :::
 
 :::VerticalSplitItem
