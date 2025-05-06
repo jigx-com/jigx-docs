@@ -42,24 +42,24 @@ The following jigs types are available:
 1. Open Jigx Builder and [Create a Jigx solution](<./../Jigx Builder _code editor_/Create a new Jigx Solution.md>).
 2. Right-click the jigs folder and select** New File...**
 3. Type a unique name for the jig and press enter, the name must not contain any spaces. The jig file opens in the editor.
-4. Use IntelliSense (cntrl + space) in the file and select the type of jig you will build.&#x20;
+4. Use IntelliSense (cntrl + space) in the file and select the type of jig you will build.
 5. Once the jig type is selected, the file populates with the core YAML structure ready for you to configure.
 6. Add your values or remove the YAML that is not required, for example, if you do not want a header image at the top of the screen, remove the `header:` section.
-7. The Jigx Builder validates the YAML; any issues are shown in red and need to be corrected before you can publish the solution.&#x20;
+7. The Jigx Builder validates the YAML; any issues are shown in red and need to be corrected before you can publish the solution.
 8. If you want the jig to be accessed from the Home Hub, add the jig to the tabs in [index.jigx](<./Home Hub/Index settings.md>) file. Otherwise, reference the jig from another jig for it to be included in the app.
 9. [Publish](<./../Jigx Builder _code editor_/Publishing a solution.md>) the solution.
 
 ## How to edit a jig
 
 1. Open your solution in Jigx Builder.
-2. Click on the jig you want to edit, the editor opens.&#x20;
+2. Click on the jig you want to edit, the editor opens.
 3. Make the required changes.
 4. Save and [publish](<./../Jigx Builder _code editor_/Publishing a solution.md>) the solution.
 
 ## How to delete a jig
 
 1. Open your solution in Jigx Builder.
-2. Click on the jig you want to edit, the editor opens.&#x20;
+2. Click on the jig you want to edit, the editor opens.
 3. Make the required changes.
 4. Save and [publish](<./../Jigx Builder _code editor_/Publishing a solution.md>) the solution.
 
@@ -76,8 +76,8 @@ There are two options available for joining jigs which depend on your requiremen
 
 :::VerticalSplitItem
 - Use the `jig.composite` type to combine multiple jigs into one.
-- Provide the `jigId` for each of the jigs to be included.&#x20;
-- The order of the `jigIds` configured in the YAML determines the order in which the jigs appear in the composite jig.&#x20;
+- Provide the `jigId` for each of the jigs to be included.
+- The order of the `jigIds` configured in the YAML determines the order in which the jigs appear in the composite jig.
 - There are properties  available to hide the title of each jig (`isTitleHidden`).
 - Provide `inputs` into each jig if required.
 :::

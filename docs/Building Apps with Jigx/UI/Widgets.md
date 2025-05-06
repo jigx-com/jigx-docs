@@ -29,7 +29,7 @@ Consider the layout of the widgets on the mobile app screen. Specific sizes cove
 
 ### Widget configuration
 
-1. Add an icon to the top level of your jig.&#x20;
+1. Add an icon to the top level of your jig.
 2. The `jigId`, and `size` are configured in a [jig.grid]() or [grid-item]() component to display the widget.
    :::CodeblockTabs
    jig-with-icon.jigx
@@ -103,7 +103,7 @@ children:
 
 ## Change the widget behavior
 
-By default when tapping on a widget you are directed to the corresponding jig. You can change the behavior of the widget by adding an `onPress` event to the widget configuration. The `onPress` is configured with an action, which is triggered when pressing on the `widget`. Use IntelliSense to see the available list of actions.&#x20;
+By default when tapping on a widget you are directed to the corresponding jig. You can change the behavior of the widget by adding an `onPress` event to the widget configuration. The `onPress` is configured with an action, which is triggered when pressing on the `widget`. Use IntelliSense to see the available list of actions.
 
 :::CodeblockTabs
 jig.jigx
@@ -126,7 +126,7 @@ jig.jigx
 
 ## Change the widget content
 
-There are various UI elements available to make your widget inviting and engaging to end users. Content or information can be shown on the surface of a widget.&#x20;
+There are various UI elements available to make your widget inviting and engaging to end users. Content or information can be shown on the surface of a widget.
 Here is a list of available content/information widgets:
 
 | **Widget content**                                        | **Description**                                                                                                                                                 |
@@ -143,7 +143,7 @@ Here is a list of available content/information widgets:
 
 1. To configure the widget content specify the `widget:` property at the bottom of the jig.
 2. Provide a `Widget name` for the widget that is referenced as the `widgetId`.
-3. Select the `type` of content to display in the widget.&#x20;
+3. Select the `type` of content to display in the widget.
 
 :::hint{type="info"}
 You still need to add the widget `size:` and `jigId` to the *grid-item component* after changing the content of the widget in the jig file.
@@ -291,13 +291,13 @@ children:
 :::
 :::::
 
-## How to move or rearrange widgets&#x20;
+## How to move or rearrange widgets
 
 The widgets display order on a screen is determined by the order of the [grid-item]() in the YAML. You can change the order of the widgets by simply changing the order in the YAML. It is important to take into consideration the configured size of each widget when ordering widgets. Changing the order of the widgets can give your app a completely different look. Placing a `4x2` followed by `4x4` will result in white space next to the `4x2`.
 
 :::::VerticalSplit{layout="middle"}
 ::::VerticalSplitItem
-Initial widget order in [grid]()&#x20;
+Initial widget order in [grid]()
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3_P1Wkg12BhBbZMEe2-20250307-083935.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3_P1Wkg12BhBbZMEe2-20250307-083935.png" size="60" width="1224" height="2466" position="center" caption="Initial widget order" alt="Initial widget order"}
 
@@ -411,9 +411,9 @@ children:
 
 ## Widget labels and titles
 
-Widget labels are shown under the widget, and are read from the configured `title:` property of the jig.&#x20;
+Widget labels are shown under the widget, and are read from the configured `title:` property of the jig.
 
-1. To display a widget with no label use `title: ' '` in the jig.&#x20;
+1. To display a widget with no label use `title: ' '` in the jig.
 2. To display a label on the widget surface use the widget [titles]().
 
 ## Widget badging
@@ -478,7 +478,7 @@ index.jigx
 You have the ability to control which widgets are visible as well as when the widget must be visible.
 
 1. Control which widgets are visible to certain user groups by granting permissions on each widget in a solution in [Jigx Management > Widgets](./../../Administration/Solutions/Widgets.md). By default everyone with access to the solution has the widgets visible in the app.
-2. Use the `when:` property configured by an [expression](./../Logic/Expressions.md) or a boolean statement to determine when a widget must be visible. For example, show the *order* widget when there are orders awaiting approval.&#x20;
+2. Use the `when:` property configured by an [expression](./../Logic/Expressions.md) or a boolean statement to determine when a widget must be visible. For example, show the *order* widget when there are orders awaiting approval.
 
 :::CodeblockTabs
 grid.jigx
@@ -499,7 +499,7 @@ grid.jigx
 ## Considerations
 
 - The content of the widget will determine the size to select. For example, showing an image or location on a 1x1 widget will not display well rather uses a 4x4 or 4x2.
-- Best practice is to arrange widgets that fill the screen with no additional white space. Plan and design the widget layout and size of each widget in a design app or simply draw it on paper. For more information see [Planning your app](<./../../Getting started/Planning your app.md>).&#x20;
+- Best practice is to arrange widgets that fill the screen with no additional white space. Plan and design the widget layout and size of each widget in a design app or simply draw it on paper. For more information see [Planning your app](<./../../Getting started/Planning your app.md>).
 - A `1x1` widget will only display an icon.
 
 ## Examples and code snippets

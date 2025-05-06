@@ -22,15 +22,15 @@ Jigx allows you to use various options when personalizing your Home Hub.&#x20;
 
 The main elements used are:
 
-1. Tabs in [Index settings](<./Home Hub/Index settings.md>)&#x20;
-2. [grid]() and [grid-item]()&#x20;
+1. Tabs in [Index settings](<./Home Hub/Index settings.md>)
+2. [grid]() and [grid-item]()
 
 :::ExpandableHeading
 ### tabs
 
-- Create a landing page/ home screen by configuring the navigation tabs that show at the bottom of the app. You can configure a maximum of four tabs.&#x20;
+- Create a landing page/ home screen by configuring the navigation tabs that show at the bottom of the app. You can configure a maximum of four tabs.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-- Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen. &#x20;
+- Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen. 
 :::
 
 :::ExpandableHeading
@@ -39,8 +39,8 @@ The main elements used are:
 - The [grid]()  and [grid-item]() are available in 5 different `sizes`: 1x1, 2x2, 4x2, 2x4, and 4x4.
 - The `jigId` property refers to the name/ unique identifier of the jig we are using.
 - There is also an optional property `when` that allows the grid-item to be displayed/hidden in a particular situation based on the expression.
-- Within the grid-item you can select to show [widgets](https://docs.jigx.com/examples/oVbi-widgets), an [image]() , and [Custom Components (Alpha)](<./Custom Components _Alpha_.md>).&#x20;
-- Add an `onPress` event to a grid-item to configure an action such as `open-url` without going to jig.&#x20;
+- Within the grid-item you can select to show [widgets](https://docs.jigx.com/examples/oVbi-widgets), an [image]() , and [Custom Components (Alpha)](<./Custom Components _Alpha_.md>).
+- Add an `onPress` event to a grid-item to configure an action such as `open-url` without going to jig.
 :::
 
 For a code example see [Creating a Home Hub](<./Home Hub/Creating a Home Hub.md>).

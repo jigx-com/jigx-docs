@@ -272,7 +272,7 @@ parameters:
 ### Call the global action in a jig or index.jigx
 
 1. Open the jig where you want to call the global action.
-2. Use IntelliSense (ctrl+space) to list the available actions and select the **Execute Action **option `action.execute-action`.
+2. Use IntelliSense (ctrl+space) to list the available actions and select the **Execute Action** option `action.execute-action`.
 3. Configure the action property by selecting the global action file from the list of global action files.
 4. The `when:` proprerty can be used to determine when the global action must execute in a jig.
 

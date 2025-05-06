@@ -7,7 +7,7 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 ## When to use solution state (global state)
 
-[State](./Logic/State.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a *one-to-one relationship*; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.&#x20;
+[State](./Logic/State.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a *one-to-one relationship*; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
 
 **Design Pattern:** Singletons
 
@@ -15,9 +15,9 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 ### Setup:
 
-1. Set the **ID** to be stored in the solution state, using the `set-state` action. The ID is the least amount of data required to identify each job uniquely. The ID is used throughout the solution to reference the necessary data in each of the solution's jigs.&#x20;
+1. Set the **ID** to be stored in the solution state, using the `set-state` action. The ID is the least amount of data required to identify each job uniquely. The ID is used throughout the solution to reference the necessary data in each of the solution's jigs.
 2. In the datasource queries use the **ID **to return the required data.
-   - &#x20;In a [global datasource ](https://docs.jigx.com/datasources#gCN9o)query reference the data required. The global datasource is referenced in each jig where the data is required.
+   - In a [global datasource ](https://docs.jigx.com/datasources#gCN9o)query reference the data required. The global datasource is referenced in each jig where the data is required.
    - In the individual jig 's [datasource](https://docs.jigx.com/datasources#2AD3k) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
 
 :::CodeblockTabs
@@ -64,14 +64,14 @@ datasources:
 
 State resources and code samples:
 
-- [Solution (Global) State](./Logic/State.md)&#x20;
-- [Set-state]()&#x20;
-- [Reset-state]()&#x20;
-- [Examples of state](./Logic/State.md)&#x20;
+- [Solution (Global) State](./Logic/State.md)
+- [Set-state]()
+- [Reset-state]()
+- [Examples of state](./Logic/State.md)
 
 ## When to use inputs
 
-[Inputs](<./UI/Jigs _screens_/Passing data using inputs.md>) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a *one-to-many relationship*, for example, a manager needs to check on the progress of each field service worker.&#x20;
+[Inputs](<./UI/Jigs _screens_/Passing data using inputs.md>) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a *one-to-many relationship*, for example, a manager needs to check on the progress of each field service worker.
 
 **Design Pattern**: Mediator
 
@@ -154,8 +154,8 @@ children:
 
 Input resources and code samples:
 
-- [Passing data using inputs](<./UI/Jigs _screens_/Passing data using inputs.md>)&#x20;
-- [Input examples](<./UI/Jigs _screens_/Passing data using inputs.md>)&#x20;
+- [Passing data using inputs](<./UI/Jigs _screens_/Passing data using inputs.md>)
+- [Input examples](<./UI/Jigs _screens_/Passing data using inputs.md>)
 
 ## When to use outputs
 
@@ -167,8 +167,8 @@ Input resources and code samples:
 
 ### Setup:
 
-1. In the jig that will pass the data define the **output** property with an expression that will pass the variable, such as an **ID**.&#x20;
-2. &#x20;In the composite jig, which combines multiple jigs, define the **input** property on the jig that must receive the variable.&#x20;
+1. In the jig that will pass the data define the **output** property with an expression that will pass the variable, such as an **ID**.
+2. In the composite jig, which combines multiple jigs, define the **input** property on the jig that must receive the variable.
 
 :::CodeblockTabs
 team-progress (output)
@@ -293,8 +293,8 @@ children:
 
 Output resources and code samples:
 
-- [Passing data using outputs](<./UI/Jigs _screens_/Passing data using outputs.md>)&#x20;
-- [Output examples](<./UI/Jigs _screens_/Passing data using outputs.md>)&#x20;
+- [Passing data using outputs](<./UI/Jigs _screens_/Passing data using outputs.md>)
+- [Output examples](<./UI/Jigs _screens_/Passing data using outputs.md>)
 
 ## Performance optimization
 

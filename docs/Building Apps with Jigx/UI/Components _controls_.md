@@ -12,7 +12,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
 ## Considerations
 
 - [Planning](<./../../Getting started/Planning your app.md>) the design of each app screen helps decide which component is best suited to achieve the desired functionality.
-- Components can be shown in the [Content widget components](), for example, a pie chart or image displays in the widget either on the Home Hub or on a jig.&#x20;
+- Components can be shown in the [Content widget components](), for example, a pie chart or image displays in the widget either on the Home Hub or on a jig.
 - Certain components can only be used in specific [jig types](<./Jigs _screens_.md>), for example, [event]() can only be used with [jig.calendar](). Use IntelliSense (*ctrl+space*) in each jig type to see a list of available components for that jig or reference the table below.
 
 ## List of components
@@ -146,16 +146,15 @@ Each components YAML loads with the core required properties. Use IntelliSense u
 
 1. Open or create a solution in Jigx Builder.
 2. Open the jig type where the component must be configured. The default YAML structure of the jig prepopulates.
-3. Under the correct YAML level (either under `children`, `item`, `component` depending on the jig type), *ctrl+space* to invoke Intellisense for the list of available components.&#x20;
+3. Under the correct YAML level (either under `children`, `item`, `component` depending on the jig type), *ctrl+space* to invoke Intellisense for the list of available components.
 4. Select the required component, the core properties will load in the code snippet. Configure the properties accordingly using expressions and values.
-5. Use IntelliSense under each components `options:` property to discover additional optional properties, relating to styling, positioning or size.&#x20;
-
+5. Use IntelliSense under each components `options:` property to discover additional optional properties, relating to styling, positioning or size.
 ## Adding data to components
 
 Creating dynamic, interactive, and user-centric jigs require components to be functional, and relevant to the user. To achieve this use [data](./../Data.md) when configuring components, and expose the specific data in the compoment by configuring [expressions](./../Logic/Expressions.md), such as:
 `type: component.countdown`
 `options:`
-`expiresAt: =@ctx.datasources.event-dd[2].StartDate`&#x20;
+`expiresAt: =@ctx.datasources.event-dd[2].StartDate`
 
 Certain components make it easy to add data through a `data:` property set at the start of the component allowing the data fields to be easily referenced in expressions. For example:
 
@@ -177,7 +176,7 @@ item:
 
 ## Adding actions to components - (single or multiple)
 
-Engaging users on every screen of your app is vital to its success. By adding actions to your components you add an interactive element that keeps the user engaged. For example, in a list component you can press on an item in the list, or swipe left or right to delete/update or go to another jig.&#x20;
+Engaging users on every screen of your app is vital to its success. By adding actions to your components you add an interactive element that keeps the user engaged. For example, in a list component you can press on an item in the list, or swipe left or right to delete/update or go to another jig.
 Actions that can be added to components are configured as part of the component YAML and are available by invoking intellisense. Here is a list of actions to use with components:
 
 - `onChange`
