@@ -39,7 +39,7 @@ By editing the parameter settings you can change the logo, colors, text, icons a
 
 1. Copy the raw HTML from the template using the copy icon.
 2. Paste the code in an HTML editor and make the required changes.
-3. Replace the existing HTML with the updated HTML. &#x20;
+3. Replace the existing HTML with the updated HTML.
 4. Before saving the changes, test the template by clicking on the Preview link next to the invite template. This will open an HTML view of the template with the updated HTML in a new tab.
 5. Once you are satisfied with the edits and customizations to your email template, click **Save**.
 
