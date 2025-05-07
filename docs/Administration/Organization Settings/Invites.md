@@ -10,13 +10,12 @@ When you create an organization in Jigx Management, a default invite is automati
 
 ::::VerticalSplit{layout="right"}
 :::VerticalSplitItem
-<!-- ::Image[image]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" size="92" width="1886" height="1500" position="center" caption="Invite email template" alt="Invite email template"} -->
-<!-- ::Image[image](src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" size="92" width="1886" height="1500" position="center" caption="Invite email template" alt="Invite email template") -->
-<!-- <img src=<img src="../assets/Administration/jm-invitetemplate.png" size="92" width="1886" height="1500" position="center" caption="Invite email template" alt="Invite email template" /> -->
-![Invite email template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png "Invite email template")
+
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png" position="center" caption="Invite email template" alt="Invite email template"}
 :::
 
 :::VerticalSplitItem
+
 ![Default invite template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lE29gpALA0XQMX-QdpnsP_jm-invitehtml.png "Default invite template")
 :::
 ::::
@@ -44,7 +43,7 @@ By editing the parameter settings you can change the logo, colors, text, icons a
 4. Before saving the changes, test the template by clicking on the Preview link next to the invite template. This will open an HTML view of the template with the updated HTML in a new tab.
 5. Once you are satisfied with the edits and customizations to your email template, click **Save**.
 
-## &#x20;Invite templates in multiple languages
+## Invite templates in multiple languages
 
 Invites can be sent out in multiple languages which is helpful if your organization has multiple regions in multiple countries.
 
@@ -53,7 +52,7 @@ Invites can be sent out in multiple languages which is helpful if your organizat
 ![Add language template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3R_f0g1CpPWCPK494cfFj_jm-langinvite.gif "Add language template")
 
 1. Click on the **+ add another language** under *Choose a language to configure invite templates*.
-2. Type the language code in the field. Only use <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO-639-1</a> language codes such as en, de.&#x20;
+2. Type the language code in the field. Only use <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO-639-1</a> language codes such as en, de.
 3. Click **Add**.
 4. Select the language tag. The pane toggles to the template for the new language.&#x20;
 5. Use the HTML from the English pane as a base to translate the HTML to the new language you have specified. Add the HTML in the invite template sections and add a subject.&#x20;
@@ -63,7 +62,7 @@ Invites can be sent out in multiple languages which is helpful if your organizat
 
 ### Sending an invite in a specific language
 
-When sending out invites to users to join your organization and access your app, you can determine which language the invite must be sent in provided you have created an invite template in that language.&#x20;
+When sending out invites to users to join your organization and access your app, you can determine which language the invite must be sent in provided you have created an invite template in that language.
 
 ![Invite language selection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wrsGi5UfWDh-CFJ_FWSGs_jm-langinvite.png "Invite language selection")
 
