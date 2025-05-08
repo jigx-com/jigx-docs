@@ -48,7 +48,7 @@ Click on the user's name in the list and navigate to the [Solutions](./Solutions
 
 Each user in the user list has an **organization role** assigned. When you invite users, their default organization role is set to **User**. You can change the user's organization role by **clicking on the Organization role** in the user's profile. All changes made to the organization's roles take effect immediately. Refer to [Permissions - User Roles](<./Permissions - User Roles.md>) to get a detailed overview on the roles used in an organization and solutions-level.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" size="60" width="1078" height="1350" position="center" caption="Assign organizational permissions" alt="Assign organizational permissions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" size="60" position="center" caption="Assign organizational permissions" alt="Assign organizational permissions"}
 
 ## Assigning a Solution Role to Users
 
@@ -60,7 +60,7 @@ Each user in the user list is assigned a solution role. When you invite users, o
 
 Click on the user's name in the list and click the **Remove from organization** button at the bottom left of the screen. You need `Admin` or `Owner` permissions to be able to remove a user from an organization.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" size="60" width="1582" height="1598" position="center" caption="Remove user from Organization" alt="Remove user from Organization"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" size="60" position="center" caption="Remove user from Organization" alt="Remove user from Organization"}
 
 ## Troubleshooting (User Profile)
 
@@ -78,7 +78,7 @@ There are three levels of troubleshooting in Jigx Management.
 
 ### Configure logging on the Jigx App
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4_K6jIP4-pTjwgTKKW7_jm-troubleshooting.PNG" signedSrc size="62" width="2540" height="2500" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4_K6jIP4-pTjwgTKKW7_jm-troubleshooting.PNG" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"}
 
 To configure logging on the mobile device perform the following steps:
 

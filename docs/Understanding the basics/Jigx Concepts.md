@@ -10,21 +10,21 @@ Jigx uses concepts, terminology, and elements you might not be familiar with. Be
 
 ## Jigx Solutions
 
-Jigx refers to a native mobile app as a *solution. With *Jigx you can build and publish more than one solution to your Jigx mobile app. You can *switch* between solutions by tapping the *More* ellipsis icon in the navigation bar and selecting your desired solution. The currently active solution is highlighted with a checkmark icon.
+Jigx refers to a native mobile app as a *solution*. With Jigx you can build and publish more than one solution to your Jigx mobile app. You can *switch* between solutions by tapping the *More* ellipsis icon in the navigation bar and selecting your desired solution. The currently active solution is highlighted with a checkmark icon.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_wNc-4qfpMvnhWhjpKEx8-20250429-113930.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_wNc-4qfpMvnhWhjpKEx8-20250429-113930.png" size="76" width="2488" height="2466" position="center" caption alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_wNc-4qfpMvnhWhjpKEx8-20250429-113930.png" size="76"  position="center" }
 
-## Home Hub&#x20;
+## Home Hub
 
-The *home hub* is the first screen you see when you open and sign into the Jigx mobile app. The Home Hub can display navigational menu blocks called *grid-items,* containing* *images*, *widgets, or custom controls. Once you tap on a grid-item, you are directed to a jig, which is a screen used to display various forms of content. The *index.jigx* file ﻿is the place to configure the bottom navigation bar. In addition to grid-items, you can style the Home Hub by adding a [video-player]()* *or* *[carousel]() at the top of the Home Hub. For more information, see ﻿[Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>). &#x20;
+The *home hub* is the first screen you see when you open and sign into the Jigx mobile app. The Home Hub can display navigational menu blocks called *grid-items*, containing *images*, *widgets*, or custom controls. Once you tap on a grid-item, you are directed to a jig, which is a screen used to display various forms of content. The *index.jigx* file ﻿is the place to configure the bottom navigation bar. In addition to grid-items, you can style the Home Hub by adding a [video-player]() or [carousel]() at the top of the Home Hub. For more information, see ﻿[Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66" width="1224" height="2466" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="66"  position="center" }
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UX8IZKVoOjAPqk1NVos4K-20250225-122017.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UX8IZKVoOjAPqk1NVos4K-20250225-122017.png" size="66" width="1224" height="2466" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-UX8IZKVoOjAPqk1NVos4K-20250225-122017.png" size="66"  position="center" }
 :::
 ::::
 
@@ -36,7 +36,7 @@ Native mobile solutions are built in Microsoft Visual Studio Code, a development
 
 ## index.jigx file
 
-The *index.jigx* file is located at the root of the Jigx solution project in the Jigx Builder.  In the index.jigx file, you configure what must be displayed on the home screen (Home Hub) of your solution on the Jigx mobile app. The file opens with a pre-populated code snippet to help you configure the Home Hub. For more information, see [Index settings](<./../Building Apps with Jigx/UI/Home Hub/Index settings.md>), and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).&#x20;
+The *index.jigx* file is located at the root of the Jigx solution project in the Jigx Builder.  In the index.jigx file, you configure what must be displayed on the home screen (Home Hub) of your solution on the Jigx mobile app. The file opens with a pre-populated code snippet to help you configure the Home Hub. For more information, see [Index settings](<./../Building Apps with Jigx/UI/Home Hub/Index settings.md>), and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-azAL6hODEfRAYi74InkkG-20250212-183522.png)
 
@@ -44,13 +44,13 @@ The *index.jigx* file is located at the root of the Jigx solution project in the
 
 Widgets are navigational menu blocks set up on jigs, allowing them to be utilized in various parts of the solution, including the Home Hub and multiple jigs (screens). These widgets are configurable to display various UI elements, such as locations, images, charts, and more. For more information, see  [Content widget components]().
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="36" width="1224" height="2466" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="36"  position="center" }
 
 ## Jig
 
 A jig is a container used to configure content. A jig can be configured as a calendar, a form to capture or view data, a PDF or HTML document, a list of data, or even a combination of any one of these. Usually, tapping on a widget in the [Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) opens a jig. For more information, see [Jigs (screens)](<./../Building Apps with Jigx/UI/Jigs _screens_.md>) and  [Jig Types]() sections in this guide.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-likbr1gN2hI0tdoCzt-wk-20250225-122635.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-likbr1gN2hI0tdoCzt-wk-20250225-122635.png" size="66" width="2486" height="2466" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-likbr1gN2hI0tdoCzt-wk-20250225-122635.png" size="66"  position="center" }
 
 ## Components
 
@@ -62,7 +62,7 @@ Components are elements that can be used when creating a Jigx solution in the Ji
 
 Actions allow you to do something, for example, go back to a previous screen, open a URL, or submit a form. For more information on the available actions as well as code samples for each one, see the [actions](<./../Building Apps with Jigx/UI/Actions.md>) and  [action examples]() sections of this guide.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EAqLrPaYYsWtn09XM4nsm_image-2023-05-11-at-1916.jpeg" size="70" width="1476" height="984" caption position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EAqLrPaYYsWtn09XM4nsm_image-2023-05-11-at-1916.jpeg"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EAqLrPaYYsWtn09XM4nsm_image-2023-05-11-at-1916.jpeg" size="70" caption position="center" }
 
 ## Functions
 
@@ -82,7 +82,7 @@ Expressions allow you to structure data before binding them to the UI components
 
 ## Database
 
-A [data provider](<./../Building Apps with Jigx/Data/Data Providers.md>) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST,  Salesforce, SOAP and SQL. For more information see [Data Providers](<./../Building Apps with Jigx/Data/Data Providers.md>) and [Data Provider examples]().
+A [data provider](<./../Building Apps with Jigx/Data/Data Providers.md>) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](<./../Building Apps with Jigx/Data/Data Providers.md>) and [Data Provider examples]().
 
 ## Entities
 
@@ -100,7 +100,7 @@ The Jigx app is available on iOS and Android and works on any device.
 
 - Download the Jigx iOS app from the <a href="https://apps.apple.com/sg/app/jigx/id1495596537" target="_blank">App Store</a>
 - Download the Jigx Android app from the <a href="https://play.google.com/store/apps/details?id=com.jigx.android&pli=1" target="_blank">Google Play Store</a>
-- The Jigx App is only supported in portrait mode on iOS and Android phones.&#x20;
+- The Jigx App is only supported in portrait mode on iOS and Android phones.
 - You can brand your app through s [Organization Settings](<./../Administration/Organization Settings.md>)
 
 ### See Also

@@ -15,10 +15,10 @@ In this section, you learn how to join jigs to create a single jig using the `ji
 ### Create the composite jig&#x20;
 
 1. Open the Hello-Jigx solution in Jigx Builder in VS Code, right-click on the jigs node in Explorer, and select New file.
-2. Name the file **composite**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on Composite to open the skeleton YAML created by the Jigx Builder.&#x20;
-3. Give the jig a title called Customers and provide a description like *Customer form and list*.&#x20;
-   Add `icon: person` under the description line. This icon displays on the widget on the Home Hub.&#x20;
-4. For this jig you can delete the `onFocus` node.&#x20;
+2. Name the file **composite**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on Composite to open the skeleton YAML created by the Jigx Builder.
+3. Give the jig a title called Customers and provide a description like *Customer form and list*.
+   Add `icon: person` under the description line. This icon displays on the widget on the Home Hub.
+4. For this jig you can delete the `onFocus` node.
 5. Under the `header` node you can leave it as is or add your own image uri. The `jig-header` component can be used in any type of jig. It serves as a container for specifying headers, such as images. Change the `height` value to small and add a `title: Customers` after options. Here is an example of the header code with an image.
 
 :::CodeblockTabs
@@ -40,11 +40,11 @@ header:
 
 ### Add the jigIds
 
-1. Next to the `jigIds` add `new-customer` and `list- customer`. The order of the children's `jigIds` determines the display order in the app.&#x20;
+1. Next to the `jigIds` add `new-customer` and `list- customer`. The order of the children's `jigIds` determines the display order in the app.
 2. You can remove the
    ` inputs:`
-   &#x20;     `recordid: =@ctx.jig.inputs.parameter`&#x20;
-3. &#x20;Your composite.jigx file should resemble the code below.
+   &#x20;     `recordid: =@ctx.jig.inputs.parameter`
+3. Your composite.jigx file should resemble the code below.
 
 :::CodeblockTabs
 composite.jigx

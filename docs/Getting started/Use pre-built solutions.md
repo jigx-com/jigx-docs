@@ -22,7 +22,7 @@ Utilizing pre-built solutions in Jigx provides benefits in terms of time efficie
 8. Open the Jigx App on your mobile device and start using the added solution.
 
 :::hint{type="success"}
-&#x20;With* *Jigx you can build and publish more than one solution to your Jigx mobile app, you can toggle between the solutions by tapping on the home icon and selecting the solution you want to use. If you are deep in the solution, long-press the home icon to toggle back to the Solutions screen. The number badge on the home icon shows how many solutions are available to you. &#x20;
+With Jigx you can build and publish more than one solution to your Jigx mobile app, you can toggle between the solutions by tapping on the home icon and selecting the solution you want to use. If you are deep in the solution, long-press the home icon to toggle back to the Solutions screen. The number badge on the home icon shows how many solutions are available to you.
 :::
 
 ## Want to see how the solution is built or edit the solution?
@@ -31,9 +31,9 @@ Utilizing pre-built solutions in Jigx provides benefits in terms of time efficie
 
 ![Download solution files](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AyPHsMj91cvVuhx_TMoMf_pre-built-solution.png "Download solution files")
 
-1. Navigate to **Solutions.**&#x20;
+1. Navigate to **Solutions.**
 2. Click on the prebuilt solution.
-3. Press the **Download Solution **button at the top of the Solutions Details screen. The solution downloads as a zip to your download folder .
+3. Press the **Download Solution** button at the top of the Solutions Details screen. The solution downloads as a zip to your download folder .
 
 ### Open the solution in Jigx Builder
 

@@ -17,7 +17,7 @@ In order for the Azure SQL connection to function, you need to allowlist the Jig
 :::
 
 1. Click on the blue **Add connection** button to open the Add connection side pane.
-2. Fill in your Azure SQL connection settings or **Show schema. **You can add additional properties for your connection using the **Options** section at the bottom. Click on the **help icon **to see a list of all available connection options you can include in the JSON schema.** **
+2. Fill in your Azure SQL connection settings or **Show schema**. You can add additional properties for your connection using the **Options** section at the bottom. Click on the **help icon** to see a list of all available connection options you can include in the JSON schema.
 3. Before clicking **Save,** click on **Test connection** to ensure that the settings are working corectly.
 
 ![Adding a new Connection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Scu8nZHKoi5_2RLR8dW_l_jm-azureeditl.png "Adding a new Connection")

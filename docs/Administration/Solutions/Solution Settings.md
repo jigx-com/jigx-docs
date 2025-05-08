@@ -12,9 +12,7 @@ The solution settings feature is extremely useful, as it speeds up the developme
 The *Solution Settings* and [Solution Details](<./Solution Details.md>) tab function together, enabling settings on one will make new options visible and available for configuration on the other tab.
 :::
 
-
-
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1H_k5DpOTRIbHt88jItDc_jm-solutionsettingl.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1H_k5DpOTRIbHt88jItDc_jm-solutionsettingl.png" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IMjfBKAfHTOyhlZ8gpCbv_jm-solutionsettingl.png" size="70" width="1698" height="928" darkWidth="1698" darkHeight="928" position="center" caption="Solution Settings screen" alt="Solution Settings screen"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1H_k5DpOTRIbHt88jItDc_jm-solutionsettingl.png" size="70"  position="center" caption="Solution Settings screen" alt="Solution Settings screen"}
 
 ## Copy Policy
 

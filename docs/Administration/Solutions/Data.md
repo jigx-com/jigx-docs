@@ -31,9 +31,9 @@ You can add records to a data table manually or by uploading a JSON or CSV file 
 ## Editing a Record
 Edit an exisitng data record by:
 1. Clicking on the table in the right-hand **Tables** pane that you want to edit a record in.
-2. Click on the **record** entry to be updated, the **Edit record **side pane with the record's fields displays.&#x20;
-3. Update the data values as required.&#x20;
-4. &#x20;Add a new column to your record using the + button at the bottom if required.&#x20;
+2. Click on the **record** entry to be updated, the **Edit record **side pane with the record's fields displays.
+3. Update the data values as required.
+4. Add a new column to your record using the + button at the bottom if required.
 5. Click **Save**, the record will be updates to the table and synced to online devices instantly.
 
 ![Updating a record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OyK-D-REpra9E-gAgWZ_w_jm-editdatal.png "Updating a record")
@@ -58,19 +58,19 @@ To delete a table, follow these steps:
 5. Click the **Delete Table** button at the top of the screen.
 6. Confirm you want to delete the table.
 ### What you need to know about deleting tables
-* You can only delete a table not currently used in a solution.&#x20;
-* Deleting tables will delete all data records in the table, which is not recoverable. Delete tables with caution.&#x20;
+* You can only delete a table not currently used in a solution.
+* Deleting tables will delete all data records in the table, which is not recoverable. Delete tables with caution.
 * Only the solution `owner` can delete a table.
-* The *Unused tab* is only visible to the solution `owner`.&#x20;
+* The *Unused tab* is only visible to the solution `owner`.
 * Removing a table from default.jigx file in Jigx Builder and publishing the solution means the table is no longer used in the solution. In  Jigx Management under Data, the table moves to the *Unused tab*.
-* &#x20;If there are no unused tables the *Unused tab* is not visible in the Data option.
+* If there are no unused tables the *Unused tab* is not visible in the Data option.
 * [Authorized Users (RLS)](docId\:xy4a9JXqIEBPICKan-N0M) still applies to the data records in the unused table. Even as the solution owner, you will only see data records you are authorized to see. It is important to note that even though you cannot see all the data, deleting the table will delete *ALL* records and the table.
 * You can choose to only delete the records in the unused table by selecting the checkbox in front of the record. The **Delete Selected** button appears at the top.
 * Make a backup of the unused table's data by clicking the **Download** button at the top of the screen. The data is downloaded in a JSON file. If needed, you can reuse the data by importing (upload) data into a new table. *Important*: the data in the downloaded JSON file is the data you are authorized to see.
 * Existing records in the unused table can be edited, but you cannot add new records.
 * [Authorized Users (RLS)](docId\:xy4a9JXqIEBPICKan-N0M) access can be applied to existing records in the unused table.
 * You cannot apply [Data policies](docId\:es3EARyGcuVJpv8KFQDx4) to unused tables.
-* If you want to use the table in the solution again, simply add the table back to the *default.jigx* file and publish the solution. The table moves back to the **Available** tab in the Jigx Management>Data.&#x20;
+* If you want to use the table in the solution again, simply add the table back to the *default.jigx* file and publish the solution. The table moves back to the **Available** tab in the Jigx Management>Data.
 
 ## Column Settings
 
@@ -82,8 +82,8 @@ The **gear icon** at the top of the screen allows you to configure the columns i
  ## Importing / Uploading data to a table (JSON or CSV)
  If you have multiple records to add to a table you can import the data by uploading a CSV or JSON file that will populate the records in the columns in the table. 
 1. Click on the **Upload** button at the top of the screen.
-2. By default the JSON upload window is shown. You can switch to upload CSV using the **Switch to CSV** button in the top right. Provide the property name for the unique identifier otherwise by default the rid property is used. Drag and drop the file in the designated area.&#x20;
-3. For CSV uploads select the type of **comma-delimited** used in the **CSV file.** Drag and drop the file in the designated area.&#x20;
+2. By default the JSON upload window is shown. You can switch to upload CSV using the **Switch to CSV** button in the top right. Provide the property name for the unique identifier otherwise by default the rid property is used. Drag and drop the file in the designated area.
+3. For CSV uploads select the type of **comma-delimited** used in the **CSV file.** Drag and drop the file in the designated area.
 4. Click **Add**.
 5. This will add new `rid` records to the table or update existing `rid` records in the table.
 

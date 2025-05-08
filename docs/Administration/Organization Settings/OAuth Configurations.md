@@ -10,7 +10,7 @@ updatedAt: Mon Apr 15 2024 08:45:06 GMT+0000 (Coordinated Universal Time)
 
 Add an OAuth configuration at the organizational level to provide Jigx with secure delegated access. OAuth configured in Jigx Management provides the authentication requirements on mobile devices, APIs, servers, and applications with access tokens. Setting OAuth at this level allows you to use it in multiple scenarios requiring [Authentication](<./../../Understanding the basics/Authentication.md>). For example:
 
-- By [Single Sign-On (SSO)](<./Single Sign-On _SSO_.md>)&#x20;
+- By [Single Sign-On (SSO)](<./Single Sign-On _SSO_.md>)
 - Mapped to solutions in [solution credentials](./../Solutions/Credentials.md)&#x20;
 - By multiple branded apps within an organization
 
@@ -31,21 +31,21 @@ Jigx provides a secure credentials store in the cloud that can be used to connec
    3. OpenID
    4. Auth0
 7. Image URL - this OAuth field is optional.
-8. Use login hint - this field is optional, add a login hint parameter in the format required by the 3rd party identity provider.&#x20;
+8. Use login hint - this field is optional, add a login hint parameter in the format required by the 3rd party identity provider.
 9. All the organization's domains set up at registration are listed under **Domains.**
-   1. To add additional domains, contact support\@jigx.com.&#x20;
+   1. To add additional domains, contact support\@jigx.com.
    2. To accomodate for unknown domains not associated with the organization use a wildcard (\*) in the OAuth configuration. See [Set up a domain wildcard]().
 10. **Redirect URL **- Add the redirect URL, you can add multiple URLs. Redirect URLs must match the configuration of the Client app on the 3rd Party IDP.
-11. Enter the **Client ID**, and **Client Secret.  **These are optional.
-12. Enter the **Issuer**. If you use the Service configuration endpoints, then Issuer is not required, but if not, then Issuer is a required field to complete the configuration.&#x20;
+11. Enter the **Client ID**, and **Client Secret**. These are optional.
+12. Enter the **Issuer**. If you use the Service configuration endpoints, then Issuer is not required, but if not, then Issuer is a required field to complete the configuration.
 13. By default, the **Use PKCE** and **Use Nonce** are selected, you can deselect these if not required.
-14. Add scopes that define the specific resources or actions that the application is allowed to access on the user's behalf.&#x20;
-15. If no issuer is provided, complete the Service configuration endpoints.&#x20;
+14. Add scopes that define the specific resources or actions that the application is allowed to access on the user's behalf.
+15. If no issuer is provided, complete the Service configuration endpoints.
 
 ## Updating OAuth configurations
 
 1. Click on the OAuth's name in the list.
-2. The OAuth settings display in the side panel, make the required changes. &#x20;
+2. The OAuth settings display in the side panel, make the required changes.
 3. Click **Save**.
 
 ## Removing OAuth configurations

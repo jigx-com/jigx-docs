@@ -15,7 +15,7 @@ The index.jigx file includes links to the jigs you want accessible as top-level 
 ### Add jigs to the index.jigx file
 
 1. Click on the `index.jigx` file. Under `tabs:` **remove** the `jigId: new-customer`, and the `jigId: list-customer`. Now **add** the `jigId: composite`.
-2. Your index.jigx file should resemble the code below.&#x20;
+2. Your index.jigx file should resemble the code below.
 
 :::CodeblockTabs
 index.jigx

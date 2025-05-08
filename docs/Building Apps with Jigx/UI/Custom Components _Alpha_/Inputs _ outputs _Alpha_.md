@@ -28,7 +28,7 @@ In this example, we create a tab component using the `view` and `text` custom co
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-vgBlOVBWz2M6muoG9AR7S-20241121-074013.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-vgBlOVBWz2M6muoG9AR7S-20241121-074013.png" size="70" width="1224" height="2466" position="center" caption="Tabs using inputs" alt="Tabs using inputs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-vgBlOVBWz2M6muoG9AR7S-20241121-074013.png" size="70" position="center" caption="Tabs using inputs" alt="Tabs using inputs"}
 :::
 ::::
 
@@ -462,7 +462,7 @@ In this simple example, the custom component is configured with a `form` in a `c
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" size="56" width="714" height="1438" position="center" caption="Output data to image label" alt="Output data to image label"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" size="56"  position="center" caption="Output data to image label" alt="Output data to image label"}
 :::
 ::::
 

@@ -16,7 +16,7 @@ The endless possibilities depend on your specific needs and objectives and the t
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" size="76" width="1240" height="2500" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" size="76" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard"}
 :::
 ::::
 

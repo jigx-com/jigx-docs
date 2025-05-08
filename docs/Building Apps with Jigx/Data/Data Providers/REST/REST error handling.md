@@ -5,10 +5,6 @@ createdAt: Tue Oct 08 2024 09:15:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:50:20 GMT+0000 (Coordinated Universal Time)
 ---
 
-
-
-
-
 REST errors returned by the endpoints in an app are often too technical for end-users to comprehend. Jigx allows you to customize these error messages to improve user experience, communicate more effectively, and ensure users understand that errors are not their fault. By configuring custom error handling, you can:
 
 - Suppress or customize default error messages.
@@ -18,7 +14,7 @@ REST errors returned by the endpoints in an app are often too technical for end-
 ## Key features
 
 - **Custom error messages**: Control the message shown to users when a REST error occurs.
-- **User-friendly retry options**: Allow users to retry an action when an error occurs.&#x20;
+- **User-friendly retry options**: Allow users to retry an action when an error occurs.
 - By default, Jigx automatically catches any **429 error responses** and retries the request up to three times, with a five-second delay between each attempt.
 - **Error logging**: Automatically log error details for debugging.
 - **Dynamic responses**: Build logic to respond to specific errors flexibly.
@@ -62,7 +58,7 @@ In the Jigx function, configure the `error` section to cater for:
 
 Multiple error handlers can be added in the function, which are executed from the top to bottom until one matches. The error section needs to be configured in each of the individual REST function files.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ShlmyhYcPqv_WUEow9Khg-20241009-125734.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ShlmyhYcPqv_WUEow9Khg-20241009-125734.png" size="94" width="820" height="471" position="center" caption="Function properties" alt="Function properties"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ShlmyhYcPqv_WUEow9Khg-20241009-125734.png" size="94" position="center" caption="Function properties" alt="Function properties"}
 
 ## Configuration properties
 

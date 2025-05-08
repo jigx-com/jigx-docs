@@ -8,15 +8,15 @@ updatedAt: Tue Nov 05 2024 13:40:44 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this section, you learn how to create a [jig.list]() type that uses the [dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>) to return and display a list of records. You specify the fields that must be returned in the list jig and add an [onPress list action]() that opens a jig used to view the selected list item record.&#x20;
+In this section, you learn how to create a [jig.list]() type that uses the [dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>) to return and display a list of records. You specify the fields that must be returned in the list jig and add an [onPress list action]() that opens a jig used to view the selected list item record.
 
 ## Steps
 
 ### Create a list jig
 
-1. Open the Hello-Jigx solution in Jigx Builder in VS Code,** right-click** on the jigs node in Explorer, and select **New file**.
-2. Name the file **list-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **List** to open the skeleton YAML created by the Jigx Builder.   &#x20;
-3. Give the jig a title called *List customers *and provide a description like *List my customers*.&#x20;
+1. Open the Hello-Jigx solution in Jigx Builder in VS Code, **right-click** on the jigs node in Explorer, and select **New file**.
+2. Name the file **list-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **List** to open the skeleton YAML created by the Jigx Builder.
+3. Give the jig a title called *List customers *and provide a description like *List my customers*.
 4. Change the icon to `icon: list`.This icon displays on the widget on the Home Hub.
 5. Delete the `header` and `onfocus` nodes.
 
@@ -41,7 +41,7 @@ datasources:
 
 ### Add controls and actions to the list item
 
-1. &#x20;All list output controls are placed on the `list-item component`.  Use the `swipeable:` action to configure a left or right swipe and the method to call. For example, in this step, we use a left swipe to delete the customer using the delete method. You can add your own controls or use the code example below.
+1. All list output controls are placed on the `list-item component`.  Use the `swipeable:` action to configure a left or right swipe and the method to call. For example, in this step, we use a left swipe to delete the customer using the delete method. You can add your own controls or use the code example below.
 
 :::CodeblockTabs
 YAML
@@ -82,7 +82,7 @@ onSuccess:
 
 ### Add a navigation action
 
-1. Add a navigation action that is performed when a single item is clicked in the list, and referenced by using the `custId` parameter. In this step clicking on a customer in the list opens the view-customer jig to view the customer's details. Use the `onPress` action with an `action.go-to` type and the `linkTo` option as shown below.&#x20;
+1. Add a navigation action that is performed when a single item is clicked in the list, and referenced by using the `custId` parameter. In this step clicking on a customer in the list opens the view-customer jig to view the customer's details. Use the `onPress` action with an `action.go-to` type and the `linkTo` option as shown below.
 
 :::CodeblockTabs
 YAML
@@ -159,6 +159,6 @@ item:
 :::
 
 :::hint{type="warning"}
-The list-customer.jigx file will display in red and cannot be saved yet as it references the view-customer.jigx file that you will be creating in the [Create a view of the customer record](<./Create a view of the customer record.md>) step. &#x20;
+The list-customer.jigx file will display in red and cannot be saved yet as it references the view-customer.jigx file that you will be creating in the [Create a view of the customer record](<./Create a view of the customer record.md>) step.
 :::
 

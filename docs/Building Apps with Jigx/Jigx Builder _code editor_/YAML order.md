@@ -119,7 +119,7 @@ widgets:
 ```
 :::
 
-## Order of items in a section&#x20;
+## Order of items in a section
 
 Order of items within a section, for example when defining a component we should aim to standardise as follows:
 

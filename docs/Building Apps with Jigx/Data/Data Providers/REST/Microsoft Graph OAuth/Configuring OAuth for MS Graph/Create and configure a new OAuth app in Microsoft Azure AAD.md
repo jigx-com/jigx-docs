@@ -16,76 +16,76 @@ This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx 
 
 2\. Expand the menu on the left by clicking on the hamburger icon on the top left of the page.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NUo6KSq4Vn-3HGrVj3Rl7_graph-step1.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NUo6KSq4Vn-3HGrVj3Rl7_graph-step1.png" size="40" width="1448" height="1284" position="center" caption="Microsoft Admin center" alt="Microsoft Admin center"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NUo6KSq4Vn-3HGrVj3Rl7_graph-step1.png" size="40" position="center" caption="Microsoft Admin center" alt="Microsoft Admin center"}
 
 3\. Click on the **three dots** next to Show All.
 
 4\. Click on **Azure Active Directory** under Admin Centers.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pDvsPCRHjIm0kuM-LPWah_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pDvsPCRHjIm0kuM-LPWah_image.png" size="30" width="564" height="456" position="center" caption="AAD" alt="AAD"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pDvsPCRHjIm0kuM-LPWah_image.png" size="30" position="center" caption="AAD" alt="AAD"}
 
 5\. In the left menu, click on **Enterprise Applications**.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hPgD5UDazwLH3c58v1kLs_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hPgD5UDazwLH3c58v1kLs_image.png" size="30" width="674" height="752" position="center" caption="AAD admin center" alt="AAD admin center"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hPgD5UDazwLH3c58v1kLs_image.png" size="30" position="center" caption="AAD admin center" alt="AAD admin center"}
 
 6\. Click **New application** on the toolbar in the top middle of the page.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/glS1G3RKYWtz2YSxnYvqG_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/glS1G3RKYWtz2YSxnYvqG_image.png" size="40" width="1016" height="448" position="center" caption="New application" alt="New application"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/glS1G3RKYWtz2YSxnYvqG_image.png" size="40" position="center" caption="New application" alt="New application"}
 
 7\. Click on **Create your own application** on the toolbar at the top of the page.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7HlGJXlBEk72kLkgPnezR_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7HlGJXlBEk72kLkgPnezR_image.png" size="40" width="1060" height="736" position="center" caption alt="New application"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7HlGJXlBEk72kLkgPnezR_image.png" size="40" position="center" caption alt="New application"}
 
 8\. Enter a name for your app. In this document, we will use Jigx Mobile.
 
 9\. Make sure **Integrate any other application you don't find in the gallery (Non-gallery)** is selected, and click on the **Create** button at the bottom of the screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8UM4qkaP4Sa5VGk8FVQMb_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8UM4qkaP4Sa5VGk8FVQMb_image.png" size="40" width="1080" height="716" position="center" caption="New application" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8UM4qkaP4Sa5VGk8FVQMb_image.png" size="40" position="center" caption="New application" alt}
 
 10\. Under Manage, click on **Properties**.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eLQ8BurUBbGjf7ansgsf0_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eLQ8BurUBbGjf7ansgsf0_image.png" size="40" width="1090" height="746" position="center" caption="Properties" alt="Properties"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eLQ8BurUBbGjf7ansgsf0_image.png" size="40" position="center" caption="Properties" alt="Properties"}
 
 11\. Set **Assignment required** to false and click on **Save** on the menu bar at the top left.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TcDQRF7iYJGhg5IZORevC_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TcDQRF7iYJGhg5IZORevC_image.png" size="40" width="1462" height="1426" position="center" caption="New application" alt}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TcDQRF7iYJGhg5IZORevC_image.png" size="40" position="center" caption="New application" alt}
 
 12\. Click on the **application registration link **at the top right of the page.
 
 13\. Click on **Authentication** in the left menu.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4YfDpXwaAoe0ctdnzVuMp_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4YfDpXwaAoe0ctdnzVuMp_image.png" size="40" width="1092" height="676" position="center" caption="Authentication" alt="Authentication"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4YfDpXwaAoe0ctdnzVuMp_image.png" size="40" position="center" caption="Authentication" alt="Authentication"}
 
 14\. Click on **Add a platform**.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W5kGnKf2yXFW0s7tPDmSt_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W5kGnKf2yXFW0s7tPDmSt_image.png" size="40" width="978" height="486" position="center" caption alt="Authentication"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/W5kGnKf2yXFW0s7tPDmSt_image.png" size="40" position="center" caption alt="Authentication"}
 
 15\. Click on **Mobile and desktop applications**. **Do not** select iOS/macOS or Android.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m3H4MSa6irQtbns5rtwb_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m3H4MSa6irQtbns5rtwb_image.png" size="40" width="1036" height="704" position="center" caption="Applications" alt="Applications"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m3H4MSa6irQtbns5rtwb_image.png" size="40" position="center" caption="Applications" alt="Applications"}
 
 16\. Select the **three checkboxes** and add [https://oauth.jigx.com/jigx/](https://oauth.jiigx.com/jigx/) in the custom URL section. If you are configuring this for a Jigx Branded app replace /jigx/ with the name of the branded app as specified in its app configuration. For example, [https://oauth.jigx.com/nintex/.
 ](https://oauth.jiigx.com/nintex/)Click on **Configure** to save the changes.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/umUofpRc-T5zTtlCKjjB2_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/umUofpRc-T5zTtlCKjjB2_image.png" size="50" width="1138" height="858" position="center" caption="Redirect URLs" alt="Redirect URLs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/umUofpRc-T5zTtlCKjjB2_image.png" size="50" position="center" caption="Redirect URLs" alt="Redirect URLs"}
 
 If you are planning on using **Postman** to test calls to Microsoft Graph using the Jigx Mobile OAuth configuration, click on Add URI and add the following URL: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) then click on **Save** at the bottom of the screen.
 
 17\. Click on** API permissions**. Depending on the functionality you want to expose to Jigx Mobile, you will have to specify specific API permissions, also referred to as scopes.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VjTPKfYwHW87qpjBo3Pdj_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VjTPKfYwHW87qpjBo3Pdj_image.png" size="40" width="880" height="380" position="center" caption="Scopes" alt="Scopes"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VjTPKfYwHW87qpjBo3Pdj_image.png" size="40" position="center" caption="Scopes" alt="Scopes"}
 
 18\. For this example, click on **Add a permission** and then **Microsoft Graph** at the top of the next screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2B9LSFwy5zX6Kg2P6UG-m_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2B9LSFwy5zX6Kg2P6UG-m_image.png" size="40" width="1572" height="764" position="center" caption="API permissions" alt="API permissions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2B9LSFwy5zX6Kg2P6UG-m_image.png" size="40" position="center" caption="API permissions" alt="API permissions"}
 
 19\. Click on **Delegated permissions** since we want the Jigx solution user to access the API using his identity and access rights.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7yfIHpb6iuyf-1tsqHqTD_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7yfIHpb6iuyf-1tsqHqTD_image.png" size="40" width="892" height="578" position="center" caption alt="API permissions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7yfIHpb6iuyf-1tsqHqTD_image.png" size="40" position="center" caption alt="API permissions"}
 
 20\. Enable **email, openid, profile and User.Read, offline\_access**. These are the minimum scopes needed by Jigx to access the API. **To find User.Read, **enter it in the search box. Click on **Add permissions** at the bottom of the screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eFrx-qU75Ld5GgGQ1H9Lp_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eFrx-qU75Ld5GgGQ1H9Lp_image.png" size="40" width="1124" height="1046" position="center" caption="API permissions" alt="API permissions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eFrx-qU75Ld5GgGQ1H9Lp_image.png" size="40" position="center" caption="API permissions" alt="API permissions"}
 
 21\. Click on **Grant admin consent** on the toolbar above the API permissions. Your API permissions should look similiar to the image below.
 
@@ -93,15 +93,15 @@ If you are planning on using **Postman** to test calls to Microsoft Graph using 
 
 22\. Click on **Overview** on the top left.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rgnKizK-RB5jbpWXw8W2u_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rgnKizK-RB5jbpWXw8W2u_image.png" size="40" width="1188" height="890" position="center" caption="API permissions overview" alt="API permissions overview"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rgnKizK-RB5jbpWXw8W2u_image.png" size="40" position="center" caption="API permissions overview" alt="API permissions overview"}
 
 23\. Copy the **Application (Client) ID** and save this for later.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7gbvElByph-l-owDoc2Lc_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7gbvElByph-l-owDoc2Lc_image.png" size="44" width="1118" height="368" position="center" caption="Application ID" alt="Application ID"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7gbvElByph-l-owDoc2Lc_image.png" size="44" position="center" caption="Application ID" alt="Application ID"}
 
 24\. Click on **Endpoints** in the toolbar. Select the **portion of the URL** up to the / after v2.0 of the OpenID Connect metadata document field and save this for later.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6x96Q3sKcuVvuBxNVWa9r_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6x96Q3sKcuVvuBxNVWa9r_image.png" size="80" width="1679" height="896" position="center" caption="Endpoints" alt="Endpoints"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6x96Q3sKcuVvuBxNVWa9r_image.png" size="80" position="center" caption="Endpoints" alt="Endpoints"}
 
 25\. At this stage, the** OAuth app **is configured and ready to use.
 

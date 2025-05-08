@@ -41,13 +41,13 @@ In the Advanced Settings screen add the email address where request emails will 
 
 Set **Jigx Management idle timeout**- Set an *Idle logout* option for Jigx Management. This is an optional security setting that once applied will display a prompt and then log the person out of Jigx Management after being idle for the configured period. Enabling the checkbox has a default of 120 minutes, but is configurable to any number of minutes.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VDzv8idkuNsRXLYUoukpv_jm-idletimeout.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VDzv8idkuNsRXLYUoukpv_jm-idletimeout.png" size="80" width="1736" height="894" position="center" caption="Idle timeout setting " alt="Idle timeout setting "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VDzv8idkuNsRXLYUoukpv_jm-idletimeout.png" size="80" position="center" caption="Idle timeout setting " alt="Idle timeout setting "}
 
 ## Organization Limits
 
 The organization limits allow you as the organization's owner to view the number of members and solutions in the organization. In the Solution Limit template section set the number of members allowed on new solutions, then restrict the number of rows of data and files allowed per solution.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VCMpFrybgVQQK23Gj6Ve_-20241002-114414.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VCMpFrybgVQQK23Gj6Ve_-20241002-114414.png" size="90" width="1870" height="1198" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VCMpFrybgVQQK23Gj6Ve_-20241002-114414.png" size="90"position="center" }
 
 ## Public Content
 

@@ -11,7 +11,7 @@ updatedAt: Wed Sep 27 2023 18:09:11 GMT+0000 (Coordinated Universal Time)
 Learn how to build your first jig by using this simple step-by-step guide that displays a marker on a map. The solution uses the [jig.default]() type with an icon and a [static data]() source. At the end of this step-by-step, you will have built a solution that can display a location marker on a map as shown :Comment[below]{resolved="true" docCommentId="jC6dDXJ4WPnFHouElOT7n"}. See [Jigx Concepts](<./../../Understanding the basics/Jigx Concepts.md>) to learn what jigs and widgets are.
 
 :::hint{type="success"}
-We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.&#x20;
+We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.
 :::
 
 ::::VerticalSplit{layout="middle"}
@@ -19,9 +19,9 @@ We recommend you build out all the solution steps for the [Create an app from sc
 ## Steps
 
 1. [Create the Hello Jigx project](<./Create the Hello Jigx solution project.md>) in the Jigx Builder.
-2. &#x20;[Add the jig.default](<./Create the Map/Adding the Map Jig.md>) with an icon, and static data source.
+2. [Add the jig.default](<./Create the Map/Adding the Map Jig.md>) with an icon, and static data source.
 3. [Publish the project](<./Create the Map/Publish the project.md>).
-4. [Open the Jigx mobile app](<./Create the Map/Run the solution in the app.md>), click on the location jig, and view the map.&#x20;
+4. [Open the Jigx mobile app](<./Create the Map/Run the solution in the app.md>), click on the location jig, and view the map.
 :::
 
 :::VerticalSplitItem

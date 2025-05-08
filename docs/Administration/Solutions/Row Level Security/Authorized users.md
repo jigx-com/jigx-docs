@@ -13,11 +13,11 @@ updatedAt: Mon Oct 30 2023 09:46:43 GMT+0000 (Coordinated Universal Time)
 1. Open Jigx Management, select the **solution** option, and browse to the required solution.
 2. Click on the **Data **option in the navigation pane.
 3. Select the required **table** from the Tables list in the right-hand pane.
-4. Click on an individual row to open the **Edit record** pane.&#x20;
-5. &#x20;Click on the **Authorized Users** tab.&#x20;
-6. Add users either as Owners or Members. Groups can only be added as Members.&#x20;
-7. Click **Save**.&#x20;
-8. Selecting the **Custom** restriction requires selecting specific groups, owners, and members. &#x20;
+4. Click on an individual row to open the **Edit record** pane.
+5. &#x20;Click on the **Authorized Users** tab.
+6. Add users either as Owners or Members. Groups can only be added as Members.
+7. Click **Save**.
+8. Selecting the **Custom** restriction requires selecting specific groups, owners, and members. 
 9. Open the **Column settings** by clicking the gear icon at the top of the data table and check the Authorized Users checkbox.  The Authorized User column is now visible in the table.
 
 **Authorized users** can be configured in the YAML in Jigx Builder by specifying values for the `Owner` and `Member` keys in the CREATE and UPDATE methods on `action.execute-entity` and `action.submit-form` for the `data_provider_Dynamic`.

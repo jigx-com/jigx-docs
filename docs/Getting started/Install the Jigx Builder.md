@@ -18,13 +18,13 @@ The Jigx Builder now appears under your list of installed extensions and is auto
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Jigx Builder installed in VS code" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gFlM-QBXwHefP5hH70wK__vsjbuilder.png" size="80" width="588" height="584" caption="Jigx Builder installed" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/B2SU2kWPZcrvmwQtHfY63_vsjbuilder.png" position="center" darkWidth="588" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gFlM-QBXwHefP5hH70wK__vsjbuilder.png" darkHeight="584"}
+::Image[]{alt="Jigx Builder installed in VS code" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gFlM-QBXwHefP5hH70wK__vsjbuilder.png" size="80"  caption="Jigx Builder installed" position="center"}
 :::
 ::::
 
-Build Jigx projects by using the Jigx Builder** **extension and use YAML, SQL, JSON, and JSONata.&#x20;
+Build Jigx projects by using the Jigx Builder extension and use YAML, SQL, JSON, and JSONata.
 
-The Jigx Builder YAML editor includes code completion by simultaneously pressing the control and spacebar** (ctrl+space)** keys. Only valid options in the current cursor context display in the code popup.
+The Jigx Builder YAML editor includes code completion by simultaneously pressing the control and spacebar **(ctrl+space)** keys. Only valid options in the current cursor context display in the code popup.
 
 
 

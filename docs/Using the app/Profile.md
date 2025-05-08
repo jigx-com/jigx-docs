@@ -7,10 +7,10 @@ updatedAt: Tue Jun 18 2024 09:06:05 GMT+0000 (Coordinated Universal Time)
 
 ## Personal information
 
-Personal information shows the logged-in user's full name, email, and profile picture.&#x20;
+Personal information shows the logged-in user's full name, email, and profile picture.
 
-- You can change your profile picture by clicking on the plus icon.&#x20;
-- Delete your account - Once deleted, you are logged out of the Jigx App, and your account is deleted from Jigx Management. &#x20;
+- You can change your profile picture by clicking on the plus icon.
+- Delete your account - Once deleted, you are logged out of the Jigx App, and your account is deleted from Jigx Management.
 
 ## Settings
 
@@ -42,7 +42,7 @@ Personal information shows the logged-in user's full name, email, and profile pi
 
 ## Solutions
 
-Displays all&#x20;
+Displays all
 
 ## Troubleshooting
 

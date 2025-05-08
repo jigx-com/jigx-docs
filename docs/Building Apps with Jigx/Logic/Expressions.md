@@ -221,7 +221,7 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 - Create a new file under the **scripts/expressions** folder and save it with a .js extension, for example, functions.js.
 - Within this file, you can define your functions.
   - For a single functions, you simply write the function definition.
-  - &#x20;For multiple functions, you can define each function in a single file or separate then into their own files.
+  - For multiple functions, you can define each function in a single file or separate then into their own files.
 - Each function must be prefixed with **export**, for example,
   `export function helloWorld() {
   return 'Hello World'

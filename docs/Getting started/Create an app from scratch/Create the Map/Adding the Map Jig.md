@@ -8,7 +8,7 @@ updatedAt: Wed Feb 12 2025 17:57:57 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-&#x20;In this section, there are two files to edit, namely, `index.jigx` and `myfirstjig.jigx`. In the `index.jigx` file, you select the size of the [widget]() that will appear on the Jigx mobile app [Home Hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen. In the `myfirstjig.jigx` file you will specify the default [type]() of jig, assign an icon for the jig, and provide a [static datasource]() that provides the location on the map.&#x20;
+In this section, there are two files to edit, namely, `index.jigx` and `myfirstjig.jigx`. In the `index.jigx` file, you select the size of the [widget]() that will appear on the Jigx mobile app [Home Hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen. In the `myfirstjig.jigx` file you will specify the default [type]() of jig, assign an icon for the jig, and provide a [static datasource]() that provides the location on the map.
 
 :::hint{type="success"}
 See [Jigx Concepts](<./../../../Understanding the basics/Jigx Concepts.md>) to learn what jigs and widgets are.
@@ -45,14 +45,13 @@ widgets:
 
 ### Add the map to the jig
 
-1. In Explorer expand the **jigs** folder and right-click on `myfirstjig.jigx` file and rename the file to map.jigx. Click to open the file, the Jigx auto-complete popup listing the five jig types displays. For this solution, we will be using the **default** jig to create the UI for displaying data. Click on **Default** to open the skeleton YAML created by the Jigx Builder.&#x20;
+1. In Explorer expand the **jigs** folder and right-click on `myfirstjig.jigx` file and rename the file to map.jigx. Click to open the file, the Jigx auto-complete popup listing the five jig types displays. For this solution, we will be using the **default** jig to create the UI for displaying data. Click on **Default** to open the skeleton YAML created by the Jigx Builder.
 2. Add ***Location with address*** as the `title` for your jig. The title appears under the widget on the Home Hub. Add a description for the jig, such as map with a marker.
-3. On the line under `type:`, type `icon:`. To select an icon from the predefined list start typing the first two letters of the name of the icon, in this case *lo, *the list of icons starts to populate as you type. Select `location` from the list. This icon displays on the widget on the Home Hub.
+3. On the line under `type:`, type `icon:`. To select an icon from the predefined list start typing the first two letters of the name of the icon, in this case *lo,* the list of icons starts to populate as you type. Select `location` from the list. This icon displays on the widget on the Home Hub.
 4. Delete the `header`, and `onFocus` section, you will add a header later in the [Combine the solution's elements](<./../Combine the solution_s elements.md>) section.
-5. The map jig needs a `datasource:` defined that provides the location details. You will use a [static datasource]() in this step. The static dataset is created directly inside the&#x20;
-   jig file of the Jigx solution, and there is no need to specify any database connections or set up any tables. The amount of records that can be created for the static data is unlimited and is used to bind data to the UI components.
-6. Replace `mydata:` with `address:` press **(ctrl+space) **and select `Static Datasource`.&#x20;
-7. Define the location details for the street, city and country under the `data:` tag. You can remove `id:1` . Add your own location or use the following as an example:
+5. The map jig needs a `datasource:` defined that provides the location details. You will use a [static datasource]() in this step. The static dataset is created directly inside the jig file of the Jigx solution, and there is no need to specify any database connections or set up any tables. The amount of records that can be created for the static data is unlimited and is used to bind data to the UI components.
+6. Replace `mydata:` with `address:` press **(ctrl+space)** and select `Static Datasource`.
+7. Define the location details for the street, city and country under the `data:` tag. You can remove `id:1`. Add your own location or use the following as an example:
 
 :::CodeblockTabs
 YAML
@@ -69,9 +68,9 @@ datasources:
 ```
 :::
 
-1. The controls displayed on the jig are defined under the `children:` node on a default jig. The output control is placed on the location component to display a map/location inside the jig. Under the `children:` node press **(ctrl+space) **and select **Location** from the list.
+1. The controls displayed on the jig are defined under the `children:` node on a default jig. The output control is placed on the location component to display a map/location inside the jig. Under the `children:` node press **(ctrl+space)** and select **Location** from the list.
 2. For the output control to display the map with the location you will use the address from the datasource using an [expression](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to return the street, city and country to the location component. Next to `options:` press **(ctrl+space)** and select **address** from the list.
-   To add the expression next to the `address:` line press **(ctrl+space)** and select **=@ctx** from the list. The root element of expressions in .jigx files always starts with "@ctx" vs. "$." in JSONata Exerciser (e.g. @ctx.data vs. $.data). Add the following to your expression:       `address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`     &#x20;
+   To add the expression next to the `address:` line press **(ctrl+space)** and select **=@ctx** from the list. The root element of expressions in .jigx files always starts with "@ctx" vs. "$." in JSONata Exerciser (e.g. @ctx.data vs. $.data). Add the following to your expression:       `address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`     
 3. To ensure that the location marker can be seen on the map add a `zoomLevel: 9` under the address line.
 4. **Save** the project.
 5. Your map.jigx file should resemble the code below.

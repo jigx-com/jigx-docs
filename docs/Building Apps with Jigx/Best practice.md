@@ -11,7 +11,7 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 **Design Pattern:** Singletons
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S_MP9oBcex53yT9JezU9t-20240911-134725.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S_MP9oBcex53yT9JezU9t-20240911-134725.gif" size="60" width="1100" height="1592" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S_MP9oBcex53yT9JezU9t-20240911-134725.gif" size="60" position="center" caption}
 
 ### Setup:
 
@@ -75,7 +75,7 @@ State resources and code samples:
 
 **Design Pattern**: Mediator
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ecGae4Ri9XtX6vah4PaB_-20240912-074706.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ecGae4Ri9XtX6vah4PaB_-20240912-074706.gif" size="60" width="1100" height="1592" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ecGae4Ri9XtX6vah4PaB_-20240912-074706.gif" size="60" position="center"}
 
 ### Setup:
 
@@ -163,7 +163,7 @@ Input resources and code samples:
 
 **Design Pattern**: Observer
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-J2wSHx9xzGdeEuV5uLHvg-20240912-192654.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-J2wSHx9xzGdeEuV5uLHvg-20240912-192654.gif" size="60" width="1100" height="1592" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-J2wSHx9xzGdeEuV5uLHvg-20240912-192654.gif" size="60" position="center"}
 
 ### Setup:
 

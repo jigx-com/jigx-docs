@@ -28,7 +28,7 @@ Here is an example of a Home Hub designed for its simplicity with no titles and 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" width="1224" height="2466" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub"}
 :::
 ::::
 
@@ -111,7 +111,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60" width="1224" height="2466" position="center" caption="Custom home hub" alt="Custom home hub"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60"  position="center" caption="Custom home hub" alt="Custom home hub"}
 :::
 
 :::VerticalSplitItem
@@ -233,7 +233,7 @@ In this example, four jigs are created. In the index.jigx file, they are configu
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" width="1224" height="2466" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs"}
 :::
 ::::
 

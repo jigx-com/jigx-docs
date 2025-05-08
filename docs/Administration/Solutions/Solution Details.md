@@ -16,14 +16,14 @@ The *Solution Details* and [Solution Settings](<./Solution Settings.md>) tab fun
 
 ## Download Solution
 
-Before deleting your solution it is good practice to make a backup of the solution. Click the *Download Solution* button in the top right-hand corner of the screen, and a zip file will be downloaded to your local machine. &#x20;
+Before deleting your solution it is good practice to make a backup of the solution. Click the *Download Solution* button in the top right-hand corner of the screen, and a zip file will be downloaded to your local machine.
 
 The following is **not** included in the downloaded solution zip file:
 
 - Permissions
 - Credentials
 - Connections
-- Dynamic Data - To backup your Dynamic Data navigate to the [Data](./Data.md) tab in Jigx Management and export the data to a CSV file for each table.&#x20;
+- Dynamic Data - To backup your Dynamic Data navigate to the [Data](./Data.md) tab in Jigx Management and export the data to a CSV file for each table.
 
 ## Advanced actions
 
@@ -40,15 +40,15 @@ Deleting the solution requires that you have solution *Owner* permissions. When 
 
 ### Copy Solution
 
-Making a copy of a solution has many benefits to speed up the development process in an organization.&#x20;
+Making a copy of a solution has many benefits to speed up the development process in an organization.
 
 ![Create a copy of solution](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jcvnFx2bvBHvEMwZTp-2u_jm-copysolutionl.png "Create a copy of solution")
 
 By default, the *Copy Solution* button is not visible. To enable this feature follow the steps below:
 
 1. Navigate to the [Solution Settings](<./Solution Settings.md>) tab.
-2. In the Allow copy of solution dropdown, select either **Within current organization** or **To any organization***.*
-3. Check the **Permit copy of data **if you want to copy the solution's data along with the solution definition.
+2. In the Allow copy of solution dropdown, select either **Within current organization** or **To any organization**.
+3. Check the **Permit copy of data** if you want to copy the solution's data along with the solution definition.
 4. Click **Save**.
 5. Navigate back to the Solution Details tab, the red **Copy Solution** button will be visible.
 6. Click the red **Copy Solution** button, and give the solution a new or updated **title.**

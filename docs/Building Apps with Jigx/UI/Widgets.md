@@ -21,7 +21,7 @@ Consider the layout of the widgets on the mobile app screen. Specific sizes cove
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oGaU39hj90U-QrBkbnDAq_wd-layout.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oGaU39hj90U-QrBkbnDAq_wd-layout.png" size="60" width="540" height="1368" position="center" caption="Widget layouts" alt="Widget layouts"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oGaU39hj90U-QrBkbnDAq_wd-layout.png" size="60" position="center" caption="Widget layouts" alt="Widget layouts"}
 :::
 ::::
 
@@ -205,9 +205,9 @@ children:
 ::::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xDdATKCiSQfA0N9jSfVIk-20250307-080104.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xDdATKCiSQfA0N9jSfVIk-20250307-080104.png" size="32" width="132" height="154" position="center" caption="Default widget icon" alt="Default widget icon"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xDdATKCiSQfA0N9jSfVIk-20250307-080104.png" size="32" position="center" caption="Default widget icon" alt="Default widget icon"}
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3KbkwoTdYzX8jlQ3D9rf2_wd-icon.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3KbkwoTdYzX8jlQ3D9rf2_wd-icon.png" size="40" width="544" height="546" position="center" caption="Location icon on widget" alt="Location icon on widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3KbkwoTdYzX8jlQ3D9rf2_wd-icon.png" size="40" position="center" caption="Location icon on widget" alt="Location icon on widget"}
 :::
 :::::
 
@@ -218,7 +218,7 @@ children:
 3. Specify the `Widget Name`.
 4. Next choose the `type:` of content to display on the widget, such as `widget.location` use IntelliSense to invoke the list of available types.
 5. Depending on the type you selected additional properties are required, see [widget]() examples on how to configure each type accordingly.
-6. Add the widget (`size` , `jigId`, `widgetId`, and `inputs`)  to the [grid-item]().&#x20;
+6. Add the widget (`size` , `jigId`, `widgetId`, and `inputs`)  to the [grid-item]().
 
 In the example below the widget content is configured to show a *location* on the widget surface.
 
@@ -287,7 +287,7 @@ children:
 ::::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yX5QldmDnLckwWqXas_fu-20250307-082534.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yX5QldmDnLckwWqXas_fu-20250307-082534.png" size="80" width="1224" height="2466" position="center" caption="Widget with location content" alt="Widget with location content"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yX5QldmDnLckwWqXas_fu-20250307-082534.png" size="80" position="center" caption="Widget with location content" alt="Widget with location content"}
 :::
 :::::
 
@@ -299,7 +299,7 @@ The widgets display order on a screen is determined by the order of the [grid-it
 ::::VerticalSplitItem
 Initial widget order in [grid]()
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3_P1Wkg12BhBbZMEe2-20250307-083935.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3_P1Wkg12BhBbZMEe2-20250307-083935.png" size="60" width="1224" height="2466" position="center" caption="Initial widget order" alt="Initial widget order"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3_P1Wkg12BhBbZMEe2-20250307-083935.png" size="60" position="center" caption="Initial widget order" alt="Initial widget order"}
 
 :::CodeblockTabs
 home.jigx
@@ -357,7 +357,7 @@ children:
 ::::VerticalSplitItem
 Reordered and resized widgets.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lOHCs3J3hVLX7vdEqFKFU-20250307-084254.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lOHCs3J3hVLX7vdEqFKFU-20250307-084254.png" size="60" width="1224" height="2466" position="center" caption="Reordered widget" alt="Reordered widget"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lOHCs3J3hVLX7vdEqFKFU-20250307-084254.png" size="60" position="center" caption="Reordered widget" alt="Reordered widget"}
 
 :::CodeblockTabs
 home.jigx
@@ -424,7 +424,7 @@ Enhance your widget with a customizable badges for instance showing the number o
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bJX0OSDzDPdPtixYsqCgh_badging.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bJX0OSDzDPdPtixYsqCgh_badging.PNG" size="40" width="566" height="625" position="center" caption="Widget badge" alt="Widget badge"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bJX0OSDzDPdPtixYsqCgh_badging.PNG" size="40" position="center" caption="Widget badge" alt="Widget badge"}
 :::
 ::::
 

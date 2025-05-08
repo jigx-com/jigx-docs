@@ -8,7 +8,7 @@ updatedAt: Wed Feb 12 2025 18:55:49 GMT+0000 (Coordinated Universal Time)
 
 Jigx provides a template gallery that you can use as a base when creating solutions. Jigx templates are available when creating jigs, adding components** **and widgets to a jig.
 
-Using templates has many benefits, such as:&#x20;
+Using templates has many benefits, such as:
 
 1. **Time Efficiency:** Templates provide a pre-designed structure and layout. They can save you time by eliminating the need to start from scratch or design every aspect from the ground up. With templates, you can jumpstart your development process and focus more on customizing the specific functionality you require.
 2. **Consistency and Best Practices:** Templates ensure consistency in your project. Using templates helps maintain a uniform structure, coding style, and user experience throughout your application.
@@ -64,7 +64,7 @@ Each jig type has a set of templates to choose from. Follow the steps below to s
 
 You can use the scenario templates to create a functioning solution. For example insert the **Content management** scenario template and publish out the solution to the app. The scenario includes four jigs and adds the contacts Dynamic Data table.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RCSQgz3TqyiydLH0ibmBS_t-scenario.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RCSQgz3TqyiydLH0ibmBS_t-scenario.png" size="68" width="1050" height="1262" position="center" caption="Scenario templates" alt="Scenario templates"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RCSQgz3TqyiydLH0ibmBS_t-scenario.png" size="68" position="center" caption="Scenario templates" alt="Scenario templates"}
 
 ### See Also
 

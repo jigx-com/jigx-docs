@@ -10,9 +10,9 @@ Navigation allows you to flow through the app. Whenever you [go-to]() a jig, the
 The [go-to]() action is used to configure the flow of jigs in the app using the `behaviour` property. With the `behaviour` you determine if you want to push the screen into the app history, by using the `new` value, or show the one you already have in history by using the `existing` value.
 
 1. **New** - creates a sequential stack showing the progression of navigation. Presents a new screen you are navigating to, allowing you to capture the next data set to add to the stack currently in the history. Typically, this would be used to capture the next line in an invoice.
-   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" size="38" width="810" height="786" position="center" caption="State Navigation- New" alt="State Navigation- New"}
+   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" size="38"  position="center" caption="State Navigation- New" alt="State Navigation- New"}
 2. **Existing** - jumps to previously visited screens by recognizing existing instances. Displays the data of the existing screen you are navigating to, typically used when you want to review the captured lines in an invoice before submitting.
-   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea_AXArXooV75ziT40x-20241126-063100.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea_AXArXooV75ziT40x-20241126-063100.png" size="22" width="462" height="762" position="center" caption="State Navigation- Existing" alt="State Navigation- Existing"}
+   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea_AXArXooV75ziT40x-20241126-063100.png" size="22" position="center" caption="State Navigation- Existing" alt="State Navigation- Existing"}
 
 ## How to configure navigation
 
@@ -47,11 +47,11 @@ In this example, three jigs are configured to create a stack of data for each gu
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc size="60" width="681" height="1377" position="center" caption="Go-to new guest" alt="Go-to new guest "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" size="60" position="center" caption="Go-to new guest" alt="Go-to new guest "}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" signedSrc size="60" width="681" height="1377" position="center" caption="Review guests" alt="Review guests"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests"}
 :::
 ::::
 

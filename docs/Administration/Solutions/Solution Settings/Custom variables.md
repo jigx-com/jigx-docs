@@ -9,30 +9,30 @@ Defining custom variables enables you to create reusable values that can be dyna
 
 ## Creating and setting variables
 
-Custom variables are created and set in the [Solution Settings](<./../Solution Settings.md>) page in [Jigx Management](<./../../Management Overview.md>) and consist of a variable name and a variable value.&#x20;
+Custom variables are created and set in the [Solution Settings](<./../Solution Settings.md>) page in [Jigx Management](<./../../Management Overview.md>) and consist of a variable name and a variable value.
 
 ![Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RA_r561Nvc-59iw8KrHaE-20240819-075737.gif "Custom Variables")
 
 1. Open [Jigx Management](<./../../Management Overview.md>), navigate to the solution where the variables will be used.
 2. Select  [Solution Settings](<./../Solution Settings.md>) in the left navigation pane.
 3. Select the   **Custom** tab.
-4. Type a name for the variable in the text field and click the **+** sign. This creates the **variable name**,** **which appears at the top of the field.
+4. Type a name for the variable in the text field and click the **+** sign. This creates the **variable name**, which appears at the top of the field.
 5. Next, type the **variable value** in the text field.
 6. Click **Save** in the top right-hand corner.
 
-Now that your variables are set, you can use the variables throughout the solution in Jigx Builder.&#x20;
+Now that your variables are set, you can use the variables throughout the solution in Jigx Builder.
 
 ## Using variables
 
-Custom variables are expression based, meaning you can use it wherever expressions are configurable in Jigx Builder. To reference the variable,* *the following expression is used:
+Custom variables are expression based, meaning you can use it wherever expressions are configurable in Jigx Builder. To reference the variable, the following expression is used:
 
 ```yaml
 =@ctx.solution.settings.custom.{{variableName}} 
 ```
 
-Use IntelliSense to select the `variableName` you set in *Management > Solution Settings.*
+Use IntelliSense to select the `variableName` you set in *Management > Solution Settings*.
 
-### Reloading variables in Jigx Builder&#x20;
+### Reloading variables in Jigx Builder
 
 After adding a new custom variable in Management, you can use the *Reload Solution Settings* option in Jigx Builder to refresh IntelliSense and make the variable available.
 
@@ -40,10 +40,10 @@ After adding a new custom variable in Management, you can use the *Reload Soluti
 
 ## Considerations
 
-- Do not store API keys, passwords or secrets in custom variables, as they are not encrypted or secure.&#x20;
+- Do not store API keys, passwords or secrets in custom variables, as they are not encrypted or secure.
 - Variables are solution specific, and cannot be used across multiple solutions.
 - Custom variable values are read only in the mobile app.
 - Best practice is to use custom variables to configure environment variables, relating to:
   - Production, development, or test URLs.
-  - Customer preferences, for example, a base solution that is used for multiple customers, departments, stores. Simply change the variable value to apply to each customer.&#x20;
+  - Customer preferences, for example, a base solution that is used for multiple customers, departments, stores. Simply change the variable value to apply to each customer.
 

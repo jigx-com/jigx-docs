@@ -8,30 +8,30 @@ updatedAt: Wed May 03 2023 12:43:31 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-With the customer forms and list added to the Hello-Jigx solution and published to the Cloud, you are ready to use the solution in the Jigx mobile app.&#x20;
+With the customer forms and list added to the Hello-Jigx solution and published to the Cloud, you are ready to use the solution in the Jigx mobile app.
 
 ## Steps
 
-1. On your mobile device** tap** the Jigx app icon on your mobile device.&#x20;
-2. Sign into the app with your [Jigx account](<./../../Creating an account.md>) details**.**
+1. On your mobile device **tap** the Jigx app icon on your mobile device.
+2. Sign into the app with your [Jigx account](<./../../Creating an account.md>) details.
 3. The app opens the [home hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen displaying the Hello Jigx solution, there are now four widgets showing, the map, calendar, **customer**, and **customer list** widgets.
-4. Tap on the **customer** icon to open the new customer form. Add details of a new customer and submit the form. Navigate back to the Home Hub, you will notice that the customer you created shows in the **customer list** widget. View the customer details by tapping the customer name in the list. Tap the Edit Customer button at the bottom of the view. Make changes to the customer's email and name tap the save customer button at the bottom of the screen. Navigate back to the Home Hub to see the updated details in the list.&#x20;
+4. Tap on the **customer** icon to open the new customer form. Add details of a new customer and submit the form. Navigate back to the Home Hub, you will notice that the customer you created shows in the **customer list** widget. View the customer details by tapping the customer name in the list. Tap the Edit Customer button at the bottom of the view. Make changes to the customer's email and name tap the save customer button at the bottom of the screen. Navigate back to the Home Hub to see the updated details in the list.
 
 ::::Tabs
 :::Tab{title="Form & list widgets"}
-::Image[]{alt="Form and list widgets" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll_formlistlight.PNG" size="30" width="1240" height="2500" caption="Form and list widgets" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/szJHiMCLrSZJw8Ty8SCmQ_formlistdark.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll_formlistlight.PNG" darkHeight="2500"}
+::Image[]{alt="Form and list widgets" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll_formlistlight.PNG" size="30" caption="Form and list widgets"}
 :::
 
 :::Tab{title="New customer form"}
-::Image[]{alt="New customer form" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg_aAqfhOQoUW_newcustomerlight.PNG" size="40" width="1240" height="2500" caption="New customer form" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/DNvqAOIMHKAb-4Ye849ox_newcustomerdark.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg_aAqfhOQoUW_newcustomerlight.PNG" darkHeight="2500"}
+::Image[]{alt="New customer form" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg_aAqfhOQoUW_newcustomerlight.PNG" size="40" caption="New customer form"}
 :::
 
 :::Tab{title="View customer"}
-::Image[]{alt="View customer jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62_viewcustomerlight.PNG" size="30" width="1240" height="2500" caption="View customer jig" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aZj-CSAFQYs2K0fRLo8iq_viewcustomerdark.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62_viewcustomerlight.PNG" darkHeight="2500"}
+::Image[]{alt="View customer jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62_viewcustomerlight.PNG" size="30" caption="View customer jig"}
 :::
 
 :::Tab{title="Edit customer"}
-::Image[]{alt="Edit customer jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b_editcustomerlight.PNG" size="30" width="1240" height="2500" caption="Edit customer jig" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xqnyCitQC9AjHwAlwHzv2_editcustomerdark.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b_editcustomerlight.PNG" darkHeight="2500"}
+::Image[]{alt="Edit customer jig" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b_editcustomerlight.PNG" size="30" caption="Edit customer jig"}
 :::
 ::::
 

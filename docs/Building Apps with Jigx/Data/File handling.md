@@ -50,7 +50,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 ## Convert incoming data
 
 ::::ExpandableHeading
-### REST & SQL function&#x20;
+### REST & SQL function
 
 In the examples below, the file conversions are configured in the** REST and SQL (GET) functions **to convert the incoming files.
 
@@ -110,7 +110,7 @@ conversions:
 ## Convert outgoing data
 
 ::::ExpandableHeading
-### REST & SQL function&#x20;
+### REST & SQL function
 
 In the examples below, the file conversions are configured in the **REST and** **SQL ****(SAVE/CREATE/UPDATE) ****functions** to convert the files that are outgoing to REST and SQL.
 
@@ -186,7 +186,7 @@ conversions:
 :::
 ::::
 
-## Datasource conversion&#x20;
+## Datasource conversion
 
 In this example, the Dynamic Data image file conversion is configured in the datasource to convert the files to be used in the solution.
 
@@ -210,7 +210,7 @@ options:
 ```
 :::
 
-## Action image conversion&#x20;
+## Action image conversion
 
 File conversions in actions can be configured with Dynamic Data, SQL, and REST providers. They can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression `conversions: =@ctx.datasources.conversions`, applicable to both local and global actions.
 

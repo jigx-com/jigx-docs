@@ -8,15 +8,15 @@ updatedAt: Tue Nov 05 2024 13:41:12 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this section, you learn how to create a form using the `component.form` to display the fields returned from the dynamic data provider.  Add an `action.submit-form` with a `method: update` that saves the changes to the record in the dynamic data provider.&#x20;
+In this section, you learn how to create a form using the `component.form` to display the fields returned from the dynamic data provider.  Add an `action.submit-form` with a `method: update` that saves the changes to the record in the dynamic data provider.
 
 ## Steps
 
 ### Create a jig to edit data
 
 1. Open the Hello-Jigx solution in Jigx Builder in VS Code, **right-click** on the jigs node in Explorer, and select **New file**.
-2. Name the file **edit-customer**. Click on **Default** to open the skeleton YAML created by the Jigx Builder. &#x20;
-3. &#x20;Give the jig a title called *Edit customers* and provide a description like *Edit customer details*.&#x20;
+2. Name the file **edit-customer**. Click on **Default** to open the skeleton YAML created by the Jigx Builder.
+3. Give the jig a title called *Edit customers* and provide a description like *Edit customer details*.
 4. Delete the `header` and `onfocus` nodes.
 
 ### Add a datasource and form
@@ -87,7 +87,7 @@ actions:
 ```
 :::
 
-&#x20;  2\. Your edit-customer.jigx file should resemble the code below.
+2\. Your edit-customer.jigx file should resemble the code below.
 
 :::CodeblockTabs
 edit-customer.jigx

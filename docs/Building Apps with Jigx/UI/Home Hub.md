@@ -12,7 +12,7 @@ Having a good home screen is essential for any mobile app as it is the first scr
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="60" width="1224" height="2466" position="center" caption="Home screen" alt="Home screen"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="60" position="center" caption="Home screen" alt="Home screen"}
 
 
 :::

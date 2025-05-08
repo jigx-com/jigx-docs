@@ -24,7 +24,7 @@ Enable Jigx Dev Tools by following these steps:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IB4BEAffLlDQXjfDYb_B4_jb-debugsteps.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IB4BEAffLlDQXjfDYb_B4_jb-debugsteps.png" size="82" width="694" height="1574" position="center" caption="Enabling Jigx Dev Tools" alt="Enabling Jigx Dev Tools"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IB4BEAffLlDQXjfDYb_B4_jb-debugsteps.png" size="82" position="center" caption="Enabling Jigx Dev Tools" alt="Enabling Jigx Dev Tools"}
 :::
 
 :::VerticalSplitItem
@@ -84,7 +84,7 @@ Use the Jigx Console to debug your data and functions.
 7. Click **Execute** to run the function and see the data in the console panel.
 8. Drill down into the data entries that are returned by clicking on an item in the list, the data is displayed in the right-hand panel.
 9. Click **Clear** in the right corner of the parameter panel to clear the parameters, to test your function parameteters add new values for the parameters and press the **Execute** button to test what data is being returned.
-10. Required parameters are indicated with an \* &#x20;
+10. Required parameters are indicated with an \*.
 11. The data type is shown next to the parameter, e.g., string, or array.
 
 ### Jigx Logs

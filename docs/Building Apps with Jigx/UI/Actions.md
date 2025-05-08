@@ -15,7 +15,7 @@ Actions refer to specific controls or operations that respond to an event or inp
 
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
-- *Execution - *actions to interact with data.
+- *Execution* - actions to interact with data.
   - [execute-entity]()
   - [execute-entities]()
   - [submit-form]()

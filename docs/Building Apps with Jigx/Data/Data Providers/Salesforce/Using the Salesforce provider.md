@@ -47,7 +47,7 @@ Below is a simple example of filtering the Account object's name column to only 
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wTD7SSZLsUQuSrRLhyF4n_salesforcea.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wTD7SSZLsUQuSrRLhyF4n_salesforcea.PNG" size="70" width="1240" height="2500" position="center" caption="Accounts startng with A" alt="Accounts startng with A"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wTD7SSZLsUQuSrRLhyF4n_salesforcea.PNG" size="70" position="center" caption="Accounts startng with A" alt="Accounts startng with A"}
 :::
 ::::
 

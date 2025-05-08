@@ -9,7 +9,7 @@ Often, you need to transfer or pass data between jigs to provide context and dat
 
 ## Inputs
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" size="50" width="650" height="834" position="center" caption="Passing data using inputs" alt="Passing data using inputs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" size="50" position="center" caption="Passing data using inputs" alt="Passing data using inputs"}
 
 The input data is configured in one of the following:
 
@@ -45,8 +45,8 @@ You can define the following for inputs:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-**Index.jigx:**&#x20;
-In the index.jigx file configure the input under the widget configuration for the jig.  Configure the data you want to pass to that jig.&#x20;
+**Index.jigx:**
+In the index.jigx file configure the input under the widget configuration for the jig.  Configure the data you want to pass to that jig.
 Example:
 `size: "1x1"`
 `jigId: application-form`
@@ -76,7 +76,7 @@ Example of an *input expression*:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-**Parameter:**&#x20;
+**Parameter:**
 In the jig containing the data you want to transfer, and configure the various parameters to be passed.
 Example:
 `parameters: `
@@ -117,7 +117,7 @@ Jig input definitions are configured directly in the jig and the input values ar
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s_inputsdefinition.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s_inputsdefinition.PNG" size="88" width="1253" height="2500" position="center" caption="Input definitions" alt="Input definitions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s_inputsdefinition.PNG" size="88" position="center" caption="Input definitions" alt="Input definitions"}
 :::
 ::::
 
@@ -276,7 +276,7 @@ widgets:
 
 Jig input definitions are configured directly in the jig and the input values returned from components configured in another jig. In the example below a form captures the student details, the *Student Details* form links to the *Student Card* jig and uses parameters to pass the values required in the *Student Card* inputs.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" size="70" width="2540" height="2500" position="center" caption="Dynamic input" alt="Dynamic input"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" size="70" position="center" caption="Dynamic input" alt="Dynamic input"}
 
 :::CodeblockTabs
 input-student-card.jigx
@@ -475,17 +475,17 @@ actions:
 :::
 
 :::::ExpandableHeading
-### &#x20;Passing data from one jig to another
+### Passing data from one jig to another
 
 In this example, the **sending** jig list called* Island Holiday Packages* is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" size="58" width="2503" height="2520" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" size="58" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig"}
 
 **Sending Jig**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd_inputsend.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd_inputsend.png" size="64" width="2454" height="4956" position="center" caption="Sending jig with parameters" alt="Sending jig with parameters"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd_inputsend.png" size="64" position="center" caption="Sending jig with parameters" alt="Sending jig with parameters"}
 :::
 
 :::VerticalSplitItem
@@ -569,7 +569,7 @@ Create a `jig.default` for the receiving jig. In the `title:` property configure
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq_inputrec.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq_inputrec.png" size="64" width="2522" height="4990" position="center" caption="Input- receiving jig" alt="Input- receiving jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq_inputrec.png" size="64" position="center" caption="Input- receiving jig" alt="Input- receiving jig"}
 :::
 ::::
 
@@ -625,7 +625,7 @@ In this example, three jigs contain various information for all customers, namel
 
 When you click on a customer in the list (1) shown on the left screen below, a new jig opens combining the details from contact (2) and orders (3) into one screen (composite jig), shown on the right screen below and filters the data to show the selected customer's details. The composite jig is called *customer-overview\.jigx*.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" size="60" width="2551" height="2535" position="center" caption="Send and receiving jigs" alt="Send and receiving jigs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" size="60" position="center" caption="Send and receiving jigs" alt="Send and receiving jigs"}
 
 To achieve this configure the following:
 
@@ -638,7 +638,7 @@ To achieve this configure the following:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ_custlist.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ_custlist.png" size="64" width="2556" height="4984" position="center" caption="Sending Jig with paramaters" alt="Sending Jig with paramaters"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ_custlist.png" size="64" position="center" caption="Sending Jig with paramaters" alt="Sending Jig with paramaters"}
 :::
 
 :::VerticalSplitItem
@@ -810,7 +810,7 @@ item:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf_custcomp.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf_custcomp.png" size="64" width="2544" height="4992" position="center" caption="Receiving composite Jig" alt="Receiving  composite Jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf_custcomp.png" size="64" position="center" caption="Receiving composite Jig" alt="Receiving  composite Jig"}
 :::
 
 :::VerticalSplitItem

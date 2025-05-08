@@ -8,18 +8,18 @@ updatedAt: Tue Nov 05 2024 13:36:50 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this section, you learn how to create a form with a two-column layout and three fields, and how to configure an action button on the form that will create the record in the [Dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>).&#x20;
+In this section, you learn how to create a form with a two-column layout and three fields, and how to configure an action button on the form that will create the record in the [Dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>).
 
 ## Steps
 
 ### Create the form jig to capture data
 
-1. Open the Hello-Jigx solution in Jigx Builder in VS Code,** right-click** on the jigs node in Explorer, and select **New file**.
-2. Name the file **new-customer.** The file opens and shows the Jigx's auto-complete popup listing the five jig types. Click on **Default** to open the skeleton YAML created by the Jigx Builder.&#x20;
-3. Give the jig a `title` called *Customers *and provide a description like *New customer form.*&#x20;
+1. Open the Hello-Jigx solution in Jigx Builder in VS Code, **right-click** on the jigs node in Explorer, and select **New file**.
+2. Name the file **new-customer.** The file opens and shows the Jigx's auto-complete popup listing the five jig types. Click on **Default** to open the skeleton YAML created by the Jigx Builder.
+3. Give the jig a `title` called *Customers* and provide a description like *New customer form*.
 4. Add `icon: person` under the description line. This icon displays on the widget on the Home Hub .
 5. You can delete this jig's header, onFocus, and datasource lines.
-6. The controls displayed on the jig are defined under the `children` node on a default    jig. All the input controls are placed on a `form component`. A control is uniquely identified by its `instanceId`. They are added as children of a `field-row component` to display two controls next to each other. A `text-field component` is used to capture text information on a form, and the `email field component` is used to capture email addresses. Under the `children:` node, add these fields as shown below to capture the customer's first and last name and email address:&#x20;
+6. The controls displayed on the jig are defined under the `children` node on a default jig. All the input controls are placed on a `form component`. A control is uniquely identified by its `instanceId`. They are added as children of a `field-row component` to display two controls next to each other. A `text-field component` is used to capture text information on a form, and the `email field component` is used to capture email addresses. Under the `children:` node, add these fields as shown below to capture the customer's first and last name and email address:
 
 :::CodeblockTabs
 YAML
@@ -68,10 +68,9 @@ actions:
 ```
 :::
 
-2\. After the record is created you want to navigate back to the Home Hub, add the
-&#x20;`onSuccess:
-type: action.go-back` action to the bottom of the actions node.&#x20;
-3\. With Dynamic Data you need to add the reference to the table in the database. In the databases node click on the *default.jigx *file. Type `customers: null` under `tables:` as shown below.
+2\. After the record is created you want to navigate back to the Home Hub, add the `onSuccess:
+type: action.go-back` action to the bottom of the actions node.
+3\. With Dynamic Data you need to add the reference to the table in the database. In the databases node click on the *default.jigx* file. Type `customers: null` under `tables:` as shown below.
 
 :::CodeblockTabs
 default.jigx

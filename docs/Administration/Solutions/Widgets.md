@@ -15,11 +15,11 @@ Widgets are a great way to inform users about the most important data and action
 
 ::::VerticalSplit{layout}
 :::VerticalSplitItem
-::Image[]{alt="Widgets permissions set for Finance" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/t0pg111f7WjdzPi6IBGxJ_jm-financewidget.PNG" size="84" width="1240" height="2500" caption="Widgets permissions set for Finance" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/t0pg111f7WjdzPi6IBGxJ_jm-financewidget.PNG"}
+::Image[]{alt="Widgets permissions set for Finance" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/t0pg111f7WjdzPi6IBGxJ_jm-financewidget.PNG" size="84" caption="Widgets permissions set for Finance" position="center" }
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Widgets permissions set for Manager" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bFqKXjGtBErJ3Gi1wYLOv_jm-managerwidget.PNG" size="84" width="1240" height="2500" caption="Widgets permissions set for Manager" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bFqKXjGtBErJ3Gi1wYLOv_jm-managerwidget.PNG"}
+::Image[]{alt="Widgets permissions set for Manager" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bFqKXjGtBErJ3Gi1wYLOv_jm-managerwidget.PNG" size="84" caption="Widgets permissions set for Manager" position="center"}
 :::
 ::::
 

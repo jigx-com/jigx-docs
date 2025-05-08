@@ -26,7 +26,7 @@ To complete these steps, you must be an **Owner or Creator of the solution** in 
 11. To allow a user to **switch accounts** when they are prompted during the OAuth loop, **expand the Options section** and replace the \{} with the following: \{"additionalParameters": \{"prompt": "select\_account"}}.
 The **completed configuration** should be as follows:
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FeMtP0NvdY1s70--W2mnA_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FeMtP0NvdY1s70--W2mnA_image.png" size="40" width="878" height="1934" position="center" caption="Credentials" alt="Credentials"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FeMtP0NvdY1s70--W2mnA_image.png" size="40" position="center" caption="Credentials" alt="Credentials"}
 
 12. Click on **Save** to store the credential.
 

@@ -190,7 +190,7 @@ dependencies:
 ::::
 
 :::VerticalSplitItem
-::Image[]{alt="Out of date app screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png" size="80" width="1570" height="2932" caption="Out of date app screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png"}
+::Image[]{alt="Out of date app screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png" size="80" caption="Out of date app screen" position="center"}
 :::
 :::::
 

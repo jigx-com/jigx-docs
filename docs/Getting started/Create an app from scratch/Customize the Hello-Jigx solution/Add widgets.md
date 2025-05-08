@@ -12,21 +12,21 @@ Widgets can be customized in many ways to reflect the styling and functionality 
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Hello Jigx solution with location icon" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" size="52" width="1240" height="2500" caption="Hello Jigx solution with location icon" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ge3Gr2xv6mf9YUrQZ1bzW_locationdark.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" darkHeight="2500"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" size="52" caption="Hello Jigx solution with location icon" alt="Hello Jigx solution with location icon"}
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Widget location & " src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" size="52" width="1240" height="2500" caption="Widget location & image" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jnhGxdpOQgsMVJZhBQ-i7_widgetscustomd.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" darkHeight="2500"}
+::Image[]{ src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" size="52" caption="Widget location & image" alt="Widget location & "}
 :::
 ::::
 
 ### Steps
 
-### Add a widget to a jig&#x20;
+### Add a widget to a jig
 
 1. Open the Hello-Jigx solution in Jigx Builder in VS Code, and click on the map.jigx file.
 2. Delete the `icon: location` entry.
-3. Add the `widget.location` code below. For the address you use [expressions](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to call the city New York from the static datasource .&#x20;
+3. Add the `widget.location` code below. For the address you use [expressions](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to call the city New York from the static datasource.
 
 :::hint{type="info"}
 Expressions are JSONata language-based. Learn more about <a href="https://jsonata.org/" target="_blank">JSONata</a> and try out your expressions in their <a href="https://try.jsonata.org/" target="_blank">JSONata Exerciser</a>. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.

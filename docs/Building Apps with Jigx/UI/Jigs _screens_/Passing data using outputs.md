@@ -9,7 +9,7 @@ Often, you need to transfer or pass data between jigs to provide context and dat
 
 ## Outputs
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" size="74" width="356" height="308" position="center" caption="Output and inputs " alt="Output and inputs "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" size="74" position="center" caption="Output and inputs " alt="Output and inputs "}
 
 Outputs are configured in a jig and are then used as an input in a composite jig to pass data between the jigs in the composite jig. This configuration is suitable for creating master detail screens, clicking on a component in one jig, populates the components and data in the next screen. Passing data values between jigs works both ways.
 
@@ -50,7 +50,7 @@ In the receiving [jig.composite]() configure the input for the data. Example:
 
 In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the *List of available services *the *service details* for that specific service populates.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" width="648" height="1300" position="center" caption="Passing data using outputs" alt="Passing data using outputs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" position="center" caption="Passing data using outputs" alt="Passing data using outputs"}
 
 **Output Jig - available services**
 
@@ -61,7 +61,7 @@ Create a horizontal `jig.list` to show the available services with a `leftElemen
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx_outputjig.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx_outputjig.PNG" size="64" width="1240" height="2500" position="center" caption="Available services list" alt="Available services list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx_outputjig.PNG" size="64" position="center" caption="Available services list" alt="Available services list"}
 :::
 ::::
 
@@ -157,7 +157,7 @@ options:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo_input-jig.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo_input-jig.PNG" size="64" width="1240" height="2500" position="center" caption="Service detail jig" alt="Service detail jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo_input-jig.PNG" size="64" position="center" caption="Service detail jig" alt="Service detail jig"}
 :::
 
 :::VerticalSplitItem

@@ -12,9 +12,9 @@ Access to the solution is managed on the **Permissions** tab. Here, you can give
 
 ## Adding Users
 
-1. Click on **Add Users** in the top-right of the screen to see a list of users from the organization's global user list. [Users](./../Users.md) that don't have access to the solution will not appear in the list.&#x20;
+1. Click on **Add Users** in the top-right of the screen to see a list of users from the organization's global user list. [Users](./../Users.md) that don't have access to the solution will not appear in the list.
 2. Select the users you want to give access to.
-3. Click** Apply.**
+3. Click **Apply**.
 
 ## Removing Users
 
@@ -22,20 +22,20 @@ To remove user's access to the solution:
 
 1. Click on the **Remove** link in the last column next to the user you want to remove.
 2. Click the red **Remove selected users** button in the top-right of the screen.
-3. Click **Ok** to the message.&#x20;
+3. Click **Ok** to the message.
 4. The user is removed from the list and no longer has access to the solution. The user will only be removed from the solution, but remains a user in the organization's global user list.
 
 Bulk remove users by selecting multiple users, then click the red **Remove selected users** button at the top-right of the screen.
 
 :::hint{type="danger"}
-If you are using the **Everyone** `Organization Group` for [Widgets](./Widgets.md), the removed user will still have access to certain widgets although solution access has been removed for that user.&#x20;
+If you are using the **Everyone** `Organization Group` for [Widgets](./Widgets.md), the removed user will still have access to certain widgets although solution access has been removed for that user.
 :::
 
 ## Changing the User Role
 
 By default a new user of the solution will be assigned to the `USER` role. See [Permissions - User Roles](<./../Permissions - User Roles.md>) to learn more about the different roles. Role assignments are instantly reflected for the user. You can elevate a role by:
 
-1. Clicking on the **User** link in the **Role** column.&#x20;
+1. Clicking on the **User** link in the **Role** column.
 2. Select the new role to assign  to the user. If you want to disable access for a user temporarily, select `DENY`.
 
 :::hint{type="info"}

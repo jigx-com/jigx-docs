@@ -32,11 +32,11 @@ Under `children:` you add the components you want to customize. Invoke **Intelli
 
 Between `options:` and `children:` you can add predefined styling elements depending on the component selected. The components that allow customization are [Card (Alpha)](), [View (Alpha)](), [Text (Alpha)](), [Icon (Alpha)](), and [Button (Alpha)](). Use **IntelliSense** to view the available list.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" size="70" width="1120" height="542" position="center" caption="Card Styling options" alt="Card Styling options"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" size="70" position="center" caption="Card Styling options" alt="Card Styling options"}
 
 For `component.view` the `options:` followed by `style:` are required before `children:`. All available styling elements are listed under the `style:` property using **IntelliSense**.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" size="70" width="1162" height="794" position="center" caption="View styling options" alt="View styling options"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" size="70" position="center" caption="View styling options" alt="View styling options"}
 
 ## Using custom component files in jigs
 

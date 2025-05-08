@@ -42,7 +42,7 @@ In Jigx Management under [Solution Settings](<./../../Administration/Solutions/S
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BqDiVPonlfhAP6DK4fhVP_m-sourcecodedetails.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BqDiVPonlfhAP6DK4fhVP_m-sourcecodedetails.png" size="76" width="1190" height="970" position="center" caption="Sourcecode details" alt="Sourcecode details"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BqDiVPonlfhAP6DK4fhVP_m-sourcecodedetails.png" size="76" position="center" caption="Sourcecode details" alt="Sourcecode details"}
 
 
 :::

@@ -8,15 +8,15 @@ updatedAt: Tue Jun 18 2024 11:47:52 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this step, you will learn how to create a dedicated area on the Home Hub for content, such as news, announcements, videos, URLs, or images. The area is added using [stories](). You will create the story file using the `component.story-group` and a static datasource to reference two images with a title.&#x20;
+In this step, you will learn how to create a dedicated area on the Home Hub for content, such as news, announcements, videos, URLs, or images. The area is added using [stories](). You will create the story file using the `component.story-group` and a static datasource to reference two images with a title.
 
 ## Steps
 
 ### Create a datasource file for the story jig
 
 1. You need to add the data that the solution story jig can read from. For this step, you create a `Static Datasource` in the datasource folder of the project. The data specifies the description, title, and image for the story. **Right-click** on the datasources node in Explorer and select **New file**.
-2. Name the file **story-static. **The file opens and shows the Jigx's auto-complete popup listing the datasource types. Click on **Static datasource** to open the skeleton YAML created by the Jigx Builder.&#x20;
-3. You will add an `image`, `titles`, `thumbnails`, and `descriptions` as the data for displaying the story jig. &#x20;
+2. Name the file **story-static**. The file opens and shows the Jigx's auto-complete popup listing the datasource types. Click on **Static datasource** to open the skeleton YAML created by the Jigx Builder.
+3. You will add an `image`, `titles`, `thumbnails`, and `descriptions` as the data for displaying the story jig.
 4. See the sample datasource code below for adding the image details for the story jig to display. Save the project.
 
 :::CodeblockTabs
@@ -41,7 +41,7 @@ options:
 
 1. Open the Hello- Jigx solution in the Jigx Builder in VS Code, right-click on the jigs node in Explorer, and select New file.
 2. Name the file **solution-story**. The file opens and shows the Jigx's auto-complete popup listing the five jig types. Click on **Default** to open the skeleton YAML created by the Jigx Builder
-3. &#x20;Give the jig a title called *My customer story* and provide a description like *Customer story*.&#x20;
+3. &#x20;Give the jig a title called *My customer story* and provide a description like *Customer story*.
 4. For this jig you can delete the `header` ,  `onFocus`, and `datasource` lines.
 5. For the container to display the story add an `entity component` with an `entity field` as shown in the code below:
 
@@ -63,7 +63,7 @@ children:
 6\. Now you can add the story that will be displayed in the dedicated area at the top of the Home Hub. Under the children node type `stories:`, the auto selection pops up, select stories to open the skeleton YAML . Under data add an expression to reference the data from the story-static.jigx datasource file. Add `data: =@ctx.datasources.story-static`. You can add a `groupName:` that displays on the story. You can add your own or use *My work day.*
 
 7\. Under `Item:` you need to define the item type, in this solution, add the `component: image` type as the datasource is an image. Add the title field by adding the following expression to reference the title from the datasource file `title: =@ctx.current.item.title`. Add a `subtitle: =@ctx.current.item.description`. Add the source of the image by using an expression  `source:`  `uri: =@ctx.current.item.image`. Lastly, add the following to open a web site when the story is pressed.
-`onPress:`&#x20;
+`onPress:`
 &#x20;        `  type: action.open-url
           options:
             title: Read More
@@ -95,7 +95,7 @@ stories:
 ```
 :::
 
-9\. Your solution-story.jigx file should resemble the code below.&#x20;
+9\. Your solution-story.jigx file should resemble the code below.
 
 :::CodeblockTabs
 solution-story.jigx

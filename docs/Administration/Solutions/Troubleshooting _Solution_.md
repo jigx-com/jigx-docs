@@ -28,8 +28,7 @@ Information that is logged is determined by the settings in the Jigx App. By def
 
 ## Configure logging on the Jigx App
 
-<!-- ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4_K6jIP4-pTjwgTKKW7_jm-troubleshooting.PNG" signedSrc size="62" width="2540" height="2500" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"} -->
-<img src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4_K6jIP4-pTjwgTKKW7_jm-troubleshooting.PNG" size="62" width="2540" height="2500" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting" />
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4_K6jIP4-pTjwgTKKW7_jm-troubleshooting.PNG" size="62" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"}
 
 To configure logging on the mobile device perform the following steps:
 

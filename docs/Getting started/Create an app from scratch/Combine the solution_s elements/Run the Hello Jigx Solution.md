@@ -14,9 +14,9 @@ With the final update to the Hello Jigx solution published on the server, you ar
 :::VerticalSplitItem
 ## Steps
 
-1. On your mobile device** tap** the Jigx app icon on your mobile device.&#x20;
-2. Sign into the app with your [Jigx account](<./../../Creating an account.md>) details**.**
-3. Notice the customer composite widget. Tap the widget to see the customer header, form, and list.&#x20;
+1. On your mobile device **tap** the Jigx app icon on your mobile device.
+2. Sign into the app with your [Jigx account](<./../../Creating an account.md>) details.
+3. Notice the customer composite widget. Tap the widget to see the customer header, form, and list.
 
 
 :::

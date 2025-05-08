@@ -7,7 +7,7 @@ updatedAt: Tue Apr 29 2025 10:45:23 GMT+0000 (Coordinated Universal Time)
 
 In Jigx we call screens in the app - jigs, there are different types of jigs depending on the type of layout you want in your app.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VFreypFnEuSOA39cW_MXk_jigscreen.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VFreypFnEuSOA39cW_MXk_jigscreen.png" size="74" width="700" height="531" position="center" caption="Jigs" alt="Jigs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VFreypFnEuSOA39cW_MXk_jigscreen.png" size="74" position="center" caption="Jigs" alt="Jigs"}
 
 ## Jig Types
 
@@ -71,7 +71,7 @@ There are two options available for joining jigs which depend on your requiremen
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UYCvRaQpB09FwaO8axUHI_compositejigs.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UYCvRaQpB09FwaO8axUHI_compositejigs.PNG" size="80" width="1240" height="2500" position="center" caption="Four jigs combined into one" alt="Four jigs combined into one"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UYCvRaQpB09FwaO8axUHI_compositejigs.PNG" size="80" position="center" caption="Four jigs combined into one" alt="Four jigs combined into one"}
 :::
 
 :::VerticalSplitItem
@@ -103,11 +103,11 @@ children:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 - Add the `widgets` property to a jig. Configure the `size` and `jigId` for all the jigs you want to navigate to from the current jig.
-- The order of the `jigIds` configured in the YAML determines the order in which the widgets appear in the jig.&#x20;
+- The order of the `jigIds` configured in the YAML determines the order in which the widgets appear in the jig.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MrflMb4FTKatNzKa0LJlK_customhub-widgets.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MrflMb4FTKatNzKa0LJlK_customhub-widgets.PNG" size="80" width="1240" height="2500" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MrflMb4FTKatNzKa0LJlK_customhub-widgets.PNG" size="80" position="center" caption}
 :::
 ::::
 

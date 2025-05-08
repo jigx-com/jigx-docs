@@ -6,7 +6,7 @@ createdAt: Sun Nov 20 2022 19:42:50 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 20 2024 06:54:05 GMT+0000 (Coordinated Universal Time)
 ---
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" size="74" width="1120" height="1616" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" size="74" position="center" }
 
 Key:
 
@@ -46,7 +46,7 @@ There are two options when using the `execute-entity` and `execute-entities` act
 
 ### Consideration
 
-- Using the `save` method in `execute-entity/entities` action will perform an upsert in the local SQLite table.&#x20;
+- Using the `save` method in `execute-entity/entities` action will perform an upsert in the local SQLite table.
 - Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](<./Offline remote data handling.md>) explains how to configure solutions to deal with data when the device is offline.
 
 ## Using local data provider in a jig's datasources

@@ -14,7 +14,7 @@ While creating your solution, you can configure certain UI components, jigs, and
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG" size="80" width="1240" height="2500" position="center" caption="List icons in a list" alt="List icons in a list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG"  size="80" position="center" caption="List icons in a list" alt="List icons in a list"}
 :::
 
 ::::VerticalSplitItem
@@ -36,7 +36,7 @@ type: component.list-item
 
 ### How do you add an icon?
 
-Icons can be used either in the YAML key position to select an icon, for example `icon: house`, or as the YAML value to determine that a property must use an icon, for example, in a `LeftElement: icon` property. IntelliSense propmts you and shows where the icon can be used in the YAML. &#x20;
+Icons can be used either in the YAML key position to select an icon, for example `icon: house`, or as the YAML value to determine that a property must use an icon, for example, in a `LeftElement: icon` property. IntelliSense propmts you and shows where the icon can be used in the YAML.
 
 **Examples**
 
@@ -76,7 +76,7 @@ summary:
 ::::
 :::::
 
-1. &#x20;Next to `icon:` start typing the first two letters of an icon name, for example al, this will open the list of icons starting with two letters.&#x20;
+1. &#x20;Next to `icon:` start typing the first two letters of an icon name, for example al, this will open the list of icons starting with two letters.
 2. A preview of the icon is shown in the right popup with a link to the icon in <a href="https://www.streamlinehq.com/icons/streamline-bold" target="_blank">streamline</a>.
 3. Use the up and down arrows on your keyboard to browse through the list with the preview showing.
 4. Once you have decided on an icon click Enter.
@@ -89,12 +89,12 @@ The list of available icons is extensive and is based off the icons in [https://
 
 ### Icon assets in solutions
 
-All icons used throughout a solution are automatically added to the **icon.jigx** file under the **assets** folder. This improves performance of the app and ensures that all icons are available when the mobile device is offline and the app is in use.&#x20;
+All icons used throughout a solution are automatically added to the **icon.jigx** file under the **assets** folder. This improves performance of the app and ensures that all icons are available when the mobile device is offline and the app is in use.
 
 The following applies to the asset list:
 
 - Each icon change detection automatically causes an update in the list in the icon.jigx file.
-- All icons from all jig files are added to the list, expect icons referenced or listed within datasources e.g., `=@ctx.datasources.ds.icon`. You can manually add these icons to the asset list in the icon.jigx file.&#x20;
+- All icons from all jig files are added to the list, expect icons referenced or listed within datasources e.g., `=@ctx.datasources.ds.icon`. You can manually add these icons to the asset list in the icon.jigx file.
 - Icons are added to the icon asset list automatically or you can manually add icons to the list.
   - Automatically generated icons are indicated by a comment `# auto-generated` after the icon name in the list.
   - Manually added icons do not have the comment added
@@ -107,5 +107,5 @@ Adding an `icon` property in an action* *only applies to `swipeable`, `secondary
 
 ### Can I add custom icons?
 
-The list of icons is not customizable, and you cannot add custom icons. If you are unable to find the icon you need, contact ****support\@jigx.com****.
+The list of icons is not customizable, and you cannot add custom icons. If you are unable to find the icon you need, contact **support\@jigx.com**.
 

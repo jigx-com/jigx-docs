@@ -8,7 +8,7 @@ updatedAt: Wed Mar 05 2025 09:49:19 GMT+0000 (Coordinated Universal Time)
 
 Jigx mobile app supports multiple languages, significantly enhancing its market presence, user engagement, and overall success by appealing to a broader and more diverse audience. The real power of the Jigx localization functionality lies in using a single jig that can have multiple translations associated with the jig, the app respects the language setting of the device and renders the jigin that language if the corresponding language file is found or defaults to English.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wkg2mDRfeBu2bwG4IXkyA_trans-dynamic.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wkg2mDRfeBu2bwG4IXkyA_trans-dynamic.PNG" size="78" width="2540" height="2500" position="center" caption="One jig in English & German" alt="One jig in English & German"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wkg2mDRfeBu2bwG4IXkyA_trans-dynamic.PNG" size="78" position="center" caption="One jig in English & German" alt="One jig in English & German"}
 
 ## How it works
 
@@ -18,8 +18,6 @@ In Jigx Builder every property that accepts string-based values, e.g., field lab
 Only one translation file per language is used, For example, de.jigx for German will hold all the `TextLocal` `id` values for all jigs in the solution that must be localized.
 :::
 
-
-
 ![IntelliSense for localized values](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xyxc4KbDVzIscSJVybsI5_screen-shot-2022-07-08-at-20926-pm.png "IntelliSense for localized values")
 
 ::::VerticalSplit{layout="middle"}
@@ -27,8 +25,7 @@ Only one translation file per language is used, For example, de.jigx for German 
 In the Jigx App under **Profile>Settings>Language** check that the setting **Device** is selected. This respects the settings of the device and if a matching language translation file is present in the solution the jig will show in that language.
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" size="80" width="1240" height="2500" position="center" caption="Language Settings" alt="Language Settings"}
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" size="80" position="center" caption="Language Settings" alt="Language Settings"}
 
 :::
 ::::
@@ -45,7 +42,7 @@ Adding dynamic values in localized jigs use **ICU message** definitions.
 Try it in the <a href="https://format-message.github.io/icu-message-format-for-translators/editor.html" target="_blank">Online ICU Message Editor </a> or see the <a href="https://unicode-org.github.io/icu/userguide/format_parse/messages/" target="_blank">ICU format messaging</a> documentation.
 :::
 
-### Static values - In the jig&#x20;
+### Static values - In the jig
 
 1. Invoke IntelliSense next to the property you want to translate.
 2. Select `TextLocale`

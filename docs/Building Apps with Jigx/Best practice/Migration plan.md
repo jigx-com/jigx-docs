@@ -14,11 +14,11 @@ The navigation menu at the bottom of the app will now display as a bar and inclu
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" width="1224" height="2466" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" width="1224" height="2466" position="center" caption="Existing solutions after update" alt="Existing solutions after update"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" position="center" caption="Existing solutions after update" alt="Existing solutions after update"}
 :::
 ::::
 
@@ -35,7 +35,7 @@ New solutions now offer greater versatility.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" width="1224" height="2466" position="center" caption="New solution layout " alt="New solution layout"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" position="center" caption="New solution layout " alt="New solution layout"}
 :::
 ::::
 
@@ -52,7 +52,7 @@ The table below outlines the areas impacted by the introduction of bottom tab na
 | N/A                                                          | `jig-grid` - a new jig type used to configure jigs and components in a grid layout.  See [jig.grid]() for more information.                                                                                                                                                                                                                                                                                                                                                                  |
 | `component.widgets`                                          | `grid` and `grid-item` component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See [grid]() and [grid-item]() for more information.                                                                                                                                                                                                                                                                                  |
 | User profile                                                 | User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.                                                                                                                                                                                                                                                                                                                                                                |
-| Solutions (Home)                                             | Solution switching has moved into the user profile screen. A *switch* button opens the solution list for selection.<br />::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NGrWw9SMNv_vpn6k1f6rE-20250130-102419.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NGrWw9SMNv_vpn6k1f6rE-20250130-102419.png" size="44" width="1224" height="2466" position="center" caption="Switch solutions" alt="Switch solutions"} |
+| Solutions (Home)                                             | Solution switching has moved into the user profile screen. A *switch* button opens the solution list for selection.<br />::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NGrWw9SMNv_vpn6k1f6rE-20250130-102419.png" size="44" position="center" caption="Switch solutions" alt="Switch solutions"} |
 | `component.location`                                         | The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Migration steps

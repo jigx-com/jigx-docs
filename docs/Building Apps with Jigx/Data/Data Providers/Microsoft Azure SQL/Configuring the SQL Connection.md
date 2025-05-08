@@ -21,15 +21,15 @@ Following these steps to configure a new Azure SQL connection for the solution i
 1. Sign in to Jigx management at <a href="https://manage.jigx.com" target="_blank">https\://manage.jigx.com</a> and navigate to the solution being configured.
 2. Click on the **Connections** menu option on the left of the solution screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wcL-jZnv7HBqcJvoiILMQ_az-addconnection.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wcL-jZnv7HBqcJvoiILMQ_az-addconnection.png" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wHQTUOsz5LTb-sUtfEsr4_az-addconnection.png" size="66" width="1666" height="804" darkWidth="1666" darkHeight="804" position="center" caption="Connections in Jigx Management" alt="Connections in Jigx Management"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wcL-jZnv7HBqcJvoiILMQ_az-addconnection.png" size="66" position="center" caption="Connections in Jigx Management" alt="Connections in Jigx Management"}
 
 3\. Click **Add Connection** on the top right of the Connections screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XtnVR4Befd3rXAy_lRR6v_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XtnVR4Befd3rXAy_lRR6v_image.png" size="56" width="1046" height="664" position="center" caption="Add a new connection" alt="Add a new connection"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XtnVR4Befd3rXAy_lRR6v_image.png" size="56" position="center" caption="Add a new connection" alt="Add a new connection"}
 
 4\. Enter the connection information for the new Azure SQL Connection.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ENtp0x8UdqB7Vq4ZMTjZM_az-connection.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ENtp0x8UdqB7Vq4ZMTjZM_az-connection.png" size="50" width="712" height="1332" position="center" caption="Azure SQL connection" alt="Azure SQL connection"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ENtp0x8UdqB7Vq4ZMTjZM_az-connection.png" size="50" position="center" caption="Azure SQL connection" alt="Azure SQL connection"}
 
 - In the **Name** field, enter your server's name, which will be the connection name Jigx functions will refer to when you create SQL functions. We recommend that this be the same as your SQL instance, for example, jigx1.database.windows.net.
 - In **Type** – Select Azure SQL for both Azure SQL and on-premise SQL Servers.
@@ -46,24 +46,20 @@ Following these steps to configure a new Azure SQL connection for the solution i
 These IP addresses will vary depending on the Jigx cloud region being used.
 :::
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CSDvejsKUcPUVMwJR4xmI_az-allowlist.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CSDvejsKUcPUVMwJR4xmI_az-allowlist.png" size="54" width="684" height="806" position="center" caption="Jigx IP address" alt="Jigx IP address"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CSDvejsKUcPUVMwJR4xmI_az-allowlist.png" size="54" position="center" caption="Jigx IP address" alt="Jigx IP address"}
 
 6\. Navigate to the administrative portal for the Azure SQL Server instance hosting the database used in the Jigx solution. Under the Security section, select **Networking**. Please refer to <a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/firewall-configure?view=azuresql" target="_blank">Azure SQL firewall connection documentation</a> for detailed instructions.
 
 
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-hTKyHRhP9hQ51Og4nbzg_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-hTKyHRhP9hQ51Og4nbzg_image.png" size="40" width="530" height="396" position="center" caption="Azure administrative portal" alt="Azure administrative portal"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-hTKyHRhP9hQ51Og4nbzg_image.png" size="40" width="530" caption="Azure administrative portal" alt="Azure administrative portal"}
 
 7\. Add the two Jigx IP addresses to the IP addresses allowlist for this Azure SQL instance.
-
-
 
 ![Adding IP addresses](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wA4LuzjcE8nP0_T6FGDZ4_image.png "Adding IP addresses")
 
 8\. In Jigx Management, click **Test connection**. If all the settings are configured correctly, the connection will succeed. Click **Save**.
 
-
-
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/80XX88URNJuz0lysoAich_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/80XX88URNJuz0lysoAich_image.png" size="46" width="891" height="455" position="center" caption="Testing SQL connection" alt="Testing SQL connection"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/80XX88URNJuz0lysoAich_image.png" size="46" position="center" caption="Testing SQL connection" alt="Testing SQL connection"}
 
 9\. The connection can now be used in your Jigx project to execute SQL queries or stored procedures to read and write data to Azure SQL.

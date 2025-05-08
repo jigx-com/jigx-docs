@@ -20,7 +20,7 @@ When a solution is published, the solution is automatically added to [Solutions]
 
 To publish the **entire** solution, follow the steps below:
 
-1. In VS Code click on the Jigx Builder** icon** in the left navigation bar.
+1. In VS Code click on the Jigx Builder **icon** in the left navigation bar.
 2. In the Jigx Explorer hover over the solution node till you see the **publish icon (rocket)**.
    ![Publish icon ](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x6oL1j00INlbD0HMcaF2U_jb-publish.png "Publish icon")
 3. Click on the icon to start the publishing process.

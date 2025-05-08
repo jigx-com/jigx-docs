@@ -19,7 +19,7 @@ This feature is currently in its **Alpha **stage of development.
 
 Custom components in Jigx extend the standard set of components, offering enhanced UI capabilities and features that allow you to create tailored solutions to meet your unique requirements and differentiate your apps. These components can improve the visual presentation and interaction within your Jigx App, and include custom elements like cards, views, buttons, icons, and text. Customization is made possible through CSS property options, with predefined code snippets providing limited variations. One significant advantage of creating custom components is their reusability across multiple Jigx files within a project.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6RShOWiXiqvk27k3aM_Oq_cc-introlight.PNG" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6RShOWiXiqvk27k3aM_Oq_cc-introlight.PNG" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hhBMydsTIyzKopRlRQbqh_cc-introdark.PNG" size="44" width="1240" height="2500" darkWidth="1240" darkHeight="2500" position="center" caption="Custom Components" alt="Custom Components"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6RShOWiXiqvk27k3aM_Oq_cc-introlight.PNG" size="44" position="center" caption="Custom Components" alt="Custom Components"}
 
 ## Why and when to use custom components
 
@@ -33,10 +33,10 @@ It is important to know when to create custom components versus using the standa
 
 The `component.card` and `component.view` form the base of custom components by creating the containers in which other components can be added. It is important to understand the layout concepts of each before you create the component.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nOnkaI6xbAHh9sT6t9hqR-20241112-154514.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nOnkaI6xbAHh9sT6t9hqR-20241112-154514.gif" size="54" width="1248" height="1428" position="center" caption="Layout" alt="Layout"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nOnkaI6xbAHh9sT6t9hqR-20241112-154514.gif" size="54" position="center" caption="Layout" alt="Layout"}
 
 ### Card
-The `component.card` is a wrapper that contains predefined options, such as shadow, corner radius,  inner padding, emphasis, color, and direction (that allows for defining rows and columns). We allow you to define the values for the color, and direction properties, the other properties are preset and cannot be changed. Inside the `component.card` you can place other standard components as well as other custom components. The list of properties and examples are available in [Card (Alpha)]().&#x20;
+The `component.card` is a wrapper that contains predefined options, such as shadow, corner radius,  inner padding, emphasis, color, and direction (that allows for defining rows and columns). We allow you to define the values for the color, and direction properties, the other properties are preset and cannot be changed. Inside the `component.card` you can place other standard components as well as other custom components. The list of properties and examples are available in [Card (Alpha)]().
 
 ![Basic colored card with components](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-PnlxTP5Ml3rCqZoug2KsK-20241119-121514.png "Basic colored card with components")
 

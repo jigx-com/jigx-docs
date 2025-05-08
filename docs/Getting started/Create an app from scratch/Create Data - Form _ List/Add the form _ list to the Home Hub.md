@@ -8,15 +8,14 @@ updatedAt: Fri Feb 21 2025 14:33:42 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this step, you will add the new customer form and the customer list widgets to the Home Hub of the Jigx mobile app.&#x20;
+In this step, you will add the new customer form and the customer list widgets to the Home Hub of the Jigx mobile app.
 
 # Steps
 
 ### Add jigIds to index.jigx file
 
 1. Click on the `index.jigx` file to add the new customer form and list jigs to appear on the Home Hub screen under the `home` and `calendar` tabs.  The `jigId` is used to reference the form and list jig that will be displayed, and **save** the project.&#x20;
-2. Your index.jigx file should resemble the code below.&#x20;
-
+2. Your index.jigx file should resemble the code below.
 :::CodeblockTabs
 index.jigx
 

@@ -31,7 +31,7 @@ First step in creating Dynamic Data for a solution is to create the tables that 
 
 - If *default.jigx* does not exist, simply use the file / new capability to add a new file called *default.jigx* and place it within a folder called databases as per the VS Code folder layout shown in the image at the top of this page.
 - If you remove a table in the default.jigx file and publish the solution, the table becomes *unused* in the solution. To include the table and it's records again in the solution, simply add the table back to the default.jigx file and republish the solution.
-- A table must be *unused* before you can [delete ](<./Deleting tables.md>) the entire table.&#x20;
+- A table must be *unused* before you can [delete ](<./Deleting tables.md>) the entire table.
 
 ### Examples and code snippets
 

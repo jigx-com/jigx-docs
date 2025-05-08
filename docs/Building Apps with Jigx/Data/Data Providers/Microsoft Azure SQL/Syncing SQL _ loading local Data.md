@@ -6,7 +6,7 @@ createdAt: Sun Nov 20 2022 19:42:50 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 20 2024 06:53:49 GMT+0000 (Coordinated Universal Time)
 ---
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" size="74" width="1120" height="1616" position="center" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" size="74" position="center" }
 
 Key:
 

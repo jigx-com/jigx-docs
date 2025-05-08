@@ -25,7 +25,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
 |                     | index.jigx           | The index.jigx file is the app's home screen. It uses bottom tabs to determine the layout. See [Home Hub](<./../UI/Home Hub.md>) and [Index settings](<./../UI/Home Hub/Index settings.md>) for more information.                                                                                                     |
 | scripts/expressions |                      | Create .js files to define your [JavaScript functions]() that can be used in [expressions](./../Logic/Expressions.md).                                                                                                                                                                                                |
 
-## &#x20;IntelliSense&#x20;
+## IntelliSense
 
 To invoke IntelliSense, simultaneously press the control and spacebar (ctrl+space) keys. The code popup displays only valid options in the current cursor context. Selecting an option from the IntelliSense menu will load the code snippet with the necessary properties for that option.
 

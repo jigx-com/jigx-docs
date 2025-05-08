@@ -6,17 +6,17 @@ createdAt: Tue Jun 07 2022 10:00:03 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:18:00 GMT+0000 (Coordinated Universal Time)
 ---
 
-Users who have access to a solution can be assigned to *Groups* within the scope of that solution. *Groups* can then be used to toggle the visibility of [Widgets](./Widgets.md).&#x20;
+Users who have access to a solution can be assigned to *Groups* within the scope of that solution. *Groups* can then be used to toggle the visibility of [Widgets](./Widgets.md).
 
 For example, a CRM app configured with two Groups: Managers and *Employees*. Managers should have access to widgets that display metrics about all sales opportunities across all employees and employees should only have access to see widgets with information about their own sales opportunities.
 
 ::::VerticalSplit{layout}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gHO03QqpV_4D0YI6LyH1E_widgets1iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gHO03QqpV_4D0YI6LyH1E_widgets1iphone13blueportrait.png" size="70" width="1570" height="2932" position="center" caption="Manager View" alt="Manager View"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gHO03QqpV_4D0YI6LyH1E_widgets1iphone13blueportrait.png" size="70" position="center" caption="Manager View" alt="Manager View"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nfgVL47qAYwdBTgOvyKll_groups2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nfgVL47qAYwdBTgOvyKll_groups2iphone13blueportrait.png" size="70" width="1570" height="2932" position="center" caption="Employee View" alt="Employee View"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nfgVL47qAYwdBTgOvyKll_groups2iphone13blueportrait.png" size="70" position="center" caption="Employee View" alt="Employee View"}
 :::
 ::::
 
@@ -35,7 +35,7 @@ The new group is displayed in the list. Next you need to add users to your group
 
 ## Removing Groups
 
-In the event that you want to remove a group from the solution, click the **remove** link next to the group in the Groups list and click **Ok** to the remove message.&#x20;
+In the event that you want to remove a group from the solution, click the **remove** link next to the group in the Groups list and click **Ok** to the remove message.
 
 You can remove groups but keep in mind that [Widgets](./Widgets.md) that had these groups assigned previously will be hidden to users in the removed groups.
 
@@ -52,10 +52,10 @@ Each group requires members. The members must have access to the solution to be 
 
 ## Removing Users from Groups
 
-Users can be removed from group membership. For example, a user changes positions in your organization and nolonger is a manager. &#x20;
+Users can be removed from group membership. For example, a user changes positions in your organization and nolonger is a manager.
 
 1. Click on the group name in the list.
-2. On the** Permissions **screen, select the checkbox of the user to be removed from the group.
+2. On the **Permissions** screen, select the checkbox of the user to be removed from the group.
 3. Click on the **Remove** link and click **Ok** to the remove message.
 
 

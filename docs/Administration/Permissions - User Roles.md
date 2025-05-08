@@ -15,7 +15,7 @@ If you do not see the tabs described in this section of the Jigx Management docu
 
 To be able to log into Jigx Management you have to be an `admin`, `Owner`, or `Creator`. Organization roles are set in the [User Profile](./Users.md).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" size="60" width="1078" height="1350" position="center" caption="Assign organizational permissions" alt="Assign organizational permissions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" position="center" caption="Assign organizational permissions" alt="Assign organizational permissions"}
 
 | **ACCESS**                                        | **OWNER**                       | **ADMIN**                       | **CREATOR**                    |
 | ------------------------------------------------- | ------------------------------- | ------------------------------- | ------------------------------ |

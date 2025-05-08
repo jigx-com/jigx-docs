@@ -11,16 +11,16 @@ updatedAt: Wed Nov 01 2023 06:56:50 GMT+0000 (Coordinated Universal Time)
 You can easily customize widgets on the Home Hub by changing their icons and adding additional components such as badges to the widgets. In this section, you learn to change the calendar icon and add a badge [using an expression](<./../../../Building Apps with Jigx/Logic/Expressions.md>) on the calendar jig to show the number of calendar events for the week.
 
 :::hint{type="info"}
-For a view of the icons in a list see the *Types - List - List with all icons* in the *jigx-samples solution *available in <a href="https://manage.jigx.com/quickstart" target="_blank">Quick start</a>.
+For a view of the icons in a list see the *Types - List - List with all icons* in the *jigx-samples solution* available in <a href="https://manage.jigx.com/quickstart" target="_blank">Quick start</a>.
 :::
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Solution with Calendar -3 icon" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe_widgetloclight.PNG" size="62" width="1240" height="2500" caption="Solution with Calendar -3 icon" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RBKJxIdhktV4ERKmoU-6K_widgetlocdark.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe_widgetloclight.PNG" darkHeight="2500"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe_widgetloclight.PNG" size="62" caption="Solution with Calendar -3 icon" position="center" alt="Solution with Calendar -3 icon"}
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Solution with calendar badge" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TjmDI17-njZImLC9Ix51n_calenderbadgel.PNG" size="62" width="1240" height="2500" caption="Solution with calendar badge" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8xEDd_1_ywXz3GRqDXemB_calendarbadged.PNG" position="center" darkWidth="1240" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TjmDI17-njZImLC9Ix51n_calenderbadgel.PNG" darkHeight="2500"}
+::Image[]{alt="Solution with calendar badge" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TjmDI17-njZImLC9Ix51n_calenderbadgel.PNG" size="62"  caption="Solution with calendar badge"}
 :::
 ::::
 
@@ -29,11 +29,11 @@ For a view of the icons in a list see the *Types - List - List with all icons* i
 ### Change an widget icon
 
 1. Open the Hello-Jigx solution in Jigx Builder in VS Code, click on the calendar.jigx file.
-2. &#x20; Replace `icon: calendar-3` with  `icon: calendar`.
+2. Replace `icon: calendar-3` with  `icon: calendar`.
 
 ### Add a badge to the calendar widget
 
-1. Under icon add a new line for the badge code that shows the number of calendar events for the week. Add `badge:` Then use the `=$count(@ctx.datasources.calendar-data.id)` [expression](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to count the events in the calendar and show the number in the badge on the Home Hub.&#x20;
+1. Under icon add a new line for the badge code that shows the number of calendar events for the week. Add `badge:` Then use the `=$count(@ctx.datasources.calendar-data.id)` [expression](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to count the events in the calendar and show the number in the badge on the Home Hub.
 
 :::hint{type="info"}
 Expressions are JSONata language-based. Learn more about <a href="https://jsonata.org/" target="_blank">JSONata</a> and try out your expressions in their <a href="https://try.jsonata.org/" target="_blank">JSONata Exerciser</a>. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
@@ -72,5 +72,5 @@ item:
 :::
 
 4\. **Save** and **publish** the Hello-Jigx solution.
-5\.  **Run** the Hello-Jigx solution on your mobile device to see the change to the calendar icon and see the badge displaying 3 events for the week on the Home Hub.
+5\. **Run** the Hello-Jigx solution on your mobile device to see the change to the calendar icon and see the badge displaying 3 events for the week on the Home Hub.
 

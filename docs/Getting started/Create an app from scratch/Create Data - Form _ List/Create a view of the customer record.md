@@ -8,15 +8,15 @@ updatedAt: Tue Oct 31 2023 13:36:45 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this section, you learn how to create a view using the [entity-field]() component to display the data returned from the [Dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>). Add an action to go to a form that allows you to edit and [update a record](<./../../../Building Apps with Jigx/UI/Jigs _screens_/Forms/Updating a Record.md>).&#x20;
+In this section, you learn how to create a view using the [entity-field]() component to display the data returned from the [Dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>). Add an action to go to a form that allows you to edit and [update a record](<./../../../Building Apps with Jigx/UI/Jigs _screens_/Forms/Updating a Record.md>).
 
 ## Steps
 
-### Create a jig to view data&#x20;
+### Create a jig to view data
 
 1. Open the Hello-Jigx solution in Jigx Builder in VS Code,** right-click** on the jigs node in Explorer, and select **New file**.
-2. Name the file **view-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **Default** to open the skeleton YAML created by the Jigx Builder.    &#x20;
-3. Give your jig a `title` and `description`. &#x20;
+2. Name the file **view-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **Default** to open the skeleton YAML created by the Jigx Builder.
+3. Give your jig a `title` and `description`.
 4. Delete the `header` and `onfocus` nodes.
 5. Specify the SQLite Dynamic data provider,  the table, and the SQLite query needed to return the customer's details. Below is an example of the code you can use.
 
@@ -73,7 +73,7 @@ children:
 1. Once you can view the returned customer record, you want to be able to edit the record and save the changes to the SQLite Dynamic Data provider. Add the `action.go-to` that directs you to the edit form using the `custId` to reference the individual customer record. Use the code below to create the action button.
 
 :::CodeblockTabs
-YAML&#x20;
+YAML
 
 ```yaml
 actions:
@@ -151,6 +151,6 @@ actions:
 :::
 
 :::hint{type="warning"}
-The view-customer file will display in red and cannot be saved yet as it references the edit-customer file that you will be creating in the [Edit a customer record](<./Edit a customer record.md>) step. &#x20;
+The view-customer file will display in red and cannot be saved yet as it references the edit-customer file that you will be creating in the [Edit a customer record](<./Edit a customer record.md>) step.
 :::
 

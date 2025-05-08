@@ -10,11 +10,11 @@ Notifications are a powerful way to grab your user's attention. With Jigx, notif
 
 ::::VerticalSplit{layout}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7_notifications1iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7_notifications1iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="Push Notification" alt="Push Notification"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7_notifications1iphone13blueportrait.png" size="80" position="center" caption="Push Notification" alt="Push Notification"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO_notifications2iphone13blueportrait.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO_notifications2iphone13blueportrait.png" size="80" width="1570" height="2932" position="center" caption="In-App Notification" alt="In-App Notification"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO_notifications2iphone13blueportrait.png" size="80" position="center" caption="In-App Notification" alt="In-App Notification"}
 :::
 ::::
 
@@ -42,7 +42,7 @@ You can send notifications from within your solution to other users. There are t
 
 You can use the Jigx REST API to send notifications to other users within your organization.
 
-Add a function definition (*send-notification.jigx)* to the *functions* folder of your solution  Replace the \{organizationId} in the `url` with your organization's Id.
+Add a function definition (*send-notification.jigx*) to the *functions* folder of your solution  Replace the \{organizationId} in the `url` with your organization's Id.
 
 See the code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification.jigx" target="_blank">GitHub</a>.
 

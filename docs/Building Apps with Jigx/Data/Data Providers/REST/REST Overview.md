@@ -12,7 +12,7 @@ When a REST call returns data to Jigx, the processed JSON is inserted into a loc
 
 Functions definitions are stored in the functions folder in a Jigx project and are files that end in a .jigx file extension. When .jigx files are created in the functions folder, the Jigx Builder IntelliSense code completion is available using ctrl+spacebar. We recommend using this capability, as it provides all available code completion options relevant to Jigx functions.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NNVB3gwwO4O_G2s0Ib9bz_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NNVB3gwwO4O_G2s0Ib9bz_image.png" size="50" width="388" height="452" position="center" caption="Jigx's functions" alt="Jigx's functions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NNVB3gwwO4O_G2s0Ib9bz_image.png" size="50" position="center" caption="Jigx's functions" alt="Jigx's functions"}
 
 To add a new function, add a new file in the functions folder, the .jigx** **extension is automatically added for you. Function file names must be lowercase and may not contain special characters.  
 
@@ -59,11 +59,11 @@ The Swagger parser function allows you to convert Swagger, open API, and Postman
 
 Command to start the Swagger parser function is (command + shift + p): `Generate Jigx Functions`
 
-::Image[]{alt="Generate Jigx functions" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3w5L1xfQKuARjb7iXxnM6_screenshot-2023-04-17-at-114738.png" size="80" width="860" height="286" caption="Generate Jigx functions" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3w5L1xfQKuARjb7iXxnM6_screenshot-2023-04-17-at-114738.png"}
+::Image[]{alt="Generate Jigx functions" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3w5L1xfQKuARjb7iXxnM6_screenshot-2023-04-17-at-114738.png" size="80" caption="Generate Jigx functions" position="center"}
 
 Both remote and local files can be used, and only the JSON format is allowed.
 
-::Image[]{alt="File options" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XVL_-rsAbru_D9fsNA30M_screenshot-2023-04-17-at-114903.png" size="80" width="860" height="152" caption="File options" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XVL_-rsAbru_D9fsNA30M_screenshot-2023-04-17-at-114903.png"}
+::Image[]{alt="File options" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XVL_-rsAbru_D9fsNA30M_screenshot-2023-04-17-at-114903.png" size="80" caption="File options" position="center"}
 
 All files created by the Swagger parser function saves in your functions folder.
 
@@ -73,15 +73,12 @@ You can replace variables in your Postman collection, for example, replacing the
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Postman baseUrl" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/13v1W_81jbiOcqZwCtMk8_screenshot-2023-04-17-at-122510.png" size="90" width="688" height="332" caption="Postman baseUrl" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/13v1W_81jbiOcqZwCtMk8_screenshot-2023-04-17-at-122510.png"}
+::Image[]{alt="Postman baseUrl" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/13v1W_81jbiOcqZwCtMk8_screenshot-2023-04-17-at-122510.png" size="90" caption="Postman baseUrl" position="center"}
 
 
 :::
 
 :::VerticalSplitItem
-
-
-
 
 ![Replace variable function](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jcRr7_vDqaA4Pkd8aeFUw_screenshot-2023-04-17-at-121618.png "Replace variable function")
 
@@ -92,15 +89,13 @@ You can replace variables in your Postman collection, for example, replacing the
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 
-
 ![Value for variable replacement](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Jx7RPKg1Q6g5rkzbGjeCq_screenshot-2023-04-17-at-121720.png "Value for variable replacement")
 
 
 :::
 
 :::VerticalSplitItem
-::Image[]{alt="Replaced baseURL" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a3SBS0CgrYI7fT9rrFxVO_screenshot-2023-04-17-at-121751.png" size="90" width="444" height="362" caption="Replaced baseURL" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a3SBS0CgrYI7fT9rrFxVO_screenshot-2023-04-17-at-121751.png"}
-
+::Image[]{alt="Replaced baseURL" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a3SBS0CgrYI7fT9rrFxVO_screenshot-2023-04-17-at-121751.png" size="90" caption="Replaced baseURL" position="center"}
 
 :::
 ::::
@@ -303,7 +298,7 @@ The property should be passed as a parameter and be referenced in the `outputTra
 Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json\_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the REST call's `outputTransform` to the table.
 
 :::hint{type="info"}
-Pass the values you want to test as input parameters. In this example, minmag and maxmag. The property to test is **mag**. This property (**mag**)** **must appear in the `outputTransform`. Then set the range you are testing for in the input parameter (**minmag**) and (**maxmag**).&#x20;
+Pass the values you want to test as input parameters. In this example, minmag and maxmag. The property to test is **mag**. This property (**mag**) must appear in the `outputTransform`. Then set the range you are testing for in the input parameter (**minmag**) and (**maxmag**).
 :::
 
 ![forRowsInRange](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LrOy1JWzQmiy1wh5ksaO0_image.png "forRowsInRange")
@@ -313,13 +308,13 @@ Pass the values you want to test as input parameters. In this example, minmag an
 - You **cannot combine **`forRowsWithMatchingIds` with any other range or value check.
 :::
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rli3w3jBg74-gvIp406Qs_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rli3w3jBg74-gvIp406Qs_image.png" size="58" width="406" height="197" position="center" caption="Combined properties" alt="Combined properties"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rli3w3jBg74-gvIp406Qs_image.png" size="58" position="center" caption="Combined properties" alt="Combined properties"}
 
 ### forRowsWithMatchingIds
 
 Similar to `forRowsWithValue`, when `forRowsWithMatchingIds` is specified, Jigx will perform an upsert on a specific id. The `outputTransform` MUST contain a field called id. This id will be used to match the id column in the database; if a record with this id exists, it will be updated. If no match is found, the record will be inserted. No deletion is performed when `forRowsWithMatchingIds` is used.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/d_FG22nYk3RoQd0eEXs1i_image.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/d_FG22nYk3RoQd0eEXs1i_image.png" size="68" width="483" height="198" position="center" caption="forRowsWithMatchingIds" alt="forRowsWithMatchingIds"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/d_FG22nYk3RoQd0eEXs1i_image.png" size="68" position="center" caption="forRowsWithMatchingIds" alt="forRowsWithMatchingIds"}
 
 ### Summary
 

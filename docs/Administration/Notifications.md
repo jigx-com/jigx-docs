@@ -38,7 +38,7 @@ Create notifications in Jigx Managementby following the steps below:
 4. On the *Target a specific jig (optional)* tab, select the jigin a specific solution that will trigger the notification. This is an optional step. For example, if sales employees tap on your push notification, the mobile app will navigate directly to their list of all open opportunities.
 5. Set input parameters for the jig based on key/value pairs (e.g. accountID / 123456). The solution creator needs to ensure the input parameters are processed.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9QLHLp1ZBs9aMo88JKpFQ-20241002-112429.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9QLHLp1ZBs9aMo88JKpFQ-20241002-112429.png" darkSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9QLHLp1ZBs9aMo88JKpFQ-20241002-112429.png" size="94" width="1886" height="1486" darkWidth="1886" darkHeight="1486" position="center" caption="Configuring a notification" alt="Configuring a notification"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9QLHLp1ZBs9aMo88JKpFQ-20241002-112429.png" size="94" position="center" caption="Configuring a notification" alt="Configuring a notification"}
 
 ## Notification URL per region
 

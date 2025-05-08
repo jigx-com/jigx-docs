@@ -6,12 +6,12 @@ createdAt: Tue Apr 11 2023 11:38:07 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:21:29 GMT+0000 (Coordinated Universal Time)
 ---
 
-In the [Build your first Jigx solution]() steps, you have already built a map using the [jig.default](), added a calendar using the [jig.calendar](), added a new customer form using the [jig.default](), and a customer list using [jig.list]().&#x20;
+In the [Build your first Jigx solution]() steps, you have already built a map using the [jig.default](), added a calendar using the [jig.calendar](), added a new customer form using the [jig.default](), and a customer list using [jig.list]().
 
-Now you can expand the solution further by using the [jig.composite]() type to group the new customer  jig and the customer list jig into one jig, and add a jig header to the new customer jig.&#x20;
+Now you can expand the solution further by using the [jig.composite]() type to group the new customer  jig and the customer list jig into one jig, and add a jig header to the new customer jig.
 
 :::hint{type="success"}
-We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.&#x20;
+We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.
 :::
 
 ::::VerticalSplit{layout="middle"}
@@ -22,7 +22,7 @@ We recommend you build out all the solution steps for the [Create an app from sc
 2. [Add the customer composite jig](<./Combine the solution_s elements/Add the customer composite jig.md>) file that joins the new customer form and list into one jig using the new-customer and list-customer `jigIds` and add a `header` for the jig.
 3. [Edit the index.jigx file](<./Combine the solution_s elements/Edit the index_jigx file.md>), add the customer composite jigId, remove the new customer and the list customer jigIds.
 4. [Publish your project](<./Create the Calendar/Publish your project.md>).
-5. [Run the updated solution](<./Create the Calendar/Run the updated solution.md>) in the Jigx mobile app, click on each jig to view the solution, note on the customer jig the form, and list display in the same jig.&#x20;
+5. [Run the updated solution](<./Create the Calendar/Run the updated solution.md>) in the Jigx mobile app, click on each jig to view the solution, note on the customer jig the form, and list display in the same jig.
 :::
 
 :::VerticalSplitItem

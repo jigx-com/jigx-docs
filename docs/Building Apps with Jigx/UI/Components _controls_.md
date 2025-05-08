@@ -7,7 +7,7 @@ updatedAt: Wed Mar 19 2025 10:13:22 GMT+0000 (Coordinated Universal Time)
 
 Jigx comprises of UI elements known as components, which are an essential part of the app. These components can be in the form of images, avatars, forms, lists, progress bars, charts, and more. They are modular, customizable, and reusable, which ensures consistency and ease of use across the app. These components have predefined behaviors but can be customized to suit your specific requirements. Utilizing these components allows you to create visually appealing and interactive screens that enhance the overall user experience.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s1GDSrLC9kJ9N1FmhgN6q_componentoverview.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s1GDSrLC9kJ9N1FmhgN6q_componentoverview.png" size="82" width="1884" height="1048" position="center" caption="Components" alt="Components"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s1GDSrLC9kJ9N1FmhgN6q_componentoverview.png" size="82" position="center" caption="Components" alt="Components"}
 
 ## Considerations
 
@@ -46,9 +46,9 @@ Jigx comprises of UI elements known as components, which are an essential part o
 
 ## YAML structure for components
 
-In Jigx Builder the YAML format for a component is `type: component.avatar` and is configured at a specific level, and under a property depending on the jig type.&#x20;
+In Jigx Builder the YAML format for a component is `type: component.avatar` and is configured at a specific level, and under a property depending on the jig type.
 
-- In** default jigs** components are configured under the `children:` property.
+- In **default jigs** components are configured under the `children:` property.
 - In **full-screen jigs** components are configured under the `component:` property.
 - In **list** and **calendar jigs** components are configured under the `item:` property.
 
@@ -132,11 +132,11 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Each components YAML loads with the core required properties. Use IntelliSense under each components `options:` property to discover additional optional properties. These properties usually help with **styling**, **postioning** and **size**.&#x20;
+Each components YAML loads with the core required properties. Use IntelliSense under each components `options:` property to discover additional optional properties. These properties usually help with **styling**, **postioning** and **size**.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qjyoHnYWmeQMpjfAonABr_cc-options.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qjyoHnYWmeQMpjfAonABr_cc-options.png" size="72" width="560" height="512" position="center" caption="Optional properties" alt="Optional properties"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qjyoHnYWmeQMpjfAonABr_cc-options.png" size="72" position="center" caption="Optional properties" alt="Optional properties"}
 :::
 ::::
 
