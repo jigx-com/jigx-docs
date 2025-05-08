@@ -8,7 +8,7 @@ updatedAt: Wed Oct 02 2024 11:27:47 GMT+0000 (Coordinated Universal Time)
 
 Notifications are a powerful feature allowing you to engage with your users. With Jigx, notifications are delivered to your users as push notifications (OS-level) and in-app notifications (on the notifications tab). You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](<./../Building Apps with Jigx/Additional functionality/Notifications.md>). Notifications can be configured to send to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
 
-::Image[]{alt="In-app & push notifications" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC_jm-notifications.PNG" size="74" width="2540" height="2500" caption="In-app & push notifications" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC_jm-notifications.PNG"}
+::Image[]{alt="In-app & push notifications" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC_jm-notifications.PNG" size="74" caption="In-app & push notifications" position="center" }
 
 ![Notifications list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sy-ULx52L4IPdaraUQSkz_jm-notiflistl.png "Notifications list")
 

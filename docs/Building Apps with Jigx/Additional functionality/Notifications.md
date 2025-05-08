@@ -25,7 +25,7 @@ There are three different ways to create notifications:
 
 Read the documentation about [Notifications](./../../Administration/Notifications.md) in the Admininstration section to learn more about managing notifications using Jigx Management.
 
-![Notifications in Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JldIE0qNNgg_msKimWc3N_plukx9ok2o3vgpjzsqconbildschirmfoto-2022-06-10-um-165428.png "Notifications in Jigx Management")
+![Notifications in Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXXJldIE0qNNgg_msKimWc3N_plukx9ok2o3vgpjzsqconbildschirmfoto-2022-06-10-um-165428.png "Notifications in Jigx Management")
 :::
 
 ::::ExpandableHeading
@@ -44,7 +44,7 @@ You can use the Jigx REST API to send notifications to other users within your o
 
 Add a function definition (*send-notification.jigx*) to the *functions* folder of your solution  Replace the \{organizationId} in the `url` with your organization's Id.
 
-See the code sample in <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification.jigx" target="_blank">GitHub</a>.
+See the code sample in [GitHub]<("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification.jigx").
 
 :::CodeblockTabs
 send-notification.jigx
@@ -137,11 +137,11 @@ See [External push notifications (API)]() for more information and examples.
 
 For external systems that should send Jigx notifications you can use Webhooks provided by the Jigx platform.
 
-Reach out to the <a href="" target="_blank">Jigx Support</a> team to receive the technical details and security credentials for your organization to get started with Webhooks.
+Reach out to the *Jigx Support team* to receive the technical details and security credentials for your organization to get started with Webhooks.
 :::
 
 :::hint{type="info"}
-You can find the above examples in the <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/guide-notifications" target="_blank">*jigx-samples* app</a> on Github.
+You can find the above examples in the [jigx-samples app](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/guide-notifications) on Github.
 :::
 
 ## Examples and code snippets
