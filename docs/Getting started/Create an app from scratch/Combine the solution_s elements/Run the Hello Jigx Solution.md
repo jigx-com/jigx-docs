@@ -26,5 +26,5 @@ With the final update to the Hello Jigx solution published on the server, you ar
 :::
 ::::
 
-**Congratulations*** *you have successfully built your first functioning Jigx solution. Explore the solution by adding new customers or extend the solution by adding to the existing code by [customizing the solution](<./../Customize the Hello-Jigx solution.md>).
+**Congratulations** you have successfully built your first functioning Jigx solution. Explore the solution by adding new customers or extend the solution by adding to the existing code by [customizing the solution](<./../Customize the Hello-Jigx solution.md>).
 
