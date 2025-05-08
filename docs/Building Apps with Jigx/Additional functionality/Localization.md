@@ -23,7 +23,7 @@ Only one translation file per language is used, For example, de.jigx for German 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 In the Jigx App under **Profile>Settings>Language** check that the setting **Device** is selected. This respects the settings of the device and if a matching language translation file is present in the solution the jig will show in that language.
-
+:::
 :::VerticalSplitItem
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" size="80" position="center" caption="Language Settings" alt="Language Settings"}
 
