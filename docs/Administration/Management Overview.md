@@ -6,7 +6,7 @@ Jigx Management can be found at [https://manage.jigx.com](https://manage.jigx.co
 
 Your Jigx user account has to be in the ADMIN, OWNER, or CREATOR  on a organization role level to be able to log into the Jigx Management. The user who signed up for Jigx is the initial OWNER of the organization and can manage user roles in the [Users](./Users.md) section of the portal. You can assign roles to users in the [Users](./Users.md) section of Jigx Management. See [Permissions - User Roles](<./Permissions - User Roles.md>) to learn more about the different roles.
 
-![Log into Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O1IGT48ThIAeY1nnEcnAf_jm-logindark.png "Log into Jigx Management")
+![Log into Jigx Management](https://images.archbee.com/x7vdIDH6-ScTprfmi2XXX/04eGEsHDKX61nq8Y-lTbF_jm-login.png "Log into Jigx Management")
 
 ## Log out of the Jigx Management
 

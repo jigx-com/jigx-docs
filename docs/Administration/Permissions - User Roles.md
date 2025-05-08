@@ -10,6 +10,7 @@ Permissions on the Jigx platform are managed with **User Roles**. There are two 
 
 :::hint{type="info"}
 If you do not see the tabs described in this section of the Jigx Management documentation, check that you have the correct permissions as described below.
+:::
 
 ## Organization Roles
 
