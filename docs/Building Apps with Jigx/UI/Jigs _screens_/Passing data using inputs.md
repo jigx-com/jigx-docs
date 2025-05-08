@@ -30,9 +30,7 @@ You can define the following for inputs:
 | `required`     | - `true` - a value for the input is required<br />- `false` - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.    |
 | `type`         | `string` - input must be of type string, for example, Mary.  |
 |                | `object` - input must be an object with properties defined. <br />- The full object can be returned using `=@ctx.jig.inputs.object`<br />- Individual properties can be returned using `=@ctx.jig.inputs.object.property` |
-|                | `array` - input must be an array.<br />- The full array can be returned using `=@ctx.jig.inputs.array`<br />- Single elements in an array can be returned using `=@ctx.jig.inputs.array.element`<br />- Individual items in an array can be returned using `=@ctx.jig.inputs.array[1].element`<br />The YAML format for specifying the array can be one of the following:<br />- `array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]`
-<br />- `array:    - [John, Melany, Mel, 1234, true]`
-<br />- `array:    - John    - Melany    - Mel    - 1234    - true` |
+|                | `array` - input must be an array.<br />- The full array can be returned using `=@ctx.jig.inputs.array`<br />- Single elements in an array can be returned using `=@ctx.jig.inputs.array.element`<br />- Individual items in an array can be returned using `=@ctx.jig.inputs.array[1].element`<br />The YAML format for specifying the array can be one of the following:<br />- `array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]`<br />- `array:    - [John, Melany, Mel, 1234, true]`<br />- `array:    - John    - Melany    - Mel    - 1234    - true` |
 |                | `boolean` - input must be `true` or `false`.  |
 |                | `number` - input must be of type number, for example, 45 or 350.88.  |
 
