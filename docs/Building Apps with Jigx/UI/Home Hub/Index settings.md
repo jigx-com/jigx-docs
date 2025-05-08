@@ -33,13 +33,13 @@ description: A solution displaying all features and functions available in Jigx.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
 - Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
-| ### Core Structure | ****                                                                             |
+| **Core Structure** |                                                                           |
 | ------------------ | -------------------------------------------------------------------------------- |
 | `tabs`             | The top level property under which the various tabs are configured.              |
 | `icon`             | The icon to be shown on the navigation bar for the tab, for example a home icon. |
 | `jigId`            | The name/ unique identifier of the jig that will open when the tab is pressed.   |
 
-| ### Other options | ****                                                                                                                                                                                                             |
+| **Other options** |                                                                                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `badge`           | Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the `badge` property to the tabs section with an expression. |
 | `label`           | Give the tab a title. The title displays under the icon in the navigation bar.                                                                                                                                   |
