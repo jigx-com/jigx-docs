@@ -47,7 +47,7 @@ Set **Jigx Management idle timeout**- Set an *Idle logout* option for Jigx Manag
 
 The organization limits allow you as the organization's owner to view the number of members and solutions in the organization. In the Solution Limit template section set the number of members allowed on new solutions, then restrict the number of rows of data and files allowed per solution.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VCMpFrybgVQQK23Gj6Ve_-20241002-114414.png" size="90"position="center" }
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VCMpFrybgVQQK23Gj6Ve_-20241002-114414.png" }
 
 ## Public Content
 

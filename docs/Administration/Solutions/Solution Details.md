@@ -57,4 +57,3 @@ By default, the *Copy Solution* button is not visible. To enable this feature fo
 9. Once copied the new solution is displayed in the [Solutions](./../Solutions.md) list.
 10. For audit purposes the copied solution's details page will have a field displaying the solution GUID of the orginal solution.
 
-**

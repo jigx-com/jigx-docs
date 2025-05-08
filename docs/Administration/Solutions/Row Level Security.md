@@ -42,7 +42,7 @@ Valid Jigx user's email addresses and solution groups are used to define explic
 - Important - In a custom restriction data policy, if you add a group to `Members`, all users in that group can see all records in the table.
 - Data policies take precedence over authorized user settings. When setting both test to ensure you are getting the expected results.
 
-## Configuration&
+## Configuration
 
 ### In Jigx Management
 
