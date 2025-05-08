@@ -28,7 +28,7 @@ You can define the following for inputs:
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `default`      | Add a value that will display as the default if nothing is specified. This property is optional.    |
 | `required`     | - `true` - a value for the input is required
-- `false` - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.    |
+<br />- `false` - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.    |
 | `type`         | `string` - input must be of type string, for example, Mary.  |
 |                | `object` - input must be an object with properties defined. <br />- The full object can be returned using `=@ctx.jig.inputs.object`
 - Individual properties can be returned using `=@ctx.jig.inputs.object.property` |
