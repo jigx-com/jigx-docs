@@ -41,20 +41,16 @@ Avoid using state keywords, such as `component`, as `instanceId` values in expre
 
 | **Syntax**             | **Key**                    | **Area**                                                                                      |
 | ---------------------- | -------------------------- | --------------------------------------------------------------------------------------------- |
-| =@ctx.solution.state.  | activeItem&#xA;key&#xA;now | - Global variable used throughout a solution.
-- Your variable that can be set and read. |
+| =@ctx.solution.state.  | activeItem&#xA;key&#xA;now | - Global variable used throughout a solution.<br />- Your variable that can be set and read. |
 
 ### Component (local) State
 
 | **Syntax**                                                         | **Key**                                                                                                                                                         | **Area**                                                                                                                                                                                      |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| =@ctx.jig.state.                                                   | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value  | - Applies to a list jig.
-- The creator configures the state in the YAML.&#x20;                                                                                                                |
-| =@ctx.jigs.*jigInstanceId*.components.*componentInstanceId*.state. | data&#xA;isDirty&#xA;isValid&#xA;response                                                                                                                       | * Read the state of a component in a specific jig using the instanceId of both the jig and component.
-* Referencing components on a composite jig.                                            |
+| =@ctx.jig.state.                                                   | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value  | - Applies to a list jig.<br />- The creator configures the state in the YAML.&#x20;                                                                                                                |
+| =@ctx.jigs.*jigInstanceId*.components.*componentInstanceId*.state. | data&#xA;isDirty&#xA;isValid&#xA;response                                                                                                                       | * Read the state of a component in a specific jig using the instanceId of both the jig and component.<br />* Referencing components on a composite jig.                                            |
 | =@ctx.component.state.                                             | amount&#xA;checked&#xA;selected&#xA;value                                                                                                                       | - State is the variable of or for each component.                                                                                                                                             |
-| =@ctx.components.*componentInstanceId.*state.                      | data&#xA;filter&#xA;isValid&#xA;isDirty&#xA;isPending&#xA;searchText&#xA;selected&#xA;response&#xA;value                                                        | * State of components, using the component's instanceId.
-* Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.       |
+| =@ctx.components.*componentInstanceId.*state.                      | data&#xA;filter&#xA;isValid&#xA;isDirty&#xA;isPending&#xA;searchText&#xA;selected&#xA;response&#xA;value                                                        | * State of components, using the component's instanceId.<br />* Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.       |
 | =@ctx.current.state.                                               | amount&#xA;checked                                                                                                                                              | - Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array. |
 
 ### Jig (local) State
@@ -70,7 +66,7 @@ Avoid using state keywords, such as `component`, as `instanceId` values in expre
 
 You can define your solution state to store objects and values temporarily and then read them in multiple places in your solution. These are not stored in any local or remote data store but only in live memory. If you log out your solution state is cleared.
 
-- &#x20;Configure the initial solution state in the **index.jigx **file by providing a `State Key` with a value.
+- Configure the initial solution state in the **index.jigx** file by providing a `State Key` with a value.
 - You can update the state using the `action.set-solution-state` action.
 - To revert back to the initial state, simply use the `action.reset-solution-state` action.
 - Multiple states can be added in index.jigx and `initialValues` support nested objects.
@@ -154,7 +150,7 @@ children:
 
 Defines the state \[key] for jig that can be read from within the current jig.
 
-- Configure the initial jig state in the desired jig** **file.
+- Configure the initial jig state in the desired jig file.
 - In any jig, you can update the state using the `action.set-jig-state` action.
 - To revert back to the initial state, simply use the `action.reset-jig-state` action.
 - Multiple states can be added and `initialValues` support nested objects.
@@ -239,25 +235,25 @@ Reads the value of \[key] in the current jig and components with `instanceId`, f
 
 ### Within all jigs and components in the solution
 
-Reads the value of \[key] from the available jigs with `jigId` and components with `instanceId`. For example:&#x20;
+Reads the value of \[key] from the available jigs with `jigId` and components with `instanceId`. For example:
 `@ctx.jigs.[jigId].components.[instanceId].state.[key]`
 :::
 
 ::::ExpandableHeading
 ## Action state (write state)
 
-You can use actions to set or reset a state either in a solution, jig, or component. These actions can be configured under the `actions` node or under an event node, such as `onPress`.&#x20;
+You can use actions to set or reset a state either in a solution, jig, or component. These actions can be configured under the `actions` node or under an event node, such as `onPress`.
 
 The following **set-state** actions are available:
 
-- [action.set-state]()&#x20;
+- [action.set-state]()
 - `action.set-solution-state`
 - `action.set-jig-state`
 - `action.set-custom-component-state`
 
 The following **reset-state** actions are available:
 
-- [action.reset-state]()&#x20;
+- [action.reset-state]()
 - `action.reset-solution-state`
 - `action.reset-jig-state`
 - `action.reset-custom-component-state`
@@ -392,15 +388,16 @@ The table below provides links to various examples of configuring state in the [
 
 | **Scenario**                                                          | **Key**               | **GitHub jigx-samples examples**                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Set an item to active with onPress                                    | ActiveItemId          | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx" target="_blank">List with active items</a>                                            |
-| searchText (component level)                                          | searchText            | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-searchable.jigx" target="_blank">Dropdown with search</a>                                                            |
-| filter and searchText (jig level)                                     | filter&#xA;searchText | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx" target="_blank">List with filter and search</a>                                   |
-| Saving data to a provider                                             | value                 | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx" target="_blank">Update service form</a>                                                          |
-| Evaluating an amount                                                  | amount                | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx" target="_blank">Product item maximum tag</a>                     |
-| Evaluating if an item is selected                                     | checked               | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-checkbox-dd.jigx" target="_blank">Highlight selected list of cleaning services</a> |
-| Evaluating selected items                                             | selected              | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx" target="_blank">Evaluate progress to show helper and error text</a>                                        |
-| Reset a form                                                          | reset-state (action)  | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/reset-state/static-data/reset-state-action-form.jigx" target="_blank">Reset a form</a>                                                                     |
-| Set state on an active item in a list when the onPress event executes | set-state (action)    | <a href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx" target="_blank">Color a choosen item when pressing on an item in a list</a>                                     |
+| Set an item to active with onPress                                    | ActiveItemId          | [List with active items](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx)                                            |
+| searchText (component level)                                          | searchText            | [Dropdown with search](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-searchable.jigx)                                                            |
+| filter and searchText (jig level)                                     | filter, searchText    | [List with filter and search](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx)                                   |
+| Saving data to a provider                                             | value                 | [Update service form](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx)                                                          |
+| Evaluating an amount                                                  | amount                | [Product item maximum tag](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx)                     |
+| Evaluating if an item is selected                                     | checked               | [Highlight selected list of cleaning services](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-checkbox-dd.jigx) |
+| Evaluating selected items                                             | selected              | [Evaluate progress to show helper and error text](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx)                                        |
+| Reset a form                                                          | reset-state (action)  | [Reset a form](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/reset-state/static-data/reset-state-action-form.jigx)                                                                     |
+| Set state on an active item in a list when the onPress event executes | set-state (action)    | [Color a chosen item when pressing on an item in a list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx)                                     |
+
 
 ## See Also
 
