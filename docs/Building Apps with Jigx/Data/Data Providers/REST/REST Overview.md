@@ -45,12 +45,7 @@ The following describes the options available when configuring a REST function c
 |              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Provider** | `DATA_PROVIDER_REST`** **for making REST service calls.                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **Methods**  | Jigx supports the following methods when making REST calls:<br />* DELETE
-* GET
-* HEAD
-* PUT
-* PATCH
-* POST                                                                                                                                                                                                                                                                                                                                                                            |
+| **Methods**  | Jigx supports the following methods when making REST calls:<br />* DELETE<br />* GET<br /* HEAD<br />* PUT<br />* PATCH<br />* POST |
 | **URL**      | The URL of the service that must be called. Jigx supports path and query parameters in the URL. Path parameters are tagged with curly brackets \{}. Jigx will replace the path parameters with the values of the parameters defined in the parameter section of the function definition. Query parameters specified in the URL will be removed by Jigx and replaced by parameters defined in the parameters section of the function definition with a location property of type Query. |
 
 ## Swagger parser

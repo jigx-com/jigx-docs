@@ -199,7 +199,7 @@ actions:
 
 All tempIds for a record are replaced in all other queued commands if a valid id is returned.  If you use a record's id in another record while offline and a valid id is returned back when the device is back online, Jigx updates the tempId used in all the other records that used it with the valid id. This makes for smoother integration with backend systems as the ids will match up. See [working with REST ids](<./Data Providers/REST/REST best practice.md>) for more information on returning the id.
 
-## Examples and code snippets ****
+## Examples and code snippets
 
 ### Execute-entity with queueOperation (replace)
 

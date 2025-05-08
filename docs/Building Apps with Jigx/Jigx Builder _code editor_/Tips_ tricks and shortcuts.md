@@ -25,10 +25,10 @@ Discover shortcuts and tricks that boost efficiency and maximize your output.
 | **Color** | **Description**                                                                                                                                                             |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | white     | The file is issue-free. If connected to a Git repository, the file is committed.                                                                                            |
-| <span style="color: red;">red</span>       | The file has validation issues/errors/deprecated properties that must be fixed. The number of issues is shown by a red number on the right of the file name in the sidebar. |
-| <span style="color: yellow;">yellow</span>    | This means the file is connected to a Git repository and is modified; the letter M displays on the right of the file name in the sidebar.                                   |
-| <span style="color: green;">green</span>     | Indicates a new file has been created but not committed to the Git repository yet.                                                                                          |
-| <span style="color: blue;">blue</span>      | Indicates the active screen on the mobile device that you are debugging in the builder using Jigx Dev Tools.                                                                |
+| red     | The file has validation issues/errors/deprecated properties that must be fixed. The number of issues is shown by a red number on the right of the file name in the sidebar. |
+| yellow    | This means the file is connected to a Git repository and is modified; the letter M displays on the right of the file name in the sidebar.                                   |
+| green    | Indicates a new file has been created but not committed to the Git repository yet.                                                                                          |
+| blue      | Indicates the active screen on the mobile device that you are debugging in the builder using Jigx Dev Tools.                                                                |
 
 
 
