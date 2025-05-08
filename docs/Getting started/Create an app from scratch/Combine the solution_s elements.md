@@ -32,5 +32,5 @@ We recommend you build out all the solution steps for the [Create an app from sc
 
 ## GitHub Samples
 
-You can download the <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" target="_blank">Hello Jigx solution :Comment[project]{resolved="true" docCommentId="yyJ3ACqgqWOREoBk94pjg"} </a>on GitHub or build it yourself by following the detailed steps in this section.
+You can download the <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" target="_blank"> Hello Jigx solution project</a>on GitHub or build it yourself by following the detailed steps in this section.
 
