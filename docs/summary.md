@@ -9,7 +9,7 @@
   - [Create the Hello Jigx solution project](<Getting started/Create an app from scratch/Create the Hello Jigx solution project.md>)
   - [Create the Map](<Getting started/Create an app from scratch/Create the Map.md>)
     - [Adding the Map Jig](<Getting started/Create an app from scratch/Create the Map/Adding the Map Jig.md>)
-    - [Publish the project](<Getting started/Create an app from scratch/Create the Map/Publish the project>)
+    - [Publish the project](<Getting started/Create an app from scratch/Create the Map/Publish the project.md>)
     - [Run the solution in the app](<Getting started/Create an app from scratch/Create the Map/Run the solution in the app.md>)
   - [Create the Calendar](<Getting started/Create an app from scratch/Create the Calendar.md>)
     - [Add the calendar jig and datasource](<Getting started/Create an app from scratch/Create the Calendar/Add the calendar jig and datasource.md>) 
