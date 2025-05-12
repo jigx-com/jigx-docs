@@ -45,6 +45,7 @@
 
 ## Understanding the basics
 
+- [App Supported Versions](<Understanding the basics/App Supported Versions.md>) 
 - [Architecture](<Understanding the basics/Architecture.md>)
 - [Jigx Concepts](<Understanding the basics/Jigx Concepts.md>)
 - [Authentication](<Understanding the basics/Authentication.md>)
