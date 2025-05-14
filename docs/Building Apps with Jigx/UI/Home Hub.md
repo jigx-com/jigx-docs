@@ -1,10 +1,4 @@
----
-title: Home Hub
-slug: 4FlX-home-experience
-description: Jigx home hub functionality and components explained 
-createdAt: Thu Jan 26 2023 10:34:22 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Apr 30 2025 10:13:03 GMT+0000 (Coordinated Universal Time)
----
+# Home Hub
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -12,36 +6,33 @@ Having a good home screen is essential for any mobile app as it is the first scr
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-w5fDciaaOqvoKxuVxeQJQ-20250430-101252.png" size="60" position="center" caption="Home screen" alt="Home screen"}
-
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" width="1224" height="2466" position="center" caption="Home screen" alt="Home screen"}
 :::
 ::::
 
-Jigx allows you to use various options when personalizing your Home Hub.&#x20;
+Jigx allows you to use various options when personalizing your Home Hub. Any jig can be placed on the home hub, and components accessible in the home hub include:
 
-The main elements used are:
-
-1. Tabs in [Index settings](<./Home Hub/Index settings.md>)
-2. [grid]() and [grid-item]()
+- [User Profile]()
+- [Solution switching](<./../../Understanding the basics/Jigx Concepts.md>)
+- Tabs in [Index settings](<./Home Hub/Index settings.md>)
+- [grid](#) and [grid-item](#)
 
 :::ExpandableHeading
 ### tabs
 
-- Create a landing page/ home screen by configuring the navigation tabs that show at the bottom of the app. You can configure a maximum of four tabs.
+- Create a landing page/ home screen by configuring the navigation tabs that show at the bottom of the app. You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the *More* (ellipsis) button is tapped.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-- Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen. 
+- Setting the [grid](#) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 :::
 
 :::ExpandableHeading
 ### grid and grid-item
 
-- The [grid]()  and [grid-item]() are available in 5 different `sizes`: 1x1, 2x2, 4x2, 2x4, and 4x4.
+- The [grid](#)  and [grid-item](#) are available in 5 different `sizes`: 1x1, 2x2, 4x2, 2x4, and 4x4.
 - The `jigId` property refers to the name/ unique identifier of the jig we are using.
 - There is also an optional property `when` that allows the grid-item to be displayed/hidden in a particular situation based on the expression.
-- Within the grid-item you can select to show [widgets](https://docs.jigx.com/examples/oVbi-widgets), an [image]() , and [Custom Components (Alpha)](<./Custom Components _Alpha_.md>).
+- Within the grid-item you can select to show [widgets](https://docs.jigx.com/examples/oVbi-widgets), an [image](#) , and [Custom Components (Alpha)](<./Custom Components _Alpha_.md>).
 - Add an `onPress` event to a grid-item to configure an action such as `open-url` without going to jig.
 :::
 
 For a code example see [Creating a Home Hub](<./Home Hub/Creating a Home Hub.md>).
-

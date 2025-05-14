@@ -1,9 +1,4 @@
----
-title: Creating a Home Hub
-slug: QZ5p-custom
-createdAt: Tue Nov 21 2023 06:45:29 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 11:13:53 GMT+0000 (Coordinated Universal Time)
----
+# Creating a Home Hub
 
 Creating a home screen (hub) for a mobile app can be a great way to enhance the user experience and provide more functionality. In this section, we will explore the benefits of creating a home screen and the steps involved in configuring one.
 
@@ -11,10 +6,10 @@ Creating a home screen (hub) for a mobile app can be a great way to enhance the 
 
 Steps to customize your Home Hub:
 
-1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default]() or [jig.grid]() are great options to use.
+1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default](#) or [jig.grid](#) are great options to use.
 2. Use IntelliSense (ctrl+space) to open the list of available options in the index.jigx file, and select `tabs`.
 3. In the `jigId` property, use IntelliSense again to choose the jig you configured as your Home Hub.
-4. Choose an icon that will represent the Home Hub.  The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
+4. *Optional *- Choose an icon that will represent the Home Hub.  The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
 5. Add the `onLoad` or `onRefresh` events for syncing data.
 6. You can configure additional `tabs` by repeating the steps above.
 
@@ -24,11 +19,11 @@ Steps to customize your Home Hub:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-Here is an example of a Home Hub designed for its simplicity with no titles and no widgets. A `jig.default` is used with a `component.image` and `component.list`.
+Here is an example of a Home Hub designed for its simplicity. A `jig.default` is used with a `component.image` and `component.list`.
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png"}
 :::
 ::::
 
@@ -111,7 +106,7 @@ children:
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60"  position="center" caption="Custom home hub" alt="Custom home hub"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60" position="center" caption="Custom home hub" alt="Custom home hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png"}
 :::
 
 :::VerticalSplitItem
@@ -125,25 +120,6 @@ yoga-home.jigx
 ```yaml
 title: Yoga Wellness Week
 type: jig.default
-
-datasources:
-  yoga: 
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_DYNAMIC
-
-      entities:
-        - default/events
-
-      query: 
-        SELECT
-          id, 
-          '$.EventName', 
-          '$.StartDate', 
-          '$.Time', 
-          '$.Venue', 
-          '$.Type' 
-        FROM [default/events] WHERE '$.Type' = 'Yoga'
        
 children: 
   - type: component.image
@@ -223,6 +199,29 @@ tabs:
     jigId: yoga-home
     icon: home-apps-logo      
 ```
+
+datasource
+
+```yaml
+datasources:
+  yoga: 
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+
+      entities:
+        - default/events
+
+      query: 
+        SELECT
+          id, 
+          '$.EventName', 
+          '$.StartDate', 
+          '$.Time', 
+          '$.Venue', 
+          '$.Type' 
+        FROM [default/events] WHERE '$.Type' = 'Yoga'
+```
 :::
 
 ### Home Hub with multiple tabs in bottom navigation bar
@@ -233,7 +232,7 @@ In this example, four jigs are created. In the index.jigx file, they are configu
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png"}
 :::
 ::::
 
@@ -437,8 +436,8 @@ children:
 
 ## Best practice
 
-- Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item]() to create the gallery.
+- Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item](#) to create the gallery.
 - Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data.
 - The `onload` event must be configured on the index.jigx file for syncing data to the device.
-- When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default]() or [jig.grid]() as they provide the broadest scope of components, actions, and widgets.
+- When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](#) or [jig.grid](#) as they provide the broadest scope of components, actions, and widgets.
 
