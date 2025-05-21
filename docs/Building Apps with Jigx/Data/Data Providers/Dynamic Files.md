@@ -1,16 +1,11 @@
----
-title: Dynamic files
-slug: zZqc-dynami
-createdAt: 2023-11-06T09:57:11.438Z
-updatedAt: 2025-05-20T12:33:47.845Z
----
+# Dynamic files
 
 Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with entities. Files are physically stored in Amazon S3, offering a combination of simplicity, security, and portability.
 
 For example:
 
 - For an expense claim scenario, create an *Expense* record in Dynamic data.
-- Attach receipts by creating *ExpenseItem* records. Link these using the *Expense* record* *id* as a foreign key and associate each *ExpenseItem* with a file.
+- Attach receipts by creating *ExpenseItem* records. Link these using the *Expense* record\* *id* as a foreign key and associate each *ExpenseItem* with a file.
 
 ## Key Functionalities
 
@@ -178,8 +173,6 @@ item:
                     id: =@ctx.current.item.commandId
 ```
 
-datasource
-
 ```yaml
 datasources:
   file-status-ds:
@@ -210,12 +203,12 @@ datasources:
 
 ## File Permissions
 
-Permissions are managed at the solution level in Jigx Management and Jigx Builder based on a records [Row Level Security](docId\:yGfiXwfzGGXwG8xA5Ogyg):
+Permissions are managed at the solution level in Jigx Management and Jigx Builder based on a records [Row Level Security](<./../../../Administration/Solutions/Row Level Security.md>):
 
 - `Ownership` and `membership` are specified at record level.
 - Multiple `owners`/`groups` can be assigned.
 
-See [Row Level Security](docId\:yGfiXwfzGGXwG8xA5Ogyg)  and [Data policies](docId\:cKMVatYgIVjH_diPjsYxH) for more information.
+See [Row Level Security](<./../../../Administration/Solutions/Row Level Security.md>) and [Data policies](<./../../../Administration/Solutions/Row Level Security/Data policies.md>) for more information.
 
 **Permissions Configuration Example:**
 
@@ -259,7 +252,7 @@ leftElement:
 
 Files and their detail are visible in Management and are associated with a record.
 
-1. Locate the [Data](docId\:XDYe9s3zRRpV5bwcMCORZ) tab.
+1. Locate the [Data](./../../../Administration/Solutions/Data.md) tab.
 2. Click on a record and select the **File** tab.
 3. The file **status**, **thumbnail**, **name**, **content type** and **size** is displayed.
 4. To download the file from Managment, use the **Download file** link at the top of the record.
@@ -267,8 +260,8 @@ Files and their detail are visible in Management and are associated with a recor
 
 ## Examples and code snippets
 
-1. [Upload a file](docId:8PWc2eYpR91RmqAGkLIur)
-2. [Download a file](docId:1Z3RxeuWLnCAxe9igcyvu)
-3. [Status of a file](docId\:SmP5iLJNw-GnQz7a_wxWr)
-4. [Delete a file](docId\:rM3jOnnu1-EVfsjndh8kn)&
+1. [Upload a file]()&#x20;
+2. [Download a file]()&#x20;
+3. [Delete a file]()&#x20;
+4. [Status of a file]()&#x20;
 

@@ -1,10 +1,4 @@
----
-title: Local REST Calls
-slug: Jp2l-local
-description: Learn how to use a REST provider to populate list data or perform other REST methods using a third-party REST service. This document explains the benefits of both remote and local REST function calls, including improved security and larger data size limit
-createdAt: Fri May 12 2023 08:42:28 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Oct 21 2024 14:07:26 GMT+0000 (Coordinated Universal Time)
----
+# Local REST Calls
 
 # Overview
 
@@ -24,6 +18,7 @@ A **local REST function** call allows the mobile app to perform all the processi
 
 - Only **OAuth** authentication can be used with local REST calls.
 - When `useLocalCall: true` is set, functions that rely on secrets or other authentication mechanisms not available locally will not execute.
+- Setting `useLocal: false` limits support for REST robustness and `@ctx` features, and may slow down data syncing between the device and the remote system.
 
 ## Example
 
