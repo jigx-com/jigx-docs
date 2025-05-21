@@ -76,7 +76,7 @@
       - [Creating columns & data records](<Building Apps with Jigx/Data/Data Providers/Dynamic Data/Creating columns _ data records.md>)
       - [Deleting tables](<Building Apps with Jigx/Data/Data Providers/Dynamic Data/Deleting tables.md>)
       - [Using Dynamic Data](<Building Apps with Jigx/Data/Data Providers/Dynamic Data/Using Dynamic Data.md>)
-    - [Dynamic Files](<Building Apps with Jigx/Data/Data Providers/Dynamic Files.md)   
+    - [Dynamic Files](Building%20Apps%20with%20Jigx/Data/Data%20Providers/Dynamic%20Files.md)   
     - [Microsoft Azure SQL](<Building Apps with Jigx/Data/Data Providers/Microsoft Azure SQL.md>)
       - [Syncing SQL & loading local Data](<Building Apps with Jigx/Data/Data Providers/Microsoft Azure SQL/Syncing SQL _ loading local Data.md>)
       - [Configuring the SQL Connection](<Building Apps with Jigx/Data/Data Providers/Microsoft Azure SQL/Configuring the SQL Connection.md>)
