@@ -1,10 +1,4 @@
----
-title: Index settings
-slug: t7tB-index-settings
-description: Learn about the essential solution settings stored in the index.jigx file for a jig. This includes crucial information such as the solution's name, title, category, and description. Explore how properties like Widgets, home, and stories contribute to the 
-createdAt: Tue Apr 04 2023 12:00:55 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Apr 29 2025 11:11:26 GMT+0000 (Coordinated Universal Time)
----
+# Index settings
 
 In the `index.jigx` file, you set solution settings, including the primary information about the solution, the [Home Hub](<./../Home Hub.md>) set up, and properties reusable throughout the solution.
 
@@ -31,19 +25,21 @@ description: A solution displaying all features and functions available in Jigx.
 - Tabs are properties used to build your navigation bar that displays at the bottom of the Home Hub.
 - You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the *More* (ellipsis) button is tapped.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-- Setting the [grid]() jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
+- Setting the [grid](#) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
-| **Core Structure** |                                                                           |
+| **Core Structure** |                                                                                  |
 | ------------------ | -------------------------------------------------------------------------------- |
 | `tabs`             | The top level property under which the various tabs are configured.              |
 | `icon`             | The icon to be shown on the navigation bar for the tab, for example a home icon. |
 | `jigId`            | The name/ unique identifier of the jig that will open when the tab is pressed.   |
 
-| **Other options** |                                                                                                                                                                                                            |
+| **Other options** |                                                                                                                                                                                                                  |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `badge`           | Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the `badge` property to the tabs section with an expression. |
 | `label`           | Give the tab a title. The title displays under the icon in the navigation bar.                                                                                                                                   |
 | `when`            | The condition when the tab will be displayed or hidden (optional). Use an [expression](./../../Logic/Expressions.md) that evaluates to a boolean.                                                                |
+
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" size="30" width="1224" height="2466" position="center" caption}
 
 :::CodeblockTabs
 index.jigx
@@ -82,13 +78,14 @@ tabs:
 ```
 :::
 
-## OnLoad, OnFocus, OnRefresh
+## OnLoad, OnFocus, OnRefresh, onTableChange
 
-These properties allow you to configure [Actions]() executed in various scenarios.
+These properties allow you to configure [Actions](#) executed in various scenarios.
 
 - **OnLoad** - when the solution loads for the first time the configured actions execute. This is recommended for best performance when working with data, sync the data when the solution loads and ensures the data is available from the beginning and throughout the rest of the solution.
 - **OnFocus** - when the Home Hub receives focus the configured actions execute.
-- **OnRefresh** - when pulling down on the Home Hub the action configured for `onRefresh` executes.
+- **OnRefresh** - when pulling down on the Home Hub the action configured for `onRefresh` executes. The `onRefresh` spinner is persistently visible while an action is executing, preventing users from triggering a redundant pull-to-refresh gesture.
+- [onTableChange]() - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
 
 :::CodeblockTabs
 index.jigx (onLoad)
@@ -125,6 +122,20 @@ onRefresh:
     data:
       id: =@ctx.datasources.test.id
       action: 'Execute-entity onRefresh'
+```
+
+index.jigx (onTableChange)
+
+```yaml
+onTableChanged:
+  # Specify the remote table to monitor.
+  - table: employees
+    action: 
+      # Configure the action to execute when a change is detected.
+      type: action.reset-solution-state
+      options:
+        changes:
+          - dataStatus     
 ```
 :::
 
@@ -185,18 +196,14 @@ dependencies:
   mobileApp: '>1.0.0'
 ```
 :::
-
-
 ::::
 
 :::VerticalSplitItem
-::Image[]{alt="Out of date app screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png" size="80" caption="Out of date app screen" position="center"}
+::Image[]{alt="Out of date app screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png" size="80" caption="Out of date app screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png"}
 :::
 :::::
 
 ## See Also
 
 - [Home Hub](<./../Home Hub.md>)
-
-
 
