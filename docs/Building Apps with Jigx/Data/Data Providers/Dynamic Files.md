@@ -1,21 +1,21 @@
 # Dynamic files
 
-Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with entities. Files are physically stored in Amazon S3, offering a combination of simplicity, security, and portability.
+Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with records. Files are physically stored in Amazon S3, offering a combination of simplicity, security, and portability.
 
 For example:
 
-- For an expense claim scenario, create an *Expense* record in Dynamic data.
-- Attach receipts by creating *ExpenseItem* records. Link these using the *Expense* record\* *id* as a foreign key and associate each *ExpenseItem* with a file.
+- For an expense claim scenario, create an *Expense* record in Dynamic Data.
+- Attach receipts by creating *ExpenseItem* records. Link these using the *Expense* record *id* as a foreign key and associate each *ExpenseItem* with a file.
 
 ## Key Functionalities
 
 ### &#x20;Uploading Files
 
-- The `create` method of the Dynamic Provider uploads files to S3 using the updated Dynamic Data REST endpoint.
-- One file is linked/associated with one record, which means that the `execute-entity` action is used for the upload visual.
+- The `create` method of the `Dynamic Provider` uploads files to S3 using the updated Dynamic Data REST endpoint.
+- One file is linked/associated with one record, which means that the `execute-entity` action is used for the upload.
 - Use the [media-field](docId\:ZjGJ3uwmawvFKgSX2aKyk) component to select files for upload or upload a file to the record in *Management>solution>data>table>record>file*.
 - Specify a `localPath` for the file.
-- Specify a `fileName` with the file extension; the `fileName` must include the extension. If a fileName is not provided, the system extracts it from the `localPath`.
+- Specify a `fileName` with the file extension. If a `fileName` is not provided, the system extracts it from the `localPath`.
 
 :::CodeblockTabs
 upload-files
@@ -48,7 +48,7 @@ actions:
 ### Deleting Files
 
 - Delete a file by executing the standard `delete` entity method in an `execute-entity` action.
-- To delete a file from an entity record, you would call `save` or `update` and set the `file` property to `null` or `localPath` to `null`.
+- To delete a file from an entity record, you call `save` or `update` and set the `file` property to `null`, or `localPath` to `null`.
 
 :::CodeblockTabs
 delete-files
@@ -74,7 +74,7 @@ onPress:
 - Files can be downloaded via the `download` method using the entity `id` in an `execute-entity` action.
 - The file is downloaded to a local cache on the device, and the entity record's `localPath` property updates to reflect the local download location.
 - You will not be able to browse to it on the device.
-- Use a datasource query to access the downloaded file using properties available on a downloaded file.
+- Use a `datasource` query to access the downloaded file using properties available on a downloaded file. See the available properties in the *datasource-query* code example below.
 
 :::CodeblockTabs
 download-files
@@ -96,6 +96,7 @@ actions:
 datasource-query
 
 ```yaml
+# File properties available to query a downloaded file.
 datasources:
   expenses-ds:
     type: datasource.sqlite
@@ -118,7 +119,6 @@ datasources:
           json_extract(file, '$.thumbnail.base64') as thumbnail,
           json_extract(file, '$.thumbnail.contentType'),
           json_extract(file, '$.thumbnail.contentLength')
-
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```
@@ -127,11 +127,13 @@ datasources:
 ## File Status Tracking
 
 - A system table, `_fileStatus`, tracks a file's upload or download progress.
-- This can be used to join or query directly to check the status of a file operation.
+- This can be used to `join` or `query` directly to check the status of a file operation.
 - The progress column is updated as the file is uploaded/downloaded.
 - Errors during operations update the status to `failed`, and these can be retried using `action.retry-queue-command` with the corresponding `commandId` from the `_fileStatus` table.
 
 :::CodeblockTabs
+file-progress
+
 ```yaml
 title: File Progress
 type: jig.list
@@ -151,6 +153,7 @@ item:
         when: =(@ctx.current.item.progress < 75 and @ctx.current.item.progress > 30)
       - color: color8
         when: =(@ctx.current.item.progress <= 30)
+    # Display the progress of uploading files.    
     description: =@ctx.current.item.progress & '%'
     label:
       title: =@ctx.current.item.uploadstatus
@@ -163,7 +166,7 @@ item:
           icon: pencil-2
           label: Retry
           onPress:
-            # Confiigure the retry action to process the files on the queue.
+            # Configure the retry action to process the files on the queue.
             type: action.action-list
             options:
               isSequential: true
@@ -173,12 +176,15 @@ item:
                     id: =@ctx.current.item.commandId
 ```
 
+datasource
+
 ```yaml
 datasources:
   file-status-ds:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
+      # Query the system _fileStatus properties to configure the progress of files. 
       entities:
         - _fileStatus
         - default/expenses
@@ -205,7 +211,7 @@ datasources:
 
 Permissions are managed at the solution level in Jigx Management and Jigx Builder based on a records [Row Level Security](<./../../../Administration/Solutions/Row Level Security.md>):
 
-- `Ownership` and `membership` are specified at record level.
+- `Ownership` and `membership` are specified at the record level.
 - Multiple `owners`/`groups` can be assigned.
 
 See [Row Level Security](<./../../../Administration/Solutions/Row Level Security.md>) and [Data policies](<./../../../Administration/Solutions/Row Level Security/Data policies.md>) for more information.
@@ -220,13 +226,13 @@ actions:
           provider: DATA_PROVIDER_DYNAMIC_FILE
           title: Save
           entity: expense-receipts
-          # Create method uploads files.
+          # The create method uploads files.
           method: create
           goBack: previous
           data:
            # Specify the filename, include the extension.
             fileName: =@ctx.components.fileName.state.value
-            # Specify the file to uplad.
+            # Specify the file to upload.
             file: =@ctx.components.file.state.value
           # Set the permissions (Row level security) on the record, 
           # the permissions will be applied to the file.  
@@ -237,7 +243,7 @@ actions:
 
 ## &#x20;Thumbnails and File Display
 
-To display thumbnails or local file paths in the UI:
+To display files as thumbnails or local file paths in the UI use an expression similiar to the code snippet below:
 
 ```yaml
 leftElement:
@@ -254,14 +260,15 @@ Files and their detail are visible in Management and are associated with a recor
 
 1. Locate the [Data](./../../../Administration/Solutions/Data.md) tab.
 2. Click on a record and select the **File** tab.
-3. The file **status**, **thumbnail**, **name**, **content type** and **size** is displayed.
+3. The file **status**, **thumbnail**, **name**, **content type** and **size** are displayed.
 4. To download the file from Managment, use the **Download file** link at the top of the record.
-5. To view the file thumbnail in the table, ensure **File** is checked in the **Column settings** pane.
+5. To delete a file, click the **X** next to the file preview.
+6. To view the file thumbnail in the table, ensure **File** is checked in the **Column settings** pane.
 
 ## Examples and code snippets
 
-1. [Upload a file]()&#x20;
-2. [Download a file]()&#x20;
-3. [Delete a file]()&#x20;
-4. [Status of a file]()&#x20;
+1. [Upload a file](#)&#x20;
+2. [Download a file](#)&#x20;
+3. [Delete a file](#)&#x20;
+4. [Status of a file](#)&#x20;
 
