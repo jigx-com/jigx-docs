@@ -1,22 +1,16 @@
----
-title: Add widgets
-slug: 7wFm-add-widgets
-description: Learn how to customize widgets in a Jigx solution with this detailed document. It walks you through adding a location widget and an image widget, complete with code examples in the map.jigx and composite.jigx files. Follow the steps provided to save, publ
-createdAt: Mon Apr 17 2023 07:32:16 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 18:23:22 GMT+0000 (Coordinated Universal Time)
----
+# Add widgets
 
 # Overview
 
-Widgets can be customized in many ways to reflect the styling and functionality you require.  Use the widget [image](), [location](), [chart](), and other elements for customizations. In this section, you will learn how to change your map jig with an icon to a `widget.location`, and add a `widget.image` widget to the `composite.jigx` file.
+Widgets can be customized in many ways to reflect the styling and functionality you require.  Use the widget [image](#), [location](#), [chart](#), and other elements for customizations. In this section, you will learn how to change your map jig with an icon to a `widget.location`, and add a `widget.image` widget to the `composite.jigx` file.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" size="52" caption="Hello Jigx solution with location icon" alt="Hello Jigx solution with location icon"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" size="52" caption="Hello Jigx solution with location icon" alt="Hello Jigx solution with location icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG"}
 :::
 
 :::VerticalSplitItem
-::Image[]{ src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" size="52" caption="Widget location & image" alt="Widget location & "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" size="52" caption="Widget location & image" alt="Widget location & " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG"}
 :::
 ::::
 
@@ -41,13 +35,6 @@ title: Location with address
 # The jig type used to display data
 type: jig.default
 
-widgets: 
-  map-location: 
-    type: widget.location
-    options: 
-      viewPoint: 
-       address: =@ctx.datasources.address.city
-
 isCollapsible: true
 # The type of datasource used to return data in the jig
 datasources:
@@ -66,6 +53,13 @@ children:
       viewPoint:
         address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country
         zoomLevel: 9
+# The widget that displays on the home hub.    
+widgets: 
+  map-location: 
+    type: widget.location
+    options: 
+      viewPoint: 
+       address: =@ctx.datasources.address.city        
 ```
 :::
 
@@ -109,6 +103,3 @@ children:
 
 5\. **Save** and **publish** the Hello-Jigx solution.
 6\. **Run** the Hello-Jigx solution on your mobile device to see the change to the map widget on the  Home Hub.
-
-
-
