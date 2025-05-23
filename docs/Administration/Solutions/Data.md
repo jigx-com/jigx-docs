@@ -15,7 +15,7 @@ Tables will only show if the solution is published in Jigx Builder includes [Dyn
 
 ![Contents of the Products tablets](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vLG_i97La3Jsm2i2VwFP9_jm-datal.png "Contents of the Products table")
 
-## Adding new Records
+## Adding new records
 
 You can add records to a data table manually or by uploading a JSON or CSV file to populate the records in the columns in the table. To *manually* create a record:
 
@@ -25,7 +25,7 @@ You can add records to a data table manually or by uploading a JSON or CSV file 
 4. **Add new columns** to your record by defining a column name and clicking on the **+** button right next to the new column name. As you add data the field displays the type under the entry, such as number, string or boolean.
 5. Once you set the data values of the fields you want to include in your record, click **Save**.
 
-## Editing a Record
+## Editing a record
 
 Edit an exisitng data record by:
 
@@ -37,7 +37,18 @@ Edit an exisitng data record by:
 
 ![Updating a record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OyK-D-REpra9E-gAgWZ_w_jm-editdatal.png "Updating a record")
 
-## Adding and Deleting files to records&#x20;
+See [Dynamic files](<./../../Building Apps with Jigx/Data/Data Providers/Dynamic Files.md>) to learn how to configure a solution in Jigx Builder to upload, download, delete, and track the status of files.
+
+## Deleting a record
+
+You can select single or multiple records to delete in the table by:
+
+1. **Delete a single record** - click on the record and select **Delete** at the bottom of the side pane (as shown in the image above).
+2. **Delete Multiple records** - select the checkboxes next to the records you want to delete. Then click the red **Delete selected** button at the top of the screen. The records will instantly be removed from the Jigx Cloud store and online devices.
+
+![Deleting multiple records](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OPX2ZoWZTBXuFkdaOmsSM_jm-deletedatal.png "Deleting multiple records")
+
+## Adding and deleting files from records&#x20;
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QnWsC0B1rSmeA622gNi0T-20250523-093602.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QnWsC0B1rSmeA622gNi0T-20250523-093602.png" size="68" width="1946" height="1580" position="center" caption="Dynamic files" alt="Dynamic files"}
 
@@ -46,17 +57,6 @@ Edit an exisitng data record by:
 3. To download the file from Managment, use the **Download file** link at the top of the record.
 4. To delete a file, click the **X** next to the file preview.
 5. To view the file thumbnail in the table, ensure **File** is checked in the **Column settings** pane.
-
-See [Dynamic files](<./../../Building Apps with Jigx/Data/Data Providers/Dynamic Files.md>) to learn how to configure a solution in Jigx Builder to upload, download, delete, and track the status of files.
-
-## Deleting a Record
-
-You can select single or multiple records to delete in the table by:
-
-1. **Delete a single record** - click on the record and select **Delete** at the bottom of the side pane (as shown in the image above).
-2. **Delete Multiple records** - select the checkboxes next to the records you want to delete. Then click the red **Delete selected** button at the top of the screen. The records will instantly be removed from the Jigx Cloud store and online devices.
-
-![Deleting multiple records](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OPX2ZoWZTBXuFkdaOmsSM_jm-deletedatal.png "Deleting multiple records")
 
 ## Deleting a table
 
