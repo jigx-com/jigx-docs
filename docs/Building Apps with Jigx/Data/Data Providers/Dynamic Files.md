@@ -5,13 +5,13 @@ Dynamic Files extend Jigx's Dynamic Data entities to include file references, al
 For example:
 
 - For an expense claim scenario, create an *Expense* record in Dynamic Data.
-- Attach receipts by creating *ExpenseItem* records. Link these using the *Expense* record *id* as a foreign key and associate each *ExpenseItem* with a file.
+- Capture the expense detail and attach the receipt file to the *Expense* record.
 
 ## Key Functionalities
 
 ### &#x20;Uploading Files
 
-- The `create` method of the `Dynamic Provider` uploads files to S3 using the updated Dynamic Data REST endpoint.
+- The `create` method of the `Dynamic Provider` uploads files to Amazon S3.
 - One file is linked/associated with one record, which means that the `execute-entity` action is used for the upload.
 - Use the [media-field](docId\:ZjGJ3uwmawvFKgSX2aKyk) component to select files for upload or upload a file to the record in *Management>solution>data>table>record>file*.
 - Specify a `localPath` for the file.
@@ -257,6 +257,8 @@ leftElement:
 ## Jigx Management
 
 Files and their detail are visible in Management and are associated with a record.
+
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q3Ibln68qyjR9nSE50wok-20250523-085034.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q3Ibln68qyjR9nSE50wok-20250523-085034.png" size="76" width="1944" height="1586" position="center" caption="Dynamic Files" alt="Dynamic Files"}
 
 1. Locate the [Data](./../../../Administration/Solutions/Data.md) tab.
 2. Click on a record and select the **File** tab.
