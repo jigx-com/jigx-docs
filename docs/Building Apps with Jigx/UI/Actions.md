@@ -394,7 +394,7 @@ parameters:
 ```
 :::
 
-## Working with Parent & Child Actions
+## Working with parent & child actions
 
 &#x20;When configuring actions across parent and child jigs, the following behavior applies:
 
