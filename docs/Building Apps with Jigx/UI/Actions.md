@@ -1,10 +1,4 @@
----
-title: Actions
-slug: 0sCd-test
-description: Sorry, but I can't generate that story for you.
-createdAt: Thu Oct 26 2023 15:35:18 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Nov 05 2024 11:28:39 GMT+0000 (Coordinated Universal Time)
----
+# Actions
 
 Actions refer to specific controls or operations that respond to an event or input. They range from simple operations like clicking a submit button or navigating to a previous screen to more complex tasks like data interaction.
 
@@ -16,19 +10,19 @@ Actions refer to specific controls or operations that respond to an event or inp
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
 - *Execution* - actions to interact with data.
-  - [execute-entity]()
-  - [execute-entities]()
-  - [submit-form]()
-  - [sync-entities]() for getting data to the device.
+  - [execute-entity](#)
+  - [execute-entities](#)
+  - [submit-form](#)
+  - [sync-entities](#) for getting data to the device.
 - *Navigational* - actions used to navigate to another jig or Home Hub.
-  - [go-to]()
-  - [go-back]()
+  - [go-to](#)
+  - [go-back](#)
 - Actions to *open* components.
-  - [open-scanner]()
-  - [open-url]()
+  - [open-scanner](#)
+  - [open-url](#)
 - *State* - actions used to determine a specific status or value of a property or component.
-  - [set-state]()
-  - [reset-state]()
+  - [set-state](#)
+  - [reset-state](#)
 - *Events* - actions that execute after a user or device performs a trigger.
   - onRefresh
   - onFocus
@@ -38,7 +32,7 @@ Actions allow you to do many things in an app; below are the types of actions th
   - onDelete
   - onButtonPress (only on calendar jigs)
 
-For the complete list and code examples of available actions, see [actions]().
+For the complete list and code examples of available actions, see [actions](#).
 
 ## Where to add actions
 
@@ -191,7 +185,7 @@ onLoad:
 
 ## Executing multiple actions
 
-To execute a series of actions use the [action-list](), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
+To execute a series of actions use the [action-list](#), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
 
 - `False` executes the actions randomly
 - `True` executes the actions from the top down and waits for the action to complete before executing the next action in the list, making it important to list the actions in the correct order.
@@ -352,7 +346,7 @@ actions:
    - `action.submit.form` is not available in global actions because the configuration is specific for each form using the `formId`.
    - `action.open-scanner` action is not available in global actions.
 3. The `when:` proprerty can be used to determine when the global action executes in a jig.
-4. Actions can be combined with components in the UI, for example [summary ]() component.
+4. Actions can be combined with components in the UI, for example [summary ](#) component.
 5. When using the `actions.action-list` as a global action you can call another global action in the global action list.
 
 :::CodeblockTabs
@@ -399,6 +393,14 @@ parameters:
     required: true
 ```
 :::
+
+## Working with Parent & Child Actions
+
+&#x20;When configuring actions across parent and child jigs, the following behavior applies:
+
+- If both the parent and child jigs have an `action` configured, the child’s configuration takes precedence and overrides the parent’s.
+- If only the parent has an `action`, it automatically applies to the child.
+- If only the child has an `action`, it is used in the parent jig as well.
 
 ## See Also
 
