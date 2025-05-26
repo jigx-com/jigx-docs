@@ -59,7 +59,7 @@ Validation does not always prevent you from publishing your solution. The soluti
 
 ### Running Solutions Diagnostics
 
-You can access the Jigx Solution Diagnostics tool through the **Jigx Explorer** by clicking the diagnostics icon, or by using the VS code command-palette accessed by fn+F1 / command+shift+P / ⇧⌘P / alt+shift+P** and selecting **Run Jigx Solution Diagnostics\*\*.
+You can access the Jigx Solution Diagnostics tool through the **Jigx Explorer** by clicking the diagnostics icon, or by using the VS code command-palette accessed by fn+F1 / command+shift+P / ⇧⌘P / alt+shift+P and selecting **Run Jigx Solution Diagnostics**.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-XuAgpuvvxhACMGd383TAQ-20250523-115757.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-XuAgpuvvxhACMGd383TAQ-20250523-115757.png" size="70" width="956" height="372" position="center" caption="Diagnostics icon" alt="Diagnostics icon"}
 
@@ -93,7 +93,6 @@ The **quick-fix validation popup** in VS Code helps you identify and resolve iss
 ![Quick-fix](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-PPet3TPo8YYWZCffu1nmp-20250526-145008.png "Quick-fix")
 :::
 ::::
-
 **How to Use It:**
 
 1. **Hover or place your cursor** on the line showing the issue or on the highlighted error squiggle.
