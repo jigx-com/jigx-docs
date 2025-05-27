@@ -85,7 +85,7 @@ These properties allow you to configure [Actions](#) executed in various scenari
 - **OnLoad** - when the solution loads for the first time the configured actions execute. This is recommended for best performance when working with data, sync the data when the solution loads and ensures the data is available from the beginning and throughout the rest of the solution.
 - **OnFocus** - when the Home Hub receives focus the configured actions execute.
 - **OnRefresh** - when pulling down on the Home Hub the action configured for `onRefresh` executes. The `onRefresh` spinner is persistently visible while an action is executing, preventing users from triggering a redundant pull-to-refresh gesture.
-- [onTableChange]() - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
+- [onTableChange](#) - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
 
 :::CodeblockTabs
 index.jigx (onLoad)
@@ -193,13 +193,13 @@ index.jigx
 
 ```yaml
 dependencies:
-  mobileApp: '>1.0.0'
+  mobileApp: '>1.131.2'
 ```
 :::
 ::::
 
 :::VerticalSplitItem
-::Image[]{alt="Out of date app screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png" size="80" caption="Out of date app screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hWcGWw7RfFME2LiyAQ0Mw_img8725iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_j99rAAAt6SBCQZfpVt-A-20250527-070007.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_j99rAAAt6SBCQZfpVt-A-20250527-070007.png" size="70" width="1224" height="2466" position="center" caption="Out of date app screen" alt="Out of date app screen"}
 :::
 :::::
 

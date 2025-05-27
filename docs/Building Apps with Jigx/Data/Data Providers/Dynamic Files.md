@@ -36,7 +36,6 @@ actions:
                 method: create
                 goBack: previous
                 data:
-                  id: =@ctx.jig.components.recordid.state.value
                   expenseitem: =@ctx.jig.components.expenseitem.state.value
                   expenseamount: =@ctx.components.expenseamount.state.value
                 # Specify the file to be uploaded.
@@ -258,7 +257,7 @@ leftElement:
 
 Files and their detail are visible in Management and are associated with a record.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q3Ibln68qyjR9nSE50wok-20250523-085034.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-q3Ibln68qyjR9nSE50wok-20250523-085034.png" size="76" width="1944" height="1586" position="center" caption="Dynamic Files" alt="Dynamic Files"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QnWsC0B1rSmeA622gNi0T-20250523-093602.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QnWsC0B1rSmeA622gNi0T-20250523-093602.png" size="76" width="1944" height="1586" position="center" caption="Dynamic Files" alt="Dynamic Files"}
 
 1. Locate the [Data](./../../../Administration/Solutions/Data.md) tab.
 2. Click on a record and select the **File** tab.
