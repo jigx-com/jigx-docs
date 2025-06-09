@@ -78,14 +78,14 @@ tabs:
 ```
 :::
 
-## OnLoad, OnFocus, OnRefresh, onTableChange
+## OnLoad, OnFocus, OnRefresh, onTableChanged
 
 These properties allow you to configure [Actions](#) executed in various scenarios.
 
 - **OnLoad** - when the solution loads for the first time the configured actions execute. This is recommended for best performance when working with data, sync the data when the solution loads and ensures the data is available from the beginning and throughout the rest of the solution.
 - **OnFocus** - when the Home Hub receives focus the configured actions execute.
 - **OnRefresh** - when pulling down on the Home Hub the action configured for `onRefresh` executes. The `onRefresh` spinner is persistently visible while an action is executing, preventing users from triggering a redundant pull-to-refresh gesture.
-- [onTableChanged]() - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
+- [onTableChanged](#) - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
 
 :::CodeblockTabs
 index.jigx (onLoad)
