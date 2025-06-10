@@ -16,11 +16,10 @@ To publish the **entire** solution, follow the steps below:
 
 1. In VS Code click on the Jigx Builder **icon** in the left navigation bar.
 2. In the Jigx Explorer hover over the solution node till you see the **publish icon (rocket)**.
-
    ![Publish icon ](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-7EXxML_axMCYnri0YV0DV-20250514-074940.png "Publish icon")
 3. Click on the icon to start the publishing process.
 4. On a new solution you will be asked to enter your Jigx username and password, organization and region.
-5. &#x20;If you are already logged in, the solution will publish without having to sign in again.
+5. &#x20;If you are already logged in, the solution will publish without having to sign in again. The solution's name and organization are displayed in the VS Code status bar. &#x20;
 6. The publishing process starts and the progress shows in the bottom right corner of the VS Code editor. A message displays when the solution is successfully published.
 
 ### Single files
@@ -29,7 +28,6 @@ To publish a **single** file in the solution follow the steps below:
 
 1. In Jigx Builder locate the file in the side bar explorer that you want to publish.
 2. Right-click on the file and click **Publish Jigx file**. If you not signed in you will be  asked to enter your Jigx username and password, organization and region. Alternatively you can use the shortcut keys given below.
-
    ![File Publish](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LF3q0EiQqbW0D5LMA1xeN-20250514-080338.png "File publish")
 
 ## Publishing shortcuts
