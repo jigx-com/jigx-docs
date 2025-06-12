@@ -233,11 +233,13 @@ actions:
             fileName: =@ctx.components.fileName.state.value
             # Specify the file to upload.
             file: =@ctx.components.file.state.value
-          # Set the permissions (Row level security) on the record, 
-          # the permissions will be applied to the file.  
-          authorized:
-            owners: =$split(@ctx.components.owners.state.value, ',')
-            members: =$split(@ctx.components.members.state.value, ',')
+            # Set the permissions (Row level security) on the record, 
+            # the permissions will be applied to the file.  
+            authorized:
+              owners:
+                - "frank@global.com"
+              members: 
+                - "finance" 
 ```
 
 ## &#x20;Thumbnails and File Display
