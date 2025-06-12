@@ -1,12 +1,6 @@
----
-title: Expressions - cheatsheet
-slug: -fDz-jas
-description: Get a comprehensive list of functionality and data results for app development in this document. Explore examples of creating filters, using placeholders, evaluating data paths, working with images, converting between strings and numbers, and much more. E
-createdAt: Mon Jul 24 2023 14:11:40 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Nov 05 2024 06:15:28 GMT+0000 (Coordinated Universal Time)
----
+# Expressions - cheatsheet
 
-Jigx wants to help you build solutions quickly and easily. To help you do this, here is a list of functionality or data results you might want to use in your app with the expression used to achieve it. This is a starting point; you can adapt or add to the expression as needed to get the expected data results when building solutions. Refer to the [Expressions]() section in the **Examples** tab for working examples and code snippets for various JSONata expressions.
+Jigx wants to help you build solutions quickly and easily. To help you do this, here is a list of functionality or data results you might want to use in your app with the expression used to achieve it. This is a starting point; you can adapt or add to the expression as needed to get the expected data results when building solutions. Refer to the [Expressions](#) section in the **Examples** tab for working examples and code snippets for various JSONata expressions.
 
 :::hint{type="info"}
 Expressions are JSONata language-based. Learn more about <a href="https://jsonata.org/" target="_blank">JSONata</a> and try out your expressions in their <a href="https://try.jsonata.org/" target="_blank">JSONata Exerciser</a>. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
@@ -239,7 +233,8 @@ $.{"message": {"subject": subject,"body": {"contentType": "Text","content":
 YAML
 
 ```yaml
-markersData: |
+markers:
+   data: |
         =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
 ```
 :::
@@ -266,7 +261,7 @@ Jigx converts `@ctx.` to `$$.` when executing expressions in jsonata
 
 ### Update multiple records in execute-entities (operators > transform)
 
-To update multiple records using the [Execute-entities]() action, you can use the expression below.
+To update multiple records using the [Execute-entities](#) action, you can use the expression below.
 
 ```yaml
 data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |  
@@ -274,11 +269,11 @@ data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |
 
 ### Validate text fields using JSONata + Regex expression&#x20;
 
-See the examples provided in [Regex expressions]().
+See the examples provided in [Regex expressions](#).
 
 ### Use JavaScript functions in expressions
 
-See more examples provided in [JavaScript expressions]().
+See more examples provided in [JavaScript expressions](#).
 
 :::CodeblockTabs
 ```yaml
