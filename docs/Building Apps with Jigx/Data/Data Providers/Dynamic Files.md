@@ -220,26 +220,28 @@ See [Row Level Security](<./../../../Administration/Solutions/Row Level Security
 ```yaml
 actions:
   - children:
-      - type: action.execute-entity
-        options:
-          provider: DATA_PROVIDER_DYNAMIC
-          title: Save
-          entity: expense-receipts
-          # The create method uploads files.
-          method: create
-          goBack: previous
-          data:
-           # Specify the filename, include the extension.
-            fileName: =@ctx.components.fileName.state.value
-            # Specify the file to upload.
-            file: =@ctx.components.file.state.value
-            # Set the permissions (Row level security) on the record, 
-            # the permissions will be applied to the file.  
-            authorized:
-              owners:
-                - "frank@global.com"
-              members: 
-                - "finance" 
+    - type: action.execute-entity
+      options:
+        title: Submit Expense
+        provider: DATA_PROVIDER_DYNAMIC
+        entity: default/expenses
+        # Use the create method to upload files.
+        method: create
+        goBack: previous
+        data:
+          expenseitem: =@ctx.jig.components.expenseitem.state.value
+          expenseamount: =@ctx.components.expenseamount.state.value
+        # Specify the file to be uploaded.
+        file: 
+          localPath: =@ctx.components.expenseimage.state.value  
+          fileName: =@ctx.components.fileName.state.value 
+        # Set the permissions (Row level security) on the record, 
+        # the permissions will be applied to the file.    
+        authorized:
+          owners:
+            - "frank@global.com"
+          members: 
+            - "finance"
 ```
 
 ## &#x20;Thumbnails and File Display
