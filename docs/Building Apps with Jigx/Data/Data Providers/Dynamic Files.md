@@ -222,7 +222,7 @@ actions:
   - children:
       - type: action.execute-entity
         options:
-          provider: DATA_PROVIDER_DYNAMIC_FILE
+          provider: DATA_PROVIDER_DYNAMIC
           title: Save
           entity: expense-receipts
           # The create method uploads files.
