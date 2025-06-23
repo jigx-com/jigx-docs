@@ -10,19 +10,19 @@ Actions refer to specific controls or operations that respond to an event or inp
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
 - *Execution* - actions to interact with data.
-  - [execute-entity](#)
-  - [execute-entities](#)
-  - [submit-form](#)
-  - [sync-entities](#) for getting data to the device.
+  - [execute-entity]()
+  - [execute-entities]()
+  - [submit-form]()
+  - [sync-entities]() for getting data to the device.
 - *Navigational* - actions used to navigate to another jig or Home Hub.
-  - [go-to](#)
-  - [go-back](#)
+  - [go-to]()
+  - [go-back]()
 - Actions to *open* components.
-  - [open-scanner](#)
-  - [open-url](#)
+  - [open-scanner]()
+  - [open-url]()
 - *State* - actions used to determine a specific status or value of a property or component.
-  - [set-state](#)
-  - [reset-state](#)
+  - [set-state]()
+  - [reset-state]()
 - *Events* - actions that execute after a user or device performs a trigger.
   - onRefresh
   - onFocus
@@ -32,7 +32,7 @@ Actions allow you to do many things in an app; below are the types of actions th
   - onDelete
   - onButtonPress (only on calendar jigs)
 
-For the complete list and code examples of available actions, see [actions](#).
+For the complete list and code examples of available actions, see [actions]().
 
 ## Where to add actions
 
@@ -185,7 +185,7 @@ onLoad:
 
 ## Executing multiple actions
 
-To execute a series of actions use the [action-list](#), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
+To execute a series of actions use the [action-list](), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
 
 - `False` executes the actions randomly
 - `True` executes the actions from the top down and waits for the action to complete before executing the next action in the list, making it important to list the actions in the correct order.
@@ -220,7 +220,11 @@ Local actions are configured inside the jig and only execute on that specific ji
 
 ## Global actions
 
-Often, the actions called during `onRefresh`, `onLoad`, and `onFocus` are exactly the same; this means that YAML is duplicated, which leads to bloat and possible issues when making changes. Global actions allow you to define the action once and reuse it multiple times in different jigs. You can configure the global action with parameters if an action requires context-specific values. These global actions can be called from mutiple areas, not just lifecycle events like `onFocus`.
+Often, the actions called during `onRefresh`, `onLoad`, and `onFocus` are exactly the same; this means that YAML is duplicated, which leads to bloat and possible issues when making changes. Global actions allow you to define the action once and reuse it multiple times in different jigs.&#x20;
+
+- You can configure the global action with inputs if an action requires context-specific values.&#x20;
+- These global actions can be called from mutiple areas, not just lifecycle events like `onFocus`.&#x20;
+- By using the `action.execute-action` provides greater control that enables this reuse when the same actions need to be performed in multiple places. For example, `action.sync-entities` might be called during app initialization, again when data changes, or when only a specific subset of data needs to be synced. By using `execute-action`, you can easily reuse the granular actions that handle the actual work, reducing duplication and improving maintainability.
 
 ![Global actions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9dfS44d8ZVEbfdqaNjlqs_a-global-action.png "Global actions")
 
@@ -346,7 +350,7 @@ actions:
    - `action.submit.form` is not available in global actions because the configuration is specific for each form using the `formId`.
    - `action.open-scanner` action is not available in global actions.
 3. The `when:` proprerty can be used to determine when the global action executes in a jig.
-4. Actions can be combined with components in the UI, for example [summary ](#) component.
+4. Actions can be combined with components in the UI, for example [summary ]() component.
 5. When using the `actions.action-list` as a global action you can call another global action in the global action list.
 
 :::CodeblockTabs
