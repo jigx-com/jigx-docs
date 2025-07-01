@@ -1,10 +1,4 @@
----
-title: REST Authentication
-slug: ckHj-rest-authentication
-description: Jigx supports OAuth , tokens, Basic Auth credentials, secrets, and API keys as authentication methods.
-createdAt: Mon Oct 17 2022 05:52:16 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu Aug 08 2024 09:40:13 GMT+0000 (Coordinated Universal Time)
----
+# REST Authentication
 
 # Overview
 
@@ -26,7 +20,7 @@ The `accessToken` must be specified as a parameter in the YAML. Jigx only retrie
 
 Jigx Management Configuration. See [Credentials](./../../../../Administration/Solutions/Credentials.md) for more information.
 
-![Crendentials configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x0BKDWTR6hAElQsyQIz5D_image.png "Crendentials configuration")
+![Crendentials configuration](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ytmzlj9MZ7kpcfbx_JV4d-20250701-083356.png "Crendentials configuration")
 
 Jigx Function example:
 
