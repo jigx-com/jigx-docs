@@ -22,11 +22,11 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 In the [execute-entity](), [execute-entities]() , and [submit-form]() actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
 
-| **Property** | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `replace`    | All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits.&#xA;The `queueOperation: replace` requires an `id` (must be in lowercase). This can either be configured in the: <br />* `functionParameter` of the `execute-entity` action with an `id` configured in the `parameters` of the function file.
-* `data` property in the `execute-entity` action. |
-| `add`        | All commands are added to the queue. When the `queueOperation` property is omitted, the default is `add`. |
+| **Property**                                    | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `replace`                                       | All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits.&#xA;The `queueOperation: replace` requires an `id` (must be in lowercase). This can either be configured in the: <br />\* `functionParameter` of the `execute-entity` action with an `id` configured in the `parameters` of the function file. |
+| `data` property in the `execute-entity` action. |
+| `add`                                           | All commands are added to the queue. When the `queueOperation` property is omitted, the default is `add`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 :::CodeblockTabs
 execute-entity-replace
@@ -40,13 +40,13 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record. 
-          # Not adding the replace will not break the solution but will help to avoid chattiness and 
+          # Use replace to ensure you only have one update on the queue related to a record.
+          # Not adding the replace will not break the solution but will help to avoid chattiness and
           # scenarios where backends have rate limits
           queueOperation: replace
           function: rest-update-customer
           functionParameters:
-          # id is a required property for the replace queue
+            # id is a required property for the replace queue
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -67,13 +67,13 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Using add will add a command for every update to the queue related to a record. 
+          # Using add will add a command for every update to the queue related to a record.
           # Using add can be cumbersome and costly for scenarios where backends have rate limits
           queueOperation: add
           goBack: previous
           function: rest-update-customer
           functionParameters:
-         # id is a required property for the replace queue
+            # id is a required property for the replace queue
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -82,6 +82,7 @@ actions:
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)
 ```
+
 :::
 
 Examples of configuring the required `id` property when using `queueOperation: replace`.
@@ -113,7 +114,7 @@ actions:
             address: =@ctx.components.address.state.value
             city: =@ctx.components.city.state.value
             customerType: =@ctx.components.customerType.state.value
-            email: =$lowercase(@ctx.components.email.state.value) 
+            email: =$lowercase(@ctx.components.email.state.value)
 ```
 
 execute-entity-functionparameters-id
@@ -129,14 +130,14 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record. 
-          # Not adding the replace will not break the solution but will help to avoid chattiness and 
+          # Use replace to ensure you only have one update on the queue related to a record.
+          # Not adding the replace will not break the solution but will help to avoid chattiness and
           # scenarios where backends have rate limits
           queueOperation: replace
           goBack: previous
           function: rest-update-customer
           functionParameters:
-          # id is a required property for the replace queue
+            # id is a required property for the replace queue
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -145,6 +146,7 @@ actions:
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)
 ```
+
 :::
 
 ## How to clear the queue
@@ -162,6 +164,7 @@ actions:
           title: Remove record from Queue
           id: =@ctx.datasources.region.id
 ```
+
 :::
 
 ## Queue handling for delete methods
@@ -178,26 +181,27 @@ execute-entity-delete
 ```yaml
 actions:
   - children:
-     - type: action.execute-entity
-       options:
-         title: Delete Record
-         provider: DATA_PROVIDER_REST
-         entity: customers
-         method: delete
-         # For delete use an expression to evaluate if there is a valid or tempId. If the record has a tempId it will remove all 
-         # operations related to the record from the queue. If it is a valid Id the record will use the add and place it on the queue, which will delete the record from the remote data store using the function  
-         queueOperation: =$isTempId(@ctx.current.item.id) ? replace:add
-         function: rest-delete-customer
-         functionParameters:
+      - type: action.execute-entity
+        options:
+          title: Delete Record
+          provider: DATA_PROVIDER_REST
+          entity: customers
+          method: delete
+          # For delete use an expression to evaluate if there is a valid or tempId. If the record has a tempId it will remove all
+          # operations related to the record from the queue. If it is a valid Id the record will use the add and place it on the queue, which will delete the record from the remote data store using the function
+          queueOperation: =$isTempId(@ctx.current.item.id) ? replace:add
+          function: rest-delete-customer
+          functionParameters:
             custId: =$number(@ctx.current.item.id)
-         data: 
+          data:
             id: =@ctx.current.item.id
 ```
+
 :::
 
 ## Handling TempIds
 
-All tempIds for a record are replaced in all other queued commands if a valid id is returned.  If you use a record's id in another record while offline and a valid id is returned back when the device is back online, Jigx updates the tempId used in all the other records that used it with the valid id. This makes for smoother integration with backend systems as the ids will match up. See [working with REST ids](<./Data Providers/REST/REST best practice.md>) for more information on returning the id.
+All tempIds for a record are replaced in all other queued commands if a valid id is returned. If you use a record's id in another record while offline and a valid id is returned back when the device is back online, Jigx updates the tempId used in all the other records that used it with the valid id. This makes for smoother integration with backend systems as the ids will match up. See [working with REST ids](<./Data Providers/REST/REST best practice.md>) for more information on returning the id.
 
 ## Examples and code snippets
 
@@ -224,11 +228,11 @@ header:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.jig.components.customerForm.state.data
-    
+
 datasources:
   region:
     type: datasource.sqlite
@@ -250,7 +254,7 @@ datasources:
           [us-states] AS uss
         WHERE  
           json_extract(uss.data, '$.abbreviation') = @selectedState
-        
+
       queryParameters:
         selectedState: =@ctx.components.usState.state.value
 
@@ -286,7 +290,7 @@ children:
                   label: First Name
               - type: component.text-field
                 instanceId: lastName
-                options: 
+                options:
                   label: Last Name
         - type: component.text-field
           instanceId: jobTitle
@@ -325,7 +329,7 @@ children:
                     options:
                       title: =@ctx.current.item.state
                       value: =@ctx.current.item.abbreviation
-                      leftElement: 
+                      leftElement:
                         element: avatar
                         text: =@ctx.current.item.abbreviation
                         uri: =@ctx.current.item.flag
@@ -360,10 +364,10 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: create
-          # In this scenario, the backend system returns an Id that we can use to map back to the record 
-          # locally in the Output transform of the function (rest-create-customer). You don’t need to use 
-          # queueOperation in this scenario. Once the device goes online, the record will be created, and 
-          # the id from the backend will come back. Any records with the same tempId will be updated with 
+          # In this scenario, the backend system returns an Id that we can use to map back to the record
+          # locally in the Output transform of the function (rest-create-customer). You don’t need to use
+          # queueOperation in this scenario. Once the device goes online, the record will be created, and
+          # the id from the backend will come back. Any records with the same tempId will be updated with
           # the returning id and will update the correct record.
           function: rest-create-customer
           functionParameters:
@@ -400,7 +404,6 @@ header:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
 datasources:
-
   region:
     type: datasource.static
     options:
@@ -424,14 +427,14 @@ datasources:
         - id: 3
           type: Silver
           value: Silver
-  customers: 
+  customers:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT 
           cus.id AS id, 
@@ -452,12 +455,12 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-        
+
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
-        
+
       isDocument: true
-        
+
 children:
   - type: component.form
     instanceId: customer
@@ -479,7 +482,7 @@ children:
                   initialValue: =@ctx.datasources.customers.firstName
               - type: component.text-field
                 instanceId: lastName
-                options: 
+                options:
                   label: Last Name
                   initialValue: =@ctx.datasources.customers.lastName
         - type: component.text-field
@@ -515,16 +518,16 @@ children:
         - type: component.field-row
           options:
             children:
-            - type: component.text-field
-              instanceId: state
-              options:
-                label: State
-                initialValue: =@ctx.datasources.customers.state
-            - type: component.text-field
-              instanceId: zip
-              options:
-                label: ZIP
-                initialValue: =@ctx.datasources.customers.zip
+              - type: component.text-field
+                instanceId: state
+                options:
+                  label: State
+                  initialValue: =@ctx.datasources.customers.state
+              - type: component.text-field
+                instanceId: zip
+                options:
+                  label: ZIP
+                  initialValue: =@ctx.datasources.customers.zip
         - type: component.field-row
           options:
             children:
@@ -559,14 +562,14 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record. 
-          # Not doing this will not break the solution but will help to avoid chattiness and 
+          # Use replace to ensure you only have one update on the queue related to a record.
+          # Not doing this will not break the solution but will help to avoid chattiness and
           # scenarios where backends have rate limits
           queueOperation: replace
           goBack: previous
           function: rest-update-customer
           functionParameters:
-          # id is a required function parameter when using the queueOperation: replace
+            # id is a required function parameter when using the queueOperation: replace
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -589,7 +592,7 @@ rest-create-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: POST # Create new record in the backend
-url: https://[your_rest_service]/api/customers #Use your REST service URL 
+url: https://[your_rest_service]/api/customers #Use your REST service URL
 useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
 
 parameters:
@@ -601,7 +604,7 @@ parameters:
   firstName:
     type: string
     location: body
-    required: true  
+    required: true
   lastName:
     type: string
     location: body
@@ -654,7 +657,7 @@ parameters:
     type: string
     location: body
     required: false
-   
+
 inputTransform: |
   {
     "firstName": firstName,
@@ -673,10 +676,10 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 
-# In this scenario, the backend system returns an ID that we can use to map back to the record 
-# locally in the Output transform of the function (rest-create-customer). You don’t need to use 
-# queueOperation in this scenario for Create. Once the device goes online, the record will be  
-# created, and the ID from the backend will come back. Any records with the same tempId will be  
+# In this scenario, the backend system returns an ID that we can use to map back to the record
+# locally in the Output transform of the function (rest-create-customer). You don’t need to use
+# queueOperation in this scenario for Create. Once the device goes online, the record will be
+# created, and the ID from the backend will come back. Any records with the same tempId will be
 # updated with the returning ID and will update the correct record.
 outputTransform: |
   {
@@ -690,7 +693,7 @@ rest-update-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PUT
-url: https://[your_rest_service]/api/customers #Use your REST service URL 
+url: https://[your_rest_service]/api/customers #Use your REST service URL
 useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
 format: text
 
@@ -700,7 +703,7 @@ parameters:
     required: true
     type: string
     value: service.oauth #Use manage.jigx.com to define credentials for your solution
- #id is a required property when using the queueOperation: replace 
+ #id is a required property when using the queueOperation: replace
  id:
     type: int
     location: body
@@ -761,7 +764,7 @@ parameters:
     type: string
     location: body
     required: false
-   
+
 inputTransform: |
   {
     "custId": id,
@@ -770,7 +773,7 @@ inputTransform: |
     "companyName": companyName,
     "address": address,
     "city": city,
-    "state": state, 
+    "state": state,
     "zip": zip,
     "phone1": phone1,
     "phone2": phone2,
@@ -780,8 +783,9 @@ inputTransform: |
     "customerType": customerType,
     "jobTitle": jobTitle
   }
-  
+
 ```
+
 :::
 
 ### Execute-entity with queueOperation (add)
@@ -806,7 +810,6 @@ header:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
 datasources:
-
   region:
     type: datasource.static
     options:
@@ -830,14 +833,14 @@ datasources:
         - id: 3
           type: Silver
           value: Silver
-  customers: 
+  customers:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT 
           cus.id AS id, 
@@ -858,11 +861,11 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-        
+
       queryParameters:
-        custId: =@ctx.jig.inputs.customer.id        
+        custId: =@ctx.jig.inputs.customer.id
       isDocument: true
-        
+
 children:
   - type: component.form
     instanceId: customer
@@ -884,7 +887,7 @@ children:
                   initialValue: =@ctx.datasources.customers.firstName
               - type: component.text-field
                 instanceId: lastName
-                options: 
+                options:
                   label: Last Name
                   initialValue: =@ctx.datasources.customers.lastName
         - type: component.text-field
@@ -920,16 +923,16 @@ children:
         - type: component.field-row
           options:
             children:
-            - type: component.text-field
-              instanceId: state
-              options:
-                label: State
-                initialValue: =@ctx.datasources.customers.state
-            - type: component.text-field
-              instanceId: zip
-              options:
-                label: ZIP
-                initialValue: =@ctx.datasources.customers.zip
+              - type: component.text-field
+                instanceId: state
+                options:
+                  label: State
+                  initialValue: =@ctx.datasources.customers.state
+              - type: component.text-field
+                instanceId: zip
+                options:
+                  label: ZIP
+                  initialValue: =@ctx.datasources.customers.zip
         - type: component.field-row
           options:
             children:
@@ -964,7 +967,7 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use add to queue all the updates related to a record. 
+          # Use add to queue all the updates related to a record.
           queueOperation: add
           function: rest-update-customer
           functionParameters:
@@ -990,7 +993,7 @@ rest-update-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PUT
-url: https://[your_rest_service]/api/customers #Use your REST service URL 
+url: https://[your_rest_service]/api/customers #Use your REST service URL
 useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
 format: text
 
@@ -999,7 +1002,7 @@ parameters:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials. 
+    value: service.oauth #Use manage.jigx.com to define credentials.
   id:
     type: int
     location: body
@@ -1060,7 +1063,7 @@ parameters:
     type: string
     location: body
     required: false
-   
+
 inputTransform: |
   {
     "custId": id,
@@ -1079,13 +1082,13 @@ inputTransform: |
     "customerType": customerType,
     "jobTitle": jobTitle
   }
-  
 ```
+
 :::
 
 ### Execute-entity (delete) with queueOperation (replace)
 
-In this example, when the device is offline and a customer record is updated multiple times  and then deleted, all the the commands for the record are removed from the queue and local entity is deleted. When the device is back online the queue is cleared.
+In this example, when the device is offline and a customer record is updated multiple times and then deleted, all the the commands for the record are removed from the queue and local entity is deleted. When the device is back online the queue is cleared.
 
 :::CodeblockTabs
 delete-customer
@@ -1105,24 +1108,24 @@ header:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
-onRefresh: 
+onRefresh:
   type: action.execute-action
   options:
     action: load-customers
 
 datasources:
-  customers: 
+  customers:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
-          SELECT 
-          cus.id AS id, 
-          json_extract(cus.data, '$.firstName') AS firstName, 
+          SELECT
+          cus.id AS id,
+          json_extract(cus.data, '$.firstName') AS firstName,
           json_extract(cus.data, '$.lastName') AS lastName,
           json_extract(cus.data, '$.companyName') AS companyName,
           json_extract(cus.data, '$.address') AS address,
@@ -1136,18 +1139,18 @@ datasources:
           json_extract(cus.data, '$.customerType') AS customerType,
           json_extract(cus.data, '$.jobTitle') AS jobTitle,
           json_extract(cus.data, '$.logo') AS logo
-        FROM 
+        FROM
           [customers] AS cus
-        -- ORDER BY 
+        -- ORDER BY
         --  json_extract(cus.data, '$.companyName')
-        
+
 data: =@ctx.datasources.customers
 item:
   type: component.list-item
   options:
     title: =@ctx.current.item.companyName & ' (' & @ctx.current.item.id & ')'
     subtitle: =@ctx.current.item.firstName & ' ' & @ctx.current.item.lastName
-    leftElement: 
+    leftElement:
       element: avatar
       text: =@ctx.current.item.state
       uri: =@ctx.current.item.logo
@@ -1158,7 +1161,7 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
-    onPress: 
+    onPress:
       type: action.go-to
       options:
         linkTo: update-customer
@@ -1169,23 +1172,23 @@ item:
         - label: DELETE
           icon: delete-2
           color: negative
-          onPress: 
+          onPress:
             type: action.confirm
             options:
               isConfirmedAutomatically: false
-              onConfirmed: 
+              onConfirmed:
                 type: action.execute-entity
                 options:
                   provider: DATA_PROVIDER_REST
                   entity: customers
                   method: delete
-                  # For delete use replace, If the record has tempId it will remove all 
-                  # opperations related to the record from the queue 
+                  # For delete use replace, If the record has tempId it will remove all
+                  # opperations related to the record from the queue
                   queueOperation: replace
                   function: rest-delete-customer
                   functionParameters:
                     custId: =$number(@ctx.current.item.id)
-                  data: 
+                  data:
                     id: =@ctx.current.item.id
               modal:
                 title: Are you sure?
@@ -1198,7 +1201,7 @@ rest-delete-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: DELETE
-url: https://[your_rest_service]/api/customers?id={custId} #Use your REST service URL 
+url: https://[your_rest_service]/api/customers?id={custId} #Use your REST service URL
 useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
 format: text
 
@@ -1213,11 +1216,12 @@ parameters:
     location: query
     required: true
 ```
+
 :::
 
 ### Execute-entity with queueOperations when no id is returned
 
-In this example, the remote data store does not return an id, and we need to sync the data before we get the correct backend id for the record.  We need to be careful not to create and update the same record on the queue because the backend cannot associate the records after the sync. To accomodate for this in the update-customer jig we configure two `execute-entity` actions.
+In this example, the remote data store does not return an id, and we need to sync the data before we get the correct backend id for the record. We need to be careful not to create and update the same record on the queue because the backend cannot associate the records after the sync. To accomodate for this in the update-customer jig we configure two `execute-entity` actions.
 
 - The first action checks to see if a record has a tempId by using the following expression `when: =$isTempId(@ctx.jig.inputs.customer.id)`. If the record on the queue has a tempId, we replace it using the **create** method with a new item that will be placed on the queue.
 - The second action checks to see if the record has a valid Id rather than a tempId by using the following expression
@@ -1240,11 +1244,11 @@ header:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
-onFocus: 
+onFocus:
   type: action.reset-state
   options:
     state: =@ctx.jig.components.customerForm.state.data
-    
+
 datasources:
   region:
     type: datasource.sqlite
@@ -1266,7 +1270,7 @@ datasources:
           [us-states] AS uss
         WHERE  
           json_extract(uss.data, '$.abbreviation') = @selectedState
-        
+
       queryParameters:
         selectedState: =@ctx.components.usState.state.value
 
@@ -1302,7 +1306,7 @@ children:
                   label: First Name
               - type: component.text-field
                 instanceId: lastName
-                options: 
+                options:
                   label: Last Name
         - type: component.text-field
           instanceId: jobTitle
@@ -1341,7 +1345,7 @@ children:
                     options:
                       title: =@ctx.current.item.state
                       value: =@ctx.current.item.abbreviation
-                      leftElement: 
+                      leftElement:
                         element: avatar
                         text: =@ctx.current.item.abbreviation
                         uri: =@ctx.current.item.flag
@@ -1376,10 +1380,10 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: create
-          # In this scenario, the backend system does not return an ID, you need to sync 
-          # the data before we get the correct backend ID for the record. With this in mind, 
-          # you'll need to be careful not to create and update the same record on the queue 
-          # because the backend cannot associate the records after the sync. Have a look at 
+          # In this scenario, the backend system does not return an ID, you need to sync
+          # the data before we get the correct backend ID for the record. With this in mind,
+          # you'll need to be careful not to create and update the same record on the queue
+          # because the backend cannot associate the records after the sync. Have a look at
           # the Update jig to see the correct way of dealing with this scenario.
           function: rest-create-customer
           functionParameters:
@@ -1416,7 +1420,6 @@ header:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
 
 datasources:
-
   region:
     type: datasource.static
     options:
@@ -1440,14 +1443,14 @@ datasources:
         - id: 3
           type: Silver
           value: Silver
-  customers: 
+  customers:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT 
           cus.id AS id, 
@@ -1468,11 +1471,11 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-        
+
       queryParameters:
-        custId: =@ctx.jig.inputs.customer.id   
+        custId: =@ctx.jig.inputs.customer.id
       isDocument: true
-        
+
 children:
   - type: component.form
     instanceId: customer
@@ -1494,7 +1497,7 @@ children:
                   initialValue: =@ctx.datasources.customers.firstName
               - type: component.text-field
                 instanceId: lastName
-                options: 
+                options:
                   label: Last Name
                   initialValue: =@ctx.datasources.customers.lastName
         - type: component.text-field
@@ -1530,16 +1533,16 @@ children:
         - type: component.field-row
           options:
             children:
-            - type: component.text-field
-              instanceId: state
-              options:
-                label: State
-                initialValue: =@ctx.datasources.customers.state
-            - type: component.text-field
-              instanceId: zip
-              options:
-                label: ZIP
-                initialValue: =@ctx.datasources.customers.zip
+              - type: component.text-field
+                instanceId: state
+                options:
+                  label: State
+                  initialValue: =@ctx.datasources.customers.state
+              - type: component.text-field
+                instanceId: zip
+                options:
+                  label: ZIP
+                  initialValue: =@ctx.datasources.customers.zip
         - type: component.field-row
           options:
             children:
@@ -1569,9 +1572,9 @@ children:
 actions:
   - children:
       - type: action.execute-entity
-        # The best way to tell if a record has a temp ID is to use the following function 
-        # =$isTempId(@ctx.jig.inputs.customer.id). If you have a record on the queue with 
-        # a temp ID, you need to replace it with a new item that will be placed on the queue. 
+        # The best way to tell if a record has a temp ID is to use the following function
+        # =$isTempId(@ctx.jig.inputs.customer.id). If you have a record on the queue with
+        # a temp ID, you need to replace it with a new item that will be placed on the queue.
         when: =$isTempId(@ctx.jig.inputs.customer.id)
         options:
           title: Update Customer
@@ -1583,7 +1586,7 @@ actions:
           # Replace current create on the queue
           queueOperation: replace
           # Replace requires an id, if no id is specified in the functionParameter,
-          # use the data property to specify the id. 
+          # use the data property to specify the id.
           data:
             id: =@ctx.jig.inputs.customer.id
           functionParameters:
@@ -1634,7 +1637,7 @@ rest-create-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: POST # Create new record in the backend
-url: url: https://[your_rest_service]/api/customers #Use your REST service URL 
+url: url: https://[your_rest_service]/api/customers #Use your REST service URL
 useLocalCall: true
 
 parameters:
@@ -1646,7 +1649,7 @@ parameters:
   firstName:
     type: string
     location: body
-    required: true  
+    required: true
   lastName:
     type: string
     location: body
@@ -1699,7 +1702,7 @@ parameters:
     type: string
     location: body
     required: false
-   
+
 inputTransform: |
   {
     "firstName": firstName,
@@ -1707,7 +1710,7 @@ inputTransform: |
     "companyName": companyName,
     "address": address,
     "city": city,
-    "state": state, 
+    "state": state,
     "zip": zip,
     "phone1": phone1,
     "phone2": phone2,
@@ -1718,12 +1721,13 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 
-# In this scenario, the backend system does not return an ID, you need to sync 
-# the data before we get the correct backend ID for the record. With this in mind, 
-# you'll need to be careful not to create and update the same record on the queue 
-# because the backend cannot associate the records after the sync. Have a look at 
+# In this scenario, the backend system does not return an ID, you need to sync
+# the data before we get the correct backend ID for the record. With this in mind,
+# you'll need to be careful not to create and update the same record on the queue
+# because the backend cannot associate the records after the sync. Have a look at
 # the Update jig to see the correct way of dealing with this scenario.
 ```
+
 :::
 
 ### Clear all commands in the queue for record
@@ -1771,14 +1775,14 @@ datasources:
         - id: 3
           type: Silver
           value: Silver
-  customers: 
+  customers:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT 
           cus.id AS id, 
@@ -1799,10 +1803,10 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-        
+
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
-        
+
 children:
   - type: component.form
     instanceId: customer
@@ -1824,7 +1828,7 @@ children:
                   initialValue: =@ctx.datasources.customers.firstName
               - type: component.text-field
                 instanceId: lastName
-                options: 
+                options:
                   label: Last Name
                   initialValue: =@ctx.datasources.customers.lastName
         - type: component.text-field
@@ -1860,16 +1864,16 @@ children:
         - type: component.field-row
           options:
             children:
-            - type: component.text-field
-              instanceId: state
-              options:
-                label: State
-                initialValue: =@ctx.datasources.customers.state
-            - type: component.text-field
-              instanceId: zip
-              options:
-                label: ZIP
-                initialValue: =@ctx.datasources.customers.zip
+              - type: component.text-field
+                instanceId: state
+                options:
+                  label: State
+                  initialValue: =@ctx.datasources.customers.state
+              - type: component.text-field
+                instanceId: zip
+                options:
+                  label: ZIP
+                  initialValue: =@ctx.datasources.customers.zip
         - type: component.field-row
           options:
             children:
@@ -1904,8 +1908,8 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record. 
-          # Not doing this will not break the solution but will help to avoid chattiness and 
+          # Use replace to ensure you only have one update on the queue related to a record.
+          # Not doing this will not break the solution but will help to avoid chattiness and
           # scenarios where backends have rate limits
           queueOperation: replace
           function: rest-update-customer
@@ -1931,6 +1935,7 @@ actions:
           title: Cancel all updates
           id: =@ctx.jig.inputs.customer.id
 ```
+
 :::
 
 ### Testing and debugging queues
@@ -1964,7 +1969,7 @@ datasources:
         FROM [_commandQueue]
       queryParameters:
         dummy: =@ctx.jig.inputs.dummyID
-    
+
 data: =@ctx.datasources.listdata
 item:
   type: component.list-item
@@ -1973,7 +1978,5 @@ item:
     subtitle: =@ctx.current.item.type & ' ' & @ctx.current.item.state
     description: =@ctx.current.item.error
 ```
+
 :::
-
-
-

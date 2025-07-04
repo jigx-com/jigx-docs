@@ -66,18 +66,20 @@ The following properties are available for configuration when handling REST erro
 
 | **Property**   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`  | Provide a user friendly message of the error, for example, "*It looks like our system is unavailable*." Defaults to the provider's description if absent. For example, the REST provider uses the HTTP status code and message. The description property supports [localization](<./../../../Additional functionality/Localization.md>).   |
-| `details`  | Add additional information that will display under the description. Defaults to the provider's details if absent.  |
-| `icon`  | Select an [icon](<./../../../../Understanding the basics/Jigx icons.md>)  to show on the error notification screen.   |
-| `notification` | Determines whether the notification should be shown on the device. (true/false)  |
-| `retry`  | Provides the ability to configure an automatic retry, set a `delay` time before the retry is executed and specify the `maximum` number of retries allowed. &#xA;By default, Jigx automatically handles **429** (Too Many Requests) error responses for CRUD and sync methods by retrying the request up to three times, with a five-second delay between each attempt. If the request still fails after the third retry, the error is raised in the app. You can customize this behavior by configuring the handling of the 429 status in the `error` property. |
-| `table`  | Define a table where the error information specified in the `transform` property will be logged to, for example:&#xA;`table: =@ctx.entity & "_error"` |
-| `title`        | Title that displays on the toast notification. Defaults to the provider's title if not provided. The title property supports [localization](<./../../../Additional functionality/Localization.md>).   |
-| `transform`    | Specifies the details to log in the table for the error, such as the request, response, and user context, for example:<br />`'={ "id": @ctx.commandId, "type": "System Offline", 
-      "screen": "system-offline",  "response": @ctx.response, 
+| `description`  | Provide a user friendly message of the error, for example, "_It looks like our system is unavailable_." Defaults to the provider's description if absent. For example, the REST provider uses the HTTP status code and message. The description property supports [localization](<./../../../Additional functionality/Localization.md>).                                                                                                                                                                                                                        |
+| `details`      | Add additional information that will display under the description. Defaults to the provider's details if absent.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `icon`         | Select an [icon](<./../../../../Understanding the basics/Jigx icons.md>) to show on the error notification screen.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `notification` | Determines whether the notification should be shown on the device. (true/false)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `retry`        | Provides the ability to configure an automatic retry, set a `delay` time before the retry is executed and specify the `maximum` number of retries allowed. &#xA;By default, Jigx automatically handles **429** (Too Many Requests) error responses for CRUD and sync methods by retrying the request up to three times, with a five-second delay between each attempt. If the request still fails after the third retry, the error is raised in the app. You can customize this behavior by configuring the handling of the 429 status in the `error` property. |
+| `table`        | Define a table where the error information specified in the `transform` property will be logged to, for example:&#xA;`table: =@ctx.entity & "_error"`                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `title`        | Title that displays on the toast notification. Defaults to the provider's title if not provided. The title property supports [localization](<./../../../Additional functionality/Localization.md>).                                                                                                                                                                                                                                                                                                                                                             |
+| `transform`    | Specifies the details to log in the table for the error, such as the request, response, and user context, for example:<br />'={ "id": @ctx.commandId, "type": "System Offline",                                                                                                                                                                                                                                                                                                                                                                                 |
+
+      "screen": "system-offline",  "response": @ctx.response,
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
-      "entity": @ctx.entity, "correlationId": @ctx.correlationId}'`  |
-| `when`   | Checks if the result of the function is an error, the first one that resolves to true is used.  - The REST provider uses a combination of actual errors encountered and the HTTP status code and message. Configure different types of actions depending on the error received, by using multiple `when` statements.&#xA;- If the property is not configured it defaults to the REST provider's default error check.  |
+      "entity": @ctx.entity, "correlationId": @ctx.correlationId}'  |
+
+| `when` | Checks if the result of the function is an error, the first one that resolves to true is used. - The REST provider uses a combination of actual errors encountered and the HTTP status code and message. Configure different types of actions depending on the error received, by using multiple `when` statements.&#xA;- If the property is not configured it defaults to the REST provider's default error check. |
 
 **Example configuration:**
 
@@ -90,13 +92,12 @@ rest-function
 error:
   - when: =@ctx.response.status = 403
     title: System Offline
-    description: 
-      It looks like our system is temporarily unavailable. 
-      We're working hard to fix this and get things back on 
-      track. Please try again in a little while. Thank you 
+    description: It looks like our system is temporarily unavailable.
+      We're working hard to fix this and get things back on
+      track. Please try again in a little while. Thank you
       for your patience!
-# Set an automatic retry, specify the delay before the retry is actioned,
-# Set the number of retries allowed.      
+    # Set an automatic retry, specify the delay before the retry is actioned,
+    # Set the number of retries allowed.
     retry:
       delay: "=(@.response.headers.'retry-after' ? $number(@.response.headers.'retry-after') : 5)*1000"
       maxRetries: 3
@@ -104,12 +105,12 @@ error:
     icon: server-error-403-hand-forbidden
     notification: false
     table: datasync-error
-    transform: 
-      '={ "id": @ctx.parameters.syncId, "type": "System Offline", 
-      "screen": "system-offline",  "response": @ctx.response, 
+    transform: '={ "id": @ctx.parameters.syncId, "type": "System Offline",
+      "screen": "system-offline",  "response": @ctx.response,
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
+
 :::
 
 ## Error logging
@@ -129,48 +130,52 @@ When configuring REST errors, several system expressions and variables can be us
 | commandId     | Unique id logged for the item on the commandQueue. &#xA;The id matches the id in the entity table.                                                                                                                                                                                                                                                        |
 | correlationId | The unique identifier that appears in the app. It is used in [troubleshooting](<./../../../../Administration/Solutions/Troubleshooting _Solution_.md>) to help identify specific entries in the logs and to follow the user's journey while using the solution in the app. By filtering logs using this ID, you can troubleshoot issues more effectively. |
 | entity        | The specified table where the error context is logged                                                                                                                                                                                                                                                                                                     |
-| error         | - message: string&#x20;
+| error         | - message: string&#x20;                                                                                                                                                                                                                                                                                                                                   |
+
 - title: string
 - description: string
 - details: string
 - icon: string
 - table: string
-- notification: boolean                                                                                                                                                                                                                    |
-| parameters    | Specify any of the parameters in the function to be logged to the error table.                                                                                                                                                                                                                                                                            |
-| request       | * method: string
+- notification: boolean |
+  | parameters | Specify any of the parameters in the function to be logged to the error table. |
+  | request | \* method: string
+
 * url: string
 * headers: Record\<string, string>
-* body\:string\|Buffer                                                                                                                                                                                                                                                                  |
-| response      | - ok: boolean
+* body\:string\|Buffer |
+  | response | - ok: boolean
+
 - status: number
 - statusText: string
 - headers: Record\<string, string>
-- body: any                                                                                                                                                                                                                                                        |
-| solution      | * id: SolutionId
+- body: any |
+  | solution | \* id: SolutionId
+
 * name: SolutionName
 * organizationId: OrganizationId
 * settings:&#x20;
-  - custom: Record\<string, unknown>                                                                                                                                                                                                                             |
-| user          | - id: string
+  - custom: Record\<string, unknown> |
+    | user | - id: string
+
 - email: string
 - displayName: string
 - avatarUrl: string
 - phone: string
 - isVerified: boolean
-- settings: Record\<string, unknown>                                                                                                                                                                                                         |
+- settings: Record\<string, unknown> |
 
 :::CodeblockTabs
 function-error-table
 
 ```yaml
- # Configure the error table and the data to log to the table,
- # in the error section of the function.
- table: =@ctx.entity & "_error"
- transform: 
-   '={ "id": @ctx.commandId, "type": "System Offline", 
-   "screen": "system-offline",  "response": @ctx.response, 
-   "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
-   "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
+# Configure the error table and the data to log to the table,
+# in the error section of the function.
+table: =@ctx.entity & "_error"
+transform: '={ "id": @ctx.commandId, "type": "System Offline",
+  "screen": "system-offline",  "response": @ctx.response,
+  "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
+  "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
 
 error-datasource
@@ -185,24 +190,24 @@ options:
   entities:
     - entity: datasync-error
 
-  query: 
-    SELECT 
-      id,
-      json_extract(err.data, '$.response.ok') as ok, 
-      json_extract(err.data, '$.response.status') as status, 
-      json_extract(err.data, '$.response.statusText') as statusText, 
-      json_extract(err.data, '$.response.headers') as headers, 
-      json_extract(err.data, '$.response.body') as body,
-      json_extract(err.data, '$.screen') as screen,
-      json_extract(err.data, '$.type') as type
-    FROM 
-      [datasync-error] AS err
+  query: SELECT
+    id,
+    json_extract(err.data, '$.response.ok') as ok,
+    json_extract(err.data, '$.response.status') as status,
+    json_extract(err.data, '$.response.statusText') as statusText,
+    json_extract(err.data, '$.response.headers') as headers,
+    json_extract(err.data, '$.response.body') as body,
+    json_extract(err.data, '$.screen') as screen,
+    json_extract(err.data, '$.type') as type
+    FROM
+    [datasync-error] AS err
 ```
+
 :::
 
 ## commandQueue table & actions
 
-The commandQueue is a system table, when a device is offline items are queued on the table. When the device comes online the items in the queue are processed. However, if items on the queue go into error, they are not processed and remain on the queue.  Errors from REST methods, except for `action.sync-entity/entities` are queued in the commandQueue table. The commandQueue is exposed in Jigx Dev tools, allowing you to [debug](<./../../../Jigx Builder _code editor_/Debugging.md>) . You can expose the commandQueue table in a jig and then use the commandQueue actions to interact with the queued items that are in error state by either performing a retry or delete. Take note that when syncing an item or when the device is offline the `commandId` is not available.
+The commandQueue is a system table, when a device is offline items are queued on the table. When the device comes online the items in the queue are processed. However, if items on the queue go into error, they are not processed and remain on the queue. Errors from REST methods, except for `action.sync-entity/entities` are queued in the commandQueue table. The commandQueue is exposed in Jigx Dev tools, allowing you to [debug](<./../../../Jigx Builder _code editor_/Debugging.md>) . You can expose the commandQueue table in a jig and then use the commandQueue actions to interact with the queued items that are in error state by either performing a retry or delete. Take note that when syncing an item or when the device is offline the `commandId` is not available.
 
 ![commandQueue](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0iZcYVQhGLEkow2WFIWNg-20241010-080218.png "commandQueue")
 
@@ -216,20 +221,20 @@ There are two actions related specifically to the commandQueue namely:
 **Action configuration:**
 
 ```yaml
-    swipeable:
-      left:
-        - icon: close
-          label: Delete
-          onPress:
-            type: action.delete-queue-command
-            options:
-              id: =@ctx.current.item.id
-        - icon: button-refresh-arrow
-          label: Retry
-          onPress:
-            type: action.retry-queue-command
-            options:
-              id: =@ctx.current.item.id
+swipeable:
+  left:
+    - icon: close
+      label: Delete
+      onPress:
+        type: action.delete-queue-command
+        options:
+          id: =@ctx.current.item.id
+    - icon: button-refresh-arrow
+      label: Retry
+      onPress:
+        type: action.retry-queue-command
+        options:
+          id: =@ctx.current.item.id
 ```
 
 ### Considerations
@@ -240,7 +245,7 @@ There are two actions related specifically to the commandQueue namely:
 
 ![commandId & error id](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-6n7sjDXlMY1HZXwOuN78T-20241022-104927.png "commandId & error id")
 
-- Use the \_commandQueue table as a datasource in your solution.  It behaves like a normal entity table with change events and updates.
+- Use the \_commandQueue table as a datasource in your solution. It behaves like a normal entity table with change events and updates.
 - When `useLocalCall: true` is set, functions that rely on secrets or other authentication mechanisms not available locally will not execute.
 
 ## Examples and code snippets

@@ -1,7 +1,7 @@
 ---
 title: Jigx icons
 slug: kCd_-icons
-description: Improve user navigation and interaction in your mobile app with Jigx's predefined set of icons. Easily incorporate icons into UI components, jigs, and widgets using YAML code. Preview icons by publishing or referring to a list, and for any missing icons, 
+description: Improve user navigation and interaction in your mobile app with Jigx's predefined set of icons. Easily incorporate icons into UI components, jigs, and widgets using YAML code. Preview icons by publishing or referring to a list, and for any missing icons,
 createdAt: Wed Sep 13 2023 11:52:15 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 05 2024 14:12:20 GMT+0000 (Coordinated Universal Time)
 ---
@@ -10,11 +10,11 @@ Incorporating icons into your mobile app design enhances user navigation and int
 
 ### Where can you use icons?
 
-While creating your solution, you can configure certain UI components, jigs, and widgets to use icons in the YAML. Additionally, you can determine the icon's position, size, and interaction. Use IntelliSense (ctrl+space) in the YAML in Jigx Builder to determine if you can specify an icon. Choose an icon from the list and configure the provided properties if you can.  Examples of properties that use icons are `leftElement`, `rightElement`, and `leftIcon`. Here is an example showing you how to specify an icon in a `leftElement` and how to use an [expression](<./../Building Apps with Jigx/Logic/Expressions.md>) to determine which icon to display depending on the current list item.
+While creating your solution, you can configure certain UI components, jigs, and widgets to use icons in the YAML. Additionally, you can determine the icon's position, size, and interaction. Use IntelliSense (ctrl+space) in the YAML in Jigx Builder to determine if you can specify an icon. Choose an icon from the list and configure the provided properties if you can. Examples of properties that use icons are `leftElement`, `rightElement`, and `leftIcon`. Here is an example showing you how to specify an icon in a `leftElement` and how to use an [expression](<./../Building Apps with Jigx/Logic/Expressions.md>) to determine which icon to display depending on the current list item.
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG"  size="80" position="center" caption="List icons in a list" alt="List icons in a list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG" size="80" position="center" caption="List icons in a list" alt="List icons in a list"}
 :::
 
 ::::VerticalSplitItem
@@ -26,10 +26,11 @@ type: component.list-item
   options:
     title: =@ctx.current.item.service
     subtitle: =@ctx.current.item.time & 'minutes for task completion'
-    leftElement: 
+    leftElement:
       element: icon
       icon: =(@ctx.current.item.materials) = true ? 'home' :'car-garage'
 ```
+
 :::
 ::::
 :::::
@@ -52,6 +53,7 @@ title: Home Security
 type: jig.default
 icon: alarm-bell
 ```
+
 :::
 ::::
 
@@ -65,13 +67,14 @@ YAML (icon value)
 summary:
   children:
     type: component.summary
-    options: 
+    options:
       layout: default
       title: Add to cart
       leftIcon:
         element: icon
         icon: currency-dollar-circle
 ```
+
 :::
 ::::
 :::::
@@ -103,9 +106,8 @@ The following applies to the asset list:
 
 ### Icons in actions
 
-Adding an `icon` property in an action* *only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
+Adding an `icon` property in an action only applies to `swipeable`, `secondary`, and `header` actions. Primary actions do not support icon setups.
 
 ### Can I add custom icons?
 
 The list of icons is not customizable, and you cannot add custom icons. If you are unable to find the icon you need, contact **support\@jigx.com**.
-

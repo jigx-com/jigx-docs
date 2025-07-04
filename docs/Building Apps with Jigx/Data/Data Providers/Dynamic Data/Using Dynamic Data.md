@@ -5,7 +5,7 @@ createdAt: Tue Nov 21 2023 12:07:20 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Aug 08 2024 09:35:26 GMT+0000 (Coordinated Universal Time)
 ---
 
-Once you have created the Dynamic Data [tables](<./Creating tables.md>)  as well as,  [columns and data records](<./Creating columns _ data records.md>) the data can be used in multiple places in a solution.&#x20;
+Once you have created the Dynamic Data [tables](<./Creating tables.md>) as well as, [columns and data records](<./Creating columns _ data records.md>) the data can be used in multiple places in a solution.&#x20;
 
 Dynamic Data can be:
 
@@ -17,20 +17,20 @@ Dynamic Data can be:
 
 ### As a datasource
 
-The Dynamic Data provider is used in Jigx Builder in the SQLite datasource either inside a single jig (locally) or under the datasources folder structure (global), allowing the data to be called once and reused throughout the solution in multiple jigs. Write SQLite queries to return the exact data you need to work with. 
+The Dynamic Data provider is used in Jigx Builder in the SQLite datasource either inside a single jig (locally) or under the datasources folder structure (global), allowing the data to be called once and reused throughout the solution in multiple jigs. Write SQLite queries to return the exact data you need to work with.
 
 :::CodeblockTabs
 sqlite-datasource-dd
 
 ```yaml
 # use the sqlite datasource with the dynamic data provider
-type: 'datasource.sqlite'
+type: "datasource.sqlite"
 options:
   provider: DATA_PROVIDER_DYNAMIC
   entities:
     - entity: default/employee
-# write sqlite query syntax to return data needed in the jig/solution
-  query: | 
+  # write sqlite query syntax to return data needed in the jig/solution
+  query: |
     SELECT 
       id, 
       '$.firstname', 
@@ -47,13 +47,13 @@ options:
       '$.category', 
       '$.modify' 
     FROM [default/employees] WHERE '$.category' = "employee-detail"
-
 ```
+
 :::
 
-### In components&#x20;
+### In components
 
-Once you have created the `datasource.sqlite` with the Dynamic Data provider as shown above,  the data is referenced in components using [Expressions](./../../../Logic/Expressions.md), such as `=@ctx.datasources.employee`
+Once you have created the `datasource.sqlite` with the Dynamic Data provider as shown above, the data is referenced in components using [Expressions](./../../../Logic/Expressions.md), such as `=@ctx.datasources.employee`
 
 ```yaml
 children:
@@ -63,7 +63,7 @@ children:
         - type: component.dropdown
           instanceId: dropdown-in
           options:
-          # use an expression to reference the dynamic data datasource to use in the form
+            # use an expression to reference the dynamic data datasource to use in the form
             data: =@ctx.datasources.employee
             label: Select employees
             isSearchable: true
@@ -71,26 +71,26 @@ children:
               type: component.dropdown-item
               instanceId: =@ctx.current.item.firstname
               options:
-              # use an expression to reference the exact data entry to use in the drop-down component on the form
+                # use an expression to reference the exact data entry to use in the drop-down component on the form
                 value: =@ctx.current.item.firstname
                 title: =@ctx.current.item.firstname
                 subtitle: =@ctx.current.item.lastname
-                leftElement: 
+                leftElement:
                   element: avatar
-                  text: ''
+                  text: ""
                   uri: =@ctx.current.item.photo
 ```
 
-### In actions&#x20;
+### In actions
 
-***Execution**** *actions are designed to interact with specifically with data. The following actions can be used with the Dynamic Data provider either to create, update, delete, or sync data.
+**Execution** actions are designed to interact with specifically with data. The following actions can be used with the Dynamic Data provider either to create, update, delete, or sync data.
 
 - [execute-entity]()
 - [execute-entities]()
 - [submit-form]()
 - [sync-entities]() for getting data to the device.
 
-***Events**** *actions execute after an event is performed by a user or device. This event can be configured to use the Dynamic Data provider, for example, when refreshing a list jigby pulling down (onRefresh) use the `action.sync-entities` with the provider to refresh the data in the list. The following event actions are available.
+**Events** actions execute after an event is performed by a user or device. This event can be configured to use the Dynamic Data provider, for example, when refreshing a list jigby pulling down (onRefresh) use the `action.sync-entities` with the provider to refresh the data in the list. The following event actions are available.
 
 - onRefresh
 - onFocus
@@ -110,4 +110,3 @@ The following examples with code snippets are provided:
 - [Reading Dynamic Data]()
 - [Updating Dynamic Data]()
 - [Deleting Dynamic Data]()
-

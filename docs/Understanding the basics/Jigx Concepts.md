@@ -4,13 +4,13 @@ Jigx uses concepts, terminology, and elements you might not be familiar with. Be
 
 ## Jigx Solutions
 
-Jigx refers to a native mobile app as a *solution*. With Jigx you can build and publish more than one solution to your Jigx mobile app. You can *switch* between solutions by tapping the *More* ellipsis icon in the navigation bar and selecting your desired solution. The currently active solution is highlighted with a checkmark icon. If only one solution is available, the *More* icon is hidden.
+Jigx refers to a native mobile app as a _solution_. With Jigx you can build and publish more than one solution to your Jigx mobile app. You can _switch_ between solutions by tapping the _More_ ellipsis icon in the navigation bar and selecting your desired solution. The currently active solution is highlighted with a checkmark icon. If only one solution is available, the _More_ icon is hidden.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_wNc-4qfpMvnhWhjpKEx8-20250429-113930.png" size="76" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_wNc-4qfpMvnhWhjpKEx8-20250429-113930.png" caption}
 
 ## Home Hub
 
-The *home hub* is the first screen you see when you open and sign into the Jigx mobile app. The Home Hub can display navigational menu blocks called *grid-items*, containing *images*, *widgets*, or custom controls. Once you tap on a grid-item, you are directed to a jig, which is a screen used to display various forms of content. The *index.jigx* file ﻿is the place to configure the bottom navigation bar. In addition to grid-items, you can style the Home Hub by adding a [video-player](#) or [carousel](#) at the top of the Home Hub. For more information, see ﻿[Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).
+The _home hub_ is the first screen you see when you open and sign into the Jigx mobile app. The Home Hub can display navigational menu blocks called _grid-items_, containing _images_, _widgets_, or custom controls. Once you tap on a grid-item, you are directed to a jig, which is a screen used to display various forms of content. The _index.jigx_ file ﻿is the place to configure the bottom navigation bar. In addition to grid-items, you can style the Home Hub by adding a [video-player](#) or [carousel](#) at the top of the Home Hub. For more information, see ﻿[Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
@@ -24,25 +24,25 @@ The *home hub* is the first screen you see when you open and sign into the Jigx 
 
 ## Jigx Builder
 
-Native mobile solutions are built in Microsoft Visual Studio Code, a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the [Jigx Builder](<./../Building Apps with Jigx/Jigx Builder _code editor_.md>), which is an extension that allows you to build, test, and publish Jigx mobile app solutions. The Jigx Builder\*\* **extension uses YAML, SQL, JSON, and JSONata. A YAML editor is provided that includes IntelliSense, which allows for code completion by simultaneously pressing the control and spacebar** (ctrl+space)\*\* keys. Only valid options in the current cursor context are displayed in the code popup. There is built-in [debugging](<./../Building Apps with Jigx/Jigx Builder _code editor_/Debugging.md>) functionality to assist with troubleshooting your development. Predefined code snippets are provided in the .jigx files to help make development easier and faster. The Jigx Builder loads with a [folder structure](<./../Building Apps with Jigx/Jigx Builder _code editor_/Editor.md>) to categorize the various files needed to build app solutions. These folders are actions, assets, databases, datasources, functions, jigs, and translations.
+Native mobile solutions are built in Microsoft Visual Studio Code, a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the [Jigx Builder](<./../Building Apps with Jigx/Jigx Builder _code editor_.md>), which is an extension that allows you to build, test, and publish Jigx mobile app solutions. The **Jigx Builder** extension uses YAML, SQL, JSON, and JSONata. A YAML editor is provided that includes IntelliSense, which allows for code completion by simultaneously pressing the control and spacebar (ctrl+space) keys. Only valid options in the current cursor context are displayed in the code popup. There is built-in [debugging](<./../Building Apps with Jigx/Jigx Builder _code editor_/Debugging.md>) functionality to assist with troubleshooting your development. Predefined code snippets are provided in the .jigx files to help make development easier and faster. The Jigx Builder loads with a [folder structure](<./../Building Apps with Jigx/Jigx Builder _code editor_/Editor.md>) to categorize the various files needed to build app solutions. These folders are actions, assets, databases, datasources, functions, jigs, and translations.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a3BeBpSf7SYH-LJZfNEEN_debug-1.png)
 
 ## index.jigx file
 
-The *index.jigx* file is located at the root of the Jigx solution project in the Jigx Builder.  In the index.jigx file, you configure what must be displayed on the home screen (Home Hub) of your solution on the Jigx mobile app. The file opens with a pre-populated code snippet to help you configure the Home Hub. For more information, see [Index settings](<./../Building Apps with Jigx/UI/Home Hub/Index settings.md>), and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).
+The _index.jigx_ file is located at the root of the Jigx solution project in the Jigx Builder. In the index.jigx file, you configure what must be displayed on the home screen (Home Hub) of your solution on the Jigx mobile app. The file opens with a pre-populated code snippet to help you configure the Home Hub. For more information, see [Index settings](<./../Building Apps with Jigx/UI/Home Hub/Index settings.md>), and [Creating a Home Hub](<./../Building Apps with Jigx/UI/Home Hub/Creating a Home Hub.md>).
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-azAL6hODEfRAYi74InkkG-20250212-183522.png)
 
 ## Widgets
 
-Widgets are navigational menu blocks set up on jigs, allowing them to be utilized in various parts of the solution, including the Home Hub and multiple jigs (screens). These widgets are configurable to display various UI elements, such as locations, images, charts, and more. For more information, see  [Content widget components](#).
+Widgets are navigational menu blocks set up on jigs, allowing them to be utilized in various parts of the solution, including the Home Hub and multiple jigs (screens). These widgets are configurable to display various UI elements, such as locations, images, charts, and more. For more information, see [Content widget components](#).
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" size="36" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-U_hOcdAx5wOjx7J-NL2gi-20250203-100429.png" caption}
 
 ## Jig
 
-A jig is a container used to configure content. A jig can be configured as a calendar, a form to capture or view data, a PDF or HTML document, a list of data, or even a combination of any one of these. Usually, tapping on a widget in the [Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) opens a jig. For more information, see [Jigs (screens)](<./../Building Apps with Jigx/UI/Jigs _screens_.md>) and  [Jig Types](#) sections in this guide.
+A jig is a container used to configure content. A jig can be configured as a calendar, a form to capture or view data, a PDF or HTML document, a list of data, or even a combination of any one of these. Usually, tapping on a widget in the [Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) opens a jig. For more information, see [Jigs (screens)](<./../Building Apps with Jigx/UI/Jigs _screens_.md>) and [Jig Types](#) sections in this guide.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-likbr1gN2hI0tdoCzt-wk-20250225-122635.png" size="66" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-likbr1gN2hI0tdoCzt-wk-20250225-122635.png" caption}
 
@@ -54,7 +54,7 @@ Components are elements that can be used when creating a Jigx solution in the Ji
 
 ## Actions
 
-Actions allow you to do something, for example, go back to a previous screen, open a URL, or submit a form. For more information on the available actions as well as code samples for each one, see the [actions](<./../Building Apps with Jigx/UI/Actions.md>) and  [action examples](#) sections of this guide.
+Actions allow you to do something, for example, go back to a previous screen, open a URL, or submit a form. For more information on the available actions as well as code samples for each one, see the [actions](<./../Building Apps with Jigx/UI/Actions.md>) and [action examples](#) sections of this guide.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EAqLrPaYYsWtn09XM4nsm_image-2023-05-11-at-1916.jpeg" size="70" caption position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EAqLrPaYYsWtn09XM4nsm_image-2023-05-11-at-1916.jpeg"}
 
@@ -101,4 +101,3 @@ The Jigx app is available on iOS and Android and works on any device.
 
 - [Jigx color palette](<./Jigx color palette.md>)
 - [Jigx icons](<./Jigx icons.md>)
-

@@ -64,8 +64,8 @@ This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx 
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m3H4MSa6irQtbns5rtwb_image.png" size="40" position="center" caption="Applications" alt="Applications"}
 
-16\. Select the **three checkboxes** and add [https://oauth.jigx.com/jigx/](https://oauth.jiigx.com/jigx/) in the custom URL section. If you are configuring this for a Jigx Branded app replace /jigx/ with the name of the branded app as specified in its app configuration. For example, [https://oauth.jigx.com/nintex/.
-](https://oauth.jiigx.com/nintex/)Click on **Configure** to save the changes.
+16\. Select the **three checkboxes** and add [https://oauth.jigx.com/jigx/](https://oauth.jiigx.com/jigx/) in the custom URL section. If you are configuring this for a Jigx Branded app replace /jigx/ with the name of the branded app as specified in its app configuration. For example, [https://oauth.jigx.com/companyname/.
+](https://oauth.jiigx.com/companyname/)Click on **Configure** to save the changes.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/umUofpRc-T5zTtlCKjjB2_image.png" size="50" position="center" caption="Redirect URLs" alt="Redirect URLs"}
 
@@ -83,7 +83,7 @@ If you are planning on using **Postman** to test calls to Microsoft Graph using 
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7yfIHpb6iuyf-1tsqHqTD_image.png" size="40" position="center" caption alt="API permissions"}
 
-20\. Enable **email, openid, profile and User.Read, offline\_access**. These are the minimum scopes needed by Jigx to access the API. **To find User.Read, **enter it in the search box. Click on **Add permissions** at the bottom of the screen.
+20\. Enable **email, openid, profile and User.Read, offline_access**. These are the minimum scopes needed by Jigx to access the API. **To find User.Read, **enter it in the search box. Click on **Add permissions** at the bottom of the screen.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eFrx-qU75Ld5GgGQ1H9Lp_image.png" size="40" position="center" caption="API permissions" alt="API permissions"}
 
@@ -106,4 +106,3 @@ If you are planning on using **Postman** to test calls to Microsoft Graph using 
 25\. At this stage, the** OAuth app **is configured and ready to use.
 
 In the next section, add the configuration to the Jigx solution in Jigx Management.
-

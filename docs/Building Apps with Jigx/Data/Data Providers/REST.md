@@ -8,9 +8,9 @@ The REST data provider allows you to fetch or post data to and from REST service
 
 To use the REST data provider in Jigx , follow these high-level steps:
 
-1. **Choose your data source **
+1. **Choose your data source**
    - Identify the REST API you will use as your data source. Ensure you understand its endpoint structure, request requirements (like headers and query parameters), and the format of the data it returns.
-2. \*\*Define a REST Service in a **Jigx** function  in \*\*Jigx Builder:
+2. Define a REST Service in a **Jigx function** in Jigx Builder:
    - Navigate to the [functions]() folder in Jigx Builder.
    - Use [IntelliSense](<./../../Jigx Builder _code editor_/Editor.md>) to configure the REST data provider.
    - Enter the base URL of the REST API.
@@ -77,7 +77,7 @@ title: Email Employee
 icon: synchronize-arrows-1
 type: jig.default
 
-header: 
+header:
   type: component.image
   options:
     title: Keep employees updated
@@ -93,14 +93,14 @@ actions:
           title: Send updated info
           entity: notify-employee
           function: rest-send-mail
-          onSuccess: 
+          onSuccess:
             title: Email has been sent
             description: Done
             actions:
               - type: action.go-to
                 options:
-                  title: Employees 
-                  linkTo: list-four              
+                  title: Employees
+                  linkTo: list-four
 
 children:
   - type: component.form
@@ -118,7 +118,7 @@ children:
           options:
             label: Email From
             isHidden: true
-            initialValue: 'john@jigx.com'
+            initialValue: "john@jigx.com"
         - type: "component.text-field"
           instanceId: emailto
           options:
@@ -129,14 +129,13 @@ children:
           options:
             label: "subject"
             isHidden: true
-            initialValue: 'Employee information updated'
+            initialValue: "Employee information updated"
         - type: "component.text-field"
           instanceId: message
           options:
             label: "Message"
             isMultiline: true
             textArea: large
-
 ```
 
 Jigx supports the concept of a REST service within a form context where each field in the form becomes a parameter, or alternatively, you can call the REST API using a Jigx function using the execute entity action, where you set the function parameters as part of the functions call in YAML.
@@ -178,7 +177,7 @@ The JSON body for this service is:
 }
 ```
 
-This is an HTTP POST example and needs an **Input Transform **in order to map the data from a \{} (for example, an employee form) so that it can send an email to an employee. Continuing from the example above, here is the input transform that maps fields on the form to the JSON body described above:
+This is an HTTP POST example and needs an **Input Transform** in order to map the data from a \{} (for example, an employee form) so that it can send an email to an employee. Continuing from the example above, here is the input transform that maps fields on the form to the JSON body described above:
 
 ```yaml
 provider: DATA_PROVIDER_REST
@@ -216,7 +215,7 @@ parameters:
     required: true
 ```
 
-The same logic can be applied to the output from a REST service. The output transform processes JSON data returned by the REST service in the Jigx function definition. 
+The same logic can be applied to the output from a REST service. The output transform processes JSON data returned by the REST service in the Jigx function definition.
 
 ## JSONata in Input and Output Transforms
 
@@ -256,9 +255,10 @@ parameters:
     required: true
 ```
 
-Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr).  When using the returned data in a list jig the $.eval() is used to return the individual ingredients.
+Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr). When using the returned data in a list jig the $.eval() is used to return the individual ingredients.
 
 :::CodeblockTabs
+
 ```yaml
 outputTransform: >-
   {
@@ -287,13 +287,14 @@ outputTransform: >-
         - type: component.list
           options:
             data: =$eval(@ctx.datasources.randomRecipeData.ingredients)
-            item: 
+            item:
               type: component.list-item
               options:
                 title: =@ctx.current.item.name
 #         {"name": $ingredient.name}
 #       })
 ```
+
 :::
 
 ## Examples and code snippets
@@ -334,4 +335,3 @@ The following examples with code snippets are provided:
 
 - [File handling](<./../File handling.md>)
 - [Offline remote data handling](<./../Offline remote data handling.md>)
-
