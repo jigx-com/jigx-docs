@@ -1,20 +1,14 @@
----
-title: Welcome to Jigx Documentation
-slug: 2wnU-we
-createdAt: Thu Jan 11 2024 09:25:56 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu May 01 2025 07:09:29 GMT+0000 (Coordinated Universal Time)
----
+# Welcome to Jigx Documentation
 
 Jigx simplifies mobile app development from start to finish in three steps. You can build native iOS and Android apps with familiar frameworks and tools like JavaScript, SQL, YAML, and Visual Studio Code.
 
-:::CtaButton{url="docId:7TJh3NYYZH1yL05Dem4j4" label="Getting started"}
+:::CtaButton{url="docId:gWalJP07-1Ei9NXdCqAYo" label="Getting started"}
 
 :::
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" size="94" position="center" }
+
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" size="94" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" caption}
 
 ***
-
-
 
 ::::LinkArray
 :::LinkArrayItem{headerImage headerColor}
@@ -24,7 +18,7 @@ Install the Jigx Builder extension in Microsoft Visual Studio and create your Ji
 :::
 
 :::LinkArrayItem{headerImage headerColor}
-<i class="fa-solid fa-code"></i>     [Build](<./Building Apps with Jigx/Jigx Builder _code editor_.md>)
+&#x20;     [Build](<./Building Apps with Jigx/Jigx Builder _code editor_.md>)
 
 Start creating your mobile apps, use intellisense prompts and code completion to speed up development.
 :::
