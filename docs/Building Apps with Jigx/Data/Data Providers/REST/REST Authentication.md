@@ -60,8 +60,7 @@ datasources:
   mydata: 
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_REST
-  
+      provider: DATA_PROVIDER_LOCAL
       entities:
         - entity: calendar-entries
           function: get-google-calendar-entries
@@ -111,7 +110,8 @@ parameters:
       location: header
       required: true
       type: secret
-      value: synatic.weather #Use manage.jigx.com to define credentials for your solution
+      # Use manage.jigx.com to define credentials for your solution
+      value: synatic.weather 
 ```
 
 jig YAML example:
@@ -125,8 +125,7 @@ datasources:
   mydata: 
     type: datasource.sqlite
     options:
-      provider: DATA_PROVIDER_REST
-  
+      provider: DATA_PROVIDER_LOCAL
       entities:
         - entity: forecast
           function: get-weather-api-key
@@ -178,7 +177,8 @@ parameters:
     location: header
     required: true
     type: secret
-    value: weather.basicAuth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution
+    value: weather.basicAuth 
 ```
 
 Jig YAML example:

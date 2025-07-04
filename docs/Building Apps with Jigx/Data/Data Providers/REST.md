@@ -1,10 +1,4 @@
----
-title: REST
-slug: jrba-rest
-description: Jigx's REST provider allows you to fetch or post data to and from REST services that return JSON, XML, or binary data. (Or accept JSON, XML, or binary data)
-createdAt: Sun Mar 26 2023 16:55:00 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Oct 18 2024 07:32:29 GMT+0000 (Coordinated Universal Time)
----
+# REST
 
 The REST data provider is one of the most frequently used data providers in Jigx solutions.
 
@@ -16,7 +10,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
 
 1. **Choose your data source **
    - Identify the REST API you will use as your data source. Ensure you understand its endpoint structure, request requirements (like headers and query parameters), and the format of the data it returns.
-2. **Define a REST Service in a **Jigx** function  in **Jigx Builder:
+2. \*\*Define a REST Service in a **Jigx** function  in \*\*Jigx Builder:
    - Navigate to the [functions]() folder in Jigx Builder.
    - Use [IntelliSense](<./../../Jigx Builder _code editor_/Editor.md>) to configure the REST data provider.
    - Enter the base URL of the REST API.
@@ -25,7 +19,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
 4. **Define data operations in the function**:
    - Set up different operations your application can perform using this API, such as GET, POST, PUT, DELETE, etc.
    - For each operation, create a new function to specify the endpoint, required headers, URL parameters, input and output transforms, continuation, and body content if applicable.
-5. **Reference the Jigx functions in **jig**s**:
+5. **Reference the Jigx functions in jigs**:
    - [Reference the function]() in your jigs. This step is crucial for integrating the API data seamlessly into your Jigx solution.
 6. **Publish your solution**:
    - [Publish your solution](<./../../Jigx Builder _code editor_/Publishing a solution.md>) and use the app to interact with the REST data provider. Make sure to handle any API limits or errors gracefully.
@@ -33,7 +27,6 @@ To use the REST data provider in Jigx , follow these high-level steps:
    - Use Jigx Builder [developer tools](<./../../Jigx Builder _code editor_/Debugging.md>) to test the data provider configurations. Check if the data provider can connect to the API successfully and perform operations like GET (fetch), PUT (create), POST (update), or DELETE data.
 
 Following these steps, you can effectively integrate external REST APIs into your Jigx solutions, allowing you to enhance your apps with data and functionalities from diverse external sources.
-
 
 ::embed[]{url="https://vimeo.com/848055698"}
 
@@ -157,7 +150,7 @@ REST services typically have simple or complex JSON structures which enable you 
 - Input transforms
 - Output transforms
 
-Here is an example of a typical REST service from POSTMAN. This is the “Twilio sendgrid” service to send an email. The URL for the service is https\://api.sendgrid.com/v3/mail/send
+Here is an example of a typical REST service from POSTMAN. This is the “Twilio sendgrid” service to send an email. The URL for the service is [https://api.sendgrid.com/v3/mail/send](https://api.sendgrid.com/v3/mail/send)
 
 The JSON body for this service is:
 
@@ -199,7 +192,7 @@ parameters:
   Authorization:
     location: header
     type: string
-    value: Bearer SG.testingtestingdemo.2kyqYOFa_bPwlPJbUWtnTWHLs5PuL-VOA22gW1koEIY
+    value: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     required: true
   emailfrom:
     location: body
@@ -227,7 +220,7 @@ The same logic can be applied to the output from a REST service. The output tran
 
 ## JSONata in Input and Output Transforms
 
-In addition to applying basic “structural” transforms, the JSONata scripting capability is available to apply further functions, and logic transforms within the input and output transforms. More detail on JSONata can be found here: <a href="https://www.jsonata.org" target="_blank">https\://www\.jsonata.org</a>. Below is an example of a JSONata function applied within an output transform that returns videos from the Google YouTube API. Note the use of the $trim() and $substring() functions which provide further rich capability for JSON transforms.
+In addition to applying basic “structural” transforms, the JSONata scripting capability is available to apply further functions, and logic transforms within the input and output transforms. More detail on JSONata can be found here: <a href="https://www.jsonata.org" target="_blank">https\://www\.jsonata.org</a>[https://www.jsonata.org](https://www.jsonata.org) . Below is an example of a JSONata function applied within an output transform that returns videos from the Google YouTube API. Note the use of the $trim() and $substring() functions which provide further rich capability for JSON transforms.
 
 ```yaml
 provider: DATA_PROVIDER_REST
@@ -244,7 +237,7 @@ parameters:
   key:
     location: query
     type: string
-    value: AIzaSyBaQF3E1qaMSRjQGl99q5Kkpa--onhDgiE
+    value: AIzaSyBaQF3E1qaMSRjQGl99q5Kkpa--xxxxxxxx
     required: true
   playlistId:
     location: query
@@ -263,7 +256,7 @@ parameters:
     required: true
 ```
 
-Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr).  When using the returned data in a list jig the $.eval() is used to return the individual ingredients. 
+Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr).  When using the returned data in a list jig the $.eval() is used to return the individual ingredients.
 
 :::CodeblockTabs
 ```yaml
@@ -285,8 +278,6 @@ outputTransform: >-
     })
   }
 ```
-
-list-jig.jigx
 
 ```yaml
  - type: component.section
