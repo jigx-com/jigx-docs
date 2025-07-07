@@ -10,7 +10,7 @@ When working with the Salesforce provider, it is helpful to know how to referenc
 
 ## Using IntelliSense
 
-In the Salesforce provider, use IntelliSense (ctrl+space) in the `entities` properties to select objects from the standard Salesforce objects or start typing the name of the object, and the list will provide you with a selection. When using custom objects, you need to manually type in the name.  A blue line will display under the name, this indicates that it is an unknown Salesforce entity, and you can ignore the warning if it is a custom object
+In the Salesforce provider, use IntelliSense (ctrl+space) in the `entities` properties to select objects from the standard Salesforce objects or start typing the name of the object, and the list will provide you with a selection. When using custom objects, you need to manually type in the name. A blue line will display under the name, this indicates that it is an unknown Salesforce entity, and you can ignore the warning if it is a custom object
 
 ![IntelliSense in Salesforce provider ](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PMQUMnHP3uwKCl1GvLxTP_sf-intellisense.gif "IntelliSense in Salesforce provider ")
 
@@ -37,6 +37,7 @@ onFocus:
             - UserRole
             - Territory
 ```
+
 :::
 
 ## Filtering columns&#x20;
@@ -80,16 +81,16 @@ onFocus:
             - Account
 
 datasources:
-  filter-account: 
+  filter-account:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: Account
-  # filter the account object to return specific columns and a select number of rows
-      query: SELECT id, '$.Name', '$.BillingCountry' FROM [Account] WHERE '$.Name' LIKE 'a%' 
-      
+      # filter the account object to return specific columns and a select number of rows
+      query: SELECT id, '$.Name', '$.BillingCountry' FROM [Account] WHERE '$.Name' LIKE 'a%'
+
 data: =@ctx.datasources.filter-account
 item:
   type: component.list-item
@@ -97,6 +98,7 @@ item:
     title: =@ctx.current.item.Name
     subtitle: =@ctx.current.item.BillingCountry
 ```
+
 :::
 
 ## Joining data&#x20;
@@ -107,19 +109,19 @@ Below is an example of how you join data from multiple objects in Salesforce usi
 join-data
 
 ```yaml
- query: SELECT id as accid, '$.Name', '$.BillingCountry' FROM [Account]
-          LEFT JOIN [Case] 
-          on AccountId = accid
-          group by casepriority = caseprior
+query: SELECT id as accid, '$.Name', '$.BillingCountry' FROM [Account]
+  LEFT JOIN [Case]
+  on AccountId = accid
+  group by casepriority = caseprior
 ```
+
 :::
 
 ## Examples and code snippets
 
 The following examples with code snippets are provided:
 
-- [Create records in objects]()
-- [Delete records in objects]()
-- [Save & update records in objects]()
-- [List records in objects]()
-
+- [Create records in objects](https://docs.jigx.com/examples/create-records-in-objects)
+- [Delete records in objects](https://docs.jigx.com/examples/delete-records-in-objects)
+- [Save & update records in objects](https://docs.jigx.com/examples/save-and-update-records-in-objects)
+- [List records in objects](https://docs.jigx.com/examples/list-records-in-objects)

@@ -34,8 +34,8 @@ In the Jigx App under **Profile>Settings>Language** check that the setting **Dev
 
 Configuring `TextLocale` is simple, and the translation can be:
 
-1. **Static** - Add localization to a jig using a *unique identifier* with translated text
-2. **Dynamic** - Add localization to a jig using *ICU Message definitions*
+1. **Static** - Add localization to a jig using a _unique identifier_ with translated text
+2. **Dynamic** - Add localization to a jig using _ICU Message definitions_
 
 :::hint{type="info"}
 Adding dynamic values in localized jigs use **ICU message** definitions.
@@ -47,22 +47,23 @@ Try it in the <a href="https://format-message.github.io/icu-message-format-for-t
 1. Invoke IntelliSense next to the property you want to translate.
 2. Select `TextLocale`
 3. Provide an `id:` for the value to be translated.
-4. *Optional:* add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
+4. _Optional:_ add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
 
 :::CodeblockTabs
 jig.jigx
 
 ```yaml
 children:
-        - type: component.text-field
-          instanceId: first_name 
-          options:
-            label: 
-      # add the TextLocale id that will be used in the translation jigx file
-              id: first_name
-      # Specify a fallback if the lanaguage is not founnd on the device
-              defaultMessage: First Name
+  - type: component.text-field
+    instanceId: first_name
+    options:
+      label:
+        # add the TextLocale id that will be used in the translation jigx file
+        id: first_name
+        # Specify a fallback if the lanaguage is not founnd on the device
+        defaultMessage: First Name
 ```
+
 :::
 
 ### Static values - In the translation file
@@ -71,7 +72,7 @@ Once the unique id has been set for the `TextLocale`, the file containing the tr
 
 1. In Jigx Builder under the **translations** folder, create a new file. The file's name must be the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 6391-1 codes</a>, for example, de.jigx for German, or fr.jigx for French.
 2. For multiple languages create a separate file per language required.
-3. Add the unique identifiers (`id`) values specified in the jig, with the corresponding  translated text in the new file.
+3. Add the unique identifiers (`id`) values specified in the jig, with the corresponding translated text in the new file.
 4. If you using multiple languages, simply use the same unique identifiers (`id`) values in each language file and for **static** values ensure the translated text corresponds.
 
 :::CodeblockTabs
@@ -95,6 +96,7 @@ cs.jigx
 # add the id specified in the jig and the static Czech translated value
 first_name: Jméno
 ```
+
 :::
 
 ### Dynamic values- In the jig
@@ -103,14 +105,14 @@ To set the `TextLocal` property dynamically
 
 1. Invoke IntelliSense next to the property you want to translate.
 2. Select `TextLocale`
-3. Provide an `id:`  and `values` properties. The values property requires context variables that will be used in the translation file.
-4. *Optional*: add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
+3. Provide an `id:` and `values` properties. The values property requires context variables that will be used in the translation file.
+4. _Optional_: add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
 
 :::CodeblockTabs
 jig.jigx
 
 ```yaml
-title: 
+title:
   id: jig-name
   defaultMessage: Example (Fallback)
 type: jig.default
@@ -122,7 +124,7 @@ children:
         - type: component.entity-field
           options:
             label: Localized Text (Static)
-            value: 
+            value:
               id: example-static
               defaultMessage: Good afternoon (Fallback)
         - type: component.entity-field
@@ -134,6 +136,7 @@ children:
                 name: =@ctx.user.displayName
                 time: =$fromMillis($millis(),'[P]')
 ```
+
 :::
 
 ### Dynamic values - In the translation file
@@ -141,7 +144,7 @@ children:
 Once the unique id has been set for the `TextLocale`, and the `values` configured the file containing the translation needs to be configured:
 
 1. For multiple languages create a separate file per language required.
-2. Add the unique identifiers (`id`) values specified in the jig, with the corresponding  translated text in the new file.
+2. Add the unique identifiers (`id`) values specified in the jig, with the corresponding translated text in the new file.
 3. Add the context variable for the values specified in the jig. This can be values you add to the `TextLocale: value` option and <a href="https://format-message.github.io/icu-message-format-for-translators/index.html" target="_blank">ICU Message</a> definitions.
 4. If you using multiple languages, simply use the same unique identifiers (`id`) values in each language file and for **static** values ensure the translated text corresponds.
 
@@ -149,7 +152,7 @@ Once the unique id has been set for the `TextLocale`, and the `values` configure
 localized-jig.jigx
 
 ```yaml
-title: 
+title:
   id: greeting
   values:
     name: =@ctx.user.displayName
@@ -159,8 +162,9 @@ title:
 de.jigx
 
 ```yaml
-greeting: '{time, select, am {Guten Morgen} pm {Guten Nachmittag} other {Hallo}} {name}'
+greeting: "{time, select, am {Guten Morgen} pm {Guten Nachmittag} other {Hallo}} {name}"
 ```
+
 :::
 
 ## Considerations for dynamic values
@@ -223,17 +227,18 @@ datasource
 jig-component
 
 ```yaml
-value: 
+value:
   id: services_dropdown
-  values: 
+  values:
     translation_string: =@ctx.inputs.inspection.translation_string
 ```
 
 translation-file
 
 ```yaml
-services_dropdown: '{translation_string, select, resettlement {Resettlement} exceptional_destruction {Exceptional destruction} consultation {Consultation} local_change {Local change} other {Unknown}}'
+services_dropdown: "{translation_string, select, resettlement {Resettlement} exceptional_destruction {Exceptional destruction} consultation {Consultation} local_change {Local change} other {Unknown}}"
 ```
+
 :::
 
 - Be consistent when key names, for example, if you use underscore (\_) then ensure all spaces are replaced with underscores.
@@ -245,6 +250,7 @@ fallback
 ```yaml
 cash_payment_title: '{title, select, cash_payment {Amount was paid in cash} other {Payment placeholder}}’
 ```
+
 :::
 
 ### Using conditions
@@ -259,7 +265,7 @@ title: Translate
 type: jig.default
 
 datasources:
-  inspection-current: 
+  inspection-current:
     type: datasource.static
     options:
       data:
@@ -268,30 +274,30 @@ datasources:
           payment_status: Pending
         - id: 2
           name: Hannah
-          payment_status: Paid  
+          payment_status: Paid
         - id: 3
           name: Sarah
           payment_status: Pending
         - id: 4
           name: Hannah
-          payment_status: Paid   
+          payment_status: Paid
 
 children:
   - type: component.list
     options:
       data: =@ctx.datasources.inspection-current
       maximumItemsToRender: 8
-      item: 
+      item:
         type: component.list-item
         options:
           title: =@ctx.current.item.name
           description: =@ctx.current.item.payment_status = 'Pending' ? 'Pending payment':'Paid'
-          subtitle: 
-# Add an id to be used in the translation file 
+          subtitle:
+            # Add an id to be used in the translation file
             id: payment_status
-# The default message is a fallback to English if the language is not found            
+            # The default message is a fallback to English if the language is not found
             defaultMessage: =@ctx.current.item.payment_status = 'Pending' ? 'Pending payment':'Paid'
-# Add values to be used in the condition in the translation file            
+            # Add values to be used in the condition in the translation file
             values:
               status: =@ctx.current.item.payment_status
 ```
@@ -300,14 +306,14 @@ de.jigx (translation-file)
 
 ```yaml
 # Add file under the translations folder with the id followed by the condition,
-# that uses the value in the ICU message definition. 
-payment_status: '{status, select, Pending {ausstehende Zahlung} other {bezahlt}}'
+# that uses the value in the ICU message definition.
+payment_status: "{status, select, Pending {ausstehende Zahlung} other {bezahlt}}"
 ```
+
 :::
 
 ## Examples and code snippets
 
 The following examples with code snippets are provided:
 
-- [Localization (Translation)]()
-
+- [Localization (Translation)](https://docs.jigx.com/examples/localization-translation)

@@ -1,7 +1,7 @@
 ---
 title: When to load data
 slug: x1jT-when-to-load-data
-description: The document explores two patterns for syncing data in a jigx solution - syncing all data at solution load or focusing, and syncing data just-in-time when using a jig. The first pattern offers robust offline functionality and fast rendering, but may have 
+description: The document explores two patterns for syncing data in a jigx solution - syncing all data at solution load or focusing, and syncing data just-in-time when using a jig. The first pattern offers robust offline functionality and fast rendering, but may have
 createdAt: Sun Nov 20 2022 19:31:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:31:22 GMT+0000 (Coordinated Universal Time)
 ---
@@ -12,7 +12,7 @@ updatedAt: Mon Aug 05 2024 13:31:22 GMT+0000 (Coordinated Universal Time)
 
 - The app is robust for offline scenarios.
 - Jig rendering and interaction are very fast.
-- There are only 2 distinct cloud interaction cycles in the example below: once when all data is synced and once when an update is sent to the cloud. 
+- There are only 2 distinct cloud interaction cycles in the example below: once when all data is synced and once when an update is sent to the cloud.
 
 This is the recommended pattern when designing a Jigx solution.
 
@@ -28,7 +28,7 @@ This is the recommended pattern when designing a Jigx solution.
 **Benefits:**
 
 - Initial load is lighter.
-- Only the data needed per screen is synced to the device. 
+- Only the data needed per screen is synced to the device.
 
 Elements of this approach can be combined with the recommended approach above.
 
@@ -43,4 +43,4 @@ Elements of this approach can be combined with the recommended approach above.
 
 ## Dynamically syncing data
 
-When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments for a message, there can be zero, one or more attachments, or files/documents stored in a OneDrive directory. It is necessary to dynamically specify a list of the entities and function+parameters to return from the database using an expression. See [Dynamically sync multiple entities]() for more information.
+When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments for a message, there can be zero, one or more attachments, or files/documents stored in a OneDrive directory. It is necessary to dynamically specify a list of the entities and function+parameters to return from the database using an expression. See [Dynamically sync multiple entities](https://docs.jigx.com/examples/sync-entities#6vfAn) for more information.

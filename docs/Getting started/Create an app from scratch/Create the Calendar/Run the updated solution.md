@@ -12,13 +12,13 @@ With the Hello Jigx project published to the Cloud, you are ready to use the sol
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
+
 ## Steps
 
 1. On your mobile device,** tap** the Jigx app icon.
 2. Sign into the app with your [Jigx account](<./../../Creating an account.md>) details.
 3. The app opens the [home hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen displaying the Hello Jigx solution, with the **map widget,** and next to it the **calendar widget.**
 4. Tap on the **calendar** icon to display the week's event and meeting details.
-
 
 :::
 
@@ -27,4 +27,4 @@ With the Hello Jigx project published to the Cloud, you are ready to use the sol
 :::
 ::::
 
-**Congratulations** you added a second widget to the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution]().
+**Congratulations** you added a second widget to the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution](https://docs.jigx.com/create-an-app-from-scratch).

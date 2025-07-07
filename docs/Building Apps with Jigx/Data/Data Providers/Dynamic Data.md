@@ -1,12 +1,12 @@
 ---
 title: Dynamic Data
 slug: KuL3-dynamic-data
-description: Jigx Dynamic Data is a built-in database that can be used to create, read, update, and delete data in an app.  
+description: Jigx Dynamic Data is a built-in database that can be used to create, read, update, and delete data in an app.
 createdAt: Tue Jun 07 2022 09:44:38 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 22 2024 18:50:10 GMT+0000 (Coordinated Universal Time)
 ---
 
-Apps need data, while <a href="https://app.archbee.io/docs/8V3ZMfuUrYN39zECOfqs5/Bn6YYLjSwkrsJ1-bbwSs1" target="_blank">Static data</a> allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app. 
+Apps need data, while <a href="https://app.archbee.io/docs/8V3ZMfuUrYN39zECOfqs5/Bn6YYLjSwkrsJ1-bbwSs1" target="_blank">Static data</a> allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.
 
 The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record.
 
@@ -52,15 +52,14 @@ To create and use Dynamic data see the following:
 ::::
 
 :::hint{type="info"}
-**Supporting file** for the *Working with Dynamic Data* video. You can use this CSV file if you want to follow the steps in the video.
+**Supporting file** for the _Working with Dynamic Data_ video. You can use this CSV file if you want to follow the steps in the video.
 :::
 
 ## Examples and code snippets
 
 The following examples with code snippets are provided:
 
-- [Creating Dynamic Data]()
-- [Reading Dynamic Data]()
-- [Updating Dynamic Data]()
-- [Deleting Dynamic Data]()
-
+- [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
+- [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
+- [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
+- [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)

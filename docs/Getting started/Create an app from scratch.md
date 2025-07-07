@@ -23,16 +23,17 @@ The solution is named **Hello-Jigx** and consists of a map showing a location, a
 ::::
 
 :::hint{type="info"}
+
 1. Before you start building your first solution ensure you have created a [Creating an account](<./Creating an account.md>) and [Install the Jigx Builder](<./Install the Jigx Builder.md>). Get an overview of the [Jigx platform](<./../Understanding the basics/Architecture.md>) and an understanding of the [Jigx Concepts](<./../Understanding the basics/Jigx Concepts.md>).
 2. We recommend you build out all the solution steps below, as each solution step builds on the previous step until you have a functioning mobile app.
-:::
+   :::
 
 ## Solution Steps
 
-There are five [types]() of jigs you can build. They are default, document, calendar, composite, and list. Below are step-by-step guides that use these jig types. Each solution step builds on the previous step until you have a functioning mobile app.  Each solution provides an overview, explaining the Jigx's concepts introduced in the step, and code samples with comments.
+There are several [types](https://docs.jigx.com/examples/jig-types) of jigs you can build. They are default, document, calendar, composite, and list. Below are step-by-step guides that use these jig types. Each solution step builds on the previous step until you have a functioning mobile app. Each solution provides an overview, explaining the Jigx's concepts introduced in the step, and code samples with comments.
 
 <a href="https://docs.jigx.com/create-the-hello-jigx-solution-project" target="_blank">Step 1: Create the Hello Jigx solution project</a>
-Start by creating the Hello Jigx project  in VS Code
+Start by creating the Hello Jigx project in VS Code
 **Build time**: 2 min
 
 <a href="https://docs.jigx.com/create-the-map" target="_blank">Step 2: Create the Map</a>

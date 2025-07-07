@@ -6,7 +6,7 @@ createdAt: Tue Jun 07 2022 09:48:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 09:38:53 GMT+0000 (Coordinated Universal Time)
 ---
 
-The Jigx platform syncs all data to a local SQL database from where it is used in [Expressions](./../Logic/Expressions.md) and user interfaces ([jigs](<./../UI/Jigs _screens_.md>) and [widgets]()). Once the data syncs, it is available without the need for an internet connection.
+The Jigx platform syncs all data to a local SQL database from where it is used in [Expressions](./../Logic/Expressions.md) and user interfaces ([jigs](<./../UI/Jigs _screens_.md>)). Once the data syncs, it is available without the need for an internet connection.
 
 Data is synced to the device from one of five supported locations:
 
@@ -27,6 +27,3 @@ Refer to the [Data lifecycles in Jigx](<./Data lifecycles in Jigx.md>) and [Sync
 :::hint{type="warning"}
 When a Jigx solution switches from offline to online, the queue is processed on a first-in-first-out basis. Jigx does not do conflict resolution. It assumes that the cloud-based system will handle its own data integrity.
 :::
-
-
-

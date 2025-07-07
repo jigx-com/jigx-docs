@@ -11,16 +11,16 @@ Datasources are sets of data used in Jigx solutions and are used to reference da
 
 There are three types of datasources available in Jigx Builder.
 
-1. **SQLite** - Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite]().
-2. **Static** - Static lists are typically used when data needs to be accessed but hardly ever changed. Static Data is helpful because it can be created quickly inside the jig, and there is no need to specify any database connections or set up tables. The amount of records that can be created in Static data is unlimited. Static data is commonly used to bind data to the UI components. For code examples and snippets, see [Static]().
-3. **System** - The system datasource is used to get a list of icons for jig components. For code examples and snippets, see [system]().
+1. **SQLite** - Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite](https://docs.jigx.com/examples/sqlite).
+2. **Static** - Static lists are typically used when data needs to be accessed but hardly ever changed. Static Data is helpful because it can be created quickly inside the jig, and there is no need to specify any database connections or set up tables. The amount of records that can be created in Static data is unlimited. Static data is commonly used to bind data to the UI components. For code examples and snippets, see [Static](https://docs.jigx.com/examples/static).
+3. **System** - The system datasource is used to get a list of icons for jig components. For code examples and snippets, see [system](https://docs.jigx.com/examples/system).
 
 ## Configuration options
 
-| **Property**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | **Code Examples**               |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| `isDocument`     | When the `isDocument` property is set to `true` on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the `initialValues` for a [form](), set it on the form level and in the datasource `isDocument: true`, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.  | [listCustomers.jigx]()          |
-| `jsonProperties` | Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use `jsonProperties` to specify the exact property in the array or nested object that you require. See [Working with complex REST structures](<./Data Providers/REST/REST best practice.md>).                                                                                                                                                                                                     | [view-customer-details.jigx]()  |
+| **Property**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | **Code Examples**                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `isDocument`     | When the `isDocument` property is set to `true` on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the `initialValues` for a [form](https://docs.jigx.com/examples/form), set it on the form level and in the datasource `isDocument: true`, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource. | [new-contact.jigx](https://docs.jigx.com/examples/form#zUejA)                                  |
+| `jsonProperties` | Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use `jsonProperties` to specify the exact property in the array or nested object that you require. See [Working with complex REST structures](<./Data Providers/REST/REST best practice.md>).                                                                                                                                                                                                                                       | [view-customer-details.jigx](https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR) |
 
 ### isDocument example
 
@@ -29,12 +29,12 @@ datasource
 
 ```yaml
 datasources:
-  contactData: 
+  contactData:
     type: datasource.sqlite
     options:
-# The isDocument property for the datasource is set to true.
-# As a result, the datasource will return as a single record to be displayed,
-# instead of an array of records.  
+      # The isDocument property for the datasource is set to true.
+      # As a result, the datasource will return as a single record to be displayed,
+      # instead of an array of records.
       isDocument: true
       provider: DATA_PROVIDER_DYNAMIC
       entities:
@@ -59,18 +59,19 @@ datasources:
 JSON
 
 ```json
-{ "contacts": [
-        {
-            "id": 1,
-            "firstName": "Merilyn",
-            "lastName": "Bayless",
-            "companyName": "20 20 Printing Inc",
-            "phone": "408-758-5015",
-            "email": "merilyn_bayless@cox.net",
-            "web": "http://www.printinginc.com",
-            "jobTitle": "Project Manager"
-        }
- ]
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "Merilyn",
+      "lastName": "Bayless",
+      "companyName": "20 20 Printing Inc",
+      "phone": "408-758-5015",
+      "email": "merilyn_bayless@cox.net",
+      "web": "http://www.printinginc.com",
+      "jobTitle": "Project Manager"
+    }
+  ]
 }
 ```
 
@@ -82,10 +83,10 @@ type: jig.default
 icon: book-address
 
 inputs:
-  id: 
+  id:
     type: string
     required: true
-    
+
 header:
   type: component.jig-header
   options:
@@ -97,12 +98,12 @@ header:
           uri: https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80
 
 datasources:
-  contactData: 
+  contactData:
     type: datasource.sqlite
     options:
-# The isDocument property for the datasource is set to true.
-# As a result, the datasource will return as a single record to be displayed,
-# instead of an array of records.  
+      # The isDocument property for the datasource is set to true.
+      # As a result, the datasource will return as a single record to be displayed,
+      # instead of an array of records.
       isDocument: true
       provider: DATA_PROVIDER_DYNAMIC
       entities:
@@ -122,7 +123,7 @@ datasources:
           id = @contactId
       queryParameters:
         contactId: =@ctx.jig.inputs.id
-        
+
 children:
   - type: component.form
     instanceId: new-contact
@@ -168,7 +169,7 @@ children:
                 instanceId: companyName
                 options:
                   label: Company Name
-            
+
 actions:
   - children:
       - type: action.execute-entity
@@ -184,23 +185,24 @@ actions:
             phone: =@ctx.components.phone.state.value
             jobTitle: =@ctx.components.jobTitle.state.value
             companyName: =@ctx.components.companyName.state.value
-
 ```
+
 :::
 
 ### jsonProperties example
 
 :::CodeblockTabs
+
 ```yaml
-datasources: 
-  customers: 
+datasources:
+  customers:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-  
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT 
           cus.id AS id, 
@@ -217,11 +219,11 @@ datasources:
           [customers] AS cus
         ORDER BY 
           json_extract(cus.data, '$.companyName')
-  # Specify the exact property in the array or nested object that you require.   
-      jsonProperties: 
+      # Specify the exact property in the array or nested object that you require.
+      jsonProperties:
         - addresses
         - phones
-        
+
 data: =@ctx.datasources.customers
 item:
   type: component.list-item
@@ -229,7 +231,7 @@ item:
     title: =@ctx.current.item.companyName
     subtitle: =@ctx.current.item.firstName & ' ' & @ctx.current.item.lastName
     description: =@ctx.current.item.addresses[0].city
-    leftElement: 
+    leftElement:
       element: avatar
       text: =@ctx.current.item.addresses[0].state
 
@@ -240,7 +242,7 @@ item:
           color: color3
         - when: =@ctx.current.item.customerType = 'Silver'
           color: color14
-    onPress: 
+    onPress:
       type: action.go-to
       options:
         linkTo: view-customer
@@ -280,6 +282,7 @@ Complex JSON
             "logo": null
         },
 ```
+
 :::
 
 ## Where and how to use datasources
@@ -291,7 +294,7 @@ Datasources are defined once and are available throughout your solution to be re
 ![Global datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RKfB1NkVqQCckqcWoR-cR_ds-global.gif "Global datasource")
 
 1. Open your solution in Jigx Builder and navigate to the **datasources** folder of your solution.
-2. Create a new file called *\<your\_datasource\_name>.jigx.*
+2. Create a new file called _\<your_datasource_name>.jigx._
 3. Invoke IntelliSense (ctrl+space) for the list of available datasources.
 4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the solution.
 5. Next, open the jigs where you want to use the data, use expressions with the datasource option to reference the global datasource file, for example, `=@ctx.datasources.employee`.
@@ -305,13 +308,12 @@ The data sets are defined in the datasources inside the individual jig generally
 1. Open your solution in Jigx Builder and navigate to the jig.
 2. Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.
 3. Invoke IntelliSense (ctrl+space) next to the `mydata:` property for the list of available datasources.
-4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the jig. *Tip*: only return the specific data you need in the datasource.
+4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the jig. _Tip_: only return the specific data you need in the datasource.
 5. The data is now available to use in that jig by using expressions with the datasource option to reference the local datasource using the unique name you gave it, for example, `=@ctx.datasources.contact`.
 
 ### See Also
 
-- [static]() datasource examples
-- [sqlite]() datasource examples
-- [system]()
+- [static](https://docs.jigx.com/examples/static) datasource examples
+- [sqlite](https://docs.jigx.com/examples/sqlite) datasource examples
+- [system](https://docs.jigx.com/examples/system)
 - [File handling](<./File handling.md>)
-

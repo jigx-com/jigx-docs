@@ -16,29 +16,32 @@ Before you can start building your first Jigx solution, you require the followin
 - <a href="https://code.visualstudio.com/" target="_blank">Microsoft Visual Studio Code</a> installed on your computer. This is required for the Jigx Builder which is a Microsoft Visual Studio Code extension.
 - [Install the Jigx Builder](<./Getting started/Install the Jigx Builder.md>) extension in Microsoft Visual Studio Code.
 
-## Let's get you building solutions *fast*.
+## Let's get you building solutions _fast_.
 
 ::::LinkArray
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C4z-L-ZoG_0sLOeK3q6pU_gs-color.jpg"}
+
 ### [Use templates](<./Getting started/Use templates to create apps.md>) &#xA;
+
 :::
 
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QiZACMiOqkDp8ozY3SDlL_gs-blue.jpg"}
+
 ### [Create from scratch](<./Getting started/Create an app from scratch.md>)
+
 :::
 
 :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g72lU5hiHsv45zAf625JE_gs-mix.jpg"}
+
 ### [Use pre-built solutions](<./Getting started/Use pre-built solutions.md>)
+
 :::
 ::::
 
 ## Want to know more?
 
 - Get an overview of the [Jigx platform](<./Understanding the basics/Architecture.md>)
-- Understand  [Jigx Concepts](<./Understanding the basics/Jigx Concepts.md>)
+- Understand [Jigx Concepts](<./Understanding the basics/Jigx Concepts.md>)
 - Create with [Jigx Builder](<./Building Apps with Jigx/Jigx Builder _code editor_.md>)
-- Explore [examples]()
+- Explore [examples](https://docs.jigx.com/examples)
 - [Managing](<./Administration/Management Overview.md>) apps, users, roles, and organizations
-
-
-

@@ -20,7 +20,7 @@ This section covers data concepts, lifecycles, syncing and loading data, and dat
 ## Data Providers
 
 1. [Dynamic Data](<./Data/Data Providers/Dynamic Data.md>) is a Jigx-specific data source that automatically syncs data in real time between devices. It is a great platform for disposable data, defining data that is not already available in existing systems, and how to sync data in real time between users and their devices, regardless of where it is updated.
-2. [Microsoft Azure SQL]() provides an overview of working with Microsoft Azure SQL and a guide on configuring secure access and Jigx functions to read, update and delete data with queries and stored procedures.
+2. [Microsoft Azure SQL](https://docs.jigx.com/microsoft-azure-sql) provides an overview of working with Microsoft Azure SQL and a guide on configuring secure access and Jigx functions to read, update and delete data with queries and stored procedures.
 3. [Microsoft OneDrive](<./Data/Data Providers/Microsoft OneDrive.md>) integration allows you to create, updated, and delete files in OneDrive. In a solution, you can list, and download files from OneDrive.
 4. [REST](<./Data/Data Providers/REST.md>) provides an overview of working with REST services, including how data is returned, transformed, and used in the solution. This section explains selective data updates and how to configure security and more complex REST calls.
 5. [Salesforce](<./Data/Data Providers/Salesforce.md>) provider allows you to integrate with your Salesforce instance, with access to share data about sales, customers
@@ -36,4 +36,4 @@ This section covers data concepts, lifecycles, syncing and loading data, and dat
 
 ## Entities
 
-Entities refer to tables in data providers or datasources where data is saved, created, updated, read, and deleted.  [Actions](./UI/Actions.md) provide the ability to execute the CRUD methods, sync data, and refresh data on individual rows ([execute-entity]()) or multiple rows ([execute-entities]()).
+Entities refer to tables in data providers or datasources where data is saved, created, updated, read, and deleted. [Actions](./UI/Actions.md) provide the ability to execute the CRUD methods, sync data, and refresh data on individual rows [execute-entity](https://docs.jigx.com/examples/execute-entity) or multiple rows [execute-entities](https://docs.jigx.com/examples/execute-entities).

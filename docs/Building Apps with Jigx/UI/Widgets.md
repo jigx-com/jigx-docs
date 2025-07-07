@@ -30,7 +30,7 @@ Consider the layout of the widgets on the mobile app screen. Specific sizes cove
 ### Widget configuration
 
 1. Add an icon to the top level of your jig.
-2. The `jigId`, and `size` are configured in a [jig.grid]() or [grid-item]() component to display the widget.
+2. The `jigId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/jiggrid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.
    :::CodeblockTabs
    jig-with-icon.jigx
 
@@ -46,17 +46,18 @@ Consider the layout of the widgets on the mobile app screen. Specific sizes cove
     - type: component.grid-item
        options:
          size: "1x1"
-         children: 
+         children:
            type: component.jig-widget
            options:
              jigId: jig-with-icon
    ```
+
    :::
 
-### 2x2,  2x4,  4x2, and 4x4 widgets  configured with content
+### 2x2, 2x4, 4x2, and 4x4 widgets configured with content
 
-1. Widgets are configured in the YAML in a jig file and a unique `Widget Name` is provided that is referred to as the `widgetId`.&#x20;
-2. The `jigId`, `widgetId`, and `size` are configured in a [jig.grid]() or [grid-item]() component to display the widget.
+1. Widgets are configured in the YAML in a jig file and a unique `Widget Name` is provided that is referred to as the `widgetId`.
+2. The `jigId`, `widgetId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/jiggrid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.
 3. If inputs are required to pass data into the widget then configure them in the `grid-item` under the `inputs` property. Inputs are not mandatory and are dependant on the scenario.
 
 :::CodeblockTabs
@@ -65,13 +66,13 @@ jig-with-widget.jigx
 ```yaml
 widgets:
   # Provide a unique name for the widget. This becomes the widgetId.
-  dev-avatar: 
+  dev-avatar:
     # Configure the type of widget to display in the grid-item.
     type: widget.avatar
     options:
       text: LS
       # Configure the widget properties with inputs defined in the grid-item,
-      # if data is to be passed into the widget.  
+      # if data is to be passed into the widget.
       uri: =@ctx.jig.inputs.photo
       bottom:
         type: component.titles
@@ -89,7 +90,7 @@ children:
     options:
       # Specify the size of the grid-item (widget)
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: jig-with-widget
@@ -99,6 +100,7 @@ children:
             photo: =@ctx.user.avatarUrl
             name: =@ctx.user.displayName
 ```
+
 :::
 
 ## Change the widget behavior
@@ -112,16 +114,17 @@ jig.jigx
 - type: component.grid-item
     options:
       size: "1x1"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: company-site
           # Add an onpress to open a specific URL.
-          onPress: 
+          onPress:
             type: action.open-url
             options:
               url: https://docs.jigx.com
 ```
+
 :::
 
 ## Change the widget content
@@ -129,31 +132,31 @@ jig.jigx
 There are various UI elements available to make your widget inviting and engaging to end users. Content or information can be shown on the surface of a widget.
 Here is a list of available content/information widgets:
 
-| **Widget content**                                        | **Description**                                                                                                                                                 |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [icons](<./../../Understanding the basics/Jigx icons.md>) | Choose an icon from thousands of available icons.                                                                                                               |
-| [actions (buttons)]()                                     | Configure a button with an action that executes.                                                                                                                |
-| [avatar]()                                                | Display an avatar on the widget.                                                                                                                                |
-| [chart]()                                                 | Configure a bar, line or pie chart to display on the widget.                                                                                                    |
-| [image]()                                                 | Configure an image to display on the widget, consider the `size:` of the widget to ensure the image displays as expected , 1x1 is not suitable for most images. |
-| [list]()                                                  | Display a list of data in the widget with additional left and right elements if required.                                                                       |
-| [location]()                                              | Show a location in a map on the widget with markers.                                                                                                            |
-| [status]()                                                | Configure a visual representation of a status, such as goal status, or sales quarterly status.                                                                  |
-| [value]()                                                 | Show values and amounts on the widget, such as Sales target or number of orders to date.                                                                        |
+| **Widget content**                                                  | **Description**                                                                                                                                                 |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [icons](<./../../Understanding the basics/Jigx icons.md>)           | Choose an icon from thousands of available icons.                                                                                                               |
+| [actions (buttons)](https://docs.jigx.com/examples/actions-buttons) | Configure a button with an action that executes.                                                                                                                |
+| [avatar](https://docs.jigx.com/examples/VeUB-avatar)                | Display an avatar on the widget.                                                                                                                                |
+| [chart](https://docs.jigx.com/examples/chart)                       | Configure a bar, line or pie chart to display on the widget.                                                                                                    |
+| [image](https://docs.jigx.com/examples/image)                       | Configure an image to display on the widget, consider the `size:` of the widget to ensure the image displays as expected , 1x1 is not suitable for most images. |
+| [list](https://docs.jigx.com/examples/list)                         | Display a list of data in the widget with additional left and right elements if required.                                                                       |
+| [location](https://docs.jigx.com/examples/location)                 | Show a location in a map on the widget with markers.                                                                                                            |
+| [status](https://docs.jigx.com/examples/status)                     | Configure a visual representation of a status, such as goal status, or sales quarterly status.                                                                  |
+| [value](https://docs.jigx.com/examples/value)                       | Show values and amounts on the widget, such as Sales target or number of orders to date.                                                                        |
 
 1. To configure the widget content specify the `widget:` property at the bottom of the jig.
 2. Provide a `Widget name` for the widget that is referenced as the `widgetId`.
 3. Select the `type` of content to display in the widget.
 
 :::hint{type="info"}
-You still need to add the widget `size:` and `jigId` to the *grid-item component* after changing the content of the widget in the jig file.
+You still need to add the widget `size:` and `jigId` to the _grid-item component_ after changing the content of the widget in the jig file.
 :::
 
 ### 1.Configure an icon
 
 By default widgets are shown on the `grid-item` with an icon. If no `icon` is specified Jigx assigns a default icon to the widget. To configure an icon, add the `icon` property in the jig itself. Start typing the first two letters of an [icon](<./../../Understanding the basics/Jigx icons.md>) to see a list of thousands of icons you can choose from.
 
-In the example below the *location* icon is specified to replace the default icon.
+In the example below the _location_ icon is specified to replace the default icon.
 
 :::::VerticalSplit{layout="right"}
 ::::VerticalSplitItem
@@ -165,9 +168,9 @@ title: Location
 type: jig.default
 # add an icon in the jig that displays on the widget.
 icon: location
-  
+
 datasources:
-  address: 
+  address:
     type: datasource.static
     options:
       data:
@@ -182,8 +185,8 @@ children:
         address: |
           =@ctx.datasources.address.street  
           & ',' & @ctx.datasources.address.city
-          & ',' & @ctx.datasources.address.country 
-        zoomLevel: 9  
+          & ',' & @ctx.datasources.address.country
+        zoomLevel: 9
 ```
 
 grid-item.jigx
@@ -196,11 +199,12 @@ children:
   - type: component.grid-item
     options:
       size: "1x1"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: yoga-location
 ```
+
 :::
 ::::
 
@@ -217,10 +221,10 @@ children:
 2. Use IntelliSense (ctrl+space) at the root level and select `widgets:`.
 3. Specify the `Widget Name`.
 4. Next choose the `type:` of content to display on the widget, such as `widget.location` use IntelliSense to invoke the list of available types.
-5. Depending on the type you selected additional properties are required, see [widget]() examples on how to configure each type accordingly.
-6. Add the widget (`size` , `jigId`, `widgetId`, and `inputs`)  to the [grid-item]().
+5. Depending on the type you selected additional properties are required, see [widget](https://docs.jigx.com/examples/widgets) examples on how to configure each type accordingly.
+6. Add the widget (`size` , `jigId`, `widgetId`, and `inputs`) to the [grid-item](https://docs.jigx.com/examples/grid-item).
 
-In the example below the widget content is configured to show a *location* on the widget surface.
+In the example below the widget content is configured to show a _location_ on the widget surface.
 
 :::::VerticalSplit{layout="right"}
 ::::VerticalSplitItem
@@ -230,9 +234,9 @@ yoga-studio.jigx
 ```yaml
 title: Location
 type: jig.default
-      
+
 datasources:
-  address: 
+  address:
     type: datasource.static
     options:
       data:
@@ -247,12 +251,12 @@ children:
         address: |
           =@ctx.datasources.address.street  
           & ',' & @ctx.datasources.address.city
-          & ',' & @ctx.datasources.address.country 
-        zoomLevel: 9  
+          & ',' & @ctx.datasources.address.country
+        zoomLevel: 9
 
 #Add a location content type to display on the widget surface.
-widgets: 
-  locationWidget: 
+widgets:
+  locationWidget:
     type: widget.location
     options:
       viewPoint:
@@ -260,9 +264,8 @@ widgets:
         address: |
           =@ctx.datasources.address.street  
           & ',' & @ctx.datasources.address.city
-          & ',' & @ctx.datasources.address.country 
-        zoomLevel: 9      
-
+          & ',' & @ctx.datasources.address.country
+        zoomLevel: 9
 ```
 
 home.jigx
@@ -274,15 +277,16 @@ type: jig.grid
 children:
   - type: component.grid-item
     options:
-     # Specify the widget size. 
-     # Ensure the selected size will display the content.t   
+      # Specify the widget size.
+      # Ensure the selected size will display the content.t
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: yoga-studio
           widgetId: locationWidget
 ```
+
 :::
 ::::
 
@@ -293,11 +297,11 @@ children:
 
 ## How to move or rearrange widgets
 
-The widgets display order on a screen is determined by the order of the [grid-item]() in the YAML. You can change the order of the widgets by simply changing the order in the YAML. It is important to take into consideration the configured size of each widget when ordering widgets. Changing the order of the widgets can give your app a completely different look. Placing a `4x2` followed by `4x4` will result in white space next to the `4x2`.
+The widgets display order on a screen is determined by the order of the [grid-item](https://docs.jigx.com/examples/grid-item) in the YAML. You can change the order of the widgets by simply changing the order in the YAML. It is important to take into consideration the configured size of each widget when ordering widgets. Changing the order of the widgets can give your app a completely different look. Placing a `4x2` followed by `4x4` will result in white space next to the `4x2`.
 
 :::::VerticalSplit{layout="middle"}
 ::::VerticalSplitItem
-Initial widget order in [grid]()
+Initial widget order in [grid](https://docs.jigx.com/examples/grid)
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3_P1Wkg12BhBbZMEe2-20250307-083935.png" size="60" position="center" caption="Initial widget order" alt="Initial widget order"}
 
@@ -309,48 +313,49 @@ title: Yoga
 type: jig.grid
 
 children:
-  # First widget displayed  
+  # First widget displayed
   - type: component.grid-item
     options:
       size: "4x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: yoga-image-widget
           widgetId: yoga-image
-  # Second widget        
+  # Second widget
   - type: component.grid-item
     options:
       size: "1x1"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: my-bookings
-  # Third widget         
+  # Third widget
   - type: component.grid-item
     options:
       size: "1x1"
-      children: 
+      children:
         type: component.jig-widget
         options:
-          jigId: yoga-location  
-  # Fourth widget                        
+          jigId: yoga-location
+  # Fourth widget
   - type: component.grid-item
     options:
       size: "1x1"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: yoga-info
-  # Fifth widget        
+  # Fifth widget
   - type: component.grid-item
     options:
       size: "1x1"
-      children: 
+      children:
         type: component.jig-widget
         options:
-          jigId: yoga-meals                       
+          jigId: yoga-meals
 ```
+
 :::
 ::::
 
@@ -370,41 +375,42 @@ children:
   - type: component.grid-item
     options:
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: my-bookings
   - type: component.grid-item
     options:
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
-          jigId: yoga-location  
+          jigId: yoga-location
   - type: component.grid-item
     options:
       size: "4x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: yoga-image-widget
           widgetId: yoga-image
-                  
+
   - type: component.grid-item
     options:
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: yoga-info
   - type: component.grid-item
     options:
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
-          jigId: yoga-meals     
+          jigId: yoga-meals
 ```
+
 :::
 ::::
 :::::
@@ -414,7 +420,7 @@ children:
 Widget labels are shown under the widget, and are read from the configured `title:` property of the jig.
 
 1. To display a widget with no label use `title: ' '` in the jig.
-2. To display a label on the widget surface use the widget [titles]().
+2. To display a label on the widget surface use the widget [titles](https://docs.jigx.com/examples/W2NL-titles).
 
 ## Widget badging
 
@@ -432,7 +438,7 @@ Enhance your widget with a customizable badges for instance showing the number o
 calendar-jig
 
 ```yaml
-# jig file 
+# jig file
 title: Calendar
 type: jig.calendar
 icon: calendar-3
@@ -443,34 +449,36 @@ badge: =$count(@ctx.datasources.calendar-data.id)
 new-customer-jig
 
 ```yaml
-title: New customers 
+title: New customers
 type: jig.default
 # Add the badge to show when there are new customers to process
 badge: =@ctx.datasources.customer.new = 1 ? 0:1
 ```
+
 :::
 
 ## Inputs
 
-Inputs allow you to pass data to the jig associated with the widget. For example, when a customer taps on *My Orders* widget the input is configured to pass that specific customer's Id and Name to the jig ensuring only the orders for that customer are shown. For more information on inputs see [Passing data using inputs](<./Jigs _screens_/Passing data using inputs.md>).
+Inputs allow you to pass data to the jig associated with the widget. For example, when a customer taps on _My Orders_ widget the input is configured to pass that specific customer's Id and Name to the jig ensuring only the orders for that customer are shown. For more information on inputs see [Passing data using inputs](<./Jigs _screens_/Passing data using inputs.md>).
 
 :::CodeblockTabs
 index.jigx
 
 ```yaml
-  - type: component.grid-item
-    options:
-      size: "2x2"
-      children: 
-        type: component.jig-widget
-        options:
-          jigId: my-orders
-          widgetId: order-detail
-          # Specify the inputs for the widget.
-          inputs:
-            customer-name: =@ctx.datasources.customer[5].name
-            id: =@ctx.datasources.customer[5].id
+- type: component.grid-item
+  options:
+    size: "2x2"
+    children:
+      type: component.jig-widget
+      options:
+        jigId: my-orders
+        widgetId: order-detail
+        # Specify the inputs for the widget.
+        inputs:
+          customer-name: =@ctx.datasources.customer[5].name
+          id: =@ctx.datasources.customer[5].id
 ```
+
 :::
 
 ## Widget visibility & access
@@ -478,7 +486,7 @@ index.jigx
 You have the ability to control which widgets are visible as well as when the widget must be visible.
 
 1. Control which widgets are visible to certain user groups by granting permissions on each widget in a solution in [Jigx Management > Widgets](./../../Administration/Solutions/Widgets.md). By default everyone with access to the solution has the widgets visible in the app.
-2. Use the `when:` property configured by an [expression](./../Logic/Expressions.md) or a boolean statement to determine when a widget must be visible. For example, show the *order* widget when there are orders awaiting approval.
+2. Use the `when:` property configured by an [expression](./../Logic/Expressions.md) or a boolean statement to determine when a widget must be visible. For example, show the _order_ widget when there are orders awaiting approval.
 
 :::CodeblockTabs
 grid.jigx
@@ -489,11 +497,12 @@ grid.jigx
     when: =@ctx.datasources.get-hiker-level.participant-group = 'easy'
     options:
       size: "4x4"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: location
 ```
+
 :::
 
 ## Considerations
@@ -504,4 +513,4 @@ grid.jigx
 
 ## Examples and code snippets
 
-See [Widgets]() for full code samples.
+See [Widgets](https://docs.jigx.com/examples/widgets) for full code samples.

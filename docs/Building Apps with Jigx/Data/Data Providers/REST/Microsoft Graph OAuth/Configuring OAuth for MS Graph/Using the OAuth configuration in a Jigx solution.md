@@ -100,5 +100,5 @@ tabs:
 :::hint{type="info"}
 
 - After a **successful OAuth loop**, the returned token **will be stored for future use** until it expires. If the provider supports a **refresh token**, Jigx will automatically use the refresh token to avoid prompting the user again for credentials. Once the refresh token becomes invalid or if no token was provided, Jigx will prompt the user with the OAuth loop to get a new token.
-- If **authentication fails**, the user can use the **Secondary Identities menu** in the **Settings** section of the **Jigx mobile App** to manage OAuth tokens. If the token is not visible in the list, something failed early during the OAuth loop. Use the\*\* **Jigx debug tools** in VS Code to trace the error using the Jigx Builder output window.
+- If **authentication fails**, the user can use the **Secondary Identities menu** in the **Settings** section of the **Jigx mobile App** to manage OAuth tokens. If the token is not visible in the list, something failed early during the OAuth loop. Use the **Jigx debug tools** in VS Code to trace the error using the Jigx Builder output window.
   :::

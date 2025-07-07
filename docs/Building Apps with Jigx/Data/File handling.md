@@ -14,12 +14,12 @@ Type of files:
 
 Image files can be used in the following functionality:
 
-| **Data**                        | **Conversion configuration**                                   | **Result**                                                                     |
-| ------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| REST Provider calls with files  | Add the conversion to the REST function                        | GET - incoming&#xA;SAVE - outgoing&#xA;CREATE - outgoing&#xA;UPDATE - outgoing |
-| SQL Provider calls with files   | Add the conversion to the REST function                        | GET - incoming&#xA;SAVE - outgoing&#xA;CREATE - outgoing&#xA;UPDATE - outgoing |
-| Datasource queries with files   | Add the conversion to the datasource when using Dynamic Data.  | Incoming                                                                       |
-| Actions with files              | Add the conversion to the action when saving images and files. | outgoing                                                                       |
+| **Data**                       | **Conversion configuration**                                   | **Result**                                                                     |
+| ------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| REST Provider calls with files | Add the conversion to the REST function                        | GET - incoming&#xA;SAVE - outgoing&#xA;CREATE - outgoing&#xA;UPDATE - outgoing |
+| SQL Provider calls with files  | Add the conversion to the REST function                        | GET - incoming&#xA;SAVE - outgoing&#xA;CREATE - outgoing&#xA;UPDATE - outgoing |
+| Datasource queries with files  | Add the conversion to the datasource when using Dynamic Data.  | Incoming                                                                       |
+| Actions with files             | Add the conversion to the action when saving images and files. | outgoing                                                                       |
 
 The `conversions` property allows you to configure the file conversion to the required format.
 
@@ -27,7 +27,7 @@ The `conversions` property allows you to configure the file conversion to the re
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `conversions:`     | This holds an array of properties that should be converted. The following properties control the conversion:&#xA;- `property:` The name of the property to convert.&#xA;- `from:` Format of the input data. It can be buffer, base64, data-uri, or local-uri.&#xA;- `to:` Format of the converted data. It can be base64, data-uri, buffer, or local-uri.&#xA;- `convertHeicToJpg:` When set to `true`, and the file being converted is HEIC, it is converted to JPG.&#xA;&#xA;Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression `conversions: =@ctx.datasources.conversions`, applicable to both local and global actions. |
 
-Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field]() or [avatar-field](). When referencing files in jigs use the `.state.value` configuration.
+Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field](https://docs.jigx.com/examples/media-field) or [avatar-field](https://docs.jigx.com/examples/avatar). When referencing files in jigs use the `.state.value` configuration.
 For example:
 
 - `file: =@ctx.components.profilePicture.state.value`
@@ -38,7 +38,7 @@ For example:
 - Conversions should be configured within the SQL and REST functions. When the conversion is configured in the function, it stores the data as the 'from' type in the datasource.
 - When conversions are done at the datasource level, they are still stored in the datasource as their original value. They are only converted after the fact when requested; however, the datasource value does not change.&#x20;
 - Do not load data back from buffer using the Dynamic Data provider; the file will not show.&#x20;
-- When saving images to Dynamic Data consider the file size. You can reduce the file size in the [media-field]() by configuring the `imageQuality` property.
+- When saving images to Dynamic Data consider the file size. You can reduce the file size in the [media-field](https://docs.jigx.com/examples/media-field) by configuring the `imageQuality` property.
 - Use `convertHeicToJpg` to ensure images are visible on iOS and Android devices. The property is available for REST and SQL functions, Dynamic Data and actions.
 
 :::hint{type="warning"}
@@ -50,6 +50,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 ## Convert incoming data
 
 ::::ExpandableHeading
+
 ### REST & SQL function
 
 In the examples below, the file conversions are configured in the** REST and SQL (GET) functions **to convert the incoming files.
@@ -104,15 +105,17 @@ conversions:
     from: data-uri
     to: local-uri
 ```
+
 :::
 ::::
 
 ## Convert outgoing data
 
 ::::ExpandableHeading
+
 ### REST & SQL function
 
-In the examples below, the file conversions are configured in the **REST and** **SQL ****(SAVE/CREATE/UPDATE) ****functions** to convert the files that are outgoing to REST and SQL.
+In the examples below, the file conversions are configured in the **REST and** **SQL \*\***(SAVE/CREATE/UPDATE) \***\*functions** to convert the files that are outgoing to REST and SQL.
 
 :::CodeblockTabs
 rest-function-out
@@ -183,6 +186,7 @@ conversions:
     from: local-uri
     to: data-uri
 ```
+
 :::
 ::::
 
@@ -208,6 +212,7 @@ options:
       from: base64
       to: local-uri
 ```
+
 :::
 
 ## Action image conversion
@@ -228,9 +233,9 @@ execute-entity-action (static)
         id: =@ctx.jig.inputs.categoryId
         name: =@ctx.components.name.state.value
         description: =@ctx.components.description.state.value
-        # reference the image using an expression 
+        # reference the image using an expression
         image: =@ctx.components.image.state.value
- # Static conversion configuration        
+ # Static conversion configuration
       conversions:
         - property: image
           from: local-uri
@@ -250,9 +255,9 @@ execute-entity-action (dynamic)
         id: =@ctx.jig.inputs.categoryId
         name: =@ctx.components.name.state.value
         description: =@ctx.components.description.state.value
-        # reference the image using an expression 
+        # reference the image using an expression
         image: =@ctx.components.image.state.value
-# Dynamic conversion configuration        
+# Dynamic conversion configuration
       conversions: =@ctx.datasources.conversions
 ```
 
@@ -273,6 +278,7 @@ options:
       from: base64
       to: local-uri
 ```
+
 :::
 
 ## Add multiple files with SQL data provider
@@ -298,7 +304,7 @@ parameters:
     location: input
     required: true
     type: string
-  
+
 conversions:
   - from: local-uri
     property: avatar
@@ -318,7 +324,7 @@ query: |
     Id, 
     description,
     Avatar
-  FROM avatarMultiConversion 
+  FROM avatarMultiConversion
 
 conversions:
   - property: Avatar
@@ -340,7 +346,7 @@ onFocus:
     entities:
       - entity: avatarMultiConversion
         function: sql-get-widget-multiple
-        
+
 datasources:
   allImages:
     type: datasource.sqlite
@@ -353,7 +359,7 @@ datasources:
           '$.Id',
           '$.type',
           '$.Avatar'
-        FROM [avatarMultiConversion] 
+        FROM [avatarMultiConversion]
 
 children:
   - type: component.form
@@ -366,13 +372,13 @@ children:
           type: component.text-field
         - instanceId: avatarbuffer
           options:
-          # set for multiple files to be added
+            # set for multiple files to be added
             isMultiple: true
             label: Avatar
             mediaType: image
           type: component.media-field
       isDiscardChangesAlertEnabled: false
-     
+
   - type: component.list
     options:
       data: =@ctx.datasources.allImages
@@ -385,10 +391,10 @@ children:
             element: image
             text: ""
             uri: =@ctx.current.item.Avatar
-               
+
 actions:
   - children:
-  # use execute entites for multiple files to be added
+      # use execute entites for multiple files to be added
       - type: action.execute-entities
         # Options in error are expected as there are no functionParameters
         options:
@@ -402,9 +408,10 @@ actions:
           function: sql-add-widget-multiple
           goBack: stay
           method: functionCall
-          onSuccess: 
+          onSuccess:
             title: Success
 ```
+
 :::
 
 ## Convert HEIC to JPEG
@@ -440,5 +447,4 @@ conversions:
 
 ### See Also
 
-- [Example converting local-uri to buffer in SQL function]()
-
+- [Example converting local-uri to buffer in SQL function](https://docs.jigx.com/examples/media-field#haYKX)

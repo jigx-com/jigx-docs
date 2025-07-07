@@ -250,4 +250,4 @@ swipeable:
 
 ## Examples and code snippets
 
-See [REST error example]() to understand how to configure error responses in a REST function, create a error table and use the commandQueue with actions to process the error.
+See [REST error example](https://docs.jigx.com/examples/rest-errors) to understand how to configure error responses in a REST function, create a error table and use the commandQueue with actions to process the error.

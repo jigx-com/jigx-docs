@@ -12,7 +12,7 @@ Jigx easily integrates with your Salesforce instance, allowing you to share data
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](), [lists](), [widgets](./../../../Administration/Solutions/Widgets.md), or [steppers]().
+The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](./../../../Administration/Solutions/Widgets.md), or [steppers](https://docs.jigx.com/examples/stepper).
 :::
 
 :::VerticalSplitItem
@@ -32,11 +32,11 @@ The Salesforce provider uses the Jigx Cloud service, where the data passes throu
 
 ## Supported methods:
 
-- [Create]()
-- [Delete]()
-- [Save]()
-- [Update]()
-- [Read/list]()
+- [Create](https://docs.jigx.com/examples/create-records-in-objects)
+- [Delete](https://docs.jigx.com/examples/delete-records-in-objects)
+- [Save](https://docs.jigx.com/examples/save-and-update-records-in-objects)
+- [Update](https://docs.jigx.com/examples/save-and-update-records-in-objects)
+- [Read/list](https://docs.jigx.com/examples/list-records-in-objects)
 
 ## Syncing data
 
@@ -61,15 +61,14 @@ options:
 1. The permission set assigned to a user in Salesforce determining what they can view and interact with is adhered to in the Jigx App allowing the user to view and interact with only the data they have rights to.
 2. Limitation - you can use the Salesforce provider to create a list of reports in Salesforce but cannot run the report from the app.
 3. See [Using the Salesforce provider](<./Salesforce/Using the Salesforce provider.md>) section for code examples on referencing multiple Salesforce objects, queries that define the data to be returned and creating joins between objects using expressions.
-4. Salesforce is set up for your individual organization and each instance will be different, the examples in th section are provided for guidance on using the Salesforce provider's methods and must be adapted to work with your specific instance.  
+4. Salesforce is set up for your individual organization and each instance will be different, the examples in th section are provided for guidance on using the Salesforce provider's methods and must be adapted to work with your specific instance.
 5. Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data. You can copy and paste the queries into Jigx Builder.
 
 ## Examples and code snippets
 
 The following examples with code snippets are provided:
 
-- [Create records in objects]()
-- [Delete records in objects]()
-- [Save & update records in objects]()
-- [List records in objects]()
-
+- [Create records in objects](https://docs.jigx.com/examples/create-records-in-objects)
+- [Delete records in objects](https://docs.jigx.com/examples/delete-records-in-objects)
+- [Save & update records in objects](https://docs.jigx.com/examples/save-and-update-records-in-objects)
+- [List records in objects](https://docs.jigx.com/examples/list-records-in-objects)

@@ -11,7 +11,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
 1. **Choose your data source**
    - Identify the REST API you will use as your data source. Ensure you understand its endpoint structure, request requirements (like headers and query parameters), and the format of the data it returns.
 2. Define a REST Service in a **Jigx function** in Jigx Builder:
-   - Navigate to the [functions]() folder in Jigx Builder.
+   - Navigate to the [functions](https://docs.jigx.com/rest#H1tHs) folder in Jigx Builder.
    - Use [IntelliSense](<./../../Jigx Builder _code editor_/Editor.md>) to configure the REST data provider.
    - Enter the base URL of the REST API.
 3. **Configure REST Authentication**:
@@ -20,7 +20,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
    - Set up different operations your application can perform using this API, such as GET, POST, PUT, DELETE, etc.
    - For each operation, create a new function to specify the endpoint, required headers, URL parameters, input and output transforms, continuation, and body content if applicable.
 5. **Reference the Jigx functions in jigs**:
-   - [Reference the function]() in your jigs. This step is crucial for integrating the API data seamlessly into your Jigx solution.
+   - [Reference the function](https://docs.jigx.com/rest#qbU72) in your jigs. This step is crucial for integrating the API data seamlessly into your Jigx solution.
 6. **Publish your solution**:
    - [Publish your solution](<./../../Jigx Builder _code editor_/Publishing a solution.md>) and use the app to interact with the REST data provider. Make sure to handle any API limits or errors gracefully.
 7. **Test the Data Provider**:

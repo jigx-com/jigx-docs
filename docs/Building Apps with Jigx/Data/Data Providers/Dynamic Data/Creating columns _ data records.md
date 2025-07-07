@@ -20,7 +20,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 You can create columns in the table by creating a jig, then define the columns you require in the table by using the Dynamic Data provider's `create` or `save` method.
 Here are scenarios commonly used to create columns and data from a jig.
 
-### **Create a **[**form**](https://docs.jigx.com/examples/form)** and use the **[**submit form**](https://docs.jigx.com/examples/submit-form)** action**&#x20;
+### **Create a **[**form**](https://docs.jigx.com/examples/form)** and use the **[**submit form**](https://docs.jigx.com/examples/submit-form)** action**
 
 In this scenario the `formId` in the `component.form` is used in the `submit-form` action to get context to the property `instanceId`. Each value used in the `instanceId` becomes the column's name in the table. The `entity` property specifies the table to add the columns and data to.
 
@@ -31,21 +31,21 @@ The columns and data records are created when the form is completed and submitte
 ![Form creates column and data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jjL4vN_lEb3UbFsv42yPN_dd-column-form.png "Form creates column and data record")
 
 1. Add a `component.form` to a jig and give it a `formId`.
-2. Add any of the available form properties, such as [text-field](), [date-picker](), [number-field]().
-4. Add the `submit.form` action.
-5. Specify the same `formId` used in the `component.form`.
-6. Use the `DATA_PROVIDER_DYNAMIC` with the `create` or `save` method.
-7. In the `entity` property, specify the table where the columns and data must be added.
-8. Publish the solution.
-9. Open the solution in Jigx App and complete the form, click the submit button.
-10. Browse to Jigx Management> *solution* >data> *table* to see the* *new record and columns.
+2. Add any of the available form properties, such as [text-field](https://docs.jigx.com/examples/text-field), [date-picker](https://docs.jigx.com/examples/date-picker), [number-field](https://docs.jigx.com/examples/number-field).
+3. Add the `submit.form` action.
+4. Specify the same `formId` used in the `component.form`.
+5. Use the `DATA_PROVIDER_DYNAMIC` with the `create` or `save` method.
+6. In the `entity` property, specify the table where the columns and data must be added.
+7. Publish the solution.
+8. Open the solution in Jigx App and complete the form, click the submit button.
+9. Browse to Jigx Management> _solution_ >data> _table_ to see the new record and columns.
 
 :::CodeblockTabs
 employee-form.jigx
 
 ```yaml
 title: New employee form
-description: Capture the new employee details 
+description: Capture the new employee details
 type: jig.default
 
 header:
@@ -79,34 +79,35 @@ children:
           instanceId: date_of_birth # becomes the name of the column in table
           options:
             label: Date of birth
-        - type: component.avatar-field 
+        - type: component.avatar-field
           instanceId: photo # becomes the name of the column in table
           options:
             label: My profile
         - type: component.signature-field
           instanceId: signature # becomes the name of the column in table
           options:
-            label: Sign 
+            label: Sign
         - type: component.email-field
           instanceId: email # becomes the name of the column in table
           options:
             label: Email address
-      
+
 actions:
-  - children: 
+  - children:
       - type: action.submit-form
         options:
           formId: form-employee #used to get context to the property instanceIds
           provider: DATA_PROVIDER_DYNAMIC # Dynamic data provider
-          title: Create Record # creates data and the columns if they do not already exist 
+          title: Create Record # creates data and the columns if they do not already exist
           entity: default/employee # Specify the table to create the data and columns in
           method: create # use create or save
-          onSuccess: 
+          onSuccess:
             type: action.go-back
 ```
+
 :::
 
-### Use [execute-entity]() or [execute-entities]() action to create columns and data records
+### Use [execute-entity](https://docs.jigx.com/examples/execute-entity) or [execute-entities](https://docs.jigx.com/examples/execute-entities) action to create columns and data records
 
 In this scenario you can use actions in a jig that interact with data to add columns and data records. The columns and data are configured in the `data:` property the action.Use the following actions with the Dynamic Data provider's `create` and `save` methods:
 
@@ -141,6 +142,7 @@ type: action.execute-entities
             manager_name: =@ctx.current.item.manager
             email: =@ctx.datasources.company_contacts.email
 ```
+
 :::
 
 ## Creating columns in Jigx Management
@@ -179,10 +181,10 @@ If you have pre-existing data or a large data set with multiple records to add t
 
 The following examples with code snippets are provided:
 
-- [Creating Dynamic Data]()
-- [Reading Dynamic Data]()
-- [Updating Dynamic Data]()
-- [Deleting Dynamic Data]()
+- [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
+- [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
+- [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
+- [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)
 
 ## See Also
 

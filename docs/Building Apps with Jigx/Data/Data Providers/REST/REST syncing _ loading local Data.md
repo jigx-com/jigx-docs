@@ -56,4 +56,4 @@ There are two options when using the `execute-entity` and `execute-entities` act
 
 ## Example
 
-See the [REST]() code examples that show how to use remote data store with local data provider.
+See the [REST](https://docs.jigx.com/examples/rest) code examples that show how to use remote data store with local data provider.

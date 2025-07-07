@@ -10,10 +10,10 @@ Once you have created the Dynamic Data [tables](<./Creating tables.md>) as well 
 Dynamic Data can be:
 
 - **Protected** - add Row Level Security (RLS) through security policies and authorization. For more information, see [Row Level Security](<./../../../../Administration/Solutions/Row Level Security.md>), [Data policies](<./../../../../Administration/Solutions/Row Level Security/Data policies.md>) and [Authorized users](<./../../../../Administration/Solutions/Row Level Security/Authorized users.md>).
-- **Created** - create new records in Dynamic Data tables, for example, adding new employees. For code examples and snippets, see [Creating Dynamic Data]().
-- **Read** - Read the data to populate a [form](), [list](), show a [location]() and more. For code examples and snippets, see [Reading Dynamic Data]().
-- **Updated** -update existing records in Dynamic Data tables, for example, updating an employee's address. For code examples and snippets, see [Updating Dynamic Data]().
-- **Deleted** - delete existing records in Dynamic Data tables, for example, remove old contacts or out-of-stock products. For code examples and snippets, see [Deleting Dynamic Data]().
+- **Created** - create new records in Dynamic Data tables, for example, adding new employees. For code examples and snippets, see [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data).
+- **Read** - Read the data to populate a [form](https://docs.jigx.com/examples/form), [list](https://docs.jigx.com/examples/LQFt-list), show a [location](https://docs.jigx.com/examples/foRN-location) and more. For code examples and snippets, see [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data).
+- **Updated** -update existing records in Dynamic Data tables, for example, updating an employee's address. For code examples and snippets, see [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data).
+- **Deleted** - delete existing records in Dynamic Data tables, for example, remove old contacts or out-of-stock products. For code examples and snippets, see [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data).
 
 ### As a datasource
 
@@ -85,10 +85,10 @@ children:
 
 **Execution** actions are designed to interact with specifically with data. The following actions can be used with the Dynamic Data provider either to create, update, delete, or sync data.
 
-- [execute-entity]()
-- [execute-entities]()
-- [submit-form]()
-- [sync-entities]() for getting data to the device.
+- [execute-entity](https://docs.jigx.com/examples/execute-entity)
+- [execute-entities](https://docs.jigx.com/examples/execute-entities)
+- [submit-form](https://docs.jigx.com/examples/submit-form)
+- [sync-entities](https://docs.jigx.com/examples/sync-entities) for getting data to the device.
 
 **Events** actions execute after an event is performed by a user or device. This event can be configured to use the Dynamic Data provider, for example, when refreshing a list jigby pulling down (onRefresh) use the `action.sync-entities` with the provider to refresh the data in the list. The following event actions are available.
 
@@ -100,13 +100,13 @@ children:
 - onDelete
 - onButtonPress (only on calendar jigs)
 
-For the complete list and code examples of available actions, see [actions]().
+For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/actions).
 
 ### Examples and code snippets
 
 The following examples with code snippets are provided:
 
-- [Creating Dynamic Data]()
-- [Reading Dynamic Data]()
-- [Updating Dynamic Data]()
-- [Deleting Dynamic Data]()
+- [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
+- [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
+- [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
+- [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)

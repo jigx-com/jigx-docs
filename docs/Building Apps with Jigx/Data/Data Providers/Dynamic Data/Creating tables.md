@@ -8,7 +8,7 @@ updatedAt: Wed Nov 29 2023 09:04:12 GMT+0000 (Coordinated Universal Time)
 
 ## Creating tables in Jigx Builder
 
-First step in creating Dynamic Data for a solution is to create the tables that the solution requires. Tables are created in a solution in Jigx Builder in the *default.jigx* file located in the *database* folder. All tables are created under the default database. Follow the steps below to create tables:
+First step in creating Dynamic Data for a solution is to create the tables that the solution requires. Tables are created in a solution in Jigx Builder in the _default.jigx_ file located in the _database_ folder. All tables are created under the default database. Follow the steps below to create tables:
 
 ![Tables in Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SpVXMM26nqpr1MZ15x34m_dd-tables.png "Tables in Dynamic Data")
 
@@ -29,20 +29,19 @@ First step in creating Dynamic Data for a solution is to create the tables that 
 
 ### Considerations
 
-- If *default.jigx* does not exist, simply use the file / new capability to add a new file called *default.jigx* and place it within a folder called databases as per the VS Code folder layout shown in the image at the top of this page.
-- If you remove a table in the default.jigx file and publish the solution, the table becomes *unused* in the solution. To include the table and it's records again in the solution, simply add the table back to the default.jigx file and republish the solution.
-- A table must be *unused* before you can [delete ](<./Deleting tables.md>) the entire table.
+- If _default.jigx_ does not exist, simply use the file / new capability to add a new file called _default.jigx_ and place it within a folder called databases as per the VS Code folder layout shown in the image at the top of this page.
+- If you remove a table in the default.jigx file and publish the solution, the table becomes _unused_ in the solution. To include the table and it's records again in the solution, simply add the table back to the default.jigx file and republish the solution.
+- A table must be _unused_ before you can [delete ](<./Deleting tables.md>) the entire table.
 
 ### Examples and code snippets
 
 The following examples with code snippets are provided:
 
-- [Creating Dynamic Data]()
-- [Reading Dynamic Data]()
-- [Updating Dynamic Data]()
-- [Deleting Dynamic Data]() (deletes records in the Dynamic Data table)
+- [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
+- [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
+- [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
+- [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data) (deletes records in the Dynamic Data table)
 
 ### See also
 
 [Creating columns & data records](<./Creating columns _ data records.md>)
-

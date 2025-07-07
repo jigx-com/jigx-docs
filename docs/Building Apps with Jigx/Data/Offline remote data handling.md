@@ -20,7 +20,7 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 ## How to configure the queue
 
-In the [execute-entity](), [execute-entities]() , and [submit-form]() actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
+In the [execute-entity](https://docs.jigx.com/examples/execute-entity), [execute-entities](https://docs.jigx.com/examples/execute-entities) , and [submit-form](https://docs.jigx.com/examples/submit-form) actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
 
 | **Property**                                    | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -151,7 +151,7 @@ actions:
 
 ## How to clear the queue
 
-For scenarios where operations on a record must be treated as draft and all queued commands must be removed without impacting the local record, use the `clear-queue` action, and specify the `id` of the record and a `title` for the action. See [clear all commands in the queue ]() example.
+For scenarios where operations on a record must be treated as draft and all queued commands must be removed without impacting the local record, use the `clear-queue` action, and specify the `id` of the record and a `title` for the action. See [clear all commands in the queue ](https://docs.jigx.com/offline-remote-data-handling#wzf1K) example.
 
 :::CodeblockTabs
 clear-queue-action

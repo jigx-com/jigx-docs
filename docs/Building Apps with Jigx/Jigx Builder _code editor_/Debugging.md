@@ -6,7 +6,7 @@ createdAt: Tue Jun 20 2023 08:34:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:18:17 GMT+0000 (Coordinated Universal Time)
 ---
 
-Jigx Builder provides debugging capabilities in VS Code to identify and fix YAML, SQLite, and app problems and errors. Connect your phone using the debugging QR code to troubleshoot a solution directly from the Jigx App. Quickly locate and resolve issues preventing the application from functioning correctly or as intended.  Examine your code, write and test SQL queries in the debug tool, trace program execution, and analyze error messages or unexpected behaviors to pinpoint the root cause of the problem. You can improve an application's reliability, performance, and functionality by debugging an application.
+Jigx Builder provides debugging capabilities in VS Code to identify and fix YAML, SQLite, and app problems and errors. Connect your phone using the debugging QR code to troubleshoot a solution directly from the Jigx App. Quickly locate and resolve issues preventing the application from functioning correctly or as intended. Examine your code, write and test SQL queries in the debug tool, trace program execution, and analyze error messages or unexpected behaviors to pinpoint the root cause of the problem. You can improve an application's reliability, performance, and functionality by debugging an application.
 
 ![Jigx Dev Tools](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AtgzZUHgK_p0EV0Zb98pk_jb-debug.png "Jigx Dev Tools")
 
@@ -28,6 +28,7 @@ Enable Jigx Dev Tools by following these steps:
 :::
 
 :::VerticalSplitItem
+
 1. Open the solution you want to debug in Jigx Builder.
 2. Click on the Jigx Builder icon in the activity bar.
 3. In the sidebar, click the **+** next to CONNECT TO DEVICE. Enter your Jigx user name and password if prompted.
@@ -36,18 +37,18 @@ Enable Jigx Dev Tools by following these steps:
 6. The solution opens in the Jigx App.
 7. Your device will show in Jigx Builder in the sidebar, with a data and functions node.
 8. Ensure that the VS Code panel is open.
-:::
-::::
+   :::
+   ::::
 
 ## Debugging Tools
 
-There are four main tools in the Jigx Dev Tool set that specifically target debugging Jigx  solutions. Each tool is described below:
+There are four main tools in the Jigx Dev Tool set that specifically target debugging Jigx solutions. Each tool is described below:
 
 ### Problems
 
-Jigx validates the structure and values in the `.jigx` YAML files and shows the issues that you need to fix in the **Problems tab** of the Jigx Dev tools pane. 
+Jigx validates the structure and values in the `.jigx` YAML files and shows the issues that you need to fix in the **Problems tab** of the Jigx Dev tools pane.
 
-- The pane shows the .jigx file, the area in the YAML that has the issue, and a badge count of the number of issues in that file, for example, *all-orders.jigx datasources 2.*
+- The pane shows the .jigx file, the area in the YAML that has the issue, and a badge count of the number of issues in that file, for example, _all-orders.jigx datasources 2._
 - Drill down into the list of issues to see the short descriptions and the location.
 - Clicking on the issue will take you to the line of YAML code in the file.
 - &#x20;Hover over the issue to see the popup that offers validation assistance and a quick-fix link if applicable.
@@ -62,7 +63,7 @@ Use the Jigx Console to debug your data and functions.
 
 ![Debugging data in Jigx Console](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pVjWwfz1K2Rdcwc0drcgJ_jb-console.gif "Debugging data in Jigx Console")
 
-1. &#x20;[Connect your device to Jigx Dev Tools]()
+1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
 2. Under the **Device** node, click on the **data** node and select the SQLite data table.
 3. Use the **▷** icon to run the SQL query in the Jigx Console.
 4. You can run multiple SQLite queries and functions simultaneously, as each one opens in a new tab in the console panel.
@@ -75,10 +76,10 @@ Use the Jigx Console to debug your data and functions.
 
 ![Debugging functions in Jigx Console](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UJyIWEShn42cP0BhWW5D3_jb-functiongif.gif "Debugging functions in Jigx Console")
 
-1. &#x20;[Connect your device to Jigx Dev Tools]()
+1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
 2. Under the **Device** node, click on the **functions** node and select the function to debug.
-3. The *function*.jigx file will open above the Jigx Console panel.
-4. Use the **▷** icon to run the function  in the Jigx Console.
+3. The _function_.jigx file will open above the Jigx Console panel.
+4. Use the **▷** icon to run the function in the Jigx Console.
 5. You can run multiple functions and SQL queries simultaneously, as each one opens in a new tab in the console panel.
 6. The function parameters are shown.
 7. Click **Execute** to run the function and see the data in the console panel.
@@ -119,12 +120,9 @@ As you building out your solution in Jigx Builder you can monitor expressions an
 
 ![Jigx Watcher](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f1yClypjHjw3R1DIt8fZz_jb-watcherfixed.gif "Jigx Watcher")
 
-1. [Connect your device to Jigx Dev Tools]()
+1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
 2. Open a `.jigx` file in Jigx Builder.
 3. Locate the expression or SQL query in the YAML code.
-4. Right click on the expression/SQL query and choose **Add to **Jigx** Watcher**. The Jigx  Watcher opens in the panel below and shows the type, value and result. The result field is populated when you use the expression or SQL Query in a solution on your device.
+4. Right click on the expression/SQL query and choose **Add to **Jigx** Watcher**. The Jigx Watcher opens in the panel below and shows the type, value and result. The result field is populated when you use the expression or SQL Query in a solution on your device.
 5. Use the **Show logs** button to open the entry in Jigx Logs and view additional detail for the expression/ SQL query.
-6. Use the **Remove** button to remove a single item. Click **Clear** in the right corner of the  Jigx Watcher panel to clear all items in the list.
-
-
-
+6. Use the **Remove** button to remove a single item. Click **Clear** in the right corner of the Jigx Watcher panel to clear all items in the list.

@@ -5,7 +5,7 @@ createdAt: Tue Dec 03 2024 11:46:40 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Feb 24 2025 09:27:39 GMT+0000 (Coordinated Universal Time)
 ---
 
-[Release 2025.1]() - introduces several updates to the index.jigx file, widgets, and location. Some properties have been deprecated, and a new grid jig type and a grid-item component have been added. These updates provide more versatility in app design, enhance layout options, and optimize screen space usage. To take advantage of these new features in your existing solutions, follow the guidance below to update your implementation.
+[Release 2025.1](https://docs.jigx.com/release-notes#affhn) - introduces several updates to the index.jigx file, widgets, and location. Some properties have been deprecated, and a new grid jig type and a grid-item component have been added. These updates provide more versatility in app design, enhance layout options, and optimize screen space usage. To take advantage of these new features in your existing solutions, follow the guidance below to update your implementation.
 
 ### Existing solutions
 
@@ -28,9 +28,8 @@ The navigation menu at the bottom of the app will now display as a bar and inclu
 :::VerticalSplitItem
 New solutions now offer greater versatility.
 
-1. The updated index.jigx with `tabs`, and new [jig.grid]()  functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
+1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/jiggrid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
 2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.
-
 
 :::
 
@@ -39,29 +38,29 @@ New solutions now offer greater versatility.
 :::
 ::::
 
-## Affected areas&#x20;
+## Affected areas
 
 The table below outlines the areas impacted by the introduction of bottom tab navigation, and the deprecation of the `stories`, `home`, and `widgets` properties in the index.jigx file.
 
-| **Old**                                                      | **New**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `widgets` property in index.jigx file.                       | `tabs` property in index.jigx file. See [tabs](<./../UI/Home Hub.md>)  for more information.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `widgets` property in jig files.                             | `widgets` in jig files now require a `widgetId` (Widget Name) property and remove the size, e.g. `1x1`.                                                                                                                                                                                                                                                                                                                                                                                      |
-| `stories` property in index.jigx&#xA;`story-group` component | Deprecated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `home` property in index.jigx file.                          | Reference the jig previously referenced in `home` as the custom Home Hub now in the `tabs` property. &#xA;The first jig configured under the `tabs` property becomes is the first screen displayed when the app is opened.                                                                                                                                                                                                                                                                   |
-| N/A                                                          | `jig-grid` - a new jig type used to configure jigs and components in a grid layout.  See [jig.grid]() for more information.                                                                                                                                                                                                                                                                                                                                                                  |
-| `component.widgets`                                          | `grid` and `grid-item` component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See [grid]() and [grid-item]() for more information.                                                                                                                                                                                                                                                                                  |
-| User profile                                                 | User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.                                                                                                                                                                                                                                                                                                                                                                |
-| Solutions (Home)                                             | Solution switching has moved into the user profile screen. A *switch* button opens the solution list for selection.<br />::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NGrWw9SMNv_vpn6k1f6rE-20250130-102419.png" size="44" position="center" caption="Switch solutions" alt="Switch solutions"} |
-| `component.location`                                         | The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.                                                                                                                                                                                                                                                                                                                                                      |
+| **Old**                                                      | **New**                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `widgets` property in index.jigx file.                       | `tabs` property in index.jigx file. See [tabs](<./../UI/Home Hub.md>) for more information.                                                                                                                                                                                                                                            |
+| `widgets` property in jig files.                             | `widgets` in jig files now require a `widgetId` (Widget Name) property and remove the size, e.g. `1x1`.                                                                                                                                                                                                                                |
+| `stories` property in index.jigx&#xA;`story-group` component | Deprecated.                                                                                                                                                                                                                                                                                                                            |
+| `home` property in index.jigx file.                          | Reference the jig previously referenced in `home` as the custom Home Hub now in the `tabs` property. &#xA;The first jig configured under the `tabs` property becomes is the first screen displayed when the app is opened.                                                                                                             |
+| N/A                                                          | `jig-grid` - a new jig type used to configure jigs and components in a grid layout. See [jig.grid](https://docs.jigx.com/examples/jiggrid) for more information.                                                                                                                                                                       |
+| `component.widgets`                                          | `grid` and `grid-item` component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See [grid](https://docs.jigx.com/examples/grid) and [grid-item](https://docs.jigx.com/examples/grid-item) for more information.                                                 |
+| User profile                                                 | User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.                                                                                                                                                                                                          |
+| Solutions (Home)                                             | Solution switching has moved into the user profile screen. A _switch_ button opens the solution list for selection.<br />::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NGrWw9SMNv_vpn6k1f6rE-20250130-102419.png" size="44" position="center" caption="Switch solutions" alt="Switch solutions"} |
+| `component.location`                                         | The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.                                                                                                                                                                                                |
 
 ## Migration steps
 
 ### index.jigx
 
 1. Remove the `stories` property.
-    - Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
-    - To replicate this functionality, consider using the [video-player]() or [carousel]() components.
+   - Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
+   - To replicate this functionality, consider using the [video-player](https://docs.jigx.com/examples/video-player) or [carousel](https://docs.jigx.com/examples/carousel) components.
 2. Replace the `widgets` property.
    - Replace the `widgets` property with a new `tabs` property.
    - Define the `tabs` you want to display in the bottom tab navigation.
@@ -89,13 +88,13 @@ category: analytics
 stories:
   - story-group-video
   - story-group-image
-# Home has been replaced with tabs, see new-index.jigx example.   
+# Home has been replaced with tabs, see new-index.jigx example.
 home:
   - instanceId: home-jig
     jigId: home-jig
 # Widgets have been replaced with tabs and inputs must be specified in the jig iteself,
 # or in the grid-item component.
-widgets: 
+widgets:
   - size: 2x2
     jigId: student-courses
   - size: 1x1
@@ -104,7 +103,12 @@ widgets:
       name: =@ctx.user.displayName
       number: 350.66
       boolean: true
-      array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]
+      array:
+        [
+          { name: John, age: 30 },
+          { name: Melany, age: 35 },
+          { name: Scott, age: 21 },
+        ]
 ```
 
 new-index.jigx
@@ -115,7 +119,7 @@ title: Student-app
 category: analytics
 
 tabs:
-  home: 
+  home:
     jigId: home-jig
     icon: home-apps-logo
   course:
@@ -123,8 +127,9 @@ tabs:
     icon: online-class-student
   details:
     jigId: student-details
-    icon: people-man-1 
+    icon: people-man-1
 ```
+
 :::
 
 ### custom home-hub
@@ -135,7 +140,7 @@ To maintain the same functionality, reference the custom Home Hub `jigId` in the
 old-index.jigx
 
 ```yaml
-name: Expo 
+name: Expo
 title: Expo
 category: business
 
@@ -143,9 +148,9 @@ category: business
 home:
   - instanceId: custom
     jigId: yoga-wellness
-    
+
 # Data is still synced in the index.jigx file.
-onLoad: 
+onLoad:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_DYNAMIC
@@ -156,25 +161,26 @@ onLoad:
 new-index.jigx
 
 ```yaml
-name: expo 
+name: expo
 title: Expo
 category: business
 
 # Add tabs and reference the previous home jig as a tab,
 # you can even call the tab home and give it a home icon.
-tabs: 
-  home: 
-    jigId: yoga-wellness 
-    icon: home 
-    
+tabs:
+  home:
+    jigId: yoga-wellness
+    icon: home
+
 # data is still synced inthe index.jigx file
-onLoad: 
+onLoad:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_DYNAMIC
     entities:
-      - default/events   
+      - default/events
 ```
+
 :::
 
 ### widgets in jigs
@@ -186,8 +192,8 @@ old-widget-property
 
 ```yaml
 widgets:
-# Replace 2x2 with a name for the widget that becomes the widgetId.
-  2x2: 
+  # Replace 2x2 with a name for the widget that becomes the widgetId.
+  2x2:
     type: widget.avatar
     options:
       text: LS
@@ -204,8 +210,8 @@ new-widget-property
 
 ```yaml
 widgets:
-# Specify a widgetId.
-  dev-avatar: 
+  # Specify a widgetId.
+  dev-avatar:
     type: widget.avatar
     options:
       text: LS
@@ -224,16 +230,17 @@ grid-item
 children:
   - type: component.grid-item
     options:
-# Specifiy the size of the widget    
+      # Specifiy the size of the widget
       size: "2x2"
-      children: 
+      children:
         type: component.jig-widget
         options:
           jigId: jig-a
-# The widgetId will automatically populate,
-# if you have specified one in the jig's widget property.          
+          # The widgetId will automatically populate,
+          # if you have specified one in the jig's widget property.
           widgetId: dev-avatar
 ```
+
 :::
 
 ### location
@@ -265,13 +272,13 @@ children:
     options:
       address: |
         40.759412, 
-        -73.912306 
+        -73.912306
 
   # Location component with paths.
   - type: component.location
     options:
       pathsData: =@ctx.datasources.coordinates
-      isAnimationDisabled: true          
+      isAnimationDisabled: true
 
   # Location component with markers.
   - type: component.location
@@ -279,9 +286,9 @@ children:
       markersData: |
         =@ctx.datasources.live_location.
         {"lat":$.latitude, 
-        "lng":$.longitude}  
+        "lng":$.longitude}
       zoomLevel: 12
-      isAnimationDisabled: false                
+      isAnimationDisabled: false
 ```
 
 new-location-component
@@ -292,9 +299,9 @@ children:
   - type: component.location
     options:
       viewPoint:
-        centerPosition: middle 
+        centerPosition: middle
         address: 768 5th Ave, New York, US
-        zoomLevel: 14 
+        zoomLevel: 14
       markers:
         data: =@ctx.datasources.address
         item:
@@ -306,7 +313,7 @@ children:
               options:
                 color: negative
                 icon: pin-1-map
-                  
+
   # Basic address with latitude and longitude.
   - type: component.location
     options:
@@ -325,17 +332,17 @@ children:
               type: component.icon
               options:
                 color: negative
-                icon: pin-1-map  
-      
-  # Multiple markers.         
+                icon: pin-1-map
+
+  # Multiple markers.
   - type: component.location
-    options: 
+    options:
       viewPoint:
         centerPosition: middle
-        address: =@ctx.datasources.address[1].street 
+        address: =@ctx.datasources.address[1].street
       markers:
         data: =@ctx.datasources.points
-        
+
   # Location with paths.
   - type: component.location
     options:
@@ -346,16 +353,16 @@ children:
         latitude: 40.759412
         longitude: -73.912306
         isAnimationEnabled: true
-          
-# A new action opens a modal, 
-# allowing you to select a map app on your device for navigation to an address. 
+
+# A new action opens a modal,
+# allowing you to select a map app on your device for navigation to an address.
 actions:
   - children:
       - type: action.open-map
         options:
           icon: landmark-empire-state
           title: Empire State Building
-          address: 20 W 34th St., New York, NY 10001, United States    
+          address: 20 W 34th St., New York, NY 10001, United States
 ```
 
 datasources
@@ -363,7 +370,7 @@ datasources
 ```yaml
 datasources:
   # First datasource used in the basic address example.
-  address: 
+  address:
     type: datasource.static
     options:
       data:
@@ -374,7 +381,7 @@ datasources:
         - id: 2
           street: 137 W 111th St
           city: New York
-          country: US  
+          country: US
   # Second datasource used in location with paths example.
   points:
     type: datasource.static
@@ -397,24 +404,24 @@ datasources:
           icon: home
         - id: 2
           name: Great Lawn Softball Field 6
-          latitude: 40.782091612607864 
+          latitude: 40.782091612607864
           longitude: -73.9655512166898
           address: 86th St Transverse, New York, NY 10024, United States
-          icon: stadium-1-building 
+          icon: stadium-1-building
   # Fourth datasource used in the old-location component with paths.
   coordinates:
-      type: datasource.static
-      options:
-        data:
-          - id: 1
-            latitude: 40.769702
-            longitude: -74.038241
-          - id: 2
-            latitude: 40.759412
-            longitude: -73.912306
-          - id: 3
-            latitude: 40.803495
-            longitude: -73.950694           
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          latitude: 40.769702
+          longitude: -74.038241
+        - id: 2
+          latitude: 40.759412
+          longitude: -73.912306
+        - id: 3
+          latitude: 40.803495
+          longitude: -73.950694
 ```
-:::
 
+:::

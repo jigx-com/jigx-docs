@@ -8,7 +8,7 @@ updatedAt: Tue Oct 31 2023 11:29:56 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-Learn how to add a second jig to your Hello Jigx project using the ***jig.calendar*** type with an icon and a [static data source](). At the end of this step-by-step, you have added a calendar jig to the [Home Hub](<./../../Building Apps with Jigx/UI/Home Hub.md>) that can display a week, the events, meetings, and the relevant details for each, as shown below.
+Learn how to add a second jig to your Hello Jigx project using the **_jig.calendar_** type with an icon and a [static data source](https://docs.jigx.com/examples/static). At the end of this step-by-step, you have added a calendar jig to the [Home Hub](<./../../Building Apps with Jigx/UI/Home Hub.md>) that can display a week, the events, meetings, and the relevant details for each, as shown below.
 
 :::hint{type="success"}
 We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.
@@ -16,6 +16,7 @@ We recommend you build out all the solution steps for the [Create an app from sc
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
+
 ## Steps
 
 1. Open the Hello-Jigx solution in the
@@ -34,4 +35,3 @@ We recommend you build out all the solution steps for the [Create an app from sc
 ## GitHub Sample
 
 You can download the <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" target="_blank">Hello Jigx solution :Comment[project]{resolved="true" docCommentId="nxNcz27zeKBX1eUhQnt6j"} </a>on GitHub or build it yourself by following the detailed steps in this section.
-

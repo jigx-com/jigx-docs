@@ -8,7 +8,7 @@ updatedAt: Tue Oct 31 2023 13:36:45 GMT+0000 (Coordinated Universal Time)
 
 # Overview
 
-In this section, you learn how to create a view using the [entity-field]() component to display the data returned from the [Dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>). Add an action to go to a form that allows you to edit and [update a record](<./../../../Building Apps with Jigx/UI/Jigs _screens_/Forms/Updating a Record.md>).
+In this section, you learn how to create a view using the [entity-field](https://docs.jigx.com/examples/entity-field) component to display the data returned from the [Dynamic data provider](<./../../../Building Apps with Jigx/Data/Data Providers/Dynamic Data.md>). Add an action to go to a form that allows you to edit and [update a record](<./../../../Building Apps with Jigx/UI/Jigs _screens_/Forms/Updating a Record.md>).
 
 ## Steps
 
@@ -18,7 +18,7 @@ In this section, you learn how to create a view using the [entity-field]() compo
 2. Name the file **view-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **Default** to open the skeleton YAML created by the Jigx Builder.
 3. Give your jig a `title` and `description`.
 4. Delete the `header` and `onfocus` nodes.
-5. Specify the SQLite Dynamic data provider,  the table, and the SQLite query needed to return the customer's details. Below is an example of the code you can use.
+5. Specify the SQLite Dynamic data provider, the table, and the SQLite query needed to return the customer's details. Below is an example of the code you can use.
 
 :::CodeblockTabs
 YAML
@@ -31,11 +31,12 @@ datasources:
       provider: DATA_PROVIDER_DYNAMIC
       entities:
         - default/customers
-      query: SELECT id, '$.firstName', '$.lastName', '$.email' FROM [default/customers] WHERE id = @custId 
+      query: SELECT id, '$.firstName', '$.lastName', '$.email' FROM [default/customers] WHERE id = @custId
       queryParameters:
         custId: =@ctx.jig.inputs.custId
       isDocument: true
 ```
+
 :::
 
 ### Create the view form
@@ -66,6 +67,7 @@ children:
             label: Email
             value: =@ctx.datasources.customerInfo.email
 ```
+
 :::
 
 ### Add an edit action (button)
@@ -85,6 +87,7 @@ actions:
           parameters:
             custId: =@ctx.jig.inputs.custId
 ```
+
 :::
 
 2\. Your view-customer.jigx file should resemble the code below.
@@ -103,27 +106,27 @@ datasources:
   customerInfo:
     type: datasource.sqlite
     options:
-    # The data provider being used. In this case, the Jigx Dynamic Data provider, which is a built-in database that can be queried to get data from
+      # The data provider being used. In this case, the Jigx Dynamic Data provider, which is a built-in database that can be queried to get data from
       provider: DATA_PROVIDER_DYNAMIC
-      # The name of the table that the information is being returned from. All Dynamic Data-based tables are saved in the "default" database 
+      # The name of the table that the information is being returned from. All Dynamic Data-based tables are saved in the "default" database
       entities:
         - default/customers
-     # The SQLite query used to specifiy the data to return 
-      query: SELECT id, '$.firstName', '$.lastName', '$.email' FROM [default/customers] WHERE id = @custId 
+      # The SQLite query used to specifiy the data to return
+      query: SELECT id, '$.firstName', '$.lastName', '$.email' FROM [default/customers] WHERE id = @custId
       queryParameters:
         custId: =@ctx.jig.inputs.custId
       isDocument: true
-# The controls that will be displayed on the jig are defined under the children node on a default jig      
+# The controls that will be displayed on the jig are defined under the children node on a default jig
 children:
   # All input controls are placed on a form component
   - type: component.entity
     options:
       children:
-      # To display two controls next to each other, they are added as children of a field-row component
+        # To display two controls next to each other, they are added as children of a field-row component
         - type: component.field-row
           options:
             children:
-             # A text-field component is used to display text information on a form
+              # A text-field component is used to display text information on a form
               - type: component.entity-field
                 options:
                   label: First Name
@@ -137,7 +140,7 @@ children:
             label: Email
             value: =@ctx.datasources.customerInfo.email
 
-# The top level action on a default jig places a button at the bottom of the screen           
+# The top level action on a default jig places a button at the bottom of the screen
 actions:
   - children:
       # The navigation action that is performed when the go-to action completes
@@ -148,9 +151,9 @@ actions:
           parameters:
             custId: =@ctx.jig.inputs.custId
 ```
+
 :::
 
 :::hint{type="warning"}
 The view-customer file will display in red and cannot be saved yet as it references the edit-customer file that you will be creating in the [Edit a customer record](<./Edit a customer record.md>) step.
 :::
-

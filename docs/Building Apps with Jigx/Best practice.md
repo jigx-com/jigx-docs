@@ -7,7 +7,7 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 ## When to use solution state (global state)
 
-[State](./Logic/State.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a *one-to-one relationship*; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
+[State](./Logic/State.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a _one-to-one relationship_; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
 
 **Design Pattern:** Singletons
 
@@ -37,7 +37,7 @@ use-solution-state (datasource)
 
 ```yaml
 datasources:
-  contactData: 
+  contactData:
     type: datasource.sqlite
     options:
       isDocument: true
@@ -58,20 +58,21 @@ datasources:
         WHERE
           id = @taskId
       queryParameters:
-        taskId: =@ctx.solution.state.id        
+        taskId: =@ctx.solution.state.id
 ```
+
 :::
 
 State resources and code samples:
 
 - [Solution (Global) State](./Logic/State.md)
-- [Set-state]()
-- [Reset-state]()
+- [Set-state](https://docs.jigx.com/examples/set-state)
+- [Reset-state](https://docs.jigx.com/examples/reset-states)
 - [Examples of state](./Logic/State.md)
 
 ## When to use inputs
 
-[Inputs](<./UI/Jigs _screens_/Passing data using inputs.md>) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a *one-to-many relationship*, for example, a manager needs to check on the progress of each field service worker.
+[Inputs](<./UI/Jigs _screens_/Passing data using inputs.md>) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a _one-to-many relationship_, for example, a manager needs to check on the progress of each field service worker.
 
 **Design Pattern**: Mediator
 
@@ -87,18 +88,18 @@ set-parameters
 
 ```yaml
 actions:
-  - children:    
+  - children:
       - type: action.go-to
         options:
           title: Team Progress
           linkTo: team-progress
-# Define what data the parameters must use
-# The parameters name is used in the receiving jig's input expression            
+          # Define what data the parameters must use
+          # The parameters name is used in the receiving jig's input expression
           parameters:
             taskId: =@ctx.components.taskId.state.value
             taskStatus: =@ctx.components.taskStatus.state.value
             taskCost: =@ctx.components.taskCost.state.value
-            taskAssignee: =@ctx.components.taskAssignee.state.value 
+            taskAssignee: =@ctx.components.taskAssignee.state.value
 ```
 
 use-input
@@ -111,27 +112,27 @@ inputs:
   taskId:
     type: number
     required: true
-  taskAssignee: 
+  taskAssignee:
     type: string
     required: true
-  taskStatus: 
+  taskStatus:
     type: string
     required: true
   taskCost:
     type: number
     required: false
-    
+
 children:
   - type: component.expander
     options:
       header:
-        centerElement: 
+        centerElement:
           type: component.titles
           options:
             align: left
-# Use the parameter in the input expression 
-# to show who is working on the task             
-            title: =@ctx.jig.inputs.taskAssignee 
+            # Use the parameter in the input expression
+            # to show who is working on the task
+            title: =@ctx.jig.inputs.taskAssignee
             icon: professions-man-construction-2
             iconColor: color10
 
@@ -142,14 +143,15 @@ children:
               - type: component.entity-field
                 options:
                   label: Task Status
-# Use the parameter in the input expression to show the status                  
+                  # Use the parameter in the input expression to show the status
                   value: =@ctx.jig.inputs.taskStatus
               - type: component.entity-field
                 options:
                   label: Task Costs
-# Use the parameter in the input expression to show the cost                  
-                  value: =@ctx.jig.inputs.taskCost  
+                  # Use the parameter in the input expression to show the cost
+                  value: =@ctx.jig.inputs.taskCost
 ```
+
 :::
 
 Input resources and code samples:
@@ -159,7 +161,7 @@ Input resources and code samples:
 
 ## When to use outputs
 
-[Outputs](<./UI/Jigs _screens_/Passing data using outputs.md>) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a *many-to-one relationship*, for example, a manager needs to report on the progress of the team. Creating a master detail form is another usecase for outputs.
+[Outputs](<./UI/Jigs _screens_/Passing data using outputs.md>) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another usecase for outputs.
 
 **Design Pattern**: Observer
 
@@ -176,18 +178,18 @@ team-progress (output)
 ```yaml
 title: Team list
 type: jig.list
-icon: contact 
+icon: contact
 isHorizontal: true
 isHorizontalScrollIndicatorHidden: false
 isSelectable: true
 hasActiveItem: true
 
-datasources: 
-  team: 
+datasources:
+  team:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - default/tasks
       query: |
@@ -198,14 +200,14 @@ datasources:
          '$.taskAssignee',
          '$.team' 
         FROM [default/tasks] 
-        WHERE '$.team' IS NOT NULL 
+        WHERE '$.team' IS NOT NULL
 # Set the output to use the Id defined in the set state
 # The output- key will be passed in the input property,
-# in the composite jig   
+# in the composite jig
 outputs:
   output-key: =@ctx.solution.state.teamId
-  
-data: =@ctx.datasources.team 
+
+data: =@ctx.datasources.team
 item:
   type: component.list-item
   options:
@@ -216,15 +218,15 @@ item:
       - when: =@ctx.current.item.id = @ctx.solution.state.teamId ? true :false
         color: color2
     isContained: true
-    leftElement: 
+    leftElement:
       element: image
-      text: ''
+      text: ""
       uri: =@ctx.current.item.Profile
-    onPress: 
+    onPress:
       type: action.action-list
       options:
         actions:
- # set the solution state and the value as id of the current selected item       
+          # set the solution state and the value as id of the current selected item
           - type: action.set-state
             options:
               state: =@ctx.solution.state.teamId
@@ -239,15 +241,15 @@ type: jig.list
 icon: contact
 
 datasources:
-  team-update: 
+  team-update:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - default/tasks
-  # Define a query parameter to use the output property,
-  # when it is passed into the jig.
+      # Define a query parameter to use the output property,
+      # when it is passed into the jig.
       query: |
         SELECT
          id,
@@ -260,18 +262,18 @@ datasources:
         WHERE id = @statId
       queryParameters:
         statId: =@ctx.solution.state.teamId
-      
+
 data: =@ctx.datasources.team-update
 item:
   type: component.list-item
   options:
     title: =@ctx.current.item.taskId
     subtitle: =@ctx.current.item.taskCost
-    leftElement: 
+    leftElement:
       element: avatar
       text: =@ctx.current.item.taskAssignee
       uri: =@ctx.current.item.taskProfile
-    rightElement: 
+    rightElement:
       element: value
       text: =@ctx.current.item.taskStatus
 ```
@@ -289,6 +291,7 @@ children:
     inputs:
       id: =@ctx.jigs.team-profile.outputs.output-key
 ```
+
 :::
 
 Output resources and code samples:
@@ -305,7 +308,7 @@ datasource
 
 ```yaml
 datasources:
-  team-update: 
+  team-update:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
@@ -324,5 +327,5 @@ datasources:
       queryParameters:
         statId: =@ctx.solution.state.teamId
 ```
-:::
 
+:::

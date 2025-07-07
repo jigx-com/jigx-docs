@@ -24,13 +24,13 @@ Public content lets you specify what is accessible to the public on your organiz
 - Public content applies to branded apps.
 - The content/links/widgets/jigs require no authorization and can be viewed by the public.
 - When the Public Solution tab is configured, the intial app screen will have two options, namely,
-  - *Log in* - by logging in, you will be authenticated and have access to the solutions configured and published in Jigx Builder.
-  - *Continue without logging in* - there is no authentication and you will only see the public solution defined in the Public Solution tab.
+  - _Log in_ - by logging in, you will be authenticated and have access to the solutions configured and published in Jigx Builder.
+  - _Continue without logging in_ - there is no authentication and you will only see the public solution defined in the Public Solution tab.
 - Limitations on using a Public Solution:
   - Cannot use REST calls as they require the Jigx authorization layer.
   - No data or Dynamic Data access.
   - No access to credentials, such as OAuth, API Key, or secrets.
-- The *Public Solution* tab* is a definition file without folders.
+- The _Public Solution_ tab\* is a definition file without folders.
 - When submitting branded apps to the app stores for publishing it is recommended to include a Privacy Policy link as the stores might require you to provide sufficient warning to your users regarding tracking of data and cookies.
 - The public content setting is not required and you can configure the nodes according to your requirements, such as privacy.
 
@@ -38,18 +38,17 @@ Public content lets you specify what is accessible to the public on your organiz
 
 You can add the URLs in the provided fields in the language of your choice. Multiple languages are supported.
 
-| **Properties**     | **Description**                                                                                                                                                                                                                                   | **Example**                                                                                                    |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Public Solution    | Configure the public solution that is shown on the branded app at the organization level that requires no login.                                                                                                                                  | For example, two widgets, one for customers and the other for employees. See the [Public Solution]() example.  |
-| Privacy            | Add the URL to your company's privacy policy. Define the URL in multiple languages, such as English (en), and German (de).  The privacy settings are displayed in the app under **Profile > Security** and on the splash screen for branded apps. | https\://www\.global.com/privacy-policy                                                                        |
-| Terms & Conditions | Add the URL to your company's terms of service/terms and conditions. Define the URL in multiple languages, such as English (en), and German (de).                                                                                                 | https\://www\.global.com/terms-of-service/&#xA;                                                                |
-| Legal Disclosure   | Provide a link to your company's  legal disclosure page or contact/About us information.                                                                                                                                                          | https\://global.com/about-us/<br />                                                                            |
-| Request Access     | Add the URL for users to register through the app. The URL calls the Jigx api to register the user.                                                                                                                                               |  https\://global.azurewebsites.net/jigxRegister/form                                                           |
+| **Properties**     | **Description**                                                                                                                                                                                                                                  | **Example**                                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| Public Solution    | Configure the public solution that is shown on the branded app at the organization level that requires no login.                                                                                                                                 | For example, two widgets, one for customers and the other for employees. See the [Groups](https://docs.jigx.com/groups) example. |
+| Privacy            | Add the URL to your company's privacy policy. Define the URL in multiple languages, such as English (en), and German (de). The privacy settings are displayed in the app under **Profile > Security** and on the splash screen for branded apps. | https\://www\.global.com/privacy-policy                                                                                          |
+| Terms & Conditions | Add the URL to your company's terms of service/terms and conditions. Define the URL in multiple languages, such as English (en), and German (de).                                                                                                | https\://www\.global.com/terms-of-service/&#xA;                                                                                  |
+| Legal Disclosure   | Provide a link to your company's legal disclosure page or contact/About us information.                                                                                                                                                          | https\://global.com/about-us/<br />                                                                                              |
+| Request Access     | Add the URL for users to register through the app. The URL calls the Jigx api to register the user.                                                                                                                                              |  https\://global.azurewebsites.net/jigxRegister/form                                                                             |
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
-The public content links configuration for *Privacy Policy*, *Terms & Conditions* and *Legal Disclosure* are displayed in the app under **Profile > Security**.
-
+The public content links configuration for _Privacy Policy_, _Terms & Conditions_ and _Legal Disclosure_ are displayed in the app under **Profile > Security**.
 
 :::
 
@@ -59,19 +58,21 @@ The public content links configuration for *Privacy Policy*, *Terms & Conditions
 ::::
 
 :::::ExpandableHeading
+
 ## Example of a Public Solution
 
 The Public Solution tab is a definition file configured similiarly to creating the YAML in the Jigx Builder just without the folders. In the definition file the following entries are required:
 
 ::::VerticalSplit{layout="left"}
 :::VerticalSplitItem
+
 1. definition
 2. name
 3. jigs
 4. title
 5. category
 6. widgets
-:::
+   :::
 
 :::VerticalSplitItem
 ![YAML structure](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m1tyVetv9VWAVAzoDT0A_jm-pcyaml.png "YAML structure")
@@ -83,7 +84,7 @@ Management validates values in the JSON and YAML and will provide a validation m
 
 ![Public Solution JSON](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/REaK-B5sTz2Om7n2uURTG_jm-publicjson.png "Public Solution JSON")
 
-In the example below there are two jigs of type [document](). The documents are HTML pages for registering depending if you are a customer or employee. Each jig is configured with a 2x2  image widget.
+In the example below there are two jigs of type [document](https://docs.jigx.com/examples/jigdocument). The documents are HTML pages for registering depending if you are a customer or employee. Each jig is configured with a 2x2 image widget.
 
 :::CodeblockTabs
 public-solution-JSON
@@ -213,8 +214,7 @@ definition:
       jigId: registration-customer
     - size: 2x2
       jigId: registration-employee
-
 ```
+
 :::
 :::::
-

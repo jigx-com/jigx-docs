@@ -19,7 +19,7 @@ Outputs are configured in a jig and are then used as an input in a composite jig
 - The data from configuring `outputs` can only be used in composite jigs.
 - Using the `output` property must be reciprocated with an `input` property in the composite jig.
 - The `output` requires an `output-key` and a data value that is available in that jig.
-- The receiving jig configuration uses the format similar to  `=@ctx.solution.state.output-key`. Use IntelliSense  (ctrl+space) to assist with configuration.
+- The receiving jig configuration uses the format similar to `=@ctx.solution.state.output-key`. Use IntelliSense (ctrl+space) to assist with configuration.
 
 ### YAML code
 
@@ -36,7 +36,7 @@ In the jig containing the data you want to transfer, configure the output-key. E
 
 :::VerticalSplitItem
 **Input:**
-In the receiving [jig.composite]() configure the input for the data. Example:
+In the receiving [jig.composite](https://docs.jigx.com/examples/jigcomposite) configure the input for the data. Example:
 
 `inputs:
    id: =@ctx.solution.state.servicesId`
@@ -46,9 +46,10 @@ In the receiving [jig.composite]() configure the input for the data. Example:
 ## Examples
 
 :::::ExpandableHeading
+
 ### Passing data via outputs to connect two jigs data in a composite jig
 
-In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the *List of available services *the *service details* for that specific service populates.
+In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the *List of available services *the _service details_ for that specific service populates.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" position="center" caption="Passing data using outputs" alt="Passing data using outputs"}
 
@@ -71,7 +72,7 @@ cleaning-serv-horizon-list-dd.jigx
 ```yaml
 title: List of available services
 type: jig.list
-icon: contact 
+icon: contact
 isHorizontal: true
 isCollapsible: false
 isInitiallyCollapsed: true
@@ -90,34 +91,33 @@ header:
 
 outputs:
   output-key: =@ctx.solution.state.servicesId
-  
+
 data: =@ctx.datasources.cleaning-services-dynamic
 item:
-  
   type: component.list-item
   options:
     title: =@ctx.current.item.service
     subtitle: =@ctx.current.item.description
     horizontalItemSize: large
-    
+
     progress: =@ctx.current.item.id = @ctx.solution.state.servicesId ? 1 :0
     color:
       - when: =@ctx.current.item.id = @ctx.solution.state.servicesId ? true :false
         color: color2
-    leftElement: 
+    leftElement:
       element: image
-      text: ''
+      text: ""
       uri: =@ctx.current.item.image
     label:
       title: =@ctx.current.item.time & ' minutes'
     rightElement:
       element: value
       text: =(@ctx.current.item.hourlyrate) != 'NA' ? '$ ' & $number(@ctx.current.item.hourlyrate) & ' p/hr':'$ ' & $number(@ctx.current.item.onceoffrate) & ' once off'
-    onPress: 
+    onPress:
       type: action.action-list
       options:
         actions:
- # set the solution state and the value as id of the current selected item       
+          # set the solution state and the value as id of the current selected item
           - type: action.set-state
             options:
               state: =@ctx.solution.state.servicesId
@@ -151,6 +151,7 @@ options:
       '$.quantity'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
+
 :::
 
 **Jig - service details**
@@ -176,19 +177,19 @@ placeholders:
   - title: Please choose a service
     when: =@ctx.datasources.cleaningServices.service != null ? false:true
     icon: loading-data
-      
+
 datasources:
   cleaningServices:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_DYNAMIC
-  
+
       entities:
         - entity: default/cleaning-services
       queryParameters:
         servId: =@ctx.solution.state.servicesId
-  
-      query: | 
+
+      query: |
         SELECT 
           id,
           '$.area', 
@@ -257,6 +258,7 @@ children:
                   value: ='$ ' & $number(@ctx.datasources.cleaningServices.onceoffrate)
                   isHidden: =(@ctx.datasources.cleaningServices.onceoffrate) = null ? true:false
 ```
+
 :::
 
 **Composite jig - combining output with input**
@@ -295,16 +297,16 @@ header:
 children:
   - jigId: cleaning-serv-horizon-list-dd
     instanceId: cleaning
-# InstanceId is required for a composite jig exposing outputs
-# To be accessed by another jig 
-    
+  # InstanceId is required for a composite jig exposing outputs
+  # To be accessed by another jig
+
   - jigId: service-details
     instanceId: service_deets
-# Add inputs to receive the outputs-keys, use the instanceId of the output jig
-# Which renders the selected data    
+    # Add inputs to receive the outputs-keys, use the instanceId of the output jig
+    # Which renders the selected data
     inputs:
       id: =@ctx.jigs.cleaning.outputs.output-key
 ```
+
 :::
 :::::
-

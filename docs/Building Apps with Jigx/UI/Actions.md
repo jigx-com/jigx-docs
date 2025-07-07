@@ -9,21 +9,24 @@ Actions refer to specific controls or operations that respond to an event or inp
 
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
-- *Execution* - actions to interact with data.
-  - [execute-entity]()
-  - [execute-entities]()
-  - [submit-form]()
-  - [sync-entities]() for getting data to the device.
-- *Navigational* - actions used to navigate to another jig or Home Hub.
-  - [go-to]()
-  - [go-back]()
-- Actions to *open* components.
-  - [open-scanner]()
-  - [open-url]()
-- *State* - actions used to determine a specific status or value of a property or component.
-  - [set-state]()
-  - [reset-state]()
-- *Events* - actions that execute after a user or device performs a trigger.
+- _Execution_ - actions to interact with data.
+  - [execute-entity](https://docs.jigx.com/examples/execute-entity)
+  - [execute-entities](https://docs.jigx.com/examples/execute-entities)
+  - [submit-form](https://docs.jigx.com/examples/submit-form)
+  - [sync-entities](https://docs.jigx.com/examples/sync-entities) for getting data to the device.
+- _Navigational_ - actions used to navigate to another jig or Home Hub.
+  - [go-to](https://docs.jigx.com/examples/go-to)
+  - [go-back](https://docs.jigx.com/examples/go-back)
+- Actions to _open_ components.
+  - [open-scanner](https://docs.jigx.com/examples/open-scanner)
+  - [open-url](https://docs.jigx.com/examples/open-url)
+  - [open-media-picker](https://docs.jigx.com/examples/open-media-picker)
+  - [open-map](https://docs.jigx.com/examples/open-map)
+  - [open-app-setting](https://docs.jigx.com/examples/open-app-settings)
+- _State_ - actions used to determine a specific status or value of a property or component.
+  - [set-state](https://docs.jigx.com/examples/set-state)
+  - [reset-state](https://docs.jigx.com/examples/reset-state)
+- _Events_ - actions that execute after a user or device performs a trigger.
   - onRefresh
   - onFocus
   - onPress
@@ -31,8 +34,9 @@ Actions allow you to do many things in an app; below are the types of actions th
   - onChange
   - onDelete
   - onButtonPress (only on calendar jigs)
+  - [onTableChanged](https://docs.jigx.com/examples/ontablechanged)
 
-For the complete list and code examples of available actions, see [actions]().
+For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/actions).
 
 ## Where to add actions
 
@@ -54,6 +58,7 @@ actions:
           parameters:
             custId: =@ctx.datasources.mydata.id
 ```
+
 :::
 
 ### In a list
@@ -80,7 +85,7 @@ header:
           uri: https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80
 
 # onFocus is triggered whenever the jig is displayed. The sync-entities action calls the Jigx SQL function and populates the local SQLite tables on the device with the data returned from Azure SQL.
-onFocus: 
+onFocus:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_SQL
@@ -89,14 +94,14 @@ onFocus:
         function: get-customers
 
 datasources:
-  mydata: 
+  mydata:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-      
+
       entities:
         - entity: customers
-  
+
       query: |
         SELECT
           id,
@@ -112,7 +117,7 @@ datasources:
           '$.country'
         FROM
           [customers]
-        ORDER BY '$.first_name' 
+        ORDER BY '$.first_name'
 
 data: =@ctx.datasources.mydata
 item:
@@ -127,12 +132,12 @@ item:
         @ctx.current.item.zip_code
     label:
       title: =@ctx.current.item.country
-    leftElement: 
+    leftElement:
       element: avatar
       text: =$substring(@ctx.current.item.first_name,0,1) & $substring(@ctx.current.item.last_name,0,1)
     divider: solid
     # A go-to action is triggered when pressing on a list item.
-    onPress: 
+    onPress:
       type: action.go-to
       options:
         # The name of the jig to navigate to when the item is pressed.
@@ -150,8 +155,8 @@ actions:
           linkTo: newCustomer
           parameters:
             custId: =$uuid_v4()
-      
 ```
+
 :::
 
 ### In the index file
@@ -163,10 +168,10 @@ index.jigx
 
 ```yaml
 widgets:
-  - size: 1x1 
+  - size: 1x1
     jigId: home-hub
-# Configure the Onload to sync the salesforce data to the device when the app  is opened 
-onLoad: 
+# Configure the Onload to sync the salesforce data to the device when the app  is opened
+onLoad:
   type: action.action-list
   options:
     actions:
@@ -181,11 +186,12 @@ onLoad:
             - entity: UserRole
             - entity: Territory2
 ```
+
 :::
 
 ## Executing multiple actions
 
-To execute a series of actions use the [action-list](), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
+To execute a series of actions use the [action-list](https://docs.jigx.com/examples/action-list), this allows you to configure multiple actions as a group. The `isSequential` property on the action-list is important as it determines when the actions are executed.
 
 - `False` executes the actions randomly
 - `True` executes the actions from the top down and waits for the action to complete before executing the next action in the list, making it important to list the actions in the correct order.
@@ -194,24 +200,25 @@ To execute a series of actions use the [action-list](), this allows you to confi
 action-list
 
 ```yaml
-onFocus: 
+onFocus:
   type: action.action-list
   options:
-  # actions set to execute one after the other starting at the first action in the list
+    # actions set to execute one after the other starting at the first action in the list
     isSequential: true
     actions:
-    # first action to execute 
+      # first action to execute
       - type: action.set-state
         options:
           state: =@ctx.solution.state.focus-key
           value: focused
-     # second action execute after the first action completes     
+      # second action execute after the first action completes
       - type: action.sync-entities
         options:
           provider: DATA_PROVIDER_DYNAMIC
           entities:
             - default/employees
 ```
+
 :::
 
 ## Local actions
@@ -241,30 +248,31 @@ Global actions are added under the `actions` folder in Jigx Builder.
 action
 
 ```yaml
-action: 
- type: action.execute-entity
- options:
-   provider: DATA_PROVIDER_DYNAMIC
-   entity: default/contacts
-   method: update
-   onSuccess: 
-     description: Contact Updated
-     title: Contact Updated
-   data:
-     id: =@ctx.action.parameters.id
-     name: =@ctx.action.parameters.name
-     email: =@ctx.action.parameters.email
+action:
+  type: action.execute-entity
+  options:
+    provider: DATA_PROVIDER_DYNAMIC
+    entity: default/contacts
+    method: update
+    onSuccess:
+      description: Contact Updated
+      title: Contact Updated
+    data:
+      id: =@ctx.action.parameters.id
+      name: =@ctx.action.parameters.name
+      email: =@ctx.action.parameters.email
 parameters:
-  id: 
+  id:
     type: string
     required: true
-  name: 
+  name:
     type: string
     required: true
-  email: 
+  email:
     type: string
     required: true
 ```
+
 :::
 
 ### Call the global action in a jig or index.jigx
@@ -280,9 +288,9 @@ jig-call-action
 ```yaml
 actions:
   - children:
-  # use the action.execute-action to reference the global action
+      # use the action.execute-action to reference the global action
       - type: action.execute-action
-        options: 
+        options:
           title: Update Work details
           action: update-details
           parameters:
@@ -290,38 +298,39 @@ actions:
             name: =@ctx.components.name.state.value
             email: =@ctx.components.email.state.value
 ```
+
 :::
 
 ### Configure contextual values&#x20;
 
-When configuring a global action you cannot use `=@ctx.current.item` in the file as there is no context to the current item or it's value, instead configure parameters in the global actions file that can be referenced in the jig. The following  parameter is configurable in global actions `=@ctx.action.parameters.parametername`. In turn configure the parameter  value in the jig with `=@ctx.components.name.state.value` or `=@ctx.current.item.name`.
+When configuring a global action you cannot use `=@ctx.current.item` in the file as there is no context to the current item or it's value, instead configure parameters in the global actions file that can be referenced in the jig. The following parameter is configurable in global actions `=@ctx.action.parameters.parametername`. In turn configure the parameter value in the jig with `=@ctx.components.name.state.value` or `=@ctx.current.item.name`.
 
 :::CodeblockTabs
 global-action.jigx
 
 ```yaml
-action: 
- type: action.execute-entity
- options:
-   provider: DATA_PROVIDER_DYNAMIC
-   entity: default/contacts
-   method: update
-   onSuccess: 
-     description: Contact Updated
-     title: Contact Updated
-# set the global jig parameters      
-   data:
-     id: =@ctx.action.parameters.id
-     name: =@ctx.action.parameters.name
-     email: =@ctx.action.parameters.email
+action:
+  type: action.execute-entity
+  options:
+    provider: DATA_PROVIDER_DYNAMIC
+    entity: default/contacts
+    method: update
+    onSuccess:
+      description: Contact Updated
+      title: Contact Updated
+    # set the global jig parameters
+    data:
+      id: =@ctx.action.parameters.id
+      name: =@ctx.action.parameters.name
+      email: =@ctx.action.parameters.email
 parameters:
-  id: 
+  id:
     type: string
     required: true
-  name: 
+  name:
     type: string
     required: true
-  email: 
+  email:
     type: string
     required: true
 ```
@@ -332,7 +341,7 @@ jig.jigx
 actions:
   - children:
       - type: action.execute-action
-        options: 
+        options:
           title: Update Work details
           action: update-details
           # Provide the context values for the global jig parameters in the jig calling the global action.
@@ -341,6 +350,7 @@ actions:
             name: =@ctx.components.name.state.value
             email: =@ctx.components.email.state.value
 ```
+
 :::
 
 ### Considerations
@@ -350,32 +360,32 @@ actions:
    - `action.submit.form` is not available in global actions because the configuration is specific for each form using the `formId`.
    - `action.open-scanner` action is not available in global actions.
 3. The `when:` proprerty can be used to determine when the global action executes in a jig.
-4. Actions can be combined with components in the UI, for example [summary ]() component.
+4. Actions can be combined with components in the UI, for example [summary](https://docs.jigx.com/examples/summary) component.
 5. When using the `actions.action-list` as a global action you can call another global action in the global action list.
 
 :::CodeblockTabs
 global-action-multiple.jigx
 
 ```yaml
-action: 
+action:
   # execute multiple actions seqentially using the action-list
- type: action.action-list
- options:
-   isSequential: true
-   actions:
-     - type: action.go-to
-       options:
-        linkTo: detail-list
-   # reference another global action file by using execute action and cntrl+space to select available global action files     
-     - type: action.execute-action
-       options:
-         action: sync-data  
+  type: action.action-list
+  options:
+    isSequential: true
+    actions:
+      - type: action.go-to
+        options:
+          linkTo: detail-list
+      # reference another global action file by using execute action and cntrl+space to select available global action files
+      - type: action.execute-action
+        options:
+          action: sync-data
 ```
 
 sync-data (global action).jigx
 
 ```yaml
-action: 
+action:
   type: action.execute-entity
   options:
     provider: DATA_PROVIDER_DYNAMIC
@@ -386,16 +396,17 @@ action:
       name: =@ctx.action.parameters.name
       email: =@ctx.action.parameters.email
 parameters:
-  id: 
+  id:
     type: string
     required: true
-  name: 
+  name:
     type: string
     required: true
-  email: 
+  email:
     type: string
     required: true
 ```
+
 :::
 
 ## Working with parent & child actions
@@ -409,4 +420,3 @@ parameters:
 ## See Also
 
 - [File handling](<./../Data/File handling.md>)
-

@@ -24,7 +24,7 @@ Jigx provides a secure credentials store in the cloud that can be used to connec
 2. Click on the **Add OAuth** button at the top right of the screen.
 3. Fill in the fields or click on **Show schema** to add the raw JSON configuration object.
 4. Enter a descriptive **name** for the OAuth setting. This name is visible to the user on the device when SSO or secondary credentials are configured.
-5. The **Title** is the actual token that will be referenced from within the function definition of the solutions, best practice is to give it a descriptive name, for example, called *jigx.organizationName.oauth.token*.
+5. The **Title** is the actual token that will be referenced from within the function definition of the solutions, best practice is to give it a descriptive name, for example, called _jigx.organizationName.oauth.token_.
 6. Select the **type** of OAuth credentials required. There are three available types:&#x20;
    1. Graph
    2. Okta
@@ -34,7 +34,7 @@ Jigx provides a secure credentials store in the cloud that can be used to connec
 8. Use login hint - this field is optional, add a login hint parameter in the format required by the 3rd party identity provider.
 9. All the organization's domains set up at registration are listed under **Domains.**
    1. To add additional domains, contact support\@jigx.com.
-   2. To accomodate for unknown domains not associated with the organization use a wildcard (\*) in the OAuth configuration. See [Set up a domain wildcard]().
+   2. To accomodate for unknown domains not associated with the organization use a wildcard (\*) in the OAuth configuration. See [Set up a domain wildcard](https://docs.jigx.com/oauth-configurations#WJFnB).
 10. **Redirect URL **- Add the redirect URL, you can add multiple URLs. Redirect URLs must match the configuration of the Client app on the 3rd Party IDP.
 11. Enter the **Client ID**, and **Client Secret**. These are optional.
 12. Enter the **Issuer**. If you use the Service configuration endpoints, then Issuer is not required, but if not, then Issuer is a required field to complete the configuration.
@@ -68,7 +68,6 @@ When your app has multiple users that register and log in from external sources 
 2. You can assign multiple OAuth configurations to be used with Single-Sign-On by selecting multiple checkboxes in the [Single Sign-On (SSO)](<./Single Sign-On _SSO_.md>) screen. This is useful if multiple domains are used for different people, for example, internal users, vendors, or partners.
 3. OAuth configurations can be reused in Solution OAuth credentials. In the [Solution Credentials](./../Solutions/Credentials.md) page in Jigx Management, select the **OAuth Alias** option under the **Type** dropdown and select the organization's global OAuth credentials in the **OAuth configuration** dropdown to map to.
    ![Organization's global OAuth](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dgD-m_5cm8AwuLdUrgPSb_jm-oauthaliasl.png "Organization's global OAuth")
-4. The *Title* field in the OAuth configuration settings is the SSO name that users will see when logging into the app. It is important to give the Title a meaningful name.
+4. The _Title_ field in the OAuth configuration settings is the SSO name that users will see when logging into the app. It is important to give the Title a meaningful name.
 5. The call to the OAuth configuration for authorization is made when the index.jigx (Home Hub) loads on the app.
 6. The OAuth token's lifetime is 15 minutes.
-

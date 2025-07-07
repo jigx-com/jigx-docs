@@ -1,20 +1,20 @@
 ---
 title: REST Overview
 slug: Ji07-architecture-overview
-description: Learn about Jigx, a mobile app utilizing a local SQLite database to store and display data from REST calls. Explore authentication options and configure REST function calls. Convert Swagger and Postman collection data into Jigx functions with the Swagger 
+description: Learn about Jigx, a mobile app utilizing a local SQLite database to store and display data from REST calls. Explore authentication options and configure REST function calls. Convert Swagger and Postman collection data into Jigx functions with the Swagger
 createdAt: Mon Oct 17 2022 00:32:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 21 2024 09:03:07 GMT+0000 (Coordinated Universal Time)
 ---
 
 # Introduction
 
-When a REST call returns data to Jigx, the processed JSON is inserted into a local SQLite database. The Jigx mobile application then queries the database, displaying the data on the device. This architecture supports offline scenarios. Data is stored in a document database format. Jigx provides a shorthand SQL parser to select using logical column names. Alternatively, you can use the native json\_extract() function to manipulate the data from SQLite. When the result of the output transform is an array of JSON objects, Jigx will insert each item in the array in its row. Note that SQL is case-insensitive while JSON is case-sensitive.
+When a REST call returns data to Jigx, the processed JSON is inserted into a local SQLite database. The Jigx mobile application then queries the database, displaying the data on the device. This architecture supports offline scenarios. Data is stored in a document database format. Jigx provides a shorthand SQL parser to select using logical column names. Alternatively, you can use the native json_extract() function to manipulate the data from SQLite. When the result of the output transform is an array of JSON objects, Jigx will insert each item in the array in its row. Note that SQL is case-insensitive while JSON is case-sensitive.
 
 Functions definitions are stored in the functions folder in a Jigx project and are files that end in a .jigx file extension. When .jigx files are created in the functions folder, the Jigx Builder IntelliSense code completion is available using ctrl+spacebar. We recommend using this capability, as it provides all available code completion options relevant to Jigx functions.
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NNVB3gwwO4O_G2s0Ib9bz_image.png" size="50" position="center" caption="Jigx's functions" alt="Jigx's functions"}
 
-To add a new function, add a new file in the functions folder, the .jigx** **extension is automatically added for you. Function file names must be lowercase and may not contain special characters.  
+To add a new function, add a new file in the functions folder, the .jigx\*\* \*\*extension is automatically added for you. Function file names must be lowercase and may not contain special characters.
 
 Once functions are published in a Jigx solution you can preview the function in Jigx Management under the solution's REST functions option. See [REST Functions](<./../../../../Administration/Solutions/REST Functions.md>) for more information.
 
@@ -22,7 +22,7 @@ Once functions are published in a Jigx solution you can preview the function in 
 
 All REST functions support header, path, query, and body parameters. In addition, including calling services with no authentication, Jigx supports OAuth, API Key, and Basic Auth or Secrets for authentication.
 
-The code completion will display the available template options when adding a new function. 
+The code completion will display the available template options when adding a new function.
 
 ![Functions code completion options](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/52JAAb9Yuw7wRWKrTdMxd_image.png "Functions code completion options")
 
@@ -44,8 +44,8 @@ The following describes the options available when configuring a REST function c
 
 |              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Provider** | `DATA_PROVIDER_REST` for making REST service calls.   |
-| **Methods**  | Jigx supports the following methods when making REST calls:<br />* DELETE<br />* GET<br />* HEAD<br />* PUT<br />* PATCH<br />* POST |
+| **Provider** | `DATA_PROVIDER_REST` for making REST service calls.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Methods**  | Jigx supports the following methods when making REST calls:<br />_ DELETE<br />_ GET<br />_ HEAD<br />_ PUT<br />_ PATCH<br />_ POST                                                                                                                                                                                                                                                                                                                                                   |
 | **URL**      | The URL of the service that must be called. Jigx supports path and query parameters in the URL. Path parameters are tagged with curly brackets \{}. Jigx will replace the path parameters with the values of the parameters defined in the parameter section of the function definition. Query parameters specified in the URL will be removed by Jigx and replaced by parameters defined in the parameters section of the function definition with a location property of type Query. |
 
 ## Swagger parser
@@ -64,19 +64,17 @@ All files created by the Swagger parser function saves in your functions folder.
 
 ### Variable replacement
 
-You can replace variables in your Postman collection, for example, replacing the *baseUrl*. As you add the value 'google.com' to the variable all functions requiring this variable will be updated.
+You can replace variables in your Postman collection, for example, replacing the _baseUrl_. As you add the value 'google.com' to the variable all functions requiring this variable will be updated.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 ::Image[]{alt="Postman baseUrl" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/13v1W_81jbiOcqZwCtMk8_screenshot-2023-04-17-at-122510.png" size="90" caption="Postman baseUrl" position="center"}
-
 
 :::
 
 :::VerticalSplitItem
 
 ![Replace variable function](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jcRr7_vDqaA4Pkd8aeFUw_screenshot-2023-04-17-at-121618.png "Replace variable function")
-
 
 :::
 ::::
@@ -85,7 +83,6 @@ You can replace variables in your Postman collection, for example, replacing the
 :::VerticalSplitItem
 
 ![Value for variable replacement](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Jx7RPKg1Q6g5rkzbGjeCq_screenshot-2023-04-17-at-121720.png "Value for variable replacement")
-
 
 :::
 
@@ -100,7 +97,7 @@ You can replace variables in your Postman collection, for example, replacing the
 When the format of the function is specified as JSON, the body of the call is generated by the input transform. The input transform is a JSONata statement ([https://jsonata.org](https://jsonata.org/)) that can contain parameters defined in the parameter section of the function definition. In this example, we are applying the following mapping:
 
 ```none
-Jigx parameter: orderNumberParameter 
+Jigx parameter: orderNumberParameter
 Jigx parameter: orderDescriptionParameter
 ```
 
@@ -120,7 +117,7 @@ The | character in YAML allows you to format the content of the YAML node over m
 
 ## Output Transform - Detail and Examples
 
-The output transform is a JSONata expression that transforms the JSON received by the REST call into the JSON that will be inserted in the local SQLite tables. When the result of the output transform is an array of JSON objects, Jigx will insert each item in the array in its own row. Then, the values in the JSON object are selected as data columns in an SQLite statement using the json\_extract() function SQLite function. Below is an example of JSON returned by a REST call and then transformed into an array of JSON objects:
+The output transform is a JSONata expression that transforms the JSON received by the REST call into the JSON that will be inserted in the local SQLite tables. When the result of the output transform is an array of JSON objects, Jigx will insert each item in the array in its own row. Then, the values in the JSON object are selected as data columns in an SQLite statement using the json_extract() function SQLite function. Below is an example of JSON returned by a REST call and then transformed into an array of JSON objects:
 
 ```json
 {
@@ -130,7 +127,7 @@ The output transform is a JSONata expression that transforms the JSON received b
   "shippingCity": "Nashville",
   "shippingState": "TN",
   "shippingZip": "78654",
-  "orders":[
+  "orders": [
     {
       "orderNumber": "1234",
       "orderDescription": "Printer Refil",
@@ -185,11 +182,11 @@ $ is the root of the document and orders the array with the collection of orders
 ]
 ```
 
-As mentioned above, all order objects in the array will be inserted as individual rows into a SQLite table specified in the datasource section in the  jig definition.
+As mentioned above, all order objects in the array will be inserted as individual rows into a SQLite table specified in the datasource section in the jig definition.
 
 ## Function parameters
 
-Function parameters are used to pass data into the function definition from the jig that uses the function. See the [Datasources](./../../Datasources.md) section of the documentation. Parameters are defined by naming them and describing the properties of that parameter. Parameter names are used when the parameters are referred to in the REST query path or input transforms. (See an example above for an inputTransform). 
+Function parameters are used to pass data into the function definition from the jig that uses the function. See the [Datasources](./../../Datasources.md) section of the documentation. Parameters are defined by naming them and describing the properties of that parameter. Parameter names are used when the parameters are referred to in the REST query path or input transforms. (See an example above for an inputTransform).
 
 ## Function parameter properties
 
@@ -228,7 +225,7 @@ Since the continuation URL or parameters are outside of the data returned by the
 
 **Example**
 
-Microsoft’s Graph API uses continuation URLs to request the next page of items from their services. If there are more items in the response than can be handled in a single call, or the caller has limited the number of items per page, the service will return the `@odata.nextLink`** **parameter specifying the URL to call to fetch the next page of results.
+Microsoft’s Graph API uses continuation URLs to request the next page of items from their services. If there are more items in the response than can be handled in a single call, or the caller has limited the number of items per page, the service will return the `@odata.nextLink`\*\* \*\*parameter specifying the URL to call to fetch the next page of results.
 
 ```json
 {
@@ -259,7 +256,7 @@ parameters:
     type: microsoft
     value: jigx.microsoft.oauth
     required: true
-url: 'https://graph.microsoft.com/v1.0/me/drive/root/children'
+url: "https://graph.microsoft.com/v1.0/me/drive/root/children"
 outputTransform: >-
   $.{"nextLink":`@odata.nextLink`,"items":value.{"id":id,"name":name,"size":size,"lastModifiedDateTime":lastModifiedDateTime,"type":$exists(folder) ? "Folder" : "File"}}
 records: =$.items
@@ -280,7 +277,7 @@ Jigx allows you to customize REST endpoint error messages to improve user experi
 
 ### forRowsWithValues
 
-By default the return JSON payload from the REST call replaces previous data in the SQLite database. The `forRowsWithValues` property allows you to update specific values in the SQLite database instead of replacing all rows, providing a better user experience. The `forRowsWithValues` property specifies a key-value pair where the key is a json\_extract() column in the SQLite table that will be matched by the value. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsWithValues`. Think of this as a WHERE clause that Jigx uses when it adds the result of the REST call's `outputTransform` to the SQLite table.
+By default the return JSON payload from the REST call replaces previous data in the SQLite database. The `forRowsWithValues` property allows you to update specific values in the SQLite database instead of replacing all rows, providing a better user experience. The `forRowsWithValues` property specifies a key-value pair where the key is a json_extract() column in the SQLite table that will be matched by the value. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsWithValues`. Think of this as a WHERE clause that Jigx uses when it adds the result of the REST call's `outputTransform` to the SQLite table.
 
 :::hint{type="info"}
 The property should be passed as a parameter and be referenced in the `outputTransform` as shown in the example below.
@@ -290,7 +287,7 @@ The property should be passed as a parameter and be referenced in the `outputTra
 
 ### forRowsInRange
 
-Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json\_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the REST call's `outputTransform` to the table.
+Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the REST call's `outputTransform` to the table.
 
 :::hint{type="info"}
 Pass the values you want to test as input parameters. In this example, minmag and maxmag. The property to test is **mag**. This property (**mag**) must appear in the `outputTransform`. Then set the range you are testing for in the input parameter (**minmag**) and (**maxmag**).
@@ -299,9 +296,10 @@ Pass the values you want to test as input parameters. In this example, minmag an
 ![forRowsInRange](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LrOy1JWzQmiy1wh5ksaO0_image.png "forRowsInRange")
 
 :::hint{type="info"}
-- You can combine `forRowswithValues` and `forRowsInRange` as per the example below. 
+
+- You can combine `forRowswithValues` and `forRowsInRange` as per the example below.
 - You **cannot combine **`forRowsWithMatchingIds` with any other range or value check.
-:::
+  :::
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rli3w3jBg74-gvIp406Qs_image.png" size="58" position="center" caption="Combined properties" alt="Combined properties"}
 
@@ -317,6 +315,5 @@ Jigx will delete all rows from the table matching the `forRowsWithValues` or `fo
 
 ## See Also
 
-- [REST examples]()
+- [REST examples](https://docs.jigx.com/examples/rest)
 - [Offline remote data handling](<./../../Offline remote data handling.md>)
-
