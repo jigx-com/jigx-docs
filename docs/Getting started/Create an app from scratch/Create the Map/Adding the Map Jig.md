@@ -32,7 +32,8 @@ title: Hello-Jigx
 category: business
 #The widgets that act as top-level navigation elements for jigs
 widgets:
-  - size: "2x2" # choose size of the widget on the home hub
+# choose size of the widget on the home hub
+  - size: "2x2" 
     jigId: myfirstjig
 ```
 :::
@@ -44,7 +45,7 @@ widgets:
 3. On the line under `type:`, type `icon:`. To select an icon from the predefined list start typing the first two letters of the name of the icon, in this case *lo,* the list of icons starts to populate as you type. Select `location` from the list. This icon displays on the widget on the Home Hub.
 4. Delete the `header`, and `onFocus` section, you will add a header later in the [Combine the solution's elements](<./../Combine the solution_s elements.md>) section.
 5. The map jig needs a `datasource:` defined that provides the location details. You will use a [static datasource]() in this step. The static dataset is created directly inside the jig file of the Jigx solution, and there is no need to specify any database connections or set up any tables. The amount of records that can be created for the static data is unlimited and is used to bind data to the UI components.
-6. Replace `mydata:` with `address:` press **(ctrl+space)** and select `Static Datasource`.
+6. Replace `mydata:` with `address:` press **ctrl+space (Intellisense)** and select `Static Datasource`.
 7. Define the location details for the street, city and country under the
    `data:`
    tag. You can remove
