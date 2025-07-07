@@ -2,7 +2,7 @@
 
 # Overview
 
-In this section, there are two files to edit, namely, `index.jigx` and `myfirstjig.jigx`. In the `index.jigx` file, you configure the bottom navigation tab to display the myfirstjig.jigx on the Jigx mobile app [Home Hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen. In the `myfirstjig.In the jigx file,` you will specify the default [type](#) of jig, assign an icon for the jig, and provide a [static datasource](#) that provides the location on the map.
+In this section, there are two files to edit, namely, `index.jigx` and `myfirstjig.jigx`. In the `index.jigx` file, you configure the bottom navigation tab to display the `myfirstjig.jigx` on the Jigx mobile app [Home Hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen. In the myfirstjig jigx file, you will specify the default [type]() of jig, assign an icon for the jig, and provide a [static datasource]() that provides the location on the map.
 
 :::hint{type="success"}
 See [Jigx Concepts](<./../../../Understanding the basics/Jigx Concepts.md>) to learn what jigs are.
@@ -43,27 +43,13 @@ widgets:
 2. Add ***Location with address*** as the `title` for your jig. The title appears under the widget on the Home Hub. Add a description for the jig, such as map with a marker.
 3. On the line under `type:`, type `icon:`. To select an icon from the predefined list start typing the first two letters of the name of the icon, in this case *lo,* the list of icons starts to populate as you type. Select `location` from the list. This icon displays on the widget on the Home Hub.
 4. Delete the `header`, and `onFocus` section, you will add a header later in the [Combine the solution's elements](<./../Combine the solution_s elements.md>) section.
-5. The map jig needs a `datasource:` defined that provides the location details. You will use a [static datasource](#) in this step. The static dataset is created directly inside the jig file of the Jigx solution, and there is no need to specify any database connections or set up any tables. The amount of records that can be created for the static data is unlimited and is used to bind data to the UI components.
+5. The map jig needs a `datasource:` defined that provides the location details. You will use a [static datasource]() in this step. The static dataset is created directly inside the jig file of the Jigx solution, and there is no need to specify any database connections or set up any tables. The amount of records that can be created for the static data is unlimited and is used to bind data to the UI components.
 6. Replace `mydata:` with `address:` press **(ctrl+space)** and select `Static Datasource`.
-7. Define the location details for the street, city and country under the 
+7. Define the location details for the street, city and country under the
    `data:`
-    tag. You can remove 
+   tag. You can remove
    `id:1`
    . Add your own location or use the following as an example:
-   :::CodeblockTabs
-   YAML
-
-   ```yaml
-   datasources:
-     address: 
-       type: datasource.static
-       options:
-         data:
-           - street: 768 5th Ave
-             city: New York
-             country: US
-   ```
-   :::
 8. The controls displayed on the jig are defined under the `children:` node on a default jig. The output control is placed on the location component to display a map/location inside the jig. Under the `children:` node press **(ctrl+space)** and select **Location** from the list.
 9. For the output control to display the map with the location you will use the address from the datasource using an [expression](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to return the street, city and country to the location component. Next to `options:` press **(ctrl+space)** and select **address** from the list.
    To add the expression next to the `address:` line press **(ctrl+space)** and select **=@ctx** from the list. The root element of expressions in .jigx files always starts with "@ctx" vs. "$." in JSONata Exerciser (e.g. @ctx.data vs. $.data). Add the following to your expression:       `address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`
@@ -129,6 +115,6 @@ tabs:
 
 ## See Also
 
-- [Jigx overview](docId\:BrcaJaBz2U-kT_VaaWOrj)
-- [Jigx Concepts](docId\:onEMnBqUmgBn6N4kaRYTs)
+- [Jigx overview]()
+- [Jigx Concepts]()
 
