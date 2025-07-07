@@ -1,6 +1,5 @@
 - [Welcome to Jigx Documentation](<Welcome to Jigx Documentation.md>)
-
-- [Getting startes](<Getting started.md>)
+- [Getting started](<Getting started.md>)
   - [Creating an account](<Getting started/Creating an account.md>)
   - [Install the Jigx Builder](<Getting started/Install the Jigx Builder.md>)
   - [Use templates to create apps](<Getting started/Use templates to create apps.md>)

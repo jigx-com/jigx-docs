@@ -70,7 +70,7 @@ children:
 
 ## Updating the record
 
-In this section, we will gonna have deep look at how you can update your records in the database or delete them with Jig form.
+In this section, we will gonna have deep look at how you can update your records in the database or delete them with jig form.
 
 :::ExpandableHeading
 
