@@ -1,8 +1,13 @@
 # Welcome to Jigx Documentation
 
+:::hint{type="danger"}
+🚧  **Notice: Documentation is currently unstable**
+&#x20;Due to ongoing issues with Archbee, some content may be incomplete or missing. Jigx is aware of the situation and will be transitioning to a new documentation platform soon. We appreciate your patience and understanding.
+:::
+
 Jigx simplifies mobile app development from start to finish in three steps. You can build native iOS and Android apps with familiar frameworks and tools like JavaScript, SQL, YAML, and Visual Studio Code.
 
-:::CtaButton{url="docId:gWalJP07-1Ei9NXdCqAYo" label="Getting started"}
+:::CtaButton{label="Getting started"}
 
 :::
 
