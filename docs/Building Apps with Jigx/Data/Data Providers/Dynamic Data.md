@@ -1,6 +1,6 @@
 # Dynamic Data
 
-Apps need data, while <a href="https://docs.jigx.com/examples/static" target="_blank">Static data</a> allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.
+Apps need data, while [static](https://docs.jigx.com/examples/static) allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.
 
 The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record.
 
@@ -46,7 +46,7 @@ To create and use Dynamic data see the following:
 ::::
 
 :::hint{type="info"}
-**Supporting file** for the *Working with Dynamic Data* video. You can use this CSV file if you want to follow the steps in the video.
+**Supporting file** for the _Working with Dynamic Data_ video. You can use this CSV file if you want to follow the steps in the video.
 :::
 
 ## Examples and code snippets
@@ -57,4 +57,3 @@ The following examples with code snippets are provided:
 - [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
 - [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
 - [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)
-
