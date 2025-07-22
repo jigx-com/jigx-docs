@@ -11,6 +11,8 @@ In the `index.jigx` file, you set solution settings, including the primary infor
 - **Icon** - Customize the solutions icon. A list of [icons](https://docs.jigx.com/jigx-icons) is available.
 - **Color** - Apply a color to the selected icon.
 
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ly_cXyKfy5ezLaATdsQ3-20250715-121350.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ly_cXyKfy5ezLaATdsQ3-20250715-121350.png" size="92" width="3959" height="962" position="center" caption="Solution details" alt="Solution details"}
+
 :::CodeblockTabs
 index.jigx (default)
 
@@ -39,13 +41,12 @@ description: A collection of global solutions for various industries.
 icon: world
 color: color7
 ```
-
 :::
 
 ## Tabs
 
 - Tabs are properties used to build your navigation bar that displays at the bottom of the Home Hub.
-- You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the _More_ (ellipsis) button is tapped.
+- You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the *More* (ellipsis) button is tapped.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
 - Setting the [grid](https://docs.jigx.com/examples/jiggrid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
@@ -59,7 +60,7 @@ color: color7
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `badge`           | Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the `badge` property to the tabs section with an expression. |
 | `label`           | Give the tab a title. The title displays under the icon in the navigation bar.                                                                                                                                   |
-| `when`            | The condition when the tab will be displayed or hidden (optional). Use an [expression](./../../Logic/Expressions.md) that evaluates to a boolean.                                                                |
+| `when`            | The condition when the tab will be displayed or hidden (optional). Use an  that evaluates to a boolean.                                                                                                          |
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" size="30" width="1224" height="2466" position="center" caption}
 
@@ -98,7 +99,6 @@ tabs:
     jigId: feedback
     icon: online-class-student
 ```
-
 :::
 
 ## OnLoad, OnFocus, OnRefresh, onTableChanged
@@ -160,7 +160,6 @@ onTableChanged:
         changes:
           - dataStatus
 ```
-
 :::
 
 ## Global Expressions
@@ -199,10 +198,9 @@ children:
             label: Current Altitude
             value: =@ctx.expressions.altitude
 ```
-
 :::
 
-For more details and examples refer to the _Shared Expressions_ section in [Expressions](./../../Logic/Expressions.md).
+For more details and examples refer to the *Shared Expressions* section in [Expressions](./../../Logic/Expressions.md).
 
 ## Dependencies
 
@@ -210,7 +208,7 @@ In the `dependencies` property, you can define the mobile app build version comp
 
 :::::VerticalSplit{layout="middle"}
 ::::VerticalSplitItem
-If the current mobile app build version does not meet the criteria, the _Out of date_ screen will appear, with a message that an update is required. Tapping the _Update_ button redirects you to your app settings to update the version of the app.
+If the current mobile app build version does not meet the criteria, the *Out of date* screen will appear, with a message that an update is required. Tapping the *Update* button redirects you to your app settings to update the version of the app.
 
 :::CodeblockTabs
 index.jigx
@@ -219,7 +217,6 @@ index.jigx
 dependencies:
   mobileApp: ">1.131.2"
 ```
-
 :::
 ::::
 
@@ -231,3 +228,4 @@ dependencies:
 ## See Also
 
 - [Home Hub](<./../Home Hub.md>)
+
