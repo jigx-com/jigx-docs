@@ -6,12 +6,13 @@ updatedAt: Tue Feb 04 2025 14:30:52 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
   :::
 
 Use inputs and outputs to transfer and read data in custom components. This approach lets you configure a component once and reuse it across multiple screens or even on the same screen. By simply defining different inputs and outputs each time the component is used, you can display varied data and adapt to different contexts effortlessly.

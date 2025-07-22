@@ -5,27 +5,49 @@ In the `index.jigx` file, you set solution settings, including the primary infor
 ## Name, title, category, description
 
 - **Name** - Your internal solution name.
-- **Title** - This name will be displayed in your app and <a href="https://manage.jigx.com" target="_blank">management</a>.
-- **Category** -  A predefined list of solution categories to choose from.
-- **Description** - A description you provide for your solution.
+- **Title** - This name will be displayed in your app and [management](https://manage.jigx.com).
+- **Category** - The category can be customized and is overwritten when the description property is added.
+- **Description** - A description you provide for your solution. This will replace the selected category.
+- **Icon** - Customize the solutions icon. A list of [icons](https://docs.jigx.com/jigx-icons) is available.
+- **Color** - Apply a color to the selected icon.
 
 :::CodeblockTabs
-index.jigx
+index.jigx (default)
 
 ```yaml
-title: jigx-samples
-name: jigx-samples
-category: personal
-description: A solution displaying all features and functions available in Jigx.
+name: global-solutions
+title: global solutions
+category: consulting
 ```
+
+index.jigx (custom category)
+
+```yaml
+name: global-solutions
+title: global solutions
+category: consulting
+description: A collection of global solutions for various industries.
+```
+
+index.jigx (custom icon)
+
+```yaml
+name: global-solutions
+title: global solutions
+category: consulting
+description: A collection of global solutions for various industries.
+icon: world
+color: color7
+```
+
 :::
 
 ## Tabs
 
 - Tabs are properties used to build your navigation bar that displays at the bottom of the Home Hub.
-- You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the *More* (ellipsis) button is tapped.
+- You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the _More_ (ellipsis) button is tapped.
 - Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-- Setting the [grid](#) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
+- Setting the [grid](https://docs.jigx.com/examples/jiggrid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
 | **Core Structure** |                                                                                  |
 | ------------------ | -------------------------------------------------------------------------------- |
@@ -48,50 +70,51 @@ index.jigx
 name: jigx-samples
 title: Jigx Samples
 category: business
-      
+
 # Configure one or more tabs, shown in the navigation bar at the bottom of the app.
 tabs:
   # Give each tab a name. First tab.
   home:
     # Optional - provide a label to display under the tab icon.
-    label: home 
-    # This jig is the home screen and is visible when the app opens.    
+    label: home
+    # This jig is the home screen and is visible when the app opens.
     jigId: grid-home
-    # Select an icon of your choice.    
+    # Select an icon of your choice.
     icon: home-apps-logo
-  # Second tab.    
+  # Second tab.
   Services:
-  # Reference the jig that will open when the tab icon is pressed. 
+    # Reference the jig that will open when the tab icon is pressed.
     jigId: grid-components
     icon: cleaning-bucket-bubble
-  # Third tab    
+  # Third tab
   Bookings:
     jigId: grid-booking
     icon: calendar
     # Configure a badge showing a dot or a numbered dot on the top right of the icon.
-    # Use a expression or number to set the badge.    
+    # Use a expression or number to set the badge.
     badge: =$count(@ctx.datasources.guests)
-  # Fourth tab    
-  Reviews: 
+  # Fourth tab
+  Reviews:
     jigId: feedback
     icon: online-class-student
 ```
+
 :::
 
 ## OnLoad, OnFocus, OnRefresh, onTableChanged
 
-These properties allow you to configure [Actions](#) executed in various scenarios.
+These properties allow you to configure [Actions](https://docs.jigx.com/actions) executed in various scenarios.
 
 - **OnLoad** - when the solution loads for the first time the configured actions execute. This is recommended for best performance when working with data, sync the data when the solution loads and ensures the data is available from the beginning and throughout the rest of the solution.
 - **OnFocus** - when the Home Hub receives focus the configured actions execute.
 - **OnRefresh** - when pulling down on the Home Hub the action configured for `onRefresh` executes. The `onRefresh` spinner is persistently visible while an action is executing, preventing users from triggering a redundant pull-to-refresh gesture.
-- [onTableChanged](#) - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
+- [onTableChanged](https://docs.jigx.com/examples/ontablechanged) - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
 
 :::CodeblockTabs
 index.jigx (onLoad)
 
 ```yaml
-onLoad: 
+onLoad:
   type: action.set-state
   options:
     state: =@ctx.solution.state.loginTimestamp
@@ -101,7 +124,7 @@ onLoad:
 index.jigx (onFocus)
 
 ```yaml
-onFocus: 
+onFocus:
   type: action.sync-entities
   options:
     provider: DATA_PROVIDER_DYNAMIC
@@ -112,7 +135,7 @@ onFocus:
 index.jigx (onRefresh)
 
 ```yaml
-onRefresh: 
+onRefresh:
   type: action.execute-entity
   options:
     provider: DATA_PROVIDER_DYNAMIC
@@ -121,22 +144,23 @@ onRefresh:
     goBack: previous
     data:
       id: =@ctx.datasources.test.id
-      action: 'Execute-entity onRefresh'
+      action: "Execute-entity onRefresh"
 ```
 
 index.jigx (onTableChanged)
 
 ```yaml
 onTableChanged:
-    # Specify the remote table to monitor.
+  # Specify the remote table to monitor.
   - table: employees
-    action: 
+    action:
       # Configure the action to execute when a change is detected.
       type: action.reset-solution-state
       options:
         changes:
-          - dataStatus     
+          - dataStatus
 ```
+
 :::
 
 ## Global Expressions
@@ -157,7 +181,6 @@ jig.jigx
 
 ```yaml
 title: Shared expressions example
-type: jig.default
 
 children:
   - type: component.entity
@@ -176,9 +199,10 @@ children:
             label: Current Altitude
             value: =@ctx.expressions.altitude
 ```
+
 :::
 
-For more details and examples refer to the *Shared Expressions* section in [Expressions](./../../Logic/Expressions.md).
+For more details and examples refer to the _Shared Expressions_ section in [Expressions](./../../Logic/Expressions.md).
 
 ## Dependencies
 
@@ -186,15 +210,16 @@ In the `dependencies` property, you can define the mobile app build version comp
 
 :::::VerticalSplit{layout="middle"}
 ::::VerticalSplitItem
-If the current mobile app build version does not meet the criteria, the *Out of date* screen will appear, with a message that an update is required. Tapping the *Update* button redirects you to your app settings to update the version of the app.
+If the current mobile app build version does not meet the criteria, the _Out of date_ screen will appear, with a message that an update is required. Tapping the _Update_ button redirects you to your app settings to update the version of the app.
 
 :::CodeblockTabs
 index.jigx
 
 ```yaml
 dependencies:
-  mobileApp: '>1.131.2'
+  mobileApp: ">1.131.2"
 ```
+
 :::
 ::::
 
@@ -206,4 +231,3 @@ dependencies:
 ## See Also
 
 - [Home Hub](<./../Home Hub.md>)
-

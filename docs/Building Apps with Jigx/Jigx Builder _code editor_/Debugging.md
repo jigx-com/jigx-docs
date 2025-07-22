@@ -37,6 +37,7 @@ Enable Jigx Dev Tools by following these steps:
 6. The solution opens in the Jigx App.
 7. Your device will show in Jigx Builder in the sidebar, with a data and functions node.
 8. Ensure that the VS Code panel is open.
+
    :::
    ::::
 

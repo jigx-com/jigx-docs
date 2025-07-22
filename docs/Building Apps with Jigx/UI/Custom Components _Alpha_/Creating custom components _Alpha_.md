@@ -7,12 +7,13 @@ updatedAt: Tue Feb 04 2025 14:23:15 GMT+0000 (Coordinated Universal Time)
 ---
 
 :::hint{type="danger"}
-This feature is currently in its **Alpha **stage of development.
+This feature is currently in its **Alpha** stage of development.
 
 - As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
+
   :::
 
 ## File Location

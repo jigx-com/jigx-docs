@@ -6,10 +6,10 @@ Creating a home screen (hub) for a mobile app can be a great way to enhance the 
 
 Steps to customize your Home Hub:
 
-1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default](#) or [jig.grid](#) are great options to use.
+1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) are great options to use.
 2. Use IntelliSense (ctrl+space) to open the list of available options in the index.jigx file, and select `tabs`.
 3. In the `jigId` property, use IntelliSense again to choose the jig you configured as your Home Hub.
-4. *Optional *- Choose an icon that will represent the Home Hub.  The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
+4. *Optional* - Choose an icon that will represent the Home Hub.  The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
 5. Add the `onLoad` or `onRefresh` events for syncing data.
 6. You can configure additional `tabs` by repeating the steps above.
 
@@ -100,6 +100,7 @@ children:
               options:
                 linkTo: contacts
 ```
+
 :::
 
 ### Home Hub with multiple components & widgets
@@ -222,6 +223,7 @@ datasources:
           '$.Type' 
         FROM [default/events] WHERE '$.Type' = 'Yoga'
 ```
+
 :::
 
 ### Home Hub with multiple tabs in bottom navigation bar
@@ -432,12 +434,12 @@ children:
       title: Yoga Flow
       subtitle: 4 Dec 11am
 ```
+
 :::
 
 ## Best practice
 
-- Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item](#) to create the gallery.
+- Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item](https://docs.jigx.com/examples/grid-item) to create the gallery.
 - Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data.
 - The `onload` event must be configured on the index.jigx file for syncing data to the device.
-- When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](#) or [jig.grid](#) as they provide the broadest scope of components, actions, and widgets.
-
+- When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) as they provide the broadest scope of components, actions, and widgets.
