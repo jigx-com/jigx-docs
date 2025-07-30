@@ -1,7 +1,7 @@
 ---
 title: Settings
 slug: BAsJ-settings
-description: Discover how to customize your experience with the Jigx Extension's Settings. Easily modify options, including the Jigx: App name setting, which determines the connected JigxApp for debugging and testing in JigxBuilder. 
+description: Discover how to customize your experience with the Jigx Extension's Settings. Easily modify options, including the Jigx App name setting, which determines the connected JigxApp for debugging and testing in JigxBuilder. 
 createdAt: Tue Jun 20 2023 08:32:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:12:21 GMT+0000 (Coordinated Universal Time)
 ---
