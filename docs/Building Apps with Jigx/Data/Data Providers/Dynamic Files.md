@@ -9,11 +9,11 @@ For example:
 
 ## Key Functionalities
 
-### &#x20;Uploading Files
+### Uploading Files
 
 - The `create` method of the `Dynamic Provider` uploads files to Amazon S3.
 - One file is linked/associated with one record, which means that the `execute-entity` action is used for the upload.
-- Use the [media-field]() component to select files for upload or upload a file to the record in *Management>solution>data>table>record>file*.
+- Use the [media-field](https://docs.jigx.com/examples/media-field) component to select files for upload or upload a file to the record in *Management>solution>data>table>record>file*.
 - Specify a `localPath` for the file.
 - Specify a `fileName` with the file extension. If a `fileName` is not provided, the system extracts it from the `localPath`.
 
@@ -42,6 +42,7 @@ actions:
                 file: 
                   localPath: =@ctx.components.expenseimage.state.value
 ```
+
 :::
 
 ### Deleting Files
@@ -66,6 +67,7 @@ onPress:
      # Set the file to null which deletes the file.  
      file: null                                     
 ```
+
 :::
 
 ### Downloading Files
@@ -121,6 +123,7 @@ datasources:
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```
+
 :::
 
 ## File Status Tracking
@@ -204,6 +207,7 @@ datasources:
       queryParameters:
         expenseId: =@ctx.jig.inputs.expenseId
 ```
+
 :::
 
 ## File Permissions
@@ -244,11 +248,12 @@ actions:
             - "finance"
 ```
 
-## &#x20;Thumbnails and File Display
+## Thumbnails and File Display
 
-&#x20;Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail, image and local path:
+Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail, image and local path:
 
 :::CodeblockTabs
+
 ```yaml
 leftElement:
   element: avatar
@@ -279,6 +284,7 @@ datasources:
           json_extract(file, '$.image.base64') as image
         FROM [default/employees]
 ```
+
 :::
 
 ## Jigx Management
@@ -296,8 +302,7 @@ Files and their detail are visible in Management and are associated with a recor
 
 ## Examples and code snippets
 
-1. [Upload a file]()&#x20;
-2. [Download a file]()&#x20;
-3. [Delete a file]()&#x20;
-4. [Status of a file]()&#x20;
-
+1. [Upload a file](https://docs.jigx.com/examples/upload-a-file)
+2. [Download a file](https://docs.jigx.com/examples/download-a-file)
+3. [Delete a file](https://docs.jigx.com/examples/skrI-delete-a-file)
+4. [Status of a file](https://docs.jigx.com/examples/status-of-a-file)
