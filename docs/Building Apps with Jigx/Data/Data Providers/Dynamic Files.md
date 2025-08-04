@@ -253,6 +253,7 @@ actions:
 Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail, image and local path:
 
 :::CodeblockTabs
+YAML
 
 ```yaml
 leftElement:
