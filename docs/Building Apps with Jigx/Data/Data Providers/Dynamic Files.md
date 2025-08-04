@@ -42,7 +42,6 @@ actions:
                 file: 
                   localPath: =@ctx.components.expenseimage.state.value
 ```
-
 :::
 
 ### Deleting Files
@@ -67,7 +66,6 @@ onPress:
      # Set the file to null which deletes the file.  
      file: null                                     
 ```
-
 :::
 
 ### Downloading Files
@@ -75,7 +73,7 @@ onPress:
 - Files can be downloaded via the `download` method using the entity `id` in an `execute-entity` action.
 - The file is downloaded to a local cache on the device, and the entity record's `localPath` property updates to reflect the local download location.
 - You will not be able to browse to it on the device.
-- Use a `datasource` query to access the downloaded file using properties available on a downloaded file. See the available properties in the *datasource-query* code example below. The datasource allows you to use the thumbnail URI from the server, for faster loading and lower bandwidth.The full file for high-resolution, detailed viewing or editing. As well as storing the file in the cache (localPath) to cater for offline use, and repeated requests for the same file. Depending on your requirement will dertermine which properties to include in the datasource query.
+- Use a `datasource` query to access the downloaded file using properties available on a downloaded file. See the available properties in the *datasource-query* code example below. The datasource allows you to use the thumbnail URI from the server, for faster loading and lower bandwidth.The full file for high-resolution, detailed viewing or editing. As well as storing the file in the cache (localPath) to cater for offline use, and repeated requests for the same file. Depending on your requirement will determine which properties to include in the datasource query.
 
 :::CodeblockTabs
 download-files
@@ -123,7 +121,6 @@ datasources:
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```
-
 :::
 
 ## File Status Tracking
@@ -207,7 +204,6 @@ datasources:
       queryParameters:
         expenseId: =@ctx.jig.inputs.expenseId
 ```
-
 :::
 
 ## File Permissions
@@ -250,7 +246,7 @@ actions:
 
 ## Thumbnails and File Display
 
-Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail, image and local path:
+Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail and local path:
 
 :::CodeblockTabs
 YAML
@@ -281,11 +277,9 @@ datasources:
           '$.avatar',
           json_extract(file, '$.localPath') as localPath,
           json_extract(file, '$.fileName')  as filename,
-          json_extract(file, '$.thumbnail.base64') as thumbnail,
-          json_extract(file, '$.image.base64') as image
+          json_extract(file, '$.thumbnail.base64') as thumbnail
         FROM [default/employees]
 ```
-
 :::
 
 ## Jigx Management
@@ -307,3 +301,4 @@ Files and their detail are visible in Management and are associated with a recor
 2. [Download a file](https://docs.jigx.com/examples/download-a-file)
 3. [Delete a file](https://docs.jigx.com/examples/skrI-delete-a-file)
 4. [Status of a file](https://docs.jigx.com/examples/status-of-a-file)
+
