@@ -13,7 +13,7 @@ For example:
 
 - The `create` method of the `Dynamic Provider` uploads files to Amazon S3.
 - One file is linked/associated with one record, which means that the `execute-entity` action is used for the upload.
-- Use the [media-field](docId\:ZjGJ3uwmawvFKgSX2aKyk) component to select files for upload or upload a file to the record in *Management>solution>data>table>record>file*.
+- Use the [media-field]() component to select files for upload or upload a file to the record in *Management>solution>data>table>record>file*.
 - Specify a `localPath` for the file.
 - Specify a `fileName` with the file extension. If a `fileName` is not provided, the system extracts it from the `localPath`.
 
@@ -73,7 +73,7 @@ onPress:
 - Files can be downloaded via the `download` method using the entity `id` in an `execute-entity` action.
 - The file is downloaded to a local cache on the device, and the entity record's `localPath` property updates to reflect the local download location.
 - You will not be able to browse to it on the device.
-- Use a `datasource` query to access the downloaded file using properties available on a downloaded file. See the available properties in the *datasource-query* code example below.
+- Use a `datasource` query to access the downloaded file using properties available on a downloaded file. See the available properties in the *datasource-query* code example below. The datasource allows you to use the thumbnail URI from the server, for faster loading and lower bandwidth.The full file for high-resolution, detailed viewing or editing. As well as storing the file in the cache (localPath) to cater for offline use, and repeated requests for the same file. Depending on your requirement will dertermine which properties to include in the datasource query.
 
 :::CodeblockTabs
 download-files
@@ -246,8 +246,9 @@ actions:
 
 ## &#x20;Thumbnails and File Display
 
-To display files as thumbnails or local file paths in the UI use an expression similiar to the code snippet below:
+&#x20;Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail, image and local path:
 
+:::CodeblockTabs
 ```yaml
 leftElement:
   element: avatar
@@ -256,6 +257,29 @@ leftElement:
     =@ctx.current.item.thumbnail != null ? 'data:image/png;base64,' & @ctx.current.item.thumbnail :
     @ctx.current.item.localPath != null ? @ctx.current.item.localPath
 ```
+
+datasource
+
+```yaml
+# File properties available to query to use in the expression file.
+datasources:
+  expenses-ds:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_DYNAMIC
+      entities:
+        - default/employees
+      query: |
+        SELECT
+          id,
+          '$.avatar',
+          json_extract(file, '$.localPath') as localPath,
+          json_extract(file, '$.fileName')  as filename,
+          json_extract(file, '$.thumbnail.base64') as thumbnail,
+          json_extract(file, '$.image.base64') as image
+        FROM [default/employees]
+```
+:::
 
 ## Jigx Management
 
@@ -272,8 +296,8 @@ Files and their detail are visible in Management and are associated with a recor
 
 ## Examples and code snippets
 
-1. [Upload a file](#)&#x20;
-2. [Download a file](#)&#x20;
-3. [Delete a file](#)&#x20;
-4. [Status of a file](#)&#x20;
+1. [Upload a file]()&#x20;
+2. [Download a file]()&#x20;
+3. [Delete a file]()&#x20;
+4. [Status of a file]()&#x20;
 
