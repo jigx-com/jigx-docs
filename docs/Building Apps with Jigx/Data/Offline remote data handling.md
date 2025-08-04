@@ -1,9 +1,4 @@
----
-title: Offline remote data handling
-slug: H36Q-que
-createdAt: Fri May 24 2024 13:27:16 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Nov 05 2024 11:20:30 GMT+0000 (Coordinated Universal Time)
----
+# Offline remote data handling
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. Queue operations provide the functionality needed when the device regains network connectivity and manages a sequence of elements in a specific order. The commands in the queue can be manipulated to reduce the number of calls to the remote data store.
 
@@ -22,10 +17,10 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 In the [execute-entity](https://docs.jigx.com/examples/execute-entity), [execute-entities](https://docs.jigx.com/examples/execute-entities) , and [submit-form](https://docs.jigx.com/examples/submit-form) actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
 
-| **Property**                                    | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `replace`                                       | All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits.&#xA;The `queueOperation: replace` requires an `id` (must be in lowercase). This can either be configured in the: <br>`Parameter` of the `execute-entity` action with an `id` configured in the `parameters` of the function file.<br>`data` property in the `execute-entity` action. |
-| `add`    | All commands are added to the queue. When the `queueOperation` property is omitted, the default is `add`.  |
+| **Property** | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `replace`    | All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits.&#xA;The `queueOperation: replace` requires an `id` (must be in lowercase). This can either be configured in the: &#xA;`Parameter` of the `execute-entity` action with an `id` configured in the `parameters` of the function file.&#xA;`data` property in the `execute-entity` action. |
+| `add`        | All commands are added to the queue. When the `queueOperation` property is omitted, the default is `add`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 :::CodeblockTabs
 execute-entity-replace
@@ -44,8 +39,18 @@ actions:
           # scenarios where backends have rate limits
           queueOperation: replace
           function: rest-update-customer
-          functionParameters:
+          # Parameters to update in the remote server.
+          parameters:
             # id is a required property for the replace queue
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+          # Data records to update in the local SQLite table. 
+          data: 
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -71,7 +76,8 @@ actions:
           queueOperation: add
           goBack: previous
           function: rest-update-customer
-          functionParameters:
+          # Parameters to update in the remote server.
+          parameters:
             # id is a required property for the replace queue
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
@@ -80,8 +86,16 @@ actions:
             address: =@ctx.components.address.state.value
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)
+         # Data records to update in the local SQLite table. 
+          data: 
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            email: =$lowercase(@ctx.components.email.state.value)   
 ```
-
 :::
 
 Examples of configuring the required `id` property when using `queueOperation: replace`.
@@ -101,12 +115,11 @@ actions:
           entity: customers
           method: update
           function: rest-update-customer
-          # Replace current update on the queue
+          # Replace current update on the queue.
           queueOperation: replace
-          # id is required for the replace operation
-          data:
-            id: =@ctx.jig.inputs.customer.id
-          functionParameters:
+          # id is required for the replace operation.
+          parameters:
+            id: =@ctx.jig.inputs.customer.id 
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
             companyName: =@ctx.components.companyName.state.value
@@ -114,13 +127,17 @@ actions:
             city: =@ctx.components.city.state.value
             customerType: =@ctx.components.customerType.state.value
             email: =$lowercase(@ctx.components.email.state.value)
+          # id is required for the replace operation.
+          data:
+            id: =@ctx.jig.inputs.customer.id  
 ```
 
-execute-entity-functionparameters-id
+execute-entity-parameters-id
 
 ```yaml
 # This action is configured with a replace queue operation and the id is specified,
-# in the functionParamaters property. The id is specified in the function file under parameters.
+# in the paramaters property. 
+# The id is specified in the function file under parameters.
 actions:
   - children:
       - type: action.execute-entity
@@ -129,13 +146,14 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record.
-          # Not adding the replace will not break the solution but will help to avoid chattiness and
-          # scenarios where backends have rate limits
+          # Use replace to ensure you only have one update on the queue related 
+          # to a record.
+          # Not adding the replace will not break the solution but will help 
+          # to avoid chattiness and scenarios where backends have rate limits.
           queueOperation: replace
           goBack: previous
           function: rest-update-customer
-          functionParameters:
+          parameters:
             # id is a required property for the replace queue
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
@@ -144,8 +162,16 @@ actions:
             address: =@ctx.components.address.state.value
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)
+          data:
+            # id is a required property for the replace queue
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            email: =$lowercase(@ctx.components.email.state.value)   
 ```
-
 :::
 
 ## How to clear the queue
@@ -163,7 +189,6 @@ actions:
           title: Remove record from Queue
           id: =@ctx.datasources.region.id
 ```
-
 :::
 
 ## Queue handling for delete methods
@@ -190,12 +215,11 @@ actions:
           # operations related to the record from the queue. If it is a valid Id the record will use the add and place it on the queue, which will delete the record from the remote data store using the function
           queueOperation: =$isTempId(@ctx.current.item.id) ? replace:add
           function: rest-delete-customer
-          functionParameters:
+          parameters:
             custId: =$number(@ctx.current.item.id)
           data:
             id: =@ctx.current.item.id
 ```
-
 :::
 
 ## Handling TempIds
@@ -208,7 +232,7 @@ All tempIds for a record are replaced in all other queued commands if a valid id
 
 In this example, when the device is offline and a customer record is created and then updated multiple times, only one create and one update command is queued. When the device is back online the queue is cleared. The remote data store returns an id that we can use to map back to the record locally in the `outputTransform` of the function (rest-create-customer). `queueOperation` is not required for the create of the customer because once the device comes online, the record will be created, and the id from the remote data store will be returned and any records with the same tempId will be updated with the returning id and will update the correct record. The `queueOperation: replace` is rather used in the update-customer jig.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" size="34" position="center" }
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" size="34" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" caption width="338" height="680" darkWidth="338" darkHeight="680"}
 
 :::CodeblockTabs
 new-customer.jigx
@@ -237,10 +261,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: us-states
-
       query: |
         SELECT 
           uss.id AS id, 
@@ -363,13 +385,15 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: create
-          # In this scenario, the backend system returns an Id that we can use to map back to the record
-          # locally in the Output transform of the function (rest-create-customer). You don’t need to use
-          # queueOperation in this scenario. Once the device goes online, the record will be created, and
-          # the id from the backend will come back. Any records with the same tempId will be updated with
+          # In this scenario, the backend system returns an Id that we can use
+          # to map back to the record locally in the Output transform of the 
+          # function (rest-create-customer). You don’t need to use
+          # queueOperation in this scenario. Once the device goes online,
+          # the record will be created, and the id from the backend will come
+          # back. Any records with the same tempId will be updated with
           # the returning id and will update the correct record.
           function: rest-create-customer
-          functionParameters:
+          parameters:
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
             companyName: =@ctx.components.companyName.state.value
@@ -384,6 +408,21 @@ actions:
             state: =@ctx.components.usState.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+         data:
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.usState.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value   
 ```
 
 update-customer.jigx
@@ -430,10 +469,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: customers
-
       query: |
         SELECT 
           cus.id AS id, 
@@ -454,10 +491,8 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
-
       isDocument: true
 
 children:
@@ -561,14 +596,14 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record.
-          # Not doing this will not break the solution but will help to avoid chattiness and
-          # scenarios where backends have rate limits
+          # Use replace to ensure you only have one update on the queue related
+          # to a record. Not doing this will not break the solution but will
+          # help to avoid chattiness and scenarios where backends have rate limits
           queueOperation: replace
           goBack: previous
           function: rest-update-customer
-          functionParameters:
-            # id is a required function parameter when using the queueOperation: replace
+          parameters:
+            # id is a required parameter when using the queueOperation: replace
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -584,6 +619,23 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          data:
+            # id is a required when using the queueOperation: replace
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.state.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value    
 ```
 
 rest-create-customer.jigx (function)
@@ -784,7 +836,6 @@ inputTransform: |
   }
 
 ```
-
 :::
 
 ### Execute-entity with queueOperation (add)
@@ -836,10 +887,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: customers
-
       query: |
         SELECT 
           cus.id AS id, 
@@ -860,7 +909,6 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
       isDocument: true
@@ -969,7 +1017,7 @@ actions:
           # Use add to queue all the updates related to a record.
           queueOperation: add
           function: rest-update-customer
-          functionParameters:
+          parameters:
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -985,6 +1033,22 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          data:
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.state.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value    
 ```
 
 rest-update-customer.jigx (function)
@@ -1082,7 +1146,6 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
-
 :::
 
 ### Execute-entity (delete) with queueOperation (replace)
@@ -1117,10 +1180,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: customers
-
       query: |
           SELECT
           cus.id AS id,
@@ -1154,7 +1215,8 @@ item:
       text: =@ctx.current.item.state
       uri: =@ctx.current.item.logo
     label:
-      title: =$uppercase((@ctx.current.item.customerType = 'Silver' ? @ctx.current.item.customerType:@ctx.current.item.customerType = 'Gold' ? @ctx.current.item.customerType:''))
+      title: |
+        =$uppercase((@ctx.current.item.customerType = 'Silver' ? @ctx.current.item.customerType:@ctx.current.item.customerType = 'Gold' ? @ctx.current.item.customerType:''))
       color:
         - when: =@ctx.current.item.customerType = 'Gold'
           color: color3
@@ -1181,18 +1243,18 @@ item:
                   provider: DATA_PROVIDER_REST
                   entity: customers
                   method: delete
-                  # For delete use replace, If the record has tempId it will remove all
-                  # opperations related to the record from the queue
+                  # For delete use replace, If the record has tempId it will 
+                  # remove all opperations related to the record from the queue
                   queueOperation: replace
                   function: rest-delete-customer
-                  functionParameters:
+                  parameters:
                     custId: =$number(@ctx.current.item.id)
                   data:
                     id: =@ctx.current.item.id
               modal:
                 title: Are you sure?
-                description: =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
-
+                description: |
+                  =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
 ```
 
 rest-delete-customer.jigx (function)
@@ -1215,7 +1277,6 @@ parameters:
     location: query
     required: true
 ```
-
 :::
 
 ### Execute-entity with queueOperations when no id is returned
@@ -1253,10 +1314,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: us-states
-
       query: |
         SELECT 
           uss.id AS id, 
@@ -1269,7 +1328,6 @@ datasources:
           [us-states] AS uss
         WHERE  
           json_extract(uss.data, '$.abbreviation') = @selectedState
-
       queryParameters:
         selectedState: =@ctx.components.usState.state.value
 
@@ -1379,13 +1437,14 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: create
-          # In this scenario, the backend system does not return an ID, you need to sync
-          # the data before we get the correct backend ID for the record. With this in mind,
-          # you'll need to be careful not to create and update the same record on the queue
-          # because the backend cannot associate the records after the sync. Have a look at
-          # the Update jig to see the correct way of dealing with this scenario.
+          # In this scenario, the backend system does not return an ID, 
+          # you need to sync the data before we get the correct backend ID for 
+          # the record. With this in mind, you'll need to be careful not to 
+          # create and update the same record on the queue because the backend 
+          # cannot associate the records after the sync. Have a look at the 
+          # Update jig to see the correct way of dealing with this scenario.
           function: rest-create-customer
-          functionParameters:
+          parameters:
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
             companyName: =@ctx.components.companyName.state.value
@@ -1400,6 +1459,21 @@ actions:
             state: =@ctx.components.usState.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          data:
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.usState.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value   
 ```
 
 update-customer.jigx
@@ -1470,7 +1544,6 @@ datasources:
         FROM 
           [customers] AS cus
         WHERE id = @custId
-
       queryParameters:
         custId: =@ctx.jig.inputs.customer.id
       isDocument: true
@@ -1588,7 +1661,7 @@ actions:
           # use the data property to specify the id.
           data:
             id: =@ctx.jig.inputs.customer.id
-          functionParameters:
+          parameters:
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
             companyName: =@ctx.components.companyName.state.value
@@ -1613,7 +1686,7 @@ actions:
           goBack: previous
           queueOperation: replace
           function: rest-update-customer
-          functionParameters:
+          parameters:
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -1629,6 +1702,22 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          data:
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.state.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value   
 ```
 
 rest-create-customer.jigx (function)
@@ -1726,7 +1815,6 @@ inputTransform: |
 # because the backend cannot associate the records after the sync. Have a look at
 # the Update jig to see the correct way of dealing with this scenario.
 ```
-
 :::
 
 ### Clear all commands in the queue for record
@@ -1778,10 +1866,8 @@ datasources:
     type: datasource.sqlite
     options:
       provider: DATA_PROVIDER_LOCAL
-
       entities:
         - entity: customers
-
       query: |
         SELECT 
           cus.id AS id, 
@@ -1912,7 +1998,7 @@ actions:
           # scenarios where backends have rate limits
           queueOperation: replace
           function: rest-update-customer
-          functionParameters:
+          parameters:
             id: =@ctx.jig.inputs.customer.id
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
@@ -1928,13 +2014,28 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value
+          data:
+            id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.state.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value   
       # Use the clear-queue to discard any commands in the queue while the device is offline
       - type: action.clear-queue
         options:
           title: Cancel all updates
           id: =@ctx.jig.inputs.customer.id
 ```
-
 :::
 
 ### Testing and debugging queues
@@ -1977,5 +2078,5 @@ item:
     subtitle: =@ctx.current.item.type & ' ' & @ctx.current.item.state
     description: =@ctx.current.item.error
 ```
-
 :::
+
