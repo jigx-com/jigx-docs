@@ -81,6 +81,7 @@ There are two options available for joining jigs which depend on your requiremen
 - The order of the `jigIds` configured in the YAML determines the order in which the jigs appear in the composite jig.
 - There are properties available to hide the title of each jig (`isTitleHidden`).
 - Provide `inputs` into each jig if required.
+
   :::
   ::::
 
@@ -106,6 +107,7 @@ children:
 
 - Add the `widgets` property to a jig. Configure the `size` and `jigId` for all the jigs you want to navigate to from the current jig.
 - The order of the `jigIds` configured in the YAML determines the order in which the widgets appear in the jig.
+
   :::
 
 :::VerticalSplitItem

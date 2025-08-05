@@ -134,7 +134,7 @@ Here is a list of available content/information widgets:
 
 | **Widget content**                                                  | **Description**                                                                                                                                                 |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [icons](<./../../Understanding the basics/Jigx icons.md>)           | Choose an icon from thousands of available icons.                                                                                                               |
+| [icons](<./../../Understanding the basics/Jigx icons.md>)           | Choose an icon from thousands of available icons.                                                                             |
 | [actions (buttons)](https://docs.jigx.com/examples/actions-buttons) | Configure a button with an action that executes.                                                                                                                |
 | [avatar](https://docs.jigx.com/examples/VeUB-avatar)                | Display an avatar on the widget.                                                                                                                                |
 | [chart](https://docs.jigx.com/examples/chart)                       | Configure a bar, line or pie chart to display on the widget.                                                                                                    |

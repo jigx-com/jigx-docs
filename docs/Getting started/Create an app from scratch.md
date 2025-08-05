@@ -26,34 +26,35 @@ The solution is named **Hello-Jigx** and consists of a map showing a location, a
 
 1. Before you start building your first solution ensure you have created a [Creating an account](<./Creating an account.md>) and [Install the Jigx Builder](<./Install the Jigx Builder.md>). Get an overview of the [Jigx platform](<./../Understanding the basics/Architecture.md>) and an understanding of the [Jigx Concepts](<./../Understanding the basics/Jigx Concepts.md>).
 2. We recommend you build out all the solution steps below, as each solution step builds on the previous step until you have a functioning mobile app.
+
    :::
 
 ## Solution Steps
 
 There are several [types](https://docs.jigx.com/examples/jig-types) of jigs you can build. They are default, document, calendar, composite, and list. Below are step-by-step guides that use these jig types. Each solution step builds on the previous step until you have a functioning mobile app. Each solution provides an overview, explaining the Jigx's concepts introduced in the step, and code samples with comments.
 
-<a href="https://docs.jigx.com/create-the-hello-jigx-solution-project" target="_blank">Step 1: Create the Hello Jigx solution project</a>
+[Step 1: Create the Hello Jigx solution project](https://docs.jigx.com/create-the-hello-jigx-solution-project)
 Start by creating the Hello Jigx project in VS Code
 **Build time**: 2 min
 
-<a href="https://docs.jigx.com/create-the-map" target="_blank">Step 2: Create the Map</a>
+[Step 2: Create the Map](https://docs.jigx.com/create-the-map)
 Build a map jig that displays a specific location on a map, with an icon for the jig.
 **Build time**: 10 min
 
-<a href="https://docs.jigx.com/create-the-calendar" target="_blank">Step 3: Create the Calendar</a>
+[Step 3: Create the Calendar](https://docs.jigx.com/create-the-calendar)
 Next, add a calendar jig that displays a week with the events, meetings, and relevant details.
 **Build time**: 10 mins
 
-<a href="https://docs.jigx.com/create-data-form-and-list" target="_blank">Step 4: Create Data - forms & lists</a>
+[Step 4: Create Data - forms & lists](https://docs.jigx.com/create-data-form-and-list)
 Build a jig to add a new customer by capturing the customer's details using a form. Then add a jig to list all the customers created using the form. Add the ability to view, and edit these customer records.
 **Build time**: 20 mins
 
-<a href="https://docs.jigx.com/combine-the-solutions-elements" target="_blank">Step 5: Combine the solution's elements</a>
+[Step 5: Combine the solution's elements](https://docs.jigx.com/combine-the-solutions-elements)
 Now you have built a solution that shows a location on a map, a calendar with detailed entries, and a new customer form and list in a single solution. Let us expand the solution further by joining the new customer form and list into one jig, then add a jig header to the new customer jig.
 **Build time**: 15 mins
 
-<a href="https://docs.jigx.com/customize-the-hello-jigx-solution" target="_blank">Step 6: Customize the Hello-Jigx solution
-</a>Extend your solution with styling changes and additional functionality. Replace the map icon with a location widget in the map.jigx file, and replace the people icon with the image widget in the composite.jigx file. Change the calendar icon and add a badge to display the number of events for the week.
+[Step 6: Customize the Hello-Jigx solution](https://docs.jigx.com/customize-the-hello-jigx-solution)
+Extend your solution with styling changes and additional functionality. Replace the map icon with a location widget in the map.jigx file, and replace the people icon with the image widget in the composite.jigx file. Change the calendar icon and add a badge to display the number of events for the week.
 **Build time**: 10 mins
 
 ## What's next?

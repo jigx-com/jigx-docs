@@ -251,7 +251,7 @@ item:
 | leftIcon               | The `leftIcon` property is used to place an icon on the left-hand side of a component.                                                                                                                                                                                                              |
 | rightIcon              | The `rightIcon` property is used to place an icon on the right-hand side of a component.                                                                                                                                                                                                            |
 
-## &#x20;Component templates
+## Component templates
 
 See [Component Templates](<./Components _controls_/Component Templates.md>) for steps on how to add components from a preconfigured set of templates.
 
