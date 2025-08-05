@@ -9,7 +9,7 @@ Integrating with external data is often a crucial step in building a mobile app,
 
 Jigx provides a set of data providers to make integrating with external data easy. The following examples show how to build apps using these providers.
 
-| **Example**                                                                |                                                                                                                                                                                                            |
+| **Example**                                                                |                                                      |
 | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Hello REST](https://docs.jigx.com/examples/create-an-app-using-rest-apis) | In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images.                                          |
 | [MS Graph](https://docs.jigx.com/examples/ms-graph)                        | The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.                                                          |

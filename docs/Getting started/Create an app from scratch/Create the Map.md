@@ -23,16 +23,17 @@ We recommend you build out all the solution steps for the [Create an app from sc
 2. [Add the jig.default](<./Create the Map/Adding the Map Jig.md>) with an icon, and static data source.
 3. [Publish the project](<./Create the Map/Publish the project.md>).
 4. [Open the Jigx mobile app](<./Create the Map/Run the solution in the app.md>), click on the location jig, and view the map.
+
    :::
 
 :::VerticalSplitItem
-![Map jig on Home Hub ](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5jTu6ueglwO_REh2Am0go_maplight.PNG "Map jig on Home Hub ")
+![Map jig on Home Hub](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5jTu6ueglwO_REh2Am0go_maplight.PNG "Map jig on Home Hub ")
 :::
 ::::
 
 ## GitHub samples
 
-You can download the <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" target="_blank">Hello Jigx solution :Comment[project]{resolved="true" docCommentId="qWzHLJQvArJ1O7Fk0JeWE"} </a>on GitHub or build it yourself by following the detailed steps in this section.
+You can download the [Hello Jigx solution project](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution) on GitHub or build it yourself by following the detailed steps in this section.
 
 ## See Also
 
