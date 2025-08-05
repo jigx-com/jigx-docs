@@ -1,9 +1,15 @@
-# Expressions
+---
+title: Expressions
+slug: 381L-expressions
+description: Learn how to use expressions in Jigx to efficiently structure and manipulate data before binding it to UI components. This comprehensive document covers shared expressions for overall solution use, as well as specific expressions set within individual jig
+createdAt: Tue Jun 07 2022 09:48:29 GMT+0000 (Coordinated Universal Time)
+updatedAt: Wed Apr 23 2025 08:45:48 GMT+0000 (Coordinated Universal Time)
+---
 
 Expressions allow you to structure and manipulate data before binding it to the UI components. Expressions are JSONata-based. JSONata is a lightweight query and transformation language for JSON data. It also provides a rich complement of built-in operators and functions for manipulating and combining data.
 
 :::hint{type="info"}
-Expressions are JSONata language-based. Learn more about [https://jsonata.org/](https://jsonata.org/)JSONata and try out your expressions in their [https://try.jsonata.org/](https://try.jsonata.org/)JSONata Exerciser. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
+Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
 :::
 
 ## Shared expressions
@@ -12,7 +18,7 @@ The shared expressions can be set either in the index.jigx file or in the jig it
 
 ### Global expressions set in the index.jigx
 
-Expressions that are set in the index.jigx are reusable throughout your whole solution by referencing the global expression in the jig. Create the reference to the global expression by using `=@ctx.expression.``name` in the jig.
+Expressions that are set in the index.jigx are reusable throughout your whole solution by referencing the global expression in the jig. Create the reference to the global expression by using ` =@ctx.expression.``name ` in the jig.
 
 :::CodeblockTabs
 index.jigx
@@ -49,6 +55,7 @@ children:
                   label: Current Longitude
                   value: =@ctx.expressions.lng
 ```
+
 :::
 
 ### Expressions set inside the jig
@@ -56,6 +63,7 @@ children:
 These expressions are only available in the jig itself.
 
 :::CodeblockTabs
+
 ```yaml
 title: Shared expressions example
 type: jig.default
@@ -92,6 +100,8 @@ children:
                   value: =@ctx.expressions.address
 ```
 
+datasource.jigx
+
 ```yaml
 datasources:
   employee-list:
@@ -122,6 +132,7 @@ datasources:
           surname: Fisher
           position: UX Designer
 ```
+
 :::
 
 ## Expression structure
@@ -146,18 +157,18 @@ Adding an empty array index \[] in the path forces jsonata to return an array of
 
 Expressions can be used in many ways when creating apps, here are common use cases:
 
-| **Use**      | **Description**                                                     | **Example**                            |
-| ------------ | ------------------------------------------------------------------- | -------------------------------------- |
-| datasource   | To call data from a datasource                                      | `=@ctx.datasource.mydata.datacolumn`   |
-| component    | Used inside a component to reference data in that component         | `=@ctx.component.state.value`          |
-| components   | Used in a jig to reference data from various components in that jig | `=@ctx.components.list.state.filter`   |
-| current item | Use data in the current component                                   | `=@ctx.current.item.value`             |
-| jig          | Pull data in from another jig                                       | `=@ctx.jig.inputs.jigname.description` |
-| jigs         | Pull data in from multiple jigs                                     | `=@ctx.jigs.`                          |
-| organization | Reference the name or id of the Jigx                                | `=@ctx.organization.name`              |
-| solution     | Reference the Jigx                                                  | `=@ctx.solution.name`                  |
-| system       | Get data about various  values such as offline status               | `=@ctx.system.isOffline`               |
-| user         | Reference data about the current Jigx                               | `=@ctx.user.displayName`               |
+| **Use**      | **Description**                                                                                                    | **Example**                            |
+| ------------ | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------- |
+| datasource   | To call data from a datasource                                                                                     | `=@ctx.datasource.mydata.datacolumn`   |
+| component    | Used inside a component to reference data in that component                                                        | `=@ctx.component.state.value`          |
+| components   | Used in a jig to reference data from various components in that jig                                                | `=@ctx.components.list.state.filter`   |
+| current item | Use data in the current component                                                                                  | `=@ctx.current.item.value`             |
+| jig          | Pull data in from another jig                                                                                      | `=@ctx.jig.inputs.jigname.description` |
+| jigs         | Pull data in from multiple jigs                                                                                    | `=@ctx.jigs.`                          |
+| organization | Reference the name or id of the Jigx [organization](https://docs.jigx.com/organization-settings)                   | `=@ctx.organization.name`              |
+| solution     | Reference the Jigx [solution](https://docs.jigx.com/solution-details)                                              | `=@ctx.solution.name`                  |
+| system       | Get data about various [system](https://docs.jigx.com/examples/jigx-variables#quSXJ) values such as offline status | `=@ctx.system.isOffline`               |
+| user         | Reference data about the current Jigx [user](https://docs.jigx.com/users)                                          | `=@ctx.user.displayName`               |
 
 ## Advanced expressions
 
@@ -175,6 +186,7 @@ text: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
   & ' ' &
   (@ctx.datasources.table.field2 = '2' ? 'Derek' :'Doe')"
 ```
+
 :::
 
 ### Multiline
@@ -189,6 +201,7 @@ title: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
   & ' ' &
   (@ctx.datasources.table.field2 = '2' ? 'Derek' :'Doe')"
 ```
+
 :::
 
 ## JavaScript expressions
@@ -200,7 +213,7 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 ### What is Supported?
 
 - Only .js files containing JavaScript functions are supported. Creating any file in the scripts folder, automatically adds the .js extension.
-- Currently, only [https://date-fns.org/](https://date-fns.org/)date-fns libraries are supported. If you require other JavaScript libraries, contact [https://mailTo\:support@jigx.com](https://mailTo\:support@jigx.com)[support@jigx.com](mailto\:support@jigx.com).
+- Currently, only [date-fns](https://date-fns.org/) libraries are supported. If you require other JavaScript libraries, contact [support\@jigx.com](https://mailTo:support@jigx.com).
 - Functions that call web services are not supported.
 
 ### How does it work?
@@ -216,17 +229,17 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
   - For multiple functions, you can define each function in a single file or separate then into their own files.
 - Each function must be prefixed with **export**, for example,
   `export function helloWorld() {
-  return 'Hello World'
-  }`
+return 'Hello World'
+}`
 - **Import** is used to define the format for a specific function, for example,
   `import { addDays, isWeekend, format } from 'date-fns';
-  export function getNextBusinessDay(date) {
+export function getNextBusinessDay(date) {
   let nextDay = addDays(date, 1);
   while (isWeekend(nextDay)) {
     nextDay = addDays(nextDay, 1);
   }
   return format(nextDay, 'MMMM d, yyyy');
-  }`
+}`
 
 **Call the JavaScript function in an expression**
 
@@ -241,8 +254,8 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 - JavaScript files are recognized throughout the solution and can by reused in multiple jigs.
 - JavaScript functions are not a replacement for JSONata expressions. Each has its purpose; combining the two will empower you while creating apps. In certain instances, JSONata is inline and can be quicker and easier than using a JavaScript function, such as concatenating first and last names.
 - JavaScript functions can be used instead of regex expressions used for validation. For example, JavaScript functions can be used to format a phone number rather than regex to validate if it is in the correct format.
-- Use *F12* to navigate from an expression to the JavaScript function script file. See [Go to Definition](<./../Jigx Builder _code editor_/Editor.md>).
-- From the script file use *shift + F12* or right-click and select [Go to References](<./../Jigx Builder _code editor_/Editor.md>) to see where all the script file is used in expressions.
+- Use _F12_ to navigate from an expression to the JavaScript function script file. See [Go to Definition](<./../Jigx Builder _code editor_/Editor.md>).
+- From the script file use _shift + F12_ or right-click and select [Go to References](<./../Jigx Builder _code editor_/Editor.md>) to see where all the script file is used in expressions.
 
 ## JSONata and Regular expressions
 
@@ -252,21 +265,21 @@ In Jigx you can combine a JSONata expression with a Regex expression to create a
 
 Expressions are a powerful and flexible way to transform and extract data for use in a Jigx App. Below are links to examples showing how JSONata expressions can be used when creating apps.
 
-| **JSONata expressions** | **Example of use**                                                                                                                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                         | Create filtered lists from arrays and handling arrays with SQL and Dynamic Data                                                                                                                                           |
-|                         | To return minimum, maximum or an average value in an array.                                                                                                                                                               |
-|                         | Evaluate data to find a true or false result.                                                                                                                                                                             |
-|                         | Compare values in data and use the value in a conditional logical expression, e.g., is an amount greater than 100.                                                                                                        |
-|                         | Return a date and time in various formats, e.g., ISO 8601.                                                                                                                                                                |
-|                         | Navigate and access specific elements or properties within a data set, e.g., for filtering or searching.                                                                                                                  |
-|                         | Compare values or display data based on certain conditions and using logical statements, e.g., adding HTML variable in content, or a multi-select as a functionParameter.                                                 |
-|                         | Jigx variable set used in expressions to manipulate data specific to a Jigx App, e.g., determining the logged-in user, or the organization and solution.                                                                  |
-|                         | Used for query refinement.                                                                                                                                                                                                |
-|                         | There are many uses for using string expressions, these can be to concatenate two strings to display multiple data records in one row or write numbers as strings, or select only a few characters from the whole string. |
-|                         | Advanced expressions are helpful when you need to filter an array of records to display specific data and perform expression transformations over the data.                                                               |
-|                         | Create validation for text fields by combining JSONata and Regex expressions.                                                                                                                                             |
-|                         | JavaScript functions allow you to write modular and reusable code, by encapsulating specific functionality within JavaScript functions and calling the function in an expression.                                         |
+| **JSONata expressions**                                                         | **Example of use**                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Arrays](https://docs.jigx.com/examples/arrays)                                 | Create filtered lists from arrays and handling arrays with SQL and Dynamic Data                                                                                                                                           |
+| [Aggregation](https://docs.jigx.com/examples/aggregation)                       | To return minimum, maximum or an average value in an array.                                                                                                                                                               |
+| [Boolean](https://docs.jigx.com/examples/boolean)                               | Evaluate data to find a true or false result.                                                                                                                                                                             |
+| [Comparison Operators](https://docs.jigx.com/examples/comparison-operators)     | Compare values in data and use the value in a conditional logical expression, e.g., is an amount greater than 100.                                                                                                        |
+| [Date & Time](https://docs.jigx.com/examples/date-and-time)                     | Return a date and time in various formats, e.g., ISO 8601.                                                                                                                                                                |
+| [Path Operators](https://docs.jigx.com/examples/path-operators)                 | Navigate and access specific elements or properties within a data set, e.g., for filtering or searching.                                                                                                                  |
+| [Functional Programming](https://docs.jigx.com/examples/functional-programming) | Compare values or display data based on certain conditions and using logical statements, e.g., adding HTML variable in content, or a multi-select as a functionParameter.                                                 |
+| [Jigx Variables](https://docs.jigx.com/examples/jigx-variables)                 | Jigx variable set used in expressions to manipulate data specific to a Jigx App, e.g., determining the logged-in user, or the organization and solution.                                                                  |
+| [Predicate Queries](https://docs.jigx.com/examples/predicate-queries)           | Used for query refinement.                                                                                                                                                                                                |
+| [String](https://docs.jigx.com/examples/string)                                 | There are many uses for using string expressions, these can be to concatenate two strings to display multiple data records in one row or write numbers as strings, or select only a few characters from the whole string. |
+| [Advanced expressions](https://docs.jigx.com/examples/advanced-expressions)     | Advanced expressions are helpful when you need to filter an array of records to display specific data and perform expression transformations over the data.                                                               |
+| [Regex + JSONata](https://docs.jigx.com/examples/regex-expressions#1Txjd)       | Create validation for text fields by combining JSONata and Regex expressions.                                                                                                                                             |
+| [JavaScript expressions](https://docs.jigx.com/examples/javascript-expressions) | JavaScript functions allow you to write modular and reusable code, by encapsulating specific functionality within JavaScript functions and calling the function in an expression.                                         |
 
 ### See Also
 
@@ -274,4 +287,3 @@ Expressions are a powerful and flexible way to transform and extract data for us
 - [Expression Examples ](https://docs.jigx.com/examples/expressions)
 - [Regex expressions](https://docs.jigx.com/examples/regex-expressions)
 - [JavaScript expressions](https://docs.jigx.com/examples/javascript-expressions)
-
