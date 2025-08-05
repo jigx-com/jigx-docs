@@ -1,12 +1,6 @@
----
-title: Syncing SQL & loading local Data
-slug: M_S__SYF3gR5aun-NCMRJ
-description: This document provides a comprehensive flowchart for documenting and versioning code changes, offering a step-by-step visual guide from coding to merging changes. It emphasizes the importance of adhering to proper documentation and version control practic
-createdAt: Sun Nov 20 2022 19:42:50 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Nov 20 2024 06:53:49 GMT+0000 (Coordinated Universal Time)
----
+# Syncing SQL & loading local Data
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" size="74" position="center" }
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" size="74" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4Cy8fOUMAzzsz5gefQL2R-20241119-092849.gif" caption width="1120" height="1616" darkWidth="1120" darkHeight="1616"}
 
 Key:
 
@@ -39,10 +33,12 @@ Dynamic Data automatically syncs its data with the cloud when server-side or dev
 
 There are two options when using the `execute-entity` and `execute-entities` actions with remote data such as REST or SQL.
 
-1. **To update BOTH the local SQLite table and the remote data store (REST and SQL)**. To update the local table, specify CREATE, UPDATE, or DELETE methods in the `method` property of the data provider, then specify the function to use in the `function` property, and under `functionParameters` specify the exact data to be updated, this updates the remote data store (REST or SQL). After execution, a tempId is created, and then it is synced to the local table.
-   ![Update local and REST providers](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nhCYMsKm3RQVSSIvIdezV-20241119-082823.png "Update local and REST providers")
-2. **To ONLY update the remote data store (REST and SQL)**. To update the remote data store specify `functionCall` in the method property. Then specify the function to be called in the `function` property and under `functionParameters` specify the exact data to be updated. Note that the data will not be visible on the jig until a `sync-entities` action is executed.
-   ![Only update REST Service](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Aydt1Db7pcSqGqWAF9wtY_rest-restonly-execentity.png "Only update REST Service")
+1. **To update BOTH the local SQLite table and the remote data store (REST and SQL)**. To update the local table, specify CREATE, UPDATE, or DELETE methods in the `method` property of the data provider, then specify the function to use in the `function` property, and under `parameters` specify the exact data to be updated in the remote data store (REST/SQL). Under `data` specify the exact data to be updated in the local SQLite table. After execution, a tempId is created, and then it is synced to the local table.
+
+   ![Update local and REST providers](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cE8AAHc7mhUv7fJS4z56u-20250804-142244.png "Update local and REST providers")
+2. **To ONLY update the remote data store (REST and SQL)**. To update the remote data store specify `functionCall` in the method property. Then specify the function to be called in the `function` property and under `parameters` specify the exact data to be updated. Note that the data will not be visible on the jig until a `sync-entities` action is executed.
+
+   ![Only update REST Service](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VncgH7oeM4bADxWiBlFd_-20250804-143743.png "Only update REST Service")
 
 ### Consideration
 
