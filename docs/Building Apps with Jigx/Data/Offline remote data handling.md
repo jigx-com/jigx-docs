@@ -130,6 +130,13 @@ actions:
           # id is required for the replace operation.
           data:
             id: =@ctx.jig.inputs.customer.id  
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
 ```
 
 execute-entity-parameters-id
@@ -1661,6 +1668,20 @@ actions:
           # use the data property to specify the id.
           data:
             id: =@ctx.jig.inputs.customer.id
+            firstName: =@ctx.components.firstName.state.value
+            lastName: =@ctx.components.lastName.state.value
+            companyName: =@ctx.components.companyName.state.value
+            address: =@ctx.components.address.state.value
+            city: =@ctx.components.city.state.value
+            customerType: =@ctx.components.customerType.state.value
+            email: =$lowercase(@ctx.components.email.state.value)
+            jobTitle: =@ctx.components.jobTitle.state.value
+            phone1: =@ctx.components.phone1.state.value
+            phone2: =@ctx.components.phone1.state.value
+            region: =@ctx.components.region.state.value
+            state: =@ctx.components.state.state.value
+            web: =$lowercase(@ctx.components.web.state.value)
+            zip: =@ctx.components.zip.state.value
           parameters:
             firstName: =@ctx.components.firstName.state.value
             lastName: =@ctx.components.lastName.state.value
