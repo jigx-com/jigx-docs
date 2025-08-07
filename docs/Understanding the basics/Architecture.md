@@ -22,4 +22,3 @@ The Jigx platform consists of components that work together enabling you to buil
 
 - [REST Authentication](<./../Building Apps with Jigx/Data/Data Providers/REST/REST Authentication.md>)
 - [Local REST Calls](<./../Building Apps with Jigx/Data/Data Providers/REST/Local REST Calls.md>)
-
