@@ -67,7 +67,7 @@ Here are some common validation expressions to create and use for text field val
 | [ISBN](https://docs.jigx.com/examples/regex-expressions#jcfEA)                        | 978-1-4302-1998-9                                                                                                                                                            |
 | [Strict alpha numeric](https://docs.jigx.com/examples/regex-expressions#-Rg7S)        | JohnSmith                                                                                                                                                                    |
 | [Alpha numeric with spaces](https://docs.jigx.com/examples/regex-expressions#kttOe)   | John Smith                                                                                                                                                                   |
-| [Numbers and spaces only](https://docs.jigx.com/examples/regex-expressions#8Fe2B)     | 56575 76 6                                                                                                                                                                   |
+| [Numbers and spaces only](https://docs.jigx.com/examples/regex-expressions#8Fe2B)     | 56575 76 6                                                                                 |
 
 ## See Also
 
