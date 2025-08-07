@@ -1,10 +1,4 @@
----
-title: Credentials
-slug: VrjS-credentials
-description: Learn how Jigx, a reliable cloud-based service, offers a secure credentials store for remote API connections. Safely add, update, and remove credentials with ease, but be aware that removing credentials will affect API connectivity for associated function
-createdAt: Tue Jun 07 2022 09:54:45 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Feb 12 2024 17:24:14 GMT+0000 (Coordinated Universal Time)
----
+# Credentials
 
 Jigx provides a secure credentials store in the cloud that can be used to connect to remote APIs from your solutions. Credentials are referenced within your function's definitions via `key` properties and are used at runtime to inject the credentials into the request.
 
@@ -35,9 +29,8 @@ Fill in the fields or click on **Show schema** to add the raw JSON configuration
 
 ## Removing Credentials
 
-1. Click on the **Remove** link in the last column of the record to remove the credentials. Be aware that the functions in the solution that are referencing the credentials will stop working as they cannot connect to the remote API anymore.
+Click on the **Remove** link in the last column of the record to remove the credentials. Be aware that the functions in the solution that are referencing the credentials will stop working as they cannot connect to the remote API anymore.
 
 ## Considerations
 
-- Creating a copy of a solution duplicates the structure of the credentials and connections, to allow for easy configuration by only having to respecify secrets.
-
+Creating a copy of a solution duplicates the structure of the credentials and connections, to allow for easy configuration by only having to respecify secrets.
