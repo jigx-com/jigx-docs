@@ -1,10 +1,4 @@
----
-title: Permissions - User Roles
-slug: R7Zn-user-roles
-description: Learn how permissions are managed on the Jigx platform using User Roles. Discover the different types of roles - Organization Roles and Solution Roles - and understand how they determine a user's access and management capabilities within JigxManagement. G
-createdAt: Thu Jun 09 2022 09:26:39 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Jan 15 2024 08:36:42 GMT+0000 (Coordinated Universal Time)
----
+# Permissions - User Roles
 
 Permissions on the Jigx platform are managed with **User Roles**. There are two types namely, **Organization** and **Solution** roles. Roles describe what features and content a user can access and/or manage.
 
@@ -16,25 +10,261 @@ If you do not see the tabs described in this section of the Jigx Management docu
 
 To be able to log into Jigx Management you have to be an `admin`, `Owner`, or `Creator`. Organization roles are set in the [User Profile](./Users.md).
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png" position="center" caption="Assign organizational permissions" alt="Assign organizational permissions"}
+![Assign organizational permissions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl_jm-orgpermissions.png "Assign organizational permissions")
 
-| **ACCESS**                                        | **OWNER**                       | **ADMIN**                       | **CREATOR**                    |
-| ------------------------------------------------- | ------------------------------- | ------------------------------- | ------------------------------ |
-| Log in to the Jigx Management                     | ✅                               | ✅                               | ✅                              |
-| Users (View)                                      | ✅                               | ✅                               | ✅                              |
-| Users (Invite/Remove)                             | ✅                               | ✅                               | ❌                              |
-| Solutions (View)                                  | ✅&#xA;(All)                     | ✅<br />(All)                    | ✅&#xA;(Own)                    |
-| Solutions - Widgets (Assign Groups)               | ❌<br />(requires solution role) | ❌<br />(requires solution role) | ❌&#xA;(requires solution role) |
-| Solutions - Groups (Add/Remove)                   | ❌<br />(requires solution role) | ❌<br />(requires solution role) | ❌&#xA;(requires solution role) |
-| Solutions - Permissions (Add/Remove/Manage)       | ✅                               | ✅                               | ❌&#xA;(requires solution role) |
-| Solutions - Data (View)                           | ✅&#xA;(All)                     | ✅&#xA;(Own)                     | ✅&#xA;(Own)                    |
-| Solutions - Data (Manage)                         | ❌&#xA;(requires solution role)  | ❌&#xA;(requires solution role)  | ❌&#xA;(requires solution role) |
-| Solutions - Credentials (Manage)                  | ✅&#xA;(All)                     | ✅&#xA;(All)                     | ✅&#xA;(Own)                    |
-| Solutions - Connections (Manage)                  | ✅&#xA;(All)                     | ✅&#xA;(All)                     | ✅&#xA;(Own)                    |
-| Solutions - Preview/Run SQL, REST, SOAP Functions | ✅&#xA;(All)                     | ✅&#xA;(All)                     | ✅&#xA;(Own)                    |
-| Notifications (View)                              | ✅&#xA;(Own)                     | ✅&#xA;(Own)                     | ❌                              |
-| Notifications (Send)                              | ✅                               | ✅                               | ❌                              |
-| Organizational Settings (Manage)                  | ✅                               | ❌                               | ❌                              |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="256">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>ACCESS</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>OWNER</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>ADMIN</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>CREATOR</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Log in to the Jigx Management</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Users (View)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Users (Invite/Remove)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions (View)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Widgets (Assign Groups)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Groups (Add/Remove)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Permissions (Add/Remove/Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Data (View)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Data (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌
+      (requires solution role)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Credentials (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Connections (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions - Preview/Run SQL, REST, SOAP Functions</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (All)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Notifications (View)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅
+      (Own)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Notifications (Send)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Organizational Settings (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+</table>
 
 ## Solution Roles
 
@@ -42,15 +272,176 @@ Solution roles describe to what extent you can manage a solution in Jigx Managem
 
 ![Solution Role](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/hm5_6VMKypZ8YNA6_1wuM_jm-userrolel.png "Solution Role")
 
-| **ACCESS**                                           | **OWNER** | **ADMIN** | **EDITOR ** | **USER** |
-| ---------------------------------------------------- | --------- | --------- | ----------- | -------- |
-| Solution (Run on device)                             | ✅&#xA;    | ❌         | ❌           | ✅        |
-| Solution (View in )                                  | ✅         | ✅         | ✅           | ❌        |
-| Solution - Widgets (Assign Groups)                   | ✅         | ✅         | ❌           | ❌        |
-| Solution - Groups (Add/Remove)                       | ✅         | ✅         | ❌           | ❌        |
-| Solution - Permissions (Add/Remove/Manage)           | ✅         | ✅         | ❌           | ❌        |
-| Solution - Data (Manage)                             | ✅         | ❌         | ❌           | ❌        |
-| Solution - Credentials (Manage)                      | ✅         | ✅         | ✅           | ❌        |
-| Solution - Connections (Manage)                      | ✅         | ✅         | ✅           | ❌        |
-| Solution - Preview/Run SQL, REST, and SOAP Functions | ✅         | ✅         | ✅           | ❌        |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>ACCESS</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>OWNER</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>ADMIN</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>EDITOR</strong> </p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>USER</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution (Run on device)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution (View in )</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Widgets (Assign Groups)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Groups (Add/Remove)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Permissions (Add/Remove/Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Data (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Credentials (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Connections (Manage)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solution - Preview/Run SQL, REST, and SOAP Functions</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>❌</p>
+    </td>
+  </tr>
+</table>
 
