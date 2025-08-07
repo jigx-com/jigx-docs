@@ -1,14 +1,8 @@
----
-title: Localization
-slug: 4bD9-localization
-description: Jigx solution can display in multiple languages, you can use localization built into Jigx. Every option that accepts string-based values (e.g. field labels) can be localized
-createdAt: Fri Jun 17 2022 09:31:03 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Mar 05 2025 09:49:19 GMT+0000 (Coordinated Universal Time)
----
+# Localization
 
 Jigx mobile app supports multiple languages, significantly enhancing its market presence, user engagement, and overall success by appealing to a broader and more diverse audience. The real power of the Jigx localization functionality lies in using a single jig that can have multiple translations associated with the jig, the app respects the language setting of the device and renders the jigin that language if the corresponding language file is found or defaults to English.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wkg2mDRfeBu2bwG4IXkyA_trans-dynamic.PNG" size="78" position="center" caption="One jig in English & German" alt="One jig in English & German"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wkg2mDRfeBu2bwG4IXkyA_trans-dynamic.PNG" size="78" position="center" caption="One jig in English & German" alt="One jig in English & German" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wkg2mDRfeBu2bwG4IXkyA_trans-dynamic.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
 
 ## How it works
 
@@ -24,9 +18,9 @@ Only one translation file per language is used, For example, de.jigx for German 
 :::VerticalSplitItem
 In the Jigx App under **Profile>Settings>Language** check that the setting **Device** is selected. This respects the settings of the device and if a matching language translation file is present in the solution the jig will show in that language.
 :::
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" size="80" position="center" caption="Language Settings" alt="Language Settings"}
 
+:::VerticalSplitItem
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" size="80" position="center" caption="Language Settings" alt="Language Settings" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/e0CJNXA4h-PVgGroIC0XG_trans-profile.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -34,12 +28,12 @@ In the Jigx App under **Profile>Settings>Language** check that the setting **Dev
 
 Configuring `TextLocale` is simple, and the translation can be:
 
-1. **Static** - Add localization to a jig using a _unique identifier_ with translated text
-2. **Dynamic** - Add localization to a jig using _ICU Message definitions_
+1. **Static** - Add localization to a jig using a *unique identifier* with translated text
+2. **Dynamic** - Add localization to a jig using *ICU Message definitions*
 
 :::hint{type="info"}
 Adding dynamic values in localized jigs use **ICU message** definitions.
-Try it in the <a href="https://format-message.github.io/icu-message-format-for-translators/editor.html" target="_blank">Online ICU Message Editor </a> or see the <a href="https://unicode-org.github.io/icu/userguide/format_parse/messages/" target="_blank">ICU format messaging</a> documentation.
+Try it in the :Link[Online ICU Message Editor]{href="https://format-message.github.io/icu-message-format-for-translators/editor.html" newTab="true" hasDisabledNofollow="false"} or see the :Link[ICU format messaging]{href="https://unicode-org.github.io/icu/userguide/format_parse/messages/" newTab="true" hasDisabledNofollow="false"} documentation.
 :::
 
 ### Static values - In the jig
@@ -47,7 +41,7 @@ Try it in the <a href="https://format-message.github.io/icu-message-format-for-t
 1. Invoke IntelliSense next to the property you want to translate.
 2. Select `TextLocale`
 3. Provide an `id:` for the value to be translated.
-4. _Optional:_ add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
+4. *Optional:* add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
 
 :::CodeblockTabs
 jig.jigx
@@ -63,14 +57,13 @@ children:
         # Specify a fallback if the lanaguage is not founnd on the device
         defaultMessage: First Name
 ```
-
 :::
 
 ### Static values - In the translation file
 
 Once the unique id has been set for the `TextLocale`, the file containing the translation needs to be configured:
 
-1. In Jigx Builder under the **translations** folder, create a new file. The file's name must be the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 6391-1 codes</a>, for example, de.jigx for German, or fr.jigx for French.
+1. In Jigx Builder under the **translations** folder, create a new file. The file's name must be the :Link[ISO 6391-1 codes]{href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" newTab="true" hasDisabledNofollow="false"}, for example, de.jigx for German, or fr.jigx for French.
 2. For multiple languages create a separate file per language required.
 3. Add the unique identifiers (`id`) values specified in the jig, with the corresponding translated text in the new file.
 4. If you using multiple languages, simply use the same unique identifiers (`id`) values in each language file and for **static** values ensure the translated text corresponds.
@@ -96,7 +89,6 @@ cs.jigx
 # add the id specified in the jig and the static Czech translated value
 first_name: Jméno
 ```
-
 :::
 
 ### Dynamic values- In the jig
@@ -106,7 +98,7 @@ To set the `TextLocal` property dynamically
 1. Invoke IntelliSense next to the property you want to translate.
 2. Select `TextLocale`
 3. Provide an `id:` and `values` properties. The values property requires context variables that will be used in the translation file.
-4. _Optional_: add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
+4. *Optional*: add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
 
 :::CodeblockTabs
 jig.jigx
@@ -136,7 +128,6 @@ children:
                 name: =@ctx.user.displayName
                 time: =$fromMillis($millis(),'[P]')
 ```
-
 :::
 
 ### Dynamic values - In the translation file
@@ -145,7 +136,7 @@ Once the unique id has been set for the `TextLocale`, and the `values` configure
 
 1. For multiple languages create a separate file per language required.
 2. Add the unique identifiers (`id`) values specified in the jig, with the corresponding translated text in the new file.
-3. Add the context variable for the values specified in the jig. This can be values you add to the `TextLocale: value` option and <a href="https://format-message.github.io/icu-message-format-for-translators/index.html" target="_blank">ICU Message</a> definitions.
+3. Add the context variable for the values specified in the jig. This can be values you add to the `TextLocale: value` option and :Link[ICU Message]{href="https://format-message.github.io/icu-message-format-for-translators/index.html" newTab="true" hasDisabledNofollow="false"} definitions.
 4. If you using multiple languages, simply use the same unique identifiers (`id`) values in each language file and for **static** values ensure the translated text corresponds.
 
 :::CodeblockTabs
@@ -164,7 +155,6 @@ de.jigx
 ```yaml
 greeting: "{time, select, am {Guten Morgen} pm {Guten Nachmittag} other {Hallo}} {name}"
 ```
-
 :::
 
 ## Considerations for dynamic values
@@ -238,7 +228,6 @@ translation-file
 ```yaml
 services_dropdown: "{translation_string, select, resettlement {Resettlement} exceptional_destruction {Exceptional destruction} consultation {Consultation} local_change {Local change} other {Unknown}}"
 ```
-
 :::
 
 - Be consistent when key names, for example, if you use underscore (\_) then ensure all spaces are replaced with underscores.
@@ -250,7 +239,6 @@ fallback
 ```yaml
 cash_payment_title: '{title, select, cash_payment {Amount was paid in cash} other {Payment placeholder}}’
 ```
-
 :::
 
 ### Using conditions
@@ -293,11 +281,12 @@ children:
           title: =@ctx.current.item.name
           description: =@ctx.current.item.payment_status = 'Pending' ? 'Pending payment':'Paid'
           subtitle:
-            # Add an id to be used in the translation file
+            # Add an id to be used in the translation file.
             id: payment_status
-            # The default message is a fallback to English if the language is not found
+            # The default message is a fallback to English if the language is
+            # not found.
             defaultMessage: =@ctx.current.item.payment_status = 'Pending' ? 'Pending payment':'Paid'
-            # Add values to be used in the condition in the translation file
+            # Add values to be used in the condition in the translation file.
             values:
               status: =@ctx.current.item.payment_status
 ```
@@ -309,7 +298,6 @@ de.jigx (translation-file)
 # that uses the value in the ICU message definition.
 payment_status: "{status, select, Pending {ausstehende Zahlung} other {bezahlt}}"
 ```
-
 :::
 
 ## Examples and code snippets
@@ -317,3 +305,4 @@ payment_status: "{status, select, Pending {ausstehende Zahlung} other {bezahlt}}
 The following examples with code snippets are provided:
 
 - [Localization (Translation)](https://docs.jigx.com/examples/localization-translation)
+

@@ -1,9 +1,4 @@
----
-title: File handling
-slug: uGaQ-file-handl
-createdAt: Thu Nov 16 2023 15:04:27 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Nov 01 2024 09:34:16 GMT+0000 (Coordinated Universal Time)
----
+# File handling
 
 Jigx stores files as local files on the device and returns the file's URI as the default value. When saving these files to a datasource, you must convert files from the local-uri to base64, data-uri, or buffer. The opposite is true when handling the files returned from the datasource; you must convert them from their saved state (base64, data-uri, or buffer) to a local-uri.
 
@@ -14,18 +9,96 @@ Type of files:
 
 Image files can be used in the following functionality:
 
-| **Data**                       | **Conversion configuration**                                   | **Result**                                                                     |
-| ------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| REST Provider calls with files | Add the conversion to the REST function                        | GET - incoming&#xA;SAVE - outgoing&#xA;CREATE - outgoing&#xA;UPDATE - outgoing |
-| SQL Provider calls with files  | Add the conversion to the REST function                        | GET - incoming&#xA;SAVE - outgoing&#xA;CREATE - outgoing&#xA;UPDATE - outgoing |
-| Datasource queries with files  | Add the conversion to the datasource when using Dynamic Data.  | Incoming                                                                       |
-| Actions with files             | Add the conversion to the action when saving images and files. | outgoing                                                                       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="0,285">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Data</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Conversion configuration</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Result</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>REST Provider calls with files</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add the conversion to the REST function</p>
+    </td>
+    <td selected="false" align="left">
+      <p>GET - incoming
+      SAVE - outgoing
+      CREATE - outgoing
+      UPDATE - outgoing</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>SQL Provider calls with files</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add the conversion to the REST function</p>
+    </td>
+    <td selected="false" align="left">
+      <p>GET - incoming
+      SAVE - outgoing
+      CREATE - outgoing
+      UPDATE - outgoing</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Datasource queries with files</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add the conversion to the datasource when using Dynamic Data.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Incoming</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Actions with files</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add the conversion to the action when saving images and files.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>outgoing</p>
+    </td>
+  </tr>
+</table>
 
 The `conversions` property allows you to configure the file conversion to the required format.
 
-| **Core structure** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `conversions:`     | This holds an array of properties that should be converted. The following properties control the conversion:&#xA;- `property:` The name of the property to convert.&#xA;- `from:` Format of the input data. It can be buffer, base64, data-uri, or local-uri.&#xA;- `to:` Format of the converted data. It can be base64, data-uri, buffer, or local-uri.&#xA;- `convertHeicToJpg:` When set to `true`, and the file being converted is HEIC, it is converted to JPG.&#xA;&#xA;Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression `conversions: =@ctx.datasources.conversions`, applicable to both local and global actions. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="139">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Core structure</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>conversions:</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>This holds an array of properties that should be converted. The following properties control the conversion:</p>
+      <ul>
+      <li><code>property:</code> The name of the property to convert.</li>
+      <li><code>from:</code> Format of the input data. It can be buffer, base64, data-uri, or local-uri.</li>
+      <li><code>to:</code> Format of the converted data. It can be base64, data-uri, buffer, or local-uri.</li>
+      <li><code>convertHeicToJpg:</code> When set to <code>true</code>, and the file being converted is HEIC, it is converted to JPG.</li>
+      </ul>
+      <p>Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression <code>conversions: =@ctx.datasources.conversions</code>, applicable to both local and global actions.</p>
+    </td>
+  </tr>
+</table>
 
 Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field](https://docs.jigx.com/examples/media-field) or [avatar-field](https://docs.jigx.com/examples/avatar). When referencing files in jigs use the `.state.value` configuration.
 For example:
@@ -50,7 +123,6 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 ## Convert incoming data
 
 ::::ExpandableHeading
-
 ### REST & SQL function
 
 In the examples below, the file conversions are configured in the** REST and SQL (GET) functions **to convert the incoming files.
@@ -61,16 +133,19 @@ rest-function-in
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
-format: pdf #pdf indicates a generic binary type
+# pdf indicates a generic binary type
+format: pdf 
 url: https://graph.microsoft.com/v1.0/me/photo/$value
-outputTransform: $.{"data":$.data,"userId":$.inputs.userId.value} #add the email input to the output to identify image later in select
+# Add the email input to the output to identify image later in select
 useLocalCall: true
+outputTransform: $.{"data":$.data,"userId":$.inputs.userId.value} 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: oauth.microsoft #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: oauth.microsoft 
   userId:
     type: string
     location: path
@@ -105,17 +180,15 @@ conversions:
     from: data-uri
     to: local-uri
 ```
-
 :::
 ::::
 
 ## Convert outgoing data
 
 ::::ExpandableHeading
-
 ### REST & SQL function
 
-In the examples below, the file conversions are configured in the **REST and** **SQL \*\***(SAVE/CREATE/UPDATE) \***\*functions** to convert the files that are outgoing to REST and SQL.
+In the examples below, the file conversions are configured in the **REST and** **SQL **(SAVE/CREATE/UPDATE) **functions** to convert the files that are outgoing to REST and SQL.
 
 :::CodeblockTabs
 rest-function-out
@@ -130,12 +203,14 @@ parameters:
     location: header
     required: true
     type: string
-    value: oauth.microsoft # Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: oauth.microsoft 
   Content-Type:
     location: header
     required: true
     type: string
-    value: image/jpeg # set the content type of the body
+    # set the content type of the body.
+    value: image/jpeg 
   file:
     location: body
     required: true
@@ -186,7 +261,6 @@ conversions:
     from: local-uri
     to: data-uri
 ```
-
 :::
 ::::
 
@@ -212,7 +286,6 @@ options:
       from: base64
       to: local-uri
 ```
-
 :::
 
 ## Action image conversion
@@ -233,9 +306,9 @@ execute-entity-action (static)
         id: =@ctx.jig.inputs.categoryId
         name: =@ctx.components.name.state.value
         description: =@ctx.components.description.state.value
-        # reference the image using an expression
+        # reference the image using an expression.
         image: =@ctx.components.image.state.value
- # Static conversion configuration
+      # Static conversion configuration.
       conversions:
         - property: image
           from: local-uri
@@ -255,9 +328,9 @@ execute-entity-action (dynamic)
         id: =@ctx.jig.inputs.categoryId
         name: =@ctx.components.name.state.value
         description: =@ctx.components.description.state.value
-        # reference the image using an expression
+        # reference the image using an expression.
         image: =@ctx.components.image.state.value
-# Dynamic conversion configuration
+      # Dynamic conversion configuration.
       conversions: =@ctx.datasources.conversions
 ```
 
@@ -278,7 +351,6 @@ options:
       from: base64
       to: local-uri
 ```
-
 :::
 
 ## Add multiple files with SQL data provider
@@ -396,7 +468,7 @@ actions:
   - children:
       # use execute entites for multiple files to be added
       - type: action.execute-entities
-        # Options in error are expected as there are no functionParameters
+        # Options in error are expected as there are no parameters.
         options:
           title: Add Widget Multiple
           provider: DATA_PROVIDER_SQL
@@ -411,7 +483,6 @@ actions:
           onSuccess:
             title: Success
 ```
-
 :::
 
 ## Convert HEIC to JPEG
@@ -428,12 +499,14 @@ parameters:
     location: header
     required: true
     type: string
-    value: oauth.microsoft # Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: oauth.microsoft 
   Content-Type:
     location: header
     required: true
     type: string
-    value: image/jpeg # set the content type of the body
+    # set the content type of the body.
+    value: image/jpeg 
   file:
     location: body
     required: true
@@ -448,3 +521,4 @@ conversions:
 ### See Also
 
 - [Example converting local-uri to buffer in SQL function](https://docs.jigx.com/examples/media-field#haYKX)
+

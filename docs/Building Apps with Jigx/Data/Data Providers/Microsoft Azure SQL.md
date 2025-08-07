@@ -1,13 +1,7 @@
----
-title: Microsoft Azure SQL
-slug: BvWt-microsoft-azure-sql
-description: Jigx integrated with Microsoft Azure SQL as a data provider
-createdAt: Wed Mar 15 2023 12:20:27 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue May 28 2024 07:29:50 GMT+0000 (Coordinated Universal Time)
----
+# Microsoft Azure SQL
 
 :::hint{type="warning"}
-Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](docId:jrbaNsm-OJn3nf4_dn_Hu) instead. See [REST endpoints from Azure SQL](docId:eOUi2cPYynsdRuK-TobDp) for more information.
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST]() instead. See [REST endpoints from Azure SQL]() for more information.
 :::
 
 ::embed[]{url="https://vimeo.com/833354418?share=copy"}
@@ -22,7 +16,7 @@ To use the SQL data provider in Jigx , follow these high-level steps:
    - Identify the SQL table you will use as your data source. Ensure you understand its structure and data.
 2. **Configure the SQL connection**
    - [Configure a new Azure SQL connection ](<./Microsoft Azure SQL/Configuring the SQL Connection.md>) for the solution in Jigx Management before adding the Jigx cloud IP addresses to the allowlist IP addresses in Azure SQL.
-3. **Define the SQL query or stored procedure in a **Jigx** function in **Jigx Builder\*\*
+3. \*\*Define the SQL query or stored procedure in a **Jigx** function in **Jigx Builder**
    - Navigate to the [functions](./REST.md) folder in Jigx Builder.
    - Use [IntelliSense](<./../../Jigx Builder _code editor_/Editor.md>) to configure the SQL data provider.
    - Enter the name of the connection set up in Jigx Management.
@@ -58,12 +52,36 @@ Once functions are published in a Jigx solution, you can preview the function in
 
 ## SQL function components
 
-|                                                                                   |                                                                                                                                                           |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Provider**                                                                      | `DATA_PROVIDER_SQL` for making calls to Microsoft Azure SQL.                                                                                              |
-| **Connection**                                                                    | Provide the name of the connection configured in [Jigx Management](<./Microsoft Azure SQL/Configuring the SQL Connection.md>) for the Azure SQL database. |
-| **Methods**                                                                       | Jigx supports the following methods in the provider:<br />\* EXECUTE - used to execute a stored procedure                                                 |
-| QUERY - used to write a SQL statement such as SELECT, INSERT, DELETE, and UPDATE. |
+<table isTableHeaderOn="false" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="269">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Provider</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>DATA_PROVIDER_SQL</code> for making calls to Microsoft Azure SQL.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Connection</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Provide the name of the connection configured in  for the Azure SQL database.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Methods</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Jigx supports the following methods in the provider:</p>
+      <ul>
+      <li>EXECUTE - used to execute a stored procedure</li>
+      <li>QUERY - used to write a SQL statement such as SELECT, INSERT, DELETE, and UPDATE.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 The following describes the options available when configuring a SQL function call.
 
@@ -73,8 +91,10 @@ sql- function-query
 ```yaml
 # Jigx SQL function executing a query to select all customers from a table.
 provider: DATA_PROVIDER_SQL
-connection: customer.azure # Use manage.jigx.com to configure a SQL connection
-method: query # Use SQL statements to interact with the data in SQL
+# Use manage.jigx.com to configure a SQL connection.
+connection: customer.azure
+# Use SQL statements to interact with the data in SQL. 
+method: query 
 query: |
   SELECT
     id,
@@ -95,13 +115,15 @@ query: |
 sql-function-execute
 
 ```yaml
-# Jigx SQL function executing a stored procedure to select all customers from a table.
+# Jigx SQL function executing a stored procedure to select all customers 
+# from a table.
 provider: DATA_PROVIDER_SQL
-connection: customer.azure #Use manage.jigx.com to configure a SQL connection
-method: execute #Provide the SQL stored procedure to execute
+# Use manage.jigx.com to configure a SQL connection.
+connection: customer.azure
+# Provide the SQL stored procedure to execute.
+method: execute 
 procedure: sp_GetAllCustomers
 ```
-
 :::
 
 ## Parameters
@@ -128,11 +150,11 @@ The required value is either `true` or `false`. This determines whether the para
 
 ### forRowsWithValues
 
-By default the return SQL call replaces previous data in the SQLite database. The `forRowsWithValues` property allows you to update specific values in the SQLite database instead of replacing all rows, providing a better user experience. The `forRowsWithValues` property specifies a key-value pair where the key is a json_extract() column in the SQLite table that will be matched by the value. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsWithValues`. Think of this as a WHERE clause that Jigx uses when it adds the result of the SQL call to the SQLite table.
+By default the return SQL call replaces previous data in the SQLite database. The `forRowsWithValues` property allows you to update specific values in the SQLite database instead of replacing all rows, providing a better user experience. The `forRowsWithValues` property specifies a key-value pair where the key is a json\_extract() column in the SQLite table that will be matched by the value. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsWithValues`. Think of this as a WHERE clause that Jigx uses when it adds the result of the SQL call to the SQLite table.
 
 ### forRowsInRange
 
-Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the SQL call to the table.
+Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json\_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the SQL call to the table.
 
 ### forRowsWithMatchingIds
 
@@ -173,12 +195,11 @@ Here is an example of a Jigx solution screen that calls the function in the `OnF
 list-customers.jigx
 
 ```yaml
-# A sample list jig that uses a SQL function to return and display a list of customers from Azure SQL
+# A sample list that uses a SQL function to return & display a list of customers from Azure SQL
 title: List Customers
 description: Show a list of all customers in a SQL database.
 type: jig.list
 icon: contact
-
 # Header section displaying an image at the top of the screen
 header:
   type: component.jig-header
@@ -190,7 +211,9 @@ header:
         source:
           uri: https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80
 
-# onFocus is triggered whenever the jig is displayed. The sync-entities action calls the Jigx SQL function and populates the local SQLite tables on the device with the data returned from Azure SQL
+# onFocus is triggered whenever the jig is displayed. The sync-entities action
+# calls the Jigx SQL function and populates the local SQLite tables on the
+# device with the data returned from Azure SQL.
 onFocus:
   type: action.sync-entities
   options:
@@ -225,10 +248,11 @@ datasources:
         FROM
           [customers]
 
-# The list and its list items are configured below. This is a list jig; therefore, its properties, such as data and item, are top-level properties
+# The list and its list items are configured below. This is a list jig; 
+# therefore, its properties, such as data and item, are top-level properties.
 # The data property binds the list to a specific data source.
 data: =@ctx.datasources.mydata
-# The item property specifies the list item type and its attributes
+# The item property specifies the list item type and its attributes.
 item:
   type: component.list-item
   options:
@@ -243,14 +267,15 @@ item:
       title: =@ctx.current.item.country
     leftElement:
       element: avatar
-      # The text property of the left element is specified using a JSONata expression that builds a two-letter string by concatenating the first letters of the customer's first and last names
+      # The text property is specified using a JSONata expression 
+      # that builds a two-letter string by concatenating the first letters 
+      # of the customer's first and last names.
       text: =$substring(@ctx.current.item.first_name,0,1) & $substring(@ctx.current.item.last_name,0,1)
     divider: solid
 ```
-
 :::
 
-We recommend navigating to the Management Console to test your function at this point. This allows you to ensure that the function is configured correctly, connected to SQL Server, and returns results. You can find out more about capabilities for viewing and testing SQL functions from the Management Console at this location. <a href="https://docs.jigx.com/sql-functions" target="_blank">Viewing and testing SQL data using the Jigx Management Console</a>
+We recommend navigating to the Management Console to test your function at this point. This allows you to ensure that the function is configured correctly, connected to SQL Server, and returns results. You can find out more about capabilities for viewing and testing SQL functions from the Management Console at this location. :Link[Viewing and testing SQL data]{href="https://docs.jigx.com/sql-functions" newTab="true" hasDisabledNofollow="false"} using the Jigx Management Console
 
 ## Examples and code snippets
 
@@ -266,3 +291,4 @@ The following examples with code snippets are provided:
 
 - [File handling](<./../File handling.md>)
 - [Offline remote data handling](<./../Offline remote data handling.md>)
+

@@ -1,10 +1,4 @@
----
-title: Add the calendar jig and datasource
-slug: VsMF-add-the-calendar-jig
-description: Learn how to add a second Jig file to your Hello Jigx project and enhance your Home Experience by placing a calendar Jig alongside the map Jig. Create a data source file for calendar details, add and configure a calendar Jig using YAML code, and integrate
-createdAt: Tue Apr 11 2023 11:59:21 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 17:59:35 GMT+0000 (Coordinated Universal Time)
----
+# Add the calendar jig and datasource
 
 # Overview
 
@@ -94,11 +88,11 @@ options:
 1. Open the Hello-Jigx solution in the Jigx Builder in VS Code,** right-click** on the jigs node in Explorer, and select **New file**.
 2. Name the file **calendar**.
 3. The file opens and shows the Jigx's auto-complete popup listing the five jig types. For this solution, we will be using the **Calendar** jig to create the UI for displaying data in a calendar format. Click on **Calendar** to open the skeleton YAML created by the Jigx Builder.
-4. On the line under `type:`, type `icon:`. To select an icon from the predefined list start typing the first two letters of the name of the icon, in this case *ca, *the list of icons starts to populate as you type. Select **calendar-3** from the list. This icon displays on the widget on the Home Hub of the Jigx App.
+4. On the line under `type:`, type `icon:`. To select an icon from the predefined list start typing the first two letters of the name of the icon, in this case \*ca, \*the list of icons starts to populate as you type. Select **calendar-3** from the list. This icon displays on the widget on the Home Hub of the Jigx App.
 5. Delete the `header`, `onFocus` and `datasources` section. You created the calendar-data.jigx datasource file in the step above, now you can reference the data from the jig file by using an expression.  At the data node add `calenar-data` so that it resembles `data: =@ctx.datasources.calendar-data`. With expressions, you can structure data before binding them to the UI components.
 
 :::hint{type="info"}
-Expressions are JSONata language-based. Learn more about <a href="https://jsonata.org/" target="_blank">JSONata</a> and try out your expressions in their <a href="https://try.jsonata.org/" target="_blank">JSONata Exerciser</a>. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
+Expressions are JSONata language-based. Learn more about :Link[JSONata]{href="https://jsonata.org/" newTab="true" hasDisabledNofollow="false"} and try out your expressions in their :Link[JSONata Exerciser]{href="https://try.jsonata.org/" newTab="true" hasDisabledNofollow="false"}. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
 :::
 
 6\. The `component.event` type is used to display events related to the data records. Use **(ctrl+space)** next to each field to select the value you want returned.
@@ -165,7 +159,7 @@ item:
 
 ### Add the calendar jigId in the index.jigx file&#x20;
 
-1. Click on the `index.jigx` file to add the calendar widget to appear on the Home Hub screen next to map widget. Under the `widgets:` section **add** the following:`size: 2x2` and the `jigId: calendar` and **save** the project.
+1. Click on the `index.jigx` file to add the calendar jig menu item to appear on the Home Hub screen next to map. Under the `tabs:` section **add** the following: `jigId: calendar`, `jigId: calendar`, `icon: calendar` and **save** the project.
 2. Your index.jigx file should resemble the code below.
 
 :::CodeblockTabs

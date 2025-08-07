@@ -1,15 +1,10 @@
----
-title: Passing data using inputs
-slug: Uwuu-passing-data
-createdAt: Thu Jan 11 2024 09:44:23 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Nov 05 2024 11:25:46 GMT+0000 (Coordinated Universal Time)
----
+# Passing data using inputs
 
 Often, you need to transfer or pass data between jigs to provide context and data, for example, when pressing on a customer in a list, the customer ID is passed to the order form, pre-populating the customer's details. This is accomplished by utilizing inputs and [outputs](<./Passing data using outputs.md>).
 
 ## Inputs
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" size="50" position="center" caption="Passing data using inputs" alt="Passing data using inputs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" size="50" position="center" caption="Passing data using inputs" alt="Passing data using inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" width="800" height="1026" darkWidth="800" darkHeight="1026"}
 
 The input data is configured in one of the following:
 
@@ -24,18 +19,66 @@ You can define the following for inputs:
 
 ## Configuration options
 
-| **Properties** | **Values**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `default`      | Add a value that will display as the default if nothing is specified. This property is optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `required`     | - `true` - a value for the input is required<br />- `false` - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `type`         | `string` - input must be of type string, for example, Mary.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|                | `object` - input must be an object with properties defined. <br />- The full object can be returned using `=@ctx.jig.inputs.object`<br />- Individual properties can be returned using `=@ctx.jig.inputs.object.property`                                                                                                                                                                                                                                                                                                                                                                  |
-|                | `array` - input must be an array.<br />- The full array can be returned using `=@ctx.jig.inputs.array`<br />- Single elements in an array can be returned using `=@ctx.jig.inputs.array.element`<br />- Individual items in an array can be returned using `=@ctx.jig.inputs.array[1].element`<br />The YAML format for specifying the array can be one of the following:<br />- `array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]`<br />- `array:    - [John, Melany, Mel, 1234, true]`<br />- `array:    - John    - Melany    - Mel    - 1234    - true` |
-|                | `boolean` - input must be `true` or `false`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|                | `number` - input must be of type number, for example, 45 or 350.88.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Properties</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Values</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>default</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Add a value that will display as the default if nothing is specified. This property is optional.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>required</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li> <code>true</code> - a value for the input is required</li>
+      <li><code>false</code> - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>type</code></p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li><code>string</code> - input must be of type string, for example, Mary.</li>
+      <li><code>object</code> - input must be an object with properties defined. 
+      <ul>
+      <li>The full object can be returned using <code>=@ctx.jig.inputs.object</code></li>
+      <li>Individual properties can be returned using <code>=@ctx.jig.inputs.object.property</code></li>
+      </ul>
+      </li>
+      <li><code>array</code> - input must be an array.
+      <ul>
+      <li>The full array can be returned using <code>=@ctx.jig.inputs.array</code></li>
+      <li>Single elements in an array can be returned using <code>=@ctx.jig.inputs.array.element</code></li>
+      <li>Individual items in an array can be returned using <code>=@ctx.jig.inputs.array[1].element</code>
+      The YAML format for specifying the array can be one of the following:
+      - <code>array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]</code>
+      - <code>array:    - [John, Melany, Mel, 1234, true]</code>
+      - <code>array:    - John    - Melany    - Mel    - 1234    - true</code></li>
+      </ul>
+      </li>
+      <li><code>boolean</code> - input must be <code>true</code> or <code>false</code>.</li>
+      <li><code>number</code> - input must be of type number, for example, 45 or 350.88.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 :::::ExpandableHeading
-
 ### YAML code for index.jigx to jig
 
 ::::VerticalSplit{layout="middle"}
@@ -53,21 +96,20 @@ Example:
 **Input:**
 In the receiving jig configure the input type and specify the data in the field or data property using an expression.
 
-Example of the _input type_:
+Example of the *input type*:
 `inputs:
   name: 
     default: Placeholder
     type: string
     required: true`
 
-Example of an _input expression_:
+Example of an *input expression*:
 `title: =@ctx.jig.inputs.name`
 :::
 ::::
 :::::
 
 :::::ExpandableHeading
-
 ### YAML code for jig to jig
 
 ::::VerticalSplit{layout="middle"}
@@ -76,8 +118,7 @@ Example of an _input expression_:
 In the jig containing the data you want to transfer, and configure the various parameters to be passed.
 Example:
 `parameters: `
-`  packageDate: =@ctx.current.item.date
-` `packageName: =@ctx.current.item.name`
+` packageDate: =@ctx.current.item.date` `packageName: =@ctx.current.item.name`
 :::
 
 :::VerticalSplitItem
@@ -113,7 +154,7 @@ Jig input definitions are configured directly in the jig and the input values ar
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s_inputsdefinition.PNG" size="88" position="center" caption="Input definitions" alt="Input definitions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s_inputsdefinition.PNG" size="88" position="center" caption="Input definitions" alt="Input definitions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s_inputsdefinition.PNG" width="800" height="1596" darkWidth="800" darkHeight="1596"}
 :::
 ::::
 
@@ -271,14 +312,13 @@ widgets:
         obj-age: 50
         obj-member: false
 ```
-
 :::
 
 ### Dynamically pass data from another jig's components
 
-Jig input definitions are configured directly in the jig and the input values returned from components configured in another jig. In the example below a form captures the student details, the _Student Details_ form links to the _Student Card_ jig and uses parameters to pass the values required in the _Student Card_ inputs.
+Jig input definitions are configured directly in the jig and the input values returned from components configured in another jig. In the example below a form captures the student details, the *Student Details* form links to the *Student Card* jig and uses parameters to pass the values required in the *Student Card* inputs.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" size="70" position="center" caption="Dynamic input" alt="Dynamic input"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" size="70" position="center" caption="Dynamic input" alt="Dynamic input" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26_CwRD8Y7MD_092ze_1K_inputscard.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
 
 :::CodeblockTabs
 input-student-card.jigx
@@ -473,28 +513,25 @@ actions:
             studentAllergies: =@ctx.components.studentAllergies.state.selected
             studentResident: =@ctx.components.resident.state.value
 ```
-
 :::
 
 :::::ExpandableHeading
-
 ### Passing data from one jig to another
 
-In this example, the **sending** jig list called* Island Holiday Packages* is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
+In this example, the **sending** jig list called\* Island Holiday Packages\* is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" size="58" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" size="58" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j_IavddFgHXJg_inputex1.png" width="800" height="805" darkWidth="800" darkHeight="805"}
 
 **Sending Jig**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd_inputsend.png" size="64" position="center" caption="Sending jig with parameters" alt="Sending jig with parameters"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd_inputsend.png" size="64" position="center" caption="Sending jig with parameters" alt="Sending jig with parameters" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd_inputsend.png" width="800" height="1616" darkWidth="800" darkHeight="1616"}
 :::
 
 :::VerticalSplitItem
 Create a `jig.list` with `list.items` for the name, description of the holiday package and add a `rightElement: button` for the date with an `onPress` action. Then add parameters:
 `packageName`, `packageDate`, and `packagePrice`. Add an expression for each similiar to `=@ctx.current.item.date`
-
 :::
 ::::
 
@@ -559,7 +596,6 @@ item:
             packagePrice: =@ctx.current.item.Price
             packageName: =@ctx.current.item.name
 ```
-
 :::
 
 **Receiving Jig**
@@ -567,11 +603,10 @@ item:
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 Create a `jig.default` for the receiving jig. In the `title:` property configure the input using =`@ctx.jig.inputs.packageName`, in the `component.countdown: expiresAt` property add the input expression `=@ctx.jig.inputs.packageDate` and in the `action-confirm: title` property add the input expression `=@ctx.jig.inputs.packagePrice & " - BUY"`.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq_inputrec.png" size="64" position="center" caption="Input- receiving jig" alt="Input- receiving jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq_inputrec.png" size="64" position="center" caption="Input- receiving jig" alt="Input- receiving jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq_inputrec.png" width="800" height="1583" darkWidth="800" darkHeight="1583"}
 :::
 ::::
 
@@ -613,39 +648,37 @@ actions:
           modal:
             title: Let the countdown begin!
 ```
-
 :::
 :::::
 
 :::::ExpandableHeading
-
 ### Passing data from a jig to a composite jig&#x20;
 
 In this example, three jigs contain various information for all customers, namely:
 
-1. _customer-list.jigx_ - A list of customers.
-2. _customer-contact.jigx_ - A list of the customer contact person.
-3. _customer-orders.jigx_ - A list of orders.
+1. *customer-list.jigx* - A list of customers.
+2. *customer-contact.jigx* - A list of the customer contact person.
+3. *customer-orders.jigx* - A list of orders.
 
-When you click on a customer in the list (1) shown on the left screen below, a new jig opens combining the details from contact (2) and orders (3) into one screen (composite jig), shown on the right screen below and filters the data to show the selected customer's details. The composite jig is called _customer-overview\.jigx_.
+When you click on a customer in the list (1) shown on the left screen below, a new jig opens combining the details from contact (2) and orders (3) into one screen (composite jig), shown on the right screen below and filters the data to show the selected customer's details. The composite jig is called *customer-overview\.jigx*.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" size="60" position="center" caption="Send and receiving jigs" alt="Send and receiving jigs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" size="60" position="center" caption="Send and receiving jigs" alt="Send and receiving jigs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF_inputcompex.png" width="800" height="795" darkWidth="800" darkHeight="795"}
 
 To achieve this configure the following:
 
-1. Create the composite jig and include the `JigIds` for the _customer-contact.jigx_ and _customer-orders.jigx_.
-2. Add the `customerId` and `customerName` input values transfered from the `parameters` in the _customer-list.jigx_ to the `jigId` properties for the _customer-contacts.jigx_; and add `customerId` to the `jigId` for the _customer-order.jigx_. The result is that only the selected customer's contact person and orders will display.
+1. Create the composite jig and include the `JigIds` for the *customer-contact.jigx* and *customer-orders.jigx*.
+2. Add the `customerId` and `customerName` input values transfered from the `parameters` in the *customer-list.jigx* to the `jigId` properties for the *customer-contacts.jigx*; and add `customerId` to the `jigId` for the *customer-order.jigx*. The result is that only the selected customer's contact person and orders will display.
 3. Add parameters to the customer list that include the `customerId` and `customerName`.
 
 **Sending Jig**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ_custlist.png" size="64" position="center" caption="Sending Jig with paramaters" alt="Sending Jig with paramaters"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ_custlist.png" size="64" position="center" caption="Sending Jig with paramaters" alt="Sending Jig with paramaters" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ_custlist.png" width="800" height="1560" darkWidth="800" darkHeight="1560"}
 :::
 
 :::VerticalSplitItem
-Create a list jig called _customer-list.jigx_, use the datasource to list customer names and ids. Add `parameters` for the `customerName` and `customerId`.
+Create a list jig called *customer-list.jigx*, use the datasource to list customer names and ids. Add `parameters` for the `customerName` and `customerId`.
 :::
 ::::
 
@@ -698,16 +731,15 @@ item:
             customerId: =@ctx.current.item.customerId
             customerName: =@ctx.current.item.name
 ```
-
 :::
 
 **Supporting Jigs **
 
-Create two basic list jigs one for _customer-contacts_ and the other for the _customer-orders_.
+Create two basic list jigs one for *customer-contacts* and the other for the *customer-orders*.
 
 1. For the `data` property in both jig s add the `customerId` as an input
    `data:  =@ctx.datasources.datasourcename[customerId = @ctx.jig.inputs.customerId]`. Define the input type as string under the `inputs` property.
-2. In the _customer-contacts.jigx_ also add the `customerName` as an input with the type string.
+2. In the *customer-contacts.jigx* also add the `customerName` as an input with the type string.
 
 :::CodeblockTabs
 customer-contacts.jigx
@@ -806,22 +838,19 @@ item:
       element: value
       text: =@ctx.current.item.amount
 ```
-
 :::
 
 **Receiving jig (composite)**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf_custcomp.png" size="64" position="center" caption="Receiving composite Jig" alt="Receiving composite Jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf_custcomp.png" size="64" position="center" caption="Receiving composite Jig" alt="Receiving composite Jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf_custcomp.png" width="800" height="1570" darkWidth="800" darkHeight="1570"}
 :::
 
 :::VerticalSplitItem
-The receiving jig is a composite jig with two children _(customer-contacts_ and _customer-orders_). In this example, we pass the `inputs` (_customerId_ and _customerName_) to the children. The children can then access all `parameters` and render only the selected customers contact and order details.
-
+The receiving jig is a composite jig with two children *(customer-contacts* and *customer-orders*). In this example, we pass the `inputs` (*customerId* and *customerName*) to the children. The children can then access all `parameters` and render only the selected customers contact and order details.
 :::
 ::::
-:::::
 
 :::CodeblockTabs
 customer-overview\.jigx
@@ -866,5 +895,6 @@ children:
     inputs:
       customerId: =@ctx.jig.inputs.customerId
 ```
-
 :::
+:::::
+

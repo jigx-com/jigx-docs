@@ -1,10 +1,4 @@
----
-title: State
-slug: 0JS3-state
-description: Learn about the concept of state in a solution and discover its applications in solution state, jig state, component state, keg state, and action state. Explore examples and techniques to access and modify state values in each context. Access additional e
-createdAt: Tue Jun 07 2022 12:14:05 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Apr 23 2025 07:46:39 GMT+0000 (Coordinated Universal Time)
----
+# State
 
 State manages the data within Jigx solutions, jigs, and components and controls the UI dynamically. The state allows solutions and components to change their output in response to user inputs and actions. Often, the state is used as a global variable that can be used throughout the solution or as a local state used only in that specific jig or component.
 
@@ -39,30 +33,170 @@ Avoid using state keywords, such as `component`, as `instanceId` values in expre
 
 ### Solution (Global) State
 
-| **Syntax**            | **Key**                    | **Area**                                                                                     |
-| --------------------- | -------------------------- | -------------------------------------------------------------------------------------------- |
-| =@ctx.solution.state. | activeItem&#xA;key&#xA;now | - Global variable used throughout a solution.<br />- Your variable that can be set and read. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="215">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Syntax</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Area</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.solution.state.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItem
+      key
+      now</p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li>Global variable used throughout a solution.</li>
+      <li>Your variable that can be set and read.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ### Component (local) State
 
-| **Syntax**                                                         | **Key**                                                                                                                                                        | **Area**                                                                                                                                                                                     |
-| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| =@ctx.jig.state.                                                   | activeItem&#xA;activeItemId&#xA;amounts&#xA;filter&#xA;isHorizontal&#xA;isRefreshing&#xA;isSelectable&#xA;isSelectActive&#xA;searchText&#xA;selected&#xA;value | - Applies to a list jig.<br />- The creator configures the state in the YAML.&#x20;                                                                                                          |
-| =@ctx.jigs._jigInstanceId_.components._componentInstanceId_.state. | data&#xA;isDirty&#xA;isValid&#xA;response                                                                                                                      | _ Read the state of a component in a specific jig using the instanceId of both the jig and component.<br />_ Referencing components on a composite jig.                                      |
-| =@ctx.component.state.                                             | amount&#xA;checked&#xA;selected&#xA;value                                                                                                                      | - State is the variable of or for each component.                                                                                                                                            |
-| =@ctx.components.*componentInstanceId.*state.                      | data&#xA;filter&#xA;isValid&#xA;isDirty&#xA;isPending&#xA;searchText&#xA;selected&#xA;response&#xA;value                                                       | _ State of components, using the component's instanceId.<br />_ Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field. |
-| =@ctx.current.state.                                               | amount&#xA;checked                                                                                                                                             | - Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The `=@ctx.current.state` is the state of the current object in the array.       |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="207,121">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Syntax</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Area</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.jig.state.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>activeItem
+      activeItemId
+      amounts
+      filter
+      isHorizontal
+      isRefreshing
+      isSelectable
+      isSelectActive
+      searchText
+      selected
+      value</p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li>Applies to a list jig.</li>
+      <li>The creator configures the state in the YAML. </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.jigs.<em>jigInstanceId</em>.components.<em>componentInstanceId</em>.state.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>data
+      isDirty
+      isValid
+      response</p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li>Read the state of a component in a specific jig using the instanceId of both the jig and component.</li>
+      <li>Referencing components on a composite jig.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.component.state.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked
+      selected
+      value</p>
+    </td>
+    <td selected="false" align="left">
+      <p>State is the variable of or for each component.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.components.componentInstanceId.state.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>data
+      filter
+      isValid
+      isDirty
+      isPending
+      searchText
+      selected
+      response
+      value</p>
+    </td>
+    <td selected="false" align="left">
+      <ul>
+      <li>State of components, using the component's instanceId.</li>
+      <li>Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.current.state.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount
+      checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</p>
+    </td>
+  </tr>
+</table>
 
 ### Jig (local) State
 
-| **Syntax**           | **Key** | **Area**                                                       |
-| -------------------- | ------- | -------------------------------------------------------------- |
-| =@ctx.jig.instanceId |         | Used to push the jig instance (state) to the navigation stack. |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="175">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Syntax</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Area</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>=@ctx.jig.instanceId</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>Used to push the jig instance (state) to the navigation stack.</p>
+    </td>
+  </tr>
+</table>
 
 ## How to use State
 
 ::::ExpandableHeading
-
 ## Solution state (global read and write state)
 
 You can define your solution state to store objects and values temporarily and then read them in multiple places in your solution. These are not stored in any local or remote data store but only in live memory. If you log out your solution state is cleared.
@@ -143,12 +277,10 @@ children:
             # Read the solution state using an expression.
             value: =@ctx.solution.state.status
 ```
-
 :::
 ::::
 
 ::::ExpandableHeading
-
 ## Jig state (read and write state)
 
 Defines the state \[key] for jig that can be read from within the current jig.
@@ -172,7 +304,7 @@ jig-initial-state.jigx
 title: Global Inc
 description: Welcome to Gobal Inc
 type: jig.default
-# Configuer the initial jig state key values.
+# Configure the initial jig state key values.
 state:
   predefinedtext:
     initialValue: "Committed to excellence and innovation"
@@ -220,12 +352,10 @@ title: Global Inc
 description: =@ctx.jig.state.predefinedtext
 type: jig.default
 ```
-
 :::
 ::::
 
 :::ExpandableHeading
-
 ## Component state (read state)
 
 Define your state \[key] for a single component or all components in a jig. Navigating away from the jig clears your component's state as the data is stored in the live memory.
@@ -245,7 +375,6 @@ Reads the value of \[key] from the available jigs with `jigId` and components wi
 :::
 
 ::::ExpandableHeading
-
 ## Action state (write state)
 
 You can use actions to set or reset a state either in a solution, jig, or component. These actions can be configured under the `actions` node or under an event node, such as `onPress`.
@@ -266,16 +395,145 @@ The following **reset-state** actions are available:
 
 The only difference between these states are the scope where they are used. See the table below.
 
-| **Action**                            | **Solution** | **Jig** | **Component** | **custom component (alpha)** |
-| ------------------------------------- | ------------ | ------- | ------------- | ---------------------------- |
-| `action.set-state`                    | ✅           |         | ✅            |                              |
-| `action.reset-state`                  | ✅           |         | ✅            |                              |
-| `action.set-solution-state`           | ✅           | ✅      |               | ✅                           |
-| `action.reset-solution-state`         | ✅           | ✅      |               | ✅                           |
-| `action.set-jig-state`                |              | ✅      |               | ✅                           |
-| `action.reset-jig-state`              |              | ✅      |               | ✅                           |
-| `action.set-custom-component-state`   |              |         |               | ✅                           |
-| `action.reset-custom-component-state` |              |         |               | ✅                           |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="327,83,51,107">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Action</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Solution</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Jig</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Component</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>custom component (alpha)</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.set-state</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.reset-state</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.set-solution-state</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.reset-solution-state</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.set-jig-state</code></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.reset-jig-state</code></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.set-custom-component-state</code></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>action.reset-custom-component-state</code></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>✅</p>
+    </td>
+  </tr>
+</table>
 
 ### Setting a state using an action (set-states)
 
@@ -323,7 +581,6 @@ set-state-action
           state: =@ctx.solution.state.global-key
           value: '12345'
 ```
-
 :::
 
 ### Reset a state using an action (reset-states)
@@ -364,7 +621,6 @@ reset-state-action
           title: Reset solution state
           state: =@ctx.solution.state.global-key
 ```
-
 :::
 
 ### Setting a state on an event using an action
@@ -387,7 +643,6 @@ onFocus:
     changes:
       status: =@ctx.datasources.company[0].mottos
 ```
-
 :::
 ::::
 
@@ -395,19 +650,121 @@ onFocus:
 
 The table below provides links to various examples of configuring state in the [jigx-samples](https://docs.jigx.com/examples/Setting-up-your-solution).
 
-| **Scenario**                                                          | **Key**              | **GitHub jigx-samples examples**                                                                                                                                                                                                 |
-| --------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Set an item to active with onPress                                    | ActiveItemId         | [List with active items](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/static-data/list-with-active-item-sd.jigx)                                            |
-| searchText (component level)                                          | searchText           | [Dropdown with search](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/dropdown/static-data/dropdown-searchable.jigx)                                                            |
-| filter and searchText (jig level)                                     | filter, searchText   | [List with filter and search](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jig-types/jig-list/advanced-lists/dynamic-data/list-filter-search-label-dd.jigx)                                   |
-| Saving data to a provider                                             | value                | [Update service form](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/field-row/dynamic-data/form-row-children-dd.jigx)                                                          |
-| Evaluating an amount                                                  | amount               | [Product item maximum tag](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/product-item/dynamic-data/product-item-example/product-item-example-dynamic.jigx)                     |
-| Evaluating if an item is selected                                     | checked              | [Highlight selected list of cleaning services](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-checkbox-dd.jigx) |
-| Evaluating selected items                                             | selected             | [Evaluate progress to show helper and error text](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx)                                        |
-| Reset a form                                                          | reset-state (action) | [Reset a form](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/reset-state/static-data/reset-state-action-form.jigx)                                                                     |
-| Set state on an active item in a list when the onPress event executes | set-state (action)   | [Color a chosen item when pressing on an item in a list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx)                   |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="305,134">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Scenario</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Key</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>GitHub jigx-samples examples</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Set an item to active with onPress</p>
+    </td>
+    <td selected="false" align="left">
+      <p>ActiveItemId</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>List with active items</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>searchText (component level)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>searchText</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Dropdown with search</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>filter and searchText (jig level)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>filter, searchText</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>List with filter and search</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Saving data to a provider</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>value</div><p></p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Update service form</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Evaluating an amount</p>
+    </td>
+    <td selected="false" align="left">
+      <p>amount</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Product item maximum tag</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Evaluating if an item is selected</p>
+    </td>
+    <td selected="false" align="left">
+      <p>checked</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Highlight selected list of cleaning services</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Evaluating selected items</p>
+    </td>
+    <td selected="false" align="left">
+      <p>selected</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Evaluate progress to show helper and error text</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Reset a form</p>
+    </td>
+    <td selected="false" align="left">
+      <p>reset-state (action)</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Reset a form</div><p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Set state on an active item in a list when the onPress event executes</p>
+    </td>
+    <td selected="false" align="left">
+      <p>set-state (action)</p>
+    </td>
+    <td selected="false" align="left">
+      <p></p><div>Color a chosen item when pressing on an item in a list</div><p></p>
+    </td>
+  </tr>
+</table>
 
 ## See Also
 
 - [set-state](https://docs.jigx.com/examples/set-state)
 - [reset-state](https://docs.jigx.com/examples/reset-state)
+

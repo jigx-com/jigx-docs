@@ -1,10 +1,4 @@
----
-title: Using the OAuth configuration in a Jigx solution
-slug: mTC8-using-the-oauth-configuration-in-a-jigx-solution
-description: Learn how to enhance your Jigx solution by incorporating a function that seamlessly retrieves user profile information from Microsoft Graph. This comprehensive document guides you through the process of creating a jig that utilizes this function and demon
-createdAt: Mon Nov 21 2022 23:46:04 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 18:49:55 GMT+0000 (Coordinated Universal Time)
----
+# Using the OAuth configuration in a Jigx solution
 
 1\. **Add a function** to your Jigx solution to get a user’s profile information from Microsoft Graph. See the code below.
 
@@ -18,7 +12,8 @@ parameters:
     location: header
     required: true
     type: string
-    value: microsoft.OAuth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: microsoft.OAuth 
 ```
 
 2\. **Add a jig** that uses this function.
@@ -98,7 +93,7 @@ tabs:
 ![OAuth loop](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4zqXGHuB4_tLDvsW2diXS_image.png "OAuth loop")
 
 :::hint{type="info"}
-
 - After a **successful OAuth loop**, the returned token **will be stored for future use** until it expires. If the provider supports a **refresh token**, Jigx will automatically use the refresh token to avoid prompting the user again for credentials. Once the refresh token becomes invalid or if no token was provided, Jigx will prompt the user with the OAuth loop to get a new token.
 - If **authentication fails**, the user can use the **Secondary Identities menu** in the **Settings** section of the **Jigx mobile App** to manage OAuth tokens. If the token is not visible in the list, something failed early during the OAuth loop. Use the **Jigx debug tools** in VS Code to trace the error using the Jigx Builder output window.
-  :::
+:::
+

@@ -1,41 +1,31 @@
----
-title: Notifications
-slug: 5KnT-notifications
-description: Jigx notifications show up on the user's device as push notifications and in-app notifications
-createdAt: Fri Jun 10 2022 14:48:46 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Apr 04 2025 11:48:31 GMT+0000 (Coordinated Universal Time)
----
+# Notifications
 
 Notifications are a powerful way to grab your user's attention. With Jigx, notifications appear on the user's device as push and in-app notifications.
 
-::::VerticalSplit{layout}
+::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7_notifications1iphone13blueportrait.png" size="80" position="center" caption="Push Notification" alt="Push Notification"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7_notifications1iphone13blueportrait.png" size="80" position="center" caption="Push Notification" alt="Push Notification" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7_notifications1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO_notifications2iphone13blueportrait.png" size="80" position="center" caption="In-App Notification" alt="In-App Notification"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO_notifications2iphone13blueportrait.png" size="80" position="center" caption="In-App Notification" alt="In-App Notification" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO_notifications2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
 There are three different ways to create notifications:
 
 :::ExpandableHeading
-
 ## Send notifications using Jigx Management
 
 Read the documentation about [Notifications](./../../Administration/Notifications.md) in the Admininstration section to learn more about managing notifications using Jigx Management.
-
-![Notifications in Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXXJldIE0qNNgg_msKimWc3N_plukx9ok2o3vgpjzsqconbildschirmfoto-2022-06-10-um-165428.png "Notifications in Jigx Management")
 :::
 
 ::::ExpandableHeading
-
 ## Send notifications programmatically
 
 You can send notifications from within your solution to other users. There are two elements to include in your solution in order to send notifications:
 
-- **Function**: To communicate with the Jigx (or any other) REST API, you have to define a function in the _Functions_ folder of your solution. The function has input parameters such as the notification `title`, the notification `text` and requires a Jigx `accessToken` or [personal access token (PAT)](<./../../Administration/My profile.md>) .
+- **Function**: To communicate with the Jigx (or any other) REST API, you have to define a function in the *Functions* folder of your solution. The function has input parameters such as the notification `title`, the notification `text` and requires a Jigx `accessToken` or [personal access token (PAT)](<./../../Administration/My profile.md>) .
 - When calling the function within Jigx use the Jigx `accessToken`, when calling the function from outside Jigx use the personal access token. Your personal access token is available in Jigx Management/ User/ Personal Access Tokens.
 - **Jig**: Your jigs will invoke the function for sending notifications either via submitting form values to the function or by using an [execute-entity](https://docs.jigx.com/examples/execute-entity) action for invoking the function.
 
@@ -43,9 +33,9 @@ You can send notifications from within your solution to other users. There are t
 
 You can use the Jigx REST API to send notifications to other users within your organization.
 
-Add a function definition (_send-notification.jigx_) to the _functions_ folder of your solution Replace the \{organizationId} in the `url` with your organization's Id.
+Add a function definition (*send-notification.jigx*) to the *functions* folder of your solution Replace the \{organizationId} in the `url` with your organization's Id.
 
-See the code sample in [GitHub]<("https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification.jigx").
+See the code sample in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/functions/Notifications/send-notification.jigx" newTab="true" hasDisabledNofollow="false"}.
 
 :::CodeblockTabs
 send-notification.jigx
@@ -114,7 +104,6 @@ parameters:
     value: jigx
     required: true
 ```
-
 :::
 
 ### Calling the Function from a Jig
@@ -129,19 +118,17 @@ For this, you need a REST function definition, a Jig that invokes the REST funct
 ::::
 
 :::ExpandableHeading
-
 ## Send notifications using Jigx notification endpoint
 
 See [External push notifications (API)](https://docs.jigx.com/examples/external-push-notifications-api) for more information and examples.
 :::
 
 :::ExpandableHeading
-
 ## Send notifications using a Webhook
 
 For external systems that should send Jigx notifications you can use Webhooks provided by the Jigx platform.
 
-Reach out to the _Jigx Support team_ to receive the technical details and security credentials for your organization to get started with Webhooks.
+Reach out to the *Jigx Support team* to receive the technical details and security credentials for your organization to get started with Webhooks.
 :::
 
 :::hint{type="info"}
@@ -157,6 +144,7 @@ The following examples with code snippets are provided:
 - [End notification with a target jig with input parameters](https://docs.jigx.com/examples/notifications#aSXwq)
 - [Send notification to users (USR)](https://docs.jigx.com/examples/send-notification-to-users-usr)
 - [Send notification to all solution users (SLN)](https://docs.jigx.com/examples/send-notification-to-all-solution-users-sln)
-- [Send notification to solution groups (SLN_GRP)](https://docs.jigx.com/examples/send-notification-to-solution-groups-slngrp)
+- [Send notification to solution groups (SLN\_GRP)](https://docs.jigx.com/examples/send-notification-to-solution-groups-slngrp)
 - [Send notification to the organization (ORG)](https://docs.jigx.com/examples/send-notification-to-the-organization-org)
 - [Target a specific jig with inputs](https://docs.jigx.com/examples/target-a-specific-jig-with-inputs)
+

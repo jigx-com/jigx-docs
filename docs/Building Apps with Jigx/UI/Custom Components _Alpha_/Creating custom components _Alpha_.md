@@ -1,10 +1,4 @@
----
-title: Creating custom components (Alpha)
-slug: uem3-creating
-description: Learn how to organize and structure custom components in your Jigx project with these comprehensive guidelines. Discover how to create and add components, utilize predefined styling elements, and reference custom components in Jig files. Find out how to e
-createdAt: Tue Jun 06 2023 13:19:48 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Feb 04 2025 14:23:15 GMT+0000 (Coordinated Universal Time)
----
+# Creating custom components (Alpha)
 
 :::hint{type="danger"}
 This feature is currently in its **Alpha** stage of development.
@@ -13,8 +7,7 @@ This feature is currently in its **Alpha** stage of development.
 - In this phase, the feature may contain bugs or behave unpredictably.
 - Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
 - We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.
-
-  :::
+:::
 
 ## File Location
 
@@ -33,11 +26,11 @@ Under `children:` you add the components you want to customize. Invoke **Intelli
 
 Between `options:` and `children:` you can add predefined styling elements depending on the component selected. The components that allow customization are [Card (Alpha)](https://docs.jigx.com/examples/card-alpha), [View (Alpha)](https://docs.jigx.com/examples/view-alpha), [Text (Alpha)](https://docs.jigx.com/examples/text-alpha), [Icon (Alpha)](https://docs.jigx.com/examples/icon-alpha), and [Button (Alpha)](https://docs.jigx.com/examples/button-alpha). Use **IntelliSense** to view the available list.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" size="70" position="center" caption="Card Styling options" alt="Card Styling options"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" size="70" position="center" caption="Card Styling options" alt="Card Styling options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir_ivxOTBKYr-20241119-125848.png" width="800" height="387" darkWidth="800" darkHeight="387"}
 
 For `component.view` the `options:` followed by `style:` are required before `children:`. All available styling elements are listed under the `style:` property using **IntelliSense**.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" size="70" position="center" caption="View styling options" alt="View styling options"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" size="70" position="center" caption="View styling options" alt="View styling options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo_Z-20241119-130031.png" width="800" height="547" darkWidth="800" darkHeight="547"}
 
 ## Using custom component files in jigs
 
@@ -57,12 +50,14 @@ children:
   - type: component.custom-component
     # Reference the name of the custom component file in the componentId property
     componentId: custom-card
-    # Give the component an instanceId allowing it to be used in different instances
+    # Give the component an instanceId allowing it to be used in different 
+    # instances.
     instanceId: cardId
   # Multiple custom components can be referenced in a single jig
   - type: component.custom-component
     componentId: custom-view
-    # Give the component an instanceId allowing it to be used in different instances
+    # Give the component an instanceId allowing it to be used in different 
+    # instances.
     instanceId: viewId
 ```
 
@@ -136,7 +131,6 @@ children:
             size: small
             emphasis: medium
 ```
-
 :::
 
 ## Examples and code snippets

@@ -2,15 +2,15 @@
 
 # Overview
 
-Widgets can be customized in many ways to reflect the styling and functionality you require.  Use the widget [image](#), [location](#), [chart](#), and other elements for customizations. In this section, you will learn how to change your map jig with an icon to a `widget.location`, and add a `widget.image` widget to the `composite.jigx` file.
+Widgets can be customized in many ways to reflect the styling and functionality you require.  Use the widget [image](), [location](), [chart](), and other elements for customizations. In this section, you will learn how to change your map jig with an icon to a `widget.location`, and add a `widget.image` widget to the `composite.jigx` file.
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" size="52" caption="Hello Jigx solution with location icon" alt="Hello Jigx solution with location icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" size="52" caption="Hello Jigx solution with location icon" alt="Hello Jigx solution with location icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SdU7Wdc0_3pP_9R5d8MEM_locationlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" size="52" caption="Widget location & image" alt="Widget location & " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" size="52" caption="Widget location & image" alt="Widget location & " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_vYaNBAdPCrT5JaOx7r9X_widgetscustoml.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -23,7 +23,7 @@ Widgets can be customized in many ways to reflect the styling and functionality 
 3. Add the `widget.location` code below. For the address you use [expressions](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to call the city New York from the static datasource.
 
 :::hint{type="info"}
-Expressions are JSONata language-based. Learn more about <a href="https://jsonata.org/" target="_blank">JSONata</a> and try out your expressions in their <a href="https://try.jsonata.org/" target="_blank">JSONata Exerciser</a>. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
+Expressions are JSONata language-based. Learn more about :Link[JSONata]{href="https://jsonata.org/" newTab="true" hasDisabledNofollow="false"} and try out your expressions in their :Link[JSONata Exerciser]{href="https://try.jsonata.org/" newTab="true" hasDisabledNofollow="false"}. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs. $$.data). Jigx supports shorthand $ expressions for JSONata.
 :::
 
 :::CodeblockTabs

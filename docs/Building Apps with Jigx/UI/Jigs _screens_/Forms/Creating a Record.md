@@ -1,16 +1,10 @@
----
-title: Creating a Record
-slug: 0Oeq-creating-a-record
-description: Learn how to create a Jig with a multi-column form using a Dynamic Data table in this comprehensive document. Step-by-step instructions guide you through creating the Jig, adding form components, submitting form data, and integrating a widget into the Hom
-createdAt: Mon Aug 01 2022 17:33:33 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 18:57:46 GMT+0000 (Coordinated Universal Time)
----
+# Creating a Record
 
 We will now create a Jig with a form that creates a record with multiple columns in our Dynamic Data table, which we defined in the previous [Forms](./../Forms.md) part.
 
 ## Creating a Jig
 
-First, we create an empty Jig and call it _form.jigx_. Delete the `datasources` section, as we don't need it now.
+First, we create an empty Jig and call it *form.jigx*. Delete the `datasources` section, as we don't need it now.
 
 :::CodeblockTabs
 form.jigx
@@ -23,15 +17,14 @@ type: jig.default
 children:
   -
 ```
-
 :::
 
 ## Adding a form to the Jig
 
-We need to add a _form_ component to our Jig, as it will be the container for the form input components.
+We need to add a *form* component to our Jig, as it will be the container for the form input components.
 
 1. Go ahead and use IntelliSense (**Ctrl+Space**) to add a [form](https://docs.jigx.com/examples/form) component to the `children` option of your Jig.
-2. Note the empty `instanceId` option. This is the unique identifier of your form. Set it to _simple-form_ as we need it later to submit the form.
+2. Note the empty `instanceId` option. This is the unique identifier of your form. Set it to *simple-form* as we need it later to submit the form.
 
 :::CodeblockTabs
 form.jigx
@@ -48,7 +41,6 @@ children:
       children:
         -
 ```
-
 :::
 
 ## Adding form input components to the form
@@ -57,8 +49,8 @@ You can now go ahead and add the first input field to your form. Use **Ctrl+Spac
 
 Two options are important for every form field:
 
-- `instanceId` - This is the unique identifier of each form input component and it will be used later to retrieve the field values using [State](./../../../Logic/State.md). Set it to _firstname_.
-- `label` - The label will be displayed on the actual component UI and is important for user interaction. Keep it simple and descriptive. Set it to _First name_.
+- `instanceId` - This is the unique identifier of each form input component and it will be used later to retrieve the field values using [State](./../../../Logic/State.md). Set it to *firstname*.
+- `label` - The label will be displayed on the actual component UI and is important for user interaction. Keep it simple and descriptive. Set it to *First name*.
 
 :::CodeblockTabs
 form.jigx
@@ -78,11 +70,10 @@ children:
           options:
             label: First name
 ```
-
 :::
 
 :::hint{type="warning"}
-Please note: It's best practice for mobile forms to be as short and simple as possible! No one wants to fill out dozens of fields on a mobile device. Because of this, all Jigx input components are marked as required (option `isRequired`) by default. If you want to make a field optional set `isRequired` to _false,_ but ask yourself if you then really need that field on your form.
+Please note: It's best practice for mobile forms to be as short and simple as possible! No one wants to fill out dozens of fields on a mobile device. Because of this, all Jigx input components are marked as required (option `isRequired`) by default. If you want to make a field optional set `isRequired` to *false,* but ask yourself if you then really need that field on your form.
 :::
 
 Next, add some more fields to your form. Note that for the email and phone fields we specified an additional option, called `keyboardType`. This will present the devices onscreen keyboard in the right mode. You can use **Ctrl+Space** to see all available types.
@@ -121,7 +112,6 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
 :::
 
 ## Submitting the form data
@@ -134,20 +124,19 @@ In general, there are two main ways of sending a form's data back to your data s
 - **Execute-Entity Action** - If you need more control about how and where to send your form data, select this action type. Keep in mind that it requires you to understand [State](./../../../Logic/State.md) to access the field values.
 
 ::::ExpandableHeading
-
 ### Submit form
 
 Now we will add a submit-form action to our Jig. The action will automatically display an action button at the bottom of the Jig and take care of sending the data to a Dynamic Data table.
 
 1. Go to the root indent level of the Jig and use **Ctrl+Space** to bring up IntelliSense. Pick actions
-2. Now, use **Ctrl+Space** again to add a _Submit Form (Create)_ action
+2. Now, use **Ctrl+Space** again to add a *Submit Form (Create)* action
 
-Now we need to set our _submit-form_ action to the form component:
+Now we need to set our *submit-form* action to the form component:
 
-1. `formId` - Remember that we set the identifier of our form component (`instanceId`) to _simple-form_ earlier. We will use this identifier to connect our action to the form. Set `formId` to _simple-form_, you can use\*\* \*\*Ctrl+Space for this as well.
+1. `formId` - Remember that we set the identifier of our form component (`instanceId`) to *simple-form* earlier. We will use this identifier to connect our action to the form. Set `formId` to *simple-form*, you can use** **Ctrl+Space for this as well.
 2. `provider` - As we want to store our form data in a Dynamic Data table, we can leave this value as is.
-3. `title` - The title will be displayed on the action button at the bottom of our Jig. Set it to _Submit form_.
-4. `entity` - This is the entity table that will be used to store the data. Use Ctrl + Space to select the _default/form_ table we defined at the beginning of the guide.
+3. `title` - The title will be displayed on the action button at the bottom of our Jig. Set it to *Submit form*.
+4. `entity` - This is the entity table that will be used to store the data. Use Ctrl + Space to select the *default/form* table we defined at the beginning of the guide.
 5. `method` - We want to create a new record, therefore we leave this value set to create.
 6. `go-back` - After the record is created, we want to navigate back to the previous screen. Note that there are more options available.
 
@@ -196,22 +185,20 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
 :::
 ::::
 
 ::::ExpandableHeading
-
 ### Execute-entity
 
-The execute-entity action allows for more control over how your data is stored. For instance, you could transform the _lastname_ value to uppercase, or combine firstname and lastname into one column before saving it. Also you could add multiple forms to one Jig and store data from both or access forms of [jig.composite](https://docs.jigx.com/examples/jigcomposite) children from the composite Jig action.
+The execute-entity action allows for more control over how your data is stored. For instance, you could transform the *lastname* value to uppercase, or combine firstname and lastname into one column before saving it. Also you could add multiple forms to one Jig and store data from both or access forms of [jig.composite](https://docs.jigx.com/examples/jigcomposite) children from the composite Jig action.
 
 As you can see in below example, the action exposes a `data` option that allows you to specify each column that will be used in the payload. Each column value can be bound to an expression and state of your components. In this example we are accessing state for each field (remember, **Ctrl+Space **is your best friend). It's very helpful to learn more about [State](./../../../Logic/State.md) in general when using this type of action.
 
 :::hint{type="info"}
 You could also use JSONata [expression](./../../../Logic/Expressions.md) to transform the state values before binding them to the columns. An example for this would be:
 
-_lastname: =$uppercase(@ctx.components.lastname.state.value)_
+*lastname: =$uppercase(@ctx.components.lastname.state.value)*
 :::
 
 :::CodeblockTabs
@@ -260,13 +247,12 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
 :::
 ::::
 
 ## Adding a widget to home hub
 
-Now let's head over to the _index.jigx_ fiel of our solution to add a widget for the Home Hub that takes the user to our form:
+Now let's head over to the *index.jigx* fiel of our solution to add a widget for the Home Hub that takes the user to our form:
 
 :::CodeblockTabs
 index.jigx
@@ -280,9 +266,8 @@ tabs:
     jigId: form
     icon: home-apps-logo
 ```
-
 :::
 
-Publish your solution now, so that you can try it out on your mobile device 🎉 Remember, that you always check out the contents of your Dynamic Data form table in the <a href="https://manage.jigx.com" target="_blank">Jigx Management</a>. Navigate to the Solutions area in the left sidebar, select your solution and check out the Data section in the sidebar.
+Publish your solution now, so that you can try it out on your mobile device 🎉 Remember, that you always check out the contents of your Dynamic Data form table in the :Link[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"}. Navigate to the Solutions area in the left sidebar, select your solution and check out the Data section in the sidebar.
 
-Next see how to [update a record](<./Updating a Record.md>). For more examples on formatting your form see <a href="https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/components/form/simple-form-submit.jigx" target="_blank">GitHub</a>.
+Next see how to [update a record](<./Updating a Record.md>). For more examples on formatting your form see :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/components/form/simple-form-submit.jigx" newTab="true" hasDisabledNofollow="false"}.
