@@ -405,7 +405,7 @@ The table below provides links to various examples of configuring state in the [
 | Evaluating if an item is selected                                     | checked              | [Highlight selected list of cleaning services](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/list-item/dynamic-data/list-with-right-elements/list-with-right-checkbox-dd.jigx) |
 | Evaluating selected items                                             | selected             | [Evaluate progress to show helper and error text](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-components/progress-bar/progress-bar-dynamic.jigx)                                        |
 | Reset a form                                                          | reset-state (action) | [Reset a form](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/actions/reset-state/static-data/reset-state-action-form.jigx)                                                                     |
-| Set state on an active item in a list when the onPress event executes | set-state (action)   | [Color a chosen item when pressing on an item in a list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx)                                      |
+| Set state on an active item in a list when the onPress event executes | set-state (action)   | [Color a chosen item when pressing on an item in a list](https://github.com/jigx-com/jigx-samples/blob/main/quickstart/jigx-samples/jigs/jigx-actions/action-list/action-list-onPress.jigx)                   |
 
 ## See Also
 
