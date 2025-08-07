@@ -39,7 +39,7 @@ For more examples using inputs, see the following:
 | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | [Cards in a list](https://docs.jigx.com/examples/card-alpha#C6fgj)                             | [Ratings](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sgMBJ)  | [Tags](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#ny3qM)    |
 | [Cards with charts](https://docs.jigx.com/examples/card-alpha#6_eE4)                           | [Sections](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sQJ4v) | [Toggles](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#BM6V-) |
-| [Countdown](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#iIk03) | [Stepper](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#PbExW)  |                                                                                              |
+| [Countdown](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#iIk03) | [Stepper](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#PbExW)  |            |
 
 :::CodeblockTabs
 custom-component.jigx
