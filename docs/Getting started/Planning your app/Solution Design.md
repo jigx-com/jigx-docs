@@ -1,25 +1,19 @@
----
-title: Solution Design
-slug: 8OQe-solution-design
-description: Learn how to effectively map out the requirements and design of your app with this comprehensive guide. Discover the power of visual representation through diagrams, storyboards, and wireframes, and gain insights into prioritizing navigation, usability, a
-createdAt: Wed Jul 12 2023 18:38:39 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Jul 14 2023 12:21:35 GMT+0000 (Coordinated Universal Time)
----
+# Solution Design
 
 Next, you are ready to map out the requirements of the app. Each requirement or must-have will be represented on a screen in the app. This is the first visual representation of all the screens and will help uncover usability issues. This is where you get to decide how many screens there will be, what each will look like, and put them in a logical order for navigational purposes.
 
 ### Steps
 
-1. Visualize the screens to match the requirements by creating a screen flow diagram, storyboard, or wireframes. There many methods you can use, the easiest is to start by drawing out each screen on a piece of paper. Then add the drawings in Miro, Figma, or the application of your choice.
-2. In the design show the navigation between screens and buttons.
-3. For guidance of mobile UI refer to Jigx [Templates](<./../../Building Apps with Jigx/UI/Jigs _screens_/Jig Templates.md>) or resources such as:
-   \- Apple Design - <a href="https://developer.apple.com/design/human-interface-guidelines" target="_blank">Human Interface Guidelines</a>
-   \- Google - <a href="https://m2.material.io/design/introduction" target="_blank">material design principles</a>
+1. Visualize the screens to match the requirements by creating a screen flow diagram, storyboard, or wireframes. There are many methods you can use, the easiest is to start by drawing out each screen on a piece of paper. Then add the drawings in Miro, Figma, or the application of your choice.
+2. In the design, show the navigation between screens and buttons.
+3. For guidance on mobile UI, refer to Jigx [Templates](<./../../Building Apps with Jigx/UI/Jigs _screens_/Jig Templates.md>) or resources such as:
+   \- Apple Design - :Link[Human Interface Guidelines]{href="https://developer.apple.com/design/human-interface-guidelines" newTab="true" hasDisabledNofollow="false"}
+   \- Google -:Link[material design principles]{href="https://m2.material.io/design/introduction" newTab="true" hasDisabledNofollow="false"}
 4. Design how people will get the app and onboard. If a profile is required, create a design for it.
-5. In your design, you can already decide which features to add, such as buttons, dropdowns, or text fields. This turns your ideas into pictures which will be converted into navigable screens during the build stage.
-6. Draw out functionality that should be available to certain user groups/personas. Think about if people need to see a different view of the screen i.e., Manager vs employee.
-7. Collaborate with a UX designer, and your team.
-   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KMx1fkaf_xx8S_j6UkU6S_pizzaappscreen.png" size="68" position="center"}
+5. In your design, you can already decide which features to add, such as buttons, dropdowns, or text fields. This turns your ideas into pictures, which will be converted into navigable screens during the build stage.
+6. Draw out functionality that should be available to certain user groups/personas. Think about if people need to see a different view of the screen, i.e., Manager vs employee.
+7. Collaborate with a UX designer and your team.
+   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KMx1fkaf_xx8S_j6UkU6S_pizzaappscreen.png" size="68" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KMx1fkaf_xx8S_j6UkU6S_pizzaappscreen.png" caption width="800" height="1065" darkWidth="800" darkHeight="1065"}
 
 ### Considerations
 

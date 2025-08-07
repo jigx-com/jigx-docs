@@ -72,7 +72,8 @@ name: jigx-samples
 title: Jigx Samples
 category: business
 
-# Configure one or more tabs, shown in the navigation bar at the bottom of the app.
+# Configure one or more tabs, shown in the navigation bar at the bottom of the 
+# app.
 tabs:
   # Give each tab a name. First tab.
   home:
@@ -91,8 +92,8 @@ tabs:
   Bookings:
     jigId: grid-booking
     icon: calendar
-    # Configure a badge showing a dot or a numbered dot on the top right of the icon.
-    # Use a expression or number to set the badge.
+    # Configure a badge showing a dot or a numbered dot on the top right of 
+    # the icon. Use a expression or number to set the badge.
     badge: =$count(@ctx.datasources.guests)
   # Fourth tab
   Reviews:

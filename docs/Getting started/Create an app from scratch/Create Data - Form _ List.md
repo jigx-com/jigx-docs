@@ -1,10 +1,4 @@
----
-title: Create Data - Form & List
-slug: Aoch-hello-jigx-customer-forms-and-list
-description: Learn how to build forms and store customer data in Jigx's Dynamic Data store with this comprehensive document. Discover two methods for saving form data to a database and gain step-by-step instructions for creating forms, lists, views, and more. Enhance
-createdAt: Wed Apr 12 2023 10:36:33 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 18:00:25 GMT+0000 (Coordinated Universal Time)
----
+# Create Data - Form & List
 
 ## Overview
 
@@ -20,24 +14,24 @@ There are **two methods** to save data collected on a form to a database.
 
 ::::Tabs
 :::Tab{title="Form & list widgets"}
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll_formlistlight.PNG" size="30" caption="Form and list widgets" alt="Form and list widgets"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll_formlistlight.PNG" size="30" caption="Form and list widgets" alt="Form and list widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll_formlistlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::Tab{title="New customer form"}
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg_aAqfhOQoUW_newcustomerlight.PNG" size="30" caption="New customer form" alt="New customer form"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg_aAqfhOQoUW_newcustomerlight.PNG" size="30" caption="New customer form" alt="New customer form" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg_aAqfhOQoUW_newcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::Tab{title="View customer"}
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62_viewcustomerlight.PNG" size="30" caption="View customer jig" alt="View customer jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62_viewcustomerlight.PNG" size="30" caption="View customer jig" alt="View customer jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62_viewcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::Tab{title="Edit customer"}
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b_editcustomerlight.PNG" size="30" caption="Edit customer jig" alt="Edit customer jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b_editcustomerlight.PNG" size="30" caption="Edit customer jig" alt="Edit customer jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b_editcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
 :::hint{type="success"}
-We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.
+We recommend you build out all the solution steps for the [Create an app from scratch](), as each solution step builds on the previous step until you have a functioning mobile app.
 :::
 
 ## Steps
@@ -53,4 +47,4 @@ We recommend you build out all the solution steps for the [Create an app from sc
 
 ## GitHub Samples
 
-You can download the <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" target="_blank">Hello Jigx solution :Comment[project]{resolved="true" docCommentId="E51tXIu6Duc-MWAqTpoSp"} </a>on GitHub or build it yourself by following the detailed steps in this section.
+You can download the :Link[Hello Jigx solution]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" newTab="true" hasDisabledNofollow="false"} project on GitHub or build it yourself by following the detailed steps in this section.

@@ -16,7 +16,7 @@ The Jigx Builder YAML editor includes **code completion by simultaneously pressi
 
 ### Edit the index.jigx file
 
-1. Click on the `index.jigx` file. This file is the menu structure of the app. In the `index.jigx` file you select the size of the widget that will appear on the Jigx mobile app [Home Hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen. The size of the widget displays as `1x1`. To see the available widget sizes, place the cursor in front of the `1x1` and press **ctrl+space**. Select the size `2x2`.
+1. Click on the `index.jigx` file. This file is the menu structure of the app. In the `index.jigx` file you configure the navigation menu that displays at the bottom of the Jigx mobile app [Home Hub](<./../../../Building Apps with Jigx/UI/Home Hub.md>) screen.&#x20;
 2. **Save** the project.
 3. Your index.jigx file should resemble the code below.
 
@@ -30,11 +30,12 @@ name: hello-jigx
 title: Hello-Jigx
 # The built-in category selected for this solution
 category: business
-#The widgets that act as top-level navigation elements for jigs
-widgets:
-# choose size of the widget on the home hub
-  - size: "2x2" 
+# The top-level navigation elements for jigs, displayed at the bottom of the app
+tabs:
+  home:
+    label: home
     jigId: myfirstjig
+    icon: home-apps-logo
 ```
 :::
 
@@ -47,13 +48,10 @@ widgets:
 5. The map jig needs a `datasource:` defined that provides the location details. You will use a [static datasource]() in this step. The static dataset is created directly inside the jig file of the Jigx solution, and there is no need to specify any database connections or set up any tables. The amount of records that can be created for the static data is unlimited and is used to bind data to the UI components.
 6. Replace `mydata:` with `address:` press **ctrl+space (Intellisense)** and select `Static Datasource`.
 7. Define the location details for the street, city and country under the
-   `data:`
-   tag. You can remove
-   `id:1`
-   . Add your own location or use the following as an example:
+   `data:`tag. You can remove `id:1`. Add your own location or use the following as an example: 768 5th Ave, New York, US.
 8. The controls displayed on the jig are defined under the `children:` node on a default jig. The output control is placed on the location component to display a map/location inside the jig. Under the `children:` node press **(ctrl+space)** and select **Location** from the list.
 9. For the output control to display the map with the location you will use the address from the datasource using an [expression](<./../../../Building Apps with Jigx/Logic/Expressions.md>) to return the street, city and country to the location component. Next to `options:` press **(ctrl+space)** and select **address** from the list.
-   To add the expression next to the `address:` line press **(ctrl+space)** and select **=@ctx** from the list. The root element of expressions in .jigx files always starts with "@ctx" vs. "$." in JSONata Exerciser (e.g. @ctx.data vs. $.data). Add the following to your expression:       `address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`
+   To add the expression next to the `address:` line press **(ctrl+space)** and select **=@ctx** from the list. The root element of expressions in .jigx files always starts with "@ctx" vs. "$." in JSONata Exerciser (e.g. @ctx.data vs. $.data). Add the following to your expression:  `address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country`
 10. To ensure that the location marker can be seen on the map add a `zoomLevel: 9` under the address line.
 11. **Save** the project.
 12. Your map.jigx file should resemble the code below.

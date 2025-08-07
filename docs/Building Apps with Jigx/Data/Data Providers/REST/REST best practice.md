@@ -1,16 +1,12 @@
----
-title: REST best practice
-slug: EYtZ-rest
-createdAt: Wed May 08 2024 09:21:49 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Nov 20 2024 07:16:58 GMT+0000 (Coordinated Universal Time)
----
+# REST best practice
 
 ## Working with REST IDs
 
 - When a REST service returns an id, the Jigx local data provider can automatically be synced with this id, eliminating the need to add a `sync-entities` action to the jig.
 - The id property must be added in the `outputTransform` of the REST data provider function.
-- This is useful on a POST (create) as a temp_id is created in the local data provider for the record when it is created. If the id is in the POST function `outputTransform`, the temp_id is automatically updated with the REST id once it is created on the REST side.
-- The below image shows how the local data provider creates a temp_id when a new customer is added. Then, it is automatically synced with the REST `id` because the `id` is in the function's `outputTransform`.
+- This is useful on a POST (create) as a temp\_id is created in the local data provider for the record when it is created. If the id is in the POST function `outputTransform`, the temp\_id is automatically updated with the REST id once it is created on the REST side.
+- The below image shows how the local data provider creates a temp\_id when a new customer is added. Then, it is automatically synced with the REST `id` because the `id` is in the function's `outputTransform`.
+
   ![Syncing temp_Id](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VuOMkHMSZXXZRlH7jloeo_rest-id.png "Syncing temp_Id")
 
 :::CodeblockTabs
@@ -70,7 +66,6 @@ outputTransform: |
     "status": status
   }
 ```
-
 :::
 
 ## Where and when to sync and load data&#x20;
@@ -86,17 +81,14 @@ Knowing when to load and sync data is important as it can impact the apps perfor
 Working with complex REST objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures from the REST data provider configure the following:
 
 1. `JsonProperties` in the SQLite query
-   jsonProperties:
-   &#x20; `- addresses`
+   `jsonProperties:   - addresses`
 2. In the expression used to retrieve the value, specify the exact property in the array or nested object that you require by referencing the `JsonProperty` followed by the property.
-   description:` =@ctx.current.item.addresses[0].city`
-   &#x20; leftElement:
-   &#x20; element:` avatar`
-   &#x20; text:` =@ctx.current.item.addresses[0].state`
+   `description: =@ctx.current.item.addresses[0].city
+     leftElement:
+     element: avatar
+     text: =@ctx.current.item.addresses[0].state`
 
 :::CodeblockTabs
-Complex JSON
-
 ```json
 "customers": [
         {
@@ -184,7 +176,6 @@ item:
         parameters:
           customer: =@ctx.current.item
 ```
-
 :::
 
 ## Data handling when a device is offline
@@ -203,3 +194,4 @@ For more information see [Update multiple records in a single REST call](https:/
 ## See Also
 
 - [REST examples](https://docs.jigx.com/examples/rest)
+

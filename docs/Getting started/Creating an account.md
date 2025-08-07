@@ -1,10 +1,10 @@
 # Creating an account
 
-To build and use Jigx solutions you require a Jigx account. You can create an account by registering on the<a href="https://www.jigx.com/" target="_blank"> Jigx website</a> or via an invitation from your organization. Follow the steps below to create an account.
+To build and use Jigx solutions you require a Jigx account. You can create an account by registering on the[https://www.jigx.com/](https://www.jigx.com/) Jigx website or via an invitation from your organization. Follow the steps below to create an account.
 
 ## Register
 
-Register at <a href="http://manage.jigx.com/register" target="_blank">manage.jigx.com/register</a> to create an account.
+Register at :Link[manage.jigx.com/register]{href="http://manage.jigx.com/register" newTab="true" hasDisabledNofollow="false"} to create an account.
 
 ### Sign up
 
@@ -41,8 +41,8 @@ Your organization's Jigx administrator sends an onboarding email invitation to y
 
 The Jigx app is available on your iOS and Android apps and works on any device.
 
-- Download the Jigx iOS app from  <a href="https://apps.apple.com/sg/app/jigx/id1495596537" target="_blank">App Store</a>
-- Download the Jigx Android app from  <a href="https://play.google.com/store/apps/details?id=com.jigx.android&pli=1" target="_blank">Google Play Store</a>
+- Download the Jigx iOS app from :Link[App Store]{href="https://apps.apple.com/sg/app/jigx/id1495596537" newTab="true" hasDisabledNofollow="false"}
+- Download the Jigx Android app from :Link[Google Play Store]{href="https://play.google.com/store/apps/details?id=com.jigx.android&pli=1" newTab="true" hasDisabledNofollow="false"}
 
 ### Getting started
 
@@ -51,11 +51,11 @@ Now tap the **Get Started** button and fill in your email address
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png" size="66" position="center" caption="Jigx welcome screen" alt="Jigx welcome screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png" size="66" position="center" caption="Jigx welcome screen" alt="Jigx welcome screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4_img8696iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png" size="66" position="center" caption="Sign in screen" alt="Sign in screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png" size="66" position="center" caption="Sign in screen" alt="Sign in screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV_otp-loginiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"}
 :::
 ::::
 
@@ -81,6 +81,6 @@ Enter the One-Time Password (OTP) received in the email into the 2-Step verifica
 
 Once your new password is set, the [Home Hub](<./../Building Apps with Jigx/UI/Home Hub.md>) screen displays.
 
-- When there are no solutions assigned to your account the home hub is empty. Assign solutions on the Jigx <a href="https://manage.jigx.com" target="_blank">Management website</a>
+- When there are no solutions assigned to your account the home hub is empty. Assign solutions on the :Link[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"} website
 - If you have solutions assigned to your Jigx account, you will see the assigned solution on the Home Hub.
 

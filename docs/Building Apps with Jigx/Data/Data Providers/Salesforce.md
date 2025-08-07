@@ -1,10 +1,4 @@
----
-title: Salesforce
-slug: yT-b-sales
-description: Learn how to integrate the {{Jigx}} Salesforce provider with your Salesforce instance for seamless data sharing. This document covers everything from managing customer information, sales processes, and marketing campaigns to utilizing CRUD methods and acc
-createdAt: Tue Jul 18 2023 06:51:21 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Nov 24 2023 11:51:09 GMT+0000 (Coordinated Universal Time)
----
+# Salesforce
 
 Jigx easily integrates with your Salesforce instance, allowing you to share data about customers, sales processes, marketing campaigns, and more. The Jigx Salesforce provider exposes the standard and custom Salesforce objects. You can manage your customer data, such as leads, contacts, accounts, and opportunities, using CRUD methods.
 
@@ -12,11 +6,11 @@ Jigx easily integrates with your Salesforce instance, allowing you to share data
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](./../../../Administration/Solutions/Widgets.md), or [steppers](https://docs.jigx.com/examples/stepper).
+The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](), or [steppers](https://docs.jigx.com/examples/stepper).
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" size="76" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" size="76" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O_salesfdashboard.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -28,7 +22,7 @@ The Salesforce provider uses the Jigx Cloud service, where the data passes throu
 
 1. You must have an active Salesforce account.
 2. Permissions set in Salesforce are adhered to in the Jigx App. This means you can see the same data in the app as in Salesforce. When viewing the data in the Jigx App you will be prompted to sign in with your Salesforce credentials.
-3. Building apps using the Salesforce provider requires a pre-existing knowledge of Salesforce objects, their records, fields, tables, and variables. Take note of the required fields for each table. An overview of Salesforce objects is available in the Salesforce platform; follow the path Settings > Setup Home > Object Manager > Schema Builder or refer to the <a href="https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm" target="_blank">Salesforce object reference</a> documentation. Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data.
+3. Building apps using the Salesforce provider requires a pre-existing knowledge of Salesforce objects, their records, fields, tables, and variables. Take note of the required fields for each table. An overview of Salesforce objects is available in the Salesforce platform; follow the path Settings > Setup Home > Object Manager > Schema Builder or refer to the :Link[Salesforce object reference documentation]{href="https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm" newTab="true" hasDisabledNofollow="false"}. Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data.
 
 ## Supported methods:
 
@@ -72,3 +66,4 @@ The following examples with code snippets are provided:
 - [Delete records in objects](https://docs.jigx.com/examples/delete-records-in-objects)
 - [Save & update records in objects](https://docs.jigx.com/examples/save-and-update-records-in-objects)
 - [List records in objects](https://docs.jigx.com/examples/list-records-in-objects)
+
