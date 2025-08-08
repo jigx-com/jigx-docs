@@ -21,6 +21,14 @@ Building logic in Jigx involves manipulating, managing, and configuring data wit
   </tr>
   <tr>
     <td selected="false" align="left">
+      <p><a href="./Logic/Navigation.md">Navigation</a> </p>
+    </td>
+    <td selected="false" align="left">
+      <p>Navigation allows you to flow through the app. Whenever you <a href="https://docs.jigx.com/examples/go-to">go-to</a> a jig, the jig is added to the history, this allows you to go back and visit the jigs you visited before, and either show the history (data) on the UI or a new (clear) jig.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
       <p><a href="./Logic/Validation.md">Validation</a></p>
     </td>
     <td selected="false" align="left">

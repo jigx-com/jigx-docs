@@ -1,14 +1,8 @@
----
-title: Forms
-slug: zMXR-forms
-description: Building forms that use data in your Jigx app
-createdAt: Tue Jun 07 2022 12:14:00 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed Feb 12 2025 18:56:21 GMT+0000 (Coordinated Universal Time)
----
+# Forms
 
-:::::VerticalSplit{layout}
+:::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{alt="Form" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_B209h4pNhxbCGth1pKtj_forms.PNG" size="60" caption="Form"  position="center" }
+::Image[]{alt="Form" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_B209h4pNhxbCGth1pKtj_forms.PNG" size="60" caption="Form" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/_B209h4pNhxbCGth1pKtj_forms.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 ::::VerticalSplitItem
@@ -37,7 +31,6 @@ tables:
 ```
 :::
 
-The next time when you will publish your solution to Jigx, it will create a table in Dynamic Data for your solution. You can always log in to the<a href="https://manage.jigx.com" target="_blank"> Jigx Management </a>and navigate to the *Data* area of your solution to check the tables and contents. We will use this table in this guide for storing the form data.
+The next time when you will publish your solution to Jigx, it will create a table in Dynamic Data for your solution. You can always log in to the :Link[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"} and navigate to the *Data* area of your solution to check the tables and contents. We will use this table in this guide for storing the form data.
 
 Now you can proceed to the next part, [Creating a Record](<./Forms/Creating a Record.md>) to get familiar with forms.
-

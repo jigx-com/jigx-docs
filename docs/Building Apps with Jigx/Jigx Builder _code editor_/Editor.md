@@ -6,16 +6,16 @@ To accelerate the build experience, Jigx Builder has a YAML editor that includes
 
 By default Jigx creates scaffolding when loading a new project in Jigx Builder. We recommend avoiding naming new files with the same name in the scaffolding. Words used by the Jigx system include actions, components, jig, databases, datasources, functions, and index.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="105,158">
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="119,158">
   <tr>
     <td selected="false" align="left">
-      <p>Folder</p>
+      <p><strong>Folder</strong></p>
     </td>
     <td selected="false" align="left">
-      <p>Default File</p>
+      <p><strong>Default File</strong></p>
     </td>
     <td selected="false" align="left">
-      <p>Description</p>
+      <p><strong>Description</strong></p>
     </td>
   </tr>
   <tr>
@@ -36,7 +36,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
     <td selected="false" align="left">
     </td>
     <td selected="false" align="left">
-      <p>Actions refer to specific controls or operations responding to an event or input. Create  under the actions folder to define actions once and reuse them multiple times in different jigs.</p>
+      <p>Actions refer to specific controls or operations responding to an event or input. Create under the actions folder to define actions once and reuse them multiple times in different jigs.</p>
     </td>
   </tr>
   <tr>
@@ -46,7 +46,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
     <td selected="false" align="left">
     </td>
     <td selected="false" align="left">
-      <p>The solution's images and icons defined under the  folder will preload and cache when the solution downloads or updates in the app. Allows images and icons to display when the app is offline and improves the app's performance.</p>
+      <p>The solution's images and icons defined under the folder will preload and cache when the solution downloads or updates in the app. Allows images and icons to display when the app is offline and improves the app's performance.</p>
     </td>
   </tr>
   <tr>
@@ -57,7 +57,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
       <p>default.jigx</p>
     </td>
     <td selected="false" align="left">
-      <p>You can use the <code>default.jigx</code> file to define the tables in the  Provider.</p>
+      <p>You can use the <code>default.jigx</code> file to define the tables in the Provider.</p>
     </td>
   </tr>
   <tr>
@@ -78,7 +78,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
       <p>myfirstfunction.jigx</p>
     </td>
     <td selected="false" align="left">
-      <p>You can build logic into your solution by adding functions to get or update data from a remote service, such as  or <a href="./../../Administration/Solutions/SQL%20Functions.md">SQL Functions</a>.</p>
+      <p>You can build logic into your solution by adding functions to get or update data from a remote service, such as or <a href="./../../Administration/Solutions/SQL%20Functions.md">SQL Functions</a>.</p>
     </td>
   </tr>
   <tr>
@@ -109,7 +109,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
       <p>index.jigx</p>
     </td>
     <td selected="false" align="left">
-      <p>The index.jigx file is the app's home screen. It uses bottom tabs to determine the layout. See  and <a href="./../UI/Home%20Hub/Index%20settings.md">Index settings</a> for more information.</p>
+      <p>The index.jigx file is the app's home screen. It uses bottom tabs to determine the layout. See and <a href="./../UI/Home%20Hub/Index%20settings.md">Index settings</a> for more information.</p>
     </td>
   </tr>
   <tr>
@@ -120,7 +120,7 @@ By default Jigx creates scaffolding when loading a new project in Jigx Builder. 
     <td selected="false" align="left">
     </td>
     <td selected="false" align="left">
-      <p>Create .js files to define your  that can be used in <a href="./../Logic/Expressions.md">expressions</a>.</p>
+      <p>Create .js files to define your that can be used in <a href="./../Logic/Expressions.md">expressions</a>.</p>
     </td>
   </tr>
 </table>
@@ -133,7 +133,7 @@ To invoke IntelliSense, simultaneously press the control and spacebar (ctrl+spac
 
 ## YAML indentation
 
-In Jigx Builder the YAML code snippets use indentation. The nested structure of the YAML is visible with spaces, not tabs, and is used for indentation. Each nested level is indented further than its parent, illustrating the hierarchical structure of the YAML file. Line numbers are visible on the left side, and your cursor blinks at one of the lines. You can use a VS Code plugin to highlight the indention levels in different colors. One such plugin is :Link[Indent-Rainbow]{href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" newTab="true" hasDisabledNofollow="false"}.
+In Jigx Builder the YAML code snippets use indentation. The nested structure of the YAML is visible with spaces, not tabs, and is used for indentation. Each nested level is indented further than its parent, illustrating the hierarchical structure of the YAML file. Line numbers are visible on the left side, and your cursor blinks at one of the lines. You can use a VS Code plugin to highlight the indention levels in different colors. One such plugin is :Link[Indent-Rainbow]{href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" newTab="true"}.
 
 ![Indentation levels in color](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QymqO8OqTZoINMMdQJ4MM_jb-colorindent.png "Indentation levels in color")
 

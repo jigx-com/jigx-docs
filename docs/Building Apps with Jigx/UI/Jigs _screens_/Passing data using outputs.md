@@ -1,15 +1,10 @@
----
-title: Passing data using outputs
-slug: d9eydYayROkEYOnHjq9GD
-createdAt: Thu Jan 11 2024 09:44:23 GMT+0000 (Coordinated Universal Time)
-updatedAt: Fri Sep 13 2024 06:57:37 GMT+0000 (Coordinated Universal Time)
----
+# Passing data using outputs
 
 Often, you need to transfer or pass data between jigs to provide context and data, for example, when pressing on a customer in a list, the customer ID is passed to the order form, prepopulating the customer's details. This is accomplished by utilizing [inputs](<./Passing data using inputs.md>) and outputs.
 
 ## Outputs
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" size="74" position="center" caption="Output and inputs " alt="Output and inputs "}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" size="74" position="center" caption="Output and inputs " alt="Output and inputs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb_jig-output.gif" width="356" height="308" darkWidth="356" darkHeight="308"}
 
 Outputs are configured in a jig and are then used as an input in a composite jig to pass data between the jigs in the composite jig. This configuration is suitable for creating master detail screens, clicking on a component in one jig, populates the components and data in the next screen. Passing data values between jigs works both ways.
 
@@ -46,12 +41,11 @@ In the receiving [jig.composite](https://docs.jigx.com/examples/jigcomposite) co
 ## Examples
 
 :::::ExpandableHeading
-
 ### Passing data via outputs to connect two jigs data in a composite jig
 
-In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the *List of available services *the _service details_ for that specific service populates.
+In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the List of available services, the service details for that specific service populates.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" position="center" caption="Passing data using outputs" alt="Passing data using outputs"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" position="center" caption="Passing data using outputs" alt="Passing data using outputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" width="648" height="1300" darkWidth="648" darkHeight="1300"}
 
 **Output Jig - available services**
 
@@ -62,7 +56,7 @@ Create a horizontal `jig.list` to show the available services with a `leftElemen
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx_outputjig.PNG" size="64" position="center" caption="Available services list" alt="Available services list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx_outputjig.PNG" size="64" position="center" caption="Available services list" alt="Available services list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx_outputjig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -151,14 +145,13 @@ options:
       '$.quantity'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-
 :::
 
 **Jig - service details**
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo_input-jig.PNG" size="64" position="center" caption="Service detail jig" alt="Service detail jig"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo_input-jig.PNG" size="64" position="center" caption="Service detail jig" alt="Service detail jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo_input-jig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 :::VerticalSplitItem
@@ -258,7 +251,6 @@ children:
                   value: ='$ ' & $number(@ctx.datasources.cleaningServices.onceoffrate)
                   isHidden: =(@ctx.datasources.cleaningServices.onceoffrate) = null ? true:false
 ```
-
 :::
 
 **Composite jig - combining output with input**
@@ -307,6 +299,6 @@ children:
     inputs:
       id: =@ctx.jigs.cleaning.outputs.output-key
 ```
-
 :::
 :::::
+

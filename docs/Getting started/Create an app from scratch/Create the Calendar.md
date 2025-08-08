@@ -26,4 +26,4 @@ We recommend you build out all the solution steps for the [Create an app from sc
 
 ## GitHub Sample
 
-You can download the :Link[Hello Jigx solution project ]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" newTab="true" hasDisabledNofollow="false"}on GitHub or build it yourself by following the detailed steps in this section.
+You can download the :Link[Hello Jigx solution project]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" newTab="true"}on GitHub or build it yourself by following the detailed steps in this section.
