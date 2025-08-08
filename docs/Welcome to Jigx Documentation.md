@@ -1,17 +1,12 @@
 # Welcome to Jigx Documentation
 
-:::hint{type="danger"}
-🚧  **Notice: Documentation is currently unstable**
-Due to ongoing issues with Archbee, some content may be incomplete or missing. Jigx is aware of the situation and will be transitioning to a new documentation platform soon. We appreciate your patience and understanding.
-:::
-
 Jigx simplifies mobile app development from start to finish in three steps. You can build native iOS and Android apps with familiar frameworks and tools like JavaScript, SQL, YAML, and Visual Studio Code.
 
 :::CtaButton{label="Getting started"}
 
 :::
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" size="94" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" caption}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" size="94" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nuSx_84sbGbtJlBxRWI5G_landingpage-s.gif" caption width="1280" height="720" darkWidth="1280" darkHeight="720"}
 
 ***
 
