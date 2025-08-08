@@ -1,10 +1,4 @@
----
-title: Connections
-slug: 5NIM-connections
-description: Learn how to easily manage connection settings for your Azure SQL database instances in this comprehensive guide. Discover step-by-step instructions on adding, updating, and removing connections on the Connections tab. You'll also gain insights into the i
-createdAt: Tue Jun 07 2022 09:54:22 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Feb 12 2024 17:24:40 GMT+0000 (Coordinated Universal Time)
----
+# Connections
 
 Manage connection settings for Azure SQL database instances on the Connections tab. Solutions reference the connection using the `key`.
 
@@ -33,5 +27,5 @@ Click on the **Remove** link in the last column of a record. Be aware, that the 
 
 ## Considerations
 
-- Creating a copy of a solution duplicates the structure of the credentials and connections, to allow for easy configuration by only having to respecify secrets.
+Creating a copy of a solution duplicates the structure of the credentials and connections, to allow for easy configuration by only having to respecify secrets.
 

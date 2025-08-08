@@ -1,9 +1,4 @@
----
-title: Using Dynamic Data
-slug: cStY-using
-createdAt: Tue Nov 21 2023 12:07:20 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu Aug 08 2024 09:35:26 GMT+0000 (Coordinated Universal Time)
----
+# Using Dynamic Data
 
 Once you have created the Dynamic Data [tables](<./Creating tables.md>) as well as, [columns and data records](<./Creating columns _ data records.md>) the data can be used in multiple places in a solution.&#x20;
 
@@ -23,13 +18,13 @@ The Dynamic Data provider is used in Jigx Builder in the SQLite datasource eithe
 sqlite-datasource-dd
 
 ```yaml
-# use the sqlite datasource with the dynamic data provider
+# Use the sqlite datasource with the dynamic data provider.
 type: "datasource.sqlite"
 options:
   provider: DATA_PROVIDER_DYNAMIC
   entities:
     - entity: default/employee
-  # write sqlite query syntax to return data needed in the jig/solution
+  # Write sqlite query syntax to return data needed in the jig/solution.
   query: |
     SELECT 
       id, 
@@ -48,7 +43,6 @@ options:
       '$.modify' 
     FROM [default/employees] WHERE '$.category' = "employee-detail"
 ```
-
 :::
 
 ### In components
@@ -63,7 +57,8 @@ children:
         - type: component.dropdown
           instanceId: dropdown-in
           options:
-            # use an expression to reference the dynamic data datasource to use in the form
+            # use an expression to reference the dynamic data datasource to use 
+            # in the form.
             data: =@ctx.datasources.employee
             label: Select employees
             isSearchable: true
@@ -71,7 +66,8 @@ children:
               type: component.dropdown-item
               instanceId: =@ctx.current.item.firstname
               options:
-                # use an expression to reference the exact data entry to use in the drop-down component on the form
+                # use an expression to reference the exact data entry to use 
+                # in the drop-down component on the form.
                 value: =@ctx.current.item.firstname
                 title: =@ctx.current.item.firstname
                 subtitle: =@ctx.current.item.lastname
@@ -110,3 +106,4 @@ The following examples with code snippets are provided:
 - [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
 - [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
 - [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)
+

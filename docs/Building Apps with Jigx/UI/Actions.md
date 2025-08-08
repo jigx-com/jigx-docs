@@ -9,24 +9,24 @@ Actions refer to specific controls or operations that respond to an event or inp
 
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
-- _Execution_ - actions to interact with data.
+- *Execution* - actions to interact with data.
   - [execute-entity](https://docs.jigx.com/examples/execute-entity)
   - [execute-entities](https://docs.jigx.com/examples/execute-entities)
   - [submit-form](https://docs.jigx.com/examples/submit-form)
   - [sync-entities](https://docs.jigx.com/examples/sync-entities) for getting data to the device.
-- _Navigational_ - actions used to navigate to another jig or Home Hub.
+- *Navigational* - actions used to navigate to another jig or Home Hub.
   - [go-to](https://docs.jigx.com/examples/go-to)
   - [go-back](https://docs.jigx.com/examples/go-back)
-- Actions to _open_ components.
+- Actions to *open* components.
   - [open-scanner](https://docs.jigx.com/examples/open-scanner)
   - [open-url](https://docs.jigx.com/examples/open-url)
   - [open-media-picker](https://docs.jigx.com/examples/open-media-picker)
   - [open-map](https://docs.jigx.com/examples/open-map)
   - [open-app-setting](https://docs.jigx.com/examples/open-app-settings)
-- _State_ - actions used to determine a specific status or value of a property or component.
+- *State* - actions used to determine a specific status or value of a property or component.
   - [set-state](https://docs.jigx.com/examples/set-state)
   - [reset-state](https://docs.jigx.com/examples/reset-state)
-- _Events_ - actions that execute after a user or device performs a trigger.
+- *Events* - actions that execute after a user or device performs a trigger.
   - onRefresh
   - onFocus
   - onPress
@@ -58,7 +58,6 @@ actions:
           parameters:
             custId: =@ctx.datasources.mydata.id
 ```
-
 :::
 
 ### In a list
@@ -156,7 +155,6 @@ actions:
           parameters:
             custId: =$uuid_v4()
 ```
-
 :::
 
 ### In the index file
@@ -170,7 +168,8 @@ index.jigx
 widgets:
   - size: 1x1
     jigId: home-hub
-# Configure the Onload to sync the salesforce data to the device when the app  is opened
+# Configure the Onload to sync the salesforce data to the device when the app 
+# is opened.
 onLoad:
   type: action.action-list
   options:
@@ -186,7 +185,6 @@ onLoad:
             - entity: UserRole
             - entity: Territory2
 ```
-
 :::
 
 ## Executing multiple actions
@@ -203,22 +201,22 @@ action-list
 onFocus:
   type: action.action-list
   options:
-    # actions set to execute one after the other starting at the first action in the list
+    # actions set to execute one after the other starting at the first action
+    # in the list.
     isSequential: true
     actions:
-      # first action to execute
+      # first action to execute.
       - type: action.set-state
         options:
           state: =@ctx.solution.state.focus-key
           value: focused
-      # second action execute after the first action completes
+      # second action execute after the first action completes.
       - type: action.sync-entities
         options:
           provider: DATA_PROVIDER_DYNAMIC
           entities:
             - default/employees
 ```
-
 :::
 
 ## Local actions
@@ -272,7 +270,6 @@ parameters:
     type: string
     required: true
 ```
-
 :::
 
 ### Call the global action in a jig or index.jigx
@@ -298,7 +295,6 @@ actions:
             name: =@ctx.components.name.state.value
             email: =@ctx.components.email.state.value
 ```
-
 :::
 
 ### Configure contextual values&#x20;
@@ -350,7 +346,6 @@ actions:
             name: =@ctx.components.name.state.value
             email: =@ctx.components.email.state.value
 ```
-
 :::
 
 ### Considerations
@@ -376,7 +371,8 @@ action:
       - type: action.go-to
         options:
           linkTo: detail-list
-      # reference another global action file by using execute action and cntrl+space to select available global action files
+      # reference another global action file by using execute action and 
+      # ctrl+space to select available global action files.
       - type: action.execute-action
         options:
           action: sync-data
@@ -406,7 +402,6 @@ parameters:
     type: string
     required: true
 ```
-
 :::
 
 ## Working with parent & child actions
@@ -420,3 +415,4 @@ parameters:
 ## See Also
 
 - [File handling](<./../Data/File handling.md>)
+

@@ -6,18 +6,124 @@ To accelerate the build experience, Jigx Builder has a YAML editor that includes
 
 By default Jigx creates scaffolding when loading a new project in Jigx Builder. We recommend avoiding naming new files with the same name in the scaffolding. Words used by the Jigx system include actions, components, jig, databases, datasources, functions, and index.
 
-| Folder              | Default File         | Description                                                                                                                                                                                                                                                                                |
-| ------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| .vscode             | settings.json        | Relates to your Jigx solution and contains internal parameter settings required by Jigx Builder runtime. This file's scope is local (workspace) and applies to the current solution. For more information, see [VS code settings](https://code.visualstudio.com/docs/getstarted/settings). |
-| actions             |                      | Actions refer to specific controls or operations responding to an event or input. Create [global actions](./../UI/Actions.md) under the actions folder to define actions once and reuse them multiple times in different jigs.                                                             |
-| assets              |                      | The solution's images and icons defined under the [Assets](./../UI/Assets.md) folder will preload and cache when the solution downloads or updates in the app. Allows images and icons to display when the app is offline and improves the app's performance.                              |
-| databases           | default.jigx         | You can use the `default.jigx` file to define the tables in the [Dynamic Data](<./../Data/Data Providers/Dynamic Data.md>) Provider.                                                                                                                                                       |
-| datasources         |                      | Create global data files with .jigx extension- these are available for use in your whole solution to any of the jigs.                                                                                                                                                                      |
-| functions           | myfirstfunction.jigx | You can build logic into your solution by adding functions to get or update data from a remote service, such as [REST Functions](<./../../Administration/Solutions/REST Functions.md>) or [SQL Functions](<./../../Administration/Solutions/SQL Functions.md>).                            |
-| jigs                | myfirstjig.jigx      | The jigs folder is where you create all the files used to configure the screens for the app on your mobile device. You can create sub-folders inside the jigs folder for categorization. All files in the jigs folder must have the `.jigx` extension, e.g., leave-form.jigx               |
-| translations        |                      | Create files for various languages using localization, then reference the file in your jig using the `Text Locale` property with `id: file name`. For more information, see [Localization](<./../Additional functionality/Localization.md>).                                               |
-|                     | index.jigx           | The index.jigx file is the app's home screen. It uses bottom tabs to determine the layout. See [Home Hub](<./../UI/Home Hub.md>) and [Index settings](<./../UI/Home Hub/Index settings.md>) for more information.                                                                          |
-| scripts/expressions |                      | Create .js files to define your [JavaScript functions](#) that can be used in [expressions](./../Logic/Expressions.md).                                                                                                                                                                    |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="105,158">
+  <tr>
+    <td selected="false" align="left">
+      <p>Folder</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Default File</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Description</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>.vscode</p>
+    </td>
+    <td selected="false" align="left">
+      <p>settings.json</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Relates to your Jigx solution and contains internal parameter settings required by Jigx Builder runtime. This file's scope is local (workspace) and applies to the current solution. For more information, see .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>actions</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>Actions refer to specific controls or operations responding to an event or input. Create  under the actions folder to define actions once and reuse them multiple times in different jigs.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>assets</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>The solution's images and icons defined under the  folder will preload and cache when the solution downloads or updates in the app. Allows images and icons to display when the app is offline and improves the app's performance.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>databases</p>
+    </td>
+    <td selected="false" align="left">
+      <p>default.jigx</p>
+    </td>
+    <td selected="false" align="left">
+      <p>You can use the <code>default.jigx</code> file to define the tables in the  Provider.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>datasources</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>Create global data files with .jigx extension- these are available for use in your whole solution to any of the jigs.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>functions</p>
+    </td>
+    <td selected="false" align="left">
+      <p>myfirstfunction.jigx</p>
+    </td>
+    <td selected="false" align="left">
+      <p>You can build logic into your solution by adding functions to get or update data from a remote service, such as  or <a href="./../../Administration/Solutions/SQL%20Functions.md">SQL Functions</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>jigs</p>
+    </td>
+    <td selected="false" align="left">
+      <p>myfirstjig.jigx</p>
+    </td>
+    <td selected="false" align="left">
+      <p>The jigs folder is where you create all the files used to configure the screens for the app on your mobile device. You can create sub-folders inside the jigs folder for categorization. All files in the jigs folder must have the <code>.jigx</code> extension, e.g., leave-form.jigx</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>translations</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>Create files for various languages using localization, then reference the file in your jig using the <code>Text Locale</code> property with <code>id: file name</code>. For more information, see .</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>index.jigx</p>
+    </td>
+    <td selected="false" align="left">
+      <p>The index.jigx file is the app's home screen. It uses bottom tabs to determine the layout. See  and <a href="./../UI/Home%20Hub/Index%20settings.md">Index settings</a> for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>scripts/</p>
+      <p>expressions</p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>Create .js files to define your  that can be used in <a href="./../Logic/Expressions.md">expressions</a>.</p>
+    </td>
+  </tr>
+</table>
 
 ## IntelliSense
 
@@ -27,7 +133,7 @@ To invoke IntelliSense, simultaneously press the control and spacebar (ctrl+spac
 
 ## YAML indentation
 
-In Jigx Builder the YAML code snippets use indentation. The nested structure of the YAML is visible with spaces, not tabs, and is used for indentation. Each nested level is indented further than its parent, illustrating the hierarchical structure of the YAML file. Line numbers are visible on the left side, and your cursor blinks at one of the lines. You can use a VS Code plugin to highlight the indention levels in different colors. One such plugin is [Indent-Rainbow] (https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow").
+In Jigx Builder the YAML code snippets use indentation. The nested structure of the YAML is visible with spaces, not tabs, and is used for indentation. Each nested level is indented further than its parent, illustrating the hierarchical structure of the YAML file. Line numbers are visible on the left side, and your cursor blinks at one of the lines. You can use a VS Code plugin to highlight the indention levels in different colors. One such plugin is :Link[Indent-Rainbow]{href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" newTab="true" hasDisabledNofollow="false"}.
 
 ![Indentation levels in color](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QymqO8OqTZoINMMdQJ4MM_jb-colorindent.png "Indentation levels in color")
 
@@ -86,13 +192,13 @@ The URL to open the file in the Jigx ouput panel will not work if the folder con
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
 The **quick-fix validation popup** in VS Code helps you identify and resolve issues in your code or configuration files quickly and efficiently. When a validation error or warning is detected (such as a missing property, invalid value, or syntax issue), a lightbulb icon appears next to the line.
-
 :::
 
 :::VerticalSplitItem
 ![Quick-fix](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-PPet3TPo8YYWZCffu1nmp-20250526-145008.png "Quick-fix")
 :::
 ::::
+
 **How to Use It:**
 
 1. **Hover or place your cursor** on the line showing the issue or on the highlighted error squiggle.

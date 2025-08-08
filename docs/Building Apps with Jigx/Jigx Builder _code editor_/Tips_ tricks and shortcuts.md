@@ -1,34 +1,156 @@
----
-title: Tips, tricks and shortcuts
-slug: P-U8-tips-and-tricks
-description: Learn essential shortcuts for Jigx Builder, including publishing files, invoking IntelliSense, using quick fix, and navigating to definitions. Discover the color indicators in Jigx Builder for issue-free files (white), files with validation issues (red), 
-createdAt: Tue Jun 20 2023 08:34:27 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Aug 05 2024 13:26:50 GMT+0000 (Coordinated Universal Time)
----
+# Tips, tricks and shortcuts
 
 Discover shortcuts and tricks that boost efficiency and maximize your output.
 
 ## Jigx Builder shortcuts
 
-| **Shortcuts**                                                                                                                                                                                                                                     | **Mac**                                      | **Windows**                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------- |
-| Publish all files in Jigx solution                                                                                                                                                                                                                | ⌘R⌘R                                         | Alt+R Alt+R                                     |
-| Publishing an individual file is useful if multiple developers work on the same solution. You only want to publish your changes. Note index.jigx, is a shared file that people all work on, so the last one updated on the server gets published. | ⌘R⌘F                                         | Alt+R Alt+F                                     |
-| Invoke IntelliSense                                                                                                                                                                                                                               | Ctrl+space                                   | Ctrl+space                                      |
-| Quick Fix                                                                                                                                                                                                                                         | ⌘+.                                          | Ctrl+.                                          |
-|  [Go to definition](./Editor.md)                                                                                                                                                                                                                  | F12 &#xA;or &#xA;⌘+click                     | F12&#xA;or&#xA;Ctrl+click                       |
-| [Go to reference](./Editor.md)                                                                                                                                                                                                                    | shift+F12&#xA;F12                            | shift+F12&#xA;F12                               |
-| The swagger parser function                                                                                                                                                                                                                       | ⌘ + shift + p<br />`Generate Jigx Functions` | Ctrl + shift + p<br />`Generate Jigx Functions` |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="358">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Shortcuts</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Mac</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Windows</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Publish all files in Jigx solution</p>
+    </td>
+    <td selected="false" align="left">
+      <p>⌘R⌘R</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Alt+R Alt+R</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Publishing an individual file is useful if multiple developers work on the same solution. You only want to publish your changes. Note index.jigx, is a shared file that people all work on, so the last one updated on the server gets published.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>⌘R⌘F</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Alt+R Alt+F</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Invoke IntelliSense</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Ctrl+space</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Ctrl+space</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Quick Fix</p>
+    </td>
+    <td selected="false" align="left">
+      <p>⌘+.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Ctrl+.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>F12
+      or
+      ⌘+click</p>
+    </td>
+    <td selected="false" align="left">
+      <p>F12
+      or
+      Ctrl+click</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+    </td>
+    <td selected="false" align="left">
+      <p>shift+F12
+      F12</p>
+    </td>
+    <td selected="false" align="left">
+      <p>shift+F12
+      F12</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>The swagger parser function</p>
+    </td>
+    <td selected="false" align="left">
+      <p>⌘ + shift + p
+      <code>Generate Jigx Functions</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Ctrl + shift + p
+      <code>Generate Jigx Functions</code></p>
+    </td>
+  </tr>
+</table>
 
 ## What colors indicate in Jigx Builder&#x20;
 
-| **Color** | **Description**                                                                                                                                                             |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| white     | The file is issue-free. If connected to a Git repository, the file is committed.                                                                                            |
-| red     | The file has validation issues/errors/deprecated properties that must be fixed. The number of issues is shown by a red number on the right of the file name in the sidebar. |
-| yellow    | This means the file is connected to a Git repository and is modified; the letter M displays on the right of the file name in the sidebar.                                   |
-| green    | Indicates a new file has been created but not committed to the Git repository yet.                                                                                          |
-| blue      | Indicates the active screen on the mobile device that you are debugging in the builder using Jigx Dev Tools.                                                                |
-
-
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="83">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Color</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Description</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>white</p>
+    </td>
+    <td selected="false" align="left">
+      <p>The file is issue-free. If connected to a Git repository, the file is committed.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>red</p>
+    </td>
+    <td selected="false" align="left">
+      <p>The file has validation issues/errors/deprecated properties that must be fixed. The number of issues is shown by a red number on the right of the file name in the sidebar.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>yellow</p>
+    </td>
+    <td selected="false" align="left">
+      <p>This means the file is connected to a Git repository and is modified; the letter M displays on the right of the file name in the sidebar. YAML is squiggled in yellow to show deprecated properties, hover over the YAML to see the expected property.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>green</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Indicates a new file has been created but not committed to the Git repository yet.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>blue</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Indicates the active screen on the mobile device that you are debugging in the builder using Jigx Dev Tools.</p>
+    </td>
+  </tr>
+</table>
 

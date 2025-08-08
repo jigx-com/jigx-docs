@@ -1,29 +1,20 @@
----
-title: Forms and Composite Jigs
-slug: 4kMp-forms-and-composite-jigs
-description: Jigx composite jig type used to join jigs together
-createdAt: Mon Aug 01 2022 17:59:40 GMT+0000 (Coordinated Universal Time)
-updatedAt: Wed May 17 2023 14:21:09 GMT+0000 (Coordinated Universal Time)
----
+# Forms and Composite Jigs
 
 In this section, we will have a look at how you can create and update forms using composite jigs. For more information see the [jig.composite](https://docs.jigx.com/examples/jigcomposite) topic.
 
 1. First we need to create a new jig with type composite.
+   :::CodeblockTabs
+   composite-form.jigx
 
-:::CodeblockTabs
-composite-form.jigx
+   ```yaml
+   title: Composite
+   type: jig.composite
 
-```yaml
-title: Composite
-type: jig.composite
-
-children:
-  - jigId: myjig1
-  - jigId: myjig2
-```
-
-:::
-
+   children:
+     - jigId: myjig1
+     - jigId: myjig2
+   ```
+   :::
 2. Now we create two new jigs with a form as we did on the top of this section where we created our first form. For the first, we put just tow text-fields one for the Firstname and the second for the Lastname. Let's call this jig name-form.jigx
 
 :::CodeblockTabs
@@ -50,7 +41,6 @@ children:
                 options:
                   label: Last name
 ```
-
 :::
 
 After that, we create a second jig where we can put some additional information like phone number and email.
@@ -81,31 +71,27 @@ children:
                   label: Phone number
                   keyboardType: name-phone-pad
 ```
-
 :::
 
-3. Now we have two jigs where we have two forms. Let's back to the composite jig that we create at the start on the top of this section. Change the myjig1 and 2 to the name-form and personal-info-form and add the instanceId: thanks to instanceId we can refer to the children in the specific jig.
+1. Now we have two jigs where we have two forms. Let's back to the composite jig that we create at the start on the top of this section. Change the myjig1 and 2 to the name-form and personal-info-form and add the instanceId: thanks to instanceId we can refer to the children in the specific jig.
+   :::CodeblockTabs
+   composite-form.jigx
 
-:::CodeblockTabs
-composite-form.jigx
+   ```yaml
+   title: Composite
+   type: jig.composite
 
-```yaml
-title: Composite
-type: jig.composite
-
-children:
-  - jigId: name-form
-    instanceId: names
-  - jigId: personal-info-form
-    instanceId: infos
-```
-
-:::
-
-4. For saving our data from we need to create action with action.execute-entity but now our section data will look a little different. The syntax for first-name will be as follows -
-   **_firstname: =@ctx.jigs.names.components.first-name.state.value_**
-   **_=@ctx.jigs.names_** - will refer to the specific jig
-   **_components.first-name.state.value_** - will refer to the specific component inside the jig that we refer before.
+   children:
+     - jigId: name-form
+       instanceId: names
+     - jigId: personal-info-form
+       instanceId: infos
+   ```
+   :::
+2. For saving our data from we need to create action with action.execute-entity but now our section data will look a little different. The syntax for first-name will be as follows -
+   ***firstname: =@ctx.jigs.names.components.first-name.state.value***
+   ***=@ctx.jigs.names*** - will refer to the specific jig
+   ***components.first-name.state.value*** - will refer to the specific component inside the jig that we refer before.
 
 :::CodeblockTabs
 composite-form.jigx
@@ -134,7 +120,6 @@ children:
   - jigId: personal-info-form
     instanceId: infos
 ```
-
 :::
 
-The full example of the composite form is available on <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/components/form/composite-form" target="_blank">GitHub</a>.
+The full example of the composite form is available on :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples/jigs/components/form/composite-form" newTab="true" hasDisabledNofollow="false"}.

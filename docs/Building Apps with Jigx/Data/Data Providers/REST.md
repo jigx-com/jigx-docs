@@ -219,7 +219,7 @@ The same logic can be applied to the output from a REST service. The output tran
 
 ## JSONata in Input and Output Transforms
 
-In addition to applying basic “structural” transforms, the JSONata scripting capability is available to apply further functions, and logic transforms within the input and output transforms. More detail on JSONata can be found here: <a href="https://www.jsonata.org" target="_blank">https\://www\.jsonata.org</a>[https://www.jsonata.org](https://www.jsonata.org) . Below is an example of a JSONata function applied within an output transform that returns videos from the Google YouTube API. Note the use of the $trim() and $substring() functions which provide further rich capability for JSON transforms.
+In addition to applying basic “structural” transforms, the JSONata scripting capability is available to apply further functions, and logic transforms within the input and output transforms. More detail on JSONata can be found here: [https://www.jsonata.org](https://www.jsonata.org). Below is an example of a JSONata function applied within an output transform that returns videos from the Google YouTube API. Note the use of the $trim() and $substring() functions which provide further rich capability for JSON transforms.
 
 ```yaml
 provider: DATA_PROVIDER_REST
@@ -258,7 +258,6 @@ parameters:
 Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr). When using the returned data in a list jig the $.eval() is used to return the individual ingredients.
 
 :::CodeblockTabs
-
 ```yaml
 outputTransform: >-
   {
@@ -294,17 +293,37 @@ outputTransform: >-
 #         {"name": $ingredient.name}
 #       })
 ```
-
 :::
 
 ## Examples and code snippets
 
 The following examples with code snippets are provided:
 
-| **Example**    |                                                                                                                                                                   |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Hello REST]() | In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images. |
-| [MS Graph]()   | The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.                 |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="111">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Example</strong></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p></p><div>Hello REST</div><p></p>
+    </td>
+    <td selected="false" align="left">
+      <p>In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p></p><div>MS Graph</div><p></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.</p>
+    </td>
+  </tr>
+</table>
 
 ## Building a REST based app video resources
 
@@ -312,21 +331,21 @@ The following examples with code snippets are provided:
 :::LinkArrayItem{headerImage headerColor}
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Nysik_Qk5eJiV0HDzY7xf_intro-to-rest.png)
 
-1\. <a href="https://vimeo.com/manage/videos/848412406" target="_blank">Introduction to REST API
-</a>6:59 min
+1\. [https://vimeo.com/manage/videos/848412406](https://vimeo.com/manage/videos/848412406)Introduction to REST API
+6:59 min
 :::
 
 :::LinkArrayItem{headerImage headerColor}
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qdF4Rf2crRLBgcFA62tlj_jsonata-with-rest.png)
 
-2\. <a href="https://vimeo.com/manage/videos/848059289" target="_blank">Exploring REST and JSONata
-</a>6:17 min
+2\. [https://vimeo.com/manage/videos/848059289](https://vimeo.com/manage/videos/848059289)Exploring REST and JSONata
+6:17 min
 :::
 
 :::LinkArrayItem{headerImage headerColor}
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mbDtpiY-9pmac8QxbpXx5_build-a-rest-app.png)
 
-3\. <a href="https://vimeo.com/manage/videos/848062137" target="_blank">Building a REST based App</a>
+3\. [https://vimeo.com/manage/videos/848062137](https://vimeo.com/manage/videos/848062137)Building a REST based App
 9:14 min
 :::
 ::::
@@ -335,3 +354,4 @@ The following examples with code snippets are provided:
 
 - [File handling](<./../File handling.md>)
 - [Offline remote data handling](<./../Offline remote data handling.md>)
+

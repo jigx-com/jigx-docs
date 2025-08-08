@@ -1,10 +1,4 @@
----
-title: REST Functions
-slug: Ozuk-rest-functions
-description: Learn how to use the REST data provider functions with this comprehensive guide. Discover how to input parameters, view results in the JSON editor, and even test the JSON output in the powerful JSONata Exerciser tool. Maximize the potential of your soluti
-createdAt: Thu Jun 09 2022 09:05:18 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue May 23 2023 10:14:53 GMT+0000 (Coordinated Universal Time)
----
+# REST Functions
 
 :::hint{type="info"}
 REST functions are only visible in the list if the Solution Creator defined functions that use the [REST data provider](https://docs.jigx.com/rest). Make sure that credentials such as API Keys are set up correctly in [Credentials](./Credentials.md) if they are being referenced in the function definition.
@@ -17,7 +11,8 @@ You can try out all functions of the solutions that use the REST data provider.
 3. Click on **Show schema** to view the function definition.
 
 :::hint{type="success"}
-You can click the **copy to the clipboard** icon at the top and paste the JSON result into JSONata <a href="https://try.jsonata.org/" target="_blank">Exerciser</a>. This allows you to run and test [Expressions](<./../../Building Apps with Jigx/Logic/Expressions.md>) against real REST response data.
+You can click the **copy to the clipboard** icon at the top and paste the JSON result into J:Link[SONata Exerciser]{href="https://try.jsonata.org/" newTab="true" hasDisabledNofollow="false"}. This allows you to run and test [Expressions](<./../../Building Apps with Jigx/Logic/Expressions.md>) against real REST response data.
 :::
 
 ![Preview a REST function](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/inwWRpNo1J-sKAeM4d6vk_jm-restfunctionl.png "Preview a REST function")
+

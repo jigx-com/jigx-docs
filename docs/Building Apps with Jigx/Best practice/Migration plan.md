@@ -1,9 +1,4 @@
----
-title: Migration plan
-slug: migration-plan
-createdAt: Tue Dec 03 2024 11:46:40 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Feb 24 2025 09:27:39 GMT+0000 (Coordinated Universal Time)
----
+# Migration plan
 
 [Release 2025.1](https://docs.jigx.com/release-notes#affhn) - introduces several updates to the index.jigx file, widgets, and location. Some properties have been deprecated, and a new grid jig type and a grid-item component have been added. These updates provide more versatility in app design, enhance layout options, and optimize screen space usage. To take advantage of these new features in your existing solutions, follow the guidance below to update your implementation.
 
@@ -14,11 +9,11 @@ The navigation menu at the bottom of the app will now display as a bar and inclu
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" position="center" caption="Existing solutions after update" alt="Existing solutions after update"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" position="center" caption="Existing solutions after update" alt="Existing solutions after update" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -30,11 +25,10 @@ New solutions now offer greater versatility.
 
 1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/jiggrid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
 2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.
-
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" position="center" caption="New solution layout " alt="New solution layout"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" position="center" caption="New solution layout " alt="New solution layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
 :::
 ::::
 
@@ -42,17 +36,91 @@ New solutions now offer greater versatility.
 
 The table below outlines the areas impacted by the introduction of bottom tab navigation, and the deprecation of the `stories`, `home`, and `widgets` properties in the index.jigx file.
 
-| **Old**                                                      | **New**                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `widgets` property in index.jigx file.                       | `tabs` property in index.jigx file. See [tabs](<./../UI/Home Hub.md>) for more information.                                                                                                                                                                                                                                            |
-| `widgets` property in jig files.                             | `widgets` in jig files now require a `widgetId` (Widget Name) property and remove the size, e.g. `1x1`.                                                                                                                                                                                                                                |
-| `stories` property in index.jigx&#xA;`story-group` component | Deprecated.                                                                                                                                                                                                                                                                                                                            |
-| `home` property in index.jigx file.                          | Reference the jig previously referenced in `home` as the custom Home Hub now in the `tabs` property. &#xA;The first jig configured under the `tabs` property becomes is the first screen displayed when the app is opened.                                                                                                             |
-| N/A                                                          | `jig-grid` - a new jig type used to configure jigs and components in a grid layout. See [jig.grid](https://docs.jigx.com/examples/jiggrid) for more information.                                                                                                                                                                       |
-| `component.widgets`                                          | `grid` and `grid-item` component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See [grid](https://docs.jigx.com/examples/grid) and [grid-item](https://docs.jigx.com/examples/grid-item) for more information.                                                 |
-| User profile                                                 | User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.                                                                                                                                                                                                          |
-| Solutions (Home)                                             | Solution switching has moved into the user profile screen. A _switch_ button opens the solution list for selection.<br />::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-NGrWw9SMNv_vpn6k1f6rE-20250130-102419.png" size="44" position="center" caption="Switch solutions" alt="Switch solutions"} |
-| `component.location`                                         | The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.                                                                                                                                                                                                |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="288">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Old</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>New</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>widgets</code> property in index.jigx file.</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>tabs</code> property in index.jigx file. See  for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>widgets</code> property in jig files.</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>widgets</code> in jig files now require a <code>widgetId</code> (Widget Name) property and remove the size, e.g. <code>1x1</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>stories</code> property in index.jigx
+      <code>story-group</code> component</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Deprecated.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>home</code> property in index.jigx file.</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Reference the jig previously referenced in <code>home</code> as the custom Home Hub now in the <code>tabs</code> property.
+      The first jig configured under the <code>tabs</code> property becomes is the first screen displayed when the app is opened.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>N/A</p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>jig-grid</code> - a new jig type used to configure jigs and components in a grid layout. See  for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>component.widgets</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p><code>grid</code> and <code>grid-item</code> component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See  and <a href="https://docs.jigx.com/examples/grid-item">grid-item</a> for more information.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>User profile</p>
+    </td>
+    <td selected="false" align="left">
+      <p>User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.</p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p>Solutions (Home)</p>
+    </td>
+    <td selected="false" align="left">
+      <p>Solution switching has moved into the user profile screen. A <em>switch</em> button opens the solution list for selection.
+      :</p><div></div>[]{src="" size="44" position="center" caption="Switch solutions" alt="Switch solutions"}<p></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>component.location</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.</p>
+    </td>
+  </tr>
+</table>
 
 ## Migration steps
 
@@ -129,7 +197,6 @@ tabs:
     jigId: student-details
     icon: people-man-1
 ```
-
 :::
 
 ### custom home-hub
@@ -180,7 +247,6 @@ onLoad:
     entities:
       - default/events
 ```
-
 :::
 
 ### widgets in jigs
@@ -240,7 +306,6 @@ children:
           # if you have specified one in the jig's widget property.
           widgetId: dev-avatar
 ```
-
 :::
 
 ### location
@@ -423,5 +488,5 @@ datasources:
           latitude: 40.803495
           longitude: -73.950694
 ```
-
 :::
+

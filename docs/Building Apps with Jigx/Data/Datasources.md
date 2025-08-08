@@ -1,9 +1,4 @@
----
-title: Datasources
-slug: DDG--data
-createdAt: Wed Nov 22 2023 07:06:11 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Mar 31 2025 09:44:42 GMT+0000 (Coordinated Universal Time)
----
+# Datasources
 
 Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](<./Data Providers.md>).
 
@@ -17,10 +12,41 @@ There are three types of datasources available in Jigx Builder.
 
 ## Configuration options
 
-| **Property**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | **Code Examples**                                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `isDocument`     | When the `isDocument` property is set to `true` on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the `initialValues` for a [form](https://docs.jigx.com/examples/form), set it on the form level and in the datasource `isDocument: true`, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource. | [new-contact.jigx](https://docs.jigx.com/examples/form#zUejA)                                  |
-| `jsonProperties` | Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use `jsonProperties` to specify the exact property in the array or nested object that you require. See [Working with complex REST structures](<./Data Providers/REST/REST best practice.md>).                                                                | [view-customer-details.jigx](https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR) |
+<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="158,371">
+  <tr>
+    <td selected="false" align="left">
+      <p><strong>Property</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Description</strong></p>
+    </td>
+    <td selected="false" align="left">
+      <p><strong>Code Examples</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>isDocument</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>When the <code>isDocument</code> property is set to <code>true</code> on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the <code>initialValues</code> for a <a href="https://docs.jigx.com/examples/form">form</a>, set it on the form level and in the datasource <code>isDocument: true</code>, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.</p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/form#zUejA">new-contact.jigx</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><code>jsonProperties</code></p>
+    </td>
+    <td selected="false" align="left">
+      <p>Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use <code>jsonProperties</code> to specify the exact property in the array or nested object that you require. See <a href="./Data%20Providers/REST/REST%20best%20practice.md">Working with complex REST structures</a>.</p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR">view-customer-details.jigx</a></p>
+    </td>
+  </tr>
+</table>
 
 ### isDocument example
 
@@ -186,13 +212,11 @@ actions:
             jobTitle: =@ctx.components.jobTitle.state.value
             companyName: =@ctx.components.companyName.state.value
 ```
-
 :::
 
 ### jsonProperties example
 
 :::CodeblockTabs
-
 ```yaml
 datasources:
   customers:
@@ -250,8 +274,6 @@ item:
           customer: =@ctx.current.item
 ```
 
-Complex JSON
-
 ```json
 "customers": [
         {
@@ -282,7 +304,6 @@ Complex JSON
             "logo": null
         },
 ```
-
 :::
 
 ## Where and how to use datasources
@@ -294,7 +315,7 @@ Datasources are defined once and are available throughout your solution to be re
 ![Global datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RKfB1NkVqQCckqcWoR-cR_ds-global.gif "Global datasource")
 
 1. Open your solution in Jigx Builder and navigate to the **datasources** folder of your solution.
-2. Create a new file called _\<your_datasource_name>.jigx._
+2. Create a new file called *\<your\_datasource\_name>.jigx.*
 3. Invoke IntelliSense (ctrl+space) for the list of available datasources.
 4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the solution.
 5. Next, open the jigs where you want to use the data, use expressions with the datasource option to reference the global datasource file, for example, `=@ctx.datasources.employee`.
@@ -308,7 +329,7 @@ The data sets are defined in the datasources inside the individual jig generally
 1. Open your solution in Jigx Builder and navigate to the jig.
 2. Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.
 3. Invoke IntelliSense (ctrl+space) next to the `mydata:` property for the list of available datasources.
-4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the jig. _Tip_: only return the specific data you need in the datasource.
+4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the jig. *Tip*: only return the specific data you need in the datasource.
 5. The data is now available to use in that jig by using expressions with the datasource option to reference the local datasource using the unique name you gave it, for example, `=@ctx.datasources.contact`.
 
 ### See Also
@@ -317,3 +338,4 @@ The data sets are defined in the datasources inside the individual jig generally
 - [sqlite](https://docs.jigx.com/examples/sqlite) datasource examples
 - [system](https://docs.jigx.com/examples/system)
 - [File handling](<./File handling.md>)
+

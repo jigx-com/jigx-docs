@@ -1,10 +1,4 @@
----
-title: Jigx icons
-slug: kCd_-icons
-description: Improve user navigation and interaction in your mobile app with Jigx's predefined set of icons. Easily incorporate icons into UI components, jigs, and widgets using YAML code. Preview icons by publishing or referring to a list, and for any missing icons,
-createdAt: Wed Sep 13 2023 11:52:15 GMT+0000 (Coordinated Universal Time)
-updatedAt: Tue Mar 05 2024 14:12:20 GMT+0000 (Coordinated Universal Time)
----
+# Jigx icons
 
 Incorporating icons into your mobile app design enhances user navigation and interaction, making the app more user-friendly and visually appealing. At Jigx we provide you with an extensive list of icons.
 
@@ -14,7 +8,7 @@ While creating your solution, you can configure certain UI components, jigs, and
 
 :::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG" size="80" position="center" caption="List icons in a list" alt="List icons in a list"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG" size="80" position="center" caption="List icons in a list" alt="List icons in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q_icons.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 
 ::::VerticalSplitItem
@@ -30,7 +24,6 @@ type: component.list-item
       element: icon
       icon: =(@ctx.current.item.materials) = true ? 'home' :'car-garage'
 ```
-
 :::
 ::::
 :::::
@@ -53,7 +46,6 @@ title: Home Security
 type: jig.default
 icon: alarm-bell
 ```
-
 :::
 ::::
 
@@ -74,19 +66,18 @@ summary:
         element: icon
         icon: currency-dollar-circle
 ```
-
 :::
 ::::
 :::::
 
 1. &#x20;Next to `icon:` start typing the first two letters of an icon name, for example al, this will open the list of icons starting with two letters.
-2. A preview of the icon is shown in the right popup with a link to the icon in <a href="https://www.streamlinehq.com/icons/streamline-bold" target="_blank">streamline</a>.
+2. A preview of the icon is shown in the right popup with a link to the icon in :Link[streamline]{href="https://www.streamlinehq.com/icons/streamline-bold" newTab="true" hasDisabledNofollow="false"}.
 3. Use the up and down arrows on your keyboard to browse through the list with the preview showing.
 4. Once you have decided on an icon click Enter.
 
 ### Where can you see a preview of the icon?
 
-The list of available icons is extensive and is based off the icons in [https://www.streamlinehq.com/icons/streamline-bold ](https://www.streamlinehq.com/icons/streamline-bold). You welcome to browse this link. In Jigx Builder a preview of each icon is available in the right popup with a link to the icon in <a href="https://www.streamlinehq.com/icons/streamline-bold" target="_blank">streamline</a>. All you need to do is start typing the first two letters of an icon you want.
+The list of available icons is extensive and is based off the icons in [https://www.streamlinehq.com/icons/streamline-bold ](https://www.streamlinehq.com/icons/streamline-bold). You welcome to browse this link. In Jigx Builder a preview of each icon is available in the right popup with a link to the icon in :Link[streamline]{href="https://www.streamlinehq.com/icons/streamline-bold" newTab="true" hasDisabledNofollow="false"}. All you need to do is start typing the first two letters of an icon you want.
 
 ![Preview of icons](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bqu2vrN1o5CGLZj0oHqwY_jb-icons.png "Preview of icons")
 
@@ -110,4 +101,4 @@ Adding an `icon` property in an action only applies to `swipeable`, `secondary`,
 
 ### Can I add custom icons?
 
-The list of icons is not customizable, and you cannot add custom icons. If you are unable to find the icon you need, contact **support\@jigx.com**.
+The list of icons is not customizable, and you cannot add custom icons. If you are unable to find the icon you need, contact [**support@jigx.com**](mailto\:support@jigx.com).

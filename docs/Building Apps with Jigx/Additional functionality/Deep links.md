@@ -1,14 +1,9 @@
----
-title: Deep links
-slug: KEp9-deep
-createdAt: Tue Jan 30 2024 12:47:12 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Aug 05 2024 15:48:26 GMT+0000 (Coordinated Universal Time)
----
+# Deep links
 
 Deep linking in mobile apps is a powerful tool that enhances user experience by creating seamless navigation between the app and external sources. Deep linking allows you to land directly on specific content or pages within an app, bypassing the need to navigate through a series of menus. This is particularly useful in marketing campaigns, social media links, or emails where you want to direct a person to a specific product, article, or feature within your app.
 
 :::hint{type="success"}
-Contact *support\@jigx.com* to get your branded app's deep link.
+Contact [*support@jigx.com*](mailto\:support@jigx.com) to get your branded app's deep link.
 :::
 
 ## Format
@@ -23,14 +18,14 @@ An example of a built-up deep link:
 
 The URI is built up with the following values:
 
-| **URI elements** | **Description**                                                                                                                                                 |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| app.jigx.com     | For all jigx apps, use the app domain app.jigx.com.                                                                                                             |
-| jigx             | name of the app.                                                                                                                                                |
-| solutionId       | The solutionId is found in [management >solution> solution details](https://docs.jigx.com/solution-details), for example, 8e535f78-4e36-4716-8c01-3465bea60bj9. |
-| jigname          | jigId/jig-name, for example, support-form.                                                                                                                      |
-| inputname        | The name used in the input expression, i.e. `=@ctx.jig.input.{inputname}`.                                                                                      |
-| inputvalue       | The value to be used as the input.                                                                                                                              |
+| **URI elements** | **Description**                                                                 |
+| ---------------- | ------------------------------------------------------------------------------- |
+| app.jigx.com     | For all jigx apps, use the app domain app.jigx.com.                             |
+| jigx             | name of the app.                                                                |
+| solutionId       | The solutionId is found in , for example, 8e535f78-4e36-4716-8c01-3465bea60bj9. |
+| jigname          | jigId/jig-name, for example, support-form.                                      |
+| inputname        | The name used in the input expression, i.e. `=@ctx.jig.input.{inputname}`.      |
+| inputvalue       | The value to be used as the input.                                              |
 
 ### Link to an app
 
@@ -57,7 +52,7 @@ A contextual deep link includes additional information, such as user data, input
 
 An example of the built-up deep link:
 
-<a href="https://app.jigx.com/jigx/app/solution/8e535f78-4e36-4716-8c01-34657bea60bj9/jig/support-form?email=john@global.com" target="_blank">https\://app.jigx.com/jigx/app/solution/8e535f78-4e36-4716-8c01-34657bea60bj9/jig/support-form?email=john\@global.com</a>
+[https://app.jigx.com/jigx/app/solution/8e535f78-4e36-4716-8c01-34657bea60bj9/jig/support-form?email=john@global.com](https://app.jigx.com/jigx/app/solution/8e535f78-4e36-4716-8c01-34657bea60bj9/jig/support-form?email=john@global.com)
 
 In the solution, the YAML code to accept the deep link input is:
 

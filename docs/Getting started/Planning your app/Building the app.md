@@ -1,14 +1,8 @@
----
-title: Building the app
-slug: VGfE-building-the-app
-description: Learn how to build an app using JigxBuilder with this comprehensive step-by-step guide. From data setup to testing, discover the process of creating a stunning app with visual enhancements. Explore helpful tips and considerations, including the use of tem
-createdAt: Wed Jul 12 2023 18:38:31 GMT+0000 (Coordinated Universal Time)
-updatedAt: Mon Jul 17 2023 14:55:35 GMT+0000 (Coordinated Universal Time)
----
+# Building the app
 
 Now you are ready to start using your well-designed plan to build the app in Jigx Builder.
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Bke0yOXOJqLaBLdf597x7_buildplan.png" size="70" position="center" caption="Build plan" alt="Build plan"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Bke0yOXOJqLaBLdf597x7_buildplan.png" size="70" position="center" caption="Build plan" alt="Build plan" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Bke0yOXOJqLaBLdf597x7_buildplan.png" width="800" height="1316" darkWidth="800" darkHeight="1316"}
 
 ### Steps
 
@@ -17,11 +11,12 @@ Now you are ready to start using your well-designed plan to build the app in Jig
 3. Now add visual improvements and nice-to-haves. e.g., on an email field, add the email icon to interact with sending an email.
 4. Publish your app to the Jigx Cloud. Open the app on the mobile device and test each screen, data, and usability. Use [Jigx Dev Tools](<./../../Building Apps with Jigx/Jigx Builder _code editor_/Debugging.md>) to debug the app, make changes and test again.
 5. When the building of the app is complete, move on to the test plan.
+
    ![App skeleton](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BhGW5VVdrGYL6lcJAX4dF_appskeleton.png "App skeleton")
 
 ### Considerations
 
-- If you not sure what component, action or widget to use in your app build - get inspired by using [Templates](<./../../Building Apps with Jigx/UI/Jigs _screens_/Jig Templates.md>), the Jigx-sample, and the Jigx-widget projects in <a href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart" target="_blank">GitHub</a>.
+- If you not sure what component, action or widget to use in your app build - get inspired by using [Templates](<./../../Building Apps with Jigx/UI/Jigs _screens_/Jig Templates.md>), the Jigx-sample, and the Jigx-widget projects in :Link[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart" newTab="true" hasDisabledNofollow="false"}.
 - When selecting the elements to add to the YAML, consider the usability, and shortest steps possible to get to where you want in the app.
 - Minimize navigation, aim for smart navigation, 30-40 second engagement on screens, especially forms.
 - Have the required input fields on the form with optional fields in another section.
@@ -31,3 +26,4 @@ Now you are ready to start using your well-designed plan to build the app in Jig
 
 - Create a prototype using [Templates](<./../../Building Apps with Jigx/UI/Jigs _screens_/Jig Templates.md>) to see if a component or jig will work in your build, from there, you can customize the template YAML snippet.
 - Practice continous testing by testing after building each screen.
+

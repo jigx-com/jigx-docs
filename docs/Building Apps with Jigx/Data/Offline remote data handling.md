@@ -34,9 +34,10 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record.
-          # Not adding the replace will not break the solution but will help to avoid chattiness and
-          # scenarios where backends have rate limits
+          # Use replace to ensure you only have one update on the queue related
+          # to a record. Not adding the replace will not break the solution but
+          # will help to avoid chattiness and scenarios where backends have 
+          # rate limits.
           queueOperation: replace
           function: rest-update-customer
           # Parameters to update in the remote server.
@@ -71,8 +72,9 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Using add will add a command for every update to the queue related to a record.
-          # Using add can be cumbersome and costly for scenarios where backends have rate limits
+          # Using add will add a command for every update to the queue related
+          # to a record. Using add can be cumbersome and costly for scenarios
+          # where backends have rate limits.
           queueOperation: add
           goBack: previous
           function: rest-update-customer
@@ -104,8 +106,8 @@ Examples of configuring the required `id` property when using `queueOperation: r
 execute-entity-data-id
 
 ```yaml
-# This action is configured with a replace queue operation and the id is specified,
-# in the data property. The id comes from an input.
+# This action is configured with a replace queue operation and the id is 
+# specified, in the data property. The id comes from an input.
 actions:
   - children:
       - type: action.execute-entity
@@ -218,8 +220,11 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: delete
-          # For delete use an expression to evaluate if there is a valid or tempId. If the record has a tempId it will remove all
-          # operations related to the record from the queue. If it is a valid Id the record will use the add and place it on the queue, which will delete the record from the remote data store using the function
+          # For delete use an expression to evaluate if there is a valid or
+          # tempId. If the record has a tempId it will remove all operations 
+          # related to the record from the queue. If it is a valid Id the record
+          # will use the add and place it on the queue, which will delete the 
+          # record from the remote data store using the function.
           queueOperation: =$isTempId(@ctx.current.item.id) ? replace:add
           function: rest-delete-customer
           parameters:
@@ -649,17 +654,22 @@ rest-create-customer.jigx (function)
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: POST # Create new record in the backend
-url: https://[your_rest_service]/api/customers #Use your REST service URL
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
+# Create new record in the backend
+method: POST 
+# Use your REST service URL
+url: https://[your_rest_service]/api/customers 
+# Direct the function call to use local execution between the mobile device
+# and the REST service.
+useLocalCall: true 
 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+  # Use manage.jigx.com to define credentials for your solution.
   firstName:
+    value: service.oauth 
     type: string
     location: body
     required: true
@@ -734,10 +744,11 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 
-# In this scenario, the backend system returns an ID that we can use to map back to the record
-# locally in the Output transform of the function (rest-create-customer). You don’t need to use
-# queueOperation in this scenario for Create. Once the device goes online, the record will be
-# created, and the ID from the backend will come back. Any records with the same tempId will be
+# In this scenario, the backend system returns an ID that we can use to map
+# back to the record locally in the Output transform of the function 
+# (rest-create-customer). You don’t need to use queueOperation in this scenario
+# for Create. Once the device goes online, the record will be created, and the
+# ID from the backend will come back. Any records with the same tempId will be
 # updated with the returning ID and will update the correct record.
 outputTransform: |
   {
@@ -751,8 +762,11 @@ rest-update-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PUT
-url: https://[your_rest_service]/api/customers #Use your REST service URL
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
+#Use your REST service URL
+url: https://[your_rest_service]/api/customers 
+# Direct the function call to use local execution between the mobile device and the 
+# REST service.
+useLocalCall: true 
 format: text
 
 parameters:
@@ -760,8 +774,9 @@ parameters:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
- #id is a required property when using the queueOperation: replace
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
+ # id is a required property when using the queueOperation: replace.
  id:
     type: int
     location: body
@@ -841,7 +856,6 @@ inputTransform: |
     "customerType": customerType,
     "jobTitle": jobTitle
   }
-
 ```
 :::
 
@@ -1063,16 +1077,20 @@ rest-update-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PUT
-url: https://[your_rest_service]/api/customers #Use your REST service URL
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
+# Use your REST service URL
+url: https://[your_rest_service]/api/customers 
+# Direct the function call to use local execution between the mobile device 
+# and the REST service.
 format: text
+useLocalCall: true 
 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials.
+    # Use manage.jigx.com to define credentials.
+    value: service.oauth 
   id:
     type: int
     location: body
@@ -1269,16 +1287,20 @@ rest-delete-customer.jigx (function)
 ```yaml
 provider: DATA_PROVIDER_REST
 method: DELETE
-url: https://[your_rest_service]/api/customers?id={custId} #Use your REST service URL
-useLocalCall: true #Direct the function call to use local execution between the mobile device and the REST service
+# Use your REST service URL
+url: https://[your_rest_service]/api/customers?id={custId} 
+# Direct the function call to use local execution between the mobile device
+# and the REST service.
 format: text
+useLocalCall: true 
 
 parameters:
   accessToken:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution.
+    value: service.oauth 
   custId:
     type: int
     location: query
@@ -1664,7 +1686,7 @@ actions:
           function: rest-create-customer
           # Replace current create on the queue
           queueOperation: replace
-          # Replace requires an id, if no id is specified in the functionParameter,
+          # Replace requires an id, if no id is specified in the parameter,
           # use the data property to specify the id.
           data:
             id: =@ctx.jig.inputs.customer.id
@@ -1745,8 +1767,10 @@ rest-create-customer.jigx (function)
 
 ```yaml
 provider: DATA_PROVIDER_REST
-method: POST # Create new record in the backend
-url: url: https://[your_rest_service]/api/customers #Use your REST service URL
+# Create new record in the backend
+method: POST 
+# Use your REST service URL
+url: url: https://[your_rest_service]/api/customers 
 useLocalCall: true
 
 parameters:
@@ -1754,7 +1778,8 @@ parameters:
     location: header
     required: true
     type: string
-    value: service.oauth #Use manage.jigx.com to define credentials for your solution
+    # Use manage.jigx.com to define credentials for your solution
+    value: service.oauth 
   firstName:
     type: string
     location: body
@@ -1829,7 +1854,6 @@ inputTransform: |
     "customerType": customerType,
     "jobTitle": jobTitle
   }
-
 # In this scenario, the backend system does not return an ID, you need to sync
 # the data before we get the correct backend ID for the record. With this in mind,
 # you'll need to be careful not to create and update the same record on the queue
@@ -2014,9 +2038,9 @@ actions:
           provider: DATA_PROVIDER_REST
           entity: customers
           method: update
-          # Use replace to ensure you only have one update on the queue related to a record.
-          # Not doing this will not break the solution but will help to avoid chattiness and
-          # scenarios where backends have rate limits
+          # Use replace to ensure you only have one update on the queue related 
+          # to a record. Not doing this will not break the solution but will 
+          # help to avoid chattiness and scenarios where backends have rate limits
           queueOperation: replace
           function: rest-update-customer
           parameters:
@@ -2051,7 +2075,8 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value   
-      # Use the clear-queue to discard any commands in the queue while the device is offline
+      # Use the clear-queue to discard any commands in the queue while the
+      #  device is offline.
       - type: action.clear-queue
         options:
           title: Cancel all updates

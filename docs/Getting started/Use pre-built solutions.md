@@ -1,10 +1,4 @@
----
-title: Use pre-built solutions
-slug: fQpt-use
-description: Learn how to increase time efficiency and improve app functionality in Jigx with pre-built solutions. This document offers step-by-step instructions on creating an account, installing the Jigx App, and adding pre-built solutions to your organization's app
-createdAt: Wed Sep 13 2023 06:59:40 GMT+0000 (Coordinated Universal Time)
-updatedAt: Thu Oct 19 2023 10:00:41 GMT+0000 (Coordinated Universal Time)
----
+# Use pre-built solutions
 
 Utilizing pre-built solutions in Jigx provides benefits in terms of time efficiency in development and selecting appropriate app functionalities. Opting for a pre-built solution seamlessly incorporates the solution into your Jigx App, making it readily available for utilization.
 
@@ -13,7 +7,7 @@ Utilizing pre-built solutions in Jigx provides benefits in terms of time efficie
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AWLlJ2PrB5_fr2XuuK0od_prebuilt-select.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AWLlJ2PrB5_fr2XuuK0od_prebuilt-select.png" size="84" width="2444" height="1630" position="center" caption="Pre-built Solutions" alt="Pre-built Solutions"}
 
 1. Create a [Creating an account](<./Creating an account.md>)
-2. Install Jigx App on a mobile device from the <a href="https://apps.apple.com/app/jigx/id1495596537" target="_blank">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.jigx.android" target="_blank">Google Play Store</a>
+2. Install Jigx App on a mobile device from the :Link[App Store]{href="https://apps.apple.com/app/jigx/id1495596537" newTab="true" hasDisabledNofollow="false"} or :Link[Google Play Store]{href="https://play.google.com/store/apps/details?id=com.jigx.android" newTab="true" hasDisabledNofollow="false"}
 3. Log onto [https://manage.jigx.com/](https://manage.jigx.com/)
 4. Browse to [https://manage.jigx.com/quickstart](https://manage.jigx.com/quickstart)
 5. Choose the sample app you want and click **Add to My Organization.**
@@ -49,6 +43,3 @@ With Jigx you can build and publish more than one solution to your Jigx mobile a
 ## What next?
 
 Why not build your own app? See how to [plan your app](<./Planning your app.md>) and learn how to [create an app from scratch](<./Create an app from scratch.md>).
-
-
-
