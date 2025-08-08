@@ -29,10 +29,40 @@ In this example, we create a tab component using the `view` and `text` custom co
 
 For more examples using inputs, see the following:
 
-| [Cards in a list](https://docs.jigx.com/examples/card-alpha#C6fgj)                             | [Ratings](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sgMBJ)  | [Tags](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#ny3qM)    |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Cards with charts](https://docs.jigx.com/examples/card-alpha#6_eE4)                           | [Sections](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sQJ4v) | [Toggles](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#BM6V-) |
-| [Countdown](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#iIk03) | [Stepper](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#PbExW)  |                                                                                              |
+<table isTableHeaderOn="false" selectedColumns="" selectedRows="" selectedTable="false">
+  <tr>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/card-alpha#C6fgj">Cards in a list</a></p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sgMBJ">Ratings</a></p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#ny3qM">Tags</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/card-alpha#6_eE4">Cards with charts</a></p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sQJ4v">Sections</a></p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#BM6V-">Toggles</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#iIk03">Countdown</a></p>
+    </td>
+    <td selected="false" align="left">
+      <p><a href="https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#PbExW">Stepper</a></p>
+    </td>
+    <td selected="false" align="left">
+    </td>
+  </tr>
+</table>
 
 :::CodeblockTabs
 custom-component.jigx

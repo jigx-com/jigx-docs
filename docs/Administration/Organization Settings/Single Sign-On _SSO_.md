@@ -4,7 +4,7 @@
 
 Single Sign-On is set on an organizational level in Jigx Management, allowing users in that organization to log into the Jigx App with their email address that authenticates against 3rd party identity providers (IDPs). This makes it easy for users to sign into the app with the same account (domains) used to access company systems.
 
-SSO is only applicable when signing in on the Jigx App. To log in to Jigx Management (<a href="https://manage.jigx.com" target="_blank">manage.jigx.com</a>) the organization `OWNER` and `ADMIN` must use their Jigx accounts.
+SSO is only applicable when signing in to the Jigx App. To log in to Jigx Management ([https://manage.jigx.com](https://manage.jigx.com)) the organization's `OWNER` and `ADMIN` must use their Jigx accounts.
 
 ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif)
 
@@ -56,7 +56,7 @@ Once signed in to the app and the user is authenticated against the 3rd party in
 :::
 
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" size="66" position="center" caption="SSO Authenticaton successful" alt="SSO Authenticaton successful"}
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" size="66" position="center" caption="SSO Authenticaton successful" alt="SSO Authenticaton successful" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB_qeq7VOSwejqc26QB_oauthverify.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"}
 :::
 ::::
 
@@ -64,8 +64,7 @@ Once signed in to the app and the user is authenticated against the 3rd party in
 
 ::::VerticalSplit{layout="middle"}
 :::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" size="66" position="center" caption="IDP sign out" alt="IDP sign out"}
-
+::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" size="66" position="center" caption="IDP sign out" alt="IDP sign out" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-_sso-logout.PNG" width="800" height="1596" darkWidth="800" darkHeight="1596"}
 :::
 
 :::VerticalSplitItem
