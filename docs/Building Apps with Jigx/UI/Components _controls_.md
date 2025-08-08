@@ -52,8 +52,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/expander">expander</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      list</p>
+      <p>default list</p>
     </td>
   </tr>
   <tr>
@@ -73,25 +72,17 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/jig-header">jig-header</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      calendar
-      list
-      document
-      composite</p>
+      <p>default calendar list document composite</p>
     </td>
   </tr>
   <tr>
     <td selected="false" align="left">
     </td>
     <td selected="false" align="left">
-      <p><a href="https://docs.jigx.com/examples/LQFt-list">list</a>
-      <a href="https://docs.jigx.com/examples/list-item">list-item</a>
-      <a href="https://docs.jigx.com/examples/product-item">product-item</a>
-      <a href="https://docs.jigx.com/examples/t53f-stage">stage</a></p>
+      <p><a href="https://docs.jigx.com/examples/LQFt-list">list</a> <a href="https://docs.jigx.com/examples/list-item">list-item</a> <a href="https://docs.jigx.com/examples/product-item">product-item</a> <a href="https://docs.jigx.com/examples/t53f-stage">stage</a></p>
     </td>
     <td selected="false" align="left">
-      <p>list
-      default</p>
+      <p>list default</p>
     </td>
   </tr>
   <tr>
@@ -101,8 +92,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/foRN-location">location</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      full-screen</p>
+      <p>default full-screen</p>
     </td>
   </tr>
   <tr>
@@ -150,11 +140,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p>Display</p>
     </td>
     <td selected="false" align="left">
-      <p><a href="https://docs.jigx.com/examples/divider">divider</a>
-      <a href="https://docs.jigx.com/examples/entity">entity</a>
-      <a href="https://docs.jigx.com/examples/field-row">field-row</a>
-      <a href="https://docs.jigx.com/examples/entity-field">entity-field</a>
-      <a href="https://docs.jigx.com/examples/section">section</a></p>
+      <p><a href="https://docs.jigx.com/examples/divider">divider</a> <a href="https://docs.jigx.com/examples/entity">entity</a> <a href="https://docs.jigx.com/examples/field-row">field-row</a> <a href="https://docs.jigx.com/examples/entity-field">entity-field</a> <a href="https://docs.jigx.com/examples/section">section</a></p>
     </td>
     <td selected="false" align="left">
       <p>default</p>
@@ -178,8 +164,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/bar-chart">bar-chart</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      list</p>
+      <p>default list</p>
     </td>
   </tr>
   <tr>
@@ -229,8 +214,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/pie-chart">pie-chart</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      list</p>
+      <p>default list</p>
     </td>
   </tr>
   <tr>
@@ -250,9 +234,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/summary">summary</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      list
-      document</p>
+      <p>default list document</p>
     </td>
   </tr>
   <tr>
@@ -260,18 +242,17 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p>Input controls</p>
     </td>
     <td selected="false" align="left">
-      <p><a href="https://docs.jigx.com/examples/chat">chat</a>
-      <a href="https://docs.jigx.com/examples/choice-field">choice-field</a>
-      <a href="https://docs.jigx.com/examples/duration-picker">duration-picker</a>
-      <a href="https://docs.jigx.com/examples/form">form</a>
-      <a href="https://docs.jigx.com/examples/media-field">media-field</a>
-      <a href="https://docs.jigx.com/examples/text-field">text-field</a>
-      <a href="https://docs.jigx.com/examples/email-field">email-field</a>
-      <a href="https://docs.jigx.com/examples/number-field">number-field</a>
-      <a href="https://docs.jigx.com/examples/dropdown">dropdown</a>
-      <a href="https://docs.jigx.com/examples/checkbox">checkbox</a>
-      <a href="https://docs.jigx.com/examples/date-picker">date-picker</a>
-      <a href="https://docs.jigx.com/examples/signature-field">signature-field</a></p>
+      <p><a href="https://docs.jigx.com/examples/chat">chat</a></p>
+      <p><a href="https://docs.jigx.com/examples/choice-field">choice-field</a></p>
+      <p><a href="https://docs.jigx.com/examples/duration-picker">duration-picker</a> </p>
+      <p><a href="https://docs.jigx.com/examples/form">form</a> <a href="https://docs.jigx.com/examples/media-field">media-field</a> </p>
+      <p><a href="https://docs.jigx.com/examples/text-field">text-field</a> </p>
+      <p><a href="https://docs.jigx.com/examples/email-field">email-field</a> </p>
+      <p><a href="https://docs.jigx.com/examples/number-field">number-field</a> </p>
+      <p><a href="https://docs.jigx.com/examples/dropdown">dropdown</a> </p>
+      <p><a href="https://docs.jigx.com/examples/checkbox">checkbox</a> </p>
+      <p><a href="https://docs.jigx.com/examples/date-picker">date-picker</a> </p>
+      <p><a href="https://docs.jigx.com/examples/signature-field">signature-field</a></p>
     </td>
     <td selected="false" align="left">
       <p>default</p>
@@ -282,8 +263,8 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p>Interactive</p>
     </td>
     <td selected="false" align="left">
-      <p><a href="https://docs.jigx.com/examples/interactive-image">interactive-image</a>
-      <a href="https://docs.jigx.com/examples/interactive-image-item">interactive-image-item</a></p>
+      <p><a href="https://docs.jigx.com/examples/interactive-image">interactive-image</a> </p>
+      <p><a href="https://docs.jigx.com/examples/interactive-image-item">interactive-image-item</a></p>
     </td>
     <td selected="false" align="left">
       <p>default</p>
@@ -297,10 +278,7 @@ Jigx comprises of UI elements known as components, which are an essential part o
       <p><a href="https://docs.jigx.com/examples/widgets">widgets</a></p>
     </td>
     <td selected="false" align="left">
-      <p>default
-      composite
-      list
-      document</p>
+      <p>default composite list document</p>
     </td>
   </tr>
 </table>
