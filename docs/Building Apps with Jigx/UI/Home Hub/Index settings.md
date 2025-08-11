@@ -59,7 +59,7 @@ color: color7
 | **Other options** |                                                                                                                                                                                                                  |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `badge`           | Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the `badge` property to the tabs section with an expression. |
-| `label`           | Give the tab a title. The title displays under the icon in the navigation bar.                                                                                                                                   |
+| `label`           | Give the tab a title. This title appears below the icon in the navigation bar. Use the label** **property for translating tab names or when the tab name includes spaces.                                        |
 | `when`            | The condition when the tab will be displayed or hidden (optional). Use an  that evaluates to a boolean.                                                                                                          |
 
 ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" size="30" width="1224" height="2466" position="center" caption}
