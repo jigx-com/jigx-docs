@@ -2,4 +2,4 @@ root: ./changelog/
 
 ​structure:
   readme: ./changelog/Release Notes - 2025.md
-  summary: ./changelog/summary.md​
+  summary: ./changelog/SUMMARY.md​
