@@ -1,7 +1,0 @@
-root: ./docs/
-
-​structure:
-  readme: ./docs/Welcome to Jigx Documentation.md
-  summary: ./docs/summary.md​
-# redirects:
-#   previous/page: new-folder/page.md
