@@ -347,4 +347,3 @@ Bug Fixes
 
 - Push Notifications on Android
   - Push Notifications on Android are currently disabled for the generic Jigx app. We will enable them again with the next release (2022.3). This does not affect in-app notifications as they will continue to work as before
-
