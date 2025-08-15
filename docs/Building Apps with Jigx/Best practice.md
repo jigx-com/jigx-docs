@@ -5,23 +5,24 @@ createdAt: Mon Sep 02 2024 12:33:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 ---
 
-## When to use solution state (global state)
+# Best practice
 
-[State](./Logic/State.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a _one-to-one relationship_; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
+### When to use solution state (global state)
+
+[State](../building-apps-with-jigx/logic/state.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a _one-to-one relationship_; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
 
 **Design Pattern:** Singletons
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S_MP9oBcex53yT9JezU9t-20240911-134725.gif" size="60" position="center" caption}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S\_MP9oBcex53yT9JezU9t-20240911-134725.gif" size="60" position="center" caption}
 
-### Setup:
+#### Setup:
 
 1. Set the **ID** to be stored in the solution state, using the `set-state` action. The ID is the least amount of data required to identify each job uniquely. The ID is used throughout the solution to reference the necessary data in each of the solution's jigs.
-2. In the datasource queries use the **ID **to return the required data.
-   - In a [global datasource ](https://docs.jigx.com/datasources#gCN9o)query reference the data required. The global datasource is referenced in each jig where the data is required.
-   - In the individual jig 's [datasource](https://docs.jigx.com/datasources#2AD3k) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
+2. In the datasource queries use the \*\*ID \*\*to return the required data.
+   * In a [global datasource ](https://docs.jigx.com/datasources#gCN9o)query reference the data required. The global datasource is referenced in each jig where the data is required.
+   * In the individual jig 's [datasource](https://docs.jigx.com/datasources#2AD3k) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
 
-:::CodeblockTabs
-set-solution-state (action)
+:::CodeblockTabs set-solution-state (action)
 
 ```yaml
 actions:
@@ -65,26 +66,25 @@ datasources:
 
 State resources and code samples:
 
-- [Solution (Global) State](./Logic/State.md)
-- [Set-state](https://docs.jigx.com/examples/set-state)
-- [Reset-state](https://docs.jigx.com/examples/reset-states)
-- [Examples of state](./Logic/State.md)
+* [Solution (Global) State](../building-apps-with-jigx/logic/state.md)
+* [Set-state](https://docs.jigx.com/examples/set-state)
+* [Reset-state](https://docs.jigx.com/examples/reset-states)
+* [Examples of state](../building-apps-with-jigx/logic/state.md)
 
-## When to use inputs
+### When to use inputs
 
-[Inputs](<./UI/Jigs _screens_/Passing data using inputs.md>) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a _one-to-many relationship_, for example, a manager needs to check on the progress of each field service worker.
+[Inputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-inputs.md) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a _one-to-many relationship_, for example, a manager needs to check on the progress of each field service worker.
 
 **Design Pattern**: Mediator
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ecGae4Ri9XtX6vah4PaB_-20240912-074706.gif" size="60" position="center"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ecGae4Ri9XtX6vah4PaB\_-20240912-074706.gif" size="60" position="center"}
 
-### Setup:
+#### Setup:
 
 1. Set up **parameters** in the jig that needs to pass data, then in the jig needing to receive the data set up **inputs**. Multiple parameters and inputs can be configured on a single jig.
 2. In the components of the jig use expressions to reference the data passed in, for example, `=@ctx.jig.inputs.parameterName`.
 
-:::CodeblockTabs
-set-parameters
+:::CodeblockTabs set-parameters
 
 ```yaml
 actions:
@@ -156,24 +156,23 @@ children:
 
 Input resources and code samples:
 
-- [Passing data using inputs](<./UI/Jigs _screens_/Passing data using inputs.md>)
-- [Input examples](<./UI/Jigs _screens_/Passing data using inputs.md>)
+* [Passing data using inputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-inputs.md)
+* [Input examples](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-inputs.md)
 
-## When to use outputs
+### When to use outputs
 
-[Outputs](<./UI/Jigs _screens_/Passing data using outputs.md>) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another usecase for outputs.
+[Outputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another usecase for outputs.
 
 **Design Pattern**: Observer
 
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-J2wSHx9xzGdeEuV5uLHvg-20240912-192654.gif" size="60" position="center"}
+::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-J2wSHx9xzGdeEuV5uLHvg-20240912-192654.gif" size="60" position="center"}
 
-### Setup:
+#### Setup:
 
 1. In the jig that will pass the data define the **output** property with an expression that will pass the variable, such as an **ID**.
 2. In the composite jig, which combines multiple jigs, define the **input** property on the jig that must receive the variable.
 
-:::CodeblockTabs
-team-progress (output)
+:::CodeblockTabs team-progress (output)
 
 ```yaml
 title: Team list
@@ -296,15 +295,14 @@ children:
 
 Output resources and code samples:
 
-- [Passing data using outputs](<./UI/Jigs _screens_/Passing data using outputs.md>)
-- [Output examples](<./UI/Jigs _screens_/Passing data using outputs.md>)
+* [Passing data using outputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md)
+* [Output examples](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md)
 
-## Performance optimization
+### Performance optimization
 
 Using an `id` in your datasource enhances performance, particularly when handling large volumes of records.
 
-:::CodeblockTabs
-datasource
+:::CodeblockTabs datasource
 
 ```yaml
 datasources:
