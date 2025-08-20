@@ -6,7 +6,9 @@ Next, you are ready to map out the requirements of the app. Each requirement or 
 
 1. Visualize the screens to match the requirements by creating a screen flow diagram, storyboard, or wireframes. There are many methods you can use, the easiest is to start by drawing out each screen on a piece of paper. Then add the drawings in Miro, Figma, or the application of your choice.
 2. In the design, show the navigation between screens and buttons.
-3. For guidance on mobile UI, refer to Jigx [Templates](../../building-apps-with-jigx/ui/jigs-_screens_/jig-templates.md) or resources such as: - Apple Design - :Link\[Human Interface Guidelines]{href="https://developer.apple.com/design/human-interface-guidelines" newTab="true" hasDisabledNofollow="false"} - Google -:Link\[material design principles]{href="https://m2.material.io/design/introduction" newTab="true" hasDisabledNofollow="false"}
+3. For guidance on mobile UI, refer to Jigx [Templates](../../building-apps-with-jigx/ui/jigs-_screens_/jig-templates.md) or resources such as: \
+   \- [Apple Design - Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines) \
+   \- [Google -material design principles](https://m2.material.io/design/introduction)
 4. Design how people will get the app and onboard. If a profile is required, create a design for it.
 5. In your design, you can already decide which features to add, such as buttons, dropdowns, or text fields. This turns your ideas into pictures, which will be converted into navigable screens during the build stage.
 6. Draw out functionality that should be available to certain user groups/personas. Think about if people need to see a different view of the screen, i.e., Manager vs employee.

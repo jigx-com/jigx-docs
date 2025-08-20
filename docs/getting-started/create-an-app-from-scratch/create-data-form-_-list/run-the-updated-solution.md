@@ -3,13 +3,9 @@ title: Run the updated solution
 slug: 4fDS-run-the-updated-solution
 createdAt: Wed Apr 12 2023 11:27:36 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 03 2023 12:43:31 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the powerful Hello-{{Jigx}} solution in the {{Jigx}} mobile
-  app with this comprehensive guide. Discover the step-by-step instructions for
-  signing in, accessing the Hello {{Jigx}} solu
 ---
 
-# Overview
+# Run the updated solution
 
 With the customer forms and list added to the Hello-Jigx solution and published to the Cloud, you are ready to use the solution in the Jigx mobile app.
 

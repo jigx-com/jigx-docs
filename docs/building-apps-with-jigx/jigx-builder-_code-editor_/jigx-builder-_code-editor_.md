@@ -1,8 +1,8 @@
 # Jigx Builder (code editor)
 
-The Jigx's development environment is called Jigx Builder, which is a VS Code extension that uses YAML, SQL, JSON, and JSONata, and makes use of the rich set of functionality that VS Code offers. To learn more about VS Code functionality and managing extensions, see :Link\[Visual Studio Code]{href="https://code.visualstudio.com/docs" newTab="true" hasDisabledNofollow="false"} documentation.
+The Jigx's development environment is called Jigx Builder, which is a VS Code extension that uses YAML, SQL, JSON, and JSONata, and makes use of the rich set of functionality that VS Code offers. To learn more about VS Code functionality and managing extensions, see [Visual Studio Code](https://code.visualstudio.com/docs) documentation.
 
-::embed\[]{url="https://vimeo.com/829856148?share=copy"}
+{% embed url="https://vimeo.com/829856148?share=copy" %}
 
 Below is what you need to know when developing in Jigx Builder.
 

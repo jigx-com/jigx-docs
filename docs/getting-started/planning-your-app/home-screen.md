@@ -3,10 +3,6 @@ title: Home screen
 slug: HGQw-home-screen
 createdAt: Wed Jul 12 2023 18:38:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:24:35 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn about the crucial role of the home screen or Home Hub Experience in
-  maximizing user engagement in your app. Discover the significance of
-  showcasing pertinent and vital information right at the f
 ---
 
 # Home screen

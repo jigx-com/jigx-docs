@@ -6,20 +6,23 @@
 
 In this section, there are two files to edit, namely, `index.jigx` and `myfirstjig.jigx`. In the `index.jigx` file, you configure the bottom navigation tab to display the `myfirstjig.jigx` on the Jigx mobile app [Home Hub](../../../building-apps-with-jigx/ui/home-hub/home-hub.md) screen. In the myfirstjig jigx file, you will specify the default [type](adding-the-map-jig.md) of jig, assign an icon for the jig, and provide a [static datasource](adding-the-map-jig.md) that provides the location on the map.
 
-:::hint{type="success"} See [Jigx Concepts](<../../../Understanding the basics/Jigx Concepts.md>) to learn what jigs are. :::
+{% hint style="success" %}
+See [Jigx Concepts](<../../../Understanding the basics/Jigx Concepts.md>) to learn what jigs are.
+{% endhint %}
 
 ### Steps
 
-:::hint{type="info"} The Jigx Builder YAML editor includes **code completion by simultaneously pressing the control and spacebar (ctrl+space)** buttons. Only valid options in the current cursor context are displayed in the code popup. :::
+{% hint style="info" %}
+The Jigx Builder YAML editor includes **code completion by simultaneously pressing the control and spacebar (ctrl+space)** buttons. Only valid options in the current cursor context are displayed in the code popup.
+{% endhint %}
 
 #### Edit the index.jigx file
 
 1. Click on the `index.jigx` file. This file is the menu structure of the app. In the `index.jigx` file you configure the navigation menu that displays at the bottom of the Jigx mobile app [Home Hub](../../../building-apps-with-jigx/ui/home-hub/home-hub.md) screen.
 2. **Save** the project.
-3. Your index.jigx file should resemble the code below.
+3. Your index.jigx file should resemble the code below.&#x20;
 
-:::CodeblockTabs index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 # The system name that uniquely identifies the solution
 name: hello-jigx
@@ -34,8 +37,7 @@ tabs:
     jigId: myfirstjig
     icon: home-apps-logo
 ```
-
-:::
+{% endcode %}
 
 #### Add the map to the jig
 
@@ -52,8 +54,7 @@ tabs:
 11. **Save** the project.
 12. Your map.jigx file should resemble the code below.
 
-:::CodeblockTabs map.jigx
-
+{% code title="map.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: Location with address
@@ -81,8 +82,7 @@ children:
         address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country
         zoomLevel: 9
 ```
-
-:::
+{% endcode %}
 
 #### Update the jigId in the index.jigx file
 
@@ -90,8 +90,7 @@ children:
 2. Change the `JigId` from myfirstjig to map.
 3. Your index.jigx file should resemble to the code below.
 
-:::CodeblockTabs index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 # The system name that uniquely identifies the solution
 name: hello-jigx-solution
@@ -105,8 +104,7 @@ tabs:
     jigId: map   
     icon: location
 ```
-
-:::
+{% endcode %}
 
 ### See Also
 

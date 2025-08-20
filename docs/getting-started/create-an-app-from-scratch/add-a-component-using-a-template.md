@@ -3,10 +3,6 @@ title: Add a component using a template
 slug: j5xL-add-a
 createdAt: Fri May 26 2023 08:17:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 01 2023 07:06:39 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to easily add a signature component template to your project using
-  the default Jig template. This step-by-step guide provides detailed
-  instructions with helpful screenshots on how to incorpo
 ---
 
 # Add a component using a template

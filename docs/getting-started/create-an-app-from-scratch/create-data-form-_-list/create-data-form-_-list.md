@@ -4,11 +4,13 @@
 
 Learn how to build [forms](../../../building-apps-with-jigx/ui/jigs-_screens_/forms/forms.md) that create a new customer record that gets stored in the built-in Jigx data store called [Dynamic Data](../../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md). The data record is created in the data store by using the submit [action](https://docs.jigx.com/examples/actions). Once the record is created you can view, edit and list the data records using queries that return the record details from SQLite. For more information on the supported data providers read the [Data](../../../building-apps-with-jigx/data/data.md) section.
 
-:::hint{type="info"} There are **two methods** to save data collected on a form to a database.
+{% hint style="info" %}
+There are **two methods** to save data collected on a form to a database.
 
 **The first method is to use the form submit action.** The submit form action automatically matches the `instanceIds` of the controls on the jig and creates a record in the local SQLite table with each `instanceIds` as a property for the JSON object in the Data column.
 
-**The second method is to use an execute entity action.** The execute entity action allows you to specify the data properties for the SQLite table. You have more granular control over the saved values and can include expressions. :::
+**The second method is to use an execute entity action.** The execute entity action allows you to specify the data properties for the SQLite table. You have more granular control over the saved values and can include expressions.&#x20;
+{% endhint %}
 
 ::::Tabs :::Tab{title="Form & list widgets"} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll\_formlistlight.PNG" size="30" caption="Form and list widgets" alt="Form and list widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll\_formlistlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
@@ -18,7 +20,9 @@ Learn how to build [forms](../../../building-apps-with-jigx/ui/jigs-_screens_/fo
 
 :::Tab{title="Edit customer"} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b\_editcustomerlight.PNG" size="30" caption="Edit customer jig" alt="Edit customer jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b\_editcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-:::hint{type="success"} We recommend you build out all the solution steps for the [Create an app from scratch](create-data-form-_-list.md), as each solution step builds on the previous step until you have a functioning mobile app. :::
+{% hint style="success" %}
+We recommend you build out all the solution steps for the [Create an app from scratch](create-data-form-_-list.md), as each solution step builds on the previous step until you have a functioning mobile app.
+{% endhint %}
 
 ## Steps
 
@@ -33,4 +37,4 @@ Learn how to build [forms](../../../building-apps-with-jigx/ui/jigs-_screens_/fo
 
 ## GitHub Samples
 
-You can download the :Link\[Hello Jigx solution]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" newTab="true" hasDisabledNofollow="false"} project on GitHub or build it yourself by following the detailed steps in this section.
+You can download the [Hello Jigx solution](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution) project on GitHub or build it yourself by following the detailed steps in this section.

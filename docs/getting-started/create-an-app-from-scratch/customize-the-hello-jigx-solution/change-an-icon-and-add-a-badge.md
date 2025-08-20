@@ -6,7 +6,9 @@
 
 You can easily customize widgets on the Home Hub by changing their icons and adding additional components such as badges to the widgets. In this section, you learn to change the calendar icon and add a badge [using an expression](../../../building-apps-with-jigx/logic/expressions.md) on the calendar jig to show the number of calendar events for the week.
 
-:::hint{type="info"} For a view of the icons in a list see the _Types - List - List with all icons_ in the _jigx-samples solution_ available in :Link\[https://manage.jigx.com/quickstartQuick]{href="https://manage.jigx.com/quickstart" newTab="true" hasDisabledNofollow="false"} start. :::
+{% hint style="info" %}
+For a view of the icons in a list see the _Types - List - List with all icons_ in the _jigx-samples solution_ available in :Link\[https://manage.jigx.com/quickstartQuick]{href="https://manage.jigx.com/quickstart" newTab="true" hasDisabledNofollow="false"} start.
+{% endhint %}
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe\_widgetloclight.PNG" size="62" caption="Solution with Calendar -3 icon" position="center" alt="Solution with Calendar -3 icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe\_widgetloclight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
@@ -23,10 +25,11 @@ You can easily customize widgets on the Home Hub by changing their icons and add
 
 1. Under icon add a new line for the badge code that shows the number of calendar events for the week. Add `badge:` Then use the `=$count(@ctx.datasources.calendar-data.id)` [expression](../../../building-apps-with-jigx/logic/expressions.md) to count the events in the calendar and show the number in the badge on the Home Hub.
 
-:::hint{type="info"} Expressions are JSONata language-based. Learn more about [https://jsonata.org/](https://jsonata.org/)JSONata and try out your expressions in their [https://try.jsonata.org/](https://try.jsonata.org/)JSONata Exerciser. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata. :::
+{% hint style="info" %}
+Expressions are JSONata language-based. Learn more about [https://jsonata.org/](https://jsonata.org/)JSONata and try out your expressions in their [https://try.jsonata.org/](https://try.jsonata.org/)JSONata Exerciser. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
+{% endhint %}
 
-:::CodeblockTabs calendar.jigx
-
+{% code title="calendar.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: Calendar
@@ -54,7 +57,6 @@ item:
       text: =$fromMillis($toMillis($now()) + @ctx.current.item.eventEnd * 3600000)
   type: component.event
 ```
-
-:::
+{% endcode %}
 
 4\. **Save** and **publish** the Hello-Jigx solution. 5. **Run** the Hello-Jigx solution on your mobile device to see the change to the calendar icon and see the badge displaying 3 events for the week on the Home Hub.

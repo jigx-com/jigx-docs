@@ -17,7 +17,9 @@ With the Hello Jigx project created, and the jig added you are ready to publish 
 
 :::VerticalSplitItem ::Image\[]{alt="Publish Jigx project" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/40rk3JfO0AguSqM4Mz6kQ\_projrct-publish.png" size="84" caption="Publish Jigx project" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/40rk3JfO0AguSqM4Mz6kQ\_projrct-publish.png"} ::: ::::
 
-:::hint{type="info"} When you build and publish a solution you automatically become the owner of the solution. Access to the solution is managed by [Permissions](../../../administration/solutions/permissions.md) assigned in [Jigx Management](<../../../Administration/Management Overview.md>). Here you give users access to the solution, define their role in the solution scope and assign `Solution Group` membership for the visibility of widgets. :::
+{% hint style="info" %}
+When you build and publish a solution you automatically become the owner of the solution. Access to the solution is managed by [Permissions](../../../administration/solutions/permissions.md) assigned in [Jigx Management](<../../../Administration/Management Overview.md>). Here you give users access to the solution, define their role in the solution scope and assign `Solution Group` membership for the visibility of widgets.
+{% endhint %}
 
 ### See Also
 

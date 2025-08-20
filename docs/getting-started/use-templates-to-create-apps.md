@@ -3,10 +3,6 @@ title: Use templates to create apps
 slug: vBJW-Ha5s0EJ6Ht4s93-e
 createdAt: Tue Apr 04 2023 06:20:14 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 17:54:39 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a travel app using a provided template in Jigx Builder.
-  Customize your app by editing the template or adding files. Publish and access
-  it on mobile devices with Jigx app. Explore o
 ---
 
 # Use templates to create apps
@@ -17,7 +13,9 @@ Create a travel app using one of the provided templates. The template inserts th
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nhnka5qOCrS2S63wcj5BN\_gs-traveltemplate.PNG" size="80" position="center" }
 
-:::hint{type="info"} Before you start building your first solution, ensure you have created a [Jigx's account](creating-an-account.md) and [Install the Jigx Builder](install-the-jigx-builder.md). :::
+{% hint style="info" %}
+Before you start building your first solution, ensure you have created a [Jigx's account](creating-an-account.md) and [Install the Jigx Builder](install-the-jigx-builder.md).&#x20;
+{% endhint %}
 
 #### Step 1: Create a new solution in Jigx Builder
 
@@ -68,7 +66,9 @@ Create a travel app using one of the provided templates. The template inserts th
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FTNVTmq5D0UtXCcniFa\_i\_gs-traveltemplate.PNG" size="84" position="center" caption="Jigx template" alt="Jigx template"} ::: ::::
 
-:::hint{type="success"} Yes it is that simple to build apps in Jigx. Explore further by either editing the YAML in `myfirstjig.jigx`; or adding additional files under the jig folder, add another template, reference the file in `index.jigx` and publish the solution. :::
+{% hint style="success" %}
+Yes it is that simple to build apps in Jigx. Explore further by either editing the YAML in `myfirstjig.jigx`; or adding additional files under the jig folder, add another template, reference the file in `index.jigx` and publish the solution.&#x20;
+{% endhint %}
 
 ### What's next?
 

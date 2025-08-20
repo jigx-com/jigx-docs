@@ -3,10 +3,6 @@ title: Settings
 slug: BAsJ-settings
 createdAt: Tue Jun 20 2023 08:32:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:12:21 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Discover how to customize your experience with the Jigx Extension's Settings.
-  Easily modify options, including the Jigx App name setting, which determines
-  the connected JigxApp for debugging and testi
 ---
 
 # Settings
@@ -26,4 +22,6 @@ To configure the **Jigx: App name** setting follow the steps below:
 2. When connecting to a Jigx branded app, go to Jigx Management / Branding/ App configuration and copy the **App Name**, then paste the name in the **Jigx: App name** setting in Jigx Builder. ![App Name in Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1vG3k44iWYNDS7iSojxCA_jb-appnamemanagel.png)
 3. Regenerate the QR code when changing app names in settings by clicking the **Refresh QR code** icon in Jigx Dev tools - **Connect to Device** pane.
 
-:::hint{type="info"} You can check which app your Jigx Dev Tools will connect to by hovering over the QR code and look for the _appname_ in the string, if it is blank you connecting to the Jigx App. :::
+{% hint style="info" %}
+You can check which app your Jigx Dev Tools will connect to by hovering over the QR code and look for the _appname_ in the string, if it is blank you connecting to the Jigx App.
+{% endhint %}

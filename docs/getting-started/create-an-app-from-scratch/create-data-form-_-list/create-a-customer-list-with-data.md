@@ -3,13 +3,9 @@ title: Create a customer list with data
 slug: 0A0X-create-a-customer-list-with-data
 createdAt: Wed Apr 12 2023 11:27:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 13:40:44 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a "list" type jig using Dynamic Data and effectively
-  display a list of records. Our comprehensive document outlines easy-to-follow
-  steps to help you create the jig, add a data sour
 ---
 
-# Overview
+# Create a customer list with data
 
 In this section, you learn how to create a [jig.list](https://docs.jigx.com/examples/jiglist) type that uses the [dynamic data provider](../../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md) to return and display a list of records. You specify the fields that must be returned in the list jig and add an [onPress list action](https://docs.jigx.com/examples/list-item) that opens a jig used to view the selected list item record.
 
@@ -25,10 +21,9 @@ In this section, you learn how to create a [jig.list](https://docs.jigx.com/exam
 
 ### Add the data source to return data in the list
 
-1. Under the `datasource` node specific the data provider where the customer records are stored. The name of the table that the information is being returned from. All Jigx Dynamic Data-based tables are saved in the "default" database. Use a SQLite `query` to specify the fields to be returned in the list, in this case, we want the customer's first and last name as well as their email address. You can add your own datasource entries or use the code example below.
+1. Under the `datasource` node specific the data provider where the customer records are stored. The name of the table that the information is being returned from. All Jigx Dynamic Data-based tables are saved in the "default" database. Use a SQLite `query` to specify the fields to be returned in the list, in this case, we want the customer's first and last name as well as their email address. You can add your own datasource entries or use the code example below.&#x20;
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 datasources:
   customerList:
@@ -39,15 +34,13 @@ datasources:
         - entity: default/customers
       query: SELECT id, '$.firstName', '$.lastName', '$.email' FROM [default/customers]
 ```
-
-:::
+{% endcode %}
 
 ### Add controls and actions to the list item
 
 1. All list output controls are placed on the `list-item component`. Use the `swipeable:` action to configure a left or right swipe and the method to call. For example, in this step, we use a left swipe to delete the customer using the delete method. You can add your own controls or use the code example below.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 data: =@ctx.datasources.customerList
 item:
@@ -67,28 +60,24 @@ item:
               entity: default/customers
               method: delete
 ```
-
-:::
+{% endcode %}
 
 2\. Configure the action to take you back to the list once the list-item has been deleted, by using the code below.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 data:
   id: =@ctx.current.item.id
 onSuccess:
   type: action.go-back
 ```
-
-:::
+{% endcode %}
 
 ### Add a navigation action
 
 1. Add a navigation action that is performed when a single item is clicked in the list, and referenced by using the `custId` parameter. In this step clicking on a customer in the list opens the view-customer jig to view the customer's details. Use the `onPress` action with an `action.go-to` type and the `linkTo` option as shown below.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 onPress:
   type: action.go-to
@@ -97,13 +86,11 @@ onPress:
     parameters:
       custId: =@ctx.current.item.id
 ```
-
-:::
+{% endcode %}
 
 2\. Your list-customer.jigx file should resemble the code below.
 
-:::CodeblockTabs list-customer.jigx
-
+{% code title="list-customer.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: List customers
@@ -158,7 +145,8 @@ item:
         parameters:
           custId: =@ctx.current.item.id
 ```
+{% endcode %}
 
-:::
-
-:::hint{type="warning"} The list-customer.jigx file will display in red and cannot be saved yet as it references the view-customer.jigx file that you will be creating in the [Create a view of the customer record](create-a-view-of-the-customer-record.md) step. :::
+{% hint style="warning" %}
+The list-customer.jigx file will display in red and cannot be saved yet as it references the view-customer.jigx file that you will be creating in the [Create a view of the customer record](create-a-view-of-the-customer-record.md) step.
+{% endhint %}

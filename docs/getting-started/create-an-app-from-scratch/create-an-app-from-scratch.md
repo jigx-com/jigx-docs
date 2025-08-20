@@ -3,10 +3,6 @@ title: Create an app from scratch
 slug: s2xAkEBhQIcz1yt3BtEmf
 createdAt: Tue Apr 04 2023 06:20:14 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:24:14 GMT+0000 (Coordinated Universal Time)
-description: >-
-  This document provides a comprehensive guide on using Jigx to create mobile
-  apps. Learn about basic Jigx concepts, such as data collection and navigation,
-  and follow step-by-step instructions to build
 ---
 
 # Create an app from scratch
@@ -21,12 +17,10 @@ In this quick guide, you will learn the basics of Jigx and how easy it is to cre
 
 :::VerticalSplitItem The solution is named **Hello-Jigx** and consists of a map showing a location, a calendar with events, a form to capture and view data, and a list showing the captured data. The table below guides you through building each element of the solution. ::: ::::
 
-:::hint{type="info"}
-
+{% hint style="info" %}
 1. Before you start building your first solution ensure you have created a [Creating an account](../creating-an-account.md) and [Install the Jigx Builder](../install-the-jigx-builder.md). Get an overview of the [Jigx platform](<../../Understanding the basics/Architecture.md>) and an understanding of the [Jigx Concepts](<../../Understanding the basics/Jigx Concepts.md>).
-2.  We recommend you build out all the solution steps below, as each solution step builds on the previous step until you have a functioning mobile app.
-
-    :::
+2. We recommend you build out all the solution steps below, as each solution step builds on the previous step until you have a functioning mobile app.
+{% endhint %}
 
 ### Solution Steps
 

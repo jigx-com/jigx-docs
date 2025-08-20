@@ -3,13 +3,9 @@ title: Run the solution in the app
 slug: S0vA-run-the-solution-in-the-app
 createdAt: Tue Apr 04 2023 06:22:05 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri May 12 2023 07:38:39 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the Hello Jigx solution in the Jigx mobile app. Discover the
-  simple steps to sign in, access the Home Experience screen, and view locations
-  on the map. Find out how to switch between
 ---
 
-# Overview
+# Run the solution in the app
 
 With the Hello Jigx solution published to the Cloud, you are ready to use the solution in the Jigx mobile app.
 
@@ -24,7 +20,9 @@ With the Hello Jigx solution published to the Cloud, you are ready to use the so
 
 :::VerticalSplitItem ::Image\[]{alt="Map jig on Home Hub " src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LblP31IWwmId4qM7jxJMT\_maplight.PNG" size="90" caption="Map jig on Home Hub"} ::: ::::
 
-:::hint{type="info"} As you build and publish more solutions to your Jigx mobile app, you can toggle between the solutions by clicking on the home icon, and selecting the solution you want to use. The number badge on the home icon shows how many solutions are available to you. :::
+{% hint style="info" %}
+As you build and publish more solutions to your Jigx mobile app, you can toggle between the solutions by clicking on the home icon, and selecting the solution you want to use. The number badge on the home icon shows how many solutions are available to you.
+{% endhint %}
 
 **Congratulations** you have built, published, and used the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution](https://docs.jigx.com/run-the-solution-in-the-app).
 

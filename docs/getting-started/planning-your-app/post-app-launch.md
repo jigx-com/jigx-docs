@@ -3,10 +3,6 @@ title: Post App launch
 slug: eVQ9-post-app-launch
 createdAt: Wed Jul 12 2023 18:38:15 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Jul 18 2023 06:32:01 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn about the importance of ongoing support, updates, and maintenance for
-  your newly launched app on the App Store and Google Play Store. Discover how
-  you can ensure user satisfaction and promote ap
 ---
 
 # Post App launch

@@ -2,8 +2,6 @@
 
 There are several options available to verify the identity of an individual using the Jigx App. The authentication options are:
 
-:::ExpandableHeading
-
 ### Jigx User Manager
 
 When a user logs into the app on a mobile device, they need to be :Link\[registered]{href="http://manage.jigx.com/register" newTab="true" hasDisabledNofollow="false"} in Jigx and assigned a Jigx account. This can either be through an email invitation, registering at [http://manage.jigx.com/register](http://manage.jigx.com/register), or requesting to join an organization on the app's Home Hub. Jigx user manager uses AWS Cognito for Authentication. Passwords are encrypted and cannot be read by users in Jigx Cloud.
@@ -11,8 +9,6 @@ When a user logs into the app on a mobile device, they need to be :Link\[registe
 When the user signs in, the credentials are matched in Jigx Cloud, and if valid, a Jigx token is returned to the device, where it is stored in the device keychain. All subsequent calls are made using the Jigx token in an SSL tunnel.
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KS2j3hhgoPgrdC1rs4TH\_\_jigxauth.gif" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KS2j3hhgoPgrdC1rs4TH\_\_jigxauth.gif" width="496" height="720" darkWidth="496" darkHeight="720"} :::
-
-:::ExpandableHeading
 
 ### Jigx User Manager with Secondary credentials
 
@@ -37,9 +33,7 @@ When auto-provisioning is enabled, if the user is validated by AAD or Okta and d
 **Data flow with Microsoft SQL**
 
 1. Jigx fetches the solution definition with a valid Jigx token.
-2. Jigx function calls are made from the device to SQL Azure or Microsoft SQL Server, using the Jigx Cloud as a proxy, for IP Allowlisting. The function calls use the connection configuration stored as a secure encrypted secret in Jigx Cloud on AWS. The SQL credentials are never sent to the mobile device. Once saved, the SQL credentials are not user readable and are only used by the Jigx Cloud when the function call is made by a device with a valid Jigx token. The result is processed in the Jigx Cloud, including all function transforms, continuation, and error transforms, and sent to the device. The data is never stored in the Jigx Cloud and is only ever kept in memory while the function is executing. :::
-
-:::ExpandableHeading
+2. Jigx function calls are made from the device to SQL Azure or Microsoft SQL Server, using the Jigx Cloud as a proxy, for IP Allowlisting. The function calls use the connection configuration stored as a secure encrypted secret in Jigx Cloud on AWS. The SQL credentials are never sent to the mobile device. Once saved, the SQL credentials are not user readable and are only used by the Jigx Cloud when the function call is made by a device with a valid Jigx token. The result is processed in the Jigx Cloud, including all function transforms, continuation, and error transforms, and sent to the device. The data is never stored in the Jigx Cloud and is only ever kept in memory while the function is executing.&#x20;
 
 ### Single Sign-on (SSO)
 

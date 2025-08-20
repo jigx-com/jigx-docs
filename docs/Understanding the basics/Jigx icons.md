@@ -8,8 +8,7 @@ While creating your solution, you can configure certain UI components, jigs, and
 
 :::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q\_icons.PNG" size="80" position="center" caption="List icons in a list" alt="List icons in a list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiaXkBq8DHuCxvXli3S2Q\_icons.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
 
-::::VerticalSplitItem :::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 type: component.list-item
   options:
@@ -19,8 +18,7 @@ type: component.list-item
       element: icon
       icon: =(@ctx.current.item.materials) = true ? 'home' :'car-garage'
 ```
-
-::: :::: :::::
+{% endcode %}
 
 ### How do you add an icon?
 
@@ -30,20 +28,17 @@ Icons can be used either in the YAML key position to select an icon, for example
 
 :::::VerticalSplit{layout="middle"} ::::VerticalSplitItem Using the `icon` as a key in YAML to display an alarm bell icon on the Home Hub widget.
 
-:::CodeblockTabs YAML (icon key)
-
+{% code title="YAML (icon key)" %}
 ```yaml
 title: Home Security
 type: jig.default
 icon: alarm-bell
 ```
-
-::: ::::
+{% endcode %}
 
 ::::VerticalSplitItem Using the icon as a value and then as the key in YAML to display the dollar icon in a `component.summary` .
 
-:::CodeblockTabs YAML (icon value)
-
+{% code title="YAML (icon value)" %}
 ```yaml
 summary:
   children:
@@ -55,8 +50,7 @@ summary:
         element: icon
         icon: currency-dollar-circle
 ```
-
-::: :::: :::::
+{% endcode %}
 
 1. Next to `icon:` start typing the first two letters of an icon name, for example al, this will open the list of icons starting with two letters.
 2. A preview of the icon is shown in the right popup with a link to the icon in :Link\[streamline]{href="https://www.streamlinehq.com/icons/streamline-bold" newTab="true" hasDisabledNofollow="false"}.
@@ -65,7 +59,7 @@ summary:
 
 ### Where can you see a preview of the icon?
 
-The list of available icons is extensive and is based off the icons in [https://www.streamlinehq.com/icons/streamline-bold ](https://www.streamlinehq.com/icons/streamline-bold). You welcome to browse this link. In Jigx Builder a preview of each icon is available in the right popup with a link to the icon in :Link\[streamline]{href="https://www.streamlinehq.com/icons/streamline-bold" newTab="true" hasDisabledNofollow="false"}. All you need to do is start typing the first two letters of an icon you want.
+The list of available icons is extensive and is based off the icons in [https://www.streamlinehq.com/icons/streamline-bold ](https://www.streamlinehq.com/icons/streamline-bold). You welcome to browse this link. In Jigx Builder a preview of each icon is available in the right popup with a link to the icon in [streamline](https://www.streamlinehq.com/icons/streamline-bold). All you need to do is start typing the first two letters of an icon you want.
 
 ![Preview of icons](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bqu2vrN1o5CGLZj0oHqwY_jb-icons.png)
 

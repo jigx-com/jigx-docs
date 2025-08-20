@@ -3,10 +3,6 @@ title: Planning your app
 slug: pALd-planning-your-a
 createdAt: Mon Jun 05 2023 14:24:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Sep 27 2023 18:07:14 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn about the importance of planning when building a JigxApp in this
-  comprehensive document. Discover a helpful checklist of high-level steps for
-  planning, including solution requirements, design, d
 ---
 
 # Planning your app
@@ -29,4 +25,4 @@ Here is a checklist of the high-level steps when planning your app:
 
 As you will learn in this section, a series of plans go into creating an app. We suggest logically linking flowcharts, mind maps, entity relationship diagrams, and wireframes. This helps the creator and stakeholders walk through the entire app concept and know exactly how elements are going to work. Below is an example of a Pizza Store App plan created in Miro.
 
-::embed\[]{url="https://miro.com/app/embed/uXjVM2JhDPc=/?share\_link\_id=595977255475"}
+{% embed url="https://miro.com/app/embed/uXjVM2JhDPc=/?share_link_id=595977255475" %}

@@ -2,7 +2,9 @@
 
 Now you have built a functioning solution that works, but you can do much more with Jigx. In this section, you will customize three of the widgets on the Home Hub. You will learn how easy it is to work with the Jigx components to create, style, and customize the app that works for your organization.
 
-:::hint{type="success"} We recommend you build out all the solution steps for the [Create an app from scratch](customize-the-hello-jigx-solution.md), as each solution step builds on the previous step until you have a functioning mobile app. :::
+{% hint style="success" %}
+We recommend you build out all the solution steps for the [Create an app from scratch](customize-the-hello-jigx-solution.md), as each solution step builds on the previous step until you have a functioning mobile app.
+{% endhint %}
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem
 
@@ -15,7 +17,7 @@ Now you have built a functioning solution that works, but you can do much more w
 
 **Congratulations** you have successfully completed the Hello Jigx solution series by building your first functioning Jigx solution, and then customizing the style and added additional functionality.
 
-Now fast-track your development by adding sample solutions from our :Link\[Quick Start]{href="https://manage.jigx.com/quickstart" newTab="true" hasDisabledNofollow="false"} library to your organization. For more information on the various samples, see [Overview](customize-the-hello-jigx-solution.md), and to understand the options available when setting up the projects, publishing, and using the sample solution,/ see [Setting up your solution](customize-the-hello-jigx-solution.md).
+Now fast-track your development by adding sample solutions from our [Quick Start](https://manage.jigx.com/quickstart) library to your organization. For more information on the various samples, see [Overview](customize-the-hello-jigx-solution.md), and to understand the options available when setting up the projects, publishing, and using the sample solution,/ see [Setting up your solution](customize-the-hello-jigx-solution.md).
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem We recommend starting with the :Link\[Jigx-samples]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/jigx-samples" newTab="true"} solution that showcases [jig.calendar](customize-the-hello-jigx-solution.md), [actions (buttons)](customize-the-hello-jigx-solution.md), [action-list](customize-the-hello-jigx-solution.md) and [jig-header](customize-the-hello-jigx-solution.md). :::
 

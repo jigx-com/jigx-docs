@@ -4,9 +4,8 @@ The following matrix outlines the supported operating systems and version requir
 
 **Minimum OS Version:** The lowest OS version required to install and run the app.
 
-| **OS / Version** | **Supported Devices** | **Minimum OS Version** |
-| ---------------- | --------------------- | ---------------------- |
-| iOS              | iPhone                | iOS 14                 |
-| iPadOS           | iPad                  | iPadOS 14              |
-| Android          | Smartphones, Tablets  | Android 14             |
-
+| OS / Version | Supported Devices    | Minimum OS Version |
+| ------------ | -------------------- | ------------------ |
+| iOS          | iPhone               | iOS 14             |
+| iPadOS       | iPad                 | iPadOS 14          |
+| Android      | Smartphones, Tablets | Android 14         |

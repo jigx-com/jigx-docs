@@ -86,8 +86,8 @@ Jigx Management exposes the Jigx Cloud functionality in a browser-based portal a
 
 The Jigx app is available on iOS and Android and works on any device.
 
-* Download the Jigx iOS app from the :Link\[App Store]{href="https://apps.apple.com/sg/app/jigx/id1495596537" newTab="true" hasDisabledNofollow="false"}
-* Download the Jigx Android app from the :Link\[Google Play Store]{href="https://play.google.com/store/apps/details?id=com.jigx.android\&pli=1" newTab="true" hasDisabledNofollow="false"}
+* Download the Jigx iOS app from the [App Store](https://apps.apple.com/sg/app/jigx/id1495596537)
+* Download the Jigx Android app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.jigx.android\&pli=1)
 * The Jigx App is only supported in portrait mode on iOS and Android phones.
 * You can brand your app through [Organization Settings](../administration/organization-settings/organization-settings.md)
 

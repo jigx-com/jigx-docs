@@ -3,13 +3,9 @@ title: Create a view of the customer record
 slug: _3wu-create-a-view-of-the-customer-record
 createdAt: Wed Apr 12 2023 11:27:44 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Oct 31 2023 13:36:45 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a view using the entity-field component and display data
-  from the Dynamic Data feature with this step-by-step guide. Discover how to
-  create a jig, specify the SQLite Dynamic data p
 ---
 
-# Overview
+# Create a view of the customer record
 
 In this section, you learn how to create a view using the [entity-field](https://docs.jigx.com/examples/entity-field) component to display the data returned from the [Dynamic data provider](../../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md). Add an action to go to a form that allows you to edit and [update a record](../../../building-apps-with-jigx/ui/jigs-_screens_/forms/updating-a-record.md).
 
@@ -23,8 +19,7 @@ In this section, you learn how to create a view using the [entity-field](https:/
 4. Delete the `header` and `onfocus` nodes.
 5. Specify the SQLite Dynamic data provider, the table, and the SQLite query needed to return the customer's details. Below is an example of the code you can use.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 datasources:
   customerInfo:
@@ -38,15 +33,13 @@ datasources:
         custId: =@ctx.jig.inputs.custId
       isDocument: true
 ```
-
-:::
+{% endcode %}
 
 ### Create the view form
 
 1. Now that you have the data you want to view, specify how you want to view the data. For this step, we want to view the data in a form similar to the new customer form. The code below shows using the `form component`, `field-row`, and `entity- fields` to display the customer's first and last name, and email address.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 children:
   - type: component.entity
@@ -68,15 +61,13 @@ children:
             label: Email
             value: =@ctx.datasources.customerInfo.email
 ```
-
-:::
+{% endcode %}
 
 ### Add an edit action (button)
 
 1. Once you can view the returned customer record, you want to be able to edit the record and save the changes to the SQLite Dynamic Data provider. Add the `action.go-to` that directs you to the edit form using the `custId` to reference the individual customer record. Use the code below to create the action button.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 actions:
   - children:
@@ -87,13 +78,11 @@ actions:
           parameters:
             custId: =@ctx.jig.inputs.custId
 ```
-
-:::
+{% endcode %}
 
 2\. Your view-customer.jigx file should resemble the code below.
 
-:::CodeblockTabs view-customer.jigx
-
+{% code title="view-customer.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: View Customer
@@ -150,7 +139,8 @@ actions:
           parameters:
             custId: =@ctx.jig.inputs.custId
 ```
+{% endcode %}
 
-:::
-
-:::hint{type="warning"} The view-customer file will display in red and cannot be saved yet as it references the edit-customer file that you will be creating in the [Edit a customer record](edit-a-customer-record.md) step. :::
+{% hint style="warning" %}
+The view-customer file will display in red and cannot be saved yet as it references the edit-customer file that you will be creating in the [Edit a customer record](edit-a-customer-record.md) step.
+{% endhint %}

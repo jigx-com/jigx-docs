@@ -3,10 +3,6 @@ title: Jigx color palette
 slug: AlXC-jig
 createdAt: Wed Sep 13 2023 09:35:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 26 2025 07:15:38 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn about the significance of selecting the right color palette in the Jigx
-  mobile app, enhancing its user interface. Discover the default color palette
-  visually and how users can easily choose defa
 ---
 
 # Jigx color palette
@@ -34,10 +30,9 @@ You can define colors for branded apps in Jigx Management [Organization Settings
 Colors can be configured based on specific conditions. For example, a payment amount exceeding a certain threshold can be displayed in red. However, conditional color configurations are only available in areas that support conditions, such as list items. In contrast, direct color options are more widely supported, for example, `lists` allow both conditional and direct setups, whereas `interactive-images` only support direct options. Additionally, certain areas restrict the available color choices, while UI elements support the predefined set of fourteen colors.
 
 * When configuring the `color` property, select the `color condition`boption.
-* Under the `when` property, add an expression that defines the condition under which the specified color should be applied.
+* Under the `when` property, add an expression that defines the condition under which the specified color should be applied.&#x20;
 
-:::CodeblockTabs color-condition
-
+{% code title="color-condition" %}
 ```yaml
 color:
    - when: =@ctx.current.item.registered = true 
@@ -45,12 +40,11 @@ color:
    - when: =@ctx.current.item.registered = false
      color: color4          
 ```
+{% endcode %}
 
-color (no condition)
-
+{% code title="color (no condition)" %}
 ```yaml
 options:
   color: color2
 ```
-
-:::
+{% endcode %}

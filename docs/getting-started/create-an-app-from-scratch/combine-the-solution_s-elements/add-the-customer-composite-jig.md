@@ -3,13 +3,9 @@ title: Add the customer composite jig
 slug: M7Ir-add-the-customer-composite-jig
 createdAt: Tue Apr 11 2023 17:23:45 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 01 2023 06:01:13 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a composite Jig by combining multiple Jigs using the
-  `jig.composite` type. This comprehensive guide outlines all the necessary
-  steps, including creating the Jig file, adding a titl
 ---
 
-# Overview
+# Add the customer composite jig
 
 In this section, you learn how to join jigs to create a single jig using the `jig.composite` type, this is useful in our solution as you want to capture a new customer and see the customer added to the list directly below the form, you also add an image header to the composite jig.
 
@@ -23,8 +19,7 @@ In this section, you learn how to join jigs to create a single jig using the `ji
 4. For this jig you can delete the `onFocus` node.
 5. Under the `header` node you can leave it as is or add your own image uri. The `jig-header` component can be used in any type of jig. It serves as a container for specifying headers, such as images. Change the `height` value to small and add a `title: Customers` after options. Here is an example of the header code with an image.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 header:
   type: component.jig-header
@@ -37,17 +32,15 @@ header:
         source:
           uri: https://cdn2.webdamdb.com/v1_1280_6enPaxIBt9M3.jpg?1554490336
 ```
-
-:::
+{% endcode %}
 
 ### Add the jigIds
 
 1. Next to the `jigIds` add `new-customer` and `list- customer`. The order of the children's `jigIds` determines the display order in the app.
 2. You can remove the `inputs:` `recordid: =@ctx.jig.inputs.parameter`
-3. Your composite.jigx file should resemble the code below.
+3. Your composite.jigx file should resemble the code below.&#x20;
 
-:::CodeblockTabs composite.jigx
-
+{% code title="composite.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: Customers
@@ -74,5 +67,4 @@ children:
   - jigId: new-customer
   - jigId: list-customer
 ```
-
-:::
+{% endcode %}

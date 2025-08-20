@@ -18,10 +18,11 @@ Widgets can be customized in many ways to reflect the styling and functionality 
 2. Delete the `icon: location` entry.
 3. Add the `widget.location` code below. For the address you use [expressions](../../../building-apps-with-jigx/logic/expressions.md) to call the city New York from the static datasource.
 
-:::hint{type="info"} Expressions are JSONata language-based. Learn more about :Link\[JSONata]{href="https://jsonata.org/" newTab="true" hasDisabledNofollow="false"} and try out your expressions in their :Link\[JSONata Exerciser]{href="https://try.jsonata.org/" newTab="true" hasDisabledNofollow="false"}. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata. :::
+{% hint style="info" %}
+Expressions are JSONata language-based. Learn more about :Link\[JSONata]{href="https://jsonata.org/" newTab="true" hasDisabledNofollow="false"} and try out your expressions in their :Link\[JSONata Exerciser]{href="https://try.jsonata.org/" newTab="true" hasDisabledNofollow="false"}. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
+{% endhint %}
 
-:::CodeblockTabs map.jigx
-
+{% code title="map.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: Location with address
@@ -54,13 +55,11 @@ widgets:
       viewPoint: 
        address: =@ctx.datasources.address.city        
 ```
-
-:::
+{% endcode %}
 
 4\. Open the `composite.jigx` file and copy the code below. Note the new widgets section using `widget.image` showing a source uri for the image you want displayed.
 
-:::CodeblockTabs composite.jigx
-
+{% code title="composite.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: Customers
@@ -92,7 +91,6 @@ children:
   - jigId: new-customer
   - jigId: list-customer
 ```
-
-:::
+{% endcode %}
 
 5\. **Save** and **publish** the Hello-Jigx solution. 6. **Run** the Hello-Jigx solution on your mobile device to see the change to the map widget on the Home Hub.

@@ -3,10 +3,6 @@ title: Data planning
 slug: sgE5-data-planning
 createdAt: Wed Jul 12 2023 18:38:34 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 17 2023 14:55:27 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a data plan for app development to optimize data usage,
-  save time, and ensure accurate implementation. Follow the steps of mapping
-  data, determining sources, visualizing through ta
 ---
 
 # Data planning

@@ -3,13 +3,9 @@ title: Edit a customer record
 slug: R20--edit-a-customer-record
 createdAt: Wed Apr 12 2023 11:27:43 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 13:41:12 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a dynamic form in Jigx solution using the component.form.
-  This step-by-step guide includes examples of YAML code for adding fields, a
-  data source, and the action to submit the form
 ---
 
-# Overview
+# Edit a customer record
 
 In this section, you learn how to create a form using the `component.form` to display the fields returned from the dynamic data provider. Add an `action.submit-form` with a `method: update` that saves the changes to the record in the dynamic data provider.
 
@@ -26,8 +22,7 @@ In this section, you learn how to create a form using the `component.form` to di
 
 1. You are going to use the same datasource, query, form, and form fields that you used in the view-customer.jigx file. Use the code below.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 datasources:
   customerInfo:
@@ -64,15 +59,13 @@ children:
                   label: Email
                   initialValue: =@ctx.datasources.customerInfo.email    
 ```
-
-:::
+{% endcode %}
 
 ### Add the submit-form action to save the data
 
 1. A `submit-form` action is used to save the data from the text boxes to the SQLite database. The `submit form` action will automatically match the `instanceIds` of the controls on the jig and use the `update method` to save the changes to the record in the local SQLite table with each `instanceIds` as a property for the JSON object in the Data column. Use the submit.form action code below:
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 actions:
   - children:
@@ -87,13 +80,11 @@ actions:
           onSuccess: 
             type: action.go-back  
 ```
-
-:::
+{% endcode %}
 
 2\. Your edit-customer.jigx file should resemble the code below.
 
-:::CodeblockTabs edit-customer.jigx
-
+{% code title="edit-customer.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: Edit Customer
@@ -161,5 +152,4 @@ actions:
           onSuccess: 
             type: action.go-back  
 ```
-
-:::
+{% endcode %}

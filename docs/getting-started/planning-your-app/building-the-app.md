@@ -16,7 +16,7 @@ Now you are ready to start using your well-designed plan to build the app in Jig
 
 ### Considerations
 
-* If you not sure what component, action or widget to use in your app build - get inspired by using [Templates](../../building-apps-with-jigx/ui/jigs-_screens_/jig-templates.md), the Jigx-sample, and the Jigx-widget projects in :Link\[GitHub]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart" newTab="true" hasDisabledNofollow="false"}.
+* If you not sure what component, action or widget to use in your app build - get inspired by using [Templates](../../building-apps-with-jigx/ui/jigs-_screens_/jig-templates.md), the Jigx-sample, and the Jigx-widget projects in [GitHub](https://github.com/jigx-com/jigx-samples/tree/main/quickstart).
 * When selecting the elements to add to the YAML, consider the usability, and shortest steps possible to get to where you want in the app.
 * Minimize navigation, aim for smart navigation, 30-40 second engagement on screens, especially forms.
 * Have the required input fields on the form with optional fields in another section.
@@ -25,4 +25,4 @@ Now you are ready to start using your well-designed plan to build the app in Jig
 ### Tips
 
 * Create a prototype using [Templates](../../building-apps-with-jigx/ui/jigs-_screens_/jig-templates.md) to see if a component or jig will work in your build, from there, you can customize the template YAML snippet.
-* Practice continous testing by testing after building each screen.
+* Practice continuous testing by testing after building each screen.

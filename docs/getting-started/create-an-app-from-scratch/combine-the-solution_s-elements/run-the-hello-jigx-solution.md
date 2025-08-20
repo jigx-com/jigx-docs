@@ -3,13 +3,9 @@ title: Run the Hello Jigx Solution
 slug: Se-E-run-the-hello-jigx-solution
 createdAt: Tue Apr 11 2023 17:27:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:27:14 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to use the latest Hello Jigx solution update in our comprehensive
-  document. Simply tap on the app icon, sign in, and experience the exciting
-  features like the story image and customer compos
 ---
 
-# Overview
+# Run the Hello Jigx Solution
 
 With the final update to the Hello Jigx solution published on the server, you are ready to use the solution in the Jigx mobile app.
 

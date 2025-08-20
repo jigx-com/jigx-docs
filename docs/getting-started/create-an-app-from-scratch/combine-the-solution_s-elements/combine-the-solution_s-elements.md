@@ -4,7 +4,9 @@ In the [Build your first Jigx solution](https://docs.jigx.com/create-an-app-from
 
 Now you can expand the solution further by using the [jig.composite](https://docs.jigx.com/examples/jigcomposite) type to group the new customer jig and the customer list jig into one jig, and add a jig header to the new customer jig.
 
-:::hint{type="success"} We recommend you build out all the solution steps for the [Create an app from scratch](combine-the-solution_s-elements.md), as each solution step builds on the previous step until you have a functioning mobile app. :::
+{% hint style="success" %}
+We recommend you build out all the solution steps for the [Create an app from scratch](combine-the-solution_s-elements.md), as each solution step builds on the previous step until you have a functioning mobile app.
+{% endhint %}
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem
 
@@ -14,10 +16,10 @@ Now you can expand the solution further by using the [jig.composite](https://doc
 2. [Add the customer composite jig](add-the-customer-composite-jig.md) file that joins the new customer form and list into one jig using the new-customer and list-customer `jigIds` and add a `header` for the jig.
 3. [Edit the index.jigx file](edit-the-index_jigx-file.md), add the customer composite jigId, remove the new customer and the list customer jigIds.
 4. [Publish your project](../create-the-calendar/publish-your-project.md).
-5. [Run the updated solution](../run-the-updated-solution.md) in the Jigx mobile app, click on each jig to view the solution, note on the customer jig the form, and list display in the same jig. :::
+5. [Run the updated solution](../run-the-updated-solution.md) in the Jigx mobile app, click on each jig to view the solution, note on the customer jig the form, and list display in the same jig.
 
 :::VerticalSplitItem ![Hello Jigx solution](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6UJjBwLz27s_ddvuFwZo_hellojigxsolution.PNG) ::: ::::
 
 ## GitHub Samples
 
-You can download the :Link\[Hello Jigx solution]{href="https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution" newTab="true" hasDisabledNofollow="false"} project on GitHub or build it yourself by following the detailed steps in this section.
+You can download the [Hello Jigx solution](https://github.com/jigx-com/jigx-samples/tree/main/quickstart/hello-jigx-solution) project on GitHub or build it yourself by following the detailed steps in this section.

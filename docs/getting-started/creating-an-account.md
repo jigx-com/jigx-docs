@@ -1,16 +1,18 @@
 # Creating an account
 
-To build and use Jigx solutions you require a Jigx account. You can create an account by registering on the[https://www.jigx.com/](https://www.jigx.com/) Jigx website or via an invitation from your organization. Follow the steps below to create an account.
+To build and use Jigx solutions you require a Jigx account. You can create an account by registering on the [https://www.jigx.com/](https://www.jigx.com/) Jigx website or via an invitation from your organization. Follow the steps below to create an account.
 
 ## Register
 
-Register at :Link\[manage.jigx.com/register]{href="http://manage.jigx.com/register" newTab="true" hasDisabledNofollow="false"} to create an account.
+Register at [manage.jigx.com/register](http://manage.jigx.com/register) to create an account.
 
 ### Sign up
 
 1. Add your full name, surname, and work email address, and click the **signup** button.
 
-:::hint{type="info"} Registering with a non-work email e.g. Gmail does not check for existing organizations or allow other people to find your organization during registration. To join or share your organization you need to invite people from Jigx Management. :::
+{% hint style="info" %}
+Registering with a non-work email e.g. Gmail does not check for existing organizations or allow other people to find your organization during registration. To join or share your organization you need to invite people from Jigx Management.
+{% endhint %}
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L\_register1.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L\_register1.png" size="48" width="1070" height="1300" position="center" caption="Registration screen" alt="Registration screen"}
 
@@ -66,5 +68,5 @@ Enter the One-Time Password (OTP) received in the email into the 2-Step verifica
 
 Once your new password is set, the [Home Hub](../building-apps-with-jigx/ui/home-hub/home-hub.md) screen displays.
 
-* When there are no solutions assigned to your account the home hub is empty. Assign solutions on the :Link\[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"} website
+* When there are no solutions assigned to your account the home hub is empty. Assign solutions on the [Jigx Management](https://manage.jigx.com/) website
 * If you have solutions assigned to your Jigx account, you will see the assigned solution on the Home Hub.

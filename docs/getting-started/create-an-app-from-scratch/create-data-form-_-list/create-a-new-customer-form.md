@@ -3,13 +3,9 @@ title: Create a new customer form
 slug: Yy55-create-a-new-customer-form
 createdAt: Wed Apr 12 2023 11:27:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 13:36:50 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a two-column form with three fields using JigxBuilder in
-  VSCode. Capture customer information and save it to a SQLite database with the
-  action button. Easily navigate back to HomeH
 ---
 
-# Overview
+# Create a new customer form
 
 In this section, you learn how to create a form with a two-column layout and three fields, and how to configure an action button on the form that will create the record in the [Dynamic data provider](../../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md).
 
@@ -24,8 +20,7 @@ In this section, you learn how to create a form with a two-column layout and thr
 5. You can delete this jig's header, onFocus, and datasource lines.
 6. The controls displayed on the jig are defined under the `children` node on a default jig. All the input controls are placed on a `form component`. A control is uniquely identified by its `instanceId`. They are added as children of a `field-row component` to display two controls next to each other. A `text-field component` is used to capture text information on a form, and the `email field component` is used to capture email addresses. Under the `children:` node, add these fields as shown below to capture the customer's first and last name and email address:
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 children:
   - type: component.form
@@ -48,15 +43,13 @@ children:
           options:
             label: Email
 ```
-
-:::
+{% endcode %}
 
 ### Add the submit form action (button)
 
 1. The top-level action on a \*default \*jig places a button at the bottom of the screen. A _submit-form action_ saves the data from the text boxes to the SQLite database. The `submit form action` automatically matches the `instanceIds` of the controls on the jig and creates a record in the local SQLite table with each `instanceIds` as a property for the JSON object in the Data column. At the same root YAML level as `children:` use **ctrl+space** to add the `actions` node. Use the code below to create the `action.submit-form` type, define the data provider to be the Dymamic data provider, and use the `method: create` to save the record.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 actions:
   - children:
@@ -68,25 +61,21 @@ actions:
           entity: default/customers
           method: create
 ```
+{% endcode %}
 
-:::
+2\. After the record is created you want to navigate back to the Home Hub, add the `onSuccess: type: action.go-back` action to the bottom of the actions node. 3. With Dynamic Data you need to add the reference to the table in the database. In the databases node click on the _default.jigx_ file. Type `customers: null` under `tables:` as shown below.&#x20;
 
-2\. After the record is created you want to navigate back to the Home Hub, add the `onSuccess: type: action.go-back` action to the bottom of the actions node. 3. With Dynamic Data you need to add the reference to the table in the database. In the databases node click on the _default.jigx_ file. Type `customers: null` under `tables:` as shown below.
-
-:::CodeblockTabs default.jigx
-
+{% code title="default.jigx" %}
 ```yaml
 # tables:
 tables:
   customers: null
 ```
-
-:::
+{% endcode %}
 
 4\. Your new-customer.jigx file should resemble the code below.
 
-:::CodeblockTabs new-customer.jigx
-
+{% code title="new-customer.jigx" %}
 ```yaml
 # The system name that uniquely identifies the jig
 title: New Customer
@@ -143,5 +132,4 @@ actions:
           onSuccess: 
             type: action.go-back
 ```
-
-:::
+{% endcode %}

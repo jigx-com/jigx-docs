@@ -3,10 +3,6 @@ title: Solution Requirements
 slug: awik-solution-requirements
 createdAt: Wed Jul 12 2023 18:38:41 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 17 2023 14:55:03 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to identify and define your mobile app's requirements with this
-  comprehensive step-by-step guide. From determining its purpose to creating
-  user flow diagrams and considering target audience
 ---
 
 # Solution Requirements
