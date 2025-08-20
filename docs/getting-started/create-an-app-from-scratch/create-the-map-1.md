@@ -9,7 +9,7 @@ description: >-
   with the jig.default type, utilizing an icon an
 ---
 
-# Overview
+# Create the Map
 
 Learn how to build your first jig by using this simple step-by-step guide that displays a marker on a map. The solution uses the [jig.default](https://docs.jigx.com/examples/jigdefault) type with an icon and a [static data](https://docs.jigx.com/examples/static) source. At the end of this step-by-step, you will have built a solution that can display a location marker on a map as shown :Comment\[below]{resolved="true" docCommentId="jC6dDXJ4WPnFHouElOT7n"}. See [Jigx Concepts](<../../Understanding the basics/Jigx Concepts.md>) to learn what jigs and widgets are.
 
@@ -19,7 +19,7 @@ Learn how to build your first jig by using this simple step-by-step guide that d
 
 ## Steps
 
-1. [Create the Hello Jigx project](create-the-hello-jigx-solution-project.md) in the Jigx Builder.
+1. [Create the Hello Jigx project](broken-reference) in the Jigx Builder.
 2. [Add the jig.default](create-the-map/adding-the-map-jig.md) with an icon, and static data source.
 3. [Publish the project](create-the-map/publish-the-project.md).
 4.  [Open the Jigx mobile app](run-the-solution-in-the-app.md), click on the location jig, and view the map.
