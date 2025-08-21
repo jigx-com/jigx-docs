@@ -3,19 +3,17 @@ title: Microsoft Graph OAuth
 slug: LkgK-microsoft-graph
 createdAt: Sun Mar 26 2023 16:59:31 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon May 06 2024 15:10:22 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to integrate Jigx with Microsoft Graph using REST API. This
-  comprehensive guide covers essential code samples and step-by-step
-  instructions for authentication, including setting up an admini
 ---
 
 # Microsoft Graph OAuth
 
 This section contains steps to create an OAuth app for MS Graph, add the OAuth configuration to Jigx Management and then use the configuration in a Jigx solution. Various code samples showing how to use the Microsoft Graph API with the REST data provider are provided.
 
-:::hint{type="info"} To use Jigx with Microsoft Graph you will need an administrative account for Microsoft AAD to configure a Jigx Enterprise App, allowing Jigx to use OAuth authentication with Microsoft Graph.
+{% hint style="info" %}
+To use Jigx with Microsoft Graph you will need an administrative account for Microsoft AAD to configure a Jigx Enterprise App, allowing Jigx to use OAuth authentication with Microsoft Graph.
 
-Follow the steps in [Configuring OAuth for MS Graph](configuring-oauth-for-ms-graph/configuring-oauth-for-ms-graph.md) to configure OAuth for the Microsoft environment being used and add the necessary settings to Jigx Cloud. :::
+Follow the steps in [Configuring OAuth for MS Graph](configuring-oauth-for-ms-graph/configuring-oauth-for-ms-graph.md) to configure OAuth for the Microsoft environment being used and add the necessary settings to Jigx Cloud.&#x20;
+{% endhint %}
 
 ### Examples and code snippets
 

@@ -10,7 +10,9 @@ Key:
 4. **Save data to SQLite and sync data to the cloud** Update the local SQLite and sync to the cloud in a single action to ensure high-performing user experiences without lag. Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST` or `DATA_PROVIDER_SQL`. Specify the function call to make, the local entity/table to update, and the method to perform on the local table. If the method is an update, delete, or save, specify the record's ID.
 5. **Save data to the cloud ONLY** Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST` or `DATA_PROVIDER_SQL`. Set the method to functionCall and specify the function to be called. The local tables will not be updated; you must sync the data from the cloud before it is available to display on a jig.
 
-:::hint{type="info"} Dynamic Data automatically syncs its data with the cloud when server-side or device-side updates are made to the tables, using `DATA_PROVIDER_DYNAMIC`. :::
+{% hint style="info" %}
+Dynamic Data automatically syncs its data with the cloud when server-side or device-side updates are made to the tables, using `DATA_PROVIDER_DYNAMIC`.&#x20;
+{% endhint %}
 
 ## Using sync-entities action
 

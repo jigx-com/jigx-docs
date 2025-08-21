@@ -1,11 +1,13 @@
 # Inputs & outputs (Alpha)
 
-:::hint{type="danger"} This feature is currently in its **Alpha** stage of development.
+{% hint style="danger" %}
+This feature is currently in its **Alpha** stage of development.
 
 * As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 * In this phase, the feature may contain bugs or behave unpredictably.
 * Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases. :::
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
+{% endhint %}
 
 Use inputs and outputs to transfer and read data in custom components. This approach lets you configure a component once and reuse it across multiple screens or even on the same screen. By simply defining different inputs and outputs each time the component is used, you can display varied data and adapt to different contexts effortlessly.
 
@@ -26,8 +28,8 @@ For more examples using inputs, see the following:
 | [Cards with charts](https://docs.jigx.com/examples/card-alpha#6_eE4)                           | [Sections](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#sQJ4v) | [Toggles](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#BM6V-) |
 | [Countdown](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#iIk03) | [Stepper](https://docs.jigx.com/examples/combine-custom-and-standard-components-alpha#PbExW)  |                                                                                              |
 
-:::CodeblockTabs custom-component.jigx
-
+{% tabs %}
+{% tab title="custom-component.jigx" %}
 ```yaml
 # components/media-types.jigx
 type: component.default
@@ -375,9 +377,9 @@ children:
                 state: =@ctx.solution.state.tab
                 value: =@ctx.inputs.tabValue4
 ```
+{% endtab %}
 
-jig.jigx
-
+{% tab title="jig.jigx" %}
 ```yaml
 # jigs/media.jigx
 title: Media
@@ -429,8 +431,8 @@ children:
             tabValue2: tab2
             tabValue3: tab3
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Outputs
 
@@ -446,8 +448,8 @@ children:
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" size="56" position="center" caption="Output data to image label" alt="Output data to image label" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" width="714" height="1438" darkWidth="714" darkHeight="1438"} ::: ::::
 
-:::CodeblockTabs custom-component
-
+{% tabs %}
+{% tab title="custom-component" %}
 ```yaml
 type: component.default
 componentId: brand-form
@@ -469,9 +471,9 @@ children:
                 options:
                   label: Company Name
 ```
+{% endtab %}
 
-jig.jigx
-
+{% tab title="jig.jigx" %}
 ```yaml
 title: Jars of health
 description: Label your favorite jar
@@ -501,8 +503,8 @@ children:
       source:
         uri: https://images.unsplash.com/photo-1691480208637-6ed63aac6694?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmxhbmslMjBsYWJlbHxlbnwwfHwwfHx8MA%3D%3D
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### See also
 

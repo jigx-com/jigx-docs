@@ -3,10 +3,6 @@ title: Users
 slug: hy9S-users
 createdAt: Tue Jun 07 2022 09:54:10 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Oct 02 2024 12:19:37 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to effectively manage users in your organization's mobile app.
-  Discover how the Users area empowers administrators with insights into users'
-  roles, assigned solutions, and invitation status.
 ---
 
 # Users
@@ -21,13 +17,17 @@ In the Users list, you can view each user's current **organizational role**, ass
 
 ### Inviting Users
 
-:::hint{type="info"} Before you can invite users to your organization via email, check the **Invites** setting in [Organization Settings](../administration/organization-settings/organization-settings.md). The language-specific invite templates have to be set up before you can start inviting users. At least one language and the corresponding invite template setup is required. :::
+{% hint style="info" %}
+Before you can invite users to your organization via email, check the **Invites** setting in [Organization Settings](../administration/organization-settings/organization-settings.md). The language-specific invite templates have to be set up before you can start inviting users. At least one language and the corresponding invite template setup is required.
+{% endhint %}
 
 To add users to your organization, you need to invite them. Click on **Invite User** at the top right of the screen to open the side panel. Fill in the user's details, select a default language to be used for the invite email, and click **Invite**. Next assign [Solutions](../administration/solutions/solutions.md) to the invited user by clicking on the user's name in the list and then navigating to Solutions. Click on **Add solutions** at the top right of the screen to open the side panel. Select the solutions you want to assign to the user and click **Add solution**.
 
 The user will receive an invite email with instructions on how to onboard. Once the user onboards successfully, the invite status will change to _Active_ in the user overview.
 
-:::hint{type="success"} To bulk invite users, contact Jigx support at _**support@jigx.com**_. :::
+{% hint style="success" %}
+To bulk invite users, contact Jigx support at _**support@jigx.com**_.
+{% endhint %}
 
 ![Inviting Users](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6pMhHKezYnYmf0oVPcY8y_jm-invitel.png)
 
@@ -35,7 +35,9 @@ The user will receive an invite email with instructions on how to onboard. Once 
 
 If you want to re-invite the user because they did not accept your invitation or an error occurred, click on the user's name and click the **Resend invite** link at the top of the page. Next, select a language for the invite, a message displays stating that the invite has been sent.
 
-:::hint{type="warning"} If users don't receive the invite emails, ask them to **check their junk or spam email folder**. :::
+{% hint style="warning" %}
+If users don't receive the invite emails, ask them to **check their junk or spam email folder**.
+{% endhint %}
 
 ### Assigning Solutions to Users
 
@@ -71,7 +73,7 @@ Troubleshooting in Jigx Management helps identify problems when an app crashes, 
 
 There are three levels of troubleshooting in Jigx Management.
 
-1. [Troubleshooting (Organization)](docId:pQc4nyhx_9tTLoyDm4MVu)\*\* \*\*- provides troubleshooting context for all users and solutions in that organization. The exact Correlation ID is required to start troubleshooting.
+1. [Troubleshooting (Organization)](docId:pQc4nyhx_9tTLoyDm4MVu)- provides troubleshooting context for all users and solutions in that organization. The exact Correlation ID is required to start troubleshooting.
 2. [Users](docId:hy9SNgXQZpRAbe51imv7Q) - provides troubleshooting context only for that specific user, and spans across all solutions assigned to that user
 3. [Troubleshooting (Solution)](docId:tzQJID9go54bvHZap88co) - provides troubleshooting context only for that specific solution, and spans across users using that solution. When clicking on the Correlation ID the next level of detail shows who the user was at the top right of the screen.
 

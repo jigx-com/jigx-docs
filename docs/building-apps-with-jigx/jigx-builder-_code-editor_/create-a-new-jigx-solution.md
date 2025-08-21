@@ -3,10 +3,6 @@ title: Create a new Jigx Solution
 slug: 01r5-creating-a-new-solution
 createdAt: Tue Jun 20 2023 08:34:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:39:01 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to create a Jigx app using JigxBuilder and publish it to Jigx Cloud.
-  Follow the step-by-step guide to build a unique title, system name, category,
-  and location for your app. Start by opening
 ---
 
 # Create a new Jigx Solution
@@ -26,12 +22,12 @@ Every Jigx solution requires the following:
 * **Solution location** - either on your local machine or in a Git repository.
 * **Index.jigx** - The index.jigx file is the home screen for the app. Add tabs to determine the layout. See [Home Hub](../ui/home-hub/home-hub.md) and [Index settings](../ui/home-hub/index-settings.md) for more information.
 
-::embed\[]{url="https://vimeo.com/829859076?share=copy"}
+{% embed url="https://vimeo.com/829859076?share=copy" %}
 
 ### Steps
 
 1. Open VS Code, and click on the Jigx Builder **icon** in the left navigation bar. Select the **Create New Jigx Solution** button.
-2. Provide a \*\*solution title \*\*and press enter.
+2. Provide a **solution title** and press enter.
 3. The **Solution name** field pre-populates with the solution's system name. You can provide a different solution name if you want.
 4. Select a relevant **category** where you want the solution saved.
 5. Select a local folder or Git repository where the project files are saved too.

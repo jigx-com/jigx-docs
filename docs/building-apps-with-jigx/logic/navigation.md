@@ -4,55 +4,45 @@ Navigation allows you to flow through the app. Whenever you [go-to](https://docs
 
 The [go-to](https://docs.jigx.com/examples/go-to) action is used to configure the flow of jigs in the app using the `behaviour` property. With the `behaviour` you determine if you want to push the screen into the app history, by using the `new` value, or show the one you already have in history by using the `existing` value.
 
-1. **New** - creates a sequential stack showing the progression of navigation. Presents a new screen you are navigating to, allowing you to capture the next data set to add to the stack currently in the history. Typically, this would be used to capture the next line in an invoice.
-   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" size="38" position="center" caption="State Navigation- New" alt="State Navigation- New" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" width="800" height="776" darkWidth="800" darkHeight="776"}
-2. **Existing** - jumps to previously visited screens by recognizing existing instances. Displays the data of the existing screen you are navigating to, typically used when you want to review the captured lines in an invoice before submitting.
-   ::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea_AXArXooV75ziT40x-20241126-063100.png" size="22" position="center" caption="State Navigation- Existing" alt="State Navigation- Existing" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea_AXArXooV75ziT40x-20241126-063100.png" width="800" height="1319" darkWidth="800" darkHeight="1319"}
+1. **New** - creates a sequential stack showing the progression of navigation. Presents a new screen you are navigating to, allowing you to capture the next data set to add to the stack currently in the history. Typically, this would be used to capture the next line in an invoice. ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" size="38" position="center" caption="State Navigation- New" alt="State Navigation- New" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-aM4LHwjo8P7zlBaOeBeni-20241126-062656.png" width="800" height="776" darkWidth="800" darkHeight="776"}
+2. **Existing** - jumps to previously visited screens by recognizing existing instances. Displays the data of the existing screen you are navigating to, typically used when you want to review the captured lines in an invoice before submitting. ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea\_AXArXooV75ziT40x-20241126-063100.png" size="22" position="center" caption="State Navigation- Existing" alt="State Navigation- Existing" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BJea\_AXArXooV75ziT40x-20241126-063100.png" width="800" height="1319" darkWidth="800" darkHeight="1319"}
 
 ## How to configure navigation
 
-::::WorkflowBlock
-:::WorkflowBlockItem
-In the [go-to](https://docs.jigx.com/examples/go-to) action use the `behaviour` property to select `new` or `existing`.
-:::
+{% stepper %}
+{% step %}
+In the [go-to](https://docs.jigx.com/examples/go-to) action use the `behaviour` property to select `new` or `existing`.&#x20;
+{% endstep %}
 
-:::WorkflowBlockItem
-Configure the `LinkTo` property with the jig name you want to open next.
-:::
+{% step %}
+Configure the `LinkTo` property with the jig name you want to open next.&#x20;
+{% endstep %}
 
-:::WorkflowBlockItem
-Configure `inputs` if you are wanting to pass data between jigs.
-:::
-::::
+{% step %}
+Configure `inputs` if you are wanting to pass data between jigs.&#x20;
+{% endstep %}
+{% endstepper %}
 
-## Considerations:&#x20;
+## Considerations:
 
-- By adding an `instanceId` to the `go-to` action, you choose if you want to create a new state or you want to *reuse the existing state* of a jig. Do not confuse this with the `behaviour` property's functionality.
-- If no `inputs` and `instanceId` are specified, the `instanceId` of the jig is set to `no-inputs`.
-- If an `instanceId` is specified, but `inputs` are not, then the `instanceId` uses the one specified.
-- If an `instanceId` and `inputs` are specified the `instanceId` uses the one specified.
-- If no `instanceId` is specified and `inputs` are specified the `instanceId` is hash (uuid) of the `inputs`.
+* By adding an `instanceId` to the `go-to` action, you choose if you want to create a new state or you want to _reuse the existing state_ of a jig. Do not confuse this with the `behaviour` property's functionality.
+* If no `inputs` and `instanceId` are specified, the `instanceId` of the jig is set to `no-inputs`.
+* If an `instanceId` is specified, but `inputs` are not, then the `instanceId` uses the one specified.
+* If an `instanceId` and `inputs` are specified the `instanceId` uses the one specified.
+* If no `instanceId` is specified and `inputs` are specified the `instanceId` is hash (uuid) of the `inputs`.
 
 ## Example and code snippets
 
-:::::ExpandableHeading
 ### go-to using new & existing behaviour
 
 In this example, three jigs are configured to create a stack of data for each guest, including their Name, Age, and Address. Each jig's `go-to` action is set with the `behaviour` property as `new`, enabling new guest details to be pushed into the app history. In the final jig, a secondary `go-to` action is added. This action introduces a button to review each guest's data by setting the `behaviour` property to `existing` and linking to the first jig in the stack via the `linkTo` property. The review process will cycle through each guest's details in the stack before completing.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07_99i4UGP-20250225-083249.gif" size="60" width="681" height="1377" position="center" caption="Go-to new guest" alt="Go-to new guest "}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07\_99i4UGP-20250225-083249.gif" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-n3eW-VzxpBr07\_99i4UGP-20250225-083249.gif" size="60" width="681" height="1377" position="center" caption="Go-to new guest" alt="Go-to new guest "} :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc_azd0-20250225-083738.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc\_azd0-20250225-083738.gif" size="60" position="center" caption="Review guests" alt="Review guests" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Bszd6R8XHdHmvdZc\_azd0-20250225-083738.gif" width="681" height="1377" darkWidth="681" darkHeight="1377"} ::: ::::
 
-:::CodeblockTabs
-jig-a.jigx
-
+{% tabs %}
+{% tab title="jig-a.jigx" %}
 ```yaml
 title: Name
 type: jig.default
@@ -110,9 +100,9 @@ actions:
                 # Configure which jig must open next.
                 linkTo: jig-b
 ```
+{% endtab %}
 
-jig-b.jigx
-
+{% tab title="jig-b.jigx" %}
 ```yaml
 title: Age
 type: jig.default
@@ -170,9 +160,9 @@ actions:
                 # Configure which jig must open next in the stack.
                 linkTo: jig-c
 ```
+{% endtab %}
 
-jig-c.jigx
-
+{% tab title="jig-c.jigx" %}
 ```yaml
 title: Address
 type: jig.default
@@ -235,6 +225,5 @@ actions:
           # for each stack captured.
           linkTo: jig-a
 ```
-:::
-:::::
-
+{% endtab %}
+{% endtabs %}

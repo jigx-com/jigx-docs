@@ -30,8 +30,6 @@ The `output` and `input` work in conjunction with each other.
 
 ## Examples
 
-:::::ExpandableHeading
-
 ### Passing data via outputs to connect two jigs data in a composite jig
 
 In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the List of available services, the service details for that specific service populates.
@@ -44,8 +42,8 @@ In this example, cleaning services are listed, initally the service details are 
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx\_outputjig.PNG" size="64" position="center" caption="Available services list" alt="Available services list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx\_outputjig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
 
-:::CodeblockTabs cleaning-serv-horizon-list-dd.jigx
-
+{% tabs %}
+{% tab title="cleaning-serv-horizon-list-dd.jigx" %}
 ```yaml
 title: List of available services
 type: jig.list
@@ -100,9 +98,9 @@ item:
               state: =@ctx.solution.state.servicesId
               value: =@ctx.current.item.id
 ```
+{% endtab %}
 
-cleaning-services-dynamic.jigx
-
+{% tab title="cleaning-services-dynamic.jigx" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -128,8 +126,8 @@ options:
       '$.quantity'
     FROM [default/cleaning-services] WHERE '$.hourlyrate' IS NOT NULL ORDER BY id DESC
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 **Jig - service details**
 
@@ -137,8 +135,7 @@ options:
 
 :::VerticalSplitItem Create a default jig with `component.entity` to display the various details such as service name, time, and cost. Define the datasource and configure a `queryParameters:` `servId: =@ctx.solution.state.servicesId` ::: ::::
 
-:::CodeblockTabs service-details.jigx
-
+{% code title="service-details.jigx" %}
 ```yaml
 title: =@ctx.datasources.cleaningServices.service != null ? "Service details":" "
 type: jig.default
@@ -227,8 +224,7 @@ children:
                   value: ='$ ' & $number(@ctx.datasources.cleaningServices.onceoffrate)
                   isHidden: =(@ctx.datasources.cleaningServices.onceoffrate) = null ? true:false
 ```
-
-:::
+{% endcode %}
 
 **Composite jig - combining output with input**
 
@@ -236,10 +232,11 @@ children:
 
 :::VerticalSplitItem ![composite jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/quY4iBb6PDDYEA4BKFqD3_compositej.PNG) ::: ::::
 
-:::hint{type="info"} You have to provide an `instanceId` for the jig that is exposing an output in order to access the output via state from another jig. :::
+{% hint style="info" %}
+You have to provide an `instanceId` for the jig that is exposing an output in order to access the output via state from another jig.
+{% endhint %}
 
-:::CodeblockTabs composite.jigx
-
+{% code title="composite.jigx" %}
 ```yaml
 type: jig.composite
 title: Cleaning Services
@@ -267,5 +264,4 @@ children:
     inputs:
       id: =@ctx.jigs.cleaning.outputs.output-key
 ```
-
-::: :::::
+{% endcode %}

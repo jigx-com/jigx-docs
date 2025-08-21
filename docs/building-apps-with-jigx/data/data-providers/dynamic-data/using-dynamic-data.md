@@ -14,8 +14,7 @@ Dynamic Data can be:
 
 The Dynamic Data provider is used in Jigx Builder in the SQLite datasource either inside a single jig (locally) or under the datasources folder structure (global), allowing the data to be called once and reused throughout the solution in multiple jigs. Write SQLite queries to return the exact data you need to work with.
 
-:::CodeblockTabs sqlite-datasource-dd
-
+{% code title="sqlite-datasource-dd" %}
 ```yaml
 # Use the sqlite datasource with the dynamic data provider.
 type: "datasource.sqlite"
@@ -42,8 +41,7 @@ options:
       '$.modify' 
     FROM [default/employees] WHERE '$.category' = "employee-detail"
 ```
-
-:::
+{% endcode %}
 
 ### In components
 

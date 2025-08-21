@@ -17,13 +17,10 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 In the [execute-entity](https://docs.jigx.com/examples/execute-entity), [execute-entities](https://docs.jigx.com/examples/execute-entities) , and [submit-form](https://docs.jigx.com/examples/submit-form) actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
 
-| **Property** | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `replace`    | All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits. The `queueOperation: replace` requires an `id` (must be in lowercase). This can either be configured in the: `Parameter` of the `execute-entity` action with an `id` configured in the `parameters` of the function file. `data` property in the `execute-entity` action. |
-| `add`        | All commands are added to the queue. When the `queueOperation` property is omitted, the default is `add`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+<table><thead><tr><th width="137.48046875">Property</th><th>description</th></tr></thead><tbody><tr><td><code>replace</code></td><td>All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits. The <code>queueOperation: replace</code> requires an <code>id</code> (must be in lowercase). This can either be configured in the: <code>Parameter</code> of the <code>execute-entity</code> action with an <code>id</code> configured in the <code>parameters</code> of the function file. <code>data</code> property in the <code>execute-entity</code> action.</td></tr><tr><td><code>add</code></td><td>All commands are added to the queue. When the <code>queueOperation</code> property is omitted, the default is <code>add</code>.</td></tr></tbody></table>
 
-:::CodeblockTabs execute-entity-replace
-
+{% tabs %}
+{% tab title="execute-entity-replace" %}
 ```yaml
 actions:
   - children:
@@ -59,9 +56,9 @@ actions:
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)
 ```
+{% endtab %}
 
-execute-entity-add
-
+{% tab title="execute-entity-add" %}
 ```yaml
 actions:
   - children:
@@ -97,13 +94,13 @@ actions:
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)   
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 Examples of configuring the required `id` property when using `queueOperation: replace`.
 
-:::CodeblockTabs execute-entity-data-id
-
+{% tabs %}
+{% tab title="execute-entity-data-id" %}
 ```yaml
 # This action is configured with a replace queue operation and the id is 
 # specified, in the data property. The id comes from an input.
@@ -139,9 +136,9 @@ actions:
             customerType: =@ctx.components.customerType.state.value
             email: =$lowercase(@ctx.components.email.state.value)
 ```
+{% endtab %}
 
-execute-entity-parameters-id
-
+{% tab title="execute-entity-parameters-id" %}
 ```yaml
 # This action is configured with a replace queue operation and the id is specified,
 # in the paramaters property. 
@@ -180,15 +177,14 @@ actions:
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)   
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## How to clear the queue
 
 For scenarios where operations on a record must be treated as draft and all queued commands must be removed without impacting the local record, use the `clear-queue` action, and specify the `id` of the record and a `title` for the action. See [clear all commands in the queue ](https://docs.jigx.com/offline-remote-data-handling#wzf1K)example.
 
-:::CodeblockTabs clear-queue-action
-
+{% code title="clear-queue-action" %}
 ```yaml
 actions:
   - children:
@@ -197,8 +193,7 @@ actions:
           title: Remove record from Queue
           id: =@ctx.datasources.region.id
 ```
-
-:::
+{% endcode %}
 
 ## Queue handling for delete methods
 
@@ -206,10 +201,9 @@ When using the `replace` property with a `delete` method, all commands on the qu
 
 If the record to be delete has a valid Id then the `queueOperations: add` is used to add the record to the queue, when the device is back online the queue is processed and the record is deleted using the function.
 
-If you want to cater for both tempId and avalid Id records when offline in one `queueOperation` configuration use the following expression `=$isTempId(@ctx.current.item.id) ? replace:add`
+If you want to cater for both tempId and a valid Id records when offline in one `queueOperation` configuration use the following expression `=$isTempId(@ctx.current.item.id) ? replace:add`
 
-:::CodeblockTabs execute-entity-delete
-
+{% code title="execute-entity-delete" %}
 ```yaml
 actions:
   - children:
@@ -231,8 +225,7 @@ actions:
           data:
             id: =@ctx.current.item.id
 ```
-
-:::
+{% endcode %}
 
 ## Handling TempIds
 
@@ -246,8 +239,8 @@ In this example, when the device is offline and a customer record is created and
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" size="34" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" caption width="338" height="680" darkWidth="338" darkHeight="680"}
 
-:::CodeblockTabs new-customer.jigx
-
+{% tabs %}
+{% tab title="new-customer.jigx" %}
 ```yaml
 title: New Customer
 type: jig.default
@@ -435,9 +428,9 @@ actions:
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value   
 ```
+{% endtab %}
 
-update-customer.jigx
-
+{% tab title="update-customer.jigx" %}
 ```yaml
 title: Update Customer
 type: jig.default
@@ -648,9 +641,9 @@ actions:
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value    
 ```
+{% endtab %}
 
-rest-create-customer.jigx (function)
-
+{% tab title="rest-create-customer.jigx (function)" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Create new record in the backend
@@ -755,9 +748,9 @@ outputTransform: |
     "status": status
   }
 ```
+{% endtab %}
 
-rest-update-customer.jigx (function)
-
+{% tab title="rest-update-customer.jigx (function)" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PUT
@@ -856,15 +849,15 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Execute-entity with queueOperation (add)
 
 In this example, when the device is offline and a customer record is updated multiple times , all the update commands are queued. When the device is back online the queue is cleared.
 
-:::CodeblockTabs update-customer.jigx
-
+{% tabs %}
+{% tab title="update-customer.jigx" %}
 ```yaml
 title: Update Customer
 type: jig.default
@@ -1071,8 +1064,10 @@ actions:
             zip: =@ctx.components.zip.state.value    
 ```
 
-rest-update-customer.jigx (function)
 
+{% endtab %}
+
+{% tab title="rest-update-customer.jigx (function)" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PUT
@@ -1170,15 +1165,15 @@ inputTransform: |
     "jobTitle": jobTitle
   }
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Execute-entity (delete) with queueOperation (replace)
 
 In this example, when the device is offline and a customer record is updated multiple times and then deleted, all the the commands for the record are removed from the queue and local entity is deleted. When the device is back online the queue is cleared.
 
-:::CodeblockTabs delete-customer
-
+{% tabs %}
+{% tab title=" delete-customer" %}
 ```yaml
 title: Customers
 type: jig.list
@@ -1280,9 +1275,9 @@ item:
                 description: |
                   =('Press Confirm to permanently delete ' & @ctx.current.item.companyName)
 ```
+{% endtab %}
 
-rest-delete-customer.jigx (function)
-
+{% tab title="rest-delete-customer.jigx (function)" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: DELETE
@@ -1305,8 +1300,8 @@ parameters:
     location: query
     required: true
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Execute-entity with queueOperations when no id is returned
 
@@ -1315,8 +1310,8 @@ In this example, the remote data store does not return an id, and we need to syn
 * The first action checks to see if a record has a tempId by using the following expression `when: =$isTempId(@ctx.jig.inputs.customer.id)`. If the record on the queue has a tempId, we replace it using the **create** method with a new item that will be placed on the queue.
 * The second action checks to see if the record has a valid Id rather than a tempId by using the following expression `when: =$not($isTempId(@ctx.jig.inputs.customer.id))`. If the record on the queue has a valid id, we replace it using the **update** method with an item that will be placed on the queue.
 
-:::CodeblockTabs new-customer.jigx
-
+{% tabs %}
+{% tab title="new-customer.jigx" %}
 ```yaml
 title: New Customer
 type: jig.default
@@ -1502,9 +1497,9 @@ actions:
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value   
 ```
+{% endtab %}
 
-update-customer.jigx
-
+{% tab title="update-customer.jigx" %}
 ```yaml
 title: Update Customer
 type: jig.default
@@ -1760,9 +1755,9 @@ actions:
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value   
 ```
+{% endtab %}
 
-rest-create-customer.jigx (function)
-
+{% tab title="rest-create-customer.jigx (function)" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 # Create new record in the backend
@@ -1858,15 +1853,14 @@ inputTransform: |
 # because the backend cannot associate the records after the sync. Have a look at
 # the Update jig to see the correct way of dealing with this scenario.
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Clear all commands in the queue for record
 
-In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`.
+In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`.&#x20;
 
-:::CodeblockTabs clear-customer-updates.jigx
-
+{% code title="clear-customer-updates.jigx" %}
 ```yaml
 title: Update Customer
 type: jig.default
@@ -2080,15 +2074,13 @@ actions:
           title: Cancel all updates
           id: =@ctx.jig.inputs.customer.id
 ```
-
-:::
+{% endcode %}
 
 ### Testing and debugging queues
 
 As you add the `queueOperation` property to actions, it is helpful to test or debug that the commands are being executed as configured. Here is a jig that can help you see the commands being queued when the device is offline, and then see the queue clear when the device is back online.
 
-:::CodeblockTabs debugging-queues
-
+{% code title="debugging-queues" %}
 ```yaml
 title: Queue
 type: jig.list
@@ -2122,5 +2114,4 @@ item:
     subtitle: =@ctx.current.item.type & ' ' & @ctx.current.item.state
     description: =@ctx.current.item.error
 ```
-
-:::
+{% endcode %}

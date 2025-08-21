@@ -2,7 +2,7 @@
 
 Jigx easily integrates with your Salesforce instance, allowing you to share data about customers, sales processes, marketing campaigns, and more. The Jigx Salesforce provider exposes the standard and custom Salesforce objects. You can manage your customer data, such as leads, contacts, accounts, and opportunities, using CRUD methods.
 
-::embed\[]{url="https://vimeo.com/846066533"}
+{% embed url="https://vimeo.com/846066533" %}
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](salesforce.md), or [steppers](https://docs.jigx.com/examples/stepper). :::
 
@@ -16,7 +16,7 @@ The Salesforce provider uses the Jigx Cloud service, where the data passes throu
 
 1. You must have an active Salesforce account.
 2. Permissions set in Salesforce are adhered to in the Jigx App. This means you can see the same data in the app as in Salesforce. When viewing the data in the Jigx App you will be prompted to sign in with your Salesforce credentials.
-3. Building apps using the Salesforce provider requires a pre-existing knowledge of Salesforce objects, their records, fields, tables, and variables. Take note of the required fields for each table. An overview of Salesforce objects is available in the Salesforce platform; follow the path Settings > Setup Home > Object Manager > Schema Builder or refer to the :Link\[Salesforce object reference documentation]{href="https://developer.salesforce.com/docs/atlas.en-us.object\_reference.meta/object\_reference/sforce\_api\_objects\_concepts.htm" newTab="true" hasDisabledNofollow="false"}. Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data.
+3. Building apps using the Salesforce provider requires a pre-existing knowledge of Salesforce objects, their records, fields, tables, and variables. Take note of the required fields for each table. An overview of Salesforce objects is available in the Salesforce platform; follow the path Settings > Setup Home > Object Manager > Schema Builder or refer to the [Salesforce object reference documentation](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_concepts.htm). Tools such as [https://workbench.developerforce.com/login.php](https://workbench.developerforce.com/login.php) are helpful when building queries to return the correct Salesforce data.
 
 ## Supported methods:
 

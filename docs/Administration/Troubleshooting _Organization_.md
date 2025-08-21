@@ -3,10 +3,6 @@ title: Troubleshooting (Organization)
 slug: pQc4-troubels
 createdAt: Tue May 23 2023 15:01:27 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 24 2023 13:30:16 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to configure logging on the JigxApp to efficiently resolve issues
-  with this helpful document. Designed for Solution Owners or Organization
-  Owners, it offers expert advice on troubleshooting
 ---
 
 # Troubleshooting (Organization)

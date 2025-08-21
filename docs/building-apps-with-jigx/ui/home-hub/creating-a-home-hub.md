@@ -2,14 +2,14 @@
 
 Creating a home screen (hub) for a mobile app can be a great way to enhance the user experience and provide more functionality. In this section, we will explore the benefits of creating a home screen and the steps involved in configuring one.
 
-## How to create a  Home Hub
+## How to create a Home Hub
 
 Steps to customize your Home Hub:
 
 1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) are great options to use.
 2. Use IntelliSense (ctrl+space) to open the list of available options in the index.jigx file, and select `tabs`.
 3. In the `jigId` property, use IntelliSense again to choose the jig you configured as your Home Hub.
-4. *Optional* - Choose an icon that will represent the Home Hub.  The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
+4. _Optional_ - Choose an icon that will represent the Home Hub. The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
 5. Add the `onLoad` or `onRefresh` events for syncing data.
 6. You can configure additional `tabs` by repeating the steps above.
 
@@ -17,19 +17,12 @@ Steps to customize your Home Hub:
 
 ### Single jig Home Hub
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-Here is an example of a Home Hub designed for its simplicity. A `jig.default` is used with a `component.image` and `component.list`.
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem Here is an example of a Home Hub designed for its simplicity. A `jig.default` is used with a `component.image` and `component.list`. :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png"} ::: ::::
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 name: Expo 
 title: Expo
@@ -49,9 +42,9 @@ tabs:
   - jigId: yoga-wellness
     icon: home-apps-logo
 ```
+{% endtab %}
 
-yoga-wellness.jigx
-
+{% tab title="yoga-wellness.jigx" %}
 ```yaml
 # To hide any title use ' ' in the title field
 title: ' ' 
@@ -100,24 +93,17 @@ children:
               options:
                 linkTo: contacts
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Home Hub with multiple components & widgets
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60" position="center" caption="Custom home hub" alt="Custom home hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60" position="center" caption="Custom home hub" alt="Custom home hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png"} :::
 
-:::VerticalSplitItem
-In this example a jig.default is created with a `component.image` , `component.section`, `component.countdown` and `component.grid`. The grid component references four jigs and shows them as widgets that when tapped opens the jigs.
-:::
-::::
+:::VerticalSplitItem In this example a jig.default is created with a `component.image` , `component.section`, `component.countdown` and `component.grid`. The grid component references four jigs and shows them as widgets that when tapped opens the jigs. ::: ::::
 
-:::CodeblockTabs
-yoga-home.jigx
-
+{% tabs %}
+{% tab title="yoga-home.jigx" %}
 ```yaml
 title: Yoga Wellness Week
 type: jig.default
@@ -178,9 +164,9 @@ children:
               options:
                 jigId: yoga-meals 
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: Expo 
 title: Expo
@@ -200,9 +186,9 @@ tabs:
     jigId: yoga-home
     icon: home-apps-logo      
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   yoga: 
@@ -223,24 +209,17 @@ datasources:
           '$.Type' 
         FROM [default/events] WHERE '$.Type' = 'Yoga'
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Home Hub with multiple tabs in bottom navigation bar
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-In this example, four jigs are created. In the index.jigx file, they are configured in the `tabs` properties, which generates the custom bottom navigation bar.
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem In this example, four jigs are created. In the index.jigx file, they are configured in the `tabs` properties, which generates the custom bottom navigation bar. :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png"} ::: ::::
 
-:::CodeblockTabs
-index.jigx
-
+{% tabs %}
+{% tab title=" index.jigx" %}
 ```yaml
 name: Expo 
 title: Expo
@@ -271,9 +250,9 @@ tabs:
     jigId: my-bookings
     icon: event        
 ```
+{% endtab %}
 
-yoga-wellness.jigx
-
+{% tab title="yoga-wellness.jigx" %}
 ```yaml
 # First tab's jig.
 title: ' ' # To hide any title use ' '
@@ -322,9 +301,9 @@ children:
               options:
                 linkTo: contacts
 ```
+{% endtab %}
 
-yoga-location.jigx
-
+{% tab title="yoga-location.jigx" %}
 ```yaml
 # Second tab's jig.
 title: Location
@@ -347,9 +326,9 @@ children:
         address: =@ctx.datasources.address.street & ',' & @ctx.datasources.address.city & ',' & @ctx.datasources.address.country
         zoomLevel: 9
 ```
+{% endtab %}
 
-yoga-meals.jigx
-
+{% tab title="yoga-meals.jigx" %}
 ```yaml
 # Third tab's jig.
 title: Meals
@@ -409,9 +388,9 @@ children:
             element: checkbox
             value: "true"
 ```
+{% endtab %}
 
-my-bookings.jigx
-
+{% tab title="my-bookings.jigx" %}
 ```yaml
 # Fourth tab's jig.
 title: My bookings
@@ -434,12 +413,12 @@ children:
       title: Yoga Flow
       subtitle: 4 Dec 11am
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Best practice
 
-- Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item](https://docs.jigx.com/examples/grid-item) to create the gallery.
-- Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data.
-- The `onload` event must be configured on the index.jigx file for syncing data to the device.
-- When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) as they provide the broadest scope of components, actions, and widgets.
+* Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item](https://docs.jigx.com/examples/grid-item) to create the gallery.
+* Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data.
+* The `onload` event must be configured on the index.jigx file for syncing data to the device.
+* When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) as they provide the broadest scope of components, actions, and widgets.

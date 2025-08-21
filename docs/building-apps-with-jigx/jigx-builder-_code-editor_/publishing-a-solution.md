@@ -30,10 +30,7 @@ To publish a **single** file in the solution follow the steps below:
 
 ## Publishing shortcuts
 
-| **Shortcuts**                      | **Mac** | **Windows** |
-| ---------------------------------- | ------- | ----------- |
-| Publish all files in Jigx solution | ⌘R⌘R    | Alt+R Alt+R |
-| Publish an individual file         | ⌘R⌘F    | Alt+R Alt+F |
+<table><thead><tr><th width="257.83203125">Shortcuts</th><th>Mac</th><th>Windows</th></tr></thead><tbody><tr><td>Publish all files in Jigx solution</td><td>⌘R⌘R</td><td>Alt+R Alt+R</td></tr><tr><td>Publish an individual file</td><td>⌘R⌘F</td><td>Alt+R Alt+F</td></tr></tbody></table>
 
 ## Viewing published solutions in the app
 

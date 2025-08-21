@@ -3,10 +3,6 @@ title: When to load data
 slug: x1jT-when-to-load-data
 createdAt: Sun Nov 20 2022 19:31:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:31:22 GMT+0000 (Coordinated Universal Time)
-description: >-
-  The document explores two patterns for syncing data in a jigx solution -
-  syncing all data at solution load or focusing, and syncing data just-in-time
-  when using a jig. The first pattern offers robust
 ---
 
 # When to load data

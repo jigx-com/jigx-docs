@@ -10,7 +10,9 @@ Key:
 4. **Save data to SQLite and sync data to the cloud** Update the local SQLite and sync to the cloud in a single action to ensure high-performing user experiences without lag. Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST` or `DATA_PROVIDER_SQL`. Specify the function call to make, the local entity/table to update, and the method to perform on the local table. If the method is an update, delete, or save, specify the record's ID.
 5. **Save data to the cloud ONLY** Use `execute-entity` or `execute-entities` actions with `DATA_PROVIDER_REST` or `DATA_PROVIDER_SQL`. Set the method to functionCall and specify the function to be called. The local tables will not be updated; you must sync the data from the cloud before it is available to display on a jig.
 
-:::hint{type="info"} Dynamic Data automatically syncs its data with the cloud when server-side or device-side updates are made to the tables, using `DATA_PROVIDER_DYNAMIC`. :::
+{% hint style="info" %}
+Dynamic Data automatically syncs its data with the cloud when server-side or device-side updates are made to the tables, using `DATA_PROVIDER_DYNAMIC`.
+{% endhint %}
 
 ## Using sync-entities action
 
@@ -40,6 +42,6 @@ There are two options when using the `execute-entity` and `execute-entities` act
 1. Once the data has been synced using the `sync-entities` action the data is available in the local data provider.
 2. Reference the local data provider in the jig's `datasource` property to define the data required in the jig.
 3. Write a SQLite query to define the exact data required.
-4. Use Intellisence and expressions to reference the specific datasource values to use in each component, such as `data: =@ctx.datasources.customers`
+4. Use Intellisense and expressions to reference the specific datasource values to use in each component, such as `data: =@ctx.datasources.customers`
 
 ![Local data provider](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YU-9h42X5xPRI1t_zBBsq_rest-localdatasource.png)

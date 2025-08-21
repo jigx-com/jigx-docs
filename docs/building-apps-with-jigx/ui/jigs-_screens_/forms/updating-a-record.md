@@ -3,10 +3,6 @@ title: Updating a Record
 slug: Tybh-updating-a-record
 createdAt: Mon Aug 01 2022 17:32:46 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu May 04 2023 18:33:11 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to update an existing record effortlessly with this instructional
-  document. Discover how to populate a form with existing data using the
-  `initialValues` option and successfully update record
 ---
 
 # Updating a Record
@@ -19,10 +15,11 @@ Before updating the record, we have to bind the existing record to the form. For
 
 In this example, we will use an input parameter `recordId` (see [Inputs & Outputs](https://docs.jigx.com/passing-data-using-inputs)) to query a data record from the Dynamic Data table and then bind that record to the `initialValues` of our form.
 
-:::hint{type="info"} Please note: The optional `isDocument` option of our datasource will ensure that only the first record will be returned by our query as a JSON object. :::
+{% hint style="info" %}
+&#x20;Please note: The optional `isDocument` option of our datasource will ensure that only the first record will be returned by our query as a JSON object.&#x20;
+{% endhint %}
 
-:::CodeblockTabs update-form.jigx
-
+{% code title="update-form.jigx" %}
 ```yaml
 title: Update Form
 description: My first update form by Jigx
@@ -67,20 +64,15 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
-:::
+{% endcode %}
 
 ### Updating the record
 
 In this section, we will gonna have deep look at how you can update your records in the database or delete them with jig form.
 
-:::ExpandableHeading
-
 #### Update with submit-form action
 
-Another way to update data is by the submit-form action. We put the id of the record which we want to update. :::
-
-::::ExpandableHeading
+Another way to update data is by the submit-form action. We put the id of the record which we want to update.
 
 #### Update form - execute-entity action
 
@@ -90,8 +82,7 @@ We change the method in our action.execute-entity from save to update, under dat
 
 Your update-form.jigx file should resemble the code below:
 
-:::CodeblockTabs update-form.jigx
-
+{% code title="update-form.jigx" %}
 ```yaml
 title: Update Form with execute-entity action
 description: My first update form by Jigx
@@ -140,5 +131,4 @@ children:
             keyboardType: number-pad
             initialValue: =@ctx.datasources.employee-detail.phone
 ```
-
-::: ::::
+{% endcode %}

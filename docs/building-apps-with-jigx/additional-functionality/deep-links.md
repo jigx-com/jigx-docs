@@ -2,9 +2,9 @@
 
 Deep linking in mobile apps is a powerful tool that enhances user experience by creating seamless navigation between the app and external sources. Deep linking allows you to land directly on specific content or pages within an app, bypassing the need to navigate through a series of menus. This is particularly useful in marketing campaigns, social media links, or emails where you want to direct a person to a specific product, article, or feature within your app.
 
-:::hint{type="success"}
-Contact [*support@jigx.com*](mailto\:support@jigx.com) to get your branded app's deep link.
-:::
+{% hint style="success" %}
+Contact [_support@jigx.com_](mailto:support@jigx.com) to get your branded app's deep link.
+{% endhint %}
 
 ## Format
 
@@ -18,14 +18,7 @@ An example of a built-up deep link:
 
 The URI is built up with the following values:
 
-| **URI elements** | **Description**                                                                 |
-| ---------------- | ------------------------------------------------------------------------------- |
-| app.jigx.com     | For all jigx apps, use the app domain app.jigx.com.                             |
-| jigx             | name of the app.                                                                |
-| solutionId       | The solutionId is found in , for example, 8e535f78-4e36-4716-8c01-3465bea60bj9. |
-| jigname          | jigId/jig-name, for example, support-form.                                      |
-| inputname        | The name used in the input expression, i.e. `=@ctx.jig.input.{inputname}`.      |
-| inputvalue       | The value to be used as the input.                                              |
+<table><thead><tr><th width="132.19140625">URI elements</th><th>Description</th></tr></thead><tbody><tr><td>app.jigx.com</td><td>For all jigx apps, use the app domain app.jigx.com.</td></tr><tr><td>jigx</td><td>name of the app.</td></tr><tr><td>solutionId</td><td>The solutionId is found in , for example, 8e535f78-4e36-4716-8c01-3465bea60bj9.</td></tr><tr><td>jigname</td><td>jigId/jig-name, for example, support-form.</td></tr><tr><td>inputname</td><td>The name used in the input expression, i.e. <code>=@ctx.jig.input.{inputname}</code>.</td></tr><tr><td>inputvalue</td><td>The value to be used as the input.</td></tr></tbody></table>
 
 ### Link to an app
 
@@ -33,8 +26,8 @@ To open a Jigx or branded app, use the following deep link:
 
 `https://{app.jigx.com}/{jigx}/app/`
 
-- If you are logged out of the app and click the link, you will be directed to the login screen.
-- If you are currently logged into the app, the link will open the app and display the Home Hub.
+* If you are logged out of the app and click the link, you will be directed to the login screen.
+* If you are currently logged into the app, the link will open the app and display the Home Hub.
 
 ### Link to a jig screen (basic deep link)
 
@@ -56,15 +49,14 @@ An example of the built-up deep link:
 
 In the solution, the YAML code to accept the deep link input is:
 
-:::CodeblockTabs
-YAML
-
+{% tabs %}
+{% tab title="YAML" %}
 ```yaml
  value: =@ctx.jig.inputs.email
 ```
+{% endtab %}
 
-input-query-parameter
-
+{% tab title="input-query-parameter" %}
 ```yaml
 datasources:
   participantList: 
@@ -88,7 +80,8 @@ datasources:
       queryParameters:
         email: =@ctx.jig.inputs.email
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Link to an external app from a jig
 
@@ -96,12 +89,11 @@ Add a deep link in a jig that directs you to a different mobile application, eve
 
 **Considerations**
 
-- Deep linking to an external app can only be configured in actions and swipeable actions using the `action.open-url`.
-- An app's deep links often differ depending on the mobile OS (iOS or Android). This will require you to configure a deep link for each OS in the jig. See the example below that deep links into the iOS and Android Google Maps app:
+* Deep linking to an external app can only be configured in actions and swipeable actions using the `action.open-url`.
+* An app's deep links often differ depending on the mobile OS (iOS or Android). This will require you to configure a deep link for each OS in the jig. See the example below that deep links into the iOS and Android Google Maps app:
 
-:::CodeblockTabs
-iOS-open-url
-
+{% tabs %}
+{% tab title="iOS-open-url" %}
 ```yaml
 actions:
   - children:
@@ -111,9 +103,9 @@ actions:
   # Add the external app's iOS deep link in the url    
           url: comgooglemaps://?center=32.7347483943,-117.150943196&zoom=14
 ```
+{% endtab %}
 
-Android-open-url
-
+{% tab title="Android-open-url" %}
 ```yaml
 actions:
   - children:  
@@ -124,5 +116,5 @@ actions:
           url: google.navigation:q=2920+Zoo+Dr,San+Diego,CA+92101,United+States
  
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

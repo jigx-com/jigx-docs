@@ -28,7 +28,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
 
 Following these steps, you can effectively integrate external REST APIs into your Jigx solutions, allowing you to enhance your apps with data and functionalities from diverse external sources.
 
-::embed\[]{url="https://vimeo.com/848055698"}
+{% embed url="https://vimeo.com/848055698" %}
 
 ## Jigx functions
 
@@ -142,7 +142,7 @@ Jigx supports the concept of a REST service within a form context where each fie
 
 ## Supporting JSON Input and Output
 
-::embed\[]{url="https://vimeo.com/848059289"}
+{% embed url="https://vimeo.com/848059289" %}
 
 REST services typically have simple or complex JSON structures which enable you to provide them with suitable input data as well as return complex data structures. Jigx has built-in capabilities to deal with these structures. These are achieved using:
 
@@ -257,8 +257,7 @@ parameters:
 
 Here is another example of an output transform used to return ingredients from a recipe in a single list-item (on single row). Note the use of $.map and function($ingredient, $idx, $arr). When using the returned data in a list jig the $.eval() is used to return the individual ingredients.
 
-:::CodeblockTabs
-
+{% code title="function.jigx" %}
 ```yaml
 outputTransform: >-
   {
@@ -278,7 +277,9 @@ outputTransform: >-
     })
   }
 ```
+{% endcode %}
 
+{% code title="ingredients.jigx" %}
 ```yaml
  - type: component.section
     options:
@@ -294,17 +295,13 @@ outputTransform: >-
 #         {"name": $ingredient.name}
 #       })
 ```
-
-:::
+{% endcode %}
 
 ## Examples and code snippets
 
 The following examples with code snippets are provided:
 
-| **Example** |                                                                                                                                                                   |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hello REST  | In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images. |
-| MS Graph    | The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.                 |
+<table><thead><tr><th width="130.22265625">Example</th><th></th></tr></thead><tbody><tr><td>Hello REST</td><td>In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images.</td></tr><tr><td>MS Graph</td><td>The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.</td></tr></tbody></table>
 
 ## Building a REST based app video resources
 

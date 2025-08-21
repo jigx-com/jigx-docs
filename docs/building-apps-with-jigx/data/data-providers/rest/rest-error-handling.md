@@ -31,9 +31,11 @@ In Jigx, REST error handling is configured through an `error` section in the RES
 
 1. Configure the `error` section in the REST **function** to customize the error message and configure an error table.
 2. Create a **datasource** for the error table.
-3. Create a \*\*UI \*\*(jig) to process the error in the queue using the commandQueue actions.
+3. Create a **UI** (jig) to process the error in the queue using the commandQueue actions.
 
-:::hint{type="info"} By default, Jigx automatically handles `429` (Too Many Requests) error responses for CRUD and sync methods by retrying the request up to three times, with a five-second delay between each attempt. If the request still fails after the third retry, the error is raised in the app. You can customize this behavior by configuring the handling of the 429 status in the `error` property. :::
+{% hint style="info" %}
+By default, Jigx automatically handles `429` (Too Many Requests) error responses for CRUD and sync methods by retrying the request up to three times, with a five-second delay between each attempt. If the request still fails after the third retry, the error is raised in the app. You can customize this behavior by configuring the handling of the 429 status in the `error` property.
+{% endhint %}
 
 ## REST Function
 
@@ -51,22 +53,11 @@ Multiple error handlers can be added in the function, which are executed from th
 
 The following properties are available for configuration when handling REST errors:
 
-| **Property**   | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `description`  | Provide a user friendly message of the error, for example, "_It looks like our system is unavailable_." Defaults to the provider's description if absent. For example, the REST provider uses the HTTP status code and message. The description property supports .                                                                                                                                                                                                                                                                                        |
-| `details`      | Add additional information that will display under the description. Defaults to the provider's details if absent.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `icon`         | Select an to show on the error notification screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `notification` | Determines whether the notification should be shown on the device. (true/false)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `retry`        | Provides the ability to configure an automatic retry, set a `delay` time before the retry is executed and specify the `maximum` number of retries allowed. By default, Jigx automatically handles **429** (Too Many Requests) error responses for CRUD and sync methods by retrying the request up to three times, with a five-second delay between each attempt. If the request still fails after the third retry, the error is raised in the app. You can customize this behavior by configuring the handling of the 429 status in the `error` property. |
-| `table`        | Define a table where the error information specified in the `transform` property will be logged to, for example: `table: =@ctx.entity & "_error"`                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `title`        | Title that displays on the toast notification. Defaults to the provider's title if not provided. The title property supports .                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `transform`    | <p>Specifies the details to log in the table for the error, such as the request, response, and user context, for example: <code>'={ "id": @ctx.commandId, "type": "System Offline",</code></p><p><code>"screen": "system-offline", "response": @ctx.response, "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution, "entity": @ctx.entity, "correlationId": @ctx.correlationId}'</code></p>                                                                                                                                               |
-| `when`         | Checks if the result of the function is an error, the first one that resolves to true is used. - The REST provider uses a combination of actual errors encountered and the HTTP status code and message. Configure different types of actions depending on the error received, by using multiple `when` statements. If the property is not configured it defaults to the REST provider's default error check.                                                                                                                                              |
+<table><thead><tr><th width="157.109375">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>description</code></td><td>Provide a user-friendly message of the error, for example, "<em>It looks like our system is unavailable</em>." Defaults to the provider's description if absent. For example, the REST provider uses the HTTP status code and message. The description property supports.</td></tr><tr><td><code>details</code></td><td>Add additional information that will display under the description. Defaults to the provider's details if absent.</td></tr><tr><td><code>icon</code></td><td>Select an to show on the error notification screen.</td></tr><tr><td><code>notification</code></td><td>Determines whether the notification should be shown on the device. (true/false)</td></tr><tr><td><code>retry</code></td><td>Provides the ability to configure an automatic retry, set a <code>delay</code> time before the retry is executed and specify the <code>maximum</code> number of retries allowed. By default, Jigx automatically handles <strong>429</strong> (Too Many Requests) error responses for CRUD and sync methods by retrying the request up to three times, with a five-second delay between each attempt. If the request still fails after the third retry, the error is raised in the app. You can customize this behavior by configuring the handling of the 429 status in the <code>error</code> property.</td></tr><tr><td><code>table</code></td><td>Define a table where the error information specified in the <code>transform</code> property will be logged to, for example: <code>table: =@ctx.entity &#x26; "_error"</code></td></tr><tr><td><code>title</code></td><td>Title that displays on the toast notification. Defaults to the provider's title if not provided. The title property supports .</td></tr><tr><td><code>transform</code></td><td><p>Specifies the details to log in the table for the error, such as the request, response, and user context, for example: <code>'={ "id": @ctx.commandId, "type": "System Offline",</code></p><p><code>"screen": "system-offline", "response": @ctx.response, "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution, "entity": @ctx.entity, "correlationId": @ctx.correlationId}'</code></p></td></tr><tr><td><code>when</code></td><td>Checks if the result of the function is an error, the first one that resolves to true is used. - The REST provider uses a combination of actual errors encountered and the HTTP status code and message. Configure different types of actions depending on the error received, by using multiple <code>when</code> statements. If the property is not configured it defaults to the REST provider's default error check.</td></tr></tbody></table>
 
 **Example configuration:**
 
-:::CodeblockTabs rest-function
-
+{% code title="rest-function" %}
 ```yaml
 # Configure an error section in each function file for REST endpoint,
 # where errors can occur.
@@ -91,8 +82,7 @@ error:
       "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
       "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
-
-:::
+{% endcode %}
 
 ## Error logging
 
@@ -106,20 +96,10 @@ Logging errors is a crucial part of the error handling mechanism. Errors are log
 
 When configuring REST errors, several system expressions and variables can be used. These variables allow you to dynamically log and handle errors based on the context of the function call.The following context is available to write to the error table, using `=@ctx.variable.value`:
 
-| **Variables** | **Value**                                                                                                                                                                                                                                                       |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| commandId     | Unique id logged for the item on the commandQueue. The id matches the id in the entity table.                                                                                                                                                                   |
-| correlationId | The unique identifier that appears in the app. It is used in to help identify specific entries in the logs and to follow the user's journey while using the solution in the app. By filtering logs using this ID, you can troubleshoot issues more effectively. |
-| entity        | The specified table where the error context is logged                                                                                                                                                                                                           |
-| error         | <ul><li>message: string</li><li>title: string</li><li>description: string</li><li>details: string</li><li>icon: string</li><li>table: string</li><li>notification: boolean</li></ul>                                                                            |
-| parameters    | Specify any of the parameters in the function to be logged to the error table.                                                                                                                                                                                  |
-| request       | <ul><li>method: string</li><li>url: string</li><li>headers: Record&#x3C;string, string></li><li>body:string</li><li>Buffer</li></ul>                                                                                                                            |
-| response      | <ul><li>ok: boolean</li><li>status: number</li><li>statusText: string</li><li>headers: Record&#x3C;string, string></li><li>body: any</li></ul>                                                                                                                  |
-| solution      | <ul><li>id: SolutionId</li><li>name: SolutionName</li><li>organizationId: OrganizationId</li><li><p>settings:</p><ul><li>custom: Record&#x3C;string, unknown></li></ul></li></ul>                                                                               |
-| user          | <ul><li>id: string</li><li>email: string</li><li>displayName: string</li><li>avatarUrl: string</li><li>phone: string</li><li>isVerified: boolean</li><li>settings: Record&#x3C;string, unknown></li></ul>                                                       |
+<table><thead><tr><th width="141.3203125">Variables</th><th>Value</th></tr></thead><tbody><tr><td>commandId</td><td>Unique id logged for the item on the commandQueue. The id matches the id in the entity table.</td></tr><tr><td>correlationId</td><td>The unique identifier that appears in the app. It is used in to help identify specific entries in the logs and to follow the user's journey while using the solution in the app. By filtering logs using this ID, you can troubleshoot issues more effectively.</td></tr><tr><td>entity</td><td>The specified table where the error context is logged</td></tr><tr><td>error</td><td><ul><li>message: string</li><li>title: string</li><li>description: string</li><li>details: string</li><li>icon: string</li><li>table: string</li><li>notification: boolean</li></ul></td></tr><tr><td>parameters</td><td>Specify any of the parameters in the function to be logged to the error table.</td></tr><tr><td>request</td><td><ul><li>method: string</li><li>url: string</li><li>headers: Record&#x3C;string, string></li><li>body:string</li><li>Buffer</li></ul></td></tr><tr><td>response</td><td><ul><li>ok: boolean</li><li>status: number</li><li>statusText: string</li><li>headers: Record&#x3C;string, string></li><li>body: any</li></ul></td></tr><tr><td>solution</td><td><ul><li>id: SolutionId</li><li>name: SolutionName</li><li>organizationId: OrganizationId</li><li><p>settings:</p><ul><li>custom: Record&#x3C;string, unknown></li></ul></li></ul></td></tr><tr><td>user</td><td><ul><li>id: string</li><li>email: string</li><li>displayName: string</li><li>avatarUrl: string</li><li>phone: string</li><li>isVerified: boolean</li><li>settings: Record&#x3C;string, unknown></li></ul></td></tr></tbody></table>
 
-:::CodeblockTabs function-error-table
-
+{% tabs %}
+{% tab title="function-error-table" %}
 ```yaml
 # Configure the error table and the data to log to the table,
 # in the error section of the function.
@@ -129,9 +109,9 @@ transform: '={ "id": @ctx.commandId, "type": "System Offline",
   "request": @ctx.request, "user": @ctx.user, "solution": @ctx.solution,
   "entity": @ctx.entity, "correlationId": @ctx.correlationId}'
 ```
+{% endtab %}
 
-error-datasource
-
+{% tab title="error-datasource" %}
 ```yaml
 # Call the error details from the dedicated error table in a datasource.
 # Use the datasource to configure jigs to action the error, e.g. retry.
@@ -154,8 +134,8 @@ options:
     FROM
     [datasync-error] AS err
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## commandQueue table & actions
 

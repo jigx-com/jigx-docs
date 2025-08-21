@@ -3,20 +3,18 @@ title: Custom Components (Alpha)
 slug: 1sOf-custom
 createdAt: Tue Jun 06 2023 07:05:24 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Feb 04 2025 14:22:49 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to utilize custom components in {{Jigx}} to enhance your UI
-  capabilities. Create custom cards, views, buttons, icons, and text with
-  predefined code snippets that can be reused across multipl
 ---
 
 # Custom Components (Alpha)
 
-:::hint{type="danger"} This feature is currently in its \*\*Alpha \*\*stage of development.
+{% hint style="danger" %}
+This feature is currently in its **Alpha** stage of development.
 
 * As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 * In this phase, the feature may contain bugs or behave unpredictably.
 * Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases. :::
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
+{% endhint %}
 
 ### What are custom components?
 

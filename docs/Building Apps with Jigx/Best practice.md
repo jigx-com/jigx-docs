@@ -18,12 +18,12 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 #### Setup:
 
 1. Set the **ID** to be stored in the solution state, using the `set-state` action. The ID is the least amount of data required to identify each job uniquely. The ID is used throughout the solution to reference the necessary data in each of the solution's jigs.
-2. In the datasource queries use the \*\*ID \*\*to return the required data.
+2. In the datasource queries use the ID to return the required data.
    * In a [global datasource ](https://docs.jigx.com/datasources#gCN9o)query reference the data required. The global datasource is referenced in each jig where the data is required.
    * In the individual jig 's [datasource](https://docs.jigx.com/datasources#2AD3k) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
 
-:::CodeblockTabs set-solution-state (action)
-
+{% tabs %}
+{% tab title="set-solution-state (action)" %}
 ```yaml
 actions:
   - children:
@@ -33,9 +33,9 @@ actions:
           state: =@ctx.solution.state.id
           value: =@ctx.solution.state.id
 ```
+{% endtab %}
 
-use-solution-state (datasource)
-
+{% tab title="use-solution-state (datasource)" %}
 ```yaml
 datasources:
   contactData:
@@ -61,8 +61,8 @@ datasources:
       queryParameters:
         taskId: =@ctx.solution.state.id
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 State resources and code samples:
 
@@ -84,8 +84,8 @@ State resources and code samples:
 1. Set up **parameters** in the jig that needs to pass data, then in the jig needing to receive the data set up **inputs**. Multiple parameters and inputs can be configured on a single jig.
 2. In the components of the jig use expressions to reference the data passed in, for example, `=@ctx.jig.inputs.parameterName`.
 
-:::CodeblockTabs set-parameters
-
+{% tabs %}
+{% tab title="set-parameters" %}
 ```yaml
 actions:
   - children:
@@ -101,9 +101,9 @@ actions:
             taskCost: =@ctx.components.taskCost.state.value
             taskAssignee: =@ctx.components.taskAssignee.state.value
 ```
+{% endtab %}
 
-use-input
-
+{% tab title="use-input" %}
 ```yaml
 title: Team Progress
 type: jig.default
@@ -151,8 +151,8 @@ children:
                   # Use the parameter in the input expression to show the cost
                   value: =@ctx.jig.inputs.taskCost
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 Input resources and code samples:
 
@@ -161,7 +161,7 @@ Input resources and code samples:
 
 ### When to use outputs
 
-[Outputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another usecase for outputs.
+[Outputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another use case for outputs.
 
 **Design Pattern**: Observer
 
@@ -172,8 +172,8 @@ Input resources and code samples:
 1. In the jig that will pass the data define the **output** property with an expression that will pass the variable, such as an **ID**.
 2. In the composite jig, which combines multiple jigs, define the **input** property on the jig that must receive the variable.
 
-:::CodeblockTabs team-progress (output)
-
+{% tabs %}
+{% tab title="team-progress (output)" %}
 ```yaml
 title: Team list
 type: jig.list
@@ -231,9 +231,9 @@ item:
               state: =@ctx.solution.state.teamId
               value: =@ctx.current.item.id
 ```
+{% endtab %}
 
-team
-
+{% tab title="team" %}
 ```yaml
 title: Team progress
 type: jig.list
@@ -276,9 +276,9 @@ item:
       element: value
       text: =@ctx.current.item.taskStatus
 ```
+{% endtab %}
 
-team-report (input)
-
+{% tab title="team-report (input)" %}
 ```yaml
 title: Team Report
 type: jig.composite
@@ -290,8 +290,8 @@ children:
     inputs:
       id: =@ctx.jigs.team-profile.outputs.output-key
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 Output resources and code samples:
 
@@ -302,8 +302,7 @@ Output resources and code samples:
 
 Using an `id` in your datasource enhances performance, particularly when handling large volumes of records.
 
-:::CodeblockTabs datasource
-
+{% code title="datasource" %}
 ```yaml
 datasources:
   team-update:
@@ -325,5 +324,4 @@ datasources:
       queryParameters:
         statId: =@ctx.solution.state.teamId
 ```
-
-:::
+{% endcode %}

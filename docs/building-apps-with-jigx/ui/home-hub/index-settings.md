@@ -13,25 +13,25 @@ In the `index.jigx` file, you set solution settings, including the primary infor
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ly\_cXyKfy5ezLaATdsQ3-20250715-121350.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ly\_cXyKfy5ezLaATdsQ3-20250715-121350.png" size="92" width="3959" height="962" position="center" caption="Solution details" alt="Solution details"}
 
-:::CodeblockTabs index.jigx (default)
-
+{% tabs %}
+{% tab title="index.jigx (default)" %}
 ```yaml
 name: global-solutions
 title: global solutions
 category: consulting
 ```
+{% endtab %}
 
-index.jigx (custom category)
-
+{% tab title="index.jigx (custom category)" %}
 ```yaml
 name: global-solutions
 title: global solutions
 category: consulting
 description: A collection of global solutions for various industries.
 ```
+{% endtab %}
 
-index.jigx (custom icon)
-
+{% tab title="index.jigx (custom icon)" %}
 ```yaml
 name: global-solutions
 title: global solutions
@@ -40,8 +40,8 @@ description: A collection of global solutions for various industries.
 icon: world
 color: color7
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Tabs
 
@@ -50,22 +50,13 @@ color: color7
 * Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
 * Setting the [grid](https://docs.jigx.com/examples/jiggrid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
-| **Core Structure** |                                                                                  |
-| ------------------ | -------------------------------------------------------------------------------- |
-| `tabs`             | The top level property under which the various tabs are configured.              |
-| `icon`             | The icon to be shown on the navigation bar for the tab, for example a home icon. |
-| `jigId`            | The name/ unique identifier of the jig that will open when the tab is pressed.   |
+<table><thead><tr><th width="145.19140625">Core Structure</th><th></th></tr></thead><tbody><tr><td><code>tabs</code></td><td>The top level property under which the various tabs are configured.</td></tr><tr><td><code>icon</code></td><td>The icon to be shown on the navigation bar for the tab, for example a home icon.</td></tr><tr><td><code>jigId</code></td><td>The name/ unique identifier of the jig that will open when the tab is pressed.</td></tr></tbody></table>
 
-| **Other options** |                                                                                                                                                                                                                  |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `badge`           | Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the `badge` property to the tabs section with an expression. |
-| `label`           | Give the tab a title. This title appears below the icon in the navigation bar. Use the label\*\* \*\*property for translating tab names or when the tab name includes spaces.                                    |
-| `when`            | The condition when the tab will be displayed or hidden (optional). Use an that evaluates to a boolean.                                                                                                           |
+<table><thead><tr><th width="135.671875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td>Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the <code>badge</code> property to the tabs section with an expression.</td></tr><tr><td><code>label</code></td><td>Give the tab a title. This title appears below the icon in the navigation bar. Use the label property for translating tab names or when the tab name includes spaces.</td></tr><tr><td><code>when</code></td><td>The condition when the tab will be displayed or hidden (optional). Use an that evaluates to a boolean.</td></tr></tbody></table>
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" size="30" width="1224" height="2466" position="center" caption}
 
-:::CodeblockTabs index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 name: jigx-samples
 title: Jigx Samples
@@ -99,8 +90,7 @@ tabs:
     jigId: feedback
     icon: online-class-student
 ```
-
-:::
+{% endcode %}
 
 ## OnLoad, OnFocus, OnRefresh, onTableChanged
 
@@ -111,8 +101,8 @@ These properties allow you to configure [Actions](https://docs.jigx.com/actions)
 * **OnRefresh** - when pulling down on the Home Hub the action configured for `onRefresh` executes. The `onRefresh` spinner is persistently visible while an action is executing, preventing users from triggering a redundant pull-to-refresh gesture.
 * [onTableChanged](https://docs.jigx.com/examples/ontablechanged) - This event enables a remote system like Acumatica to call into Jigx and trigger changes on a mobile device by monitoring data updates. It detects changes in specific data tables (entities) and executes the configured actions accordingly.
 
-:::CodeblockTabs index.jigx (onLoad)
-
+{% tabs %}
+{% tab title="index.jigx (onLoad)" %}
 ```yaml
 onLoad:
   type: action.set-state
@@ -120,9 +110,9 @@ onLoad:
     state: =@ctx.solution.state.loginTimestamp
     value: =$now()
 ```
+{% endtab %}
 
-index.jigx (onFocus)
-
+{% tab title="index.jigx (onFocus)" %}
 ```yaml
 onFocus:
   type: action.sync-entities
@@ -131,9 +121,9 @@ onFocus:
     entities:
       - entity: default/test
 ```
+{% endtab %}
 
-index.jigx (onRefresh)
-
+{% tab title="index.jigx (onRefresh)" %}
 ```yaml
 onRefresh:
   type: action.execute-entity
@@ -146,9 +136,9 @@ onRefresh:
       id: =@ctx.datasources.test.id
       action: "Execute-entity onRefresh"
 ```
+{% endtab %}
 
-index.jigx (onTableChanged)
-
+{% tab title="index.jigx (onTableChanged)" %}
 ```yaml
 onTableChanged:
   # Specify the remote table to monitor.
@@ -160,24 +150,24 @@ onTableChanged:
         changes:
           - dataStatus
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Global Expressions
 
 Use the `expressions` property to set expressions that are reusable throughout the solution in various jigs.
 
-:::CodeblockTabs index.jigx
-
+{% tabs %}
+{% tab title="index.jigx" %}
 ```yaml
 expressions:
   user: =@ctx.user.displayName
   timezone: =@ctx.system.timezone.name
   altitude: =@ctx.system.geolocation.coords.altitude
 ```
+{% endtab %}
 
-jig.jigx
-
+{% tab title="jig.jigx" %}
 ```yaml
 title: Shared expressions example
 
@@ -198,8 +188,8 @@ children:
             label: Current Altitude
             value: =@ctx.expressions.altitude
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 For more details and examples refer to the _Shared Expressions_ section in [Expressions](../../logic/expressions.md).
 
@@ -209,14 +199,12 @@ In the `dependencies` property, you can define the mobile app build version comp
 
 :::::VerticalSplit{layout="middle"} ::::VerticalSplitItem If the current mobile app build version does not meet the criteria, the _Out of date_ screen will appear, with a message that an update is required. Tapping the _Update_ button redirects you to your app settings to update the version of the app.
 
-:::CodeblockTabs index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 dependencies:
   mobileApp: ">1.131.2"
 ```
-
-::: ::::
+{% endcode %}
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_j99rAAAt6SBCQZfpVt-A-20250527-070007.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_j99rAAAt6SBCQZfpVt-A-20250527-070007.png" size="70" width="1224" height="2466" position="center" caption="Out of date app screen" alt="Out of date app screen"} ::: :::::
 

@@ -4,150 +4,51 @@
 
 ### Existing solutions
 
-Existing solutions will continue to function in the mobile app as before.
-The navigation menu at the bottom of the app will now display as a bar and includes the profile icon that has been moved from the top right-hand corner into the navigation bar. In Jigx Builder, deprecated or changed YAML properties are highlighted with a red squiggle. Before making changes, carefully review the **affected areas** and the **migration steps** outlined below. Plan your updates thoroughly, as multiple files may be impacted and require updates or code relocation to new files.
+Existing solutions will continue to function in the mobile app as before. The navigation menu at the bottom of the app will now display as a bar and includes the profile icon that has been moved from the top right-hand corner into the navigation bar. In Jigx Builder, deprecated or changed YAML properties are highlighted with a red squiggle. Before making changes, carefully review the **affected areas** and the **migration steps** outlined below. Plan your updates thoroughly, as multiple files may be impacted and require updates or code relocation to new files.
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" position="center" caption="Existing solutions after update" alt="Existing solutions after update" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" position="center" caption="Existing solutions after update" alt="Existing solutions after update" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
 
 ### New solutions
 
-::::VerticalSplit{layout="middle"}
-:::VerticalSplitItem
-New solutions now offer greater versatility.
+::::VerticalSplit{layout="middle"} :::VerticalSplitItem New solutions now offer greater versatility.
 
 1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/jiggrid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
-2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.
-:::
+2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking. :::
 
-:::VerticalSplitItem
-::Image[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" position="center" caption="New solution layout " alt="New solution layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" width="800" height="1612" darkWidth="800" darkHeight="1612"}
-:::
-::::
+:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" position="center" caption="New solution layout " alt="New solution layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
 
 ## Affected areas
 
 The table below outlines the areas impacted by the introduction of bottom tab navigation, and the deprecation of the `stories`, `home`, and `widgets` properties in the index.jigx file.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="288">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Old</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>New</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>widgets</code> property in index.jigx file.</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>tabs</code> property in index.jigx file. See  for more information.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>widgets</code> property in jig files.</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>widgets</code> in jig files now require a <code>widgetId</code> (Widget Name) property and remove the size, e.g. <code>1x1</code>.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>stories</code> property in index.jigx
-      <code>story-group</code> component</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Deprecated.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>home</code> property in index.jigx file.</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Reference the jig previously referenced in <code>home</code> as the custom Home Hub now in the <code>tabs</code> property.
-      The first jig configured under the <code>tabs</code> property becomes is the first screen displayed when the app is opened.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>N/A</p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>jig-grid</code> - a new jig type used to configure jigs and components in a grid layout. See  for more information.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>component.widgets</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p><code>grid</code> and <code>grid-item</code> component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See  and <a href="https://docs.jigx.com/examples/grid-item">grid-item</a> for more information.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>User profile</p>
-    </td>
-    <td selected="false" align="left">
-      <p>User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Solutions (Home)</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Solution switching has moved into the user profile screen. A <em>switch</em> button opens the solution list for selection.
-      :</p><div></div>[]{src="" size="44" position="center" caption="Switch solutions" alt="Switch solutions"}<p></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>component.location</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="282.3046875">Old</th><th>New</th></tr></thead><tbody><tr><td><code>widgets</code> property in index.jigx file.</td><td><code>tabs</code> property in index.jigx file. See for more information.</td></tr><tr><td><code>widgets</code> property in jig files.</td><td><code>widgets</code> in jig files now require a <code>widgetId</code> (Widget Name) property and remove the size, e.g. <code>1x1</code>.</td></tr><tr><td><code>stories</code> property in index.jigx <code>story-group</code> component</td><td>Deprecated.</td></tr><tr><td><code>home</code> property in index.jigx file.</td><td>Reference the jig previously referenced in <code>home</code> as the custom Home Hub now in the <code>tabs</code> property. The first jig configured under the <code>tabs</code> property becomes is the first screen displayed when the app is opened.</td></tr><tr><td>N/A</td><td><code>jig-grid</code> - a new jig type used to configure jigs and components in a grid layout. See for more information.</td></tr><tr><td><code>component.widgets</code></td><td><code>grid</code> and <code>grid-item</code> component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See and <a href="https://docs.jigx.com/examples/grid-item">grid-item</a> for more information.</td></tr><tr><td>User profile</td><td>User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.</td></tr><tr><td>Solutions (Home)</td><td><p>Solution switching has moved into the user profile screen. A <em>switch</em> button opens the solution list for selection. :</p><p>[]{src="" size="44" position="center" caption="Switch solutions" alt="Switch solutions"}</p></td></tr><tr><td><code>component.location</code></td><td>The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.</td></tr></tbody></table>
 
 ## Migration steps
 
 ### index.jigx
 
 1. Remove the `stories` property.
-   - Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
-   - To replicate this functionality, consider using the [video-player](https://docs.jigx.com/examples/video-player) or [carousel](https://docs.jigx.com/examples/carousel) components.
+   * Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
+   * To replicate this functionality, consider using the [video-player](https://docs.jigx.com/examples/video-player) or [carousel](https://docs.jigx.com/examples/carousel) components.
 2. Replace the `widgets` property.
-   - Replace the `widgets` property with a new `tabs` property.
-   - Define the `tabs` you want to display in the bottom tab navigation.
-     Note:
-     - A maximum of four tabs can be rendered.
-     - The last tab will display the user avatar, linking to the user profile (previously located in the top-right corner).
-     - The first jig listed under the `tabs` property will become the initial screen shown when the app is opened, the Home Hub .
+   * Replace the `widgets` property with a new `tabs` property.
+   * Define the `tabs` you want to display in the bottom tab navigation. Note:
+     * A maximum of four tabs can be rendered.
+     * The last tab will display the user avatar, linking to the user profile (previously located in the top-right corner).
+     * The first jig listed under the `tabs` property will become the initial screen shown when the app is opened, the Home Hub .
 3. Configure the `tabs` property.
-   - For each tab, specify the following required properties: `Tab Name`, `jigId`, and `icon`.
-   - Optional properties include `badge` and `when`.
-   - `Inputs` previously specified in the index.jigx file must now be defined within the corresponding jig or in the `grid-item`.
+   * For each tab, specify the following required properties: `Tab Name`, `jigId`, and `icon`.
+   * Optional properties include `badge` and `when`.
+   * `Inputs` previously specified in the index.jigx file must now be defined within the corresponding jig or in the `grid-item`.
 4. Remove the `home` property.
-   - Reference the custom Home Hub `jigId` in the first `tabs` property to maintain the same functionality.
+   * Reference the custom Home Hub `jigId` in the first `tabs` property to maintain the same functionality.
 5. Unchanged properties.
-   - All other properties, such as `expressions`, `onLoad`, `onRefresh`, and `scripts`, remain unchanged.
+   * All other properties, such as `expressions`, `onLoad`, `onRefresh`, and `scripts`, remain unchanged.
 
-:::CodeblockTabs
-old-index.jigx
-
+{% tabs %}
+{% tab title="old-index.jigx" %}
 ```yaml
 name: student-app
 title: Student-app
@@ -176,11 +77,11 @@ widgets:
           { name: John, age: 30 },
           { name: Melany, age: 35 },
           { name: Scott, age: 21 },
-        ]
+        
 ```
+{% endtab %}
 
-new-index.jigx
-
+{% tab title="new-index.jigx" %}
 ```yaml
 name: student-app
 title: Student-app
@@ -197,15 +98,15 @@ tabs:
     jigId: student-details
     icon: people-man-1
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ### custom home-hub
 
 To maintain the same functionality, reference the custom Home Hub `jigId` in the first `tabs` property. Alternatively, take this opportunity to design a new Home Hub by configuring a jig with both standard and custom components to be used in the `tabs` property.
 
-:::CodeblockTabs
-old-index.jigx
-
+{% tabs %}
+{% tab title=" old-index.jigx" %}
 ```yaml
 name: Expo
 title: Expo
@@ -224,9 +125,9 @@ onLoad:
     entities:
       - default/events
 ```
+{% endtab %}
 
-new-index.jigx
-
+{% tab title="new-index.jigx" %}
 ```yaml
 name: expo
 title: Expo
@@ -247,15 +148,15 @@ onLoad:
     entities:
       - default/events
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ### widgets in jigs
 
 In jig files using the `component.widgets` property, the YAML structure must be updated. Replace the `size` (e.g., 2x2) with a `widgetId`. The size is now configured in the `grid-item` property.
 
-:::CodeblockTabs
-old-widget-property
-
+{% tabs %}
+{% tab title="old-widget-property" %}
 ```yaml
 widgets:
   # Replace 2x2 with a name for the widget that becomes the widgetId.
@@ -271,9 +172,9 @@ widgets:
           title: Leo Siphron
           subtitle: React Web Developer
 ```
+{% endtab %}
 
-new-widget-property
-
+{% tab title="new-widget-property" %}
 ```yaml
 widgets:
   # Specify a widgetId.
@@ -289,9 +190,9 @@ widgets:
           title: Leo Siphron
           subtitle: React Web Developer
 ```
+{% endtab %}
 
-grid-item
-
+{% tab title="grid-item" %}
 ```yaml
 children:
   - type: component.grid-item
@@ -306,7 +207,8 @@ children:
           # if you have specified one in the jig's widget property.
           widgetId: dev-avatar
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ### location
 
@@ -314,13 +216,12 @@ Existing solution location components will continue to function as before, with 
 
 Multiple enhancements were made to the `location` component which changed the YAML structure, these include:
 
-- User's location display
-- Follow a user location
-- A new action, `action.open.map`, opens a modal, allowing you to select a map app on your device for navigation to an address.
+* User's location display
+* Follow a user location
+* A new action, `action.open.map`, opens a modal, allowing you to select a map app on your device for navigation to an address.
 
-:::CodeblockTabs
-old-location-component
-
+{% tabs %}
+{% tab title="old-location-component" %}
 ```yaml
 children:
   # Basic location component with address.
@@ -355,9 +256,9 @@ children:
       zoomLevel: 12
       isAnimationDisabled: false
 ```
+{% endtab %}
 
-new-location-component
-
+{% tab title="new-location-component" %}
 ```yaml
 children:
   # Basic address.
@@ -429,9 +330,9 @@ actions:
           title: Empire State Building
           address: 20 W 34th St., New York, NY 10001, United States
 ```
+{% endtab %}
 
-datasources
-
+{% tab title="datasources" %}
 ```yaml
 datasources:
   # First datasource used in the basic address example.
@@ -488,5 +389,5 @@ datasources:
           latitude: 40.803495
           longitude: -73.950694
 ```
-:::
-
+{% endtab %}
+{% endtabs %}

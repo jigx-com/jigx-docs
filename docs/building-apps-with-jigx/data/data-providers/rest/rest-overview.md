@@ -10,7 +10,7 @@ Functions definitions are stored in the functions folder in a Jigx project and a
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NNVB3gwwO4O\_G2s0Ib9bz\_image.png" size="50" position="center" caption="Jigx's functions" alt="Jigx's functions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NNVB3gwwO4O\_G2s0Ib9bz\_image.png" width="800" height="932" darkWidth="800" darkHeight="932"}
 
-To add a new function, add a new file in the functions folder, the .jigx\*\* \*\*extension is automatically added for you. Function file names must be lowercase and may not contain special characters.
+To add a new function, add a new file in the functions folder, the .jigx extension is automatically added for you. Function file names must be lowercase and may not contain special characters.
 
 Once functions are published in a Jigx solution you can preview the function in Jigx Management under the solution's REST functions option. See [REST Functions](../../../../administration/solutions/rest-functions.md) for more information.
 
@@ -38,10 +38,7 @@ The following describes the options available when configuring a REST function c
 
 ![REST function options](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/42VZyYixrby5ombpR3b8Z_image.png)
 
-| **Provider** | `DATA_PROVIDER_REST` for making REST service calls.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Methods**  | <p>Jigx supports the following methods when making REST calls:</p><ul><li>DELETE</li><li>GET</li><li>HEAD</li><li>PUT</li><li>PATCH</li><li>POST</li></ul>                                                                                                                                                                                                                                                                                                                            |
-| **URL**      | The URL of the service that must be called. Jigx supports path and query parameters in the URL. Path parameters are tagged with curly brackets {}. Jigx will replace the path parameters with the values of the parameters defined in the parameter section of the function definition. Query parameters specified in the URL will be removed by Jigx and replaced by parameters defined in the parameters section of the function definition with a location property of type Query. |
+<table data-header-hidden><thead><tr><th width="110.03125"></th><th></th></tr></thead><tbody><tr><td><strong>Provider</strong></td><td><code>DATA_PROVIDER_REST</code> for making REST service calls.</td></tr><tr><td><strong>Methods</strong></td><td><p>Jigx supports the following methods when making REST calls:</p><ul><li>DELETE</li><li>GET</li><li>HEAD</li><li>PUT</li><li>PATCH</li><li>POST</li></ul></td></tr><tr><td><strong>URL</strong></td><td>The URL of the service that must be called. Jigx supports path and query parameters in the URL. Path parameters are tagged with curly brackets {}. Jigx will replace the path parameters with the values of the parameters defined in the parameter section of the function definition. Query parameters specified in the URL will be removed by Jigx and replaced by parameters defined in the parameters section of the function definition with a location property of type Query.</td></tr></tbody></table>
 
 ### Swagger parser
 
@@ -193,13 +190,15 @@ Many REST services limit the number of items that can be retrieved from the serv
 
 Jigx REST functions can be configured to automatically repeat calls to `continuation` functions by specifying a continuation block in the function YAML.
 
-:::hint{type="warning"} The continuation URL and parameters overwrite the parameters in the original function call therefore all parameters, including OAuth tokens and API keys, must be replicated in the continuation function.
+{% hint style="warning" %}
+The continuation URL and parameters overwrite the parameters in the original function call therefore all parameters, including OAuth tokens and API keys, must be replicated in the continuation function.
 
-Since the continuation URL or parameters are outside of the data returned by the function (at a higher level), the **outputTransform** of the function will need to be changed to return the records in their own property and the **records** property specified in the function YAML to locate the output records. :::
+Since the continuation URL or parameters are outside of the data returned by the function (at a higher level), the **outputTransform** of the function will need to be changed to return the records in their own property and the **records** property specified in the function YAML to locate the output records.&#x20;
+{% endhint %}
 
 **Example**
 
-Microsoft’s Graph API uses continuation URLs to request the next page of items from their services. If there are more items in the response than can be handled in a single call, or the caller has limited the number of items per page, the service will return the `@odata.nextLink`\*\* \*\*parameter specifying the URL to call to fetch the next page of results.
+Microsoft’s Graph API uses continuation URLs to request the next page of items from their services. If there are more items in the response than can be handled in a single call, or the caller has limited the number of items per page, the service will return the `@odata.nextLink` parameter specifying the URL to call to fetch the next page of results.
 
 ```json
 {
@@ -253,7 +252,9 @@ Jigx allows you to customize REST endpoint error messages to improve user experi
 
 By default the return JSON payload from the REST call replaces previous data in the SQLite database. The `forRowsWithValues` property allows you to update specific values in the SQLite database instead of replacing all rows, providing a better user experience. The `forRowsWithValues` property specifies a key-value pair where the key is a json\_extract() column in the SQLite table that will be matched by the value. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsWithValues`. Think of this as a WHERE clause that Jigx uses when it adds the result of the REST call's `outputTransform` to the SQLite table.
 
-:::hint{type="info"} The property should be passed as a parameter and be referenced in the `outputTransform` as shown in the example below. :::
+{% hint style="info" %}
+The property should be passed as a parameter and be referenced in the `outputTransform` as shown in the example below.
+{% endhint %}
 
 ![forRowsWithValues](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wDTUv4oKu_7mRxarocFpq_image.png)
 
@@ -261,14 +262,16 @@ By default the return JSON payload from the REST call replaces previous data in 
 
 Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json\_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the REST call's `outputTransform` to the table.
 
-:::hint{type="info"} Pass the values you want to test as input parameters. In this example, minmag and maxmag. The property to test is **mag**. This property (**mag**) must appear in the `outputTransform`. Then set the range you are testing for in the input parameter (**minmag**) and (**maxmag**). :::
+{% hint style="info" %}
+Pass the values you want to test as input parameters. In this example, minmag and maxmag. The property to test is **mag**. This property (**mag**) must appear in the `outputTransform`. Then set the range you are testing for in the input parameter (**minmag**) and (**maxmag**).
+{% endhint %}
 
 ![forRowsInRange](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/LrOy1JWzQmiy1wh5ksaO0_image.png)
 
-:::hint{type="info"}
-
+{% hint style="info" %}
 * You can combine `forRowswithValues` and `forRowsInRange` as per the example below.
-* You \*\*cannot combine \*\*`forRowsWithMatchingIds` with any other range or value check. :::
+* You cannot combine `forRowsWithMatchingIds` with any other range or value check.&#x20;
+{% endhint %}
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rli3w3jBg74-gvIp406Qs\_image.png" size="58" position="center" caption="Combined properties" alt="Combined properties" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rli3w3jBg74-gvIp406Qs\_image.png" width="800" height="388" darkWidth="800" darkHeight="388"}
 

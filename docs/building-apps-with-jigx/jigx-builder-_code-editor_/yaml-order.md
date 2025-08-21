@@ -5,36 +5,36 @@ createdAt: Tue Dec 12 2023 12:00:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:42:25 GMT+0000 (Coordinated Universal Time)
 ---
 
+# YAML order
+
 When it comes to ordering YAML elements, it's crucial to structure your Jigx file in a clear and logical manner. By doing so, you can ensure that your YAML data is easy to read, maintain, and troubleshoot, and sometimes, even the performance and order of execution are determined by the order.
 
 Here are the best practices for ordering YAML elements in a jig file and the recommended structure for items in a section, for example, components.
 
-:::hint{type="info"}
+{% hint style="info" %}
 You won't necessarily use every element listed below in a single jig. You can modify the list to suit the elements you are including in your jig.
-:::
+{% endhint %}
 
-## Jig YAML order
+### Jig YAML order
 
-- Title
-- Description
-- Type
-- Icon
-- Badge
-- Inputs
-- Placeholders
-- onFocus/onRefresh
-- Expressions
-- header
-- actions
-- summary
-- datasources
-- children
-- preview
-- widgets
+* Title
+* Description
+* Type
+* Icon
+* Badge
+* Inputs
+* Placeholders
+* onFocus/onRefresh
+* Expressions
+* header
+* actions
+* summary
+* datasources
+* children
+* preview
+* widgets
 
-:::CodeblockTabs
-YAML order
-
+{% code title="YAML order" %}
 ```yaml
 title: Name
 description: Description of your Jig
@@ -117,26 +117,24 @@ widgets:
       source:
         uri: https://jigx.com/
 ```
-:::
+{% endcode %}
 
-## Order of items in a section
+### Order of items in a section
 
 Order of items within a section, for example when defining a component we should aim to standardise as follows:
 
-- Type is always the first thing to be defined so that we know what we are dealing with
-- Meta elements for the list (data)
-- Item definition
-- Title
-- Subtitle
-- Description
-- Left element , Right element , Label
-- action
-- OnPress
-- Swipeable
+* Type is always the first thing to be defined so that we know what we are dealing with
+* Meta elements for the list (data)
+* Item definition
+* Title
+* Subtitle
+* Description
+* Left element , Right element , Label
+* action
+* OnPress
+* Swipeable
 
-:::CodeblockTabs
-section-order
-
+{% code title="section-order" %}
 ```yaml
 children:
   - type: component.list
@@ -184,5 +182,4 @@ children:
             data:
             id: =@ctx.current.item.id
 ```
-:::
-
+{% endcode %}

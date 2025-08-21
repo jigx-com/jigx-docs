@@ -18,8 +18,7 @@ In Jigx you combine a [JSONata expression](expressions.md) with a [Regex express
 
 Combine the three above to validate an email address in the `text-field` component.
 
-:::CodeblockTabs YAML
-
+{% code title="YAML" %}
 ```yaml
 - type: component.text-field
           instanceId: email
@@ -28,34 +27,13 @@ Combine the three above to validate an email address in the `text-field` compone
             errorText: =$contains(@ctx.components.email.state.value, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) ? '' :'not an email'
 
 ```
-
-:::
+{% endcode %}
 
 ## Regex and JSONata Expression examples
 
 Here are some common validation expressions to create and use for text field validation.
 
-| **Validation**                                                                        | **Expected result**                                                                                                                                                          |
-| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Phone number](https://docs.jigx.com/examples/regex-expressions#1Txjd)                | +271234556789                                                                                                                                                                |
-| [Email](https://docs.jigx.com/examples/regex-expressions#hk-Na)                       | [name@example.com](mailto:name@example.com)                                                                                                                                  |
-| [Credit Card](https://docs.jigx.com/examples/regex-expressions#BJCon)                 | Typically 13-16 digits, with spaces or dashes optional, and includes checks for Visa, MasterCard, American Express, and Discover. 1111-1111-1111-1111 or 1111 1111 1111 1111 |
-| [ZIP/Postal code (US)](https://docs.jigx.com/examples/regex-expressions#GK4pj)        | 5-digit codes, e.g. 10036                                                                                                                                                    |
-| [Social Security Number (US)](https://docs.jigx.com/examples/regex-expressions#Jhwil) | XXX-XX-XXXX                                                                                                                                                                  |
-| [National Insurance (UK)](https://docs.jigx.com/examples/regex-expressions#rtVZq)     | AA123456C                                                                                                                                                                    |
-| [US Date (DD/MM/YYYY)](https://docs.jigx.com/examples/regex-expressions#oEzBT)        | 23/07/2024                                                                                                                                                                   |
-| [Date (MM/DD/YYYY)](https://docs.jigx.com/examples/regex-expressions#YCAik)           | 03/28/2023                                                                                                                                                                   |
-| [Date (DD Month YYYY)](https://docs.jigx.com/examples/regex-expressions#rNdkI)        | 25 July 2024                                                                                                                                                                 |
-| [Date (yyyy/mm/dd)](https://docs.jigx.com/examples/regex-expressions#pwS2M)           | 2024/08/30                                                                                                                                                                   |
-| [Decimal](https://docs.jigx.com/examples/regex-expressions#eyUy1)                     | 111,25                                                                                                                                                                       |
-| [Time (H:MM AM/PM)](https://docs.jigx.com/examples/regex-expressions#7tIMj)           | 12:15 AM or 08:45 PM                                                                                                                                                         |
-| [Date (MM:SS or HH:MM)](https://docs.jigx.com/examples/regex-expressions#ExOYs)       | 08:10                                                                                                                                                                        |
-| [Time in 24-hour format](https://docs.jigx.com/examples/regex-expressions#_faOT)      | 01:00                                                                                                                                                                        |
-| [URL](https://docs.jigx.com/examples/regex-expressions#ankaP)                         | example.com or [https://example.com](https://example.com)                                                                                                                    |
-| [ISBN](https://docs.jigx.com/examples/regex-expressions#jcfEA)                        | 978-1-4302-1998-9                                                                                                                                                            |
-| [Strict alpha numeric](https://docs.jigx.com/examples/regex-expressions#-Rg7S)        | JohnSmith                                                                                                                                                                    |
-| [Alpha numeric with spaces](https://docs.jigx.com/examples/regex-expressions#kttOe)   | John Smith                                                                                                                                                                   |
-| [Numbers and spaces only](https://docs.jigx.com/examples/regex-expressions#8Fe2B)     | 56575 76 6                                                                                                                                                                   |
+<table><thead><tr><th width="252.98046875">Validation</th><th>Expected result</th></tr></thead><tbody><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#1Txjd">Phone number</a></td><td>+271234556789</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#hk-Na">Email</a></td><td><a href="mailto:name@example.com">name@example.com</a></td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#BJCon">Credit Card</a></td><td>Typically 13-16 digits, with spaces or dashes optional, and includes checks for Visa, MasterCard, American Express, and Discover. 1111-1111-1111-1111 or 1111 1111 1111 1111</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#GK4pj">ZIP/Postal code (US)</a></td><td>5-digit codes, e.g. 10036</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#Jhwil">Social Security Number (US)</a></td><td>XXX-XX-XXXX</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#rtVZq">National Insurance (UK)</a></td><td>AA123456C</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#oEzBT">US Date (DD/MM/YYYY)</a></td><td>23/07/2024</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#YCAik">Date (MM/DD/YYYY)</a></td><td>03/28/2023</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#rNdkI">Date (DD Month YYYY)</a></td><td>25 July 2024</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#pwS2M">Date (yyyy/mm/dd)</a></td><td>2024/08/30</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#eyUy1">Decimal</a></td><td>111,25</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#7tIMj">Time (H:MM AM/PM)</a></td><td>12:15 AM or 08:45 PM</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#ExOYs">Date (MM:SS or HH:MM)</a></td><td>08:10</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#_faOT">Time in 24-hour format</a></td><td>01:00</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#ankaP">URL</a></td><td>example.com or <a href="https://example.com">https://example.com</a></td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#jcfEA">ISBN</a></td><td>978-1-4302-1998-9</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#-Rg7S">Strict alpha numeric</a></td><td>JohnSmith</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#kttOe">Alpha numeric with spaces</a></td><td>John Smith</td></tr><tr><td><a href="https://docs.jigx.com/examples/regex-expressions#8Fe2B">Numbers and spaces only</a></td><td>56575 76 6</td></tr></tbody></table>
 
 ## See Also
 

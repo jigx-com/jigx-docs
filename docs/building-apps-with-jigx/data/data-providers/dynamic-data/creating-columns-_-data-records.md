@@ -6,7 +6,9 @@ There are three methods to create columns in Dynamic Data tables, and it all dep
 2. Create your columns and data manually in Jigx Management.
 3. Import your data from a CSV or JSON file using the :Link\[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"}.
 
-:::hint{type="warning"} Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K. :::
+{% hint style="warning" %}
+Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.&#x20;
+{% endhint %}
 
 ## Creating columns and records via Jigx Builder
 
@@ -16,7 +18,9 @@ You can create columns in the table by creating a jig, then define the columns y
 
 In this scenario, the `formId` in the `component.form` is used in the `submit-form` action to get context to the property `instanceId`. Each value used in the `instanceId` becomes the column's name in the table. The `entity` property specifies the table to add the columns and data to.
 
-:::hint{type="info"} The columns and data records are created when the form is completed and submitted on the mobile device and not at the time of publishing the solution in Jigx Builder. :::
+{% hint style="info" %}
+&#x20;The columns and data records are created when the form is completed and submitted on the mobile device and not at the time of publishing the solution in Jigx Builder.
+{% endhint %}
 
 ![Form creates column and data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jjL4vN_lEb3UbFsv42yPN_dd-column-form.png)
 
@@ -30,8 +34,7 @@ In this scenario, the `formId` in the `component.form` is used in the `submit-fo
 8. Open the solution in Jigx App and complete the form, click the submit button.
 9. Browse to Jigx Management> _solution_ >data> _table_ to see the new record and columns.
 
-:::CodeblockTabs employee-form.jigx
-
+{% code title="employee-form.jigx" %}
 ```yaml
 title: New employee form
 description: Capture the new employee details
@@ -99,8 +102,7 @@ actions:
           onSuccess:
             type: action.go-back
 ```
-
-:::
+{% endcode %}
 
 ### Use [execute-entity](https://docs.jigx.com/examples/execute-entity) or [execute-entities](https://docs.jigx.com/examples/execute-entities) action to create columns and data records
 
@@ -109,8 +111,8 @@ In this scenario you can use actions in a jig that interact with data to add col
 * `action.execute-entity` - used to add a **single** data record
 * `action.execute.entities` - used to add **multiple** data
 
-:::CodeblockTabs execute-entity-action
-
+{% tabs %}
+{% tab title="execute-entity-action" %}
 ```yaml
 type: action.execute-entity
         options:
@@ -122,9 +124,9 @@ type: action.execute-entity
             manager_name: =@ctx.current.item.manager
             email: =@ctx.datasources.company_contacts.email
 ```
+{% endtab %}
 
-execute-entities-action
-
+{% tab title="execute-entities-action" %}
 ```yaml
 type: action.execute-entities
         options:
@@ -136,8 +138,8 @@ type: action.execute-entities
             manager_name: =@ctx.current.item.manager
             email: =@ctx.datasources.company_contacts.email
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Creating columns in Jigx Management
 
@@ -152,7 +154,9 @@ type: action.execute-entities
 5. **Add new columns** to your record by defining a column name and clicking on the **+** button next to the new column name. As you add data in the column the field displays the type under the entry, such as number, string or boolean.
 6. Enter data values in the column fields and click **Save**.
 
-:::hint{type="info"} You do not need to specify an rid column. Dynamic Data will create a GUID based id column for you automatically. You can optionally view the rid column by selecting the settings button and checking the id column as a visible column. :::
+{% hint style="info" %}
+You do not need to specify an rid column. Dynamic Data will create a GUID based id column for you automatically. You can optionally view the rid column by selecting the settings button and checking the id column as a visible column.
+{% endhint %}
 
 ### Importing data using a JSON or CSV file
 

@@ -3,10 +3,6 @@ title: Using the Salesforce provider
 slug: ZQ7V-work
 createdAt: Wed Jul 19 2023 12:43:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Nov 24 2023 11:51:32 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to work with the Salesforce provider in a {{Jig}} using code
-  examples provided in this document. Discover how to reference multiple
-  Salesforce objects, filter columns, and join data from dif
 ---
 
 # Using the Salesforce provider
@@ -21,10 +17,9 @@ In the Salesforce provider, use IntelliSense (ctrl+space) in the `entities` prop
 
 ### Referencing multiple objects in a jig
 
-Below is an example of syncing data from six Salesforce objects when the jig is `onFocus`, using `action.sync-entities`.
+Below is an example of syncing data from six Salesforce objects when the jig is `onFocus`, using `action.sync-entities`.&#x20;
 
-:::CodeblockTabs multiple-objects
-
+{% code title="multiple-objects" %}
 ```yaml
 onFocus:
   type: action.action-list
@@ -41,8 +36,7 @@ onFocus:
             - UserRole
             - Territory
 ```
-
-:::
+{% endcode %}
 
 ### Filtering columns
 
@@ -50,8 +44,7 @@ onFocus:
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wTD7SSZLsUQuSrRLhyF4n\_salesforcea.PNG" size="70" position="center" caption="Accounts startng with A" alt="Accounts startng with A"} ::: ::::
 
-:::CodeblockTabs filter-query
-
+{% code title="filter-query" %}
 ```yaml
 title: Accounts starting with A
 type: jig.list
@@ -95,23 +88,20 @@ item:
     title: =@ctx.current.item.Name
     subtitle: =@ctx.current.item.BillingCountry
 ```
-
-:::
+{% endcode %}
 
 ### Joining data
 
 Below is an example of how you join data from multiple objects in Salesforce using SQLite queries. In this example we joining data in the Account and Case objects.
 
-:::CodeblockTabs join-data
-
+{% code title="join-data" %}
 ```yaml
 query: SELECT id as accid, '$.Name', '$.BillingCountry' FROM [Account]
   LEFT JOIN [Case]
   on AccountId = accid
   group by casepriority = caseprior
 ```
-
-:::
+{% endcode %}
 
 ### Examples and code snippets
 

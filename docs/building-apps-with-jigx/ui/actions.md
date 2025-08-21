@@ -42,10 +42,9 @@ For the complete list and code examples of available actions, see [actions](http
 
 ### In a Jig
 
-You can configure actions in various places in the jigfile, depending on what you need. To create an action as a button that appears at the bottom of the screen, place the `actions:` property at the root level in the YAML, and as the last set of properties in the YAML. The `actions:` property has a `title:` property used for the text on the button.
+You can configure actions in various places in the jig file, depending on what you need. To create an action as a button that appears at the bottom of the screen, place the `actions:` property at the root level in the YAML, and as the last set of properties in the YAML. The `actions:` property has a `title:` property used for the text on the button.
 
-:::CodeblockTabs action-button
-
+{% code title="action-button" %}
 ```yaml
 # Edit customer button to navigate to the newCustomer jig
 actions:
@@ -57,15 +56,13 @@ actions:
           parameters:
             custId: =@ctx.datasources.mydata.id
 ```
-
-:::
+{% endcode %}
 
 ### In a list
 
-A combination of differnet actions can be configured throughout a list jig, as shown in the example below. Use parameters or expressions such as `=@ctx.current.item.value` to get the context specific detail you need. Actions can also be added to the `swipeable` elements of a list for example, swipe left to delete a list item.
+A combination of different actions can be configured throughout a list jig, as shown in the example below. Use parameters or expressions such as `=@ctx.current.item.value` to get the context specific detail you need. Actions can also be added to the `swipeable` elements of a list for example, swipe left to delete a list item.
 
-:::CodeblockTabs actions-list
-
+{% code title="actions-list" %}
 ```yaml
 title: List Customers
 description: Show a list of all customers in a SQL database.
@@ -154,15 +151,13 @@ actions:
           parameters:
             custId: =$uuid_v4()
 ```
-
-:::
+{% endcode %}
 
 ### In the index file
 
 For best performance when working with data, is to get the data when the solution loads in the Jigx App. This is achieved by using the `onLoad` action in the index file which will ensure the data is available from the beginning and throughout the rest of the app.
 
-:::CodeblockTabs index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 widgets:
   - size: 1x1
@@ -184,8 +179,7 @@ onLoad:
             - entity: UserRole
             - entity: Territory2
 ```
-
-:::
+{% endcode %}
 
 ## Executing multiple actions
 
@@ -194,8 +188,7 @@ To execute a series of actions use the [action-list](https://docs.jigx.com/examp
 * `False` executes the actions randomly
 * `True` executes the actions from the top down and waits for the action to complete before executing the next action in the list, making it important to list the actions in the correct order.
 
-:::CodeblockTabs action-list
-
+{% code title="action-list" %}
 ```yaml
 onFocus:
   type: action.action-list
@@ -216,8 +209,7 @@ onFocus:
           entities:
             - default/employees
 ```
-
-:::
+{% endcode %}
 
 ## Local actions
 
@@ -242,8 +234,7 @@ Global actions are added under the `actions` folder in Jigx Builder.
 3. Select the required action and configure the properties' values.
 4. Using expressions will provide a list of available global options such as actions, expressions, and datasources.
 
-:::CodeblockTabs action
-
+{% code title="action" %}
 ```yaml
 action:
   type: action.execute-entity
@@ -269,8 +260,7 @@ parameters:
     type: string
     required: true
 ```
-
-:::
+{% endcode %}
 
 ### Call the global action in a jig or index.jigx
 
@@ -279,8 +269,7 @@ parameters:
 3. Configure the action property by selecting the global action file from the list of global action files.
 4. The `when:` proprerty can be used to determine when the global action must execute in a jig.
 
-:::CodeblockTabs jig-call-action
-
+{% code title="jig-call-action" %}
 ```yaml
 actions:
   - children:
@@ -294,15 +283,14 @@ actions:
             name: =@ctx.components.name.state.value
             email: =@ctx.components.email.state.value
 ```
-
-:::
+{% endcode %}
 
 ### Configure contextual values
 
 When configuring a global action you cannot use `=@ctx.current.item` in the file as there is no context to the current item or it's value, instead configure parameters in the global actions file that can be referenced in the jig. The following parameter is configurable in global actions `=@ctx.action.parameters.parametername`. In turn configure the parameter value in the jig with `=@ctx.components.name.state.value` or `=@ctx.current.item.name`.
 
-:::CodeblockTabs global-action.jigx
-
+{% tabs %}
+{% tab title="global-action.jigx" %}
 ```yaml
 action:
   type: action.execute-entity
@@ -329,9 +317,9 @@ parameters:
     type: string
     required: true
 ```
+{% endtab %}
 
-jig.jigx
-
+{% tab title="jig.jigx" %}
 ```yaml
 actions:
   - children:
@@ -345,8 +333,8 @@ actions:
             name: =@ctx.components.name.state.value
             email: =@ctx.components.email.state.value
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Considerations
 
@@ -358,8 +346,8 @@ actions:
 4. Actions can be combined with components in the UI, for example [summary](https://docs.jigx.com/examples/summary) component.
 5. When using the `actions.action-list` as a global action you can call another global action in the global action list.
 
-:::CodeblockTabs global-action-multiple.jigx
-
+{% tabs %}
+{% tab title="global-action-multiple.jigx" %}
 ```yaml
 action:
   # execute multiple actions seqentially using the action-list
@@ -376,9 +364,9 @@ action:
         options:
           action: sync-data
 ```
+{% endtab %}
 
-sync-data (global action).jigx
-
+{% tab title="sync-data (global action).jigx" %}
 ```yaml
 action:
   type: action.execute-entity
@@ -401,8 +389,8 @@ parameters:
     type: string
     required: true
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Working with parent & child actions
 

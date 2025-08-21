@@ -3,7 +3,6 @@ title: Offline Solutions
 slug: 8G5Q-offline-solutions
 createdAt: Tue Jun 07 2022 09:48:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 09:38:53 GMT+0000 (Coordinated Universal Time)
-description: Jigx apps sync data allowing solutions to function while the device is offline
 ---
 
 # Offline Solutions
@@ -26,4 +25,4 @@ The best practice for a robust offline solution is to sync as much data as is ne
 
 Refer to the [Data lifecycles in Jigx](data-lifecycles-in-jigx.md) and [Syncing remote and loading local Data](syncing-remote-and-loading-local-data.md) sections to understand how to build robust solutions that go offline.
 
-:::hint{type="warning"} When a Jigx solution switches from offline to online, the queue is processed on a first-in-first-out basis. Jigx does not do conflict resolution. It assumes that the cloud-based system will handle its own data integrity. :::
+:::hint{type="warning"} When a Jigx solution switches from offline to online, the queue is processed on a first-in-first-out basis. Jigx does not do conflict resolution. It assumes that the cloud-based system will handle its own data integrity.

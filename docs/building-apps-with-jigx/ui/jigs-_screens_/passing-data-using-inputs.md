@@ -19,13 +19,7 @@ You can define the following for inputs:
 
 ## Configuration options
 
-| **Properties** | **Values**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `default`      | Add a value that will display as the default if nothing is specified. This property is optional.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `required`     | <ul><li><code>true</code> - a value for the input is required</li><li><code>false</code> - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `type`         | <ul><li><code>string</code> - input must be of type string, for example, Mary.</li><li><p><code>object</code> - input must be an object with properties defined.</p><ul><li>The full object can be returned using <code>=@ctx.jig.inputs.object</code></li><li>Individual properties can be returned using <code>=@ctx.jig.inputs.object.property</code></li></ul></li><li><p><code>array</code> - input must be an array.</p><ul><li>The full array can be returned using <code>=@ctx.jig.inputs.array</code></li><li>Single elements in an array can be returned using <code>=@ctx.jig.inputs.array.element</code></li><li>Individual items in an array can be returned using <code>=@ctx.jig.inputs.array[1].element</code> The YAML format for specifying the array can be one of the following: - <code>array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]</code> - <code>array: - [John, Melany, Mel, 1234, true]</code> - <code>array: - John - Melany - Mel - 1234 - true</code></li></ul></li><li><code>boolean</code> - input must be <code>true</code> or <code>false</code>.</li><li><code>number</code> - input must be of type number, for example, 45 or 350.88.</li></ul> |
-
-:::::ExpandableHeading
+<table><thead><tr><th width="124.17578125">Properties</th><th>Values</th></tr></thead><tbody><tr><td><code>default</code></td><td>Add a value that will display as the default if nothing is specified. This property is optional.</td></tr><tr><td><code>required</code></td><td><ul><li><code>true</code> - a value for the input is required</li><li><code>false</code> - value is optional; if no value is specified, the default value is shown if provided; otherwise, the input value is empty.</li></ul></td></tr><tr><td><code>type</code></td><td><ul><li><code>string</code> - input must be of type string, for example, Mary.</li><li><p><code>object</code> - input must be an object with properties defined.</p><ul><li>The full object can be returned using <code>=@ctx.jig.inputs.object</code></li><li>Individual properties can be returned using <code>=@ctx.jig.inputs.object.property</code></li></ul></li><li><p><code>array</code> - input must be an array.</p><ul><li>The full array can be returned using <code>=@ctx.jig.inputs.array</code></li><li>Single elements in an array can be returned using <code>=@ctx.jig.inputs.array.element</code></li><li>Individual items in an array can be returned using <code>=@ctx.jig.inputs.array[1].element</code> The YAML format for specifying the array can be one of the following: - <code>array: [{name: John, age: 30}, {name: Melany, age: 35}, {name: Scott, age: 21}]</code> - <code>array: - [John, Melany, Mel, 1234, true]</code> - <code>array: - John - Melany - Mel - 1234 - true</code></li></ul></li><li><code>boolean</code> - input must be <code>true</code> or <code>false</code>.</li><li><code>number</code> - input must be of type number, for example, 45 or 350.88.</li></ul></td></tr></tbody></table>
 
 ### YAML code for index.jigx to jig
 
@@ -35,15 +29,15 @@ You can define the following for inputs:
 
 Example of the _input type_: `inputs: name: default: Placeholder type: string required: true`
 
-Example of an _input expression_: `title: =@ctx.jig.inputs.name` ::: :::: :::::
+Example of an _input expression_: `title: =@ctx.jig.inputs.name`&#x20;
 
-:::::ExpandableHeading
+
 
 ### YAML code for jig to jig
 
 ::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Parameter:** In the jig containing the data you want to transfer, and configure the various parameters to be passed. Example: `parameters: packageDate: =@ctx.current.item.date` `packageName: =@ctx.current.item.name` :::
 
-:::VerticalSplitItem **Input:** In the receiving jig configure the component to recieve the data from the parameter. Example: `title: =@ctx.jig.inputs.packageName` ::: :::: :::::
+:::VerticalSplitItem **Input:** In the receiving jig configure the component to receive the data from the parameter. Example: `title: =@ctx.jig.inputs.packageName` ::: :::: :::::
 
 ## Considerations
 
@@ -65,8 +59,8 @@ Example of an _input expression_: `title: =@ctx.jig.inputs.name` ::: :::: :::::
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s\_inputsdefinition.PNG" size="88" position="center" caption="Input definitions" alt="Input definitions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s\_inputsdefinition.PNG" width="800" height="1596" darkWidth="800" darkHeight="1596"} ::: ::::
 
-:::CodeblockTabs jig-inputs-direct.jigx
-
+{% tabs %}
+{% tab title="jig-inputs-direct.jigx" %}
 ```yaml
 title: Jig input defintions
 description: Inputs directly received from index.jigx
@@ -182,9 +176,9 @@ children:
             # In this instance the member parameter
             value: =@ctx.jig.inputs.object.obj-member
 ```
+{% endtab %}
 
-index.jigx
-
+{% tab title="index.jigx" %}
 ```yaml
 name: simple-list
 title: simple-list
@@ -218,8 +212,8 @@ widgets:
         obj-age: 50
         obj-member: false
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### Dynamically pass data from another jig's components
 
@@ -227,8 +221,8 @@ Jig input definitions are configured directly in the jig and the input values re
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26\_CwRD8Y7MD\_092ze\_1K\_inputscard.PNG" size="70" position="center" caption="Dynamic input" alt="Dynamic input" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26\_CwRD8Y7MD\_092ze\_1K\_inputscard.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
 
-:::CodeblockTabs input-student-card.jigx
-
+{% tabs %}
+{% tab title="input-student-card.jigx" %}
 ```yaml
 title: Student Card
 type: jig.default
@@ -294,9 +288,9 @@ children:
                         label: Allergies
                         value: =$string(@ctx.jig.inputs.studentAllergies.allergen)
 ```
+{% endtab %}
 
-input-student-details.jigx
-
+{% tab title="input-student-details.jigx" %}
 ```yaml
 title: Student Details
 description: The values captured in the form are used as the input to create a student card jig
@@ -419,14 +413,12 @@ actions:
             studentAllergies: =@ctx.components.studentAllergies.state.selected
             studentResident: =@ctx.components.resident.state.value
 ```
-
-:::
-
-:::::ExpandableHeading
+{% endtab %}
+{% endtabs %}
 
 ### Passing data from one jig to another
 
-In this example, the **sending** jig list called\* Island Holiday Packages\* is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
+In this example, the **sending** jig list called _Island Holiday Packages_ is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j\_IavddFgHXJg\_inputex1.png" size="58" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j\_IavddFgHXJg\_inputex1.png" width="800" height="805" darkWidth="800" darkHeight="805"}
 
@@ -436,8 +428,7 @@ In this example, the **sending** jig list called\* Island Holiday Packages\* is 
 
 :::VerticalSplitItem Create a `jig.list` with `list.items` for the name, description of the holiday package and add a `rightElement: button` for the date with an `onPress` action. Then add parameters: `packageName`, `packageDate`, and `packagePrice`. Add an expression for each similiar to `=@ctx.current.item.date` ::: ::::
 
-:::CodeblockTabs Holiday-packages.jigx
-
+{% code title="Holiday-packages.jigx" %}
 ```yaml
 title: Island Holiday Packages
 type: jig.list
@@ -496,8 +487,7 @@ item:
             packagePrice: =@ctx.current.item.Price
             packageName: =@ctx.current.item.name
 ```
-
-:::
+{% endcode %}
 
 **Receiving Jig**
 
@@ -505,8 +495,7 @@ item:
 
 :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq\_inputrec.png" size="64" position="center" caption="Input- receiving jig" alt="Input- receiving jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq\_inputrec.png" width="800" height="1583" darkWidth="800" darkHeight="1583"} ::: ::::
 
-:::CodeblockTabs selected-package.jigx
-
+{% code title="selected-package.jigx" %}
 ```yaml
 # Use the parameter for package name as an input for the title
 title: =@ctx.jig.inputs.packageName
@@ -542,10 +531,7 @@ actions:
           modal:
             title: Let the countdown begin!
 ```
-
-::: :::::
-
-:::::ExpandableHeading
+{% endcode %}
 
 ### Passing data from a jig to a composite jig
 
@@ -571,8 +557,7 @@ To achieve this configure the following:
 
 :::VerticalSplitItem Create a list jig called _customer-list.jigx_, use the datasource to list customer names and ids. Add `parameters` for the `customerName` and `customerId`. ::: ::::
 
-:::CodeblockTabs customer-list.jigx
-
+{% code title="customer-list.jigx" %}
 ```yaml
 title: Customer List
 type: jig.list
@@ -619,18 +604,17 @@ item:
             customerId: =@ctx.current.item.customerId
             customerName: =@ctx.current.item.name
 ```
+{% endcode %}
 
-:::
-
-\*\*Supporting Jigs \*\*
+**Supporting Jigs**
 
 Create two basic list jigs one for _customer-contacts_ and the other for the _customer-orders_.
 
 1. For the `data` property in both jig s add the `customerId` as an input `data: =@ctx.datasources.datasourcename[customerId = @ctx.jig.inputs.customerId]`. Define the input type as string under the `inputs` property.
 2. In the _customer-contacts.jigx_ also add the `customerName` as an input with the type string.
 
-:::CodeblockTabs customer-contacts.jigx
-
+{% tabs %}
+{% tab title="customer-contacts.jigx" %}
 ```yaml
 title: Customer Contacts
 type: jig.list
@@ -669,9 +653,9 @@ item:
     title: =@ctx.current.item.name
     subtitle: =@ctx.jig.inputs.customerName
 ```
+{% endtab %}
 
-customer-orders.jigx
-
+{% tab title="customer-orders.jigx" %}
 ```yaml
 title: Customer orders
 type: jig.list
@@ -725,8 +709,8 @@ item:
       element: value
       text: =@ctx.current.item.amount
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 **Receiving jig (composite)**
 
@@ -734,8 +718,7 @@ item:
 
 :::VerticalSplitItem The receiving jig is a composite jig with two children _(customer-contacts_ and _customer-orders_). In this example, we pass the `inputs` (_customerId_ and _customerName_) to the children. The children can then access all `parameters` and render only the selected customers contact and order details. ::: ::::
 
-:::CodeblockTabs customer-overview.jigx
-
+{% code title="customer-overview.jigx" %}
 ```yaml
 # Reference the customer name in the title
 # Using the input from the parameter in the customer-list
@@ -776,5 +759,4 @@ children:
     inputs:
       customerId: =@ctx.jig.inputs.customerId
 ```
-
-::: :::::
+{% endcode %}

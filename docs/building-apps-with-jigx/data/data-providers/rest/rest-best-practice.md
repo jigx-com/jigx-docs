@@ -9,8 +9,7 @@
 
     ![Syncing temp\_Id](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VuOMkHMSZXXZRlH7jloeo_rest-id.png)
 
-:::CodeblockTabs function.jigx
-
+{% code title="function.jigx" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: POST # Create new record in the backend
@@ -65,8 +64,7 @@ outputTransform: |
     "status": status
   }
 ```
-
-:::
+{% endcode %}
 
 ## Where and when to sync and load data
 
@@ -83,8 +81,7 @@ Working with complex REST objects can be tricky, as they include arrays, nested 
 1. `JsonProperties` in the SQLite query `jsonProperties: - addresses`
 2. In the expression used to retrieve the value, specify the exact property in the array or nested object that you require by referencing the `JsonProperty` followed by the property. `description: =@ctx.current.item.addresses[0].city leftElement: element: avatar text: =@ctx.current.item.addresses[0].state`
 
-:::CodeblockTabs
-
+{% code title="JSON" %}
 ```json
 "customers": [
         {
@@ -115,7 +112,9 @@ Working with complex REST objects can be tricky, as they include arrays, nested 
             "logo": null
         },
 ```
+{% endcode %}
 
+{% code title="datasource" %}
 ```yaml
 datasources:
   customers:
@@ -172,8 +171,7 @@ item:
         parameters:
           customer: =@ctx.current.item
 ```
-
-:::
+{% endcode %}
 
 ## Data handling when a device is offline
 

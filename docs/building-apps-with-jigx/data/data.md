@@ -3,9 +3,6 @@ title: Data
 slug: aI2F-data
 createdAt: Fri Jun 17 2022 09:30:01 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 26 2024 12:20:36 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Jigx data concepts, including data lifecycles, syncing and loading data, and
-  how to work with REST, Azure SQL, and Dynamic Data
 ---
 
 # Data

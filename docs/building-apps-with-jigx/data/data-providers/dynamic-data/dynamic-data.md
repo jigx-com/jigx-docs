@@ -22,7 +22,9 @@ We can visualize how dynamic data works by following the steps below:
 * Realtime data syncing between your device, Dynamic data in the cloud, and other devices.
 * Devices continue to operate offline and any local changes will be synced to the database once the device established a connection.
 
-:::hint{type="warning"} Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K. :::
+{% hint style="warning" %}
+Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.&#x20;
+{% endhint %}
 
 ## How to create Dynamic Data
 
@@ -37,7 +39,9 @@ To create and use Dynamic data see the following:
 
 :::VerticalSplitItem ::embed\[]{url="https://vimeo.com/829863168?share=copy"} ::: ::::
 
-:::hint{type="info"} **Supporting file** for the _Working with Dynamic Data_ video. You can use this CSV file if you want to follow the steps in the video. :::
+{% hint style="info" %}
+**Supporting file** for the _Working with Dynamic Data_ video. You can use this CSV file if you want to follow the steps in the video.
+{% endhint %}
 
 ## Examples and code snippets
 

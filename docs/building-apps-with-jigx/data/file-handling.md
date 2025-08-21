@@ -4,132 +4,44 @@ Jigx stores files as local files on the device and returns the file's URI as the
 
 Type of files:
 
-- Images
-- Documents
+* Images
+* Documents
 
 Image files can be used in the following functionality:
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="0,285">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Data</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Conversion configuration</strong></p>
-    </td>
-    <td selected="false" align="left">
-      <p><strong>Result</strong></p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>REST Provider calls with files</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add the conversion to the REST function</p>
-    </td>
-    <td selected="false" align="left">
-      <p>GET - incoming
-      SAVE - outgoing
-      CREATE - outgoing
-      UPDATE - outgoing</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>SQL Provider calls with files</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add the conversion to the REST function</p>
-    </td>
-    <td selected="false" align="left">
-      <p>GET - incoming
-      SAVE - outgoing
-      CREATE - outgoing
-      UPDATE - outgoing</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Datasource queries with files</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add the conversion to the datasource when using Dynamic Data.</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Incoming</p>
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p>Actions with files</p>
-    </td>
-    <td selected="false" align="left">
-      <p>Add the conversion to the action when saving images and files.</p>
-    </td>
-    <td selected="false" align="left">
-      <p>outgoing</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="238.828125">Data</th><th width="289.21484375">Conversion configuration</th><th>Result</th></tr></thead><tbody><tr><td>REST Provider calls with files</td><td>Add the conversion to the REST function</td><td>GET - incoming <br>SAVE - outgoing <br>CREATE - outgoing <br>UPDATE - outgoing</td></tr><tr><td>SQL Provider calls with files</td><td>Add the conversion to the REST function</td><td>GET - incoming <br>SAVE - outgoing <br>CREATE - outgoing <br>UPDATE - outgoing</td></tr><tr><td>Datasource queries with files</td><td>Add the conversion to the datasource when using Dynamic Data.</td><td>Incoming</td></tr><tr><td>Actions with files</td><td>Add the conversion to the action when saving images and files.</td><td>outgoing</td></tr></tbody></table>
 
 The `conversions` property allows you to configure the file conversion to the required format.
 
-<table isTableHeaderOn="true" selectedColumns="" selectedRows="" selectedTable="false" columnWidths="139">
-  <tr>
-    <td selected="false" align="left">
-      <p><strong>Core structure</strong></p>
-    </td>
-    <td selected="false" align="left">
-    </td>
-  </tr>
-  <tr>
-    <td selected="false" align="left">
-      <p><code>conversions:</code></p>
-    </td>
-    <td selected="false" align="left">
-      <p>This holds an array of properties that should be converted. The following properties control the conversion:</p>
-      <ul>
-      <li><code>property:</code> The name of the property to convert.</li>
-      <li><code>from:</code> Format of the input data. It can be buffer, base64, data-uri, or local-uri.</li>
-      <li><code>to:</code> Format of the converted data. It can be base64, data-uri, buffer, or local-uri.</li>
-      <li><code>convertHeicToJpg:</code> When set to <code>true</code>, and the file being converted is HEIC, it is converted to JPG.</li>
-      </ul>
-      <p>Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression <code>conversions: =@ctx.datasources.conversions</code>, applicable to both local and global actions.</p>
-    </td>
-  </tr>
-</table>
+<table><thead><tr><th width="159.19921875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>conversions:</code></td><td><p>This holds an array of properties that should be converted. The following properties control the conversion:</p><ul><li><code>property:</code> The name of the property to convert.</li><li><code>from:</code> Format of the input data. It can be buffer, base64, data-uri, or local-uri.</li><li><code>to:</code> Format of the converted data. It can be base64, data-uri, buffer, or local-uri.</li><li><code>convertHeicToJpg:</code> When set to <code>true</code>, and the file being converted is HEIC, it is converted to JPG.</li></ul><p>Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression <code>conversions: =@ctx.datasources.conversions</code>, applicable to both local and global actions.</p></td></tr></tbody></table>
 
-Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field](https://docs.jigx.com/examples/media-field) or [avatar-field](https://docs.jigx.com/examples/avatar). When referencing files in jigs use the `.state.value` configuration.
-For example:
+Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field](https://docs.jigx.com/examples/media-field) or [avatar-field](https://docs.jigx.com/examples/avatar). When referencing files in jigs use the `.state.value` configuration. For example:
 
-- `file: =@ctx.components.profilePicture.state.value`
-- `image: =@ctx.components.image.state.value`
+* `file: =@ctx.components.profilePicture.state.value`
+* `image: =@ctx.components.image.state.value`
 
 ## Considerations
 
-- Conversions should be configured within the SQL and REST functions. When the conversion is configured in the function, it stores the data as the 'from' type in the datasource.
-- When conversions are done at the datasource level, they are still stored in the datasource as their original value. They are only converted after the fact when requested; however, the datasource value does not change.&#x20;
-- Do not load data back from buffer using the Dynamic Data provider; the file will not show.&#x20;
-- When saving images to Dynamic Data consider the file size. You can reduce the file size in the [media-field](https://docs.jigx.com/examples/media-field) by configuring the `imageQuality` property.
-- Use `convertHeicToJpg` to ensure images are visible on iOS and Android devices. The property is available for REST and SQL functions, Dynamic Data and actions.
+* Conversions should be configured within the SQL and REST functions. When the conversion is configured in the function, it stores the data as the 'from' type in the datasource.
+* When conversions are done at the datasource level, they are still stored in the datasource as their original value. They are only converted after the fact when requested; however, the datasource value does not change.
+* Do not load data back from buffer using the Dynamic Data provider; the file will not show.
+* When saving images to Dynamic Data consider the file size. You can reduce the file size in the [media-field](https://docs.jigx.com/examples/media-field) by configuring the `imageQuality` property.
+* Use `convertHeicToJpg` to ensure images are visible on iOS and Android devices. The property is available for REST and SQL functions, Dynamic Data and actions.
 
-:::hint{type="warning"}
+{% hint style="warning" %}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.
-:::
+{% endhint %}
 
 ## Examples and code snippets
 
 ## Convert incoming data
 
-::::ExpandableHeading
 ### REST & SQL function
 
-In the examples below, the file conversions are configured in the** REST and SQL (GET) functions **to convert the incoming files.
+In the examples below, the file conversions are configured in the REST and SQL (GET) functions to convert the incoming files.
 
-:::CodeblockTabs
-rest-function-in
-
+{% tabs %}
+{% tab title="rest-function-in" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: GET
@@ -155,9 +67,9 @@ conversions:
     from: base64
     to: local-uri
 ```
+{% endtab %}
 
-sql-function-in
-
+{% tab title="sql-function-in" %}
 ```yaml
 provider: DATA_PROVIDER_SQL
 method: query
@@ -180,19 +92,17 @@ conversions:
     from: data-uri
     to: local-uri
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
 ## Convert outgoing data
 
-::::ExpandableHeading
 ### REST & SQL function
 
-In the examples below, the file conversions are configured in the **REST and** **SQL **(SAVE/CREATE/UPDATE) **functions** to convert the files that are outgoing to REST and SQL.
+In the examples below, the file conversions are configured in the **REST** and **SQL** (SAVE/CREATE/UPDATE) **functions** to convert the files that are outgoing to REST and SQL.
 
-:::CodeblockTabs
-rest-function-out
-
+{% tabs %}
+{% tab title="rest-function-out" %}
 ```yaml
 provider: DATA_PROVIDER_REST
 method: PATCH
@@ -220,9 +130,9 @@ conversions:
     from: local-uri
     to: buffer
 ```
+{% endtab %}
 
-sql-function-out
-
+{% tab title="sql-function-out" %}
 ```yaml
 provider: DATA_PROVIDER_SQL
 method: execute
@@ -261,16 +171,14 @@ conversions:
     from: local-uri
     to: data-uri
 ```
-:::
-::::
+{% endtab %}
+{% endtabs %}
 
 ## Datasource conversion
 
 In this example, the Dynamic Data image file conversion is configured in the datasource to convert the files to be used in the solution.
 
-:::CodeblockTabs
-datasource-conversion
-
+{% code title="datasource-conversion" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -286,15 +194,14 @@ options:
       from: base64
       to: local-uri
 ```
-:::
+{% endcode %}
 
 ## Action image conversion
 
 File conversions in actions can be configured with Dynamic Data, SQL, and REST providers. They can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression `conversions: =@ctx.datasources.conversions`, applicable to both local and global actions.
 
-:::CodeblockTabs
-execute-entity-action (static)
-
+{% tabs %}
+{% tab title="execute-entity-action (static)" %}
 ```yaml
 - type: action.execute-entity
     options:
@@ -314,9 +221,9 @@ execute-entity-action (static)
           from: local-uri
           to: base64
 ```
+{% endtab %}
 
-execute-entity-action (dynamic)
-
+{% tab title="execute-entity-action (dynamic)" %}
 ```yaml
 - type: action.execute-entity
     options:
@@ -333,9 +240,9 @@ execute-entity-action (dynamic)
       # Dynamic conversion configuration.
       conversions: =@ctx.datasources.conversions
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 type: datasource.sqlite
 options:
@@ -351,15 +258,15 @@ options:
       from: base64
       to: local-uri
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Add multiple files with SQL data provider
 
 This example uses the `text-field` with `mediaType: image` and `isMultiple: true` to add multiple images to SQL. The `conversion` of the files is done in the SQL function.
 
-:::CodeblockTabs
-sql-add-widget-multiple-function.jigx
-
+{% tabs %}
+{% tab title="sql-add-widget-multiple-function.jigx" %}
 ```yaml
 # Add under function folder
 provider: DATA_PROVIDER_SQL
@@ -382,9 +289,9 @@ conversions:
     property: avatar
     to: buffer
 ```
+{% endtab %}
 
-sql-get-widget-multiple-jigx
-
+{% tab title="sql-get-widget-multiple-jigx" %}
 ```yaml
 # Add under function folder
 provider: DATA_PROVIDER_SQL
@@ -403,9 +310,9 @@ conversions:
     from: buffer
     to: local-uri
 ```
+{% endtab %}
 
-add-widget-mutiple-sql.jigx
-
+{% tab title="add-widget-mutiple-sql.jigx" %}
 ```yaml
 # Add under jig folder
 title: Add Widget Multiple
@@ -483,7 +390,8 @@ actions:
           onSuccess:
             title: Success
 ```
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Convert HEIC to JPEG
 
@@ -520,5 +428,4 @@ conversions:
 
 ### See Also
 
-- [Example converting local-uri to buffer in SQL function](https://docs.jigx.com/examples/media-field#haYKX)
-
+* [Example converting local-uri to buffer in SQL function](https://docs.jigx.com/examples/media-field#haYKX)

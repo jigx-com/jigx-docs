@@ -3,10 +3,6 @@ title: Organization Settings
 slug: KsWo-organization-settings
 createdAt: Tue Jun 07 2022 15:07:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Oct 02 2024 12:00:37 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to configure global organization settings in JigxManagement with
-  this comprehensive document. From organization details to OAuth configurations
-  and single sign-on (SSO), explore all the esse
 ---
 
 # Organization Settings

@@ -3,10 +3,6 @@ title: OAuth Configurations
 slug: qj0_-oauth-configurations
 createdAt: Wed Jun 07 2023 08:05:42 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Apr 15 2024 08:45:06 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to easily add, configure, and manage OAuth at the organizational
-  level in Jigx with step-by-step instructions. Discover how to create multiple
-  OAuth configurations, assign them to Single Sig
 ---
 
 # OAuth Configurations
@@ -40,7 +36,7 @@ Jigx provides a secure credentials store in the cloud that can be used to connec
 9. All the organization's domains set up at registration are listed under **Domains.**
    1. To add additional domains, contact support@jigx.com.
    2. To accomodate for unknown domains not associated with the organization use a wildcard (\*) in the OAuth configuration. See [Set up a domain wildcard](https://docs.jigx.com/oauth-configurations#WJFnB).
-10. \*\*Redirect URL \*\*- Add the redirect URL, you can add multiple URLs. Redirect URLs must match the configuration of the Client app on the 3rd Party IDP.
+10. **Redirect URL** - Add the redirect URL, you can add multiple URLs. Redirect URLs must match the configuration of the Client app on the 3rd Party IDP.
 11. Enter the **Client ID**, and **Client Secret**. These are optional.
 12. Enter the **Issuer**. If you use the Service configuration endpoints, then Issuer is not required, but if not, then Issuer is a required field to complete the configuration.
 13. By default, the **Use PKCE** and **Use Nonce** are selected, you can deselect these if not required.
@@ -57,7 +53,9 @@ Jigx provides a secure credentials store in the cloud that can be used to connec
 
 Click on the **Remove** link in the last column of the record to remove the credentials. Be aware that functions in the solution referencing the OAuth configuration will stop working as they can no longer connect to the remote API.
 
-:::hint{type="danger"} Before removing the OAuth configuration, check where the OAuth key is referenced. Removing the key at an organizational level could break solutions using the global OAuth token. :::
+{% hint style="danger" %}
+Before removing the OAuth configuration, check where the OAuth key is referenced. Removing the key at an organizational level could break solutions using the global OAuth token.
+{% endhint %}
 
 ### Set up a domain wildcard (\*)
 

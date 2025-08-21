@@ -6,8 +6,7 @@ We will now create a Jig with a form that creates a record with multiple columns
 
 First, we create an empty Jig and call it _form.jigx_. Delete the `datasources` section, as we don't need it now.
 
-:::CodeblockTabs form.jigx
-
+{% code title=" form.jigx" %}
 ```yaml
 title: Form
 description: My first from by Jigx
@@ -16,8 +15,7 @@ type: jig.default
 children:
   -
 ```
-
-:::
+{% endcode %}
 
 ## Adding a form to the Jig
 
@@ -26,8 +24,7 @@ We need to add a _form_ component to our Jig, as it will be the container for th
 1. Go ahead and use IntelliSense (**Ctrl+Space**) to add a [form](https://docs.jigx.com/examples/form) component to the `children` option of your Jig.
 2. Note the empty `instanceId` option. This is the unique identifier of your form. Set it to _simple-form_ as we need it later to submit the form.
 
-:::CodeblockTabs form.jigx
-
+{% code title="form.jigx" %}
 ```yaml
 title: Form
 description: My first form by Jigx
@@ -40,8 +37,7 @@ children:
       children:
         -
 ```
-
-:::
+{% endcode %}
 
 ## Adding form input components to the form
 
@@ -52,8 +48,7 @@ Two options are important for every form field:
 * `instanceId` - This is the unique identifier of each form input component and it will be used later to retrieve the field values using [State](../../../logic/state.md). Set it to _firstname_.
 * `label` - The label will be displayed on the actual component UI and is important for user interaction. Keep it simple and descriptive. Set it to _First name_.
 
-:::CodeblockTabs form.jigx
-
+{% code title="form.jigx" %}
 ```yaml
 title: Form
 description: My first form by Jigx
@@ -69,17 +64,17 @@ children:
           options:
             label: First name
 ```
+{% endcode %}
 
-:::
-
-:::hint{type="warning"} Please note: It's best practice for mobile forms to be as short and simple as possible! No one wants to fill out dozens of fields on a mobile device. Because of this, all Jigx input components are marked as required (option `isRequired`) by default. If you want to make a field optional set `isRequired` to _false,_ but ask yourself if you then really need that field on your form. :::
+{% hint style="warning" %}
+Please note: It's best practice for mobile forms to be as short and simple as possible! No one wants to fill out dozens of fields on a mobile device. Because of this, all Jigx input components are marked as required (option `isRequired`) by default. If you want to make a field optional set `isRequired` to _false,_ but ask yourself if you then really need that field on your form.&#x20;
+{% endhint %}
 
 Next, add some more fields to your form. Note that for the email and phone fields we specified an additional option, called `keyboardType`. This will present the devices onscreen keyboard in the right mode. You can use **Ctrl+Space** to see all available types.
 
 Go ahead and create a form with this YAML:
 
-:::CodeblockTabs form.jigx
-
+{% code title="form.jigx" %}
 ```yaml
 title: Form
 description: My first form by Jigx
@@ -109,8 +104,7 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
-:::
+{% endcode %}
 
 ## Submitting the form data
 
@@ -120,8 +114,6 @@ In general, there are two main ways of sending a form's data back to your data s
 
 * **Submit-Form Action** - This is the standard approach for submitting data to your data store. Choose this one if your form just needs to create or update data in a single table.
 * **Execute-Entity Action** - If you need more control about how and where to send your form data, select this action type. Keep in mind that it requires you to understand [State](../../../logic/state.md) to access the field values.
-
-::::ExpandableHeading
 
 ### Submit form
 
@@ -141,8 +133,7 @@ Now we need to set our _submit-form_ action to the form component:
 
 Our YAML looks like this now :
 
-:::CodeblockTabs form.jigx
-
+{% code title="form.jigx" %}
 ```yaml
 title: Form
 description: My first from by Jigx
@@ -183,10 +174,7 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
-::: ::::
-
-::::ExpandableHeading
+{% endcode %}
 
 ### Execute-entity
 
@@ -194,12 +182,13 @@ The execute-entity action allows for more control over how your data is stored. 
 
 As you can see in below example, the action exposes a `data` option that allows you to specify each column that will be used in the payload. Each column value can be bound to an expression and state of your components. In this example we are accessing state for each field (remember, \*\*Ctrl+Space \*\*is your best friend). It's very helpful to learn more about [State](../../../logic/state.md) in general when using this type of action.
 
-:::hint{type="info"} You could also use JSONata [expression](../../../logic/expressions.md) to transform the state values before binding them to the columns. An example for this would be:
+{% hint style="info" %}
+You could also use JSONata [expression](../../../logic/expressions.md) to transform the state values before binding them to the columns. An example for this would be:
 
-_lastname: =$uppercase(@ctx.components.lastname.state.value)_ :::
+_lastname: =$uppercase(@ctx.components.lastname.state.value)_&#x20;
+{% endhint %}
 
-:::CodeblockTabs form.jigx
-
+{% code title="form.jigx" %}
 ```yaml
 title: Form
 description: My first form by Jigx
@@ -243,15 +232,13 @@ children:
             label: Phone number
             keyboardType: number-pad
 ```
-
-::: ::::
+{% endcode %}
 
 ## Adding a widget to home hub
 
 Now let's head over to the _index.jigx_ fiel of our solution to add a widget for the Home Hub that takes the user to our form:
 
-:::CodeblockTabs index.jigx
-
+{% code title="index.jigx" %}
 ```yaml
 title: First form
 category: personal
@@ -261,9 +248,8 @@ tabs:
     jigId: form
     icon: home-apps-logo
 ```
+{% endcode %}
 
-:::
+Publish your solution now, so that you can try it out on your mobile device 🎉 Remember, that you always check out the contents of your Dynamic Data form table in the [Jigx Management](https://manage.jigx.com/). Navigate to the Solutions area in the left sidebar, select your solution and check out the Data section in the sidebar.
 
-Publish your solution now, so that you can try it out on your mobile device 🎉 Remember, that you always check out the contents of your Dynamic Data form table in the :Link\[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"}. Navigate to the Solutions area in the left sidebar, select your solution and check out the Data section in the sidebar.
-
-Next see how to [update a record](updating-a-record.md). For more examples on formatting your form see :Link\[GitHub]{href="https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/components/form/simple-form-submit.jigx" newTab="true" hasDisabledNofollow="false"}.
+Next see how to [update a record](updating-a-record.md). For more examples on formatting your form see [GitHub](https://github.com/jigx-com/jigx-samples/blob/main/samples/jigx-samples/jigs/components/form/simple-form-submit.jigx).

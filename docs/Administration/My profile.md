@@ -3,10 +3,6 @@ title: My profile
 slug: PCpY-my-profile
 createdAt: Mon Mar 06 2023 12:54:07 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Oct 02 2024 12:18:36 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to effectively manage your profile on a platform with this
-  comprehensive document. Discover step-by-step instructions on accessing and
-  navigating your profile, modifying organization roles,
 ---
 
 # My profile

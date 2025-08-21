@@ -17,8 +17,7 @@ For example:
 * Specify a `localPath` for the file.
 * Specify a `fileName` with the file extension. If a `fileName` is not provided, the system extracts it from the `localPath`.
 
-:::CodeblockTabs upload-files
-
+{% code title="upload-files" %}
 ```yaml
 actions:
   - children:
@@ -41,16 +40,14 @@ actions:
                 file: 
                   localPath: =@ctx.components.expenseimage.state.value
 ```
-
-:::
+{% endcode %}
 
 ### Deleting Files
 
 * Delete a file by executing the standard `delete` entity method in an `execute-entity` action.
 * To delete a file from an entity record, you call `save` or `update` and set the `file` property to `null`, or `localPath` to `null`.
 
-:::CodeblockTabs delete-files
-
+{% code title="delete-files" %}
 ```yaml
 onPress: 
   type: action.execute-entity
@@ -65,8 +62,7 @@ onPress:
      # Set the file to null which deletes the file.  
      file: null                                     
 ```
-
-:::
+{% endcode %}
 
 ### Downloading Files
 
@@ -75,8 +71,8 @@ onPress:
 * You will not be able to browse to it on the device.
 * Use a `datasource` query to access the downloaded file using properties available on a downloaded file. See the available properties in the _datasource-query_ code example below. The datasource allows you to use the thumbnail URI from the server, for faster loading and lower bandwidth.The full file for high-resolution, detailed viewing or editing. As well as storing the file in the cache (localPath) to cater for offline use, and repeated requests for the same file. Depending on your requirement will determine which properties to include in the datasource query.
 
-:::CodeblockTabs download-files
-
+{% tabs %}
+{% tab title="download-files" %}
 ```yaml
 actions:
   - type: action.execute-entity
@@ -90,9 +86,9 @@ actions:
       data:
        id: =@ctx.current.item.id              
 ```
+{% endtab %}
 
-datasource-query
-
+{% tab title="datasource-query" %}
 ```yaml
 # File properties available to query a downloaded file.
 datasources:
@@ -120,8 +116,8 @@ datasources:
         FROM [default/expenses]
         ORDER BY '$.expenseitem'
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## File Status Tracking
 
@@ -130,8 +126,8 @@ datasources:
 * The progress column is updated as the file is uploaded/downloaded.
 * Errors during operations update the status to `failed`, and these can be retried using `action.retry-queue-command` with the corresponding `commandId` from the `_fileStatus` table.
 
-:::CodeblockTabs file-progress
-
+{% tabs %}
+{% tab title="file-progress" %}
 ```yaml
 title: File Progress
 type: jig.list
@@ -173,9 +169,9 @@ item:
                   options:
                     id: =@ctx.current.item.commandId
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 datasources:
   file-status-ds:
@@ -203,8 +199,8 @@ datasources:
       queryParameters:
         expenseId: =@ctx.jig.inputs.expenseId
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## File Permissions
 
@@ -248,8 +244,8 @@ actions:
 
 Consider when and how the files are used in the app. Thumbnails are useful when displaying a preview or list view where speed matters more than quality and you want to minimize bandwidth and memory usage. The code snippet below uses the thumbnail (base64 string) if available, otherwise, it uses the local file path. If neither is available, it returns nothing (null). The datasource query includes the thumbnail and local path:
 
-:::CodeblockTabs YAML
-
+{% tabs %}
+{% tab title="YAML" %}
 ```yaml
 leftElement:
   element: avatar
@@ -258,9 +254,9 @@ leftElement:
     =@ctx.current.item.thumbnail != null ? 'data:image/png;base64,' & @ctx.current.item.thumbnail :
     @ctx.current.item.localPath != null ? @ctx.current.item.localPath
 ```
+{% endtab %}
 
-datasource
-
+{% tab title="datasource" %}
 ```yaml
 # File properties available to query to use in the expression file.
 datasources:
@@ -279,8 +275,8 @@ datasources:
           json_extract(file, '$.thumbnail.base64') as thumbnail
         FROM [default/employees]
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Jigx Management
 

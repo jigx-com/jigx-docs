@@ -3,17 +3,15 @@ title: Create and configure a new OAuth app in Microsoft Azure AAD
 slug: X-IE-create-and-configure-a-new-oauth-app-in-microsoft-azure-aad
 createdAt: Mon Nov 21 2022 22:30:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Apr 29 2024 13:12:03 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to configure a Microsoft Azure OAuth app for seamless authentication
-  with Microsoft Graph using this step-by-step guide. With detailed
-  instructions, screenshots, and tips to create the app,
 ---
 
 # Create and configure a new OAuth app in Microsoft Azure AAD
 
-:::hint{type="info"} This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx requires an OAuth app to authenticate with Microsoft Graph.
+{% hint style="info" %}
+This topic is specific to Microsoft Azure OAuth and not a feature of Jigx. Jigx requires an OAuth app to authenticate with Microsoft Graph.
 
-**To successfully complete these steps, you will need a Microsoft Office 365 Administrator account with access to the Azure Active Directory Administration portal.** :::
+To successfully complete these steps, you will need a Microsoft Office 365 Administrator account with access to the Azure Active Directory Administration portal.&#x20;
+{% endhint %}
 
 1.Login to [https://admin.microsoft.com](https://admin.microsoft.com/)
 
@@ -53,7 +51,7 @@ description: >-
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TcDQRF7iYJGhg5IZORevC\_image.png" size="40" position="center" caption="New application" alt}
 
-12\. Click on the \*\*application registration link \*\*at the top right of the page.
+12\. Click on the **application registration link** at the top right of the page.
 
 13\. Click on **Authentication** in the left menu.
 
@@ -73,7 +71,7 @@ description: >-
 
 If you are planning on using **Postman** to test calls to Microsoft Graph using the Jigx Mobile OAuth configuration, click on Add URI and add the following URL: [https://oauth.pstmn.io/v1/callback](https://oauth.pstmn.io/v1/callback) then click on **Save** at the bottom of the screen.
 
-17\. Click on\*\* API permissions\*\*. Depending on the functionality you want to expose to Jigx Mobile, you will have to specify specific API permissions, also referred to as scopes.
+17\. Click on **API permissions**. Depending on the functionality you want to expose to Jigx Mobile, you will have to specify specific API permissions, also referred to as scopes.
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VjTPKfYwHW87qpjBo3Pdj\_image.png" size="40" position="center" caption="Scopes" alt="Scopes"}
 
@@ -85,11 +83,11 @@ If you are planning on using **Postman** to test calls to Microsoft Graph using 
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7yfIHpb6iuyf-1tsqHqTD\_image.png" size="40" position="center" caption alt="API permissions"}
 
-20\. Enable **email, openid, profile and User.Read, offline\_access**. These are the minimum scopes needed by Jigx to access the API. \*\*To find User.Read, \*\*enter it in the search box. Click on **Add permissions** at the bottom of the screen.
+20\. Enable **email, openid, profile and User.Read, offline\_access**. These are the minimum scopes needed by Jigx to access the API. **To find User.Read,** enter it in the search box. Click on **Add permissions** at the bottom of the screen.
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/eFrx-qU75Ld5GgGQ1H9Lp\_image.png" size="40" position="center" caption="API permissions" alt="API permissions"}
 
-21\. Click on **Grant admin consent** on the toolbar above the API permissions. Your API permissions should look similiar to the image below.
+21\. Click on **Grant admin consent** on the toolbar above the API permissions. Your API permissions should look similar to the image below.
 
 ![API permissions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ouVtdCw3z8x0qdd5mJqO4_image.png)
 
@@ -105,6 +103,6 @@ If you are planning on using **Postman** to test calls to Microsoft Graph using 
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6x96Q3sKcuVvuBxNVWa9r\_image.png" size="80" position="center" caption="Endpoints" alt="Endpoints"}
 
-25\. At this stage, the\*\* OAuth app \*\*is configured and ready to use.
+25\. At this stage, the **OAuth app** is configured and ready to use.
 
 In the next section, add the configuration to the Jigx solution in Jigx Management.

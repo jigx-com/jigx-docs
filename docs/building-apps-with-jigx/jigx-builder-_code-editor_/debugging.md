@@ -3,10 +3,6 @@ title: Debugging
 slug: pSqd-debugging-and-testing
 createdAt: Tue Jun 20 2023 08:34:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:18:17 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Discover how JigxBuilder provides powerful debugging capabilities in VSCode
-  for identifying and resolving YAML, SQLite, and app errors. Connect your phone
-  using a debugging QR code to troubleshoot dir
 ---
 
 # Debugging
@@ -38,9 +34,7 @@ Enable Jigx Dev Tools by following these steps:
 5. On your device, tap **Enable** on the Jigx Dev tools message.
 6. The solution opens in the Jigx App.
 7. Your device will show in Jigx Builder in the sidebar, with a data and functions node.
-8.  Ensure that the VS Code panel is open.
-
-    ::: ::::
+8. Ensure that the VS Code panel is open.
 
 ### Debugging Tools
 
@@ -72,7 +66,7 @@ Use the Jigx Console to debug your data and functions.
 5. The data table entries are listed.
 6. Drill down into the data entries by clicking on an item in the list, the data object is displayed in the right-hand panel.
 7. You can test your data by writing queries in the query editor and press the **Execute** button to test what is being returned from the SQL table. Once you have the correct SQL query, copy it to the jig or file where needed.
-8. Click \*\*Format \*\*to auto-format your query ready for copying into your YAML code.
+8. Click Format to auto-format your query ready for copying into your YAML code.
 
 **Debugging functions:**
 

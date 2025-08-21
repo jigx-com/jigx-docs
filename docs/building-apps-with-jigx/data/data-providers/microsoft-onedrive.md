@@ -3,10 +3,6 @@ title: Microsoft OneDrive
 slug: ew-X-onedrive
 createdAt: Thu May 25 2023 15:27:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Nov 23 2023 07:36:14 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to integrate Microsoft OneDrive with Jigx app solutions in this
-  comprehensive document. Find detailed instructions on authorization
-  requirements and necessary permissions for accessing and m
 ---
 
 # Microsoft OneDrive

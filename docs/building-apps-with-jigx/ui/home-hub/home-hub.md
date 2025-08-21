@@ -11,15 +11,11 @@ Jigx allows you to use various options when personalizing your Home Hub. Any jig
 * Tabs in [Index settings](index-settings.md)
 * [grid](https://docs.jigx.com/examples/grid) and [grid-item](https://docs.jigx.com/examples/grid-item)
 
-:::ExpandableHeading
-
 ### tabs
 
 * Create a landing page/ home screen by configuring the navigation tabs that show at the bottom of the app. You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the _More_ (ellipsis) button is tapped.
 * Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-* Setting the [grid](https://docs.jigx.com/examples/grid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen. :::
-
-:::ExpandableHeading
+* Setting the [grid](https://docs.jigx.com/examples/grid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.&#x20;
 
 ### grid and grid-item
 
@@ -27,6 +23,6 @@ Jigx allows you to use various options when personalizing your Home Hub. Any jig
 * The `jigId` property refers to the name/ unique identifier of the jig we are using.
 * There is also an optional property `when` that allows the grid-item to be displayed/hidden in a particular situation based on the expression.
 * Within the grid-item you can select to show [widgets](https://docs.jigx.com/examples/oVbi-widgets), an [image](https://docs.jigx.com/examples/Tu7v-image), and [Custom Components (Alpha)](../custom-components-_alpha_/custom-components-_alpha_.md).
-* Add an `onPress` event to a grid-item to configure an action such as `open-url` without going to jig. :::
+* Add an `onPress` event to a grid-item to configure an action such as `open-url` without going to jig.&#x20;
 
 For a code example see [Creating a Home Hub](creating-a-home-hub.md).

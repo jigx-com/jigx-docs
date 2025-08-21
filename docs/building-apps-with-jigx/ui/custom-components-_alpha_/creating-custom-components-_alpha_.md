@@ -1,11 +1,13 @@
 # Creating custom components (Alpha)
 
-:::hint{type="danger"} This feature is currently in its **Alpha** stage of development.
+{% hint style="danger" %}
+This feature is currently in its **Alpha** stage of development.
 
 * As an early version, it may not include all planned functionalities and is subject to significant changes based on ongoing development and user feedback.
 * In this phase, the feature may contain bugs or behave unpredictably.
 * Jigx recommends using standard, fully supported components until this feature has been fully tested and refined.
-* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases. :::
+* We encourage you to provide feedback and report any issues to help us improve and refine the feature for future releases.&#x20;
+{% endhint %}
 
 ## File Location
 
@@ -33,8 +35,8 @@ For `component.view` the `options:` followed by `style:` are required before `ch
 
 You can use the custom component files in multiple jig files by referencing `component.custom-component` and using the `componentId:` property to reference the name of the custom component file. Adding an `instanceId` allows the same custom component to be used in different instances and enables the use of [outputs](inputs-_-outputs-_alpha_.md).
 
-:::CodeblockTabs use-custom-component.jigx
-
+{% tabs %}
+{% tab title="use-custom-component.jigx" %}
 ```yaml
 # jigs/use-custom-component.jigx
 title: Card with view
@@ -56,9 +58,9 @@ children:
     # instances.
     instanceId: viewId
 ```
+{% endtab %}
 
-custom-card.jigx
-
+{% tab title="custom-card.jigx" %}
 ```yaml
 # components/custom-card.jigx
 type: component.default
@@ -79,9 +81,9 @@ children:
             source:
               uri: https://images.unsplash.com/photo-1671601065280-215ca5072af9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80
 ```
+{% endtab %}
 
-custom-view.jigx
-
+{% tab title="custom-view.jigx" %}
 ```yaml
 # components/custom-view.jigx
 type: component.default
@@ -127,8 +129,8 @@ children:
             size: small
             emphasis: medium
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Examples and code snippets
 

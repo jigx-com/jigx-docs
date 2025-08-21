@@ -3,15 +3,11 @@ title: Jig Templates
 slug: BfrN-templates
 createdAt: Thu May 25 2023 06:10:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:55:49 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Save time and effort with Jigx's template gallery, offering a wide range of
-  solutions for customization. Ensure consistency and reduce development time by
-  simply selecting and inserting different temp
 ---
 
 # Jig Templates
 
-Jigx provides a template gallery that you can use as a base when creating solutions. Jigx templates are available when creating jigs, adding components\*\* \*\*and widgets to a jig.
+Jigx provides a template gallery that you can use as a base when creating solutions. Jigx templates are available when creating jigs, adding components and widgets to a jig.
 
 Using templates has many benefits, such as:
 
@@ -19,15 +15,19 @@ Using templates has many benefits, such as:
 2. **Consistency and Best Practices:** Templates ensure consistency in your project. Using templates helps maintain a uniform structure, coding style, and user experience throughout your application.
 3. **Reduced Development Effort:** Templates include pre-built features and components that are commonly required when building Jigx Apps. By leveraging these pre-existing elements, you can reduce the effort needed to implement standard features, allowing you to allocate more time and resources to develop unique and critical features that differentiate your app.
 
-:::hint{type="info"} While templates offer numerous benefits, it's important to remember that they may not always meet your requirements. Customization is still necessary, and templates should be used as a starting point rather than a complete solution. :::
+{% hint style="info" %}
+While templates offer numerous benefits, it's important to remember that they may not always meet your requirements. Customization is still necessary, and templates should be used as a starting point rather than a complete solution.
+{% endhint %}
 
 ![Jig template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_s4ibsAS55I6mPhDPISi_templatejig.png)
 
 ### Using jig templates
 
-::embed\[]{url="https://youtu.be/Sn0YICgtS60"}
+{% embed url="https://youtu.be/Sn0YICgtS60" %}
 
-:::hint{type="info"} Jig templates either use [Static Data](https://docs.jigx.com/examples/static) or [Dynamic Data](../../data/data-providers/dynamic-data/dynamic-data.md). You can easily customize the template to use other [datasources](../../../administration/solutions/data.md) instead. :::
+{% hint style="info" %}
+Jig templates either use [Static Data](https://docs.jigx.com/examples/static) or [Dynamic Data](../../data/data-providers/dynamic-data/dynamic-data.md). You can easily customize the template to use other [datasources](../../../administration/solutions/data.md) instead.&#x20;
+{% endhint %}
 
 Each jig type has a set of templates to choose from. Follow the steps below to select a template.
 

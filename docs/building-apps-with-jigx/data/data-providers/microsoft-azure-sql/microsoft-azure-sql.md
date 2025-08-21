@@ -1,8 +1,10 @@
 # Microsoft Azure SQL
 
-:::hint{type="warning"} Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](microsoft-azure-sql.md) instead. See [REST endpoints from Azure SQL](microsoft-azure-sql.md) for more information. :::
+{% hint style="danger" %}
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](microsoft-azure-sql.md) instead. See [REST endpoints from Azure SQL](microsoft-azure-sql.md) for more information.
+{% endhint %}
 
-::embed\[]{url="https://vimeo.com/833354418?share=copy"}
+{% embed url="https://vimeo.com/833354418?share=copy" %}
 
 Jigx integrates with Microsoft Azure SQL through the SQL data provider, allowing you to select or insert data from an Azure SQL database. This includes Microsoft Azure SQL and Microsoft SQL Server on-premise.
 
@@ -23,7 +25,7 @@ To use the SQL data provider in Jigx , follow these high-level steps:
      * EXECUTE - used with stored procedures
      * QUERY - used to write SQL queries
    * For each method, create a new function file.
-5. \*\*Reference the Jigx functions in \*\*jigs\*\*:
+5. **Reference the Jigx functions in jigs:**
    * Reference the function in your jigs. This step is crucial for integrating the SQL data seamlessly into your Jigx solution.
 6. **Publish your solution**:
    * [Publish your solution](../../../jigx-builder-_code-editor_/publishing-a-solution.md) and use the app to interact with the SQL data provider.
@@ -50,15 +52,12 @@ Once functions are published in a Jigx solution, you can preview the function in
 
 ## SQL function components
 
-| **Provider**   | `DATA_PROVIDER_SQL` for making calls to Microsoft Azure SQL.                                                                                                                                                        |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Connection** | Provide the name of the connection configured in for the Azure SQL database.                                                                                                                                        |
-| **Methods**    | <p>Jigx supports the following methods in the provider:</p><ul><li>EXECUTE - used to execute a stored procedure</li><li>QUERY - used to write a SQL statement such as SELECT, INSERT, DELETE, and UPDATE.</li></ul> |
+<table data-header-hidden><thead><tr><th width="156.984375"></th><th></th></tr></thead><tbody><tr><td><strong>Provider</strong></td><td><code>DATA_PROVIDER_SQL</code> for making calls to Microsoft Azure SQL.</td></tr><tr><td><strong>Connection</strong></td><td>Provide the name of the connection configured in for the Azure SQL database.</td></tr><tr><td><strong>Methods</strong></td><td><p>Jigx supports the following methods in the provider:</p><ul><li>EXECUTE - used to execute a stored procedure</li><li>QUERY - used to write a SQL statement such as SELECT, INSERT, DELETE, and UPDATE.</li></ul></td></tr></tbody></table>
 
 The following describes the options available when configuring a SQL function call.
 
-:::CodeblockTabs sql- function-query
-
+{% tabs %}
+{% tab title="Javasql- function-queryScript" %}
 ```yaml
 # Jigx SQL function executing a query to select all customers from a table.
 provider: DATA_PROVIDER_SQL
@@ -82,9 +81,9 @@ query: |
   FROM
     customers
 ```
+{% endtab %}
 
-sql-function-execute
-
+{% tab title="sql-function-execute" %}
 ```yaml
 # Jigx SQL function executing a stored procedure to select all customers 
 # from a table.
@@ -95,8 +94,8 @@ connection: customer.azure
 method: execute 
 procedure: sp_GetAllCustomers
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Parameters
 
@@ -118,7 +117,7 @@ Type is specific to the SQL call being made. Most types are defined as strings.
 
 ### Required
 
-The required value is either `true` or `false`. This determines whether the parameter needs to be set when the function is used in a jig's datasource. This determines if the SQL call \*\*requires \*\*this parameter. If so, set this property to `true`, alternatively if the parameter is optional, you can set it to `false`.
+The required value is either `true` or `false`. This determines whether the parameter needs to be set when the function is used in a jig's datasource. This determines if the SQL call requires this parameter. If so, set this property to `true`, alternatively if the parameter is optional, you can set it to `false`.
 
 ### forRowsWithValues
 
@@ -163,8 +162,7 @@ conversions:
 
 Here is an example of a Jigx solution screen that calls the function in the `OnFocus` event with a `sync-entities` action to sync the data from SQL to the local SQLite database, which returns the customers' details.
 
-:::CodeblockTabs list-customers.jigx
-
+{% code title="list-customers.jigx" %}
 ```yaml
 # A sample list that uses a SQL function to return & display a list of customers from Azure SQL
 title: List Customers
@@ -244,10 +242,9 @@ item:
       text: =$substring(@ctx.current.item.first_name,0,1) & $substring(@ctx.current.item.last_name,0,1)
     divider: solid
 ```
+{% endcode %}
 
-:::
-
-We recommend navigating to the Management Console to test your function at this point. This allows you to ensure that the function is configured correctly, connected to SQL Server, and returns results. You can find out more about capabilities for viewing and testing SQL functions from the Management Console at this location. :Link\[Viewing and testing SQL data]{href="https://docs.jigx.com/sql-functions" newTab="true" hasDisabledNofollow="false"} using the Jigx Management Console
+We recommend navigating to the Management Console to test your function at this point. This allows you to ensure that the function is configured correctly, connected to SQL Server, and returns results. You can find out more about capabilities for viewing and testing SQL functions from the Management Console at this location. [Viewing and testing SQL data](https://docs.jigx.com/sql-functions) using the Jigx Management Console
 
 ## Examples and code snippets
 

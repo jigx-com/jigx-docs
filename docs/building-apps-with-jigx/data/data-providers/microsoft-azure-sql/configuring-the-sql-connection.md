@@ -1,6 +1,8 @@
 # Configuring the SQL Connection
 
-:::hint{type="warning"} Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](configuring-the-sql-connection.md) instead. See [REST endpoints from Azure SQL](configuring-the-sql-connection.md) for more information. :::
+{% hint style="danger" %}
+Best practice for production apps is to use REST as the data layer to access data and not directly integrate to SQL using the SQL data provider. The SQL data provider will be squiggled in blue to indicate it is not recommended, together with a message to use [REST](configuring-the-sql-connection.md) instead. See [REST endpoints from Azure SQL](configuring-the-sql-connection.md) for more information.
+{% endhint %}
 
 Jigx will route all calls to Azure SQL Server from a Jigx mobile app through the Jigx cloud. No data is stored or cached in Jigx cloud. The encrypted SQL connection information is stored in non-user-readable secure storage in Jigx cloud and allows for IP allowlisting for Azure SQL database servers.
 
@@ -34,7 +36,9 @@ Following these steps to configure a new Azure SQL connection for the solution i
 
 5\. Before saving or testing the connection, click the **IP allowlist** link in the middle of the new connection screen. Note the two IP addresses listed. The calls from Jigx Cloud to Azure SQL will always originate from one of these IP addresses. These IP addresses will be added to the Azure SQL Server.
 
-:::hint{type="info"} These IP addresses will vary depending on the Jigx cloud region being used. :::
+{% hint style="info" %}
+These IP addresses will vary depending on the Jigx cloud region being used.
+{% endhint %}
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CSDvejsKUcPUVMwJR4xmI\_az-allowlist.png" size="54" position="center" caption="Jigx IP address" alt="Jigx IP address" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/CSDvejsKUcPUVMwJR4xmI\_az-allowlist.png" width="800" height="943" darkWidth="800" darkHeight="943"}
 

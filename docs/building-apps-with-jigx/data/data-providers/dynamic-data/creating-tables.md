@@ -3,13 +3,9 @@ title: Creating tables
 slug: JGu8-defining-dynamic-data-tables
 createdAt: Thu Jul 14 2022 09:36:46 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 29 2023 09:04:12 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to define Dynamic Data tables in Jigx solutions with this
-  comprehensive guide. Discover how to add tables to the *default.jigx* file,
-  publish the project, and create columns for Dynamic Data
 ---
 
-# Creating tables in Jigx Builder
+# Creating tables
 
 First step in creating Dynamic Data for a solution is to create the tables that the solution requires. Tables are created in a solution in Jigx Builder in the _default.jigx_ file located in the _database_ folder. All tables are created under the default database. Follow the steps below to create tables:
 

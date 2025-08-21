@@ -12,15 +12,12 @@ There are three types of datasources available in Jigx Builder.
 
 ## Configuration options
 
-| **Property**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | **Code Examples**                                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `isDocument`     | When the `isDocument` property is set to `true` on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the `initialValues` for a [form](https://docs.jigx.com/examples/form), set it on the form level and in the datasource `isDocument: true`, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource. | [new-contact.jigx](https://docs.jigx.com/examples/form#zUejA)                                  |
-| `jsonProperties` | Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use `jsonProperties` to specify the exact property in the array or nested object that you require. See [Working with complex REST structures](data-providers/rest/rest-best-practice.md).                                                                                                                                                                                                                                           | [view-customer-details.jigx](https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR) |
+<table><thead><tr><th width="153.67578125">Property</th><th width="323.7421875">Description</th><th>Code Examples</th></tr></thead><tbody><tr><td><code>isDocument</code></td><td>When the <code>isDocument</code> property is set to <code>true</code> on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the <code>initialValues</code> for a <a href="https://docs.jigx.com/examples/form">form</a>, set it on the form level and in the datasource <code>isDocument: true</code>, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.</td><td><a href="https://docs.jigx.com/examples/form#zUejA">new-contact.jigx</a></td></tr><tr><td><code>jsonProperties</code></td><td>Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use <code>jsonProperties</code> to specify the exact property in the array or nested object that you require. See <a href="data-providers/rest/rest-best-practice.md">Working with complex REST structures</a>.</td><td><a href="https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR">view-customer-details.jigx</a></td></tr></tbody></table>
 
 ### isDocument example
 
-:::CodeblockTabs datasource
-
+{% tabs %}
+{% tab title="datasource" %}
 ```yaml
 datasources:
   contactData:
@@ -49,9 +46,9 @@ datasources:
       queryParameters:
         contactId: =@ctx.jig.inputs.contact.id
 ```
+{% endtab %}
 
-JSON
-
+{% tab title="JSON" %}
 ```json
 {
   "contacts": [
@@ -68,9 +65,9 @@ JSON
   ]
 }
 ```
+{% endtab %}
 
-form.jigx
-
+{% tab title="form.jigx" %}
 ```yaml
 title: Add new contact A
 type: jig.default
@@ -180,13 +177,13 @@ actions:
             jobTitle: =@ctx.components.jobTitle.state.value
             companyName: =@ctx.components.companyName.state.value
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ### jsonProperties example
 
-:::CodeblockTabs
-
+{% tabs %}
+{% tab title="datasource" %}
 ```yaml
 datasources:
   customers:
@@ -243,7 +240,9 @@ item:
         parameters:
           customer: =@ctx.current.item
 ```
+{% endtab %}
 
+{% tab title="JSON" %}
 ```json
 "customers": [
         {
@@ -274,8 +273,8 @@ item:
             "logo": null
         },
 ```
-
-:::
+{% endtab %}
+{% endtabs %}
 
 ## Where and how to use datasources
 
@@ -300,7 +299,7 @@ The data sets are defined in the datasources inside the individual jig generally
 1. Open your solution in Jigx Builder and navigate to the jig.
 2. Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.
 3. Invoke IntelliSense (ctrl+space) next to the `mydata:` property for the list of available datasources.
-4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the jig. _Tip_: only return the specific data you need in the datasource.
+4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Data or SQL data, you can write SQL queries to return the data you want to use in the jig. _Tip_: only return the specific data you need in the datasource.
 5. The data is now available to use in that jig by using expressions with the datasource option to reference the local datasource using the unique name you gave it, for example, `=@ctx.datasources.contact`.
 
 ### See Also
