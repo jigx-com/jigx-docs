@@ -13,9 +13,15 @@ In this quick guide, you will learn the basics of Jigx and how easy it is to cre
 
 ### What you will create
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{alt="Hello Jigx Solution" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ksTOZ1JgHnObj7nOh158G\_widgetscustoml.PNG" size="60" caption="Hello Jigx Solution" position="center"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/widgetscustoml.PNG" alt="Hello Jigx Solution" width="188"><figcaption><p>Hello Jigx Solution</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem The solution is named **Hello-Jigx** and consists of a map showing a location, a calendar with events, a form to capture and view data, and a list showing the captured data. The table below guides you through building each element of the solution. ::: ::::
+{% column %}
+The solution is named **Hello-Jigx** and consists of a map showing a location, a calendar with events, a form to capture and view data, and a list showing the captured data. The table below guides you through building each element of the solution.
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="info" %}
 1. Before you start building your first solution ensure you have created a [Creating an account](../creating-an-account.md) and [Install the Jigx Builder](../install-the-jigx-builder.md). Get an overview of the [Jigx platform](<../../Understanding the basics/Architecture.md>) and an understanding of the [Jigx Concepts](<../../Understanding the basics/Jigx Concepts.md>).

@@ -14,14 +14,14 @@ Register at [manage.jigx.com/register](http://manage.jigx.com/register) to creat
 Registering with a non-work email e.g. Gmail does not check for existing organizations or allow other people to find your organization during registration. To join or share your organization you need to invite people from Jigx Management.
 {% endhint %}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L\_register1.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GqCCDPRdr1a4EfjlfPh7L\_register1.png" size="48" width="1070" height="1300" position="center" caption="Registration screen" alt="Registration screen"}
+<figure><img src="../.gitbook/assets/Register1.png" alt="Registration screen" width="375"><figcaption><p>Registration screen</p></figcaption></figure>
 
 ### Verify your email
 
 1. Enter the **Pin code** received in the email into the Pin screen.
 2. Create a **password** following the Jigx password requirements (as displayed on the screen) and click **Continue**.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0\_register2.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vWXd10EEBwF8TOhpeHDB0\_register2.png" size="48" width="523" height="787" position="center" caption="Registration Pin code" alt="Registration Pin code"}
+<figure><img src="../.gitbook/assets/Register2.png" alt="Registration Pin code" width="262"><figcaption><p>Registration Pin code</p></figcaption></figure>
 
 ### Join or create an organization
 
@@ -31,38 +31,42 @@ Registering with a non-work email e.g. Gmail does not check for existing organiz
 
 ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S\_register3.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S\_register3.png" size="50" width="1152" height="1230" position="center" caption="Join an organization" alt="Join an organization"}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz\_register4.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6o9eg8j0I6MIgvkEl9sGz\_register4.png" size="50" width="1362" height="1254" position="center" caption="Create an organization" alt="Create an organization"}
+<figure><img src="../.gitbook/assets/register4.png" alt="Create an organization" width="375"><figcaption><p>Create an organization</p></figcaption></figure>
 
 ## Invitation
 
 Your organization's Jigx administrator sends an onboarding email invitation to your inbox. This invitation includes instructions on how to download your Jigx app.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2\_screenshot-2023-04-11-at-153649.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/tWpjpaXyJj0kNL9jEICi2\_screenshot-2023-04-11-at-153649.png" size="50" width="1178" height="1276" position="center" caption="Jigx invitation email" alt="Jigx invitation email"}
+<figure><img src="../.gitbook/assets/invitation.png" alt="Jigx invitation email" width="375"><figcaption><p>Jigx invitation email</p></figcaption></figure>
 
 The Jigx app is available on your iOS and Android apps and works on any device.
 
-* Download the Jigx iOS app from :Link\[App Store]{href="https://apps.apple.com/sg/app/jigx/id1495596537" newTab="true" hasDisabledNofollow="false"}
-* Download the Jigx Android app from :Link\[Google Play Store]{href="https://play.google.com/store/apps/details?id=com.jigx.android\&pli=1" newTab="true" hasDisabledNofollow="false"}
+* Download the Jigx iOS app from [App Store](https://apps.apple.com/sg/app/jigx/id1495596537)
+* Download the Jigx Android app from [Google Play Store](https://play.google.com/store/apps/details?id=com.jigx.android\&pli=1)
 
 ### Getting started
 
 Once you have downloaded the app, tap on the Jigx icon. Now tap the **Get Started** button and fill in your email address
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4\_img8696iphone13blueportrait.png" size="66" position="center" caption="Jigx welcome screen" alt="Jigx welcome screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/rcDgmC2uQRkQKQpziZqe4\_img8696iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"} :::
-
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV\_otp-loginiphone13blueportrait.png" size="66" position="center" caption="Sign in screen" alt="Sign in screen" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G4M4IsTh2M2THtjEt7QiV\_otp-loginiphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"} ::: ::::
+<figure><img src="../.gitbook/assets/app-welcome.png" alt="Welcome and sign in" width="375"><figcaption><p>Welcome and sign in</p></figcaption></figure>
 
 ### 2-Step Verification
 
 Once you tap the **Continue** button an email with your 6-digit long pin code is sent to your inbox.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp\_ZwsE2teIx5f\_screenshot-2023-04-11-at-153852.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SmTDJJDcp\_ZwsE2teIx5f\_screenshot-2023-04-11-at-153852.png" size="58" width="1168" height="1022" position="center" caption="Jigx app verification email" alt="Jigx app verification email"}
+<figure><img src="../.gitbook/assets/verification.png" alt="Jigx app verification email" width="375"><figcaption><p>Jigx app verification email</p></figcaption></figure>
 
 Enter the One-Time Password (OTP) received in the email into the 2-Step verification screen. After entering your OTP code the password setup screen opens. Create a password following the Jigx password requirements (as displayed on the screen).
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{alt="2-Step verification screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW\_1\_KET5luAwixS2KAg\_microsoftteams-image-9.png" size="80" width="1570" height="2932" caption="2-Step verification screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8YW\_1\_KET5luAwixS2KAg\_microsoftteams-image-9.png"} :::
+{% columns %}
+{% column %}
+<figure><img src="../.gitbook/assets/microsoftteams-image-9.png" alt="2-Step verification screen" width="188"><figcaption><p>2-Step verification screen</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{alt="New Password screen" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0\_microsoftteams-image-8.png" size="80" width="1570" height="2932" caption="New Password screen" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Y-wG7qbRO-9FuC9zDIdq0\_microsoftteams-image-8.png"} ::: ::::
+{% column %}
+<figure><img src="../.gitbook/assets/microsoftteams-image-8.png" alt="New Password screen" width="188"><figcaption><p>New Password screen</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### Home Hub
 

@@ -13,7 +13,15 @@ Learn how to build your first jig by using this simple step-by-step guide that d
 We recommend you build out all the solution steps for the [Create an app from scratch](docId:8SeLgEopqiL70vPoV72WY), as each solution step builds on the previous step until you have a functioning mobile app.
 {% endhint %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem
+{% columns %}
+{% column %}
+
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## Steps
 

@@ -20,23 +20,9 @@ Before you can start building your first Jigx solution, you require the followin
 
 ### Let's get you building solutions _fast_.
 
-::::LinkArray :::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/C4z-L-ZoG\_0sLOeK3q6pU\_gs-color.jpg"}
-
-#### [Use templates](use-templates-to-create-apps.md)
-
-:::
-
-:::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/QiZACMiOqkDp8ozY3SDlL\_gs-blue.jpg"}
-
-#### [Create from scratch](create-an-app-from-scratch/create-an-app-from-scratch.md)
-
-:::
-
-:::LinkArrayItem{headerType="IMAGE" headerImage="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/g72lU5hiHsv45zAf625JE\_gs-mix.jpg"}
-
-#### [Use pre-built solutions](use-pre-built-solutions.md)
-
-::: ::::
+* [Use templates](use-templates-to-create-apps.md)
+* [Create from scratch](create-an-app-from-scratch/create-an-app-from-scratch.md)
+* [Use pre-built solutions](use-pre-built-solutions.md)
 
 ### Want to know more?
 

@@ -13,7 +13,7 @@ In the Users area, you can manage all users in your organization. All users who 
 
 In the Users list, you can view each user's current **organizational role**, assigned solutions, and their invite status (_Active_ vs. _Invited_). **Click on a user's name** to see the user's details, manage the user's solutions and change their role for each assigned solution. You can also filter the user list by organizational role, invite status, and solution assignment.
 
-![Managing Organization Users](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/zm2wcN-eFj2av-uyMi4k5_jm-useroverl.png)
+<figure><img src="../.gitbook/assets/JM-UserOverL.png" alt="Managing Organization Users"><figcaption><p>Managing Organization Users</p></figcaption></figure>
 
 ### Inviting Users
 
@@ -31,6 +31,8 @@ To bulk invite users, contact Jigx support at _**support@jigx.com**_.
 
 ![Inviting Users](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6pMhHKezYnYmf0oVPcY8y_jm-invitel.png)
 
+
+
 ### Re-inviting Users
 
 If you want to re-invite the user because they did not accept your invitation or an error occurred, click on the user's name and click the **Resend invite** link at the top of the page. Next, select a language for the invite, a message displays stating that the invite has been sent.
@@ -43,31 +45,31 @@ If users don't receive the invite emails, ask them to **check their junk or spam
 
 Click on the user's name in the list and navigate to the [Solutions](../administration/solutions/solutions.md) menu option by clicking on the solution icon in the left navigation pane, Click on **Add solutions** at the top right of the screen to open the side panel. Select the solutions you want to assign to the user and click **Add solution.**
 
-![Assigning Solutions to User](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8IaRwrP9joM9Y0caslPzP_jm-addsolutionl.png)
+<figure><img src="../.gitbook/assets/JM-AddSolutionL.png" alt="Assigning Solutions to User"><figcaption><p>Assigning Solutions to User</p></figcaption></figure>
 
 ### Assigning an Organization Role to Users
 
 Each user in the user list has an **organization role** assigned. When you invite users, their default organization role is set to **User**. You can change the user's organization role by **clicking on the Organization role** in the user's profile. All changes made to the organization's roles take effect immediately. Refer to [Permissions - User Roles](<Permissions - User Roles.md>) to get a detailed overview on the roles used in an organization and solutions-level.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/vxzq-89XQHaakzRvzlxGl\_jm-orgpermissions.png" size="60" position="center" caption="Assign organizational permissions" alt="Assign organizational permissions"}
+<figure><img src="../.gitbook/assets/JM-OrgPermissions (1).png" alt="Assign organizational permissions" width="563"><figcaption><p>Assign organizational permissions</p></figcaption></figure>
 
 ### Assigning a Solution Role to Users
 
 Each user in the user list is assigned a solution role. When you invite users, or add solutions to users their default solution role is set to **User**. You can change the user's solution role by **clicking on the role** in the Role column. All changes made to the solution role takes effect immediately. Refer to [Permissions - User Roles](<Permissions - User Roles.md>) to get a detailed overview on the roles used in an organization and solutions-level.
 
-![Solution Role Selection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KwfXjb6gOAjdj6BUTjV-t_jmrolesd.png)
+<figure><img src="../.gitbook/assets/JMRolesD.png" alt="Solution Role Selection"><figcaption><p>Solution Role Selection</p></figcaption></figure>
 
 ### Remove a user from the organization
 
 Click on the user's name in the list and click the **Remove from organization** button at the bottom left of the screen. You need `Admin` or `Owner` permissions to be able to remove a user from an organization.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" size="60" position="center" caption="Remove user from Organization" alt="Remove user from Organization"}
+<figure><img src="../.gitbook/assets/jm-removeuser.png" alt="Remove user from Organization" width="563"><figcaption><p>Remove user from Organization</p></figcaption></figure>
 
 ### Troubleshooting (User Profile)
 
 Troubleshooting in Jigx Management helps identify problems when an app crashes, or when issues and errors occur while using and running solutions on the Jigx App. Think of this as runtime troubleshooting performed by support or your organization's administrator versus design time debugging which is available in the Jigx Builder for creators who are building solutions.
 
-![User troubleshooting](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9Pi6z9t_Jpft9EWgBXgqV_jm-usertroublel.png)
+<figure><img src="../.gitbook/assets/JM-UserTroubleL.png" alt="User troubleshooting" width="563"><figcaption><p>User troubleshooting</p></figcaption></figure>
 
 #### Jigx Management troubleshooting levels
 
@@ -79,7 +81,7 @@ There are three levels of troubleshooting in Jigx Management.
 
 #### Configure logging on the Jigx App
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4\_K6jIP4-pTjwgTKKW7\_jm-troubleshooting.PNG" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"}
+<figure><img src="../.gitbook/assets/JM-Troubleshooting.PNG" alt="Solution troubleshooting" width="563"><figcaption><p>Solution troubleshooting</p></figcaption></figure>
 
 To configure logging on the mobile device perform the following steps:
 
