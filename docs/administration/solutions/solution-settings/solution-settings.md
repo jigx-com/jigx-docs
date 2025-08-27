@@ -3,19 +3,17 @@ title: Solution Settings
 slug: XcvW-solution-s
 createdAt: Tue May 16 2023 14:12:06 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 19 2024 08:35:35 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to speed up your development process with the Solution Settings
-  feature. Copy a solution and its data effortlessly, perfect for creating
-  regional solutions based on a global solution. Custom
 ---
 
 # Solution Settings
 
 The solution settings feature is extremely useful, as it speeds up the development process by allowing a copy of the solution to be made, with or without the existing solution's data. For example, if you have a Global HR solution and you want to create Regional HR solutions based on the global solution, you can simply copy the Global HR solution as a base and then extend it in Jigx Builder including the regional requirements.
 
-:::hint{type="info"} The _Solution Settings_ and [Solution Details](../solution-details.md) tab function together, enabling settings on one will make new options visible and available for configuration on the other tab. :::
+{% hint style="info" %}
+The _Solution Settings_ and [Solution Details](../solution-details.md) tab function together, enabling settings on one will make new options visible and available for configuration on the other tab.
+{% endhint %}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1H\_k5DpOTRIbHt88jItDc\_jm-solutionsettingl.png" size="70" position="center" caption="Solution Settings screen" alt="Solution Settings screen"}
+<figure><img src="../../../.gitbook/assets/JM-SolutionSettingL.png" alt="Solution Settings screen"><figcaption><p>Solution Settings screen</p></figcaption></figure>
 
 ### Copy Policy
 
@@ -45,4 +43,4 @@ Store the details of your Jigx solution's sourcecode repository, allowing people
 
 ### Custom variables
 
-Defining custom variables enables you to create reusable values that can be dynamically controlled, for example production or development enviroment details. For more information see [Custom variables](custom-variables.md).
+Defining custom variables enables you to create reusable values that can be dynamically controlled, for example production or development environment details. For more information see [Custom variables](custom-variables.md).

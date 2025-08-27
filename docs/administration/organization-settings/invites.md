@@ -4,9 +4,15 @@
 
 When you create an organization in Jigx Management, a default invite is automatically set up for the organization. To see what the invite looks like, click the Preview link in the invite template section. This will open an HTML view of the template in a new tab.
 
-::::VerticalSplit{layout="right"} :::VerticalSplitItem ![Invite email template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IAlOQ0IZHIdLPlFOK2-uW_jm-invitetemplate.png) :::
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/JM-InviteTemplate.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem ![Default invite template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/lE29gpALA0XQMX-QdpnsP_jm-invitehtml.png) ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/JM-InviteHTML.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Customize the invite template
 
@@ -16,7 +22,7 @@ The invite email template can be customized to reflect your brand's identity and
 
 By editing the parameter settings you can change the logo, colors, text, icons and provide the URL to your branded app in the Apple and Google stores.
 
-![Customize invite template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jXUX9fFxG8y23I_e-4oT3_jm-customtemp.gif)
+<figure><img src="../../.gitbook/assets/JM-Customtemp.gif" alt="Customize invite template"><figcaption><p>Customize invite template</p></figcaption></figure>
 
 1. At the top of the invite screen, expand **Parameters**.
 2. Edit the **parameter fields** as required, or use the **Show Parameters Schema** to edit the raw HTML.
@@ -37,7 +43,7 @@ Invites can be sent out in multiple languages which is helpful if your organizat
 
 ### Adding a language template
 
-![Add language template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3R_f0g1CpPWCPK494cfFj_jm-langinvite.gif)
+<figure><img src="../../.gitbook/assets/JM-LangInvite.gif" alt="Add language template"><figcaption><p>Add language template</p></figcaption></figure>
 
 1. Click on the **+ add another language** under _Choose a language to configure invite templates_.
 2. Type the language code in the field. Only use [ISO-639-1 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) such as en, de.
@@ -51,7 +57,7 @@ Invites can be sent out in multiple languages which is helpful if your organizat
 
 When sending out invites to users to join your organization and access your app, you can determine which language the invite must be sent in provided you have created an invite template in that language.
 
-![Invite language selection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wrsGi5UfWDh-CFJ_FWSGs_jm-langinvite.png)
+<figure><img src="../../.gitbook/assets/JM-langInvite.png" alt="Invite language selection"><figcaption><p>Invite language selection</p></figcaption></figure>
 
 1. Navigate to the **Users** menu option.
 2. Click the Invite user button in the top right of the screen.

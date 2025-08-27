@@ -3,18 +3,16 @@ title: Authorized users
 slug: txc_-rls
 createdAt: Mon Sep 25 2023 17:55:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 30 2023 09:46:43 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to assign authorized users in the management system with this
-  comprehensive document. Find instructions on adding users as owners or
-  members, and discover how to add groups as members. Don't
 ---
 
-# Assigning Authorized Users
+# Authorized Users
 
-![Dynamic data record authorized users](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yG-30i4j8ttnpK4eaxz_h_rls-authorizeduserconfig.png)
+## Assigning authorized users
+
+<figure><img src="../../../.gitbook/assets/RLS-DataPolicyConfig (1).png" alt="Dynamic data record authorized users"><figcaption><p>Dynamic data record authorized users</p></figcaption></figure>
 
 1. Open Jigx Management, select the **solution** option, and browse to the required solution.
-2. Click on the \*\*Data \*\*option in the navigation pane.
+2. Click on the **Data** option in the navigation pane.
 3. Select the required **table** from the Tables list in the right-hand pane.
 4. Click on an individual row to open the **Edit record** pane.
 5. Click on the **Authorized Users** tab.
@@ -23,10 +21,9 @@ description: >-
 8. Selecting the **Custom** restriction requires selecting specific groups, owners, and members.
 9. Open the **Column settings** by clicking the gear icon at the top of the data table and check the Authorized Users checkbox. The Authorized User column is now visible in the table.
 
-**Authorized users** can be configured in the YAML in Jigx Builder by specifying values for the `Owner` and `Member` keys in the CREATE and UPDATE methods on `action.execute-entity` and `action.submit-form` for the `data_provider_Dynamic`.
+**Authorized users** can be configured in the YAML in Jigx Builder by specifying values for the `Owner` and `Member` keys in the CREATE and UPDATE methods on `action.execute-entity` and `action.submit-form` for the `data_provider_Dynamic`
 
-:::CodeblockTabs Dynamic -data-provider
-
+{% code title="Dynamic -data-provider" %}
 ```yaml
 actions:
   - children:
@@ -46,5 +43,4 @@ actions:
             owners:
             - =@ctx.components.email.state.value  
 ```
-
-:::
+{% endcode %}

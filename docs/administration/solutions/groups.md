@@ -3,10 +3,6 @@ title: Groups
 slug: dgNv-groups
 createdAt: Tue Jun 07 2022 10:00:03 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:18:00 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to assign users to groups in your solution to control the visibility
-  of widgets and stories. Discover how to create new groups, add or remove
-  users, and ensure that the right content is disp
 ---
 
 # Groups
@@ -15,9 +11,7 @@ Users who have access to a solution can be assigned to _Groups_ within the scope
 
 For example, a CRM app configured with two Groups: Managers and _Employees_. Managers should have access to widgets that display metrics about all sales opportunities across all employees and employees should only have access to see widgets with information about their own sales opportunities.
 
-::::VerticalSplit{layout} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gHO03QqpV\_4D0YI6LyH1E\_widgets1iphone13blueportrait.png" size="70" position="center" caption="Manager View" alt="Manager View"} :::
-
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nfgVL47qAYwdBTgOvyKll\_groups2iphone13blueportrait.png" size="70" position="center" caption="Employee View" alt="Employee View"} ::: ::::
+<figure><img src="../../.gitbook/assets/jm-groups.png" alt="Manager and Employee View" width="375"><figcaption><p>Manager and Employee View</p></figcaption></figure>
 
 ### Creating Groups
 
@@ -30,7 +24,7 @@ Groups are specific to a solution and do not appear globally in all your organiz
 
 The new group is displayed in the list. Next you need to add users to your groups. The users you going to add to the group must have the solution assigned to their [User profile](../../Administration/Users.md).
 
-![Creating Groups](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Dr50nr29_4G8BCTX9TdfV_jm-groupsl.png)
+<figure><img src="../../.gitbook/assets/JM-GroupsL.png" alt="Creating Groups"><figcaption><p>Creating Groups</p></figcaption></figure>
 
 ### Removing Groups
 
@@ -47,7 +41,7 @@ Each group requires members. The members must have access to the solution to be 
 3. Select the checkbox of the users to be added to the group.
 4. Click **Apply**.
 
-![Solution Groups for Managers and Employees](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/85orZxJjvh49NKyiyS-hG_jm-groupusersl.png)
+<figure><img src="../../.gitbook/assets/JM-GroupUsersL.png" alt="Solution Groups for Managers and Employees"><figcaption><p>Solution Groups for Managers and Employees</p></figcaption></figure>
 
 ### Removing Users from Groups
 

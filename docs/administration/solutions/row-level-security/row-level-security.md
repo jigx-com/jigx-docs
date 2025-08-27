@@ -3,10 +3,6 @@ title: Row Level Security
 slug: xy4a-v
 createdAt: Mon Sep 25 2023 18:40:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 30 2023 09:47:49 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to protect and secure dynamic data in this comprehensive document.
-  Discover how data policies and authorized users play a crucial role in
-  controlling database operations and access to specif
 ---
 
 # Row Level Security
@@ -58,8 +54,7 @@ Valid Jigx user's email addresses and solution groups are used to define explici
 
 **Authorized users** can be configured in the YAML in Jigx Builder by specifying values for the `Owner` and `Member` keys in the CREATE and UPDATE methods on `action.execute-entity` and `action.submit-form` for the `data_provider_Dynamic`.
 
-:::CodeblockTabs Dynamic -data-provider
-
+{% code title="Dynamic -data-provider" %}
 ```yaml
 actions:
   - children:
@@ -79,8 +74,7 @@ actions:
             owners:
             - =@ctx.components.email.state.value   
 ```
-
-:::
+{% endcode %}
 
 ### Example use case
 
@@ -88,8 +82,8 @@ Your organization has an employee app that provides certain self-service options
 
 Let's take the expense claim for employee John and see the configuration.
 
-![Employee Expense Claim](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pHi0igY_O9lFuMnK8QdI7_rls-table.png)
+<figure><img src="../../../.gitbook/assets/RLS-table.png" alt="Employee Expense Claim"><figcaption><p>Employee Expense Claim</p></figcaption></figure>
 
-![Data policy in Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/S8dlD6I6hXCbnEpNMsgQw_rls-policyl.png)
+<figure><img src="../../../.gitbook/assets/RLS-PolicyL.png" alt="Data policy in Management"><figcaption><p>Data policy in Management</p></figcaption></figure>
 
-![Authorized User in Managment](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NdhZ90wc370AA741CBJA7_rls-authorizeduser.png)
+<figure><img src="../../../.gitbook/assets/RLS-AuthorizedUser.png" alt="Authorized User in Managment"><figcaption><p>Authorized User in Management</p></figcaption></figure>

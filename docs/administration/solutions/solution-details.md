@@ -3,19 +3,17 @@ title: Solution Details
 slug: wKtJ-soution
 createdAt: Tue May 16 2023 14:11:35 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Mar 18 2024 13:59:47 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to manage and configure solutions with the Solution Detail screen.
-  Download a backup of your solution as a zip file, without including sensitive
-  data. Copy solutions for faster development a
 ---
 
 # Solution Details
 
 The _Solution Detail_ screen provides details about your solution such as the _name_ and _Solution Id_ that can be copied to a clipboard for use elsewhere. From this screen, you can manage the _deleting_ of the solution and _download_ a zip file of the solution.
 
-:::hint{type="info"} The _Solution Details_ and [Solution Settings](solution-settings/solution-settings.md) tab function together, enabling settings on one will make new options visible and available for configuration on the other tab. :::
+{% hint style="info" %}
+The _Solution Details_ and [Solution Settings](solution-settings/solution-settings.md) tab function together, enabling settings on one will make new options visible and available for configuration on the other tab.
+{% endhint %}
 
-![Solution Detail screen](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RH-A4fO8m3UEHc3VvT9Kj_jm-solutiondetaill.png)
+<figure><img src="../../.gitbook/assets/JM-SolutionDetailL.png" alt="Solution Detail screen"><figcaption><p>Solution Detail screen</p></figcaption></figure>
 
 ### Download Solution
 
@@ -45,7 +43,7 @@ Deleting the solution requires that you have solution _Owner_ permissions. When 
 
 Making a copy of a solution has many benefits to speed up the development process in an organization.
 
-![Create a copy of solution](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jcvnFx2bvBHvEMwZTp-2u_jm-copysolutionl.png)
+<figure><img src="../../.gitbook/assets/JM-CopySolutionL.png" alt="Create a copy of solution"><figcaption><p>Create a copy of solution</p></figcaption></figure>
 
 By default, the _Copy Solution_ button is not visible. To enable this feature follow the steps below:
 

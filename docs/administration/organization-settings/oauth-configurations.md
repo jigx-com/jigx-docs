@@ -17,7 +17,7 @@ Add an OAuth configuration at the organizational level to provide Jigx with secu
 
 Jigx provides a secure credentials store in the cloud that can be used to connect to remote APIs from your solutions. OAuth configuration is referenced within your function's definitions via `Token` properties and is used at runtime to inject the OAuth token into the request.
 
-![OAuth on Organizatonal level](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JksF6PmCuoaNZbqyxlToZ_jm-oauthconfig1.png)
+<figure><img src="../../.gitbook/assets/JM-OAuthConfig1.png" alt="OAuth on Organizational level"><figcaption><p>OAuth on Organizational level</p></figcaption></figure>
 
 ### Adding OAuth configuration
 
@@ -61,13 +61,16 @@ Before removing the OAuth configuration, check where the OAuth key is referenced
 
 When your app has multiple users that register and log in from external sources for example a retail app, you do not know the domain they using, however you want the domain to use the OAuth configuration you have set up. Simply set up a wildcard (\*) in the domain setting in the OAuth Configuration, which will include all domains.
 
-![Domain wildcard](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kdYPGcdv7ysQNXtRI4-y__domain-wildcard.png)
+<figure><img src="../../.gitbook/assets/Domain_wildcard.png" alt="Domain wildcard"><figcaption><p>Domain wildcard</p></figcaption></figure>
 
 ### Considerations
 
 1. You can create multiple OAuth configurations.
 2. You can assign multiple OAuth configurations to be used with Single-Sign-On by selecting multiple checkboxes in the [Single Sign-On (SSO)](single-sign-on-_sso_.md) screen. This is useful if multiple domains are used for different people, for example, internal users, vendors, or partners.
-3. OAuth configurations can be reused in Solution OAuth credentials. In the [Solution Credentials](../solutions/credentials.md) page in Jigx Management, select the **OAuth Alias** option under the **Type** dropdown and select the organization's global OAuth credentials in the **OAuth configuration** dropdown to map to. ![Organization's global OAuth](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dgD-m_5cm8AwuLdUrgPSb_jm-oauthaliasl.png)
-4. The _Title_ field in the OAuth configuration settings is the SSO name that users will see when logging into the app. It is important to give the Title a meaningful name.
-5. The call to the OAuth configuration for authorization is made when the index.jigx (Home Hub) loads on the app.
-6. The OAuth token's lifetime is 15 minutes.
+3. OAuth configurations can be reused in Solution OAuth credentials. In the [Solution Credentials](../solutions/credentials.md) page in Jigx Management, select the **OAuth Alias** option under the **Type** dropdown and select the organization's global OAuth credentials in the **OAuth configuration** dropdown to map to.&#x20;
+
+<figure><img src="../../.gitbook/assets/JM-OAuthAliasL.png" alt="" width="375"><figcaption></figcaption></figure>
+
+1. The _Title_ field in the OAuth configuration settings is the SSO name that users will see when logging into the app. It is important to give the Title a meaningful name.
+2. The call to the OAuth configuration for authorization is made when the index.jigx (Home Hub) loads on the app.
+3. The OAuth token's lifetime is 15 minutes.

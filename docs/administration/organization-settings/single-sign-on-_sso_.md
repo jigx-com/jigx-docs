@@ -6,7 +6,7 @@ Single Sign-On is set on an organizational level in Jigx Management, allowing us
 
 SSO is only applicable when signing in to the Jigx App. To log in to Jigx Management ([https://manage.jigx.com](https://manage.jigx.com)) the organization's `OWNER` and `ADMIN` must use their Jigx accounts.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VGyVfiPrk0PxZkB2W7Ev6_sso.gif)
+<figure><img src="../../.gitbook/assets/SSO.gif" alt=""><figcaption></figcaption></figure>
 
 ## Domain configuration support
 
@@ -32,11 +32,11 @@ To enable the SSO configuration, at least one OAuth configuration is required. T
 
 ## Configuring Single Sign-On
 
-![Single Sign-On configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5w0qPCLrUcF3KCRvG962S_ssoconfigl.png)
+<figure><img src="../../.gitbook/assets/SSOConfigL.png" alt="Single Sign-On configuration"><figcaption><p>Single Sign-On configuration</p></figcaption></figure>
 
-The table below describes the combinations possible when enabiling SSO.
+The table below describes the combinations possible when enabling SSO.
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xot7H5Sqrub_O3vGnOj35_ssotablev2.png)
+<figure><img src="../../.gitbook/assets/SSOTablev2.png" alt=""><figcaption></figcaption></figure>
 
 1. In Jigx Management under the Organization icon, select the **Single Sign-On** option. You require `ADMIN` or `OWNER` permissions to see and access the organization settings.
 2. Select the **Single Sign-On enabled** checkbox. The configuration options show.
@@ -50,15 +50,27 @@ The table below describes the combinations possible when enabiling SSO.
 
 ## Sign in
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Once signed in to the app and the user is authenticated against the 3rd party indentity provider a **Login Complete** screen is shown and they can continue using the solutions in the app. :::
+{% columns %}
+{% column width="41.66666666666667%" %}
+Once signed in to the app and the user is authenticated against the 3rd party identity provider a **Login Complete** screen is shown and they can continue using the solutions in the app.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB\_qeq7VOSwejqc26QB\_oauthverify.PNG" size="66" position="center" caption="SSO Authenticaton successful" alt="SSO Authenticaton successful" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IsFB\_qeq7VOSwejqc26QB\_oauthverify.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column width="58.33333333333333%" %}
+<figure><img src="../../.gitbook/assets/OAuthVerify.PNG" alt="SSO Authenticaton successful" width="188"><figcaption><p>SSO Authenticaton successful</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Logout
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-\_sso-logout.PNG" size="66" position="center" caption="IDP sign out" alt="IDP sign out" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0sJFyAzhFk0pTrKZ4XoR-\_sso-logout.PNG" width="800" height="1596" darkWidth="800" darkHeight="1596"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/SSO-logout.PNG" alt="IDP sign out" width="188"><figcaption><p>IDP sign out</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem With SSO enabled when logging out of the Jigx App you are prompted to log out of the 3rd party IDP account associated with the sign in. When logging back into the app you are prompted to sign back in to the 3rd Party IDP. This is useful if the same device is shared between colleagues. ::: ::::
+{% column %}
+With SSO enabled when logging out of the Jigx App you are prompted to log out of the 3rd party IDP account associated with the sign in. When logging back into the app you are prompted to sign back in to the 3rd Party IDP. This is useful if the same device is shared between colleagues.
+{% endcolumn %}
+{% endcolumns %}
 
 ## Considerations
 

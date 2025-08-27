@@ -2,19 +2,19 @@
 
 Manage connection settings for Azure SQL database instances on the Connections tab. Solutions reference the connection using the `key`.
 
-![Managing Connections](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/JiPwcxpHci5jJx-Z-s54U_jm-azurel.png "Managing Connections")
+<figure><img src="../../.gitbook/assets/jm-azurel.png" alt="Managing Connections"><figcaption><p>Managing Connections</p></figcaption></figure>
 
 ## Adding a Connection
 
-:::hint{type="info"}
+{% hint style="info" %}
 In order for the Azure SQL connection to function, you need to allowlist the Jigx IPs for your database instance using the Azure Portal (Azure SQL Server Instance -> Networking -> Firewall Rules). Click on **IP Allowlist** in the side pane to view the Jigx IPs you need to allowlist.
-:::
+{% endhint %}
 
 1. Click on the blue **Add connection** button to open the Add connection side pane.
 2. Fill in your Azure SQL connection settings or **Show schema**. You can add additional properties for your connection using the **Options** section at the bottom. Click on the **help icon** to see a list of all available connection options you can include in the JSON schema.
-3. Before clicking **Save,** click on **Test connection** to ensure that the settings are working corectly.
+3. Before clicking **Save,** click on **Test connection** to ensure that the settings are working correctly.
 
-![Adding a new Connection](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Scu8nZHKoi5_2RLR8dW_l_jm-azureeditl.png "Adding a new Connection")
+<figure><img src="../../.gitbook/assets/JM-AzureEditL.png" alt="Adding a new Connection" width="563"><figcaption><p>Adding a new Connection</p></figcaption></figure>
 
 ## Updating a Connection
 
@@ -28,4 +28,3 @@ Click on the **Remove** link in the last column of a record. Be aware, that the 
 ## Considerations
 
 Creating a copy of a solution duplicates the structure of the credentials and connections, to allow for easy configuration by only having to respecify secrets.
-

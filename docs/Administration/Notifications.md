@@ -2,21 +2,23 @@
 
 Notifications are a powerful feature allowing you to engage with your users. With Jigx, notifications are delivered to your users as push notifications (OS-level) and in-app notifications (on the notifications tab). You can send Notifications using Jigx Management or programmatically in your solutions, see [Notifications](../building-apps-with-jigx/additional-functionality/notifications.md). Notifications can be configured to send to a single user, the entire organization, users of a specific solution, and even users of a specific jig in a specific solution.
 
-::Image\[]{alt="In-app & push notifications" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC\_jm-notifications.PNG" size="74" caption="In-app & push notifications" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7b3RWMHmrLLf2Li44h3sC\_jm-notifications.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
+<figure><img src="../.gitbook/assets/jm-notifications.PNG" alt="In-app &#x26; push notifications" width="375"><figcaption><p>In-app &#x26; push notifications</p></figcaption></figure>
 
-![Notifications list](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sy-ULx52L4IPdaraUQSkz_jm-notiflistl.png)
+<figure><img src="../.gitbook/assets/jm-NotifListL.png" alt="Notifications list"><figcaption><p>Notifications list</p></figcaption></figure>
 
 ## Notifications Overview
 
 The notifications list shows all notifications being sent from your account, either via Jigx Management or programmatically in a solution. Notifications are put on a queue and the current status of your notification delivery is displayed in the first column. You can check the details of the notification by clicking on the notification title.
 
-:::hint{type="info"} Typically all notifications are delivered **within a 60 seconds timeframe**. :::
+{% hint style="info" %}
+Typically all notifications are delivered **within a 60 seconds timeframe**.
+{% endhint %}
 
-![Notification Details](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gAXoIGhFvg8bMwCJcNKxm_jm-notifyeditl.png)
+<figure><img src="../.gitbook/assets/jm-notifyeditl.png" alt="Notification Details"><figcaption><p>Notification Details</p></figcaption></figure>
 
 ## Configure sending a Notification
 
-Create notifications in Jigx Managementby following the steps below:
+Create notifications in Jigx Management by following the steps below:
 
 1. Click on **Send notification** at the top of the screen to open the side pane.
 2. Add a title and content, you can use Emojis 🎉 if you want. Both title and content will be displayed to the user in the push notification and in-app notification preview on their devices.
@@ -30,12 +32,8 @@ Create notifications in Jigx Managementby following the steps below:
 1. On the _Target a specific jig (optional)_ tab, select the jigin a specific solution that will trigger the notification. This is an optional step. For example, if sales employees tap on your push notification, the mobile app will navigate directly to their list of all open opportunities.
 2. Set input parameters for the jig based on key/value pairs (e.g. accountID / 123456). The solution creator needs to ensure the input parameters are processed.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9QLHLp1ZBs9aMo88JKpFQ-20241002-112429.png" size="94" position="center" caption="Configuring a notification" alt="Configuring a notification" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-9QLHLp1ZBs9aMo88JKpFQ-20241002-112429.png" width="800" height="630" darkWidth="800" darkHeight="630"}
+<figure><img src="../.gitbook/assets/JM-NotificationConfigL.png" alt="Configuring a notification"><figcaption><p>Configuring a notification</p></figcaption></figure>
 
 ## Notification URL per region
 
-| **Region**                  | **URL**                                                                                                                                                                                      |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| US                          | [https://us-east-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications](https://us-east-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications)           |
-| South East (e.g. Australia) | [https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications](https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications) |
-| Europe                      | [https://eu-central-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications](https://eu-central-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications)     |
+<table><thead><tr><th width="224.7734375">Region</th><th>URL</th></tr></thead><tbody><tr><td>US</td><td><a href="https://us-east-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://us-east-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></td></tr><tr><td>South East (e.g. Australia)</td><td><a href="https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://ap-southeast-2.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></td></tr><tr><td>Europe</td><td><a href="https://eu-central-1.api.jigx.com/v2.0/tool/organizations/%7BorganizationId%7D/notifications">https://eu-central-1.api.jigx.com/v2.0/tool/organizations/{organizationId}/notifications</a></td></tr></tbody></table>

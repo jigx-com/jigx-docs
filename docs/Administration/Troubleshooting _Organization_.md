@@ -11,7 +11,7 @@ Troubleshooting in Jigx Management helps identify problems when an app crashes, 
 
 **Permissions required**: Solution Owner or Organization Owner
 
-![Troubleshooting](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oeRZoYwujoWVFdQ6VNwc4_jm-orgtroublel.png)
+<figure><img src="../.gitbook/assets/JM-OrgTroubleL.png" alt="Troubleshooting"><figcaption><p>Troubleshooting</p></figcaption></figure>
 
 ### Jigx Management troubleshooting levels
 
@@ -23,7 +23,7 @@ There are three levels of troubleshooting in Jigx Management.
 
 ### Configure logging on the Jigx App
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4\_K6jIP4-pTjwgTKKW7\_jm-troubleshooting.PNG" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"}
+<figure><img src="../.gitbook/assets/JM-Troubleshooting (1).PNG" alt="Solution troubleshooting" width="375"><figcaption><p>Solution troubleshooting</p></figcaption></figure>
 
 To configure logging on the mobile device perform the following steps:
 

@@ -9,21 +9,21 @@ updatedAt: Wed Oct 02 2024 12:18:36 GMT+0000 (Coordinated Universal Time)
 
 You can access your profile either by clicking on your name in the bottom left of the screen and selecting _My profile_ from the menu, or by finding and clicking on your name in the [Users](Users.md) list. You can easily change _organization roles_, quickly _switch between organizations_, _disable a user_, or _remove a user from an organization_.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-40AWNKc-Ai3UlKLD2hcMd-20241002-121213.png" size="60" position="center" caption="User Profile screen" alt="User Profile screen"}
+<figure><img src="../.gitbook/assets/JM-MyProfile.png" alt="User Profile screen" width="375"><figcaption><p>User Profile screen</p></figcaption></figure>
 
 #### Organization Role
 
 Here you can see your role in the organization and if you have Admin permissions, you can easily change that role. For more information about the capabilities and permissions of each role, see [Permissions - User Roles](<Permissions - User Roles.md>).
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/dUNCLYwYRMNru8sazzrBg\_screenshot-2023-03-06-at-161152.png" size="32" caption="Role selection" position="center" alt="Role selection"}
+<figure><img src="../.gitbook/assets/jm-orgRoles.png" alt="Role selection" width="375"><figcaption><p>Role selection</p></figcaption></figure>
 
 #### All organizations
 
 The list of organizations will only be displayed if you are a member of more than one organization. This impacts your mobile experience and may not be suitable in cases where you want to use apps from different brands. If you belong to more than one organization, you can also change your default organization. The list of organizations include a solution count indicating the number of solutions you are assigned to. Simply switch organizations by clicking on the organization you want to access.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/migVYS4zy1AIIXpNDEYh6\_jm-solutioncount.png" size="70" position="center" caption="Organization with solution count" alt="Organization with solution count"}
+<figure><img src="../.gitbook/assets/JM-SolutionCount.png" alt="Organization with solution count" width="375"><figcaption><p>Organization with solution count</p></figcaption></figure>
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5rc2fVAUxWokQ-San\_PJI\_screenshot-2023-03-06-at-162214.png" size="44" position="center" caption="Change organizations in management" alt="Change organizations in management"}
+<figure><img src="../.gitbook/assets/jm-org-switch.png" alt="Change organizations in management" width="331"><figcaption><p>Change organizations in management</p></figcaption></figure>
 
 #### Advanced actions
 
@@ -40,7 +40,7 @@ You can create a personal access token on your Jigx profile that is used in the 
 
 **Create a personal access token** by:
 
-![Add personal access token](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RfNiCAVMSSNmvZdc9a_0E_jm-patcreate.png)
+<figure><img src="../.gitbook/assets/JM-PATCreate.png" alt="Add personal access token"><figcaption><p>Add personal access token</p></figcaption></figure>
 
 1. Log into Jigx Management.
 2. Open my profile and select the **Personal Access Tokens** menu option.
@@ -49,7 +49,7 @@ You can create a personal access token on your Jigx profile that is used in the 
 
 **Extend the lease of a personal access token** by two weeks:
 
-![Extend token](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Joan23MWAMu_Zt46jJXAM_jm-patextend.png)
+<figure><img src="../.gitbook/assets/JM-PATExtend.png" alt="Extend token"><figcaption><p>Extend token</p></figcaption></figure>
 
 1. Log into Jigx Management.
 2. Open my profile and select the **Personal Access Tokens** menu option.

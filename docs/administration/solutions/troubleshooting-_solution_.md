@@ -3,10 +3,6 @@ title: Troubleshooting (Solution)
 slug: tzQJ-troubl
 createdAt: Tue May 16 2023 14:12:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue May 28 2024 12:41:07 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to troubleshoot the Jigx Management app with this helpful document.
-  Discover step-by-step instructions on using filters and correlation IDs to
-  pinpoint specific log entries and track user jo
 ---
 
 # Troubleshooting (Solution)
@@ -15,9 +11,9 @@ Troubleshooting in Jigx Management helps identify problems when an app crashes, 
 
 **Permissions required**: Solution Owner or Organization Owner
 
-![Solution troubleshooting](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kYje9krCgP-Iy3Yk9NJRo_jm-solutiontroublel.png)
+<figure><img src="../../.gitbook/assets/JM-SolutionTroubleL.png" alt="Solution troubleshooting"><figcaption><p>Solution troubleshooting</p></figcaption></figure>
 
-### Jigx Mangement troubleshooting levels
+### Jigx Management troubleshooting levels
 
 There are three levels of troubleshooting in Jigx Management.
 
@@ -33,13 +29,13 @@ Information that is logged is determined by the settings in the Jigx App. By def
 
 ### Configure logging on the Jigx App
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Qh4\_K6jIP4-pTjwgTKKW7\_jm-troubleshooting.PNG" size="62" position="center" caption="Solution troubleshooting" alt="Solution troubleshooting"}
+<figure><img src="../../.gitbook/assets/JM-Troubleshooting (1).PNG" alt="Solution troubleshooting" width="375"><figcaption><p>Solution troubleshooting</p></figcaption></figure>
 
 To configure logging on the mobile device perform the following steps:
 
 1. Open the Jigx App on your mobile device
 2. Click on your **Profile icon** in the top right-hand corner of the app
-3. Tap\*\* Troubleshooting\*\*
+3. Tap **Troubleshooting**
 4. The following settings are configurable:
    * **Error and crash logging** - enabled by default. Logs any errors displayed while using the app and logs when the app crashes
    * **Basic logging** - logs basic flow when using the solutions in the app

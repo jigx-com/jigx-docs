@@ -3,17 +3,13 @@ title: Permissions
 slug: YycW-permissions
 createdAt: Thu Jun 09 2022 09:03:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 08:50:38 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to effectively manage user permissions in your solution with this
-  informative document. Discover how to easily add and remove users, change
-  their roles, and assign them to groups for enhance
 ---
 
 # Permissions
 
 Access to the solution is managed on the **Permissions** tab. Here, you can give users access to the solution, define their role in the solution scope, and assign `Solution Group` membership for the visibility of [Widgets](../../Administration/Solutions/Widgets.md).
 
-![Managing user permissions in a solution](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-vR1e6I2Khrl6oHZIYM2cO-20240808-135803.png)
+<figure><img src="../../.gitbook/assets/JM-PermissionsL.png" alt="Managing user permissions in a solution"><figcaption><p>Managing user permissions in a solution</p></figcaption></figure>
 
 ### Adding Users
 
@@ -32,7 +28,9 @@ To remove user's access to the solution:
 
 Bulk remove users by selecting multiple users, then click the red **Remove selected users** button at the top-right of the screen.
 
-:::hint{type="danger"} If you are using the **Everyone** `Organization Group` for [Widgets](../../Administration/Solutions/Widgets.md), the removed user will still have access to certain widgets although solution access has been removed for that user. :::
+{% hint style="danger" %}
+If you are using the **Everyone** `Organization Group` for [Widgets](../../Administration/Solutions/Widgets.md), the removed user will still have access to certain widgets although solution access has been removed for that user.
+{% endhint %}
 
 ### Changing the User Role
 
@@ -41,13 +39,17 @@ By default a new user of the solution will be assigned to the `USER` role. See [
 1. Clicking on the **User** link in the **Role** column.
 2. Select the new role to assign to the user. If you want to disable access for a user temporarily, select `DENY`.
 
-:::hint{type="info"} If you want to give a user the ability to publish updates to the solution using Jigx Builder, assign either the `OWNER` or `EDITOR` role. :::
+{% hint style="info" %}
+If you want to give a user the ability to publish updates to the solution using Jigx Builder, assign either the `OWNER` or `EDITOR` role.
+{% endhint %}
 
-![Changing the role of an user](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FzQ-KD0rYjCyWiN91V_ad_jm-userrolel.png)
+<figure><img src="../../.gitbook/assets/JM-UserRoleL.png" alt="Changing the role of an user"><figcaption><p>Changing the role of an user</p></figcaption></figure>
 
 ### Assigning and editing group membership
 
-:::hint{type="danger"} Once you assigned a user a group you have to use the groups when assigning permissions for widgets. For example, if you assign the `Finance` group to users all other widgets also need to have groups, like `Manager`, assigned. :::
+{% hint style="danger" %}
+Once you assigned a user a group you have to use the groups when assigning permissions for widgets. For example, if you assign the `Finance` group to users all other widgets also need to have groups, like `Manager`, assigned.
+{% endhint %}
 
 If you want to assign users to [Groups](groups.md) in your solution that will be used for toggling visibility of [Widgets](../../Administration/Solutions/Widgets.md):
 
@@ -56,4 +58,4 @@ If you want to assign users to [Groups](groups.md) in your solution that will be
 3. In the group membership pane select the group(s) the user will be in.
 4. Click **Change**.
 
-![Assigning user to groups](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YLJgBVr86VoQ0t9wBIj7X_jm-editgroups.png)
+<figure><img src="../../.gitbook/assets/JM-EditGroups.png" alt=""><figcaption></figcaption></figure>

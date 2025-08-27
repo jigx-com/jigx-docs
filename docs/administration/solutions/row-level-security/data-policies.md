@@ -3,10 +3,6 @@ title: Data policies
 slug: es3E-r
 createdAt: Mon Sep 25 2023 17:54:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 30 2023 09:48:56 GMT+0000 (Coordinated Universal Time)
-description: >-
-  Learn how to configure data policies in this comprehensive document. Set
-  restrictions on a per solution and per table basis, granting custom
-  permissions or denying access to operations such as create,
 ---
 
 # Data policies
@@ -43,7 +39,7 @@ The following **restrictions** are configurable on each operation, or you can se
 
 ### Configuring data policies
 
-![Data Policy configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3k5jtWF8lVdAGRuTZY40m_rls-datapolicyconfig.png)
+<figure><img src="../../../.gitbook/assets/RLS-DataPolicyConfig.png" alt="Data Policy configuration"><figcaption><p>Data Policy configuration</p></figcaption></figure>
 
 1. Open Jigx Management, select the **solution** option and browse to the solution you want to set the data policy on.
 2. Click on the **Data Policies** option in the navigation pane.

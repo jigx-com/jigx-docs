@@ -1,8 +1,8 @@
 # Public Content
 
-Public content lets you specify what is accessible to the public on your organization's branded app before a user has onboarded or logged in.
+Public content lets you specify what is accessible to the public on your organization's branded app before a user has on boarded or logged in.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY\_U7Y\_OzQFvmW\_m-publiccontentex2.png" size="80" position="center" caption="Public content in app " alt="Public content in app " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qpveSnvkY\_U7Y\_OzQFvmW\_m-publiccontentex2.png" width="800" height="531" darkWidth="800" darkHeight="531"}
+<figure><img src="../../.gitbook/assets/M-PublicContentEx2.png" alt="Public content in app" width="563"><figcaption><p>Public content in app</p></figcaption></figure>
 
 1. Configure jigs and widgets that anyone can access without needing to log in or be authorized.
 2. Configure links related to security
@@ -11,7 +11,7 @@ Public content lets you specify what is accessible to the public on your organiz
    3. A link to your company's legal disclosure (imprint).
    4. A link allowing people to request access to the app.
 
-![Public Content configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/51bc_oWXE11NpGX5dIS1c_jm-publicnew.png)
+<figure><img src="../../.gitbook/assets/JM-PublicNew (1).png" alt="Public Content configuration"><figcaption><p>Public Content configuration</p></figcaption></figure>
 
 ## Considerations
 
@@ -35,28 +35,38 @@ You can add the URLs in the provided fields in the language of your choice. Mult
 
 <table><thead><tr><th width="172.3203125">Properties</th><th width="287.734375">Description</th><th>Example</th></tr></thead><tbody><tr><td>Public Solution</td><td>Configure the public solution that is shown on the branded app at the organization level that requires no login.</td><td>For example, two widgets, one for customers and the other for employees. See the example.</td></tr><tr><td>Privacy</td><td>Add the URL to your company's privacy policy. Define the URL in multiple languages, such as English (en), and German (de). The privacy settings are displayed in the app under <strong>Profile > Security</strong> and on the splash screen for branded apps.</td><td></td></tr><tr><td>Terms &#x26; Conditions</td><td>Add the URL to your company's terms of service/terms and conditions. Define the URL in multiple languages, such as English (en), and German (de).</td><td></td></tr><tr><td>Legal Disclosure</td><td>Provide a link to your company's legal disclosure page or contact/About us information.</td><td></td></tr><tr><td>Request Access</td><td>Add the URL for users to register through the app. The URL calls the Jigx api to register the user.</td><td> </td></tr></tbody></table>
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem The public content links configuration for _Privacy Policy_, _Terms & Conditions_ and _Legal Disclosure_ are displayed in the app under **Profile > Security**. :::
+{% columns %}
+{% column %}
+The public content links configuration for _Privacy Policy_, _Terms & Conditions_ and _Legal Disclosure_ are displayed in the app under **Profile > Security**.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ![Public Links](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/R-m-LlgcTD514CBagNjZK_jm-security.png) ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/JM-Security.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Example of a Public Solution
 
 The Public Solution tab is a definition file configured similarly to creating the YAML in the Jigx Builder just without the folders. In the definition file the following entries are required:
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem
-
+{% columns %}
+{% column %}
 1. definition
 2. name
 3. jigs
 4. title
 5. category
-6. widgets :::
+6. widgets
+{% endcolumn %}
 
-:::VerticalSplitItem ![YAML structure](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/8m1tyVetv9VWAVAzoDT0A_jm-pcyaml.png) ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/JM-PCYAML.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 Simply add your JSON definition or add the YAML in the editor window. Toggle between the JSON and YAML tabs to ensure your definition is correct. Management validates values in the JSON and YAML and will provide a validation message in red at the bottom of the editor providing information regarding the issue.
 
-![Public Solution JSON](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/REaK-B5sTz2Om7n2uURTG_jm-publicjson.png)
+<figure><img src="../../.gitbook/assets/JM-PublicJson.png" alt="Public Solution JSON"><figcaption><p>Public Solution JSON</p></figcaption></figure>
 
 In the example below there are two jigs of type [document](https://docs.jigx.com/examples/jigdocument). The documents are HTML pages for registering depending if you are a customer or employee. Each jig is configured with a 2x2 image widget.
 

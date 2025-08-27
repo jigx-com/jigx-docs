@@ -13,7 +13,7 @@ Defining custom variables enables you to create reusable values that can be dyna
 
 Custom variables are created and set in the [Solution Settings](solution-settings.md) page in [Jigx Management](<../../../Administration/Management Overview.md>) and consist of a variable name and a variable value.
 
-![Custom Variables](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-RA_r561Nvc-59iw8KrHaE-20240819-075737.gif)
+<figure><img src="../../../.gitbook/assets/jm-customvariables.gif" alt="Custom Variables"><figcaption><p>Custom Variables</p></figcaption></figure>
 
 1. Open [Jigx Management](<../../../Administration/Management Overview.md>), navigate to the solution where the variables will be used.
 2. Select [Solution Settings](solution-settings.md) in the left navigation pane.
@@ -38,7 +38,7 @@ Use IntelliSense to select the `variableName` you set in _Management > Solution 
 
 After adding a new custom variable in Management, you can use the _Reload Solution Settings_ option in Jigx Builder to refresh IntelliSense and make the variable available.
 
-![Reload variables in Jigx builder](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-Xlz4cUJDzdSHr1WCVNU3a-20250408-093707.gif)
+<figure><img src="../../../.gitbook/assets/jm-customvarReload.gif" alt="Reload variables in Jigx builder"><figcaption><p>Reload variables in Jigx builder</p></figcaption></figure>
 
 ### Considerations
 

@@ -2,7 +2,7 @@
 
 Jigx provides a secure credentials store in the cloud that can be used to connect to remote APIs from your solutions. Credentials are referenced within your function's definitions via `key` properties and are used at runtime to inject the credentials into the request.
 
-![Managing Credentials](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UhAayqHvAT1OhuM0dK9yS_jm-credentialsl.png "Managing Credentials")
+<figure><img src="../../.gitbook/assets/jm-credentialsl.png" alt="Managing Credentials"><figcaption><p>Managing Credentials</p></figcaption></figure>
 
 ## Adding Credentials
 
@@ -10,11 +10,11 @@ Jigx provides a secure credentials store in the cloud that can be used to connec
 2. Enter a name for the credentials
 3. Select the type of credentials required. There are four types of credentials available:
 
-| **API Key**                                                                  | **Basic Auth**                                                     | **OAuth**                                                        | **Secret**                                                                 | **OAuth Alias**                                 |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------- |
-| A key that is used for accessing remote APIs, e.g. REST with a static secret | Basic username and password authentication, e.g. for SOAP requests | Custom OAuth  provider settings and secrets, e.g. for Office 365 | Static key/ value secret used in various scenarios where you need a secret | Use the Organization's global OAuth credentials |
+| **API Key**                                                                  | **Basic Auth**                                                     | **OAuth**                                                       | **Secret**                                                                 | **OAuth Alias**                                 |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------- | -------------------------------------------------------------------------- | ----------------------------------------------- |
+| A key that is used for accessing remote APIs, e.g. REST with a static secret | Basic username and password authentication, e.g. for SOAP requests | Custom OAuth provider settings and secrets, e.g. for Office 365 | Static key/ value secret used in various scenarios where you need a secret | Use the Organization's global OAuth credentials |
 
-The `key` is the actual key that will be referenced from within the function definition of the solution, so best practice is to give it a descriptive name. In the example below it is an API key for a financial platform (finnhub.io) and therefore called *jigx.finnhub.token*.
+The `key` is the actual key that will be referenced from within the function definition of the solution, so best practice is to give it a descriptive name. In the example below it is an API key for a financial platform (finnhub.io) and therefore called _jigx.finnhub.token_.
 
 Fill in the fields or click on **Show schema** to add the raw JSON configuration object.
 
@@ -25,7 +25,7 @@ Fill in the fields or click on **Show schema** to add the raw JSON configuration
 3. Re-enter the secret/password.
 4. Click **Save**.
 
-![Updating Credentials](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5cvG-LwIlndiDN2Wju7pz_jm-editcredl.png "Updating Credentials")
+<figure><img src="../../.gitbook/assets/JM-EditCredL.png" alt="Updating Credentials"><figcaption><p>Updating Credentials</p></figcaption></figure>
 
 ## Removing Credentials
 
