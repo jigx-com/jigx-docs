@@ -12,7 +12,8 @@ Next, you are ready to map out the requirements of the app. Each requirement or 
 4. Design how people will get the app and onboard. If a profile is required, create a design for it.
 5. In your design, you can already decide which features to add, such as buttons, dropdowns, or text fields. This turns your ideas into pictures, which will be converted into navigable screens during the build stage.
 6. Draw out functionality that should be available to certain user groups/personas. Think about if people need to see a different view of the screen, i.e., Manager vs employee.
-7. Collaborate with a UX designer and your team. ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KMx1fkaf\_xx8S\_j6UkU6S\_pizzaappscreen.png" size="68" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/KMx1fkaf\_xx8S\_j6UkU6S\_pizzaappscreen.png" caption width="800" height="1065" darkWidth="800" darkHeight="1065"}
+7. Collaborate with a UX designer and your team. \
+   ![](../../.gitbook/assets/PizzaAppScreen.png)
 
 ### Considerations
 

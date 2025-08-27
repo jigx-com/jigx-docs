@@ -9,7 +9,7 @@ updatedAt: Mon Jul 17 2023 14:55:27 GMT+0000 (Coordinated Universal Time)
 
 Why create a data plan? Data is used throughout the Jigx App, knowing where the data is coming from or going to, how to use that data on the device, whether online or offline, what data you can prefetch and made available on the device, and what data you will fetch just in time is important to design before building apps. This saves developers time and ensures the correct data is used from the beginning.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PyB3x5G\_IxY\_H6nhO74jm\_dataplanning.png" size="70" position="center" caption="Data visualization" alt="Data visualization"}
+<figure><img src="../../.gitbook/assets/DataPlanning.png" alt="Data visualization"><figcaption><p>Data visualization</p></figcaption></figure>
 
 #### Steps
 

@@ -2,7 +2,7 @@
 
 Now you are ready to start using your well-designed plan to build the app in Jigx Builder.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Bke0yOXOJqLaBLdf597x7\_buildplan.png" size="70" position="center" caption="Build plan" alt="Build plan" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Bke0yOXOJqLaBLdf597x7\_buildplan.png" width="800" height="1316" darkWidth="800" darkHeight="1316"}
+<figure><img src="../../.gitbook/assets/BuildPlan.png" alt="Build plan"><figcaption><p>Build plan</p></figcaption></figure>
 
 ### Steps
 
@@ -10,7 +10,8 @@ Now you are ready to start using your well-designed plan to build the app in Jig
 2. Next, build out the skeleton app based on must-have functionality, follow your solution design for each screen, and create the corresponding jig file. Choose components and UI elements that meet the requirements. See [examples](https://docs.jigx.com/examples) for a list of components, actions, widgets and jigs that can be used.
 3. Now add visual improvements and nice-to-haves. e.g., on an email field, add the email icon to interact with sending an email.
 4. Publish your app to the Jigx Cloud. Open the app on the mobile device and test each screen, data, and usability. Use [Jigx Dev Tools](../../building-apps-with-jigx/jigx-builder-_code-editor_/debugging.md) to debug the app, make changes and test again.
-5.  When the building of the app is complete, move on to the test plan.
+5.  When the building of the app is complete, move on to the test plan.\
+
 
     ![App skeleton](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BhGW5VVdrGYL6lcJAX4dF_appskeleton.png)
 

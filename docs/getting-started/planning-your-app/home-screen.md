@@ -9,7 +9,7 @@ updatedAt: Mon Dec 09 2024 09:24:35 GMT+0000 (Coordinated Universal Time)
 
 The home screen or [Home Hub](../../building-apps-with-jigx/ui/home-hub/home-hub.md) as it is called in Jigx is the entry point to your app and, therefore, needs to show the most relevant and important information upfront. Determine what users will interact with, then deep navigate into other screens.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/T\_DrDmEKSeo0Q6hjus8Ks\_pizzahomehub.png" size="70" position="center" caption="Plan the home hub " alt="Plan the home hub "}
+<figure><img src="../../.gitbook/assets/PizzaHomeHub.png" alt="Plan the home hub"><figcaption><p>Plan the home hub</p></figcaption></figure>
 
 #### Considerations
 

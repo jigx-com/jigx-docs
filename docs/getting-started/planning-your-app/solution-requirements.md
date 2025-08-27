@@ -12,8 +12,10 @@ The first step is to identify or define the requirements of your App.
 #### Steps
 
 1. Write down the purpose of the app in a few sentences, start with I want to.....;
-2. Now break it down and list the requirements. create a list of must-haves and nice-to-haves; always keep in mind that it is a mobile app solution. ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/46WG0AvFFZMBBoovJq7HC\_purpose.png" size="70" position="center" caption="Purpose statement" alt="Purpose statement"}
-3. Next create a user flow diagram or mindmap mapping out the user journey, whether that is on paper or in an application like _Miro, Powerpoint, Visio_. The user flow diagram helps later in the solution design, to plan out the screens of the app. ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/x3W1tF4HJ2eaQrSYjlkkZ\_pizzaflowchart.png" size="70" position="center" caption="Flow chart" alt="Flow chart"}
+2. Now break it down and list the requirements. create a list of must-haves and nice-to-haves; always keep in mind that it is a mobile app solution. \
+   ![Purpose statement](../../.gitbook/assets/Purpose.png)
+3. Next create a user flow diagram or mind map mapping out the user journey, whether that is on paper or in an application like _Miro, Powerpoint, Visio_. The user flow diagram helps later in the solution design, to plan out the screens of the app. \
+   ![Flow chart](../../.gitbook/assets/PizzaFlowChart.png)
 
 #### Considerations
 
