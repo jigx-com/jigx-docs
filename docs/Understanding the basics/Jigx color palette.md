@@ -13,13 +13,13 @@ The Jigx mobile app color palette, or color scheme, is a predefined selection of
 
 Below is an image showing the Jigx default color palette, and which UI interfaces use the color.
 
-![Jigx color palette](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-XY2wHDc9hppM5cFpNjaXn-20250226-071535.png)
+<figure><img src="../.gitbook/assets/jigx-colorPalette.png" alt=""><figcaption></figcaption></figure>
 
 ### Selecting default colors in Jigx Builder
 
-While creating your solution you can configure certain components, and widget colors in the YAML to use either the default primary, semantic, or complementary colors. Use intelliSense (ctrl+space) to determine if you can specifiy a color. If you can choose a color from the list of available colors.
+While creating your solution you can configure certain components, and widget colors in the YAML to use either the default primary, semantic, or complementary colors. Use intelliSense (ctrl+space) to determine if you can specify a color. If you can choose a color from the list of available colors.
 
-![Selecting colors in Jigx Builder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YIX7ZpFqH3NJVIlDexv82_yamlcolorfinal.gif)
+<figure><img src="../.gitbook/assets/YamlColorFinal.gif" alt=""><figcaption></figcaption></figure>
 
 ### Changing the default colors
 

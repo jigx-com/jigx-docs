@@ -6,7 +6,7 @@ Single Sign-On is set on an organizational level in Jigx Management, allowing us
 
 SSO is only applicable when signing in to the Jigx App. To log in to Jigx Management ([https://manage.jigx.com](https://manage.jigx.com)) the organization's `OWNER` and `ADMIN` must use their Jigx accounts.
 
-<figure><img src="../../.gitbook/assets/SSO.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SSO (1).gif" alt=""><figcaption></figcaption></figure>
 
 ## Domain configuration support
 
