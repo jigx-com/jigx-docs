@@ -9,16 +9,20 @@ updatedAt: Mon Aug 05 2024 13:05:15 GMT+0000 (Coordinated Universal Time)
 
 With the customer form and list added to the Hello Jigx project, you are ready to publish the update to the Jigx Cloud. If you are the owner of the solution you do not need your Jigx app credentials again to publish the update.
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem
-
+{% columns %}
+{% column %}
 ## Steps
 
-1. In VS Code click on the Jigx Builder\*\* icon\*\* in the left navigation bar.
+1. In VS Code click on the Jigx Builder **icon** in the left navigation bar.
 2. In the Jigx Explorer hover over the Hello Jigx node till you see the **publish icon** (rocket). Click on the icon to start the publishing process.
 3. Click **Publish** on the confirmation message screen.
 4. The publishing process starts and the progress shows in the bottom right corner of the VS Code editor. A message displays when the solution is successfully published.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ![Publish Jigx Project](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/EiFAMB81wv8sR3cDTGNel_customerpublish.png) ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/CustomerPublish.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="info" %}
 You can use the shortcut keys straight from the file you in:

@@ -15,7 +15,7 @@ In this section, you learn how to create a [jig.list](https://docs.jigx.com/exam
 
 1. Open the Hello-Jigx solution in Jigx Builder in VS Code, **right-click** on the jigs node in Explorer, and select **New file**.
 2. Name the file **list-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **List** to open the skeleton YAML created by the Jigx Builder.
-3. Give the jig a title called \*List customers \*and provide a description like _List my customers_.
+3. Give the jig a title called **List customers** and provide a description like _List my customers_.
 4. Change the icon to `icon: list`.This icon displays on the widget on the Home Hub.
 5. Delete the `header` and `onfocus` nodes.
 

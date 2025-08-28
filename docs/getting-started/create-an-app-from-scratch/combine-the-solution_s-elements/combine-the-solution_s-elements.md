@@ -8,8 +8,8 @@ Now you can expand the solution further by using the [jig.composite](https://doc
 We recommend you build out all the solution steps for the [Create an app from scratch](combine-the-solution_s-elements.md), as each solution step builds on the previous step until you have a functioning mobile app.
 {% endhint %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem
-
+{% columns %}
+{% column %}
 ## Steps
 
 1. Open the Hello-Jigx - Solution in Jigx Builder in VS Code.
@@ -17,8 +17,12 @@ We recommend you build out all the solution steps for the [Create an app from sc
 3. [Edit the index.jigx file](edit-the-index_jigx-file.md), add the customer composite jigId, remove the new customer and the list customer jigIds.
 4. [Publish your project](../create-the-calendar/publish-your-project.md).
 5. [Run the updated solution](../run-the-updated-solution.md) in the Jigx mobile app, click on each jig to view the solution, note on the customer jig the form, and list display in the same jig.
+{% endcolumn %}
 
-:::VerticalSplitItem ![Hello Jigx solution](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/U6UJjBwLz27s_ddvuFwZo_hellojigxsolution.PNG) ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/HelloJigxSolution.PNG" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## GitHub Samples
 

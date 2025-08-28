@@ -12,13 +12,25 @@ There are **two methods** to save data collected on a form to a database.
 **The second method is to use an execute entity action.** The execute entity action allows you to specify the data properties for the SQLite table. You have more granular control over the saved values and can include expressions.&#x20;
 {% endhint %}
 
-::::Tabs :::Tab{title="Form & list widgets"} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll\_formlistlight.PNG" size="30" caption="Form and list widgets" alt="Form and list widgets" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/aiM8WcC5QYFbhGg92rDll\_formlistlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/FormListLight.PNG" alt="Form and list widgets" width="188"><figcaption><p>Form and list widgets</p></figcaption></figure>
+{% endcolumn %}
 
-:::Tab{title="New customer form"} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg\_aAqfhOQoUW\_newcustomerlight.PNG" size="30" caption="New customer form" alt="New customer form" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AVD4yyxxzg\_aAqfhOQoUW\_newcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% column %}
+<figure><img src="../../../.gitbook/assets/NewCustomerLight.PNG" alt="New customer form" width="188"><figcaption><p>New customer form</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
-:::Tab{title="View customer"} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62\_viewcustomerlight.PNG" size="30" caption="View customer jig" alt="View customer jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ZU-8wX65Q12CBTnocab62\_viewcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/ViewCustomerLight.PNG" alt="View customer jig" width="188"><figcaption><p>View customer jig</p></figcaption></figure>
+{% endcolumn %}
 
-:::Tab{title="Edit customer"} ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b\_editcustomerlight.PNG" size="30" caption="Edit customer jig" alt="Edit customer jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Ga3y05NxNud10RQnBSp1b\_editcustomerlight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/EditCustomerLight.PNG" alt="Edit customer jig" width="188"><figcaption><p>Edit customer jig</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="success" %}
 We recommend you build out all the solution steps for the [Create an app from scratch](create-data-form-_-list.md), as each solution step builds on the previous step until you have a functioning mobile app.

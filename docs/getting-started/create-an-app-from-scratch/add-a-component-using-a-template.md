@@ -11,23 +11,23 @@ We have used the default jig template to add a profile jig to the project in the
 
 In our solution, we have a new customer form, when we signup the new customer we want them to sign the form. Let's use the signature component template to do this.
 
-::Image\[]{alt="Signature component template" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YHS5JHLDbaSEOC2wxoVab\_customersign.PNG" size="30" caption="Signature component template" position="center"}
+<figure><img src="../../.gitbook/assets/customersign.PNG" alt="Signature component template" width="188"><figcaption><p>Signature component template</p></figcaption></figure>
 
 1. In Explorer in the **jigs** folder, right-click on the **new-customer.jigx** file.
 2. Components are normally added under a `children` node in the YAML. Under the last `component.email-field` section just above the `actions` node place your cursor in the correct node position in the YAML editor and press the **ctrl+space** keys. The Jigx component IntelliSense popup displays listing the available components.
 
-![Component template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XWnhFE68Dms4AtWbvYEaB_templatesign.png)
+<figure><img src="../../.gitbook/assets/TemplateSign.png" alt="Component template"><figcaption><p>Component template</p></figcaption></figure>
 
 3\. Scroll to the bottom and select **Use template**. The template gallery opens providing the templates for various components. Use the _Search_ and _category_ fields to find the signature template or browse the gallery by scrolling through the options.
 
-![Template gallery](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/XQR2OY2wYrJeYWlM6_Jip_templateselect.png)
+<figure><img src="../../.gitbook/assets/TemplateSelect.png" alt="Template gallery"><figcaption><p>Template gallery</p></figcaption></figure>
 
 4\. Hover over the**Form signature field** template and click the blue **insert** button.
 
-![Insert template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/25VZeS6vbUmIyU1InExjW_templateinsert.png)
+<figure><img src="../../.gitbook/assets/TemplateInsert.png" alt="Insert template"><figcaption><p>Insert template</p></figcaption></figure>
 
 5\. The template YAML will be inserted into your jig file.
 
-![Inserted YAML](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/56Mnfm1qw3DQ83nuTWkPb_templatecode.png)
+<figure><img src="../../.gitbook/assets/TemplateCode.png" alt="Inserted YAML"><figcaption><p>Inserted YAML</p></figcaption></figure>
 
 6\. Publish your project and tap on the new customer widget on the Home Hub in the app. See the signature component on the form.

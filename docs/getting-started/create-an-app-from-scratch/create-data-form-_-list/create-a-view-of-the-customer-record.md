@@ -13,7 +13,7 @@ In this section, you learn how to create a view using the [entity-field](https:/
 
 ### Create a jig to view data
 
-1. Open the Hello-Jigx solution in Jigx Builder in VS Code,\*\* right-click\*\* on the jigs node in Explorer, and select **New file**.
+1. Open the Hello-Jigx solution in Jigx Builder in VS Code, **right-click** on the jigs node in Explorer, and select **New file**.
 2. Name the file **view-customer**. The file opens and shows the Jigx's auto-complete popup listing the five types of jigs you can select. Click on **Default** to open the skeleton YAML created by the Jigx Builder.
 3. Give your jig a `title` and `description`.
 4. Delete the `header` and `onfocus` nodes.

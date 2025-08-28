@@ -10,9 +10,15 @@ You can easily customize widgets on the Home Hub by changing their icons and add
 For a view of the icons in a list see the _Types - List - List with all icons_ in the _jigx-samples solution_ available in :Link\[https://manage.jigx.com/quickstartQuick]{href="https://manage.jigx.com/quickstart" newTab="true" hasDisabledNofollow="false"} start.
 {% endhint %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe\_widgetloclight.PNG" size="62" caption="Solution with Calendar -3 icon" position="center" alt="Solution with Calendar -3 icon" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jTIkWACM58-HE8chrcKfe\_widgetloclight.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/WidgetLocLight.PNG" alt="Solution with Calendar -3 icon" width="188"><figcaption><p>Solution with Calendar -3 icon</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{alt="Solution with calendar badge" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TjmDI17-njZImLC9Ix51n\_calenderbadgel.PNG" size="62" caption="Solution with calendar badge" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/TjmDI17-njZImLC9Ix51n\_calenderbadgel.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/CalenderbadgeL.PNG" alt="Solution with calendar badge" width="188"><figcaption><p>Solution with calendar badge</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 #### Steps
 

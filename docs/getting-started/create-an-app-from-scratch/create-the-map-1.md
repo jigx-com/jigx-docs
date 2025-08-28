@@ -15,24 +15,18 @@ We recommend you build out all the solution steps for the [Create an app from sc
 
 {% columns %}
 {% column %}
-
-{% endcolumn %}
-
-{% column %}
-
-{% endcolumn %}
-{% endcolumns %}
-
 ## Steps
 
 1. [Create the Hello Jigx project](broken-reference) in the Jigx Builder.
 2. [Add the jig.default](create-the-map/adding-the-map-jig.md) with an icon, and static data source.
 3. [Publish the project](create-the-map/publish-the-project.md).
-4.  [Open the Jigx mobile app](run-the-solution-in-the-app.md), click on the location jig, and view the map.
+4. [Open the Jigx mobile app](run-the-solution-in-the-app.md), click on the location jig, and view the map.
+{% endcolumn %}
 
-    :::
-
-:::VerticalSplitItem ![Map jig on Home Hub](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5jTu6ueglwO_REh2Am0go_maplight.PNG) ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/MapLight.PNG" alt="" width="375"><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## GitHub samples
 
