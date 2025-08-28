@@ -22,7 +22,7 @@ This is the recommended pattern when designing a Jigx solution.
 * Initial app load time is slightly longer and heavier.
 * Doesn’t work for all scenarios where the app depends on up-to-date data from the cloud when a jig is displayed.
 
-![Solution data sync](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Sioy4m5oZWob-SKv_Ahkh_image.png)
+<figure><img src="../../.gitbook/assets/data-solutionSync.png" alt="Solution data sync"><figcaption><p>Solution data sync</p></figcaption></figure>
 
 ### Sync just in time when a jig is used
 
@@ -40,7 +40,7 @@ Elements of this approach can be combined with the recommended approach above.
 * The user might experience a slower performance of jigs because of just-in-time cloud operations.
 * There are 9 (8 reads and one update) cloud operations throughout the UI cycles at 5 different distinct stages.
 
-![Sync data just in time](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IKqp3HqDkhPamwx37IXii_image.png)
+<figure><img src="../../.gitbook/assets/data-solutionJigSync.png" alt="Sync data just in time"><figcaption><p>Sync data just in time</p></figcaption></figure>
 
 ### Dynamically syncing data
 

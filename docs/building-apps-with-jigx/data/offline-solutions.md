@@ -25,4 +25,6 @@ The best practice for a robust offline solution is to sync as much data as is ne
 
 Refer to the [Data lifecycles in Jigx](data-lifecycles-in-jigx.md) and [Syncing remote and loading local Data](syncing-remote-and-loading-local-data.md) sections to understand how to build robust solutions that go offline.
 
-:::hint{type="warning"} When a Jigx solution switches from offline to online, the queue is processed on a first-in-first-out basis. Jigx does not do conflict resolution. It assumes that the cloud-based system will handle its own data integrity.
+{% hint style="warning" %}
+When a Jigx solution switches from offline to online, the queue is processed on a first-in-first-out basis. Jigx does not do conflict resolution. It assumes that the cloud-based system will handle its own data integrity.
+{% endhint %}

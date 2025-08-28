@@ -9,7 +9,7 @@ updatedAt: Wed Nov 29 2023 09:04:12 GMT+0000 (Coordinated Universal Time)
 
 First step in creating Dynamic Data for a solution is to create the tables that the solution requires. Tables are created in a solution in Jigx Builder in the _default.jigx_ file located in the _database_ folder. All tables are created under the default database. Follow the steps below to create tables:
 
-![Tables in Dynamic Data](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SpVXMM26nqpr1MZ15x34m_dd-tables.png)
+<figure><img src="../../../../.gitbook/assets/DD-tables.png" alt="Tables in Dynamic Data"><figcaption><p>Tables in Dynamic Data</p></figcaption></figure>
 
 1. Open an existing solution or [create a new solution](../../../jigx-builder-_code-editor_/create-a-new-jigx-solution.md) in Jigx Builder.
 2. Expand the database folder and click on the **default.jigx** file.

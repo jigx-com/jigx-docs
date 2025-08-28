@@ -4,7 +4,7 @@ Utilizing pre-built solutions in Jigx provides benefits in terms of time efficie
 
 ## Steps
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AWLlJ2PrB5\_fr2XuuK0od\_prebuilt-select.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AWLlJ2PrB5\_fr2XuuK0od\_prebuilt-select.png" size="84" width="2444" height="1630" position="center" caption="Pre-built Solutions" alt="Pre-built Solutions"}
+<figure><img src="../.gitbook/assets/prebuilt-select.png" alt="Pre-built Solutions"><figcaption><p>Pre-built Solutions</p></figcaption></figure>
 
 1. Create a [Creating an account](creating-an-account.md)
 2. Install Jigx App on a mobile device from the [App Store](https://apps.apple.com/app/jigx/id1495596537) or [Google Play Store](https://play.google.com/store/apps/details?id=com.jigx.android)&#x20;
@@ -23,7 +23,7 @@ With Jigx you can build and publish more than one solution to your Jigx mobile a
 
 ### Download the solution files
 
-![Download solution files](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AyPHsMj91cvVuhx_TMoMf_pre-built-solution.png)
+<figure><img src="../.gitbook/assets/Pre-built-solution.png" alt="Download solution files"><figcaption><p>Download solution files</p></figcaption></figure>
 
 1. Navigate to **Solutions.**
 2. Click on the prebuilt solution.
@@ -31,7 +31,7 @@ With Jigx you can build and publish more than one solution to your Jigx mobile a
 
 ### Open the solution in Jigx Builder
 
-![Solution in Jigx builder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FdL1FqTa3Zn5CSuHxa-we_pre-built-yaml.png)
+<figure><img src="../.gitbook/assets/Pre-built-yaml.png" alt="Solution in Jigx builder"><figcaption><p>Solution in Jigx builder</p></figcaption></figure>
 
 1. [Install the Jigx Builder](install-the-jigx-builder.md) and unzip the download file.
 2. Use the **Open** option, browse, and select the folder.

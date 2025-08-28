@@ -4,7 +4,7 @@ There are three methods to create columns in Dynamic Data tables, and it all dep
 
 1. Create a jig in Jigx Builder with the columns and save data to your table.
 2. Create your columns and data manually in Jigx Management.
-3. Import your data from a CSV or JSON file using the :Link\[Jigx Management]{href="https://manage.jigx.com" newTab="true" hasDisabledNofollow="false"}.
+3. Import your data from a CSV or JSON file using the [Jigx Management](https://manage.jigx.com/).
 
 {% hint style="warning" %}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.&#x20;
@@ -22,7 +22,7 @@ In this scenario, the `formId` in the `component.form` is used in the `submit-fo
 &#x20;The columns and data records are created when the form is completed and submitted on the mobile device and not at the time of publishing the solution in Jigx Builder.
 {% endhint %}
 
-![Form creates column and data record](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/jjL4vN_lEb3UbFsv42yPN_dd-column-form.png)
+<figure><img src="../../../../.gitbook/assets/DD-column-form.png" alt="Form creates column and data record"><figcaption><p>Form creates column and data record</p></figcaption></figure>
 
 1. Add a `component.form` to a jig and give it a `formId`.
 2. Add any of the available form properties, such as [text-field](https://docs.jigx.com/examples/text-field), [date-picker](https://docs.jigx.com/examples/date-picker), [number-field](https://docs.jigx.com/examples/number-field).
@@ -145,7 +145,7 @@ type: action.execute-entities
 
 ### Manually create columns and data records
 
-![Creating columns](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/-v-otw_CzhfHNQXOJf403_dd-column-mngt.gif)
+<figure><img src="../../../../.gitbook/assets/DD-Column-mngt.gif" alt="Creating columns"><figcaption><p>Creating columns</p></figcaption></figure>
 
 1. Open [Jigx Management](<../../../../Administration/Management Overview.md>), navigate to your solution and select the **Data** option.
 2. Click on the table you want to add a record to in the right-hand **Tables** pane.
@@ -162,7 +162,7 @@ You do not need to specify an rid column. Dynamic Data will create a GUID based 
 
 If you have pre-existing data or a large data set with multiple records to add to a table you can import the data by uploading a CSV or JSON file that will create the columns and populate the data records.
 
-![Add data with JSON file](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VxJ6gOJHXhZK-UOxQvsf9_dd-addjson.gif)
+<figure><img src="../../../../.gitbook/assets/DD-AddJSON.gif" alt="Add data with JSON file"><figcaption><p>Add data with JSON file</p></figcaption></figure>
 
 1. Open [Jigx Management](<../../../../Administration/Management Overview.md>), navigate to your solution and select the **Data** option.
 2. Click on the table you want to add a record to in the right-hand **Tables** pane.

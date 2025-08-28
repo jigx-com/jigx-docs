@@ -237,7 +237,7 @@ All tempIds for a record are replaced in all other queued commands if a valid id
 
 In this example, when the device is offline and a customer record is created and then updated multiple times, only one create and one update command is queued. When the device is back online the queue is cleared. The remote data store returns an id that we can use to map back to the record locally in the `outputTransform` of the function (rest-create-customer). `queueOperation` is not required for the create of the customer because once the device comes online, the record will be created, and the id from the remote data store will be returned and any records with the same tempId will be updated with the returning id and will update the correct record. The `queueOperation: replace` is rather used in the update-customer jig.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" size="34" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-3DuqCIPa4YvIxz4jRUEl6-20241017-092911.gif" caption width="338" height="680" darkWidth="338" darkHeight="680"}
+<figure><img src="../../.gitbook/assets/data-remoteOffline.gif" alt="" width="169"><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="new-customer.jigx" %}

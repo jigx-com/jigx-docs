@@ -14,12 +14,13 @@ The Jigx _Extension Settings_, accessed via the _manage ge&#x61;_&#x72; icon, co
 
 It is important to configure which app you want to connect to as the [debugging](debugging.md) Jigx Dev tools QR code is generated using the **Jigx: App name** setting.
 
-![Jigx extenson settings](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wzOG2b85hRWxI3GiYmmpq_jb-extsettings.png)
+<figure><img src="../../.gitbook/assets/JB-ExtSettings.png" alt="Jigx extension settings"><figcaption><p>Jigx extension settings</p></figcaption></figure>
 
 To configure the **Jigx: App name** setting follow the steps below:
 
 1. When connecting to the Jigx App available from the Play or App stores leave the setting empty.
-2. When connecting to a Jigx branded app, go to Jigx Management / Branding/ App configuration and copy the **App Name**, then paste the name in the **Jigx: App name** setting in Jigx Builder. ![App Name in Jigx Management](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/1vG3k44iWYNDS7iSojxCA_jb-appnamemanagel.png)
+2. When connecting to a Jigx branded app, go to Jigx Management / Branding/ App configuration and copy the **App Name**, then paste the name in the **Jigx: App name** setting in Jigx Builder. \
+   ![](../../.gitbook/assets/JB-AppNameManageL.png)
 3. Regenerate the QR code when changing app names in settings by clicking the **Refresh QR code** icon in Jigx Dev tools - **Connect to Device** pane.
 
 {% hint style="info" %}

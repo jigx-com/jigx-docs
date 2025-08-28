@@ -15,7 +15,9 @@ When a solution is published, the solution is automatically added to [Solutions]
 To publish the **entire** solution, follow the steps below:
 
 1. In VS Code click on the Jigx Builder **icon** in the left navigation bar.
-2. In the Jigx Explorer hover over the solution node till you see the **publish icon (rocket)**. ![Publish icon](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-7EXxML_axMCYnri0YV0DV-20250514-074940.png)
+2. In the Jigx Explorer hover over the solution node till you see the **publish icon (rocket)**.\
+   <img src="../../.gitbook/assets/JB-Publish.png" alt="" data-size="original">\
+   &#x20;
 3. Click on the icon to start the publishing process.
 4. On a new solution you will be asked to enter your Jigx username and password, organization and region.
 5. If you are already logged in, the solution will publish without having to sign in again. The solution's name and organization are displayed in the VS Code status bar.
@@ -26,7 +28,9 @@ To publish the **entire** solution, follow the steps below:
 To publish a **single** file in the solution follow the steps below:
 
 1. In Jigx Builder locate the file in the side bar explorer that you want to publish.
-2. Right-click on the file and click **Publish Jigx file**. If you not signed in you will be asked to enter your Jigx username and password, organization and region. Alternatively you can use the shortcut keys given below. ![File Publish](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-LF3q0EiQqbW0D5LMA1xeN-20250514-080338.png)
+2. Right-click on the file and click **Publish Jigx file**. If you not signed in you will be asked to enter your Jigx username and password, organization and region. Alternatively you can use the shortcut keys given below. \
+   ![](../../.gitbook/assets/JB-SinglePub.png)\
+
 
 ## Publishing shortcuts
 
@@ -34,12 +38,18 @@ To publish a **single** file in the solution follow the steps below:
 
 ## Viewing published solutions in the app
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem With Jigx, you can build and publish multiple solutions to your mobile app.
+{% columns %}
+{% column width="41.66666666666667%" %}
+With Jigx, you can build and publish multiple solutions to your mobile app.
 
 You can switch between them by tapping the _More_ (ellipsis) icon in the navigation bar and selecting the solution you want to use.
 
 The currently active solution is highlighted with a _checkmark_ icon.
 
-If only one solution is available, the &#x4D;_&#x6F;re_ icon is hidden. :::
+If only one solution is available, the &#x4D;_&#x6F;re_ icon is hidden.
+{% endcolumn %}
 
-:::VerticalSplitItem ![Solution switching](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_wNc-4qfpMvnhWhjpKEx8-20250429-113930.png) ::: ::::
+{% column width="58.33333333333333%" %}
+<figure><img src="../../.gitbook/assets/jigx-solutions.png" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}

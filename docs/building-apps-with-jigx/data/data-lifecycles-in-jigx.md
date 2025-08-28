@@ -11,16 +11,16 @@ Understanding the data lifecycle in a Jigx solution is essential to help you pla
 
 ### Navigating to a Jig for the first time
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/sn4xeVhJP2Idu_wGg11C0_image.png)
+<figure><img src="../../.gitbook/assets/data-lifecycle-first.png" alt=""><figcaption></figcaption></figure>
 
 ### Navigating to the same jig a second time
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YVD4_tPTrsbTO9dDdkrQd_image.png)
+<figure><img src="../../.gitbook/assets/data-lifecycle-second.png" alt=""><figcaption></figcaption></figure>
 
 ### Editing the record
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/2in5ZqMAgP77ZwapT99-s_image.png)
+<figure><img src="../../.gitbook/assets/data-lifecycle-editing.png" alt=""><figcaption></figcaption></figure>
 
 ### Navigating back to view the edited record
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/40ywmYb6IxBw8nmOoT4c4_image.png)
+<figure><img src="../../.gitbook/assets/data-lifecycle-view-edit.png" alt=""><figcaption></figcaption></figure>

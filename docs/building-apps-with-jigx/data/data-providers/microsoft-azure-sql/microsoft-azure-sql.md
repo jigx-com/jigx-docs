@@ -16,7 +16,7 @@ To use the SQL data provider in Jigx , follow these high-level steps:
    * Identify the SQL table you will use as your data source. Ensure you understand its structure and data.
 2. **Configure the SQL connection**
    * [Configure a new Azure SQL connection ](configuring-the-sql-connection.md)for the solution in Jigx Management before adding the Jigx cloud IP addresses to the allowlist IP addresses in Azure SQL.
-3. \*\*Define the SQL query or stored procedure in a **Jigx** function in **Jigx Builder**
+3. **Define the SQL query or stored procedure in a Jigx function in Jigx Builder**
    * Navigate to the [functions](../rest/rest.md) folder in Jigx Builder.
    * Use [IntelliSense](../../../jigx-builder-_code-editor_/editor.md) to configure the SQL data provider.
    * Enter the name of the connection set up in Jigx Management.

@@ -6,7 +6,7 @@ The underlying data store for Dynamic Data is a NoSQL store. This means that eac
 
 We can visualize how dynamic data works by following the steps below:
 
-![Dynamic Data Overview](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/J1iJYwlRVrWs797temueT_dynami.png)
+<figure><img src="../../../../.gitbook/assets/dynami.png" alt="Dynamic Data Overview"><figcaption><p>Dynamic Data Overview</p></figcaption></figure>
 
 1. Data is updated on the device (Device 1).
 2. Data is immediately synced with the Dynamic Data database in the Jigx cloud.
@@ -35,9 +35,15 @@ To create and use Dynamic data see the following:
 3. [Deleting tables](deleting-tables.md)
 4. [Using Dynamic Data](using-dynamic-data.md)
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::embed\[]{url="https://vimeo.com/830296571?share=copy"} :::
+{% columns %}
+{% column %}
+{% embed url="https://vimeo.com/830296571?share=copy" %}
+{% endcolumn %}
 
-:::VerticalSplitItem ::embed\[]{url="https://vimeo.com/829863168?share=copy"} ::: ::::
+{% column %}
+{% embed url="https://vimeo.com/829863168?share=copy" %}
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="info" %}
 **Supporting file** for the _Working with Dynamic Data_ video. You can use this CSV file if you want to follow the steps in the video.

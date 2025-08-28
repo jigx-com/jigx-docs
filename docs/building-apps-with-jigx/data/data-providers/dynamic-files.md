@@ -282,12 +282,12 @@ datasources:
 
 Files and their detail are visible in Management and are associated with a record.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QnWsC0B1rSmeA622gNi0T-20250523-093602.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-QnWsC0B1rSmeA622gNi0T-20250523-093602.png" size="76" width="1944" height="1586" position="center" caption="Dynamic Files" alt="Dynamic Files"}
+<figure><img src="../../../.gitbook/assets/JM-DynamicFiles1.png" alt="Dynamic Files" width="563"><figcaption><p>Dynamic Files</p></figcaption></figure>
 
 1. Locate the [Data](../../../administration/solutions/data.md) tab.
 2. Click on a record and select the **File** tab.
 3. The file **status**, **thumbnail**, **name**, **content type** and **size** are displayed.
-4. To download the file from Managment, use the **Download file** link at the top of the record.
+4. To download the file from Management, use the **Download file** link at the top of the record.
 5. To delete a file, click the **X** next to the file preview.
 6. To view the file thumbnail in the table, ensure **File** is checked in the **Column settings** pane.
 

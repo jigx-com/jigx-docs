@@ -9,7 +9,7 @@ updatedAt: Tue Nov 05 2024 11:18:17 GMT+0000 (Coordinated Universal Time)
 
 Jigx Builder provides debugging capabilities in VS Code to identify and fix YAML, SQLite, and app problems and errors. Connect your phone using the debugging QR code to troubleshoot a solution directly from the Jigx App. Quickly locate and resolve issues preventing the application from functioning correctly or as intended. Examine your code, write and test SQL queries in the debug tool, trace program execution, and analyze error messages or unexpected behaviors to pinpoint the root cause of the problem. You can improve an application's reliability, performance, and functionality by debugging an application.
 
-![Jigx Dev Tools](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/AtgzZUHgK_p0EV0Zb98pk_jb-debug.png)
+<figure><img src="../../.gitbook/assets/JB-Debug.png" alt="Jigx Dev Tools"><figcaption><p>Jigx Dev Tools</p></figcaption></figure>
 
 ### Debugging capabilities
 
@@ -23,9 +23,7 @@ Jigx Builder provides debugging capabilities in VS Code to identify and fix YAML
 
 Enable Jigx Dev Tools by following these steps:
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/IB4BEAffLlDQXjfDYb\_B4\_jb-debugsteps.png" size="82" position="center" caption="Enabling Jigx Dev Tools" alt="Enabling Jigx Dev Tools"} :::
-
-:::VerticalSplitItem
+<figure><img src="../../.gitbook/assets/JB-Debugsteps.png" alt="Enabling Jigx Dev Tools" width="174"><figcaption><p>Enabling Jigx Dev Tools</p></figcaption></figure>
 
 1. Open the solution you want to debug in Jigx Builder.
 2. Click on the Jigx Builder icon in the activity bar.
@@ -49,7 +47,7 @@ Jigx validates the structure and values in the `.jigx` YAML files and shows the 
 * Clicking on the issue will take you to the line of YAML code in the file.
 * Hover over the issue to see the popup that offers validation assistance and a quick-fix link if applicable.
 
-![Problems pane](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/xq_W7vxImiBLp07c8cuHy_jb-problemgif.gif)
+<figure><img src="../../.gitbook/assets/JB-problemGif.gif" alt="Problems pane"><figcaption><p>Problems pane</p></figcaption></figure>
 
 #### Jigx console
 
@@ -57,7 +55,7 @@ Use the Jigx Console to debug your data and functions.
 
 **Debugging data:**
 
-![Debugging data in Jigx Console](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/pVjWwfz1K2Rdcwc0drcgJ_jb-console.gif)
+<figure><img src="../../.gitbook/assets/JB-Console.gif" alt="Debugging data in Jigx Console"><figcaption><p>Debugging data in Jigx Console</p></figcaption></figure>
 
 1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
 2. Under the **Device** node, click on the **data** node and select the SQLite data table.
@@ -70,7 +68,7 @@ Use the Jigx Console to debug your data and functions.
 
 **Debugging functions:**
 
-![Debugging functions in Jigx Console](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UJyIWEShn42cP0BhWW5D3_jb-functiongif.gif)
+<figure><img src="../../.gitbook/assets/JB-FunctionGif.gif" alt="Debugging functions in Jigx Console"><figcaption><p>Debugging functions in Jigx Console</p></figcaption></figure>
 
 1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
 2. Under the **Device** node, click on the **functions** node and select the function to debug.
@@ -88,7 +86,7 @@ Use the Jigx Console to debug your data and functions.
 
 Jigx Logs records your interactions with the solution on the device when connected to the Jigx Dev Tools.
 
-![Jigx logs](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/ra-YuRCoBFsVP9uFSFsLY_jb-jigxloggif.gif)
+<figure><img src="../../.gitbook/assets/JB-JigxLogGif.gif" alt="Jigx logs"><figcaption><p>Jigx logs</p></figcaption></figure>
 
 The following is logged:
 
@@ -114,7 +112,7 @@ The following is logged:
 
 As you building out your solution in Jigx Builder you can monitor expressions and SQL queries to see the results as you navigate the app on the device.
 
-![Jigx Watcher](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/f1yClypjHjw3R1DIt8fZz_jb-watcherfixed.gif)
+<figure><img src="../../.gitbook/assets/JB-WatcherFixed.gif" alt="Jigx watcher"><figcaption><p>Jigx watcher</p></figcaption></figure>
 
 1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
 2. Open a `.jigx` file in Jigx Builder.

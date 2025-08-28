@@ -2,7 +2,7 @@
 
 This section covers installing the Jigx Builder extension, versions, updates, uninstalling, and the recommended source control. The numbered image below indicates each of these areas in the Jigx Builder.
 
-![Jigx Builder installed](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/F0M0aR2ftgSINpjbqd9yV_jb-extension.png)
+<figure><img src="../../.gitbook/assets/JB-Extension.png" alt="Jigx Builder installed"><figcaption><p>Jigx Builder installed</p></figcaption></figure>
 
 ## 1. Install steps
 
@@ -28,8 +28,14 @@ When a new version is available VS Code automatically installs the latest versio
 
 ## 5. Source Control
 
-Manage your Jigx solutions with Git integration in VS Code. See using [Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview) for more information. When a solution in Jigx Builder is connected to a Git repository the files in the side bar will show in green when a new file is added, yellow for files that have been modified, redwhen there are validation issues that need to be addressed, or _white_ when files are commited.
+Manage your Jigx solutions with Git integration in VS Code. See using [Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview) for more information. When a solution in Jigx Builder is connected to a Git repository the files in the side bar will show in green when a new file is added, yellow for files that have been modified, when there are validation issues that need to be addressed, or _white_ when files are commited.
 
-::::VerticalSplit{layout="left"} :::VerticalSplitItem In Jigx Management under [Solution Settings](../../administration/solutions/solution-settings/solution-settings.md) you can store the details of your Jigx solution's sourcecode repository, allowing people to easily find the details and contribute to the solution. :::
+{% columns %}
+{% column %}
+In Jigx Management under [Solution Settings](../../administration/solutions/solution-settings/solution-settings.md) you can store the details of your Jigx solution's sourcecode repository, allowing people to easily find the details and contribute to the solution.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BqDiVPonlfhAP6DK4fhVP\_m-sourcecodedetails.png" size="76" position="center" caption="Sourcecode details" alt="Sourcecode details" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/BqDiVPonlfhAP6DK4fhVP\_m-sourcecodedetails.png" width="800" height="652" darkWidth="800" darkHeight="652"} ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/M-SourcecodeDetails.png" alt="Sourcecode details"><figcaption><p>Sourcecode details</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
