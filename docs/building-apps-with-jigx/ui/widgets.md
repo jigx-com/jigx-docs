@@ -11,9 +11,15 @@ Widgets are navigational menu blocks shown either on the [Home Hub](home-hub/hom
 
 ### Configuration Sizes
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem A widget can be configured with the following sizes: - 1x1 - 2x2 - 2x4 - 4x2 - 4x4 Consider the layout of the widgets on the mobile app screen. Specific sizes cover the entire width of the screen, for example, 4x4. The image on the right shows the layout of widgets on a mobile app screen. :::
+{% columns %}
+{% column %}
+A widget can be configured with the following sizes: - 1x1 - 2x2 - 2x4 - 4x2 - 4x4 Consider the layout of the widgets on the mobile app screen. Specific sizes cover the entire width of the screen, for example, 4x4. The image on the right shows the layout of widgets on a mobile app screen.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/oGaU39hj90U-QrBkbnDAq\_wd-layout.png" size="60" position="center" caption="Widget layouts" alt="Widget layouts"} ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/WD-layout.png" alt="Widget layouts" width="405"><figcaption><p>Widget layouts</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ### How to configure widgets
 
@@ -133,6 +139,16 @@ By default widgets are shown on the `grid-item` with an icon. If no `icon` is sp
 
 In the example below the _location_ icon is specified to replace the default icon.
 
+{% columns %}
+{% column %}
+<figure><img src="../../.gitbook/assets/WD-icon-default.png" alt="Default icon" width="99"><figcaption><p>Default icon</p></figcaption></figure>
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/WD-icon.png" alt="Location icon on widget" width="136"><figcaption><p>Location icon on widget</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
 {% tabs %}
 {% tab title="yoga-location.jigx" %}
 ```yaml
@@ -179,10 +195,6 @@ children:
 {% endtab %}
 {% endtabs %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-xDdATKCiSQfA0N9jSfVIk-20250307-080104.png" size="32" position="center" caption="Default widget icon" alt="Default widget icon"}
-
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/3KbkwoTdYzX8jlQ3D9rf2\_wd-icon.png" size="40" position="center" caption="Location icon on widget" alt="Location icon on widget"} ::: :::::
-
 #### 2.Configure the widget content
 
 1. In Jigx Builder open the jig whose widget you want to configure.
@@ -193,6 +205,8 @@ children:
 6. Add the widget (`size` , `jigId`, `widgetId`, and `inputs`) to the [grid-item](https://docs.jigx.com/examples/grid-item).
 
 In the example below the widget content is configured to show a _location_ on the widget surface.
+
+<figure><img src="../../.gitbook/assets/WD-location.PNG" alt="Widget with location content" width="188"><figcaption><p>Widget with location content</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="yoga-studio.jigx" %}
@@ -254,15 +268,23 @@ children:
 {% endtab %}
 {% endtabs %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-yX5QldmDnLckwWqXas\_fu-20250307-082534.png" size="80" position="center" caption="Widget with location content" alt="Widget with location content"} ::: :::::
-
 ### How to move or rearrange widgets
 
 The widgets display order on a screen is determined by the order of the [grid-item](https://docs.jigx.com/examples/grid-item) in the YAML. You can change the order of the widgets by simply changing the order in the YAML. It is important to take into consideration the configured size of each widget when ordering widgets. Changing the order of the widgets can give your app a completely different look. Placing a `4x2` followed by `4x4` will result in white space next to the `4x2`.
 
+{% columns %}
+{% column %}
 &#x20;Initial widget order in [grid](https://docs.jigx.com/examples/grid)
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY--Qt3\_P1Wkg12BhBbZMEe2-20250307-083935.png" size="60" position="center" caption="Initial widget order" alt="Initial widget order"}
+
+{% endcolumn %}
+
+{% column %}
+<figure><img src="../../.gitbook/assets/WD-order1.PNG" alt="Initial widget order" width="188"><figcaption><p>Initial widget order</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
+
+
 
 {% code title="home.jigx" %}
 ```yaml
@@ -314,9 +336,15 @@ children:
 ```
 {% endcode %}
 
+{% columns %}
+{% column %}
 Reordered and resized widgets.
+{% endcolumn %}
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-lOHCs3J3hVLX7vdEqFKFU-20250307-084254.png" size="60" position="center" caption="Reordered widget" alt="Reordered widget"}&#x20;
+{% column %}
+<figure><img src="../../.gitbook/assets/WD-order2.PNG" alt="Reordered widget" width="188"><figcaption><p>Reordered widget</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="home.jigx" %}
 ```yaml
@@ -373,9 +401,15 @@ Widget labels are shown under the widget, and are read from the configured `titl
 
 ### Widget badging
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Enhance your widget with a customizable badges for instance showing the number of events this week or the number of new orders. Add the `badge` property to the jig YAML with an expression. :::
+{% columns %}
+{% column %}
+Enhance your widget with a customizable badges for instance showing the number of events this week or the number of new orders. Add the `badge` property to the jig YAML with an expression.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bJX0OSDzDPdPtixYsqCgh\_badging.PNG" size="40" position="center" caption="Widget badge" alt="Widget badge"} ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/wd-badging.png" alt="Widget badge" width="188"><figcaption><p>Widget badge</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="calendar-jig" %}

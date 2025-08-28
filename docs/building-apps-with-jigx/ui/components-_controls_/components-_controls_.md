@@ -2,7 +2,7 @@
 
 Jigx comprises of UI elements known as components, which are an essential part of the app. These components can be in the form of images, avatars, forms, lists, progress bars, charts, and more. They are modular, customizable, and reusable, which ensures consistency and ease of use across the app. These components have predefined behaviors but can be customized to suit your specific requirements. Utilizing these components allows you to create visually appealing and interactive screens that enhance the overall user experience.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s1GDSrLC9kJ9N1FmhgN6q\_componentoverview.png" size="82" position="center" caption="Components" alt="Components" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/s1GDSrLC9kJ9N1FmhgN6q\_componentoverview.png" width="800" height="445" darkWidth="800" darkHeight="445"}
+<figure><img src="../../../.gitbook/assets/ComponentOverview.png" alt="Components"><figcaption><p>Components</p></figcaption></figure>
 
 ## Considerations
 
@@ -98,13 +98,19 @@ children:
 ```
 {% endcode %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Each components YAML loads with the core required properties. Use IntelliSense under each components `options:` property to discover additional optional properties. These properties usually help with **styling**, **postioning** and **size**. :::
+{% columns %}
+{% column %}
+Each components YAML loads with the core required properties. Use IntelliSense under each components `options:` property to discover additional optional properties. These properties usually help with **styling**, **postioning** and **size**.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qjyoHnYWmeQMpjfAonABr\_cc-options.png" size="72" position="center" caption="Optional properties" alt="Optional properties" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qjyoHnYWmeQMpjfAonABr\_cc-options.png" width="800" height="731" darkWidth="800" darkHeight="731"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/CC-options.png" alt="Optional properties" width="280"><figcaption><p>Optional properties</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## How to add a UI component
 
-![Adding components](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/kN_gZ2A0gxdTYu8sLRolM_cc-addingcomponent.gif)
+<figure><img src="../../../.gitbook/assets/CC-addingComponent.gif" alt="Adding components"><figcaption><p>Adding components</p></figcaption></figure>
 
 1. Open or create a solution in Jigx Builder.
 2. Open the jig type where the component must be configured. The default YAML structure of the jig prepopulates.

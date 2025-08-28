@@ -2,9 +2,9 @@
 
 Notifications are a powerful way to grab your user's attention. With Jigx, notifications appear on the user's device as push and in-app notifications.
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7\_notifications1iphone13blueportrait.png" size="80" position="center" caption="Push Notification" alt="Push Notification" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/44kSTuUWDuivuQYFdUSv7\_notifications1iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"} :::
+<figure><img src="../../.gitbook/assets/notofications.png" alt="" width="375"><figcaption></figcaption></figure>
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO\_notifications2iphone13blueportrait.png" size="80" position="center" caption="In-App Notification" alt="In-App Notification" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/iUQXbUvP9YmxBAMa7BHlO\_notifications2iphone13blueportrait.png" width="800" height="1494" darkWidth="800" darkHeight="1494"} ::: ::::
+
 
 There are three different ways to create notifications:
 

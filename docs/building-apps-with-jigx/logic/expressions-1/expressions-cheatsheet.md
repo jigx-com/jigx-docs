@@ -89,9 +89,11 @@ placeholders:
 
 ### Splitting display name into first and last name (String expression)
 
+{% code overflow="wrap" %}
 ```yaml
 =$substring($substringBefore(@ctx.inputs.info.FromUserDisplayName, ' '), 0, 1)
 ```
+{% endcode %}
 
 ### Show text and split name and surname and only displaying name (String expression)
 
@@ -231,11 +233,13 @@ $.{"message": {"subject": subject,"body": {"contentType": "Text","content":
 
 ### Transform longitude and latitude data to show markers on a location component
 
+{% code overflow="wrap" %}
 ```yaml
 markers:
    data: |
         =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
 ```
+{% endcode %}
 
 ### Find the value relative to the current node so all paths are relative to it
 
@@ -261,9 +265,11 @@ Jigx converts `@ctx.` to `$$.` when executing expressions in jsonata
 
 To update multiple records using the [Execute-entities](https://docs.jigx.com/examples/execute-entities) action, you can use the expression below.
 
+{% code overflow="wrap" %}
 ```yaml
 data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |  
 ```
+{% endcode %}
 
 ### Validate text fields using JSONata + Regex expression
 

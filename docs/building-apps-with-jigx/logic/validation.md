@@ -8,9 +8,7 @@ In Jigx you combine a [JSONata expression](expressions.md) with a [Regex express
 
 ## Creating the validation expression:
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Valid email address](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/NP-TE2sDghjEcBbxXZURF_email-valid.PNG) :::
-
-:::VerticalSplitItem ![Invalid email address](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/47lx4W1RTiP8bQd4wCB_u_email-invalid.PNG) ::: ::::
+<figure><img src="../../.gitbook/assets/regex-textfield.png" alt=""><figcaption></figcaption></figure>
 
 1. JSONata expression - `=@ctx.components.email.state.value`
 2. Regex expression - `/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/`

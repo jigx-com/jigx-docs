@@ -6,18 +6,22 @@
 
 Existing solutions will continue to function in the mobile app as before. The navigation menu at the bottom of the app will now display as a bar and includes the profile icon that has been moved from the top right-hand corner into the navigation bar. In Jigx Builder, deprecated or changed YAML properties are highlighted with a red squiggle. Before making changes, carefully review the **affected areas** and the **migration steps** outlined below. Plan your updates thoroughly, as multiple files may be impacted and require updates or code relocation to new files.
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" size="60" position="center" caption="Existing solutions before update" alt="Existing solutions before updatesting Solutions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-OvOQIgZAvCxcVq4vXFSp6-20241206-142101.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} :::
-
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" size="60" position="center" caption="Existing solutions after update" alt="Existing solutions after update" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-2Pkaf7KdAuYIlsSwwgqHa-20241206-142117.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
+<figure><img src="../../.gitbook/assets/migration.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### New solutions
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem New solutions now offer greater versatility.
+{% columns %}
+{% column %}
+New solutions now offer greater versatility.
 
 1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/jiggrid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
-2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking. :::
+2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" size="60" position="center" caption="New solution layout " alt="New solution layout" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-hjybhSon5vYuP5IXwXQrR-20241206-142830.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
+{% column %}
+<figure><img src="../../.gitbook/assets/JJ-grid-list.png" alt="New solution layout" width="188"><figcaption><p>New solution layout</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Affected areas
 

@@ -194,7 +194,7 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 
 ### How does it work?
 
-![JavaScript functions](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-qPGps_FEg_j8bYY9gcbaP-20240930-074153.gif)
+<figure><img src="../../.gitbook/assets/exp-javascript.gif" alt="avaScript functions"><figcaption><p>avaScript functions</p></figcaption></figure>
 
 **Create the JavaScript function**
 

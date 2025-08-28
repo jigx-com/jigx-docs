@@ -15,7 +15,7 @@ Many components have a set of templates to choose from. Follow the steps below t
 
 1. Open the **jig** file where you want to add a component. Components normally are added under a `children` node in the YAML. Locate the correct node position in the YAML editor and press the **ctrl+space** keys. The Jigx IntelliSense popup listing the available components opens.
 
-![Component template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/O237mbgFczj2DGgMk7tRF_templatescompcode.png)
+<figure><img src="../../../.gitbook/assets/TemplatesCompCode.png" alt="Component template option"><figcaption><p>Component template option</p></figcaption></figure>
 
 1. Scroll to the bottom and select **Use template**. The templates gallery opens providing the templates for various components. Use the `Search` and `category` fields to find the template you want to use or browse the gallery by scrolling through the options.
 2. Once you have chosen a template, hover over the template and click the blue **insert** button.

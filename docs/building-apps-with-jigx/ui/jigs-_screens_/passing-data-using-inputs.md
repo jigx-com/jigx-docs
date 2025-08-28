@@ -4,7 +4,7 @@ Often, you need to transfer or pass data between jigs to provide context and dat
 
 ## Inputs
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" size="50" position="center" caption="Passing data using inputs" alt="Passing data using inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-G14iv57uCn5sJjTkM10Ub-20240730-091942.png" width="800" height="1026" darkWidth="800" darkHeight="1026"}
+<figure><img src="../../../.gitbook/assets/JB-inputs.png" alt="Passing data using inputs" width="325"><figcaption><p>Passing data using inputs</p></figcaption></figure>
 
 The input data is configured in one of the following:
 
@@ -23,21 +23,33 @@ You can define the following for inputs:
 
 ### YAML code for index.jigx to jig
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Index.jigx:** In the index.jigx file configure the input under the widget configuration for the jig. Configure the data you want to pass to that jig. Example: `size: "1x1"` `jigId: application-form` `inputs:` `name: =@ctx.user.displayName` :::
+{% columns %}
+{% column %}
+**Index.jigx:** In the index.jigx file configure the input under the widget configuration for the jig. Configure the data you want to pass to that jig. Example: \
+`size: "1x1"` `jigId: application-form` `inputs:` `name: =@ctx.user.displayName`
+{% endcolumn %}
 
-:::VerticalSplitItem **Input:** In the receiving jig configure the input type and specify the data in the field or data property using an expression.
+{% column %}
+**Input:** In the receiving jig configure the input type and specify the data in the field or data property using an expression.
 
-Example of the _input type_: `inputs: name: default: Placeholder type: string required: true`
+Example of the _input type_:\
+&#x20;`inputs: name: default: Placeholder type: string required: true`
 
 Example of an _input expression_: `title: =@ctx.jig.inputs.name`&#x20;
-
-
+{% endcolumn %}
+{% endcolumns %}
 
 ### YAML code for jig to jig
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Parameter:** In the jig containing the data you want to transfer, and configure the various parameters to be passed. Example: `parameters: packageDate: =@ctx.current.item.date` `packageName: =@ctx.current.item.name` :::
+{% columns fullWidth="true" %}
+{% column %}
+**Parameter:** In the jig containing the data you want to transfer, and configure the various parameters to be passed. Example: `parameters: packageDate: =@ctx.current.item.date` `packageName: =@ctx.current.item.name`
+{% endcolumn %}
 
-:::VerticalSplitItem **Input:** In the receiving jig configure the component to receive the data from the parameter. Example: `title: =@ctx.jig.inputs.packageName` ::: :::: :::::
+{% column %}
+**Input:** In the receiving jig configure the component to receive the data from the parameter. Example: `title: =@ctx.jig.inputs.packageName`
+{% endcolumn %}
+{% endcolumns %}
 
 ## Considerations
 
@@ -55,9 +67,15 @@ Example of an _input expression_: `title: =@ctx.jig.inputs.name`&#x20;
 
 ### Passing data directly from index.jigx to a jig
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Jig input definitions are configured directly in the jig and the input values are defined in the index.jigx file. The values from the index file are directly returned to the jig. :::
+{% columns %}
+{% column %}
+Jig input definitions are configured directly in the jig and the input values are defined in the index.jigx file. The values from the index file are directly returned to the jig.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s\_inputsdefinition.PNG" size="88" position="center" caption="Input definitions" alt="Input definitions" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/0jTAXb6d8XmPInsrVw87s\_inputsdefinition.PNG" width="800" height="1596" darkWidth="800" darkHeight="1596"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/inputsdefinition.PNG" alt="Input definitions" width="188"><figcaption><p>Input definitions</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="jig-inputs-direct.jigx" %}
@@ -219,7 +237,7 @@ widgets:
 
 Jig input definitions are configured directly in the jig and the input values returned from components configured in another jig. In the example below a form captures the student details, the _Student Details_ form links to the _Student Card_ jig and uses parameters to pass the values required in the _Student Card_ inputs.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26\_CwRD8Y7MD\_092ze\_1K\_inputscard.PNG" size="70" position="center" caption="Dynamic input" alt="Dynamic input" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/26\_CwRD8Y7MD\_092ze\_1K\_inputscard.PNG" width="800" height="787" darkWidth="800" darkHeight="787"}
+<figure><img src="../../../.gitbook/assets/InputsCard.PNG" alt="Dynamic input" width="375"><figcaption><p>Dynamic input</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="input-student-card.jigx" %}
@@ -420,13 +438,19 @@ actions:
 
 In this example, the **sending** jig list called _Island Holiday Packages_ is configured with `parameters` for the package date, price, and time. When tapping on a specific package, the parameters are sent to the **receiving** jig that uses the `inputs` in the `title` property to show the selected package, the date is used in the `expiresAt` property for the countdown component that counts down to the date, and the price is used in the action `title` displayed on the buy package button at the bottom of the screen.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j\_IavddFgHXJg\_inputex1.png" size="58" position="center" caption="Sending and receiving jig" alt="Sending and receiving jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/gvf-nua3j\_IavddFgHXJg\_inputex1.png" width="800" height="805" darkWidth="800" darkHeight="805"}
+<figure><img src="../../../.gitbook/assets/inputEx1.png" alt="Sending and receiving jig" width="375"><figcaption><p>Sending and receiving jig</p></figcaption></figure>
 
 **Sending Jig**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd\_inputsend.png" size="64" position="center" caption="Sending jig with parameters" alt="Sending jig with parameters" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/SW5CK3E82Zy0G78Ysw7Qd\_inputsend.png" width="800" height="1616" darkWidth="800" darkHeight="1616"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/inputSend.png" alt="Sending jig with parameters" width="188"><figcaption><p>Sending jig with parameters</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem Create a `jig.list` with `list.items` for the name, description of the holiday package and add a `rightElement: button` for the date with an `onPress` action. Then add parameters: `packageName`, `packageDate`, and `packagePrice`. Add an expression for each similiar to `=@ctx.current.item.date` ::: ::::
+{% column %}
+Create a `jig.list` with `list.items` for the name, description of the holiday package and add a `rightElement: button` for the date with an `onPress` action. Then add parameters: `packageName`, `packageDate`, and `packagePrice`. Add an expression for each similar to `=@ctx.current.item.date`&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="Holiday-packages.jigx" %}
 ```yaml
@@ -491,9 +515,15 @@ item:
 
 **Receiving Jig**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Create a `jig.default` for the receiving jig. In the `title:` property configure the input using =`@ctx.jig.inputs.packageName`, in the `component.countdown: expiresAt` property add the input expression `=@ctx.jig.inputs.packageDate` and in the `action-confirm: title` property add the input expression `=@ctx.jig.inputs.packagePrice & " - BUY"`. :::
+{% columns %}
+{% column width="58.333333333333336%" %}
+Create a `jig.default` for the receiving jig. In the `title:` property configure the input using =`@ctx.jig.inputs.packageName`, in the `component.countdown: expiresAt` property add the input expression `=@ctx.jig.inputs.packageDate` and in the `action-confirm: title` property add the input expression `=@ctx.jig.inputs.packagePrice & " - BUY"`.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq\_inputrec.png" size="64" position="center" caption="Input- receiving jig" alt="Input- receiving jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/K2IFFPXPBK4xNsBUHJitq\_inputrec.png" width="800" height="1583" darkWidth="800" darkHeight="1583"} ::: ::::
+{% column width="41.666666666666664%" %}
+<figure><img src="../../../.gitbook/assets/inputRec.png" alt="Input- receiving jig" width="188"><figcaption><p>Input- receiving jig</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="selected-package.jigx" %}
 ```yaml
@@ -543,7 +573,7 @@ In this example, three jigs contain various information for all customers, namel
 
 When you click on a customer in the list (1) shown on the left screen below, a new jig opens combining the details from contact (2) and orders (3) into one screen (composite jig), shown on the right screen below and filters the data to show the selected customer's details. The composite jig is called _customer-overview.jigx_.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF\_inputcompex.png" size="60" position="center" caption="Send and receiving jigs" alt="Send and receiving jigs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/bH9ftLRMiw6zpPtfFMRsF\_inputcompex.png" width="800" height="795" darkWidth="800" darkHeight="795"}
+<figure><img src="../../../.gitbook/assets/InputCompEx.png" alt="Send and receiving jigs" width="375"><figcaption><p>Send and receiving jigs</p></figcaption></figure>
 
 To achieve this configure the following:
 
@@ -553,9 +583,15 @@ To achieve this configure the following:
 
 **Sending Jig**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ\_custlist.png" size="64" position="center" caption="Sending Jig with paramaters" alt="Sending Jig with paramaters" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/opBbbMDRrtoVlQ4joaAWJ\_custlist.png" width="800" height="1560" darkWidth="800" darkHeight="1560"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/custlist.png" alt="Sending Jig with paramaters" width="188"><figcaption><p>Sending Jig with parameters</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem Create a list jig called _customer-list.jigx_, use the datasource to list customer names and ids. Add `parameters` for the `customerName` and `customerId`. ::: ::::
+{% column %}
+Create a list jig called _customer-list.jigx_, use the datasource to list customer names and ids. Add `parameters` for the `customerName` and `customerId`.&#x20;
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="customer-list.jigx" %}
 ```yaml
@@ -714,9 +750,15 @@ item:
 
 **Receiving jig (composite)**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf\_custcomp.png" size="64" position="center" caption="Receiving composite Jig" alt="Receiving composite Jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4oZdpEDCgu-uoV8U7Vprf\_custcomp.png" width="800" height="1570" darkWidth="800" darkHeight="1570"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/custComp.png" alt="Receiving composite Jig" width="188"><figcaption><p>Receiving composite Jig</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem The receiving jig is a composite jig with two children _(customer-contacts_ and _customer-orders_). In this example, we pass the `inputs` (_customerId_ and _customerName_) to the children. The children can then access all `parameters` and render only the selected customers contact and order details. ::: ::::
+{% column %}
+The receiving jig is a composite jig with two children _(customer-contacts_ and _customer-orders_). In this example, we pass the `inputs` (_customerId_ and _customerName_) to the children. The children can then access all `parameters` and render only the selected customers contact and order details.
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="customer-overview.jigx" %}
 ```yaml

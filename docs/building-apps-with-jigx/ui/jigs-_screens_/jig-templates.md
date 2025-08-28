@@ -19,7 +19,7 @@ Using templates has many benefits, such as:
 While templates offer numerous benefits, it's important to remember that they may not always meet your requirements. Customization is still necessary, and templates should be used as a starting point rather than a complete solution.
 {% endhint %}
 
-![Jig template](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/X_s4ibsAS55I6mPhDPISi_templatejig.png)
+<figure><img src="../../../.gitbook/assets/templatejig.png" alt="Jig template"><figcaption><p>Jig template</p></figcaption></figure>
 
 ### Using jig templates
 
@@ -33,14 +33,14 @@ Each jig type has a set of templates to choose from. Follow the steps below to s
 
 1. In Explorer in the **jigs** folder, right-click and create a new jig file with the .jigx extension. The Jigx IntelliSense popup displays listing the available jig types and the **Use template** option. Use **ctrl+space to open the jig IntelliSense popup.**
 
-![Jig template option](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GoeoJRsy4pw59kUTSl5Tv_templatesjigcode.png)
+<figure><img src="../../../.gitbook/assets/TemplatesJigCode.png" alt="Jig template option"><figcaption><p>Jig template option</p></figcaption></figure>
 
 1. Click **Use template**. The templates gallery opens providing the templates for all jig types. Use the _Search_ and _Category_ fields to find the template you want or browse the gallery by scrolling through the options.
 2. Once you have chosen a template, hover over the template, there are two options:
 
 **1. Insert**
 
-![Template Insert jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/G9FpoCJ94Zfim3LcYjnZd_t-insert.gif)
+<figure><img src="../../../.gitbook/assets/T-insert.gif" alt="Template Insert jig"><figcaption><p>Template Insert jig</p></figcaption></figure>
 
 1. Click the blue **Insert** button. The selected template YAML will be inserted into your jig file.
 2. Check the YAML code for comments that specify additional steps you must take on the template, such as _#Create new table invoices in databases/default.jigx_. Here you will manually need to add the table to the `default.jigx` file under the database folder.
@@ -50,7 +50,7 @@ Each jig type has a set of templates to choose from. Follow the steps below to s
 
 **2. Configure**
 
-![Template Configure jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/yD3-Ltvoz-MPpTWaSml9v_t-configure.gif)
+<figure><img src="../../../.gitbook/assets/T-configure (1).gif" alt="Template Configure jig"><figcaption><p>Template Configure jig</p></figcaption></figure>
 
 1. Click the blue **Insert** button.
 2. The selected template YAML will be inserted into your jig file.
@@ -63,7 +63,7 @@ Each jig type has a set of templates to choose from. Follow the steps below to s
 
 You can use the scenario templates to create a functioning solution. For example insert the **Content management** scenario template and publish out the solution to the app. The scenario includes four jigs and adds the contacts Dynamic Data table.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RCSQgz3TqyiydLH0ibmBS\_t-scenario.png" size="68" position="center" caption="Scenario templates" alt="Scenario templates"}
+<figure><img src="../../../.gitbook/assets/T-scenario.png" alt="Scenario templates" width="375"><figcaption><p>Scenario templates</p></figcaption></figure>
 
 #### See Also
 

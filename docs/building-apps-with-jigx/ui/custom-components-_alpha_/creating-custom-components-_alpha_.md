@@ -13,7 +13,7 @@ This feature is currently in its **Alpha** stage of development.
 
 In a Jigx project all custom components are created in the **components** folder with the .jigx extension, for example, custom-card.jigx. You can create subfolders inside the component folder if required. Ensure you use a unique naming convention for each file in each folder. If files have the same name Jigx Builder uses the first file found in the components folder with that name and shows it in the IntelliSense code snippet in a jig file. If you have a components folder under jigs or elsewhere in your project, Jigx Builder sees it as components and validates the jigs against the rules of components.
 
-![Component folder](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-_OYOwk6ShiIrcLFqDCZu9-20241119-124255.png)
+<figure><img src="../../../.gitbook/assets/BuilderFolder.png" alt="Component folder"><figcaption><p>Component folder</p></figcaption></figure>
 
 ## File structure
 
@@ -25,11 +25,11 @@ Under `children:` you add the components you want to customize. Invoke **Intelli
 
 Between `options:` and `children:` you can add predefined styling elements depending on the component selected. The components that allow customization are [Card (Alpha)](https://docs.jigx.com/examples/card-alpha), [View (Alpha)](https://docs.jigx.com/examples/view-alpha), [Text (Alpha)](https://docs.jigx.com/examples/text-alpha), [Icon (Alpha)](https://docs.jigx.com/examples/icon-alpha), and [Button (Alpha)](https://docs.jigx.com/examples/button-alpha). Use **IntelliSense** to view the available list.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir\_ivxOTBKYr-20241119-125848.png" size="70" position="center" caption="Card Styling options" alt="Card Styling options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BF0bEODcMir\_ivxOTBKYr-20241119-125848.png" width="800" height="387" darkWidth="800" darkHeight="387"}
+<figure><img src="../../../.gitbook/assets/CC-Builderoptions.png" alt="Card Styling options" width="563"><figcaption><p>Card Styling options</p></figcaption></figure>
 
 For `component.view` the `options:` followed by `style:` are required before `children:`. All available styling elements are listed under the `style:` property using **IntelliSense**.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo\_Z-20241119-130031.png" size="70" position="center" caption="View styling options" alt="View styling options" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-BH9QaJGo-D-ZEw-iQIo\_Z-20241119-130031.png" width="800" height="547" darkWidth="800" darkHeight="547"}
+<figure><img src="../../../.gitbook/assets/CC-BuilderViewOptions.png" alt="View styling options" width="563"><figcaption><p>View styling options</p></figcaption></figure>
 
 ## Using custom component files in jigs
 

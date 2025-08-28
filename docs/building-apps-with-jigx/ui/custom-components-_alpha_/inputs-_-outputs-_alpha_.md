@@ -17,9 +17,15 @@ Define `inputs` in the custom component, then in the jig using the custom compon
 
 ### Examples and code snippets
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem In this example, we create a tab component using the `view` and `text` custom components. By leveraging inputs, the tab component can be reused within the same jig. The first tab component is center-aligned with four tabs, while the second is left-aligned with three tabs. Tab names for each component are dynamically set using the `tabName` input. :::
+{% columns %}
+{% column %}
+In this example, we create a tab component using the `view` and `text` custom components. By leveraging inputs, the tab component can be reused within the same jig. The first tab component is center-aligned with four tabs, while the second is left-aligned with three tabs. Tab names for each component are dynamically set using the `tabName` input.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-vgBlOVBWz2M6muoG9AR7S-20241121-074013.png" size="70" position="center" caption="Tabs using inputs" alt="Tabs using inputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-vgBlOVBWz2M6muoG9AR7S-20241121-074013.png" width="800" height="1612" darkWidth="800" darkHeight="1612"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/CC-inputTabs.png" alt="Tabs using inputs" width="188"><figcaption><p>Tabs using inputs</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 For more examples using inputs, see the following:
 
@@ -444,9 +450,15 @@ children:
 
 ### Examples and code snippets
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem In this simple example, the custom component is configured with a `form` in a `card` component. An `output` property is added to the custom component. This allows for the data entered into the custom component's `form` on the jig to be transferred to the `title` property of the `image` component on the jig. :::
+{% columns %}
+{% column %}
+In this simple example, the custom component is configured with a `form` in a `card` component. An `output` property is added to the custom component. This allows for the data entered into the custom component's `form` on the jig to be transferred to the `title` property of the `image` component on the jig.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" size="56" position="center" caption="Output data to image label" alt="Output data to image label" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-pfCa1E190iHeoJJ2auptm-20241118-135414.gif" width="714" height="1438" darkWidth="714" darkHeight="1438"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/CC-output-example.gif" alt="Output data to image label" width="179"><figcaption><p>Output data to image label</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="custom-component" %}

@@ -13,7 +13,7 @@ The assets, which consist of icons and images, preload and cache when the soluti
 * When you add icons to any jig files, Jigx Builder automatically creates an icons.jigx file under the assets folder and lists all the icons in the file.
 * For images referenced in jig files, Jigx Builder automatically creates an image.jigx file under the assets folder, and the image `headers` are automatically added to this file.
 
-![Assets folder](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wd5MwJZ2YO9sZYcoGA8-W_assets.png)
+<figure><img src="../../.gitbook/assets/Assets.png" alt="Assets folder"><figcaption><p>Assets folder</p></figcaption></figure>
 
 ### Icon assets in solutions
 

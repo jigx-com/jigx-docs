@@ -223,7 +223,7 @@ Often, the actions called during `onRefresh`, `onLoad`, and `onFocus` are exactl
 * These global actions can be called from mutiple areas, not just lifecycle events like `onFocus`.
 * By using the `action.execute-action` provides greater control that enables this reuse when the same actions need to be performed in multiple places. For example, `action.sync-entities` might be called during app initialization, again when data changes, or when only a specific subset of data needs to be synced. By using `execute-action`, you can easily reuse the granular actions that handle the actual work, reducing duplication and improving maintainability.
 
-![Global actions](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/9dfS44d8ZVEbfdqaNjlqs_a-global-action.png)
+<figure><img src="../../.gitbook/assets/A-global-action.png" alt="Global actions"><figcaption><p>Global actions</p></figcaption></figure>
 
 ### Configure global actions
 

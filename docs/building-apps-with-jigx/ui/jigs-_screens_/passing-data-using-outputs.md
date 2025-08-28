@@ -4,7 +4,7 @@ Often, you need to transfer or pass data between jigs to provide context and dat
 
 ## Outputs
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb\_jig-output.gif" size="74" position="center" caption="Output and inputs " alt="Output and inputs " signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/a02HRAizeiq2PTPJL8pWb\_jig-output.gif" width="356" height="308" darkWidth="356" darkHeight="308"}
+<figure><img src="../../../.gitbook/assets/jig-output.gif" alt="Output and inputs"><figcaption><p>Output and inputs</p></figcaption></figure>
 
 Outputs are configured in a jig and are then used as an input in a composite jig to pass data between the jigs in the composite jig. This configuration is suitable for creating master detail screens, clicking on a component in one jig, populates the components and data in the next screen. Passing data values between jigs works both ways.
 
@@ -20,27 +20,50 @@ Outputs are configured in a jig and are then used as an input in a composite jig
 
 The `output` and `input` work in conjunction with each other.
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem **Output:** In the jig containing the data you want to transfer, configure the output-key. Example:
+{% columns %}
+{% column %}
+**Output:** In the jig containing the data you want to transfer, configure the output-key. \
+Example:
 
-`outputs: output-key: =@ctx.solution.state.servicesId` :::
+{% code overflow="wrap" %}
+```yaml
+outputs: output-key: =@ctx.solution.state.servicesId
+```
+{% endcode %}
+{% endcolumn %}
 
-:::VerticalSplitItem **Input:** In the receiving [jig.composite](https://docs.jigx.com/examples/jigcomposite) configure the input for the data. Example:
+{% column %}
+**Input:** In the receiving [jig.composite](https://docs.jigx.com/examples/jigcomposite) configure the input for the data. \
+\
+Example:
 
-`inputs: id: =@ctx.solution.state.servicesId` ::: ::::
+{% code overflow="wrap" %}
+```yaml
+inputs: id: =@ctx.solution.state.servicesId
+```
+{% endcode %}
+{% endcolumn %}
+{% endcolumns %}
 
 ## Examples
 
 ### Passing data via outputs to connect two jigs data in a composite jig
 
-In this example, cleaning services are listed, initally the service details are blank showing a placeholder. Once the service is selected from the List of available services, the service details for that specific service populates.
+In this example, cleaning services are listed, initially the service details are blank showing a placeholder. Once the service is selected from the List of available services, the service details for that specific service populates.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" size="36" position="center" caption="Passing data using outputs" alt="Passing data using outputs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-C2MXxfy5JFjX9D3vB5FwQ-20240731-081529.gif" width="648" height="1300" darkWidth="648" darkHeight="1300"}
+<figure><img src="../../../.gitbook/assets/jb-outputs.gif" alt="Passing data using outputs" width="162"><figcaption><p>Passing data using outputs</p></figcaption></figure>
 
 **Output Jig - available services**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Create a horizontal `jig.list` to show the available services with a `leftElement` for the image and `rightElement` for the text values. Add the `output:` `output-key` property and use the jig state for the active item `=@ctx.solution.state.servicesId` :::
+{% columns %}
+{% column %}
+Create a horizontal `jig.list` to show the available services with a `leftElement` for the image and `rightElement` for the text values. Add the `output:` `output-key` property and use the jig state for the active item `=@ctx.solution.state.servicesId`
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx\_outputjig.PNG" size="64" position="center" caption="Available services list" alt="Available services list" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/5BYGSb1EHWYGH1AxlHGKx\_outputjig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/outputjig.PNG" alt="Available services list" width="188"><figcaption><p>Available services list</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="cleaning-serv-horizon-list-dd.jigx" %}
@@ -131,9 +154,21 @@ options:
 
 **Jig - service details**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo\_input-jig.PNG" size="64" position="center" caption="Service detail jig" alt="Service detail jig" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/7Av4cuMt8ZFSae57xL9Mo\_input-jig.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/input-jig.png" alt="Service detail jig" width="188"><figcaption><p>Service detail jig</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem Create a default jig with `component.entity` to display the various details such as service name, time, and cost. Define the datasource and configure a `queryParameters:` `servId: =@ctx.solution.state.servicesId` ::: ::::
+{% column %}
+Create a default jig with `component.entity` to display the various details such as service name, time, and cost. Define the datasource and configure a&#x20;
+
+{% code overflow="wrap" %}
+```yaml
+queryParameters: servId: =@ctx.solution.state.servicesId
+```
+{% endcode %}
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="service-details.jigx" %}
 ```yaml
@@ -228,9 +263,15 @@ children:
 
 **Composite jig - combining output with input**
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Create a `jig.composite` and add the `jigIds` for both jigs above. Give the jig configured with the output an `instanceId` and the jig that receives the output an `input` property. :::
+{% columns %}
+{% column %}
+Create a `jig.composite` and add the `jigIds` for both jigs above. Give the jig configured with the output an `instanceId` and the jig that receives the output an `input` property.
+{% endcolumn %}
 
-:::VerticalSplitItem ![composite jig](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/quY4iBb6PDDYEA4BKFqD3_compositej.PNG) ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/compositeJ.PNG" alt=""><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% hint style="info" %}
 You have to provide an `instanceId` for the jig that is exposing an output in order to access the output via state from another jig.

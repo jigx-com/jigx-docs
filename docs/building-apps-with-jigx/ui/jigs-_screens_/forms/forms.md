@@ -1,14 +1,20 @@
 # Forms
 
-:::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{alt="Form" src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_B209h4pNhxbCGth1pKtj\_forms.PNG" size="60" caption="Form" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/\_B209h4pNhxbCGth1pKtj\_forms.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../../.gitbook/assets/forms.PNG" alt="" width="188"><figcaption></figcaption></figure>
+{% endcolumn %}
 
-::::VerticalSplitItem In this guide, you will learn how to create forms with Jigx. Forms are mainly used to collect and update data for various data sources.
+{% column %}
+In this guide, you will learn how to create forms with Jigx. Forms are mainly used to collect and update data for various data sources.
 
 We will use Dynamic Data to store the data. If you want to learn more about Dynamic Data and its capabilities, check out this guide: [Dynamic Data](../../../data/data-providers/dynamic-data/dynamic-data.md)
 
 {% hint style="success" %}
 As we will use Dynamic Data for storing the data in this guide, please read the section below about _Defining a Dynamic Data table_ before proceeding to the next part.
 {% endhint %}
+{% endcolumn %}
+{% endcolumns %}
 
 ## Defining a Dynamic Data table
 

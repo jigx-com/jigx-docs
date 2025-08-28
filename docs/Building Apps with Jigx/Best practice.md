@@ -13,7 +13,7 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 **Design Pattern:** Singletons
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-S\_MP9oBcex53yT9JezU9t-20240911-134725.gif" size="60" position="center" caption}
+<figure><img src="../.gitbook/assets/best-practice.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Setup:
 
@@ -77,7 +77,7 @@ State resources and code samples:
 
 **Design Pattern**: Mediator
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ecGae4Ri9XtX6vah4PaB\_-20240912-074706.gif" size="60" position="center"}
+<figure><img src="../.gitbook/assets/design-pattern-Mediator.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Setup:
 
@@ -165,7 +165,7 @@ Input resources and code samples:
 
 **Design Pattern**: Observer
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-J2wSHx9xzGdeEuV5uLHvg-20240912-192654.gif" size="60" position="center"}
+<figure><img src="../.gitbook/assets/design-pattern-observer.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Setup:
 
