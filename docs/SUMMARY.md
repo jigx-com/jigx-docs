@@ -6,6 +6,7 @@
   * [Install the Jigx Builder](getting-started/install-the-jigx-builder.md)
   * [Use templates to create apps](getting-started/use-templates-to-create-apps.md)
   * [Create an app from scratch](getting-started/create-an-app-from-scratch/create-an-app-from-scratch.md)
+    * [Create the Hello Jigx Solution project](getting-started/create-an-app-from-scratch/create-the-hello-jigx-solution-project.md)
     * [Create the Map](getting-started/create-an-app-from-scratch/create-the-map-1.md)
       * [Adding the Map Jig](getting-started/create-an-app-from-scratch/create-the-map/adding-the-map-jig.md)
       * [Publish the project](getting-started/create-an-app-from-scratch/create-the-map/publish-the-project.md)
