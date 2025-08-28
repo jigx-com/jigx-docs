@@ -24,4 +24,4 @@ With the Hello Jigx project published to the Cloud, you are ready to use the sol
 {% endcolumn %}
 {% endcolumns %}
 
-**Congratulations** you added a second widget to the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution](https://docs.jigx.com/create-an-app-from-scratch).
+**Congratulations** you added a second widget to the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution](create-the-hello-jigx-solution-project.md).

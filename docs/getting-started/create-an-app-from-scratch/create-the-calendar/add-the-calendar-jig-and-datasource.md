@@ -1,7 +1,5 @@
 # Add the calendar jig and datasource
 
-## Add the calendar jig and datasource
-
 ## Overview
 
 In this section, you will learn how to add a second jig file to the Hello Jigx project and add the calendar jig next to the map jig on the [home hub](../../../building-apps-with-jigx/ui/home-hub/home-hub.md). You create a data source file in the datasource folder containing the calendar details that provide the data for the week, events, meeting subjects, dates, and times.

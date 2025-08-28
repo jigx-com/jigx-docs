@@ -1,7 +1,5 @@
 # Publish the project
 
-## Publish the project
-
 ## Overview
 
 With the Hello Jigx project created, and the jig added you are ready to publish your solution to the Jigx Cloud.
@@ -27,5 +25,5 @@ When you build and publish a solution you automatically become the owner of the 
 
 ### See Also
 
-* [Jigx overview](https://docs.jigx.com/architecture)
-* [Jigx Concepts](https://docs.jigx.com/jigx-concepts)
+* [Jigx overview](<../../../Understanding the basics/Architecture.md>)
+* [Jigx Concepts](<../../../Understanding the basics/Jigx Concepts.md>)

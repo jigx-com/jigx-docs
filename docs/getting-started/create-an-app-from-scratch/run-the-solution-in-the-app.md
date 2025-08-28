@@ -30,9 +30,9 @@ With the Hello Jigx solution published to the Cloud, you are ready to use the so
 As you build and publish more solutions to your Jigx mobile app, you can toggle between the solutions by clicking on the home icon, and selecting the solution you want to use. The number badge on the home icon shows how many solutions are available to you.
 {% endhint %}
 
-**Congratulations** you have built, published, and used the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution](https://docs.jigx.com/run-the-solution-in-the-app).
+**Congratulations** you have built, published, and used the Hello Jigx solution. Why not try building the next step in the [Build your first Jigx solution](create-the-calendar/create-the-calendar.md).
 
 ## See Also
 
-* [Jigx overview](docId:BrcaJaBz2U-kT_VaaWOrj)
-* [Jigx Concepts](docId:onEMnBqUmgBn6N4kaRYTs)
+* [Jigx overview](<../../Understanding the basics/Architecture.md>)
+* [Jigx Concepts](<../../Understanding the basics/Jigx Concepts.md>)

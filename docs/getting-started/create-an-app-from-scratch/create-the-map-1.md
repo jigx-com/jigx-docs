@@ -17,7 +17,7 @@ We recommend you build out all the solution steps for the [Create an app from sc
 {% column %}
 ## Steps
 
-1. [Create the Hello Jigx project](broken-reference) in the Jigx Builder.
+1. [Create the Hello Jigx project](create-the-hello-jigx-solution-project.md) in the Jigx Builder.
 2. [Add the jig.default](create-the-map/adding-the-map-jig.md) with an icon, and static data source.
 3. [Publish the project](create-the-map/publish-the-project.md).
 4. [Open the Jigx mobile app](run-the-solution-in-the-app.md), click on the location jig, and view the map.
@@ -34,5 +34,5 @@ You can download the [Hello Jigx solution project](https://github.com/jigx-com/j
 
 ## See Also
 
-* [Jigx overview](docId:BrcaJaBz2U-kT_VaaWOrj)
-* [Jigx Concepts](docId:onEMnBqUmgBn6N4kaRYTs)
+* [Jigx Architecture](<../../Understanding the basics/Architecture.md>)
+* [Jigx Concepts](<../../Understanding the basics/Jigx Concepts.md>)

@@ -29,8 +29,6 @@ Registering with a non-work email e.g. Gmail does not check for existing organiz
 2. Alternatively, you can choose to create a new organization by clicking the link, providing a name, and deciding who can see or join your organization based on the email domain.
 3. Next Jigx Management opens on the **Quick Start** screen. Now you are ready to start building, using, and administering Jigx solutions.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S\_register3.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/21fKl539QTVEIi-BQrl-S\_register3.png" size="50" width="1152" height="1230" position="center" caption="Join an organization" alt="Join an organization"}
-
 <figure><img src="../.gitbook/assets/register4.png" alt="Create an organization" width="375"><figcaption><p>Create an organization</p></figcaption></figure>
 
 ## Invitation

@@ -1,7 +1,5 @@
 # Adding the Map Jig
 
-## Adding the Map Jig
-
 ## Overview
 
 In this section, there are two files to edit, namely, `index.jigx` and `myfirstjig.jigx`. In the `index.jigx` file, you configure the bottom navigation tab to display the `myfirstjig.jigx` on the Jigx mobile app [Home Hub](../../../building-apps-with-jigx/ui/home-hub/home-hub.md) screen. In the myfirstjig jigx file, you will specify the default [type](adding-the-map-jig.md) of jig, assign an icon for the jig, and provide a [static datasource](adding-the-map-jig.md) that provides the location on the map.
@@ -108,5 +106,5 @@ tabs:
 
 ### See Also
 
-* [Jigx overview](adding-the-map-jig.md)
-* [Jigx Concepts](adding-the-map-jig.md)
+* [Jigx overview](<../../../Understanding the basics/Architecture.md>)
+* [Jigx Concepts](<../../../Understanding the basics/Jigx Concepts.md>)

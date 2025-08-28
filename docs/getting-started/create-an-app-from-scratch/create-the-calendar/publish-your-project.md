@@ -1,7 +1,5 @@
 # Publish your project
 
-## Publish your project
-
 ## Overview
 
 With the calendar jig added to the Hello Jigx project, you are ready to publish the solution to the Jigx Cloud. If you are the owner of the solution, you do not need your Jigx app credentials again to publish the update.

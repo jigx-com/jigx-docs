@@ -28,5 +28,5 @@ With the Hello-Jigx solution complete, you are ready to publish the final update
 You can use the shortcut keys straight from the file you in:
 
 * Publish all files in Jigx solution on Mac is `⌘R⌘R`, and on Windows is `Alt+R Alt+R`
-* Publishing an individual file on Mac is `⌘R⌘F`, and on Windows is `Alt+R Alt+F` :::
+* Publishing an individual file on Mac is `⌘R⌘F`, and on Windows is `Alt+R Alt+F`&#x20;
 {% endhint %}

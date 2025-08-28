@@ -9,7 +9,8 @@ updatedAt: Wed Feb 12 2025 17:54:39 GMT+0000 (Coordinated Universal Time)
 
 ### What you will create
 
-Create a travel app using one of the provided templates. The template inserts the required YAML in the correct format. Use the template as a base on which to build when creating a jig. If the template by default provides the functionality you need, publish your Jigx project to use the jig on your mobile device. **Build time:** 5 mins
+Create a travel app using one of the provided templates. The template inserts the required YAML in the correct format. Use the template as a base on which to build when creating a jig. If the template by default provides the functionality you need, publish your Jigx project to use the jig on your mobile device. \
+**Build time:** 5 mins
 
 <figure><img src="../.gitbook/assets/GS-TravelTemplate.PNG" alt="" width="375"><figcaption></figcaption></figure>
 

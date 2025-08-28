@@ -1,6 +1,6 @@
 # Combine the solution's elements
 
-In the [Build your first Jigx solution](https://docs.jigx.com/create-an-app-from-scratch) steps, you have already built a map using the [jig.default](https://docs.jigx.com/examples/jigdefault), added a calendar using the [jig.calendar](https://docs.jigx.com/examples/jigcalendar), added a new customer form using the [jig.default](https://docs.jigx.com/examples/jigdefault), and a customer list using [jig.list](https://docs.jigx.com/examples/jiglist).
+In the Build your first Jigx solution steps, you have already built a map using the [jig.default](https://docs.jigx.com/examples/jigdefault), added a calendar using the [jig.calendar](https://docs.jigx.com/examples/jigcalendar), added a new customer form using the [jig.default](https://docs.jigx.com/examples/jigdefault), and a customer list using [jig.list](https://docs.jigx.com/examples/jiglist).
 
 Now you can expand the solution further by using the [jig.composite](https://docs.jigx.com/examples/jigcomposite) type to group the new customer jig and the customer list jig into one jig, and add a jig header to the new customer jig.
 

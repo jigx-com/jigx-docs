@@ -1,7 +1,5 @@
 # Create the Calendar
 
-## Create the Calendar
-
 ## Overview
 
 Learn how to add a second jig to your Hello Jigx project using the _**jig.calendar**_ type with an icon and a [static data source](https://docs.jigx.com/examples/static). At the end of this step-by-step, you have added a calendar jig to the [Home Hub](../../../building-apps-with-jigx/ui/home-hub/home-hub.md) that can display a week, the events, meetings, and the relevant details for each, as shown below.

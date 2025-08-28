@@ -1,7 +1,5 @@
 # Add widgets
 
-## Add widgets
-
 ## Overview
 
 Widgets can be customized in many ways to reflect the styling and functionality you require. Use the widget [image](add-widgets.md), [location](add-widgets.md), [chart](add-widgets.md), and other elements for customizations. In this section, you will learn how to change your map jig with an icon to a `widget.location`, and add a `widget.image` widget to the `composite.jigx` file.
@@ -25,7 +23,7 @@ Widgets can be customized in many ways to reflect the styling and functionality 
 3. Add the `widget.location` code below. For the address you use [expressions](../../../building-apps-with-jigx/logic/expressions.md) to call the city New York from the static datasource.
 
 {% hint style="info" %}
-Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/)]. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
+Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
 {% endhint %}
 
 {% code title="map.jigx" %}

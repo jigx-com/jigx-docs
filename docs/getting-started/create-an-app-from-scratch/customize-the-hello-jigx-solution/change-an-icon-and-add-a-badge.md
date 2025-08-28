@@ -1,13 +1,11 @@
 # Change an icon and add a badge
 
-## Change an icon and add a badge
-
 ## Overview
 
 You can easily customize widgets on the Home Hub by changing their icons and adding additional components such as badges to the widgets. In this section, you learn to change the calendar icon and add a badge [using an expression](../../../building-apps-with-jigx/logic/expressions.md) on the calendar jig to show the number of calendar events for the week.
 
 {% hint style="info" %}
-For a view of the icons in a list see the _Types - List - List with all icons_ in the _jigx-samples solution_ available in :Link\[https://manage.jigx.com/quickstartQuick]{href="https://manage.jigx.com/quickstart" newTab="true" hasDisabledNofollow="false"} start.
+For a view of the icons in a list see the _Types - List - List with all icons_ in the _jigx-samples solution_ available in [https://manage.jigx.com/quickstartQuick ](https://manage.jigx.com/quickstart)start.
 {% endhint %}
 
 {% columns %}
@@ -32,7 +30,7 @@ For a view of the icons in a list see the _Types - List - List with all icons_ i
 1. Under icon add a new line for the badge code that shows the number of calendar events for the week. Add `badge:` Then use the `=$count(@ctx.datasources.calendar-data.id)` [expression](../../../building-apps-with-jigx/logic/expressions.md) to count the events in the calendar and show the number in the badge on the Home Hub.
 
 {% hint style="info" %}
-Expressions are JSONata language-based. Learn more about [https://jsonata.org/](https://jsonata.org/)JSONata and try out your expressions in their [https://try.jsonata.org/](https://try.jsonata.org/)JSONata Exerciser. The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
+Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
 {% endhint %}
 
 {% code title="calendar.jigx" %}
