@@ -14,7 +14,7 @@ To complete these steps, you must be an **Owner or Creator of the solution** in 
 1. Log in to Jigx Management at [https://manage.jigx.com](https://manage.jigx.com/) and open your solution.
 2. In the menu on the left, click on **Credentials**.
 
-![Solution Crenentials](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wYELJKXpYN6O_jDEa1ClY_image.png)
+<figure><img src="../../../../../../.gitbook/assets/Graph-credentialsJM.png" alt="Solution Crenentials"><figcaption><p>Solution Crenentials</p></figcaption></figure>
 
 3. Click **Add Credential** on the top right of the screen.
 4. **Enter a name** for the credential, for example, microsoft.OAuth.
@@ -26,7 +26,7 @@ To complete these steps, you must be an **Owner or Creator of the solution** in 
 10. Add the **scopes** selected when the OAuth application was defined in Azure. Note that scopes are case-sensitive.
 11. To allow a user to **switch accounts** when they are prompted during the OAuth loop, **expand the Options section** and replace the {} with the following: {"additionalParameters": {"prompt": "select\_account"\}}. The **completed configuration** should be as follows:
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/FeMtP0NvdY1s70--W2mnA\_image.png" size="40" position="center" caption="Credentials" alt="Credentials"}
+<figure><img src="../../../../../../.gitbook/assets/Graph-CredConfig.png" alt="Credentials" width="375"><figcaption><p>Credentials</p></figcaption></figure>
 
 12. Click on **Save** to store the credential.
 

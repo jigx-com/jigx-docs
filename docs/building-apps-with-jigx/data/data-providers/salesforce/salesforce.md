@@ -4,9 +4,15 @@ Jigx easily integrates with your Salesforce instance, allowing you to share data
 
 {% embed url="https://vimeo.com/846066533" %}
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](salesforce.md), or [steppers](https://docs.jigx.com/examples/stepper). :::
+{% columns %}
+{% column %}
+The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](salesforce.md), or [steppers](https://docs.jigx.com/examples/stepper).
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O\_salesfdashboard.PNG" size="76" position="center" caption="Salesforce Dashboard" alt="Salesforce Dashboard" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/HVVwC60g4xu-W3wdJBW8O\_salesfdashboard.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+<figure><img src="../../../../.gitbook/assets/SalesFDashboard.PNG" alt="Salesforce Dashboard" width="188"><figcaption><p>Salesforce Dashboard</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## Architecture
 

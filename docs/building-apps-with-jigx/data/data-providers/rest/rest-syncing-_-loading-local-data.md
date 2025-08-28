@@ -1,6 +1,6 @@
 # REST syncing & loading local Data
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N\_vmgLoUWIcd35rlV3OxC-20241119-111156.gif" size="80" position="center" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-N\_vmgLoUWIcd35rlV3OxC-20241119-111156.gif" caption width="1120" height="1616" darkWidth="1120" darkHeight="1616"}
+<figure><img src="../../../../.gitbook/assets/REST-syncLoad1.gif" alt="" width="489"><figcaption></figcaption></figure>
 
 **Key:**
 
@@ -21,12 +21,13 @@
 
 There are two options when using the `execute-entity` and `execute-entities` actions with remote data such as REST.
 
-1.  **To update BOTH the local SQLite table and the remote data store (REST and SQL)**. To update the local table, specify CREATE, UPDATE, or DELETE methods in the `method` property of the data provider, then specify the function to use in the `function` property, and under `parameters` specify the exact data to be updated in the remote REST service. Under `data` specify the exact data to be updated in the local SQLite table.. After execution, a tempId is created, and then it is synced to the local table.
+1. **To update BOTH the local SQLite table and the remote data store (REST and SQL)**. To update the local table, specify CREATE, UPDATE, or DELETE methods in the `method` property of the data provider, then specify the function to use in the `function` property, and under `parameters` specify the exact data to be updated in the remote REST service. Under `data` specify the exact data to be updated in the local SQLite table.. After execution, a tempId is created, and then it is synced to the local table.
 
-    ![Update local and REST providers](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cE8AAHc7mhUv7fJS4z56u-20250804-142244.png)
-2.  **To ONLY update the REST data store**. To update the remote data store specify `functionCall` in the method property. Then specify the function to be called in the `function` property and under `parameters` specify the exact data to be updated. Note that the data will not be visible on the jig until a `sync-entities` action is executed.
+<figure><img src="../../../../.gitbook/assets/SyncLocalRemote.png" alt="Update local and REST providers"><figcaption><p>Update local and REST providers</p></figcaption></figure>
 
-    ![Only update REST Service](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-VncgH7oeM4bADxWiBlFd_-20250804-143743.png)
+1. **To ONLY update the REST data store**. To update the remote data store specify `functionCall` in the method property. Then specify the function to be called in the `function` property and under `parameters` specify the exact data to be updated. Note that the data will not be visible on the jig until a `sync-entities` action is executed.
+
+<figure><img src="../../../../.gitbook/assets/SyncRemote.png" alt="Only update REST Service"><figcaption><p>Only update REST Service</p></figcaption></figure>
 
 ### Consideration
 
@@ -40,7 +41,7 @@ There are two options when using the `execute-entity` and `execute-entities` act
 3. Write a SQLite query to define the exact data required.
 4. Use Intellisence and expressions to reference the specific datasource values to use in each component, such as `data: =@ctx.datasources.customers`
 
-![Local data provider](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/YU-9h42X5xPRI1t_zBBsq_rest-localdatasource.png)
+<figure><img src="../../../../.gitbook/assets/REST-localdatasource.png" alt="Local data provider"><figcaption><p>Local data provider</p></figcaption></figure>
 
 ## Example
 

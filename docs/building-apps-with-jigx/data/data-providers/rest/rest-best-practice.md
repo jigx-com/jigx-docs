@@ -5,9 +5,9 @@
 * When a REST service returns an id, the Jigx local data provider can automatically be synced with this id, eliminating the need to add a `sync-entities` action to the jig.
 * The id property must be added in the `outputTransform` of the REST data provider function.
 * This is useful on a POST (create) as a temp\_id is created in the local data provider for the record when it is created. If the id is in the POST function `outputTransform`, the temp\_id is automatically updated with the REST id once it is created on the REST side.
-*   The below image shows how the local data provider creates a temp\_id when a new customer is added. Then, it is automatically synced with the REST `id` because the `id` is in the function's `outputTransform`.
+* The below image shows how the local data provider creates a temp\_id when a new customer is added. Then, it is automatically synced with the REST `id` because the `id` is in the function's `outputTransform`.
 
-    ![Syncing temp\_Id](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VuOMkHMSZXXZRlH7jloeo_rest-id.png)
+<figure><img src="../../../../.gitbook/assets/REST-ID.png" alt="Syncing temp_Id"><figcaption><p>Syncing temp_Id</p></figcaption></figure>
 
 {% code title="function.jigx" %}
 ```yaml
@@ -81,6 +81,8 @@ Working with complex REST objects can be tricky, as they include arrays, nested 
 1. `JsonProperties` in the SQLite query `jsonProperties: - addresses`
 2. In the expression used to retrieve the value, specify the exact property in the array or nested object that you require by referencing the `JsonProperty` followed by the property. `description: =@ctx.current.item.addresses[0].city leftElement: element: avatar text: =@ctx.current.item.addresses[0].state`
 
+{% tabs %}
+{% tab title="JSON" %}
 {% code title="JSON" %}
 ```json
 "customers": [
@@ -113,7 +115,9 @@ Working with complex REST objects can be tricky, as they include arrays, nested 
         },
 ```
 {% endcode %}
+{% endtab %}
 
+{% tab title="datasource" %}
 {% code title="datasource" %}
 ```yaml
 datasources:
@@ -172,10 +176,12 @@ item:
           customer: =@ctx.current.item
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ## Data handling when a device is offline
 
-* Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](../../offline-remote-data-handling.md) explains how to configure solutions to deal with data when the device is offline.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. [Offline remote data handling](../../offline-remote-data-handling.md) explains how to configure solutions to deal with data when the device is offline.
 
 ## Update multiple records in a single REST call
 

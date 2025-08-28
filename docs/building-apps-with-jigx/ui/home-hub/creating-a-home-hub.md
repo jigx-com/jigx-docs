@@ -17,9 +17,15 @@ Steps to customize your Home Hub:
 
 ### Single jig Home Hub
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Here is an example of a Home Hub designed for its simplicity. A `jig.default` is used with a `component.image` and `component.list`. :::
+{% columns %}
+{% column width="41.66666666666667%" %}
+Here is an example of a Home Hub designed for its simplicity. A `jig.default` is used with a `component.image` and `component.list`.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png" size="60" position="center" caption="Simple List Home Hub" alt="Simple List Home Hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-upSVhZey1OGA00fBCFmJG-20241213-105620.png"} ::: ::::
+{% column width="58.33333333333333%" %}
+<figure><img src="../../../.gitbook/assets/HomeScreen-List.png" alt="Simple List Home Hub" width="188"><figcaption><p>Simple List Home Hub</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="index.jigx" %}
@@ -98,9 +104,15 @@ children:
 
 ### Home Hub with multiple components & widgets
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png" size="60" position="center" caption="Custom home hub" alt="Custom home hub" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-SiJvjO6WnxkjkbG1w0cSa-20241213-100508.png"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/HomeScreen.png" alt="Custom home hub" width="188"><figcaption><p>Custom home hub</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem In this example a jig.default is created with a `component.image` , `component.section`, `component.countdown` and `component.grid`. The grid component references four jigs and shows them as widgets that when tapped opens the jigs. ::: ::::
+{% column %}
+In this example a jig.default is created with a `component.image` , `component.section`, `component.countdown` and `component.grid`. The grid component references four jigs and shows them as widgets that when tapped opens the jigs
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title="yoga-home.jigx" %}
@@ -214,9 +226,15 @@ datasources:
 
 ### Home Hub with multiple tabs in bottom navigation bar
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem In this example, four jigs are created. In the index.jigx file, they are configured in the `tabs` properties, which generates the custom bottom navigation bar. :::
+{% columns %}
+{% column %}
+In this example, four jigs are created. In the index.jigx file, they are configured in the `tabs` properties, which generates the custom bottom navigation bar.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png" size="60" position="center" caption="Bottom navigation bar with 4 tabs" alt="Bottom navigation bar with 4 tabs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-nB42jrW6U-R7MgkbQMKWi-20250204-083348.png"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/home-indexTabs.png" alt="Bottom navigation bar with 4 tabs" width="188"><figcaption><p>Bottom navigation bar with 4 tabs</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% tabs %}
 {% tab title=" index.jigx" %}

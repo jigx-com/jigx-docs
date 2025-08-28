@@ -14,9 +14,15 @@ REST errors returned by the endpoints in an app are often too technical for end-
 * **Error logging**: Automatically log error details for debugging.
 * **Dynamic responses**: Build logic to respond to specific errors flexibly.
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ![Standard REST error](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-cNRtuj2lt8h8Yjn8w_IUy-20241009-124900.png) :::
+{% columns %}
+{% column %}
+<figure><img src="../../../../.gitbook/assets/REST-StdError.png" alt="Standard error handling"><figcaption><p>Standard error handling</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem ![Customized REST error](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-jZvT-KAFznVb7Hh5wdIuc-20241009-124927.png) ::: ::::
+{% column %}
+<figure><img src="../../../../.gitbook/assets/REST-CustomError.png" alt="Customized error handling"><figcaption><p>Customized error handling</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## How does it work
 
@@ -47,7 +53,7 @@ In the Jigx function, configure the `error` section to cater for:
 
 Multiple error handlers can be added in the function, which are executed from the top to bottom until one matches. The error section needs to be configured in each of the individual REST function files.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ShlmyhYcPqv\_WUEow9Khg-20241009-125734.png" size="94" position="center" caption="Function properties" alt="Function properties" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ShlmyhYcPqv\_WUEow9Khg-20241009-125734.png" width="800" height="460" darkWidth="800" darkHeight="460"}
+<figure><img src="../../../../.gitbook/assets/REST-ErrorProp.png" alt="Function properties" width="563"><figcaption><p>Function properties</p></figcaption></figure>
 
 ## Configuration properties
 
@@ -141,7 +147,7 @@ options:
 
 The commandQueue is a system table, when a device is offline items are queued on the table. When the device comes online the items in the queue are processed. However, if items on the queue go into error, they are not processed and remain on the queue. Errors from REST methods, except for `action.sync-entity/entities` are queued in the commandQueue table. The commandQueue is exposed in Jigx Dev tools, allowing you to [debug](../../../jigx-builder-_code-editor_/debugging.md) . You can expose the commandQueue table in a jig and then use the commandQueue actions to interact with the queued items that are in error state by either performing a retry or delete. Take note that when syncing an item or when the device is offline the `commandId` is not available.
 
-![commandQueue](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-0iZcYVQhGLEkow2WFIWNg-20241010-080218.png)
+<figure><img src="../../../../.gitbook/assets/REST-CommandQueue.png" alt="commandQueue"><figcaption><p>commandQueue</p></figcaption></figure>
 
 ### Actions
 
@@ -175,7 +181,7 @@ swipeable:
 * When using the commandQueue actions the commandQueue id (`commandId`) is required.
 * Use the error table to build a jig/UI as there is more data logged to the table than the commandQueue.
 
-![commandId & error id](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-6n7sjDXlMY1HZXwOuN78T-20241022-104927.png)
+<figure><img src="../../../../.gitbook/assets/REST-IDMatch1.png" alt="commandId &#x26; error id"><figcaption><p>commandId &#x26; error id</p></figcaption></figure>
 
 * Use the \_commandQueue table as a datasource in your solution. It behaves like a normal entity table with change events and updates.
 * When `useLocalCall: true` is set, functions that rely on secrets or other authentication mechanisms not available locally will not execute.

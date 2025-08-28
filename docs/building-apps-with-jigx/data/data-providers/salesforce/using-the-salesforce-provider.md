@@ -13,7 +13,7 @@ When working with the Salesforce provider, it is helpful to know how to referenc
 
 In the Salesforce provider, use IntelliSense (ctrl+space) in the `entities` properties to select objects from the standard Salesforce objects or start typing the name of the object, and the list will provide you with a selection. When using custom objects, you need to manually type in the name. A blue line will display under the name, this indicates that it is an unknown Salesforce entity, and you can ignore the warning if it is a custom object
 
-![IntelliSense in Salesforce provider](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/PMQUMnHP3uwKCl1GvLxTP_sf-intellisense.gif)
+<figure><img src="../../../../.gitbook/assets/SF-Intellisense.gif" alt="IntelliSense in Salesforce provide"><figcaption><p>IntelliSense in Salesforce provider</p></figcaption></figure>
 
 ### Referencing multiple objects in a jig
 
@@ -40,9 +40,15 @@ onFocus:
 
 ### Filtering columns
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Below is a simple example of filtering the Account object's name column to only return accounts starting with the letter A. :::
+{% columns %}
+{% column %}
+Below is a simple example of filtering the Account object's name column to only return accounts starting with the letter A.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/wTD7SSZLsUQuSrRLhyF4n\_salesforcea.PNG" size="70" position="center" caption="Accounts startng with A" alt="Accounts startng with A"} ::: ::::
+{% column %}
+<figure><img src="../../../../.gitbook/assets/SalesforceA.PNG" alt="Accounts starting with A" width="188"><figcaption><p>Accounts starting with A</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 {% code title="filter-query" %}
 ```yaml

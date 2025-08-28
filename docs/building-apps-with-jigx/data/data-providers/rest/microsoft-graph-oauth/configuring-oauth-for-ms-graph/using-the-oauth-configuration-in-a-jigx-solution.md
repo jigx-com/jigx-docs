@@ -90,7 +90,7 @@ tabs:
 
 4\. Publish the solution and open it in the Jigx Mobile app. The user should is prompted for their credentials. After a successful OAuth loop, the token will be stored for future use, and the function will be executed, displaying the information on the jig.
 
-![OAuth loop](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/4zqXGHuB4_tLDvsW2diXS_image.png)
+<figure><img src="../../../../../../.gitbook/assets/Graph-OAuthLoop.png" alt="OAuth loop" width="375"><figcaption><p>OAuth loop</p></figcaption></figure>
 
 {% hint style="info" %}
 * After a **successful OAuth loop**, the returned token **will be stored for future use** until it expires. If the provider supports a **refresh token**, Jigx will automatically use the refresh token to avoid prompting the user again for credentials. Once the refresh token becomes invalid or if no token was provided, Jigx will prompt the user with the OAuth loop to get a new token.

@@ -305,17 +305,33 @@ The following examples with code snippets are provided:
 
 ## Building a REST based app video resources
 
-::::LinkArray :::LinkArrayItem{headerImage headerColor} ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/Nysik_Qk5eJiV0HDzY7xf_intro-to-rest.png)
+{% columns %}
+{% column %}
+{% embed url="https://vimeo.com/848412406?fe=sh&fl=pl" %}
 
-1\. [https://vimeo.com/manage/videos/848412406](https://vimeo.com/manage/videos/848412406)Introduction to REST API 6:59 min :::
+1. Introduction to REST API \
+   6:59 min&#x20;
+{% endcolumn %}
 
-:::LinkArrayItem{headerImage headerColor} ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/qdF4Rf2crRLBgcFA62tlj_jsonata-with-rest.png)
+{% column %}
+{% embed url="https://vimeo.com/848059289?fe=sh&fl=pl" %}
 
-2\. [https://vimeo.com/manage/videos/848059289](https://vimeo.com/manage/videos/848059289)Exploring REST and JSONata 6:17 min :::
+2. Exploring REST and JSONata 6:17 min
+{% endcolumn %}
+{% endcolumns %}
 
-:::LinkArrayItem{headerImage headerColor} ![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/mbDtpiY-9pmac8QxbpXx5_build-a-rest-app.png)
+{% columns %}
+{% column %}
+{% embed url="https://vimeo.com/848062137?fe=sh&fl=pl" %}
 
-3\. [https://vimeo.com/manage/videos/848062137](https://vimeo.com/manage/videos/848062137)Building a REST based App 9:14 min ::: ::::
+3. Building a REST based App \
+   9:14 min&#x20;
+{% endcolumn %}
+
+{% column %}
+
+{% endcolumn %}
+{% endcolumns %}
 
 ## See Also
 

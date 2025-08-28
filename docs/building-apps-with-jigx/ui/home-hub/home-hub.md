@@ -1,8 +1,14 @@
 # Home Hub
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem Having a good home screen is essential for any mobile app as it is the first screen that users see when they open the app. A home screen should provide users with quick access to the most important features of the app, while also being visually appealing and easy to navigate. It should be intuitive and provide users with a clear understanding of what the app does and how to use it. Careful consideration should be given during the [design](../../../getting-started/planning-your-app/home-screen.md) process. In Jigx the home screen is called the Home Hub and is accessed after signing into the app. :::
+{% columns %}
+{% column %}
+Having a good home screen is essential for any mobile app as it is the first screen that users see when they open the app. A home screen should provide users with quick access to the most important features of the app, while also being visually appealing and easy to navigate. It should be intuitive and provide users with a clear understanding of what the app does and how to use it. Careful consideration should be given during the [design](../../../getting-started/planning-your-app/home-screen.md) process. In Jigx the home screen is called the Home Hub and is accessed after signing into the app.&#x20;
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4E4I4-UEZCwohqjOv3ATj-20250514-065552.png" size="60" width="1224" height="2466" position="center" caption="Home screen" alt="Home screen"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/JJ-Grid-auto.png" alt="Home screen" width="188"><figcaption><p>Home screen</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 Jigx allows you to use various options when personalizing your Home Hub. Any jig can be placed on the home hub, and components accessible in the home hub include:
 

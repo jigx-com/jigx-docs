@@ -282,7 +282,7 @@ item:
 
 Datasources are defined once and are available throughout your solution to be reused in multiple jigs. Adding a global datasource improves performance as the data is retrieved once rather than multiple times.
 
-![Global datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/RKfB1NkVqQCckqcWoR-cR_ds-global.gif)
+<figure><img src="../../.gitbook/assets/DS-global.gif" alt="Global datasource"><figcaption><p>Global datasource</p></figcaption></figure>
 
 1. Open your solution in Jigx Builder and navigate to the **datasources** folder of your solution.
 2. Create a new file called _\<your\_datasource\_name>.jigx._
@@ -294,7 +294,7 @@ Datasources are defined once and are available throughout your solution to be re
 
 The data sets are defined in the datasources inside the individual jig generally under the `datasources:` property. Use datasources locally if you only need the data in that specific jig.
 
-![Local datasource](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/fnvUAIdPdJV8GV1y_MOg-_ds-local.gif)
+<figure><img src="../../.gitbook/assets/DS-local.gif" alt="Local datasource"><figcaption><p>Local datasource</p></figcaption></figure>
 
 1. Open your solution in Jigx Builder and navigate to the jig.
 2. Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.

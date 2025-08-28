@@ -2,13 +2,13 @@
 
 In Jigx we call screens in the app - jigs, there are different types of jigs depending on the type of layout you want in your app.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VFreypFnEuSOA39cW\_MXk\_jigscreen.png" size="74" position="center" caption="Jigs" alt="Jigs" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/VFreypFnEuSOA39cW\_MXk\_jigscreen.png" width="800" height="607" darkWidth="800" darkHeight="607"}
+<figure><img src="../../../.gitbook/assets/JigScreen.png" alt="" width="525"><figcaption></figcaption></figure>
 
 ## Jig Types
 
 The following jigs types are available:
 
-<table><thead><tr><th width="139.6484375">Types</th><th width="414.04296875">Use</th><th>Code Examples</th></tr></thead><tbody><tr><td>Calendar</td><td>Use this jigto build a calendar to display scheduled events and create new events based on a date and time.</td><td><a href="https://docs.jigx.com/examples/jigcalendar">jig.calendar</a></td></tr><tr><td>Composite</td><td>This jig allows you to display multiple jigs on one screen where you would otherwise be unable to combine the functionality in the same way. For example, a form and list are on the same screen, where the form on completion populates the list with data.</td><td><a href="https://docs.jigx.com/examples/jigcomposite">jig.composite</a></td></tr><tr><td>Default</td><td>The default jig is the most versatile and provides the majority of functionality and a combination of different components and <a href="../actions.md">actions</a>. The most common use of a default jig is for forms and lists.</td><td><a href="https://docs.jigx.com/examples/jigdefault">jig.default</a></td></tr><tr><td>Document</td><td>Used to show PDF files or HTML pages inside your app.</td><td><a href="https://docs.jigx.com/examples/jigdocument">jig.document</a></td></tr><tr><td>Full-screen</td><td>Create a full screen to show a <a href="https://docs.jigx.com/examples/jigfullscreen#Yd92B">location</a> across the entire screen.</td><td><a href="https://docs.jigx.com/examples/jigfullscreen">jig.fullscreen</a></td></tr><tr><td>Grid</td><td>Create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design.</td><td><a href="https://docs.jigx.com/examples/jiggrid">jig.grid</a></td></tr><tr><td>List</td><td>Create lists of data and style these lists with elements such as <a href="https://docs.jigx.com/examples/jiglist#FLl72">avatars</a>, or <a href="https://docs.jigx.com/examples/jiglist#HeIV4">images</a>. Make the list interactive by adding checkboxes and swipeable elements for updating or deleting the data in the list-item.</td><td><a href="https://docs.jigx.com/examples/jiglist">jig.list</a></td></tr><tr><td>Table</td><td>The table jig displays structured data in rows and columns, allowing users to view and interact with multiple records within the app.</td><td><a href="https://docs.jigx.com/examples/jigtable">jig.table</a></td></tr><tr><td>Tabs</td><td>Navigate between different jigs with ease, enhancing the user experience by providing an organized layout. These tabs are placed at the top of the screen to ensure a sleek and intuitive interface.</td><td><a href="https://docs.jigx.com/examples/jigtable">jig.tabs</a></td></tr></tbody></table>
+<table><thead><tr><th width="139.6484375">Types</th><th width="352.1328125">Use</th><th>Code Examples</th></tr></thead><tbody><tr><td>Calendar</td><td>Use this jig to build a calendar to display scheduled events and create new events based on a date and time.</td><td><a href="https://docs.jigx.com/examples/jigcalendar">jig.calendar</a></td></tr><tr><td>Composite</td><td>This jig allows you to display multiple jigs on one screen where you would otherwise be unable to combine the functionality in the same way. For example, a form and list are on the same screen, where the form on completion populates the list with data.</td><td><a href="https://docs.jigx.com/examples/jigcomposite">jig.composite</a></td></tr><tr><td>Default</td><td>The default jig is the most versatile and provides the majority of functionality and a combination of different components and <a href="../actions.md">actions</a>. The most common use of a default jig is for forms and lists.</td><td><a href="https://docs.jigx.com/examples/jigdefault">jig.default</a></td></tr><tr><td>Document</td><td>Used to show PDF files or HTML pages inside your app.</td><td><a href="https://docs.jigx.com/examples/jigdocument">jig.document</a></td></tr><tr><td>Full-screen</td><td>Create a full screen to show a <a href="https://docs.jigx.com/examples/jigfullscreen#Yd92B">location</a> across the entire screen.</td><td><a href="https://docs.jigx.com/examples/jigfullscreen">jig.fullscreen</a></td></tr><tr><td>Grid</td><td>Create grid layouts in your app, organizing content into rows and columns for a visually consistent and flexible interface. It helps align elements proportionally, ensuring a structured design.</td><td><a href="https://docs.jigx.com/examples/jiggrid">jig.grid</a></td></tr><tr><td>List</td><td>Create lists of data and style these lists with elements such as <a href="https://docs.jigx.com/examples/jiglist#FLl72">avatars</a>, or <a href="https://docs.jigx.com/examples/jiglist#HeIV4">images</a>. Make the list interactive by adding checkboxes and swipeable elements for updating or deleting the data in the list-item.</td><td><a href="https://docs.jigx.com/examples/jiglist">jig.list</a></td></tr><tr><td>Table</td><td>The table jig displays structured data in rows and columns, allowing users to view and interact with multiple records within the app.</td><td><a href="https://docs.jigx.com/examples/jigtable">jig.table</a></td></tr><tr><td>Tabs</td><td>Navigate between different jigs with ease, enhancing the user experience by providing an organized layout. These tabs are placed at the top of the screen to ensure a sleek and intuitive interface.</td><td><a href="https://docs.jigx.com/examples/jigtable">jig.tabs</a></td></tr></tbody></table>
 
 ## Considerations
 
@@ -22,7 +22,7 @@ The following jigs types are available:
 
 ## How to create a jig
 
-![](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/i1TdQF-lpmcDlGUqAs3u5_jig-create.gif)
+<figure><img src="../../../.gitbook/assets/Jig-create.gif" alt=""><figcaption></figcaption></figure>
 
 1. Open Jigx Builder and [Create a Jigx solution](../../jigx-builder-_code-editor_/create-a-new-jigx-solution.md).
 2. Right-click the jigs folder and select **New File...**
@@ -54,15 +54,19 @@ There are two options available for joining jigs which depend on your requiremen
 
 ### 1.Create one screen that contains many jigs
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UYCvRaQpB09FwaO8axUHI\_compositejigs.PNG" size="80" position="center" caption="Four jigs combined into one" alt="Four jigs combined into one" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UYCvRaQpB09FwaO8axUHI\_compositejigs.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} :::
+{% columns %}
+{% column %}
+<figure><img src="../../../.gitbook/assets/compositejigs.PNG" alt="Four jigs combined into one" width="188"><figcaption><p>Four jigs combined into one</p></figcaption></figure>
+{% endcolumn %}
 
-:::VerticalSplitItem
-
+{% column %}
 * Use the `jig.composite` type to combine multiple jigs into one.
 * Provide the `jigId` for each of the jigs to be included.
 * The order of the `jigIds` configured in the YAML determines the order in which the jigs appear in the composite jig.
 * There are properties available to hide the title of each jig (`isTitleHidden`).
-* Provide `inputs` into each jig if required. ::: ::::
+* Provide `inputs` into each jig if required.
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 title: My hike information
@@ -81,12 +85,16 @@ children:
 
 ### 2.Add widgets to a jig to navigate to other jigs
 
-::::VerticalSplit{layout="middle"} :::VerticalSplitItem
-
+{% columns %}
+{% column %}
 * Add the `widgets` property to a jig. Configure the `size` and `jigId` for all the jigs you want to navigate to from the current jig.
-* The order of the `jigIds` configured in the YAML determines the order in which the widgets appear in the jig. :::
+* The order of the `jigIds` configured in the YAML determines the order in which the widgets appear in the jig.
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MrflMb4FTKatNzKa0LJlK\_customhub-widgets.PNG" size="80" position="center" caption signedSrc="https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/MrflMb4FTKatNzKa0LJlK\_customhub-widgets.PNG" width="800" height="1613" darkWidth="800" darkHeight="1613"} ::: ::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/CustomHub-widgets.PNG" alt="" width="188"><figcaption></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ```yaml
 title: Yoga Wellness Week

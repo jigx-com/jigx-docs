@@ -11,7 +11,7 @@ In the `index.jigx` file, you set solution settings, including the primary infor
 * **Icon** - Customize the solutions icon. A list of [icons](https://docs.jigx.com/jigx-icons) is available.
 * **Color** - Apply a color to the selected icon.
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ly\_cXyKfy5ezLaATdsQ3-20250715-121350.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-4ly\_cXyKfy5ezLaATdsQ3-20250715-121350.png" size="92" width="3959" height="962" position="center" caption="Solution details" alt="Solution details"}
+<figure><img src="../../../.gitbook/assets/JB-indexNaming.png" alt="Solution details" width="563"><figcaption><p>Solution details</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="index.jigx (default)" %}
@@ -54,7 +54,7 @@ color: color7
 
 <table><thead><tr><th width="135.671875">Other options</th><th></th></tr></thead><tbody><tr><td><code>badge</code></td><td>Optional property - Enhance your tab with a customizable badge for instance showing the number of events this week or the number of new orders. Add the <code>badge</code> property to the tabs section with an expression.</td></tr><tr><td><code>label</code></td><td>Give the tab a title. This title appears below the icon in the navigation bar. Use the label property for translating tab names or when the tab name includes spaces.</td></tr><tr><td><code>when</code></td><td>The condition when the tab will be displayed or hidden (optional). Use an that evaluates to a boolean.</td></tr></tbody></table>
 
-::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-07NaIQG8V4qg8Yc1IOxhI-20250514-120903.png" size="30" width="1224" height="2466" position="center" caption}
+<figure><img src="../../../.gitbook/assets/cc-grid-item-all.png" alt="" width="188"><figcaption></figcaption></figure>
 
 {% code title="index.jigx" %}
 ```yaml
@@ -197,7 +197,9 @@ For more details and examples refer to the _Shared Expressions_ section in [Expr
 
 In the `dependencies` property, you can define the mobile app build version compatible with the YAML configuration.
 
-:::::VerticalSplit{layout="middle"} ::::VerticalSplitItem If the current mobile app build version does not meet the criteria, the _Out of date_ screen will appear, with a message that an update is required. Tapping the _Update_ button redirects you to your app settings to update the version of the app.
+{% columns %}
+{% column %}
+If the current mobile app build version does not meet the criteria, the _Out of date_ screen will appear, with a message that an update is required. Tapping the _Update_ button redirects you to your app settings to update the version of the app.
 
 {% code title="index.jigx" %}
 ```yaml
@@ -205,8 +207,12 @@ dependencies:
   mobileApp: ">1.131.2"
 ```
 {% endcode %}
+{% endcolumn %}
 
-:::VerticalSplitItem ::Image\[]{src="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_j99rAAAt6SBCQZfpVt-A-20250527-070007.png" signedSrc="https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-\_j99rAAAt6SBCQZfpVt-A-20250527-070007.png" size="70" width="1224" height="2466" position="center" caption="Out of date app screen" alt="Out of date app screen"} ::: :::::
+{% column %}
+<figure><img src="../../../.gitbook/assets/AppOutDate.png" alt="Out of date app screen" width="188"><figcaption><p>Out of date app screen</p></figcaption></figure>
+{% endcolumn %}
+{% endcolumns %}
 
 ## See Also
 

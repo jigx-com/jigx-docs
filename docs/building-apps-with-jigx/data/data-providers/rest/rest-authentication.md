@@ -22,7 +22,7 @@ The `accessToken` must be specified as a parameter in the YAML. Jigx only retrie
 
 Jigx Management Configuration. See [Credentials](../../../../administration/solutions/credentials.md) for more information.
 
-![Crendentials configuration](https://archbee-image-uploads.s3.amazonaws.com/0TQnKgJpsWhT3gQzQOhdY-ytmzlj9MZ7kpcfbx_JV4d-20250701-083356.png)
+<figure><img src="../../../../.gitbook/assets/JM-CredOAuth.png" alt="Credentials configuration"><figcaption><p>Crendentials configuration</p></figcaption></figure>
 
 Jigx Function example:
 
@@ -98,7 +98,7 @@ placeholders:
 
 Jigx Management Configuration. See [Credentials](../../../../administration/solutions/credentials.md) for more information.
 
-![Crendentials configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/nlY0q-cPBMAcWbZXEYUkb_image.png)
+<figure><img src="../../../../.gitbook/assets/JM-Cred-APIKey.png" alt="Crendentials configuration"><figcaption><p>Credentials configuration</p></figcaption></figure>
 
 Jigx Function example:
 
@@ -165,7 +165,7 @@ A username and password for basic authentication are stored in Jigx Management w
 
 Jigx Management Configuration. See [Credentials](../../../../administration/solutions/credentials.md) for more information.
 
-![Crendentials configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/GgHDyO0NsT6wvMOsbxRb2_image.png)
+<figure><img src="../../../../.gitbook/assets/JM-Cred-Basic.png" alt="Credentials configuration"><figcaption><p>Credentials configuration</p></figcaption></figure>
 
 Jigx Function example:
 
@@ -233,7 +233,7 @@ A secret is stored in Jigx Management with a specific key. The key is referenced
 
 Jigx Management Configuration. See [Credentials](../../../../administration/solutions/credentials.md) for more information.
 
-![Crendentials configuration](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/UmUDMXxf_tv0-w3axltr2_image.png)
+<figure><img src="../../../../.gitbook/assets/JM-credSecret.png" alt="Credentials configuration"><figcaption><p>Credentials configuration</p></figcaption></figure>
 
 Jigx function example:
 
