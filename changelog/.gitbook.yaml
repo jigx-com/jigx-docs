@@ -1,5 +1,0 @@
-root: ./changelog/
-
-​structure:
-  readme: ./README.md
-  summary: ./changelog/SUMMARY.md​
