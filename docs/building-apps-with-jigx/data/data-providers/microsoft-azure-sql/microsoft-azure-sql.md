@@ -18,7 +18,7 @@ To use the SQL data provider in Jigx , follow these high-level steps:
    * [Configure a new Azure SQL connection ](configuring-the-sql-connection.md)for the solution in Jigx Management before adding the Jigx cloud IP addresses to the allowlist IP addresses in Azure SQL.
 3. **Define the SQL query or stored procedure in a Jigx function in Jigx Builder**
    * Navigate to the [functions](../rest/rest.md) folder in Jigx Builder.
-   * Use [IntelliSense](../../../jigx-builder-_code-editor_/editor.md) to configure the SQL data provider.
+   * Use [IntelliSense](../../../jigx-builder-code-editor/editor.md) to configure the SQL data provider.
    * Enter the name of the connection set up in Jigx Management.
 4. **Define data methods in the function**:
    * Configure a method to use to interact with the data. There are two options:
@@ -28,9 +28,9 @@ To use the SQL data provider in Jigx , follow these high-level steps:
 5. **Reference the Jigx functions in jigs:**
    * Reference the function in your jigs. This step is crucial for integrating the SQL data seamlessly into your Jigx solution.
 6. **Publish your solution**:
-   * [Publish your solution](../../../jigx-builder-_code-editor_/publishing-a-solution.md) and use the app to interact with the SQL data provider.
+   * [Publish your solution](../../../jigx-builder-code-editor/publishing-a-solution.md) and use the app to interact with the SQL data provider.
 7. **Test the Data Provider**:
-   * Use Jigx Builder [developer tools](../../../jigx-builder-_code-editor_/debugging.md) to test the data provider configurations. Check if the data provider can connect to SQL successfully and perform operations like SELECT, INSERT, UPDATE or DELETE data.
+   * Use Jigx Builder [developer tools](../../../jigx-builder-code-editor/debugging.md) to test the data provider configurations. Check if the data provider can connect to SQL successfully and perform operations like SELECT, INSERT, UPDATE or DELETE data.
 
 Following these steps, you can effectively integrate external Azure SQL data into your Jigx solutions, allowing you to enhance your apps with data and functionalities from diverse external sources.
 

@@ -12,7 +12,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
    * Identify the REST API you will use as your data source. Ensure you understand its endpoint structure, request requirements (like headers and query parameters), and the format of the data it returns.
 2. Define a REST Service in a **Jigx function** in Jigx Builder:
    * Navigate to the [functions](https://docs.jigx.com/rest#H1tHs) folder in Jigx Builder.
-   * Use [IntelliSense](../../../jigx-builder-_code-editor_/editor.md) to configure the REST data provider.
+   * Use [IntelliSense](../../../jigx-builder-code-editor/editor.md) to configure the REST data provider.
    * Enter the base URL of the REST API.
 3. **Configure REST Authentication**:
    * If the API requires [authentication](rest-authentication.md) (such as OAuth, API keys, etc.), configure these settings. This might involve adding headers, query parameters, or setting up OAuth tokens.
@@ -22,9 +22,9 @@ To use the REST data provider in Jigx , follow these high-level steps:
 5. **Reference the Jigx functions in jigs**:
    * [Reference the function](https://docs.jigx.com/rest#qbU72) in your jigs. This step is crucial for integrating the API data seamlessly into your Jigx solution.
 6. **Publish your solution**:
-   * [Publish your solution](../../../jigx-builder-_code-editor_/publishing-a-solution.md) and use the app to interact with the REST data provider. Make sure to handle any API limits or errors gracefully.
+   * [Publish your solution](../../../jigx-builder-code-editor/publishing-a-solution.md) and use the app to interact with the REST data provider. Make sure to handle any API limits or errors gracefully.
 7. **Test the Data Provider**:
-   * Use Jigx Builder [developer tools](../../../jigx-builder-_code-editor_/debugging.md) to test the data provider configurations. Check if the data provider can connect to the API successfully and perform operations like GET (fetch), PUT (create), POST (update), or DELETE data.
+   * Use Jigx Builder [developer tools](../../../jigx-builder-code-editor/debugging.md) to test the data provider configurations. Check if the data provider can connect to the API successfully and perform operations like GET (fetch), PUT (create), POST (update), or DELETE data.
 
 Following these steps, you can effectively integrate external REST APIs into your Jigx solutions, allowing you to enhance your apps with data and functionalities from diverse external sources.
 

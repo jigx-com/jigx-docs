@@ -28,6 +28,6 @@ Before you can start building your first Jigx solution, you require the followin
 
 * Get an overview of the [Jigx platform](<../Understanding the basics/Architecture.md>)
 * Understand [Jigx Concepts](<../Understanding the basics/Jigx Concepts.md>)
-* Create with [Jigx Builder](../building-apps-with-jigx/jigx-builder-_code-editor_/jigx-builder-_code-editor_.md)
+* Create with [Jigx Builder](../building-apps-with-jigx/jigx-builder-code-editor/jigx-builder-code-editor.md)
 * Explore [examples](https://docs.jigx.com/examples)
 * [Managing](<../Administration/Management Overview.md>) apps, users, roles, and organizations

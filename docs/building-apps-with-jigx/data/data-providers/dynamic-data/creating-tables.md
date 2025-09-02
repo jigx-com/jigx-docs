@@ -11,7 +11,7 @@ First step in creating Dynamic Data for a solution is to create the tables that 
 
 <figure><img src="../../../../.gitbook/assets/DD-tables.png" alt="Tables in Dynamic Data"><figcaption><p>Tables in Dynamic Data</p></figcaption></figure>
 
-1. Open an existing solution or [create a new solution](../../../jigx-builder-_code-editor_/create-a-new-jigx-solution.md) in Jigx Builder.
+1. Open an existing solution or [create a new solution](../../../jigx-builder-code-editor/create-a-new-jigx-solution.md) in Jigx Builder.
 2. Expand the database folder and click on the **default.jigx** file.
 3. Use IntelliSense (ctrl+space) in the editor, select **tables**, and press enter.
 4. Type the name of your table and provide a null value, for example, `employee: null`. Take note of the table name formats below:
@@ -23,7 +23,7 @@ First step in creating Dynamic Data for a solution is to create the tables that 
    * The name cannot end with special characters
    * The length must be between 2-50 characters
 5. Add multiple tables by adding the table names under each other in the default.jigx file.
-6. [Publish](../../../jigx-builder-_code-editor_/publishing-a-solution.md) the solution to create the tables.
+6. [Publish](../../../jigx-builder-code-editor/publishing-a-solution.md) the solution to create the tables.
 7. In [Jigx Management](<../../../../Administration/Management Overview.md>) browse to your solution and navigate to the [Data](https://docs.jigx.com/data) menu to view your tables. Note that only the tables have been created; next, you must create the [columns and data](creating-columns-_-data-records.md).
 
 ## Considerations

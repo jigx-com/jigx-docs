@@ -9,7 +9,7 @@ Now you are ready to start using your well-designed plan to build the app in Jig
 1. Start with the data. If you have a pre-existing datasource, create the functions, and stored procedures. If your data source is from scratch, start building the tables using [Dynamic Data](../../building-apps-with-jigx/data/data-providers/dynamic-data/creating-tables.md) or in [Microsoft Azure SQL](../../building-apps-with-jigx/data/data-providers/microsoft-azure-sql/microsoft-azure-sql.md). Refer to your data plan for details.
 2. Next, build out the skeleton app based on must-have functionality, follow your solution design for each screen, and create the corresponding jig file. Choose components and UI elements that meet the requirements. See [examples](https://docs.jigx.com/examples) for a list of components, actions, widgets and jigs that can be used.
 3. Now add visual improvements and nice-to-haves. e.g., on an email field, add the email icon to interact with sending an email.
-4. Publish your app to the Jigx Cloud. Open the app on the mobile device and test each screen, data, and usability. Use [Jigx Dev Tools](../../building-apps-with-jigx/jigx-builder-_code-editor_/debugging.md) to debug the app, make changes and test again.
+4. Publish your app to the Jigx Cloud. Open the app on the mobile device and test each screen, data, and usability. Use [Jigx Dev Tools](../../building-apps-with-jigx/jigx-builder-code-editor/debugging.md) to debug the app, make changes and test again.
 5.  When the building of the app is complete, move on to the test plan.\
 
 

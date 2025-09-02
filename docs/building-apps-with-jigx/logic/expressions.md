@@ -219,8 +219,8 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 * JavaScript files are recognized throughout the solution and can by reused in multiple jigs.
 * JavaScript functions are not a replacement for JSONata expressions. Each has its purpose; combining the two will empower you while creating apps. In certain instances, JSONata is inline and can be quicker and easier than using a JavaScript function, such as concatenating first and last names.
 * JavaScript functions can be used instead of regex expressions used for validation. For example, JavaScript functions can be used to format a phone number rather than regex to validate if it is in the correct format.
-* Use _F12_ to navigate from an expression to the JavaScript function script file. See [Go to Definition](../jigx-builder-_code-editor_/editor.md).
-* From the script file use _shift + F12_ or right-click and select [Go to References](../jigx-builder-_code-editor_/editor.md) to see where all the script file is used in expressions.
+* Use _F12_ to navigate from an expression to the JavaScript function script file. See [Go to Definition](../jigx-builder-code-editor/editor.md).
+* From the script file use _shift + F12_ or right-click and select [Go to References](../jigx-builder-code-editor/editor.md) to see where all the script file is used in expressions.
 
 ## JSONata and Regular expressions
 

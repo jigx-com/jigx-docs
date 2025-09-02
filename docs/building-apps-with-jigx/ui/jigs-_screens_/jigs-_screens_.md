@@ -24,7 +24,7 @@ The following jigs types are available:
 
 <figure><img src="../../../.gitbook/assets/Jig-create.gif" alt=""><figcaption></figcaption></figure>
 
-1. Open Jigx Builder and [Create a Jigx solution](../../jigx-builder-_code-editor_/create-a-new-jigx-solution.md).
+1. Open Jigx Builder and [Create a Jigx solution](../../jigx-builder-code-editor/create-a-new-jigx-solution.md).
 2. Right-click the jigs folder and select **New File...**
 3. Type a unique name for the jig and press enter, the name must not contain any spaces. The jig file opens in the editor.
 4. Use IntelliSense (cntrl + space) in the file and select the type of jig you will build.
@@ -32,21 +32,21 @@ The following jigs types are available:
 6. Add your values or remove the YAML that is not required, for example, if you do not want a header image at the top of the screen, remove the `header:` section.
 7. The Jigx Builder validates the YAML; any issues are shown in red and need to be corrected before you can publish the solution.
 8. If you want the jig to be accessed from the Home Hub, add the jig to the tabs in [index.jigx](../home-hub/index-settings.md) file. Otherwise, reference the jig from another jig for it to be included in the app.
-9. [Publish](../../jigx-builder-_code-editor_/publishing-a-solution.md) the solution.
+9. [Publish](../../jigx-builder-code-editor/publishing-a-solution.md) the solution.
 
 ## How to edit a jig
 
 1. Open your solution in Jigx Builder.
 2. Click on the jig you want to edit, the editor opens.
 3. Make the required changes.
-4. Save and [publish](../../jigx-builder-_code-editor_/publishing-a-solution.md) the solution.
+4. Save and [publish](../../jigx-builder-code-editor/publishing-a-solution.md) the solution.
 
 ## How to delete a jig
 
 1. Open your solution in Jigx Builder.
 2. Click on the jig you want to edit, the editor opens.
 3. Make the required changes.
-4. Save and [publish](../../jigx-builder-_code-editor_/publishing-a-solution.md) the solution.
+4. Save and [publish](../../jigx-builder-code-editor/publishing-a-solution.md) the solution.
 
 ## How to combine jigs
 
