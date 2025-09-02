@@ -67,7 +67,6 @@
     * [Offline remote data handling](building-apps-with-jigx/data/offline-remote-data-handling.md)
     * [File handling](building-apps-with-jigx/data/file-handling.md)
     * [Data Providers](building-apps-with-jigx/data/data-providers/README.md)
-      * [Data Providers](building-apps-with-jigx/data/data-providers/data-providers.md)
       * [Dynamic Data](building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md)
         * [Creating tables](building-apps-with-jigx/data/data-providers/dynamic-data/creating-tables.md)
         * [Creating columns & data records](building-apps-with-jigx/data/data-providers/dynamic-data/creating-columns-data-records.md)
