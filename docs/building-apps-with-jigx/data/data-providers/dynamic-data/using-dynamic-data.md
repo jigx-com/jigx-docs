@@ -1,6 +1,6 @@
 # Using Dynamic Data
 
-Once you have created the Dynamic Data [tables](creating-tables.md) as well as, [columns and data records](creating-columns-_-data-records.md) the data can be used in multiple places in a solution.
+Once you have created the Dynamic Data [tables](creating-tables.md) as well as, [columns and data records](creating-columns-data-records.md) the data can be used in multiple places in a solution.
 
 Dynamic Data can be:
 

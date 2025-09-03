@@ -46,7 +46,7 @@ You can select single or multiple records to delete in the table by:
 1. **Delete a single record** - click on the record and select **Delete** at the bottom of the side pane (as shown in the image above).
 2. **Delete Multiple records** - select the checkboxes next to the records you want to delete. Then click the red **Delete selected** button at the top of the screen. The records will instantly be removed from the Jigx Cloud store and online devices.
 
-![Deleting multiple records](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/OPX2ZoWZTBXuFkdaOmsSM_jm-deletedatal.png)
+<figure><img src="../../.gitbook/assets/JM-DeleteDataL.png" alt="Deleting multiple records"><figcaption><p>Deleting multiple records</p></figcaption></figure>
 
 ## Adding and deleting files from records
 
@@ -54,7 +54,7 @@ You can select single or multiple records to delete in the table by:
 
 1. Click on a record and select the **File** tab.
 2. The file **status**, **thumbnail**, **name**, **content type** and **size** are displayed.
-3. To download the file from Managment, use the **Download file** link at the top of the record.
+3. To download the file from Management, use the **Download file** link at the top of the record.
 4. To delete a file, click the **X** next to the file preview.
 5. To view the file thumbnail in the table, ensure **File** is checked in the **Column settings** pane.
 

@@ -31,7 +31,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 To create and use Dynamic data see the following:
 
 1. [Creating tables](creating-tables.md)
-2. [Creating columns & data records](creating-columns-_-data-records.md)
+2. [Creating columns & data records](creating-columns-data-records.md)
 3. [Deleting tables](deleting-tables.md)
 4. [Using Dynamic Data](using-dynamic-data.md)
 

@@ -9,11 +9,11 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 ### When to use solution state (global state)
 
-[State](../building-apps-with-jigx/logic/state.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a _one-to-one relationship_; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
+[State](../logic/state.md) manages the state of the app, including the UI's data and the user's interactions, and is best used in scenarios with a _one-to-one relationship_; for example, a field services person selects one job or task to complete, or a pilot selects one mission to fly.
 
 **Design Pattern:** Singletons
 
-<figure><img src="../.gitbook/assets/best-practice.gif" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/best-practice.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Setup:
 
@@ -66,18 +66,18 @@ datasources:
 
 State resources and code samples:
 
-* [Solution (Global) State](../building-apps-with-jigx/logic/state.md)
+* [Solution (Global) State](../logic/state.md)
 * [Set-state](https://docs.jigx.com/examples/set-state)
 * [Reset-state](https://docs.jigx.com/examples/reset-states)
-* [Examples of state](../building-apps-with-jigx/logic/state.md)
+* [Examples of state](../logic/state.md)
 
 ### When to use inputs
 
-[Inputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-inputs.md) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a _one-to-many relationship_, for example, a manager needs to check on the progress of each field service worker.
+[Inputs](../ui/jigs-_screens_/passing-data-using-inputs.md) are used in complex apps to pass multiple variables between jigs using parameters, and is best used in scenarios where there is a _one-to-many relationship_, for example, a manager needs to check on the progress of each field service worker.
 
 **Design Pattern**: Mediator
 
-<figure><img src="../.gitbook/assets/design-pattern-Mediator.gif" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/design-pattern-Mediator.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Setup:
 
@@ -156,16 +156,16 @@ children:
 
 Input resources and code samples:
 
-* [Passing data using inputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-inputs.md)
-* [Input examples](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-inputs.md)
+* [Passing data using inputs](../ui/jigs-_screens_/passing-data-using-inputs.md)
+* [Input examples](../ui/jigs-_screens_/passing-data-using-inputs.md)
 
 ### When to use outputs
 
-[Outputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another use case for outputs.
+[Outputs](../ui/jigs-_screens_/passing-data-using-outputs.md) are used to combine multiple jigs into one jig. Outputs pass variables from each jig into the next jig, and is best used in scenarios where there is a _many-to-one relationship_, for example, a manager needs to report on the progress of the team. Creating a master detail form is another use case for outputs.
 
 **Design Pattern**: Observer
 
-<figure><img src="../.gitbook/assets/design-pattern-observer.gif" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/design-pattern-observer.gif" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Setup:
 
@@ -295,8 +295,8 @@ children:
 
 Output resources and code samples:
 
-* [Passing data using outputs](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md)
-* [Output examples](../building-apps-with-jigx/ui/jigs-_screens_/passing-data-using-outputs.md)
+* [Passing data using outputs](../ui/jigs-_screens_/passing-data-using-outputs.md)
+* [Output examples](../ui/jigs-_screens_/passing-data-using-outputs.md)
 
 ### Performance optimization
 

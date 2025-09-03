@@ -13,4 +13,4 @@ Below is what you need to know when developing in Jigx Builder.
 * How to [create a new solution](create-a-new-jigx-solution.md)
 * How to [publish a solution](publishing-a-solution.md)
 * How to [debug and test solutions](debugging.md)
-* [Tips, tricks and shortcuts](tips_-tricks-and-shortcuts.md) to help you accelerate your development
+* [Tips, tricks and shortcuts](tips-tricks-and-shortcuts.md) to help you accelerate your development

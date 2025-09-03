@@ -37,5 +37,5 @@ Here are some common validation expressions to create and use for text field val
 
 * [Regex expressions](https://docs.jigx.com/examples/regex-expressions)
 * [Expressions](expressions.md)
-* [Expressions - cheatsheet](expressions-1/expressions-cheatsheet.md)
+* [Expressions - cheatsheet](expressions-cheatsheet.md)
 * [Expression-examples](https://docs.jigx.com/examples/expressions)

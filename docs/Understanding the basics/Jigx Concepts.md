@@ -68,7 +68,7 @@ Expressions allow you to structure data before binding it to the UI components. 
 
 ## Database
 
-A [data provider](../building-apps-with-jigx/data/data-providers/data-providers.md) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](../building-apps-with-jigx/data/data-providers/data-providers.md) and [Data Provider examples](<Jigx Concepts.md>).
+A [data provider](broken-reference) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](broken-reference) and [Data Provider examples](<Jigx Concepts.md>).
 
 ## Entities
 

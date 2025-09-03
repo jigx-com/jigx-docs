@@ -29,7 +29,7 @@ The user will receive an invite email with instructions on how to onboard. Once 
 To bulk invite users, contact Jigx support at _**support@jigx.com**_.
 {% endhint %}
 
-![Inviting Users](https://archbee-image-uploads.s3.amazonaws.com/x7vdIDH6-ScTprfmi2XXX/6pMhHKezYnYmf0oVPcY8y_jm-invitel.png)
+<figure><img src="../.gitbook/assets/JM-InviteL.png" alt="Inviting Users" width="563"><figcaption><p>Inviting Users</p></figcaption></figure>
 
 
 

@@ -1,6 +1,6 @@
 # Datasources
 
-Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/data-providers.md).
+Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](broken-reference).
 
 ## Types
 
