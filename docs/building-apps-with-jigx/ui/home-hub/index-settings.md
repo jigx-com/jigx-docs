@@ -48,7 +48,7 @@ color: color7
 * Tabs are properties used to build your navigation bar that displays at the bottom of the Home Hub.
 * You can configure multiple tabs. The first four tabs are displayed in the Home Hub bottom navigation. Additional tabs appear when the _More_ (ellipsis) button is tapped.
 * Each tab is associated with a jig that is displayed when pressed. The first tab by default displays when the app is opened.
-* Setting the [grid](https://docs.jigx.com/examples/jiggrid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
+* Setting the [grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) jig as the first tab's jig creates a visually appealing and easy-to-navigate home screen.
 
 <table><thead><tr><th width="145.19140625">Core Structure</th><th></th></tr></thead><tbody><tr><td><code>tabs</code></td><td>The top level property under which the various tabs are configured.</td></tr><tr><td><code>icon</code></td><td>The icon to be shown on the navigation bar for the tab, for example a home icon.</td></tr><tr><td><code>jigId</code></td><td>The name/ unique identifier of the jig that will open when the tab is pressed.</td></tr></tbody></table>
 

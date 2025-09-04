@@ -14,7 +14,7 @@ Existing solutions will continue to function in the mobile app as before. The na
 {% column %}
 New solutions now offer greater versatility.
 
-1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/jiggrid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
+1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
 2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.&#x20;
 {% endcolumn %}
 
@@ -35,7 +35,7 @@ The table below outlines the areas impacted by the introduction of bottom tab na
 
 1. Remove the `stories` property.
    * Delete the stories property and any associated jigs. Stories are deprecated and no longer displayed in the app.
-   * To replicate this functionality, consider using the [video-player](https://docs.jigx.com/examples/video-player) or [carousel](https://docs.jigx.com/examples/carousel) components.
+   * To replicate this functionality, consider using the [video-player](https://docs.jigx.com/examples/readme/components/video-player) or [carousel](https://docs.jigx.com/examples/readme/components/carousel) components.
 2. Replace the `widgets` property.
    * Replace the `widgets` property with a new `tabs` property.
    * Define the `tabs` you want to display in the bottom tab navigation. Note:

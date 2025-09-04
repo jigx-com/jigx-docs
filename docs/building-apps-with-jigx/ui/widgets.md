@@ -26,7 +26,7 @@ A widget can be configured with the following sizes: - 1x1 - 2x2 - 2x4 - 4x2 - 4
 #### Widget configuration
 
 1. Add an icon to the top level of your jig.
-2. The `jigId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/jiggrid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.&#x20;
+2. The `jigId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.&#x20;
 
 {% tabs %}
 {% tab title="jig-with-icon.jigx" %}
@@ -53,7 +53,7 @@ icon: person
 #### 2x2, 2x4, 4x2, and 4x4 widgets configured with content
 
 1. Widgets are configured in the YAML in a jig file and a unique `Widget Name` is provided that is referred to as the `widgetId`.
-2. The `jigId`, `widgetId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/jiggrid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.
+2. The `jigId`, `widgetId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.
 3. If inputs are required to pass data into the widget then configure them in the `grid-item` under the `inputs` property. Inputs are not mandatory and are dependant on the scenario.
 
 {% tabs %}
@@ -123,7 +123,7 @@ By default when tapping on a widget you are directed to the corresponding jig. Y
 
 There are various UI elements available to make your widget inviting and engaging to end users. Content or information can be shown on the surface of a widget. Here is a list of available content/information widgets:
 
-<table><thead><tr><th width="157.12109375">Widget content</th><th>Description</th></tr></thead><tbody><tr><td><a href="../../Understanding the basics/Jigx icons.md">icons</a></td><td>Choose an icon from thousands of available icons.</td></tr><tr><td><a href="https://docs.jigx.com/examples/actions-buttons">actions (buttons)</a></td><td>Configure a button with an action that executes.</td></tr><tr><td><a href="https://docs.jigx.com/examples/VeUB-avatar">avatar</a></td><td>Display an avatar on the widget.</td></tr><tr><td><a href="https://docs.jigx.com/examples/chart">chart</a></td><td>Configure a bar, line or pie chart to display on the widget.</td></tr><tr><td><a href="https://docs.jigx.com/examples/image">image</a></td><td>Configure an image to display on the widget, consider the <code>size:</code> of the widget to ensure the image displays as expected , 1x1 is not suitable for most images.</td></tr><tr><td><a href="https://docs.jigx.com/examples/list">list</a></td><td>Display a list of data in the widget with additional left and right elements if required.</td></tr><tr><td><a href="https://docs.jigx.com/examples/location">location</a></td><td>Show a location in a map on the widget with markers.</td></tr><tr><td><a href="https://docs.jigx.com/examples/status">status</a></td><td>Configure a visual representation of a status, such as goal status, or sales quarterly status.</td></tr><tr><td><a href="https://docs.jigx.com/examples/value">value</a></td><td>Show values and amounts on the widget, such as Sales target or number of orders to date.</td></tr></tbody></table>
+<table><thead><tr><th width="157.12109375">Widget content</th><th>Description</th></tr></thead><tbody><tr><td><a href="../../Understanding the basics/Jigx icons.md">icons</a></td><td>Choose an icon from thousands of available icons.</td></tr><tr><td><a href="https://docs.jigx.com/examples/readme/actions-buttons">actions (buttons)</a></td><td>Configure a button with an action that executes.</td></tr><tr><td><a href="https://docs.jigx.com/examples/VeUB-avatar">avatar</a></td><td>Display an avatar on the widget.</td></tr><tr><td><a href="https://docs.jigx.com/examples/chart">chart</a></td><td>Configure a bar, line or pie chart to display on the widget.</td></tr><tr><td><a href="https://docs.jigx.com/examples/image">image</a></td><td>Configure an image to display on the widget, consider the <code>size:</code> of the widget to ensure the image displays as expected , 1x1 is not suitable for most images.</td></tr><tr><td><a href="https://docs.jigx.com/examples/list">list</a></td><td>Display a list of data in the widget with additional left and right elements if required.</td></tr><tr><td><a href="https://docs.jigx.com/examples/location">location</a></td><td>Show a location in a map on the widget with markers.</td></tr><tr><td><a href="https://docs.jigx.com/examples/status">status</a></td><td>Configure a visual representation of a status, such as goal status, or sales quarterly status.</td></tr><tr><td><a href="https://docs.jigx.com/examples/value">value</a></td><td>Show values and amounts on the widget, such as Sales target or number of orders to date.</td></tr></tbody></table>
 
 1. To configure the widget content specify the `widget:` property at the bottom of the jig.
 2. Provide a `Widget name` for the widget that is referenced as the `widgetId`.

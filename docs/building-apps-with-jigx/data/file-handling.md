@@ -15,7 +15,7 @@ The `conversions` property allows you to configure the file conversion to the re
 
 <table><thead><tr><th width="159.19921875">Core structure</th><th></th></tr></thead><tbody><tr><td><code>conversions:</code></td><td><p>This holds an array of properties that should be converted. The following properties control the conversion:</p><ul><li><code>property:</code> The name of the property to convert.</li><li><code>from:</code> Format of the input data. It can be buffer, base64, data-uri, or local-uri.</li><li><code>to:</code> Format of the converted data. It can be base64, data-uri, buffer, or local-uri.</li><li><code>convertHeicToJpg:</code> When set to <code>true</code>, and the file being converted is HEIC, it is converted to JPG.</li></ul><p>Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression <code>conversions: =@ctx.datasources.conversions</code>, applicable to both local and global actions.</p></td></tr></tbody></table>
 
-Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field](https://docs.jigx.com/examples/media-field) or [avatar-field](https://docs.jigx.com/examples/avatar). When referencing files in jigs use the `.state.value` configuration. For example:
+Referencing files in a jig - You can access the file using the `state` of the components and properties in a jig, such as [media-field](https://docs.jigx.com/examples/readme/components/media-field) or [avatar-field](https://docs.jigx.com/examples/readme/components/avatar). When referencing files in jigs use the `.state.value` configuration. For example:
 
 * `file: =@ctx.components.profilePicture.state.value`
 * `image: =@ctx.components.image.state.value`
@@ -25,7 +25,7 @@ Referencing files in a jig - You can access the file using the `state` of the co
 * Conversions should be configured within the SQL and REST functions. When the conversion is configured in the function, it stores the data as the 'from' type in the datasource.
 * When conversions are done at the datasource level, they are still stored in the datasource as their original value. They are only converted after the fact when requested; however, the datasource value does not change.
 * Do not load data back from buffer using the Dynamic Data provider; the file will not show.
-* When saving images to Dynamic Data consider the file size. You can reduce the file size in the [media-field](https://docs.jigx.com/examples/media-field) by configuring the `imageQuality` property.
+* When saving images to Dynamic Data consider the file size. You can reduce the file size in the [media-field](https://docs.jigx.com/examples/readme/components/media-field) by configuring the `imageQuality` property.
 * Use `convertHeicToJpg` to ensure images are visible on iOS and Android devices. The property is available for REST and SQL functions, Dynamic Data and actions.
 
 {% hint style="warning" %}
@@ -428,4 +428,4 @@ conversions:
 
 ### See Also
 
-* [Example converting local-uri to buffer in SQL function](https://docs.jigx.com/examples/media-field#haYKX)
+* [Example converting local-uri to buffer in SQL function](https://docs.jigx.com/examples/readme/components/media-field#convert-files-in-sql-function)

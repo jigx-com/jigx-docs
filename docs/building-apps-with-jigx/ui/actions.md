@@ -10,12 +10,12 @@ Actions refer to specific controls or operations that respond to an event or inp
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
 * _Execution_ - actions to interact with data.
-  * [execute-entity](https://docs.jigx.com/examples/execute-entity)
+  * [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity)
   * [execute-entities](https://docs.jigx.com/examples/execute-entities)
-  * [submit-form](https://docs.jigx.com/examples/submit-form)
-  * [sync-entities](https://docs.jigx.com/examples/sync-entities) for getting data to the device.
+  * [submit-form](https://docs.jigx.com/examples/readme/actions/submit-form)
+  * [sync-entities](https://docs.jigx.com/examples/readme/actions/sync-entities) for getting data to the device.
 * _Navigational_ - actions used to navigate to another jig or Home Hub.
-  * [go-to](https://docs.jigx.com/examples/go-to)
+  * [go-to](https://docs.jigx.com/examples/readme/actions/go-to)
   * [go-back](https://docs.jigx.com/examples/go-back)
 * Actions to _open_ components.
   * [open-scanner](https://docs.jigx.com/examples/open-scanner)
@@ -24,7 +24,7 @@ Actions allow you to do many things in an app; below are the types of actions th
   * [open-map](https://docs.jigx.com/examples/open-map)
   * [open-app-setting](https://docs.jigx.com/examples/open-app-settings)
 * _State_ - actions used to determine a specific status or value of a property or component.
-  * [set-state](https://docs.jigx.com/examples/set-state)
+  * [set-state](https://docs.jigx.com/examples/readme/actions/set-state)
   * [reset-state](https://docs.jigx.com/examples/reset-state)
 * _Events_ - actions that execute after a user or device performs a trigger.
   * onRefresh
@@ -36,7 +36,7 @@ Actions allow you to do many things in an app; below are the types of actions th
   * onButtonPress (only on calendar jigs)
   * [onTableChanged](https://docs.jigx.com/examples/ontablechanged)
 
-For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/actions).
+For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/readme/actions).
 
 ## Where to add actions
 

@@ -113,7 +113,7 @@ query: SELECT id as accid, '$.Name', '$.BillingCountry' FROM [Account]
 
 The following examples with code snippets are provided:
 
-* [Create records in objects](https://docs.jigx.com/examples/create-records-in-objects)
-* [Delete records in objects](https://docs.jigx.com/examples/delete-records-in-objects)
-* [Save & update records in objects](https://docs.jigx.com/examples/save-and-update-records-in-objects)
-* [List records in objects](https://docs.jigx.com/examples/list-records-in-objects)
+* [Create records in objects](https://docs.jigx.com/examples/readme/data-providers/salesforce/create-records-in-objects)
+* [Delete records in objects](https://docs.jigx.com/examples/readme/data-providers/salesforce/delete-records-in-objects)
+* [Save & update records in objects](https://docs.jigx.com/examples/readme/data-providers/salesforce/save-and-update-records-in-objects)
+* [List records in objects](https://docs.jigx.com/examples/readme/data-providers/salesforce/list-records-in-objects)

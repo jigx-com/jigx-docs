@@ -68,7 +68,7 @@ Simply add your JSON definition or add the YAML in the editor window. Toggle bet
 
 <figure><img src="../../.gitbook/assets/JM-PublicJson.png" alt="Public Solution JSON"><figcaption><p>Public Solution JSON</p></figcaption></figure>
 
-In the example below there are two jigs of type [document](https://docs.jigx.com/examples/jigdocument). The documents are HTML pages for registering depending if you are a customer or employee. Each jig is configured with a 2x2 image widget.
+In the example below there are two jigs of type [document](https://docs.jigx.com/examples/readme/jig-types/jig_document). The documents are HTML pages for registering depending if you are a customer or employee. Each jig is configured with a 2x2 image widget.
 
 {% tabs %}
 {% tab title="public-solution-JSON" %}

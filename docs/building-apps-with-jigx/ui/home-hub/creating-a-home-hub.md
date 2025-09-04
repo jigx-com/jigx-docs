@@ -6,7 +6,7 @@ Creating a home screen (hub) for a mobile app can be a great way to enhance the 
 
 Steps to customize your Home Hub:
 
-1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) are great options to use.
+1. Create and configure a jig with the functionality and style that you require on the Home Hub. The [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) are great options to use.
 2. Use IntelliSense (ctrl+space) to open the list of available options in the index.jigx file, and select `tabs`.
 3. In the `jigId` property, use IntelliSense again to choose the jig you configured as your Home Hub.
 4. _Optional_ - Choose an icon that will represent the Home Hub. The selected icon is displayed as the first icon in the navigation bar at the bottom of the app.
@@ -439,4 +439,4 @@ children:
 * Adding videos directly to the Home Hub should be avoided if possible, instead add a gallery of images that when tapped open a jig with the video, use [grid-item](https://docs.jigx.com/examples/grid-item) to create the gallery.
 * Consider what you add to the Home Hub as it could impact the app's performance, for example, long lists with data.
 * The `onload` event must be configured on the index.jigx file for syncing data to the device.
-* When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/jiggrid) as they provide the broadest scope of components, actions, and widgets.
+* When deciding on the type of jig to use as the Home Hub it is recommended to use the [jig.default](https://docs.jigx.com/examples/jigdefault) or [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) as they provide the broadest scope of components, actions, and widgets.

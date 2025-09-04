@@ -14,7 +14,7 @@ The home screen or [Home Hub](../../building-apps-with-jigx/ui/home-hub/home-hub
 #### Considerations
 
 * Do you want a Home Hub with just widgets only or a custom home screen?
-* The Home Hubis the entry point to the app, making it appealing by adding interactive elements. You can use [video-player](https://docs.jigx.com/examples/video-player) or [carousel](https://docs.jigx.com/examples/carousel) for visual interaction that includes videos, announcements, news clips, and more.
+* The Home Hubis the entry point to the app, making it appealing by adding interactive elements. You can use [video-player](https://docs.jigx.com/examples/readme/components/video-player) or [carousel](https://docs.jigx.com/examples/readme/components/carousel) for visual interaction that includes videos, announcements, news clips, and more.
 
 #### Tips
 

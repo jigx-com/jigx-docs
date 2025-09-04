@@ -19,7 +19,7 @@ updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
 
 1. Set the **ID** to be stored in the solution state, using the `set-state` action. The ID is the least amount of data required to identify each job uniquely. The ID is used throughout the solution to reference the necessary data in each of the solution's jigs.
 2. In the datasource queries use the ID to return the required data.
-   * In a [global datasource ](https://docs.jigx.com/datasources#gCN9o)query reference the data required. The global datasource is referenced in each jig where the data is required.
+   * In a [global datasource](https://docs.jigx.com/datasources#gCN9o) query reference the data required. The global datasource is referenced in each jig where the data is required.
    * In the individual jig 's [datasource](https://docs.jigx.com/datasources#2AD3k) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
 
 {% tabs %}
@@ -67,8 +67,8 @@ datasources:
 State resources and code samples:
 
 * [Solution (Global) State](../logic/state.md)
-* [Set-state](https://docs.jigx.com/examples/set-state)
-* [Reset-state](https://docs.jigx.com/examples/reset-states)
+* [Set-state](https://docs.jigx.com/examples/readme/actions/set-state)
+* [Reset-state](https://docs.jigx.com/examples/readme/actions/reset-state)
 * [Examples of state](../logic/state.md)
 
 ### When to use inputs

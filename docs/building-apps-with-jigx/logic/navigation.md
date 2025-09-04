@@ -1,8 +1,8 @@
 # Navigation
 
-Navigation allows you to flow through the app. Whenever you [go-to](https://docs.jigx.com/examples/go-to) a jig, the jig is added to the history, this allows you to go back and visit the jigs you visited before, and either show the history (data) on the UI or a new (clear) jig. This is helpful in complex flows, for example, adding multiple lines to an invoice and then submitting the invoice, or adding the details for each guest in a booking.
+Navigation allows you to flow through the app. Whenever you [go-to](https://docs.jigx.com/examples/readme/actions/go-to) a jig, the jig is added to the history, this allows you to go back and visit the jigs you visited before, and either show the history (data) on the UI or a new (clear) jig. This is helpful in complex flows, for example, adding multiple lines to an invoice and then submitting the invoice, or adding the details for each guest in a booking.
 
-The [go-to](https://docs.jigx.com/examples/go-to) action is used to configure the flow of jigs in the app using the `behaviour` property. With the `behaviour` you determine if you want to push the screen into the app history, by using the `new` value, or show the one you already have in history by using the `existing` value.
+The [go-to](https://docs.jigx.com/examples/readme/actions/go-to) action is used to configure the flow of jigs in the app using the `behaviour` property. With the `behaviour` you determine if you want to push the screen into the app history, by using the `new` value, or show the one you already have in history by using the `existing` value.
 
 **New** - creates a sequential stack showing the progression of navigation. Presents a new screen you are navigating to, allowing you to capture the next data set to add to the stack currently in the history. Typically, this would be used to capture the next line in an invoice. \
 
@@ -17,7 +17,7 @@ The [go-to](https://docs.jigx.com/examples/go-to) action is used to configure th
 
 {% stepper %}
 {% step %}
-In the [go-to](https://docs.jigx.com/examples/go-to) action use the `behaviour` property to select `new` or `existing`.&#x20;
+In the [go-to](https://docs.jigx.com/examples/readme/actions/go-to) action use the `behaviour` property to select `new` or `existing`.&#x20;
 {% endstep %}
 
 {% step %}

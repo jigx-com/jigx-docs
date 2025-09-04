@@ -6,7 +6,7 @@ Jigx easily integrates with your Salesforce instance, allowing you to share data
 
 {% columns %}
 {% column %}
-The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/LQFt-list), [widgets](salesforce.md), or [steppers](https://docs.jigx.com/examples/stepper).
+The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/readme/components/list), [widgets](salesforce.md), or [steppers](https://docs.jigx.com/examples/stepper).
 {% endcolumn %}
 
 {% column %}

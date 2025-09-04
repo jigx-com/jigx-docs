@@ -36,10 +36,10 @@ First step in creating Dynamic Data for a solution is to create the tables that 
 
 The following examples with code snippets are provided:
 
-* [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
-* [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
-* [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
-* [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data) (deletes records in the Dynamic Data table)
+* [Creating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/creating-dynamic-data)
+* [Reading Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/reading-dynamic-data)
+* [Updating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/updating-dynamic-data)
+* [Deleting Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/deleting-dynamic-data) (deletes records in the Dynamic Data table)
 
 ## See also
 

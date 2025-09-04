@@ -263,7 +263,7 @@ Jigx converts `@ctx.` to `$$.` when executing expressions in jsonata
 
 ### Update multiple records in execute-entities (operators > transform)
 
-To update multiple records using the [Execute-entities](https://docs.jigx.com/examples/execute-entities) action, you can use the expression below.
+To update multiple records using the [Execute-entities](https://docs.jigx.com/examples/readme/actions/execute-entities) action, you can use the expression below.
 
 {% code overflow="wrap" %}
 ```yaml

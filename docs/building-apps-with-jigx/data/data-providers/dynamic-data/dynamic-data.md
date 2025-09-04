@@ -1,6 +1,6 @@
 # Dynamic Data
 
-Apps need data, while [static](https://docs.jigx.com/examples/static) allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.
+Apps need data, while [static](https://docs.jigx.com/examples/readme/datasource/static) allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.
 
 The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record.
 
@@ -53,7 +53,7 @@ To create and use Dynamic data see the following:
 
 The following examples with code snippets are provided:
 
-* [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
-* [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
-* [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
-* [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)
+* [Creating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/creating-dynamic-data)
+* [Reading Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/reading-dynamic-data)
+* [Updating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/updating-dynamic-data)
+* [Deleting Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/deleting-dynamic-data)

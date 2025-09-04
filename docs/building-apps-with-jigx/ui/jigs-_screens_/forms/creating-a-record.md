@@ -21,7 +21,7 @@ children:
 
 We need to add a _form_ component to our Jig, as it will be the container for the form input components.
 
-1. Go ahead and use IntelliSense (**Ctrl+Space**) to add a [form](https://docs.jigx.com/examples/form) component to the `children` option of your Jig.
+1. Go ahead and use IntelliSense (**Ctrl+Space**) to add a [form](https://docs.jigx.com/examples/readme/components/form) component to the `children` option of your Jig.
 2. Note the empty `instanceId` option. This is the unique identifier of your form. Set it to _simple-form_ as we need it later to submit the form.
 
 {% code title="form.jigx" %}
@@ -41,7 +41,7 @@ children:
 
 ## Adding form input components to the form
 
-You can now go ahead and add the first input field to your form. Use **Ctrl+Space** to add a [text-field](https://docs.jigx.com/examples/text-field) to the `children` option of your form component.
+You can now go ahead and add the first input field to your form. Use **Ctrl+Space** to add a [text-field](https://docs.jigx.com/examples/readme/components/text-field) to the `children` option of your form component.
 
 Two options are important for every form field:
 

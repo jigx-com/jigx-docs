@@ -44,4 +44,4 @@ Elements of this approach can be combined with the recommended approach above.
 
 ### Dynamically syncing data
 
-When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments for a message, there can be zero, one or more attachments, or files/documents stored in a OneDrive directory. It is necessary to dynamically specify a list of the entities and function+parameters to return from the database using an expression. See [Dynamically sync multiple entities](https://docs.jigx.com/examples/sync-entities#6vfAn) for more information.
+When building a solution, the number of entities to sync and the parameters for each are not always known; for example, when syncing the attachments for a message, there can be zero, one or more attachments, or files/documents stored in a OneDrive directory. It is necessary to dynamically specify a list of the entities and function+parameters to return from the database using an expression. See [Dynamically sync multiple entities](https://docs.jigx.com/examples/readme/actions/sync-entities#dynamically-sync-multiple-entities) for more information.

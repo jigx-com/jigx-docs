@@ -300,4 +300,4 @@ A local REST function call allows the mobile app to perform all the processing l
 
 ### See Also
 
-* [REST examples](https://docs.jigx.com/examples/rest)
+* [REST examples](https://docs.jigx.com/examples/readme/data-providers/rest)

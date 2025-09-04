@@ -14,7 +14,7 @@ Jigx does not recommend storing images in Dynamic Data (via any conversion), as 
 
 You can create columns in the table by creating a jig, then define the columns you require in the table by using the Dynamic Data provider's `create` or `save` method. Here are scenarios commonly used to create columns and data from a jig.
 
-### Create a [**form**](https://docs.jigx.com/examples/form) and use the [**submit form**](https://docs.jigx.com/examples/submit-form) action
+### Create a [**form**](https://docs.jigx.com/examples/readme/components/form) and use the [**submit form**](https://docs.jigx.com/examples/readme/actions/submit-form) action
 
 In this scenario, the `formId` in the `component.form` is used in the `submit-form` action to get context to the property `instanceId`. Each value used in the `instanceId` becomes the column's name in the table. The `entity` property specifies the table to add the columns and data to.
 
@@ -25,7 +25,7 @@ In this scenario, the `formId` in the `component.form` is used in the `submit-fo
 <figure><img src="../../../../.gitbook/assets/DD-column-form.png" alt="Form creates column and data record"><figcaption><p>Form creates column and data record</p></figcaption></figure>
 
 1. Add a `component.form` to a jig and give it a `formId`.
-2. Add any of the available form properties, such as [text-field](https://docs.jigx.com/examples/text-field), [date-picker](https://docs.jigx.com/examples/date-picker), [number-field](https://docs.jigx.com/examples/number-field).
+2. Add any of the available form properties, such as [text-field](https://docs.jigx.com/examples/readme/components/text-field), [date-picker](https://docs.jigx.com/examples/readme/components/date-picker), [number-field](https://docs.jigx.com/examples/readme/components/number-field).
 3. Add the `submit.form` action.
 4. Specify the same `formId` used in the `component.form`.
 5. Use the `DATA_PROVIDER_DYNAMIC` with the `create` or `save` method.
@@ -104,7 +104,7 @@ actions:
 ```
 {% endcode %}
 
-### Use [execute-entity](https://docs.jigx.com/examples/execute-entity) or [execute-entities](https://docs.jigx.com/examples/execute-entities) action to create columns and data records
+### Use [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity) or [execute-entities](https://docs.jigx.com/examples/execute-entities) action to create columns and data records
 
 In this scenario you can use actions in a jig that interact with data to add columns and data records. The columns and data are configured in the `data:` property the action.Use the following actions with the Dynamic Data provider's `create` and `save` methods:
 
@@ -177,10 +177,10 @@ If you have pre-existing data or a large data set with multiple records to add t
 
 The following examples with code snippets are provided:
 
-* [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
-* [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
-* [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
-* [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)
+* [Creating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/creating-dynamic-data)
+* [Reading Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/reading-dynamic-data)
+* [Updating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/updating-dynamic-data)
+* [Deleting Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/deleting-dynamic-data)
 
 ## See Also
 

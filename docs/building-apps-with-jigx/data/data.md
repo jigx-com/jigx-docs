@@ -37,4 +37,4 @@ This section covers data concepts, lifecycles, syncing and loading data, and dat
 
 ### Entities
 
-Entities refer to tables in data providers or datasources where data is saved, created, updated, read, and deleted. [Actions](../ui/actions.md) provide the ability to execute the CRUD methods, sync data, and refresh data on individual rows [execute-entity](https://docs.jigx.com/examples/execute-entity) or multiple rows [execute-entities](https://docs.jigx.com/examples/execute-entities).
+Entities refer to tables in data providers or datasources where data is saved, created, updated, read, and deleted. [Actions](../ui/actions.md) provide the ability to execute the CRUD methods, sync data, and refresh data on individual rows [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity) or multiple rows [execute-entities](https://docs.jigx.com/examples/readme/actions/execute-entities).

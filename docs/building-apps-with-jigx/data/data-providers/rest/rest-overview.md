@@ -281,5 +281,5 @@ Jigx will delete all rows from the table matching the `forRowsWithValues` or `fo
 
 ### See Also
 
-* [REST examples](https://docs.jigx.com/examples/rest)
+* [REST examples](https://docs.jigx.com/examples/readme/data-providers/rest)
 * [Offline remote data handling](../../offline-remote-data-handling.md)

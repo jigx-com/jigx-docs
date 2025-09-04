@@ -305,4 +305,4 @@ payment_status: "{status, select, Pending {ausstehende Zahlung} other {bezahlt}}
 
 The following examples with code snippets are provided:
 
-* [Localization (Translation)](https://docs.jigx.com/examples/localization-translation)
+* [Localization (Translation)](https://docs.jigx.com/examples/readme/localization-_translation_)

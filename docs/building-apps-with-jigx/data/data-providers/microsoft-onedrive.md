@@ -23,7 +23,7 @@ The _Shared_ folder operations rely on permissions granted by the person who sha
 * **Folder sync** - syncs metadata and not file contents
 * **Location paths** - shared and my files (root)
 * **Methods** - create, update, save, delete, and download
-* **Download to documents folder** (private to Jigx app) - depends on the device's operating system. See [device storage location ](https://docs.jigx.com/examples/download-a-file#6NGR6)for the exact location
+* **Download to documents folder** (private to Jigx app) - depends on the device's operating system. See [device storage location](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/download-a-file#device-storage-location) for the exact location
 
 ### Specifying the file path
 
@@ -36,12 +36,12 @@ There are two supported base entities myfiles and shared.
 
 ### Supported methods:
 
-* [Create](https://docs.jigx.com/examples/create-a-file)
-* [Update](https://docs.jigx.com/examples/updatesave-a-file)
+* [Create](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/create-a-file)
+* [Update](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/updatesave-a-file)
 * **Save** - Using the `method: save` will create a new file if the filename does not exist, otherwise, the save will function as an update method.
-* [Delete](https://docs.jigx.com/examples/delete-a-file)
-* [List](https://docs.jigx.com/examples/list-files)
-* [Download](https://docs.jigx.com/examples/download-a-file)
+* [Delete](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/delete-a-file)
+* [List](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/list-files)
+* [Download](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/download-a-file)
 
 ### Properties:
 
@@ -54,8 +54,8 @@ There are two supported base entities myfiles and shared.
 
 The following examples with code snippets are provided
 
-* [Create a file](https://docs.jigx.com/examples/create-a-file)
-* [Update/Save a file](https://docs.jigx.com/examples/updatesave-a-file)
-* [Delete a file](https://docs.jigx.com/examples/delete-a-file)
-* [List files](https://docs.jigx.com/examples/list-files)
-* [Download a file](https://docs.jigx.com/examples/download-a-file)
+* [Create a file](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/create-a-file)
+* [Update/Save a file](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/updatesave-a-file)
+* [Delete a file](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/delete-a-file)
+* [List files](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/list-files)
+* [Download a file](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/download-a-file)

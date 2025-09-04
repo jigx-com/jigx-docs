@@ -190,8 +190,8 @@ Updating multiple records in a single REST call helps optimize API usage by redu
 * **functionParameters**: Use this for static values that are consistent across all records.
 * **data property**: Use this for dynamic values that vary per record.
 
-For more information see [Update multiple records in a single REST call](https://docs.jigx.com/examples/update-multiple-records-in-a-single-rest-call).
+For more information see [Update multiple records in a single REST call](https://docs.jigx.com/examples/readme/data-providers/rest/create-an-app-using-rest-apis/update-multiple-records-in-a-single-rest-call).
 
 ## See Also
 
-* [REST examples](https://docs.jigx.com/examples/rest)
+* [REST examples](https://docs.jigx.com/examples/readme/data-providers/rest)

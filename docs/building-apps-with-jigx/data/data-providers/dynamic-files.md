@@ -13,7 +13,7 @@ For example:
 
 * The `create` method of the `Dynamic Provider` uploads files to Amazon S3.
 * One file is linked/associated with one record, which means that the `execute-entity` action is used for the upload.
-* Use the [media-field](https://docs.jigx.com/examples/media-field) component to select files for upload or upload a file to the record in _Management>solution>data>table>record>file_.
+* Use the [media-field](https://docs.jigx.com/examples/readme/components/media-field) component to select files for upload or upload a file to the record in _Management>solution>data>table>record>file_.
 * Specify a `localPath` for the file.
 * Specify a `fileName` with the file extension. If a `fileName` is not provided, the system extracts it from the `localPath`.
 
@@ -293,7 +293,7 @@ Files and their detail are visible in Management and are associated with a recor
 
 ## Examples and code snippets
 
-1. [Upload a file](https://docs.jigx.com/examples/upload-a-file)
-2. [Download a file](https://docs.jigx.com/examples/download-a-file)
-3. [Delete a file](https://docs.jigx.com/examples/skrI-delete-a-file)
-4. [Status of a file](https://docs.jigx.com/examples/status-of-a-file)
+1. [Upload a file](https://docs.jigx.com/examples/readme/data-providers/dynamic-files/upload-a-file)
+2. [Download a file](https://docs.jigx.com/readme/data-providers/dynamic-files/download-a-file)
+3. [Delete a file](https://docs.jigx.com/examples/readme/data-providers/dynamic-files/delete-a-file)
+4. [Status of a file](https://docs.jigx.com/examples/readme/data-providers/dynamic-files/status-of-a-file)

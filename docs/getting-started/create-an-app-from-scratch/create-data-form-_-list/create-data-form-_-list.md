@@ -2,7 +2,7 @@
 
 ## Overview
 
-Learn how to build [forms](../../../building-apps-with-jigx/ui/jigs-_screens_/forms/forms.md) that create a new customer record that gets stored in the built-in Jigx data store called [Dynamic Data](../../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md). The data record is created in the data store by using the submit [action](https://docs.jigx.com/examples/actions). Once the record is created you can view, edit and list the data records using queries that return the record details from SQLite. For more information on the supported data providers read the [Data](../../../building-apps-with-jigx/data/data.md) section.
+Learn how to build [forms](../../../building-apps-with-jigx/ui/jigs-_screens_/forms/forms.md) that create a new customer record that gets stored in the built-in Jigx data store called [Dynamic Data](../../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md). The data record is created in the data store by using the submit [action](https://docs.jigx.com/examples/readme/actions). Once the record is created you can view, edit and list the data records using queries that return the record details from SQLite. For more information on the supported data providers read the [Data](../../../building-apps-with-jigx/data/data.md) section.
 
 {% hint style="info" %}
 There are **two methods** to save data collected on a form to a database.

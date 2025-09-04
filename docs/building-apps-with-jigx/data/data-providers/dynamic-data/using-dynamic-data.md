@@ -6,9 +6,9 @@ Dynamic Data can be:
 
 * **Protected** - add Row Level Security (RLS) through security policies and authorization. For more information, see [Row Level Security](../../../../administration/solutions/row-level-security/row-level-security.md), [Data policies](../../../../administration/solutions/row-level-security/data-policies.md) and [Authorized users](../../../../administration/solutions/row-level-security/authorized-users.md).
 * **Created** - create new records in Dynamic Data tables, for example, adding new employees. For code examples and snippets, see [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data).
-* **Read** - Read the data to populate a [form](https://docs.jigx.com/examples/form), [list](https://docs.jigx.com/examples/LQFt-list), show a [location](https://docs.jigx.com/examples/foRN-location) and more. For code examples and snippets, see [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data).
-* **Updated** -update existing records in Dynamic Data tables, for example, updating an employee's address. For code examples and snippets, see [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data).
-* **Deleted** - delete existing records in Dynamic Data tables, for example, remove old contacts or out-of-stock products. For code examples and snippets, see [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data).
+* **Read** - Read the data to populate a [form](https://docs.jigx.com/examples/readme/components/form), [list](https://docs.jigx.com/examples/readme/components/list), show a [location](https://docs.jigx.com/examples/readme/components/location) and more. For code examples and snippets, see [Reading Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/reading-dynamic-data).
+* **Updated** -update existing records in Dynamic Data tables, for example, updating an employee's address. For code examples and snippets, see [Updating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/updating-dynamic-data).
+* **Deleted** - delete existing records in Dynamic Data tables, for example, remove old contacts or out-of-stock products. For code examples and snippets, see [Deleting Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/deleting-dynamic-data).
 
 ### As a datasource
 
@@ -79,10 +79,10 @@ children:
 
 **Execution** actions are designed to interact with specifically with data. The following actions can be used with the Dynamic Data provider either to create, update, delete, or sync data.
 
-* [execute-entity](https://docs.jigx.com/examples/execute-entity)
-* [execute-entities](https://docs.jigx.com/examples/execute-entities)
-* [submit-form](https://docs.jigx.com/examples/submit-form)
-* [sync-entities](https://docs.jigx.com/examples/sync-entities) for getting data to the device.
+* [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity)
+* [execute-entities](https://docs.jigx.com/examples/readme/actions/execute-entities)
+* [submit-form](https://docs.jigx.com/examples/readme/actions/submit-form)
+* [sync-entities](https://docs.jigx.com/examples/readme/actions/sync-entities) for getting data to the device.
 
 **Events** actions execute after an event is performed by a user or device. This event can be configured to use the Dynamic Data provider, for example, when refreshing a list jigby pulling down (onRefresh) use the `action.sync-entities` with the provider to refresh the data in the list. The following event actions are available.
 
@@ -94,13 +94,13 @@ children:
 * onDelete
 * onButtonPress (only on calendar jigs)
 
-For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/actions).
+For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/readme/actions).
 
 ### Examples and code snippets
 
 The following examples with code snippets are provided:
 
-* [Creating Dynamic Data](https://docs.jigx.com/examples/creating-dynamic-data)
-* [Reading Dynamic Data](https://docs.jigx.com/examples/reading-dynamic-data)
-* [Updating Dynamic Data](https://docs.jigx.com/examples/updating-dynamic-data)
-* [Deleting Dynamic Data](https://docs.jigx.com/examples/deleting-dynamic-data)
+* [Creating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/creating-dynamic-data)
+* [Reading Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/reading-dynamic-data)
+* [Updating Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/updating-dynamic-data)
+* [Deleting Dynamic Data](https://docs.jigx.com/examples/readme/data-providers/dynamic-data/deleting-dynamic-data)

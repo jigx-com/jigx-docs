@@ -57,7 +57,7 @@ You can define your solution state to store objects and values temporarily and t
 
 ### Write solution state
 
-Define your state key in the solution, either in a jig or in the index.jigx file. The value can be any value or object, and you can access it anywhere within your solution. The set-solution-state and [set-state](https://docs.jigx.com/examples/set-state) action are easy ways to define the solution state.
+Define your state key in the solution, either in a jig or in the index.jigx file. The value can be any value or object, and you can access it anywhere within your solution. The set-solution-state and [set-state](https://docs.jigx.com/examples/readme/actions/set-state) action are easy ways to define the solution state.
 
 ### Read solution state
 
@@ -222,7 +222,7 @@ You can use actions to set or reset a state either in a solution, jig, or compon
 
 The following **set-state** actions are available:
 
-* [action.set-state](https://docs.jigx.com/examples/set-state)
+* [action.set-state](https://docs.jigx.com/examples/readme/actions/set-state)
 * `action.set-solution-state`
 * `action.set-jig-state`
 * `action.set-custom-component-state`
@@ -348,11 +348,11 @@ onFocus:
 
 ## Examples of state
 
-The table below provides links to various examples of configuring state in the [jigx-samples](https://docs.jigx.com/examples/Setting-up-your-solution).
+The table below provides links to various examples of configuring state in the [jigx-samples](https://docs.jigx.com/examples/readme/setting-up-your-solution).
 
 <table><thead><tr><th width="267">Scenario</th><th width="165.6328125">Key</th><th>GitHub jigx-samples examples</th></tr></thead><tbody><tr><td>Set an item to active with onPress</td><td>ActiveItemId</td><td>List with active items</td></tr><tr><td>searchText (component level)</td><td>searchText</td><td>Dropdown with search</td></tr><tr><td>filter and searchText (jig level)</td><td>filter, searchText</td><td>List with filter and search</td></tr><tr><td>Saving data to a provider</td><td>value</td><td>Update service form</td></tr><tr><td>Evaluating an amount</td><td>amount</td><td>Product item maximum tag</td></tr><tr><td>Evaluating if an item is selected</td><td>checked</td><td>Highlight selected list of cleaning services</td></tr><tr><td>Evaluating selected items</td><td>selected</td><td>Evaluate progress to show helper and error text</td></tr><tr><td>Reset a form</td><td>reset-state (action)</td><td>Reset a form</td></tr><tr><td>Set state on an active item in a list when the onPress event executes</td><td>set-state (action)</td><td>Color a chosen item when pressing on an item in a list</td></tr></tbody></table>
 
 ## See Also
 
-* [set-state](https://docs.jigx.com/examples/set-state)
+* [set-state](https://docs.jigx.com/examples/readme/actions/set-state)
 * [reset-state](https://docs.jigx.com/examples/reset-state)
