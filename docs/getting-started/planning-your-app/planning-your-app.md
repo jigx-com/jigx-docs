@@ -3,6 +3,20 @@ title: Planning your app
 slug: pALd-planning-your-a
 createdAt: Mon Jun 05 2023 14:24:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Sep 27 2023 18:07:14 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Planning your app

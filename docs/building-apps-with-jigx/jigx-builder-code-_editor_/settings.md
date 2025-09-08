@@ -3,6 +3,20 @@ title: Settings
 slug: BAsJ-settings
 createdAt: Tue Jun 20 2023 08:32:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:12:21 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Settings

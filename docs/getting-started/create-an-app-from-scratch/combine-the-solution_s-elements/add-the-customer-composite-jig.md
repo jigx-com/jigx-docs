@@ -3,6 +3,20 @@ title: Add the customer composite jig
 slug: M7Ir-add-the-customer-composite-jig
 createdAt: Tue Apr 11 2023 17:23:45 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 01 2023 06:01:13 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Add the customer composite jig

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # App Supported Versions
 
 The following matrix outlines the supported operating systems and version requirements for the mobile app, ensuring compatibility, performance, and continued support.

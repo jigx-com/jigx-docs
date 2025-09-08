@@ -3,6 +3,20 @@ title: Publish your project
 slug: vfkR-publish-your-project
 createdAt: Wed Apr 12 2023 11:27:41 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:05:15 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Publish your project

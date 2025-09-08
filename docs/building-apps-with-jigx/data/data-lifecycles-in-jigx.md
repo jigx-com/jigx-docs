@@ -3,6 +3,20 @@ title: Data lifecycles in Jigx
 slug: p4Z_-data-lifecycles-in-jigx
 createdAt: Sun Nov 20 2022 19:03:54 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 09:27:17 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Data lifecycles in Jigx

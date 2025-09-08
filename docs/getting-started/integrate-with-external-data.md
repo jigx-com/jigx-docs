@@ -3,6 +3,20 @@ title: Integrate with external data
 slug: rij_-integrate-wit
 createdAt: Fri May 10 2024 12:45:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Jul 16 2024 12:33:02 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Integrate with external data

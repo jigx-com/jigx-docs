@@ -3,6 +3,20 @@ title: Debugging
 slug: pSqd-debugging-and-testing
 createdAt: Tue Jun 20 2023 08:34:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:18:17 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Debugging

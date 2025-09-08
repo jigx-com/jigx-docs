@@ -3,6 +3,20 @@ title: Run the updated solution
 slug: I3FQ-run-the-updated-solution
 createdAt: Tue Apr 11 2023 11:59:16 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Oct 31 2023 12:30:34 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Run the updated solution

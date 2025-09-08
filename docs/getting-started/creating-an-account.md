@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Creating an account
 
 To build and use Jigx solutions you require a Jigx account. You can create an account by registering on the [https://www.jigx.com/](https://www.jigx.com/) Jigx website or via an invitation from your organization. Follow the steps below to create an account.

@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Data Providers
 
 Utilize the data providers available in Jigx to seamlessly integrate with data from diverse sources, including Jigx's dynamic data store. These providers efficiently handle data inputs and deliver accurate data outputs.

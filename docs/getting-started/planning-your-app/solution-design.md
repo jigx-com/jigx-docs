@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Solution Design
 
 Next, you are ready to map out the requirements of the app. Each requirement or must-have will be represented on a screen in the app. This is the first visual representation of all the screens and will help uncover usability issues. This is where you get to decide how many screens there will be, what each will look like, and put them in a logical order for navigational purposes.

@@ -3,6 +3,20 @@ title: Add the form & list to the Home Hub
 slug: K6to-add-the-form-and-list-to-the-home-hub
 createdAt: Wed Apr 12 2023 13:49:39 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:33:42 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Add the form & list to the Home Hub

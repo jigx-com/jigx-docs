@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Testing Plan
 
 Test plans provide a baseline against which the actual testing activities can be evaluated. It helps track progress, measure the effectiveness of the app design, and identify any usability issues, errors, or missing functionality and avoid a compromised user experience.
@@ -14,5 +31,4 @@ Test plans provide a baseline against which the actual testing activities can be
 
 ### Tip
 
-- Use placeholders when the app is new; you know that lists will be empty until they are populated with data. See Tips and Tricks - Use placeholders.
-
+* Use placeholders when the app is new; you know that lists will be empty until they are populated with data. See Tips and Tricks - Use placeholders.

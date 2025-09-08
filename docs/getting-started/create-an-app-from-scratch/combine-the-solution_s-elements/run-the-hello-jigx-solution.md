@@ -3,6 +3,20 @@ title: Run the Hello Jigx Solution
 slug: Se-E-run-the-hello-jigx-solution
 createdAt: Tue Apr 11 2023 17:27:19 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:27:14 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Run the Hello Jigx Solution

@@ -3,6 +3,20 @@ title: Data
 slug: aI2F-data
 createdAt: Fri Jun 17 2022 09:30:01 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 26 2024 12:20:36 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Data

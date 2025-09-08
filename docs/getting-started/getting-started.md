@@ -4,6 +4,20 @@ slug: iSLpqRdRyS7LE9u-_dZkG
 createdAt: Tue Mar 28 2023 04:03:29 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Jan 11 2024 09:25:12 GMT+0000 (Coordinated Universal Time)
 description: Jigx account creation, Install the Jigx builder and steps by step tutorial
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Getting started

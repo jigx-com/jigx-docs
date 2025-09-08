@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Customize the Hello-Jigx solution
 
 Now you have built a functioning solution that works, but you can do much more with Jigx. In this section, you will customize three of the widgets on the Home Hub. You will learn how easy it is to work with the Jigx components to create, style, and customize the app that works for your organization.

@@ -3,6 +3,20 @@ title: Offline Solutions
 slug: 8G5Q-offline-solutions
 createdAt: Tue Jun 07 2022 09:48:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 09:38:53 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Offline Solutions

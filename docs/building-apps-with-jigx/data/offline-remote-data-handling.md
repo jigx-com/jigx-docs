@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Offline remote data handling
 
 Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. Queue operations provide the functionality needed when the device regains network connectivity and manages a sequence of elements in a specific order. The commands in the queue can be manipulated to reduce the number of calls to the remote data store.
@@ -1063,8 +1080,6 @@ actions:
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value    
 ```
-
-
 {% endtab %}
 
 {% tab title="rest-update-customer.jigx (function)" %}
@@ -1858,7 +1873,7 @@ inputTransform: |
 
 ### Clear all commands in the queue for record
 
-In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`.&#x20;
+In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`.
 
 {% code title="clear-customer-updates.jigx" %}
 ```yaml

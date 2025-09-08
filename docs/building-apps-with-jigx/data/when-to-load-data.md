@@ -3,6 +3,20 @@ title: When to load data
 slug: x1jT-when-to-load-data
 createdAt: Sun Nov 20 2022 19:31:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 05 2024 13:31:22 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # When to load data

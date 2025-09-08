@@ -3,6 +3,20 @@ title: Edit a customer record
 slug: R20--edit-a-customer-record
 createdAt: Wed Apr 12 2023 11:27:43 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 13:41:12 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Edit a customer record

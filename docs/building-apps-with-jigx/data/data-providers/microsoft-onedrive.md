@@ -3,6 +3,20 @@ title: Microsoft OneDrive
 slug: ew-X-onedrive
 createdAt: Thu May 25 2023 15:27:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Nov 23 2023 07:36:14 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Microsoft OneDrive

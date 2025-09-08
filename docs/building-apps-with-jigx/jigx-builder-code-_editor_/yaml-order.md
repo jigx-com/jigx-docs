@@ -3,6 +3,20 @@ title: YAML order
 slug: k3-h-yaml
 createdAt: Tue Dec 12 2023 12:00:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:42:25 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # YAML order

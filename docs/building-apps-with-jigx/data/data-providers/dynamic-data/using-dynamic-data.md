@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Using Dynamic Data
 
 Once you have created the Dynamic Data [tables](creating-tables.md) as well as, [columns and data records](creating-columns-data-records.md) the data can be used in multiple places in a solution.

@@ -3,6 +3,20 @@ title: Creating tables
 slug: JGu8-defining-dynamic-data-tables
 createdAt: Thu Jul 14 2022 09:36:46 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 29 2023 09:04:12 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Creating tables

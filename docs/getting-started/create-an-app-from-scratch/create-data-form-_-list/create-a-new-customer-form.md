@@ -3,6 +3,20 @@ title: Create a new customer form
 slug: Yy55-create-a-new-customer-form
 createdAt: Wed Apr 12 2023 11:27:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 13:36:50 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create a new customer form

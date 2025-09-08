@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Deleting tables
 
 Deleting a table is a critical operation that should be performed with caution. Before proceeding with the deletion, please back up the table data, as it cannot be recovered once deleted.

@@ -3,6 +3,20 @@ title: Edit the index.jigx file
 slug: fK6K-edit-the-indexjigx-file
 createdAt: Tue Apr 11 2023 17:26:11 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:25:29 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Edit the index file

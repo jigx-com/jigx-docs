@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Install the Jigx Builder
 
 With Jigx, you build native mobile solutions in [Microsoft Visual Studio Code](https://code.visualstudio.com/), a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the Jigx Builder, an extension that allows you to build rapidly, test, and publish Jigx mobile apps.

@@ -3,6 +3,20 @@ title: Run the solution in the app
 slug: S0vA-run-the-solution-in-the-app
 createdAt: Tue Apr 04 2023 06:22:05 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri May 12 2023 07:38:39 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Run the solution in the app

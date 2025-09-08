@@ -3,6 +3,20 @@ title: Home screen
 slug: HGQw-home-screen
 createdAt: Wed Jul 12 2023 18:38:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:24:35 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Home screen

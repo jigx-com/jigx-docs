@@ -3,6 +3,20 @@ title: Post App launch
 slug: eVQ9-post-app-launch
 createdAt: Wed Jul 12 2023 18:38:15 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Jul 18 2023 06:32:01 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Post App launch

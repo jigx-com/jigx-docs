@@ -3,6 +3,20 @@ title: Publish the Hello Jigx solution
 slug: FD_y-publish-the-hello-jigx-solution
 createdAt: Tue Apr 11 2023 17:26:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 01 2023 06:51:53 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Publish the Hello Jigx Solution

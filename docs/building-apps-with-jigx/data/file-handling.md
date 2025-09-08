@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # File handling
 
 Jigx stores files as local files on the device and returns the file's URI as the default value. When saving these files to a datasource, you must convert files from the local-uri to base64, data-uri, or buffer. The opposite is true when handling the files returned from the datasource; you must convert them from their saved state (base64, data-uri, or buffer) to a local-uri.
@@ -9,7 +26,7 @@ Type of files:
 
 Image files can be used in the following functionality:
 
-<table><thead><tr><th width="238.828125">Data</th><th width="289.21484375">Conversion configuration</th><th>Result</th></tr></thead><tbody><tr><td>REST Provider calls with files</td><td>Add the conversion to the REST function</td><td>GET - incoming <br>SAVE - outgoing <br>CREATE - outgoing <br>UPDATE - outgoing</td></tr><tr><td>SQL Provider calls with files</td><td>Add the conversion to the REST function</td><td>GET - incoming <br>SAVE - outgoing <br>CREATE - outgoing <br>UPDATE - outgoing</td></tr><tr><td>Datasource queries with files</td><td>Add the conversion to the datasource when using Dynamic Data.</td><td>Incoming</td></tr><tr><td>Actions with files</td><td>Add the conversion to the action when saving images and files.</td><td>outgoing</td></tr></tbody></table>
+<table><thead><tr><th width="238.828125">Data</th><th width="289.21484375">Conversion configuration</th><th>Result</th></tr></thead><tbody><tr><td>REST Provider calls with files</td><td>Add the conversion to the REST function</td><td>GET - incoming<br>SAVE - outgoing<br>CREATE - outgoing<br>UPDATE - outgoing</td></tr><tr><td>SQL Provider calls with files</td><td>Add the conversion to the REST function</td><td>GET - incoming<br>SAVE - outgoing<br>CREATE - outgoing<br>UPDATE - outgoing</td></tr><tr><td>Datasource queries with files</td><td>Add the conversion to the datasource when using Dynamic Data.</td><td>Incoming</td></tr><tr><td>Actions with files</td><td>Add the conversion to the action when saving images and files.</td><td>outgoing</td></tr></tbody></table>
 
 The `conversions` property allows you to configure the file conversion to the required format.
 

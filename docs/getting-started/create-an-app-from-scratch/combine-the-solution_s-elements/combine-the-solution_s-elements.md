@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Combine the solution's elements
 
 In the Build your first Jigx solution steps, you have already built a map using the [jig.default](https://docs.jigx.com/examples/jigdefault), added a calendar using the [jig.calendar](https://docs.jigx.com/examples/jigcalendar), added a new customer form using the [jig.default](https://docs.jigx.com/examples/jigdefault), and a customer list using [jig.list](https://docs.jigx.com/examples/jiglist).

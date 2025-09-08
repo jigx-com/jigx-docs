@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Jigx Builder (code editor)
 
 The Jigx's development environment is called Jigx Builder, which is a VS Code extension that uses YAML, SQL, JSON, and JSONata, and makes use of the rich set of functionality that VS Code offers. To learn more about VS Code functionality and managing extensions, see [Visual Studio Code](https://code.visualstudio.com/docs) documentation.

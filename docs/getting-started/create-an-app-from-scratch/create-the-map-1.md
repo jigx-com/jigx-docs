@@ -3,6 +3,20 @@ title: Create the Map
 slug: UwMU-hello-jigx-map
 createdAt: Tue Apr 04 2023 06:11:52 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Sep 27 2023 18:09:11 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create the Map

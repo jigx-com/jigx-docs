@@ -3,6 +3,20 @@ title: Run the updated solution
 slug: 4fDS-run-the-updated-solution
 createdAt: Wed Apr 12 2023 11:27:36 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 03 2023 12:43:31 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Run the updated solution

@@ -3,6 +3,20 @@ title: Solution Requirements
 slug: awik-solution-requirements
 createdAt: Wed Jul 12 2023 18:38:41 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 17 2023 14:55:03 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Solution Requirements

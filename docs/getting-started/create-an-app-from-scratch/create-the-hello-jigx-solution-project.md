@@ -3,6 +3,20 @@ title: Create the Hello Jigx solution project
 slug: uuUq-creating-the-hello-jigx-solution-project
 createdAt: Mon Apr 03 2023 04:58:59 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Aug 08 2024 09:05:46 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create the Hello Jigx Solution project

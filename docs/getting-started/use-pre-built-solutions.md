@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Use pre-built solutions
 
 Utilizing pre-built solutions in Jigx provides benefits in terms of time efficiency in development and selecting appropriate app functionalities. Opting for a pre-built solution seamlessly incorporates the solution into your Jigx App, making it readily available for utilization.

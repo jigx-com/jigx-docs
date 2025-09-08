@@ -3,6 +3,20 @@ title: Create an app from scratch
 slug: s2xAkEBhQIcz1yt3BtEmf
 createdAt: Tue Apr 04 2023 06:20:14 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:24:14 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create an app from scratch

@@ -3,6 +3,20 @@ title: Create a view of the customer record
 slug: _3wu-create-a-view-of-the-customer-record
 createdAt: Wed Apr 12 2023 11:27:44 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Oct 31 2023 13:36:45 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create a view of the customer record

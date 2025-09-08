@@ -3,6 +3,20 @@ title: Add a component using a template
 slug: j5xL-add-a
 createdAt: Fri May 26 2023 08:17:21 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Nov 01 2023 07:06:39 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Add a component using a template

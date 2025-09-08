@@ -3,6 +3,20 @@ title: Create a new Jigx Solution
 slug: 01r5-creating-a-new-solution
 createdAt: Tue Jun 20 2023 08:34:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:39:01 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create a new Jigx Solution

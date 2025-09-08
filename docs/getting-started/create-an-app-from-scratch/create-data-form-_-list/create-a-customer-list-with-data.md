@@ -3,6 +3,20 @@ title: Create a customer list with data
 slug: 0A0X-create-a-customer-list-with-data
 createdAt: Wed Apr 12 2023 11:27:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 13:40:44 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create a customer list with data
