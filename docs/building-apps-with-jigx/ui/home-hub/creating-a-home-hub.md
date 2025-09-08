@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Creating a Home Hub
 
 Creating a home screen (hub) for a mobile app can be a great way to enhance the user experience and provide more functionality. In this section, we will explore the benefits of creating a home screen and the steps involved in configuring one.
@@ -18,11 +35,11 @@ Steps to customize your Home Hub:
 ### Single jig Home Hub
 
 {% columns %}
-{% column width="41.66666666666667%" %}
+{% column %}
 Here is an example of a Home Hub designed for its simplicity. A `jig.default` is used with a `component.image` and `component.list`.
 {% endcolumn %}
 
-{% column width="58.33333333333333%" %}
+{% column %}
 <figure><img src="../../../.gitbook/assets/HomeScreen-List.png" alt="Simple List Home Hub" width="188"><figcaption><p>Simple List Home Hub</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}

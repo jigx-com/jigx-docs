@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Management Overview
 
 Jigx Management can be found at [https://manage.jigx.com](https://manage.jigx.com) and is the central site for managing users, and solutions, sending push notifications, and viewing usage metrics of your organization.

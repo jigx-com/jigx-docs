@@ -3,6 +3,20 @@ title: Solutions
 slug: anNr-solutions
 createdAt: Tue Jun 07 2022 09:54:15 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:21:39 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Solutions

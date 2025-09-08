@@ -3,6 +3,20 @@ title: Users
 slug: hy9S-users
 createdAt: Tue Jun 07 2022 09:54:10 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Oct 02 2024 12:19:37 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Users

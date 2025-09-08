@@ -3,6 +3,20 @@ title: Row Level Security
 slug: xy4a-v
 createdAt: Mon Sep 25 2023 18:40:48 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 30 2023 09:47:49 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Row Level Security

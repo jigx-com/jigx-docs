@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Forms and Composite Jigs
 
 In this section, we will have a look at how you can create and update forms using composite jigs. For more information see the [jig.composite](https://docs.jigx.com/examples/jigcomposite) topic.

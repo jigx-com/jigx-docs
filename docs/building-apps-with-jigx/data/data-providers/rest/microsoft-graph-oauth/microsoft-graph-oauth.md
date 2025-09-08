@@ -3,6 +3,20 @@ title: Microsoft Graph OAuth
 slug: LkgK-microsoft-graph
 createdAt: Sun Mar 26 2023 16:59:31 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon May 06 2024 15:10:22 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Microsoft Graph OAuth

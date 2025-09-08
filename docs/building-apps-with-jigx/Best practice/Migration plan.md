@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Migration plan
 
 [Release 2025.1](https://docs.jigx.com/release-notes#affhn) - introduces several updates to the index.jigx file, widgets, and location. Some properties have been deprecated, and a new grid jig type and a grid-item component have been added. These updates provide more versatility in app design, enhance layout options, and optimize screen space usage. To take advantage of these new features in your existing solutions, follow the guidance below to update your implementation.
@@ -15,7 +32,7 @@ Existing solutions will continue to function in the mobile app as before. The na
 New solutions now offer greater versatility.
 
 1. The updated index.jigx with `tabs`, and new [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) functionality let you define the app layout precisely from the start, ensuring easy navigation and better utilization of space on the Home Hub.
-2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.&#x20;
+2. The `location` now supports custom markers, state-based markers, user location display, radius, and location tracking.
 {% endcolumn %}
 
 {% column %}

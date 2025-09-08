@@ -3,6 +3,20 @@ title: Best practice
 slug: ipWT-state
 createdAt: Mon Sep 02 2024 12:33:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Best practice

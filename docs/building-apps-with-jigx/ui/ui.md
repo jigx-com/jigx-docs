@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # UI
 
 Creating a mobile app's user interface (UI) involves designing intuitive, engaging, and visually appealing elements that facilitate a seamless interaction between the user and the app's functionalities. Create intuitive UIs in Jigx by combining the following elements to achieve the app layout and functionality you want.

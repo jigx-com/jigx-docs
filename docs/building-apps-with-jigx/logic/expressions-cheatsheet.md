@@ -1,9 +1,26 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Expressions - cheatsheet
 
 Jigx wants to help you build solutions quickly and easily. To help you do this, here is a list of functionality or data results you might want to use in your app with the expression used to achieve it. This is a starting point; you can adapt or add to the expression as needed to get the expected data results when building solutions. Refer to the [Expressions](https://docs.jigx.com/expressions) section in the **Examples** tab for working examples and code snippets for various JSONata expressions.
 
 {% hint style="info" %}
-Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.&#x20;
+Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
 {% endhint %}
 
 ### Create Filters on a list (Path Operator expression)
@@ -223,7 +240,7 @@ $.{"message": {"subject": subject,"body": {"contentType": "Text","content":
   {"address":$}}[]}}
 ```
 
-### Create a basic join on a static datasource to a local datasource &#x20;
+### Create a basic join on a static datasource to a local datasource
 
 {% code overflow="wrap" %}
 ```yaml
@@ -247,7 +264,7 @@ markers:
 =$.path.to.value
 ```
 
-### &#x20;Find the value relative the root node of the supplied context, no matter what is the current node
+### Find the value relative the root node of the supplied context, no matter what is the current node
 
 Jigx converts `@ctx.` to `$$.` when executing expressions in jsonata
 

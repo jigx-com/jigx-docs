@@ -1,15 +1,31 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Navigation
 
 Navigation allows you to flow through the app. Whenever you [go-to](https://docs.jigx.com/examples/readme/actions/go-to) a jig, the jig is added to the history, this allows you to go back and visit the jigs you visited before, and either show the history (data) on the UI or a new (clear) jig. This is helpful in complex flows, for example, adding multiple lines to an invoice and then submitting the invoice, or adding the details for each guest in a booking.
 
 The [go-to](https://docs.jigx.com/examples/readme/actions/go-to) action is used to configure the flow of jigs in the app using the `behaviour` property. With the `behaviour` you determine if you want to push the screen into the app history, by using the `new` value, or show the one you already have in history by using the `existing` value.
 
-**New** - creates a sequential stack showing the progression of navigation. Presents a new screen you are navigating to, allowing you to capture the next data set to add to the stack currently in the history. Typically, this would be used to capture the next line in an invoice. \
-
+**New** - creates a sequential stack showing the progression of navigation. Presents a new screen you are navigating to, allowing you to capture the next data set to add to the stack currently in the history. Typically, this would be used to capture the next line in an invoice. \\
 
 <figure><img src="../../.gitbook/assets/StateNavNew.png" alt="State Navigation- New" width="375"><figcaption><p>State Navigation- New</p></figcaption></figure>
 
-**Existing** - jumps to previously visited screens by recognizing existing instances. Displays the data of the existing screen you are navigating to, typically used when you want to review the captured lines in an invoice before submitting.&#x20;
+**Existing** - jumps to previously visited screens by recognizing existing instances. Displays the data of the existing screen you are navigating to, typically used when you want to review the captured lines in an invoice before submitting.
 
 <figure><img src="../../.gitbook/assets/StateNavExist.png" alt="State Navigation- Existing" width="231"><figcaption><p>State Navigation- Existing</p></figcaption></figure>
 
@@ -17,15 +33,15 @@ The [go-to](https://docs.jigx.com/examples/readme/actions/go-to) action is used 
 
 {% stepper %}
 {% step %}
-In the [go-to](https://docs.jigx.com/examples/readme/actions/go-to) action use the `behaviour` property to select `new` or `existing`.&#x20;
+In the [go-to](https://docs.jigx.com/examples/readme/actions/go-to) action use the `behaviour` property to select `new` or `existing`.
 {% endstep %}
 
 {% step %}
-Configure the `LinkTo` property with the jig name you want to open next.&#x20;
+Configure the `LinkTo` property with the jig name you want to open next.
 {% endstep %}
 
 {% step %}
-Configure `inputs` if you are wanting to pass data between jigs.&#x20;
+Configure `inputs` if you are wanting to pass data between jigs.
 {% endstep %}
 {% endstepper %}
 

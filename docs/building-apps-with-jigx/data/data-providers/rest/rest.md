@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # REST
 
 The REST data provider is one of the most frequently used data providers in Jigx solutions.
@@ -309,8 +326,8 @@ The following examples with code snippets are provided:
 {% column %}
 {% embed url="https://vimeo.com/848412406?fe=sh&fl=pl" %}
 
-1. Introduction to REST API \
-   6:59 min&#x20;
+1. Introduction to REST API\
+   6:59 min
 {% endcolumn %}
 
 {% column %}
@@ -324,8 +341,8 @@ The following examples with code snippets are provided:
 {% column %}
 {% embed url="https://vimeo.com/848062137?fe=sh&fl=pl" %}
 
-3. Building a REST based App \
-   9:14 min&#x20;
+3. Building a REST based App\
+   9:14 min
 {% endcolumn %}
 
 {% column %}

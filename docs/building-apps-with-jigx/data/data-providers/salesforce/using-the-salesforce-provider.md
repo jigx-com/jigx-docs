@@ -3,6 +3,20 @@ title: Using the Salesforce provider
 slug: ZQ7V-work
 createdAt: Wed Jul 19 2023 12:43:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Nov 24 2023 11:51:32 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Using the Salesforce provider
@@ -17,7 +31,7 @@ In the Salesforce provider, use IntelliSense (ctrl+space) in the `entities` prop
 
 ### Referencing multiple objects in a jig
 
-Below is an example of syncing data from six Salesforce objects when the jig is `onFocus`, using `action.sync-entities`.&#x20;
+Below is an example of syncing data from six Salesforce objects when the jig is `onFocus`, using `action.sync-entities`.
 
 {% code title="multiple-objects" %}
 ```yaml

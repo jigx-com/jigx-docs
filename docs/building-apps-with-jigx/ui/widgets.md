@@ -3,6 +3,20 @@ title: Widgets
 slug: I2vz-widgets
 createdAt: Wed Jan 17 2024 12:27:32 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Mar 07 2025 09:34:40 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Widgets
@@ -26,7 +40,7 @@ A widget can be configured with the following sizes: - 1x1 - 2x2 - 2x4 - 4x2 - 4
 #### Widget configuration
 
 1. Add an icon to the top level of your jig.
-2. The `jigId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.&#x20;
+2. The `jigId`, and `size` are configured in a [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid) or [grid-item](https://docs.jigx.com/examples/grid-item) component to display the widget.
 
 {% tabs %}
 {% tab title="jig-with-icon.jigx" %}
@@ -274,17 +288,13 @@ The widgets display order on a screen is determined by the order of the [grid-it
 
 {% columns %}
 {% column %}
-&#x20;Initial widget order in [grid](https://docs.jigx.com/examples/grid)
-
-
+Initial widget order in [grid](https://docs.jigx.com/examples/grid)
 {% endcolumn %}
 
 {% column %}
 <figure><img src="../../.gitbook/assets/WD-order1.PNG" alt="Initial widget order" width="188"><figcaption><p>Initial widget order</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
-
-
 
 {% code title="home.jigx" %}
 ```yaml

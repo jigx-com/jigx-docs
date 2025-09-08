@@ -3,6 +3,20 @@ title: Adding the OAuth Configuration to the solution in Jigx Management
 slug: I2Eu-adding-the-oauth-configuration-to-the-solution-in-jigx-management
 createdAt: Mon Nov 21 2022 23:25:24 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Apr 29 2024 13:21:27 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Adding the OAuth Configuration to the solution in Jigx Management

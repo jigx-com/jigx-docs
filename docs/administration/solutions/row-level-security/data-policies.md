@@ -3,6 +3,20 @@ title: Data policies
 slug: es3E-r
 createdAt: Mon Sep 25 2023 17:54:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 30 2023 09:48:56 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Data policies

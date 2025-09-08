@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Logic
 
 Building logic in Jigx involves manipulating, managing, and configuring data within Jigx solutions, jigs, and components that dictate how the app behaves and responds to user inputs.

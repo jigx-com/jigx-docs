@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Public Content
 
 Public content lets you specify what is accessible to the public on your organization's branded app before a user has on boarded or logged in.
@@ -33,11 +50,11 @@ Public content lets you specify what is accessible to the public on your organiz
 
 You can add the URLs in the provided fields in the language of your choice. Multiple languages are supported.
 
-<table><thead><tr><th width="172.3203125">Properties</th><th width="287.734375">Description</th><th>Example</th></tr></thead><tbody><tr><td>Public Solution</td><td>Configure the public solution that is shown on the branded app at the organization level that requires no login.</td><td>For example, two widgets, one for customers and the other for employees. See the example.</td></tr><tr><td>Privacy</td><td>Add the URL to your company's privacy policy. Define the URL in multiple languages, such as English (en), and German (de). The privacy settings are displayed in the app under <strong>Profile > Security</strong> and on the splash screen for branded apps.</td><td></td></tr><tr><td>Terms &#x26; Conditions</td><td>Add the URL to your company's terms of service/terms and conditions. Define the URL in multiple languages, such as English (en), and German (de).</td><td></td></tr><tr><td>Legal Disclosure</td><td>Provide a link to your company's legal disclosure page or contact/About us information.</td><td></td></tr><tr><td>Request Access</td><td>Add the URL for users to register through the app. The URL calls the Jigx api to register the user.</td><td> </td></tr></tbody></table>
+<table><thead><tr><th width="172.3203125">Properties</th><th width="287.734375">Description</th><th>Example</th></tr></thead><tbody><tr><td>Public Solution</td><td>Configure the public solution that is shown on the branded app at the organization level that requires no login.</td><td>For example, two widgets, one for customers and the other for employees. See the example.</td></tr><tr><td>Privacy</td><td>Add the URL to your company's privacy policy. Define the URL in multiple languages, such as English (en), and German (de). The privacy settings are displayed in the app under <strong>Profile > Security</strong> and on the splash screen for branded apps.</td><td></td></tr><tr><td>Terms &#x26; Conditions</td><td>Add the URL to your company's terms of service/terms and conditions. Define the URL in multiple languages, such as English (en), and German (de).</td><td></td></tr><tr><td>Legal Disclosure</td><td>Provide a link to your company's legal disclosure page or contact/About us information.</td><td></td></tr><tr><td>Request Access</td><td>Add the URL for users to register through the app. The URL calls the Jigx api to register the user.</td><td></td></tr></tbody></table>
 
 {% columns %}
 {% column %}
-The public content links configuration for _Privacy Policy_, _Terms & Conditions_ and _Legal Disclosure_ are displayed in the app under **Profile > Security**.&#x20;
+The public content links configuration for _Privacy Policy_, _Terms & Conditions_ and _Legal Disclosure_ are displayed in the app under **Profile > Security**.
 {% endcolumn %}
 
 {% column %}

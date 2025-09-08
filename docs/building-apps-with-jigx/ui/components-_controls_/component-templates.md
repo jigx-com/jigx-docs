@@ -3,6 +3,20 @@ title: Component Templates
 slug: i_Aa-component-tem
 createdAt: Wed Jan 17 2024 09:43:57 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 14 2024 08:55:12 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Component Templates

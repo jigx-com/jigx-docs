@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Creating a Record
 
 We will now create a Jig with a form that creates a record with multiple columns in our Dynamic Data table, which we defined in the previous [Forms](forms.md) part.
@@ -67,7 +84,7 @@ children:
 {% endcode %}
 
 {% hint style="warning" %}
-Please note: It's best practice for mobile forms to be as short and simple as possible! No one wants to fill out dozens of fields on a mobile device. Because of this, all Jigx input components are marked as required (option `isRequired`) by default. If you want to make a field optional set `isRequired` to _false,_ but ask yourself if you then really need that field on your form.&#x20;
+Please note: It's best practice for mobile forms to be as short and simple as possible! No one wants to fill out dozens of fields on a mobile device. Because of this, all Jigx input components are marked as required (option `isRequired`) by default. If you want to make a field optional set `isRequired` to _false,_ but ask yourself if you then really need that field on your form.
 {% endhint %}
 
 Next, add some more fields to your form. Note that for the email and phone fields we specified an additional option, called `keyboardType`. This will present the devices onscreen keyboard in the right mode. You can use **Ctrl+Space** to see all available types.
@@ -185,7 +202,7 @@ As you can see in below example, the action exposes a `data` option that allows 
 {% hint style="info" %}
 You could also use JSONata [expression](../../../logic/expressions.md) to transform the state values before binding them to the columns. An example for this would be:
 
-_lastname: =$uppercase(@ctx.components.lastname.state.value)_&#x20;
+_lastname: =$uppercase(@ctx.components.lastname.state.value)_
 {% endhint %}
 
 {% code title="form.jigx" %}

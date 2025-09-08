@@ -3,6 +3,20 @@ title: Troubleshooting (Solution)
 slug: tzQJ-troubl
 createdAt: Tue May 16 2023 14:12:37 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue May 28 2024 12:41:07 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Troubleshooting (Solution)

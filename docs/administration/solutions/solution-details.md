@@ -3,6 +3,20 @@ title: Solution Details
 slug: wKtJ-soution
 createdAt: Tue May 16 2023 14:11:35 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Mar 18 2024 13:59:47 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Solution Details

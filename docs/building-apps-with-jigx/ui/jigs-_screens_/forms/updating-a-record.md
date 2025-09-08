@@ -3,6 +3,20 @@ title: Updating a Record
 slug: Tybh-updating-a-record
 createdAt: Mon Aug 01 2022 17:32:46 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu May 04 2023 18:33:11 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Updating a Record

@@ -3,6 +3,20 @@ title: Permissions
 slug: YycW-permissions
 createdAt: Thu Jun 09 2022 09:03:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 08:50:38 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Permissions

@@ -3,6 +3,20 @@ title: Custom Components (Alpha)
 slug: 1sOf-custom
 createdAt: Tue Jun 06 2023 07:05:24 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Feb 04 2025 14:22:49 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Custom Components (Alpha)

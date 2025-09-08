@@ -3,6 +3,20 @@ title: Authorized users
 slug: txc_-rls
 createdAt: Mon Sep 25 2023 17:55:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Oct 30 2023 09:46:43 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Authorized Users

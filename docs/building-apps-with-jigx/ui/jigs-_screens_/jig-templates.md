@@ -3,6 +3,20 @@ title: Jig Templates
 slug: BfrN-templates
 createdAt: Thu May 25 2023 06:10:17 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:55:49 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Jig Templates

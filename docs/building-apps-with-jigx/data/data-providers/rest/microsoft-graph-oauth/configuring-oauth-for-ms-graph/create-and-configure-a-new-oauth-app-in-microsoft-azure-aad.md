@@ -3,6 +3,20 @@ title: Create and configure a new OAuth app in Microsoft Azure AAD
 slug: X-IE-create-and-configure-a-new-oauth-app-in-microsoft-azure-aad
 createdAt: Mon Nov 21 2022 22:30:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Apr 29 2024 13:12:03 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Create and configure a new OAuth app in Microsoft Azure AAD

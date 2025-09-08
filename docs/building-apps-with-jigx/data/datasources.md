@@ -1,6 +1,23 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Datasources
 
-Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/README.md).
+Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/).
 
 ## Types
 

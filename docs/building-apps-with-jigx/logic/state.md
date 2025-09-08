@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # State
 
 State manages the data within Jigx solutions, jigs, and components and controls the UI dynamically. The state allows solutions and components to change their output in response to user inputs and actions. Often, the state is used as a global variable that can be used throughout the solution or as a local state used only in that specific jig or component.
@@ -12,7 +29,7 @@ Examples of using state include:
 State allows you to **read** and **write** the state of various data in your solution at runtime.
 
 {% hint style="warning" %}
-Whenever working with data, consider the performance impact on the Jigx App at runtime. The best practice is to write only the required data in the state and consider using state versus [inputs](../ui/jigs-_screens_/passing-data-using-inputs.md) and [outputs](../ui/jigs-_screens_/passing-data-using-outputs.md).&#x20;
+Whenever working with data, consider the performance impact on the Jigx App at runtime. The best practice is to write only the required data in the state and consider using state versus [inputs](../ui/jigs-_screens_/passing-data-using-inputs.md) and [outputs](../ui/jigs-_screens_/passing-data-using-outputs.md).
 {% endhint %}
 
 Using states in Jigx is divided into categories:
@@ -37,7 +54,7 @@ Avoid using state keywords, such as `component`, as `instanceId` values in expre
 
 ### Component (local) State
 
-<table><thead><tr><th width="299.9140625">Syntax</th><th width="129.2265625">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.jig.state.</td><td>activeItem activeItemId amounts filter isHorizontal isRefreshing isSelectable isSelectActive searchText selected value</td><td><ul><li>Applies to a list jig.</li><li>The creator configures the state in the YAML.</li></ul></td></tr><tr><td>=@ctx.jigs.<em>jigInstanceId</em>.components.<em>componentInstanceId</em>.state.</td><td>data isDirty isValid response</td><td><ul><li>Read the state of a component in a specific jig using the instanceId of both the jig and component.</li><li>Referencing components on a composite jig.</li></ul></td></tr><tr><td>=@ctx.component.state.</td><td>amount checked selected value</td><td>State is the variable of or for each component.</td></tr><tr><td>=@ctx.components.componentInstanceId.state.</td><td>data filter isValid <br>isDirty isPending searchText selected response value</td><td><ul><li>State of components, using the component's instanceId.</li><li>Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.</li></ul></td></tr><tr><td>=@ctx.current.state.</td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr></tbody></table>
+<table><thead><tr><th width="299.9140625">Syntax</th><th width="129.2265625">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.jig.state.</td><td>activeItem activeItemId amounts filter isHorizontal isRefreshing isSelectable isSelectActive searchText selected value</td><td><ul><li>Applies to a list jig.</li><li>The creator configures the state in the YAML.</li></ul></td></tr><tr><td>=@ctx.jigs.<em>jigInstanceId</em>.components.<em>componentInstanceId</em>.state.</td><td>data isDirty isValid response</td><td><ul><li>Read the state of a component in a specific jig using the instanceId of both the jig and component.</li><li>Referencing components on a composite jig.</li></ul></td></tr><tr><td>=@ctx.component.state.</td><td>amount checked selected value</td><td>State is the variable of or for each component.</td></tr><tr><td>=@ctx.components.componentInstanceId.state.</td><td>data filter isValid<br>isDirty isPending searchText selected response value</td><td><ul><li>State of components, using the component's instanceId.</li><li>Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.</li></ul></td></tr><tr><td>=@ctx.current.state.</td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr></tbody></table>
 
 ### Jig (local) State
 
@@ -214,7 +231,7 @@ Reads the value of \[key] in the current jig and components with `instanceId`, f
 
 ### Within all jigs and components in the solution
 
-Reads the value of \[key] from the available jigs with `jigId` and components with `instanceId`. For example: `@ctx.jigs.[jigId].components.[instanceId].state.[key]`&#x20;
+Reads the value of \[key] from the available jigs with `jigId` and components with `instanceId`. For example: `@ctx.jigs.[jigId].components.[instanceId].state.[key]`
 
 ## Action state (write state)
 

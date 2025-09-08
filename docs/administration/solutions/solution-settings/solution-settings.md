@@ -3,6 +3,20 @@ title: Solution Settings
 slug: XcvW-solution-s
 createdAt: Tue May 16 2023 14:12:06 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Aug 19 2024 08:35:35 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Solution Settings

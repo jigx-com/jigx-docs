@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # REST Overview
 
 ## REST Overview
@@ -176,7 +193,7 @@ When types are declared in authentication header parameters, they are specific t
 
 The required value is either `true` or `false`. This determines whether the parameter needs to be set when the function is used in a jig's datasource. Parameters used in paths must be set to `required: true` or they will generate an error. This determines if the REST call \*\*requires \*\*this parameter. If so, set this property to `true`, alternatively if the parameter is optional, you can set it to `false`.
 
-### Additional properties&#x20;
+### Additional properties
 
 #### Continuation
 
@@ -187,7 +204,7 @@ Jigx REST functions can be configured to automatically repeat calls to `continua
 {% hint style="warning" %}
 The continuation URL and parameters overwrite the parameters in the original function call therefore all parameters, including OAuth tokens and API keys, must be replicated in the continuation function.
 
-Since the continuation URL or parameters are outside of the data returned by the function (at a higher level), the **outputTransform** of the function will need to be changed to return the records in their own property and the **records** property specified in the function YAML to locate the output records.&#x20;
+Since the continuation URL or parameters are outside of the data returned by the function (at a higher level), the **outputTransform** of the function will need to be changed to return the records in their own property and the **records** property specified in the function YAML to locate the output records.
 {% endhint %}
 
 **Example**
@@ -254,7 +271,7 @@ The property should be passed as a parameter and be referenced in the `outputTra
 
 #### forRowsInRange
 
-Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json\_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the REST call's  `outputTransform` to the table.
+Similar to `forRowsWithValue` but instead of matching rows by value the `forRowsInRange` specifies a key-value pair where the key is a json\_extract() column in the table that a value range will match. Only rows that match these criteria will be updated. The object will be added as a new row to the collection if a match isn't found. You can have multiple key-value pairs specified under `forRowsInRange`. Think of this as a WHERE clause with a BETWEEN that Jigx uses when it adds the result of the REST call's `outputTransform` to the table.
 
 {% hint style="info" %}
 Pass the values you want to test as input parameters. In this example, minmag and maxmag. The property to test is **mag**. This property (**mag**) must appear in the `outputTransform`. Then set the range you are testing for in the input parameter (**minmag**) and (**maxmag**).
@@ -264,7 +281,7 @@ Pass the values you want to test as input parameters. In this example, minmag an
 
 {% hint style="info" %}
 * You can combine `forRowswithValues` and `forRowsInRange` as per the example below.
-* You cannot combine `forRowsWithMatchingIds` with any other range or value check.&#x20;
+* You cannot combine `forRowsWithMatchingIds` with any other range or value check.
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/REST-ForRowsCombined.png" alt="Combined properties" width="375"><figcaption><p>Combined properties</p></figcaption></figure>

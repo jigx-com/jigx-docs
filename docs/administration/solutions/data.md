@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Data
 
 The Data tab allows you to manage all the [Dynamic Data](../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md) tables and table contents used by the solution. All changes made in Jigx Management will be synced bi-directionally with the devices in real-time.

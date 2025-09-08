@@ -3,6 +3,20 @@ title: My profile
 slug: PCpY-my-profile
 createdAt: Mon Mar 06 2023 12:54:07 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Oct 02 2024 12:18:36 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # My profile

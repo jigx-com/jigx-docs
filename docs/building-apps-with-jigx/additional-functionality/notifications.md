@@ -1,16 +1,31 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Notifications
 
 Notifications are a powerful way to grab your user's attention. With Jigx, notifications appear on the user's device as push and in-app notifications.
 
 <figure><img src="../../.gitbook/assets/notofications.png" alt="" width="375"><figcaption></figcaption></figure>
 
-
-
 There are three different ways to create notifications:
 
 ## Send notifications using Jigx Management
 
-Read the documentation about [Notifications](../../Administration/Notifications.md) in the Administration section to learn more about managing notifications using Jigx Management.&#x20;
+Read the documentation about [Notifications](../../Administration/Notifications.md) in the Administration section to learn more about managing notifications using Jigx Management.
 
 ## Send notifications programmatically
 
@@ -103,11 +118,11 @@ In your jig, you can either invoke the above function using an [execute-entity](
 
 You can also target a specific jig with input parameters from your push notification. An example of this would be a notification about a new product promotion with the promotion detail jig as the target. When the user taps on the notification (either on the native push notification or the in-app notification), the app will navigate to the specific promotion:
 
-For this, you need a REST function definition, a Jig that invokes the REST function, and a target jig that will be displayed when the user taps on the notification. See [Notifications](https://docs.jigx.com/examples/readme/notifications) for the code example.&#x20;
+For this, you need a REST function definition, a Jig that invokes the REST function, and a target jig that will be displayed when the user taps on the notification. See [Notifications](https://docs.jigx.com/examples/readme/notifications) for the code example.
 
 ## Send notifications using Jigx notification endpoint
 
-See [External push notifications (API)](https://docs.jigx.com/examples/readme/notifications/external-push-notifications-_api_) for more information and examples.&#x20;
+See [External push notifications (API)](https://docs.jigx.com/examples/readme/notifications/external-push-notifications-_api_) for more information and examples.
 
 ## Send notifications using a Webhook
 

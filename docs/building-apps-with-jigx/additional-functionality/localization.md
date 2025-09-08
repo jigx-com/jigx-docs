@@ -1,3 +1,20 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Localization
 
 Jigx mobile app supports multiple languages, significantly enhancing its market presence, user engagement, and overall success by appealing to a broader and more diverse audience. The real power of the Jigx localization functionality lies in using a single jig that can have multiple translations associated with the jig, the app respects the language setting of the device and renders the jigin that language if the corresponding language file is found or defaults to English.
@@ -32,7 +49,7 @@ Configuring `TextLocale` is simple, and the translation can be:
 2. **Dynamic** - Add localization to a jig using _ICU Message definitions_
 
 {% hint style="info" %}
-Adding dynamic values in localized jigs use **ICU message** definitions. Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-message-format-for-translators/editor.html) or see the [ICU format messaging](https://unicode-org.github.io/icu/userguide/format_parse/messages/) documentation.&#x20;
+Adding dynamic values in localized jigs use **ICU message** definitions. Try it in the [Online ICU Message Editor](https://format-message.github.io/icu-message-format-for-translators/editor.html) or see the [ICU format messaging](https://unicode-org.github.io/icu/userguide/format_parse/messages/) documentation.
 {% endhint %}
 
 ### Static values - In the jig
@@ -95,7 +112,7 @@ To set the `TextLocal` property dynamically
 1. Invoke IntelliSense next to the property you want to translate.
 2. Select `TextLocale`
 3. Provide an `id:` and `values` properties. The values property requires context variables that will be used in the translation file.
-4. _Optional_: add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified  `defaultMessage` or if one is not specified, to English.
+4. _Optional_: add the `defaultMessage:` property with a value. If there is no translation found for the active device's language, it will either fallback to the specified `defaultMessage` or if one is not specified, to English.
 
 {% code title=" jig.jigx" %}
 ```yaml

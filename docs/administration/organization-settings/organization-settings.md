@@ -3,6 +3,20 @@ title: Organization Settings
 slug: KsWo-organization-settings
 createdAt: Tue Jun 07 2022 15:07:56 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Oct 02 2024 12:00:37 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Organization Settings

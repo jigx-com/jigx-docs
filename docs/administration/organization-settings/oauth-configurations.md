@@ -3,6 +3,20 @@ title: OAuth Configurations
 slug: qj0_-oauth-configurations
 createdAt: Wed Jun 07 2023 08:05:42 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Apr 15 2024 08:45:06 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # OAuth Configurations

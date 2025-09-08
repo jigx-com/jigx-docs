@@ -3,6 +3,20 @@ title: Troubleshooting (Organization)
 slug: pQc4-troubels
 createdAt: Tue May 23 2023 15:01:27 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed May 24 2023 13:30:16 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Troubleshooting (Organization)
