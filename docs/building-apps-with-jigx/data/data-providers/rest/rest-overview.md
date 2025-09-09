@@ -25,7 +25,7 @@ When a REST call returns data to Jigx, the processed JSON is inserted into a loc
 
 Functions definitions are stored in the functions folder in a Jigx project and are files that end in a .jigx file extension. When .jigx files are created in the functions folder, the Jigx Builder IntelliSense code completion is available using ctrl+spacebar. We recommend using this capability, as it provides all available code completion options relevant to Jigx functions.
 
-<figure><img src="../../../../.gitbook/assets/REST-function.png" alt="Jigx&#x27;s functions" width="375"><figcaption><p>Jigx's functions</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-function (1).png" alt="Jigx&#x27;s functions" width="375"><figcaption><p>Jigx's functions</p></figcaption></figure>
 
 To add a new function, add a new file in the functions folder, the .jigx extension is automatically added for you. Function file names must be lowercase and may not contain special characters.
 
@@ -37,7 +37,7 @@ All REST functions support header, path, query, and body parameters. In addition
 
 The code completion will display the available template options when adding a new function.
 
-<figure><img src="../../../../.gitbook/assets/REST-function-code.png" alt="Functions code completion options"><figcaption><p>Functions code completion options</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-function-code (1).png" alt="Functions code completion options"><figcaption><p>Functions code completion options</p></figcaption></figure>
 
 Creating a new function using one of these template options adds the skeleton code to the function definition, making it easier to configure functions for specific providers with their authentication configuration. These options are:
 
@@ -63,11 +63,11 @@ The Swagger parser function allows you to convert Swagger, open API, and Postman
 
 Command to start the Swagger parser function is (command + shift + p): `Generate Jigx Functions`
 
-<figure><img src="../../../../.gitbook/assets/REST-swaggerParser.png" alt="Generate Jigx functions"><figcaption><p>Generate Jigx functions</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-swaggerParser (1).png" alt="Generate Jigx functions"><figcaption><p>Generate Jigx functions</p></figcaption></figure>
 
 Both remote and local files can be used, and only the JSON format is allowed.
 
-<figure><img src="../../../../.gitbook/assets/REST-fileOptions.png" alt="File options"><figcaption><p>File options</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-fileOptions (1).png" alt="File options"><figcaption><p>File options</p></figcaption></figure>
 
 All files created by the Swagger parser function saves in your functions folder.
 

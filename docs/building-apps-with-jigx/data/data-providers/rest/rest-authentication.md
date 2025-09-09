@@ -29,13 +29,13 @@ Credentials, including OAuth configurations, are stored in Jigx Management under
 
 ## Authentication examples
 
-### OAuth and Bearer Tokens
+## OAuth and Bearer Tokens
 
 The result of a successful OAuth loop is a token that is stored on the user's device in the keychain secure storage. When the token expires, Jigx uses a refresh token to get an updated token. If the OAuth loop provides no refresh token, the user will be prompted for their OAuth credentials by the REST call.
 
 The `accessToken` must be specified as a parameter in the YAML. Jigx only retrieves the values from the cloud if specified in the YAML. If this parameter is omitted, the OAuth loop will not be initiated.
 
-#### OAuth Example
+### OAuth Example
 
 Jigx Management Configuration. See [Credentials](../../../../administration/solutions/credentials.md) for more information.
 
@@ -111,7 +111,7 @@ placeholders:
     when: =$count(@ctx.datasources.mydata) < 1
 ```
 
-#### API Key Example
+### API Key Example
 
 Jigx Management Configuration. See [Credentials](../../../../administration/solutions/credentials.md) for more information.
 
@@ -176,7 +176,7 @@ item:
       resizeMode: contain
 ```
 
-#### Basic Authentication
+### Basic Authentication
 
 A username and password for basic authentication are stored in Jigx Management with a specific key. The key is referenced in the Jigx function definition using a header parameter called basicAuth.
 
@@ -244,7 +244,7 @@ item:
       resizeMode: contain
 ```
 
-#### Secret
+### Secret
 
 A secret is stored in Jigx Management with a specific key. The key is referenced in the Jigx function definition using a path, header, query, or body parameter with the name expected by the request.
 
@@ -311,7 +311,7 @@ item:
       resizeMode: contain
 ```
 
-#### Local REST Calls
+### Local REST Calls
 
 A local REST function call allows the mobile app to perform all the processing locally and call the third-party service directly. As a result, data is only transferred between the mobile app and the third-party REST service. Only OAuth authentication can be used with Local REST calls. For more information see [Local REST Calls](local-rest-calls.md).
 
