@@ -13,3 +13,55 @@ The property should be passed as a parameter and be referenced in the `outputTra
 {% endhint %}
 
 <figure><img src="../../../../../.gitbook/assets/REST-forRowsValue.png" alt="forRowsWithValues" width="563"><figcaption><p>forRowsWithValues</p></figcaption></figure>
+
+## Example code
+
+```yaml
+# REST Data Provider with forRowsInRange function example
+# This example fetches earthquake data and updates only rows with the value active.
+provider: DATA_PROVIDER_REST
+method: GET
+url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
+useLocalCall: true      
+# Input parameters for the range values
+parameters:
+  mag:
+    type: number
+    location: query
+    required: false
+    value: 2.0
+  dmin:  
+    type: number
+    location: query
+    required: false
+    value: 5.0
+
+# Transform the earthquake data
+outputTransform: |
+  {
+    "earthquakes": features[].{
+      "id": id,
+      "place": properties.place,
+      "mag": properties.mag,
+      "time": properties.time,
+      "coordinates": geometry.coordinates,
+      "depth": geometry.coordinates[2]
+    }
+  }
+operations:
+  - type: operation.delete-insert
+    table: earthquake_data
+    records: |
+      =$.earthquakes.{
+      "id": id,
+      "place": place,
+      "mag": mag,
+      "time": time,
+      "longitude": coordinates[0],
+      "latitude": coordinates[1],
+      "depth": depth
+      } 
+    # Only update rows for the specified value.
+    forRowsWithValues:
+      status: "active"
+```

@@ -1,4 +1,4 @@
-# InputTransformation
+# InputTransform
 
 When integrating with external REST APIs using a function in Jigx, the `inputTransform` property defines how input parameters are mapped to the body of the HTTP request. This is essential when the function’s `format` is set to `json`.
 
@@ -96,11 +96,6 @@ provider: DATA_PROVIDER_REST
 method: POST
 url: https://api.sendgrid.com/v3/mail/send
 
-inputTransform: |
-  $.{"personalizations": [{ "to": [ { "email": emailto, "name": name }]}],
-  "from": {"email": emailfrom, "name": name}, "reply to": {"email": emailfrom, "name": name },
-  "subject": subject, "content": [{ "type": "text/html", "value": content}]}
-
 parameters:
   Authorization:
     location: header
@@ -127,5 +122,15 @@ parameters:
     location: body
     type: string
     required: true
+    
+inputTransform: |
+  $.{
+    "personalizations": [{
+      "to": [ { "email": emailto, "name": name }]}],
+      "from": {"email": emailfrom, "name": name}, 
+      "reply to": {"email": emailfrom, "name": name },
+      "subject": subject, 
+      "content": [{ "type": "text/html", "value": content}
+      ]}    
 ```
 {% endcode %}

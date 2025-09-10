@@ -26,6 +26,51 @@ To add a new function, create a file in the functions folder. The .jigx extensio
 
 Once functions are published in a Jigx solution you can preview the function in Jigx Management under the solution's REST functions option. See [REST Functions](../../../../../administration/solutions/rest-functions.md) for more information.
 
+{% code title="" %}
+```yaml
+provider: DATA_PROVIDER_REST
+method: POST
+url: "https://api.sendgrid.com/v3/mail/send"
+
+parameters:
+  Authorization:
+    location: header
+    type: string
+    value: Bearer XXXXXX
+    required: true
+  emailfrom:
+    location: body
+    type: string
+    required: true
+  emailto:
+    location: body
+    type: string
+    required: true
+  name:
+    location: body
+    type: string
+    required: true
+  subject:
+    location: body
+    type: string
+    required: true
+  content:
+    location: body
+    type: string
+    required: true
+    
+inputTransform: |
+  $.{
+    "personalizations": [{
+      "to": [ { "email": emailto, "name": name }]}],
+      "from": {"email": emailfrom, "name": name}, 
+      "reply to": {"email": emailfrom, "name": name },
+      "subject": subject, 
+      "content": [{ "type": "text/html", "value": content}
+      ]}          
+```
+{% endcode %}
+
 ## Referencing a function in a jig
 
 Functions can be used in a jig to access and manage data in your app. You can either query the local SQLite database, populated from REST using configured functions, or use actions to trigger functions that update both the local and remote (REST) data.

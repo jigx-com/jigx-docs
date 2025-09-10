@@ -18,3 +18,63 @@ Pass the values you want to test as input parameters. In this example, minmag an
 {% endhint %}
 
 <figure><img src="../../../../../.gitbook/assets/REST-ForRowsCombined.png" alt="Combined properties" width="375"><figcaption><p>Combined properties</p></figcaption></figure>
+
+Example code
+
+{% code title="Get-earthquake-data" %}
+```yaml
+# REST Data Provider with forRowsInRange function example
+# This example fetches earthquake data and updates only rows within a magnitude range
+provider: DATA_PROVIDER_REST
+method: GET
+url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
+useLocalCall: true      
+# Input parameters for the range values
+parameters:
+  mag:
+    type: number
+    location: query
+    required: false
+    value: 2.0
+  dmin:  
+    type: number
+    location: query
+    required: false
+    value: 5.0
+
+# Transform the earthquake data
+outputTransform: |
+  {
+    "earthquakes": features[].{
+      "id": id,
+      "place": properties.place,
+      "mag": properties.mag,
+      "time": properties.time,
+      "coordinates": geometry.coordinates,
+      "depth": geometry.coordinates[2]
+    }
+  }
+operations:
+  - type: operation.delete-insert
+    table: earthquake_data
+    records: |
+      =$.earthquakes.{
+      "id": id,
+      "place": place,
+      "mag": mag,
+      "time": time,
+      "longitude": coordinates[0],
+      "latitude": coordinates[1],
+      "depth": depth
+      }
+    # Only update rows where magnitude falls within the specified range
+    forRowsInRange:
+      mag: 
+        from: mag
+        to: dmin
+        
+    # Optional: Can combine with forRowsWithValues for additional filtering
+    # forRowsWithValues:
+    #   status: "active"
+```
+{% endcode %}

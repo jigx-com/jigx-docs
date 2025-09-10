@@ -49,3 +49,55 @@ When used in a function:
 ## Expressions
 
 <table><thead><tr><th width="100.25390625"></th><th width="179.015625">Expression</th><th>Description</th></tr></thead><tbody><tr><td>output</td><td><code>=@ctx.guard.output</code></td><td>Output of the guard function is returned to the function as actions. If specified, the output of the function is the result of the expression; otherwise, the output is defined as the default output of the REST provider.</td></tr></tbody></table>
+
+## Example code
+
+```yaml
+provider: DATA_PROVIDER_REST
+method: GET
+url: url
+useLocalCall: true
+
+guard:
+  # NOTE: the main function when is checked before the guard function is evaluated,
+  # the guard when checks whether to call the guard function.
+  # the guard result expression determines if the main function should be executed or not.
+  # the guard operations are executed if the guard function fails or returns a falsy value.
+  function: check-book-title-local-rest
+  parameters:
+    title: =@ctx.parameters.title
+  # Should the guard function be executed at all (default: true)
+  when: true
+  # Should the guard function be executer before the first (initial) call of the main function (default: true)
+  onInitial: true
+  # Should the guard function be executed before each continuation of the main function (default: true)
+  onContinuation: true
+  # Should the guard function be executed before each retry of the main function (default: true)
+  onRetry: true
+  # The result expression is evaluated in the context of the guard function to determine if the main function should be executed (true) or not (false).
+  result: "=@ctx.guard.output.id ? true : false"
+  operations:
+    - type: operation.execute-sql
+      statements:
+        - statement: |
+            UPDATE _commandQueue
+            SET payload = REPLACE(payload, @tempId, @id)
+            WHERE payload LIKE '%' || @tempId || '%'
+          parameters:
+            tempId: ='_tmp_' & $string(@.commandId) & '_'
+            id: =@ctx.guard.output.id
+        - statement: |
+            ="UPDATE [" & @.entity & "]\nSET [id] = REPLACE([id], @tempId, @id),\n[data] = REPLACE([data], @tempID, @id)\nWHERE ([data] LIKE '%' || @tempId || '%') OR ([id] = @tempId)"
+          parameters:
+            tempId: ='_tmp_' & $string(@.commandId) & '_'
+            id: =@ctx.guard.output.id
+        - statement: |
+            DELETE FROM _commandQueue
+            WHERE [id] = @commandId
+          parameters:
+            commandId: =@.commandId
+      tables:
+        - _commandQueue
+        - =@ctx.entity
+ 
+```

@@ -68,3 +68,83 @@ Applies to the operations that are performed on the local data from the remote d
 ## Expressions
 
 <table><thead><tr><th width="115.1015625"></th><th></th><th></th></tr></thead><tbody><tr><td>records</td><td><code>=@ctx.record.{primaryKey}</code></td><td>Defines the primary key, including the ability to reference the full record.</td></tr></tbody></table>
+
+Example code
+
+The example code below defines a series of database operations that process and store folder data from the ClickUp REST API.
+
+<pre class="language-yaml"><code class="lang-yaml">operations:
+# Only when there's NO X-opsPrimaryKey parameter (bulk processing mode) then,
+<strong># Deletes all existing records from folders-split-queries table
+</strong># Inserts new records by transforming each folder from $.folders array.
+<strong># Maps folder data to a flattened structure with space information included.
+</strong>  - type: operation.delete-insert
+    table: folders-split-queries
+    when: =$not($boolean(@ctx.parameters.X-opsPrimaryKey))
+    records: |
+      =$.folders.{
+        "id": id,
+        "name": name,
+        "orderIndex": orderindex,
+        "overrideStatuses": override_statuses,
+        "hidden": hidden,
+        "archived": archived,
+        "task_count": task_count,
+        "spaceId": space.id,
+        "spaceName": space.name
+      }
+   # Store Specific Folder (Primary Key Mode)
+   # Only when X-opsPrimaryKey parameter exists (single record mode), then
+   # Uses either the provided primary key OR the output name as the primary key.
+   # Targets a specific record for update rather than bulk processing.
+   # Same data transformation as above but for targeted updates.  
+  - primaryKey: >
+      =$boolean(@ctx.parameters.X-opsPrimaryKey) ?
+      @ctx.parameters.X-opsPrimaryKey:@ctx.output.name
+    type: operation.delete-insert
+    table: folders-split-queries-primary
+    when: =$boolean(@ctx.parameters.X-opsPrimaryKey)
+    records: |
+      =$.folders.{
+        "id": id,
+        "name": name,
+        "orderIndex": orderindex,
+        "overrideStatuses": override_statuses,
+        "hidden": hidden,
+        "archived": archived,
+        "task_count": task_count,
+        "spaceId": space.id,
+        "spaceName": space.name
+      }
+  # Iterate through each folder,
+<strong>  # for each list within a folder, creates a record linking the list to its 
+</strong><strong>  # parent folder. Processes lists that don't belong to any folder.
+</strong>  # Sets folderId and folderName to null
+  # Uses $append() to merge folder-based lists and folderless lists into a single array.
+  - type: operation.delete-insert
+    table: lists-split-queries
+    records: |
+      =$append(
+        $reduce(folders, [], function($acc, $folder) {
+          $append($acc,
+            $map($folder.lists, function($list) {
+              {
+                "listId": $list.id,
+                "listName": $list.name,
+                "folderId": $folder.id,
+                "folderName": $folder.name
+              }
+            })
+          )
+        }),
+        $map(@ctx.queries.folderless-lists, function($list) {
+          {
+            "listId": $list.listId,
+            "listName": $list.listName,
+            "folderId": null,
+            "folderName": null
+          }
+        })
+      )
+</code></pre>
+
