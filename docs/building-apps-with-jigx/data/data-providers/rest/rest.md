@@ -29,7 +29,7 @@ When a REST call returns data to Jigx, the processed format, such as JSON, is in
 
 The following examples with code snippets are provided:
 
-<table><thead><tr><th width="130.22265625">Example</th><th></th></tr></thead><tbody><tr><td>Hello REST</td><td>In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images.</td></tr><tr><td>MS Graph</td><td>The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.</td></tr></tbody></table>
+<table><thead><tr><th width="130.22265625">Example</th><th></th></tr></thead><tbody><tr><td><a href="https://docs.jigx.com/examples/readme/data-providers/rest/create-an-app-using-rest-apis">Hello REST</a></td><td>In this section, a REST API is used to create a customers Jigx app, allowing you to add new customers and update and view customer details, location, and images.</td></tr><tr><td><a href="https://docs.jigx.com/examples/readme/data-providers/rest/ms-graph">MS Graph</a></td><td>The MS Graph examples use the User, Calendar, Mail, Insights, and To-do tasks to create a powerful Jigx apps with everything you need in one app.</td></tr></tbody></table>
 
 ## Building a REST based app video resources
 
@@ -60,8 +60,3 @@ The following examples with code snippets are provided:
 
 {% endcolumn %}
 {% endcolumns %}
-
-## See Also
-
-* [File handling](../../file-handling.md)
-* [Offline remote data handling](../../offline-remote-data-handling.md)

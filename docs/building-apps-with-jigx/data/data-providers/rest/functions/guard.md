@@ -48,4 +48,4 @@ When used in a function:
 
 ## Expressions
 
-<table><thead><tr><th width="100.25390625"></th><th width="179.015625"></th><th></th></tr></thead><tbody><tr><td>output</td><td><code>=@ctx.guard.output</code></td><td>Output of the guard function is returned to the function as actions. If specified, the output of the function is the result of the expression; otherwise, the output is defined as the default output of the REST provider.</td></tr></tbody></table>
+<table><thead><tr><th width="100.25390625"></th><th width="179.015625">Expression</th><th>Description</th></tr></thead><tbody><tr><td>output</td><td><code>=@ctx.guard.output</code></td><td>Output of the guard function is returned to the function as actions. If specified, the output of the function is the result of the expression; otherwise, the output is defined as the default output of the REST provider.</td></tr></tbody></table>

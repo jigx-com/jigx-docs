@@ -17,4 +17,4 @@ Pass the values you want to test as input parameters. In this example, minmag an
 * You cannot combine `forRowsWithMatchingIds` with any other range or value check.
 {% endhint %}
 
-<figure><img src="../../../../../.gitbook/assets/REST-ForRowsCombined.png" alt="Combined properties" width="563"><figcaption><p>Combined properties</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/REST-ForRowsCombined.png" alt="Combined properties" width="375"><figcaption><p>Combined properties</p></figcaption></figure>

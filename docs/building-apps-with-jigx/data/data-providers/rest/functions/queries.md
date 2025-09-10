@@ -7,7 +7,7 @@ The `queries` property allows you to define Just-In-Time (JIT) queries that are 
 * Ensures accuracy by querying local tables at runtime.
 * Reduces stale data by removing the need to store older data in the Command Queue.
 * Supports offline use by relying on local data, not remote API calls.
-* Improves flexibility by allowing conditional logic or table operations to be based on current state.
+* Improves flexibility by allowing conditional logic or table operations to be based on the current state.
 
 ## How queries work
 
