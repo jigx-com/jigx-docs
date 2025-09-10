@@ -17,23 +17,19 @@ layout:
 
 # REST Authentication
 
-## REST Authentication
-
-## Overview
-
 Jigx supports OAuth, tokens, Basic Auth credentials, secrets, and API keys as authentication methods. These result in entries added to the request's header unless the authentication parameters' location is specified differently. We **do not recommend** building solutions with Jigx where credentials are stored in the YAML of the Jigx solutions. Jigx provides a secure mechanism for defining, storing, and retrieving authentication information during runtime.
 
 ## Setting up Jigx Management to securely store credentials
 
 Credentials, including OAuth configurations, are stored in Jigx Management under the [credentials](../../../../administration/solutions/credentials.md) section for a solution. Each authentication type entry has the fields required for Jigx to add the credentials to the request when it executes the function on the device. These entries are stored in the Jigx Cloud-using AWS amplifies encryption that Jigx cannot decrypt. Entries containing secrets are not visible once they are stored. During runtime, when Jigx comes across a parameter it recognizes as an authentication parameter, it will retrieve the configuration from the Jigx cloud and stores it in the device's keychain. Only the Jigx application can access and retrieve the information once stored on the device. This is protected by on-device encryption and can only be accessed by the native application signed with the Jigx certificate for the signed-in user.
 
-## Authentication examples
-
 ## OAuth and Bearer Tokens
 
 The result of a successful OAuth loop is a token that is stored on the user's device in the keychain secure storage. When the token expires, Jigx uses a refresh token to get an updated token. If the OAuth loop provides no refresh token, the user will be prompted for their OAuth credentials by the REST call.
 
 The `accessToken` must be specified as a parameter in the YAML. Jigx only retrieves the values from the cloud if specified in the YAML. If this parameter is omitted, the OAuth loop will not be initiated.
+
+## Authentication examples
 
 ### OAuth Example
 

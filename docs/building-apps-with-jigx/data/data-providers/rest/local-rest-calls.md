@@ -17,10 +17,6 @@ layout:
 
 # Local REST Calls
 
-## Local REST Calls
-
-## Overview
-
 The REST provider populates list data or performs other REST methods using a third-party REST service.
 
 By default, a REST function will split processing between the mobile app (local) and the Jigx REST service (remote). The mobile app wraps the REST call and sends it to the remote Jigx REST function that, in turn, calls the third-party service. Results are returned to the mobile app from the third-party REST service via the remote Jigx REST function. When using the remote Jigx REST service, the size of the data is limited to 6Mb. OAuth, which is configured in Jigx Management is only processed in the remote Jigx REST service. **Remote REST function** calls are helpful when:

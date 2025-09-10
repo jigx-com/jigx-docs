@@ -147,7 +147,7 @@ parameters:
 ```
 {% endcode %}
 
-### Mapping Nested Arrays
+## Mapping Nested Arrays
 
 You can also use `$map()` to transform nested arrays into structured fields within a single object. This example returns a single row with structured ingredients and instructions arrays. Use this pattern when you want to store related subitems within a single SQLite row, e.g., for display in a list jig using `$.eval()`.
 
