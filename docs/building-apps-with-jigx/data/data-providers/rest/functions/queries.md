@@ -20,9 +20,40 @@ The `queries` property allows you to define Just-In-Time (JIT) queries that are 
 
 The `resultType` property lets you control the format of the returned data:
 
-| Type                | Description                                                      | Returned value                      |
-| ------------------- | ---------------------------------------------------------------- | ----------------------------------- |
-| `records` (default) | Returns all matching records                                     | Array of objects                    |
-| `record`            | Returns the first matching record                                | Single object                       |
-| `scalar`            | Returns a single value from the first column of the first record | Single value (string, number, etc.) |
+<table><thead><tr><th width="182.44921875">Type</th><th>Description</th><th>Returned value</th></tr></thead><tbody><tr><td><code>records</code> (default)</td><td>Returns all matching records</td><td>Array of objects</td></tr><tr><td><code>record</code></td><td>Returns the first matching record</td><td>Single object</td></tr><tr><td><code>scalar</code></td><td>Returns a single value from the first column of the first record</td><td>Single value (string, number, etc.)</td></tr></tbody></table>
+
+If no records match the query:
+
+* records returns an empty array \[]
+* record and scalar return null
+
+In this example:
+
+* current-record uses a parameter to fetch a specific country from the local table.
+* existing-countries fetches all records from the local/countries table.
+
+{% code title="Queries" %}
+```yaml
+# In the function definition.
+queries:
+  current-record:
+    statement: SELECT * FROM [local/countries] WHERE [id] = @id
+    parameters:
+      id: =@.parameters.countryId
+  existing-countries:
+    statement: SELECT * FROM [local/countries]
+```
+{% endcode %}
+
+You can access the results in other parts of the function like this:
+
+{% code title="YAML" %}
+```yaml
+records: =@ctx.queries.existing-countries
+```
+{% endcode %}
+
+## Queries properties
+
+<table><thead><tr><th width="162.85546875">Properties</th><th>Description</th></tr></thead><tbody><tr><td><code>dependencies</code></td><td>The queries that this query depends on. They will be executed before this query. Dependencies allow you to stop recursive queries, because queries can be inputs to each other.</td></tr><tr><td><code>jsonColumns</code></td><td>The columns that are automatically parsed as JSON string.<br>Defaults to no JSON columns to parse.</td></tr><tr><td><code>onContinuation</code></td><td>Set to false re-runs the query on each continuation of the function. Defaults to true, so the query only runs initially by default and not again on each continuation.</td></tr><tr><td><code>parameters</code></td><td>Named parameters used in the query statement. They are referenced using the @ prefix (e.g., @id). If not prefixed manually, the @ is automatically added. Defaults to no parameters.</td></tr><tr><td><code>resultType</code></td><td>Defines the expected result format. Can be one of: records (default), record, or scalar.</td></tr><tr><td><code>statement</code></td><td>The SQL query statement to execute.</td></tr><tr><td><code>tables</code></td><td>The tables to use in the query. Defaults to none. These tables are validated to exist before the query is executed.</td></tr></tbody></table>
 

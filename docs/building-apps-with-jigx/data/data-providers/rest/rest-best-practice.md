@@ -209,6 +209,77 @@ Updating multiple records in a single REST call helps optimize API usage by redu
 
 For more information see [Update multiple records in a single REST call](https://docs.jigx.com/examples/readme/data-providers/rest/create-an-app-using-rest-apis/update-multiple-records-in-a-single-rest-call).
 
+## Use the $ approach in REST functions
+
+Avoid configuring functions and their parameters on a field level, using the dollar approach caters for maintenance and dynamic inclusion when new fields are added to the REST service. The required fields are specified in the jig's datasource.
+
+```yaml
+provider: DATA_PROVIDER_REST
+method: GET
+url: https://{custom-variable}Appointment
+parameters:
+  $expand:
+    location: query
+    required: false
+    type: string
+    value: Logs
+  $filter:
+    location: query
+    required: true
+    type: string
+  accessToken:
+    location: header
+    required: true
+    type: token
+    value: xxxx
+  cloudURL:
+    location: path
+    required: true
+    type: string
+outputTransform: $
+```
+
+## Using input and output transforms (no fields)&#x20;
+
+Send one message body parameter into a function, this ensures you do not have to modify the input transform when fields change or are added. Create generic functions, that can be reused in multiple scenarios.
+
+## **Limit json\_extract calls in query SELECT statements**
+
+Limit json\_extract calls in query SELECT statements except on key fields for example, when using joins, WHERE, ORDER BY which require you to extract a specific field.&#x20;
+
+* Calling individual field names to bind to components is expensive.&#x20;
+* Use JSON properties on data at the root.&#x20;
+* InstanceIds - use the name of the data in the schema that comes from the REST service.&#x20;
+* Field names - use the name of the data in the schema that you want to send back to the backend system.
+
+## Navigation&#x20;
+
+* Use [New & existing behaviour in go-to action](../../../logic/navigation.md#go-to-using-new-and-existing-behaviour)
+* Use InstanceId
+
+## State usage&#x20;
+
+Solution state has a performance impact, use only when necessary.&#x20;
+
+## Use SQL commands for bulk deletes&#x20;
+
+Use SQL commands for bulk deletes rather than `execute-entities` to ensure performance optimization.&#x20;
+
+## Use indexes when joining on json\_extracts
+
+ID fields are indexed when joining an adjacent `json_extracts`, where fields are not indexed SQLite scans through to find the data causing slow performance. Always select id in SELECT statements to ensure optimal performance.
+
+## Where to store settings.
+
+* Use [custom variables](../../../../administration/solutions/solution-settings/custom-variables.md) (solution settings > custom in Management) for settings that hardly ever change, for example, server URLs.&#x20;
+* For settings that change frequently use Dynamic Data.
+
+## Establish a naming convention for REST functions and files
+
+* _Improves readability_: Clear names make it easier to understand the purpose of the function or file, e.g., rest-get-appointments.
+* _Maintainability:_ Consistent naming simplifies future updates and debugging.&#x20;
+* _Collaboration_: Common naming standards help multiple contributors understand and interact with the project seamlessly.
+
 ## See Also
 
 * [REST examples](https://docs.jigx.com/examples/readme/data-providers/rest)
