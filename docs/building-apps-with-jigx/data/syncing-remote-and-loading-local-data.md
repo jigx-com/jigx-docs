@@ -17,7 +17,7 @@ layout:
 
 # Syncing remote and loading local Data
 
-<figure><img src="../../.gitbook/assets/data-remotesync.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/data-remotesync.png" alt="" width="563"><figcaption></figcaption></figure>
 
 Key:
 

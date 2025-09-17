@@ -17,7 +17,7 @@ layout:
 
 # REST syncing & loading local Data
 
-<figure><img src="../../../../.gitbook/assets/REST-syncLoad1.gif" alt="" width="489"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/REST-datasync.png" alt="" width="563"><figcaption></figcaption></figure>
 
 **Key:**
 
