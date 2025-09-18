@@ -57,6 +57,10 @@ operations:
 
 ## Operation Property
 
+{% hint style="info" %}
+Operations are not aware of `conversions` configured at the function level. Each operation must define its own `conversions` property to handle file format transformations. Function-level conversions do not cascade to individual operations.
+{% endhint %}
+
 <table><thead><tr><th width="193.921875">Property</th><th>Description</th></tr></thead><tbody><tr><td><code>conversions</code></td><td><p>Converting files runs per operation. This holds an array of properties that should be converted. The following properties control the conversion:</p><ul><li><code>property</code>: The name of the property to convert.</li><li><code>from</code>: Format of the input data. It can be buffer, base64, data-uri, or local-uri.</li><li><code>to</code>: Format of the converted data. It can be base64, data-uri, buffer, or local-uri.</li><li><code>convertHeicToJpg</code>: When set to true, and the file being converted is HEIC, it is converted to JPG. </li></ul><p>Conversions can be set up as a static array of definitions or dynamically as an array returned by an expression. To set up dynamic conversions, use the expression:<br> <code>conversions: =@ctx.datasources.conversions</code>, applicable to both local and global actions. See <a href="../../../file-handling.md">File handling</a> for details on using conversions in REST functions.</p></td></tr><tr><td><code>forRowsWithValues</code></td><td>Only applies to <code>operation.delete-insert</code></td></tr><tr><td><code>forRowsInRange</code></td><td>Only applies to <code>operation.delete-insert</code></td></tr><tr><td><code>parameters</code></td><td>Only applies to <code>operation.execute_sql</code>. The parameters used in the above statement.</td></tr><tr><td><code>primaryKey</code></td><td>Specify the remote data column that must be used as the primary key in the local data, such as Customer ID. This allows you to specify an expression (<code>=@ctx.record.CustomerID</code>) to define the primary key, including the ability to reference the whole record. This enables the building of dynamic keys, for example, by concatenating multiple fields from the record to construct an ID, timestamp, or GUID.</td></tr><tr><td><code>records</code></td><td>What records to use for the table operation, can manipulate data. Evaluates the expression against the function inputs and result to construct the records for the specified table. The constructed data will be stored in the table.</td></tr><tr><td><code>statements</code></td><td>Only applies to <code>operation.execute_sql</code>. List of statements to execute in sequence. Multiple statements can be configured to execute in sequence.<br><code>statement</code> - the SQL statement to execute against the solution database.</td></tr><tr><td><code>tables</code></td><td>Only applies to <code>operation.execute_sql</code>. The tables affected by the <code>statements</code>. Before executing the statements, a check ensures that the tables exist. After execution any datasources that use these entities will be notified that the database was changed.</td></tr><tr><td><code>timeStamp</code></td><td>Use a timestamp such as last <em>modified</em> from the remote data that must be used as the timestamp in the local table.</td></tr><tr><td><code>type</code></td><td>See the table operations types in the table below.</td></tr><tr><td><code>when</code></td><td>Specify the condition under which the function should execute (default) and when it should be skipped.</td></tr></tbody></table>
 
 ## Table Operation Types
@@ -123,6 +127,16 @@ The example code below defines a series of database operations that process and 
   # Uses $append() to merge folder-based lists and folderless lists into a single array.
   - type: operation.delete-insert
     table: lists-split-queries
+    # Convert list thumbnails from buffer to local-uri for efficient storage
+    # Operations are not aware of conversions configured at the function level. 
+    # Each operation must define its own conversions property to handle file 
+    # format transformations. 
+    # Function-level conversions do not cascade to individual operations.
+    conversions:
+      - property: listThumbnail
+        from: buffer
+        to: local-uri
+        convertHeicToJpg: true
     records: |
       =$append(
         $reduce(folders, [], function($acc, $folder) {
@@ -131,6 +145,7 @@ The example code below defines a series of database operations that process and 
               {
                 "listId": $list.id,
                 "listName": $list.name,
+                "listThumbnail": $list.thumbnail,
                 "folderId": $folder.id,
                 "folderName": $folder.name
               }
@@ -141,6 +156,7 @@ The example code below defines a series of database operations that process and 
           {
             "listId": $list.listId,
             "listName": $list.listName,
+            "listThumbnail": $list.thumbnail,
             "folderId": null,
             "folderName": null
           }
