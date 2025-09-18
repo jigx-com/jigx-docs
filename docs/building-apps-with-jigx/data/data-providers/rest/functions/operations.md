@@ -57,7 +57,7 @@ operations:
 
 ## Operation Property
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Operations are not aware of `conversions` configured at the function level. Each operation must define its own `conversions` property to handle file format transformations. Function-level conversions do not cascade to individual operations.
 {% endhint %}
 
