@@ -38,6 +38,38 @@ Using states in Jigx is divided into categories:
 2. **Local state** - known as component state in Jigx, refers to data that is confined to a single component or jig. This type of state is typically managed within the component itself. The creator can set each component state in the YAML or by user input, such as a text field. The state key options depend on the component.
 3. **State navigation** allows you to determine the flow of screens and the state of each one in the flow. See [Navigation](navigation.md) for more information.
 
+## State scopes & performance
+
+### Decision Tree
+
+Use the decision tree below to guide you through the process of selecting the most appropriate state management scope and approach for application components, helping determine whether to use local component state, shared state, or global state management solutions based on data usage patterns and component relationships.
+
+```
+Need data across multiple screens? 
+├─ YES → solution.state (USE SPARINGLY - causes app-wide re-render)
+│  └─ Examples: projectId, auth session, theme
+└─ NO → Screen-specific data?
+   ├─ YES → jig.state (PREFERRED - screen-local, performant)
+   │  └─ Examples: search filters, form flags, selection
+   └─ NO → Component input/validation?
+      └─ YES → component.state (automatic - user input, validation)
+         └─ Examples: form values, isDirty, isValid
+```
+
+### Performance Impact Table
+
+<table><thead><tr><th width="152.01953125">Scope</th><th width="135.2734375">re-render impact</th><th width="178.9765625">Use when</th><th>Avoid when</th></tr></thead><tbody><tr><td><code>solution.state</code></td><td>Entire app</td><td><ul><li>Authorization</li><li>Global selections that rarely change</li></ul></td><td><ul><li>UI filters</li><li> Form state</li><li>Temporary flags</li></ul></td></tr><tr><td><code>jig.state</code></td><td>Current screen</td><td><ul><li>Screen filters</li><li>Selection,</li><li>Wizard progress</li></ul></td><td><ul><li>Cross-screen data</li><li>Component values</li></ul></td></tr><tr><td><code>component.state</code></td><td>Single component</td><td><ul><li>User input</li><li>Validation</li></ul></td><td><ul><li>Cross-component data</li><li>Screen logic</li></ul></td></tr></tbody></table>
+
+### Performance best practice
+
+* **Scope Minimization**: Use narrowest scope  (component → jig → solution)
+* **Avoid Global Overuse**: `solution.state` triggers app-wide re-render, prefer `jig.state` over `solution.state`
+* **Initialize Explicitly**: Always set `initialValue` to avoid undefined behavior
+* **Clean Up**: Reset transient state after actions/navigation
+* **Pass vs Store**: Prefer navigation parameters over state storage
+* **Passing data**: Pass data via parameters, not state
+* **Clear  state**: on refresh/navigation
+
 ## State syntax
 
 States vary based on the context in which they are used. Use IntelliSense in [expressions](expressions.md) to determine where you can make use of states. IntelliSense can assist by directing you to the context tree, showing which states are available for use within the context of the jig.
@@ -46,37 +78,198 @@ States vary based on the context in which they are used. Use IntelliSense in [ex
 Avoid using state keywords, such as `component`, as `instanceId` values in expressions. Doing so will cause an "Expression is not valid" error in the app.
 {% endhint %}
 
-Avoid using state keywords, such as `component`, as `instanceId` values in expressions. Doing so will cause an "Expression is not valid" error in the app.
-
 ### Solution (Global) State
 
-<table><thead><tr><th width="184.20703125">Syntax</th><th width="148.13671875">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.solution.state.</td><td>activeItem key now</td><td><ul><li>Global variable used throughout a solution.</li><li>Your variable that can be set and read.</li></ul></td></tr></tbody></table>
-
-### Component (local) State
-
-<table><thead><tr><th width="299.9140625">Syntax</th><th width="129.2265625">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.jig.state.</td><td>activeItem activeItemId amounts filter isHorizontal isRefreshing isSelectable isSelectActive searchText selected value</td><td><ul><li>Applies to a list jig.</li><li>The creator configures the state in the YAML.</li></ul></td></tr><tr><td>=@ctx.jigs.<em>jigInstanceId</em>.components.<em>componentInstanceId</em>.state.</td><td>data isDirty isValid response</td><td><ul><li>Read the state of a component in a specific jig using the instanceId of both the jig and component.</li><li>Referencing components on a composite jig.</li></ul></td></tr><tr><td>=@ctx.component.state.</td><td>amount checked selected value</td><td>State is the variable of or for each component.</td></tr><tr><td>=@ctx.components.componentInstanceId.state.</td><td>data filter isValid<br>isDirty isPending searchText selected response value</td><td><ul><li>State of components, using the component's instanceId.</li><li>Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.</li></ul></td></tr><tr><td>=@ctx.current.state.</td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr></tbody></table>
+<table><thead><tr><th width="183.21484375">Syntax</th><th width="148.13671875">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.solution.state.</td><td><p>activeItem </p><p>key </p><p>now</p></td><td><ul><li>Global variable used throughout a solution.</li><li>Your variable that can be set and read.</li></ul></td></tr></tbody></table>
 
 ### Jig (local) State
 
-<table><thead><tr><th width="189.515625">Syntax</th><th width="238.25390625">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.jig.instanceId</td><td></td><td>Used to push the jig instance (state) to the navigation stack.</td></tr></tbody></table>
+| Syntax               | Key                                                                                                                                                                                  | Area                                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| =@ctx.jig.state.     | <p>activeItem <br>activeItemId<br>amounts</p><p>filter </p><p>isHorizontal </p><p>isRefreshing </p><p>isSelectable isSelectActive </p><p>searchText </p><p>selected </p><p>value</p> | <p></p><ul><li>Applies to a list jig.</li></ul><ul><li>The creator configures the state in the YAML.</li></ul> |
+| =@ctx.jig.instanceId |                                                                                                                                                                                      | <p></p><ul><li>Used to push the jig instance (state) to the navigation stack.</li></ul>                        |
+
+### Component (local) State
+
+<table><thead><tr><th width="299.9140625">Syntax</th><th width="129.2265625">Key</th><th>Area</th></tr></thead><tbody><tr><td>=@ctx.jigs.<em>jigInstanceId</em>.components.<em>componentInstanceId</em>.state.</td><td><p>data <br>isDirty </p><p>isValid </p><p>response</p></td><td><ul><li>Read the state of a component in a specific jig using the instanceId of both the jig and component.</li><li>Referencing components on a composite jig.</li></ul></td></tr><tr><td>=@ctx.component.state.</td><td><p>amount checked selected </p><p>value</p></td><td>State is the variable of /or for each component.</td></tr><tr><td>=@ctx.components.componentInstanceId.state.</td><td><p>data </p><p>filter isValid<br>isDirty isPending searchText selected response value</p></td><td><ul><li>State of components, using the component's instanceId.</li><li>Can use interaction from the user to add a value to the component's state, such as email-field, text-field, or number-field.</li></ul></td></tr><tr><td>=@ctx.current.state.</td><td>amount checked</td><td>Applies to a list, list.item, product-item, and stage components. The list's data is an array of records. The <code>=@ctx.current.state</code> is the state of the current object in the array.</td></tr></tbody></table>
+
+## State Lifecycle
+
+#### Lifetime
+
+* `solution.state`: in-memory; cleared on logout (app-wide re-render on change).
+* `jig.state`: per jig instance; persists while on navigation stack; resets on new instance.
+* `component.state`: per component; cleared when navigating away from jig.
+
+#### Initialization
+
+```typescript
+// ✅ Always use initialValue
+jig.setState({ 
+  searchQuery: { initialValue: '' },
+  filters: { initialValue: { category: 'all' } },
+  selected: { initialValue: [] }
+})
+```
+
+#### Navigation
+
+```typescript
+// ✅ Pass data via parameters, not state
+listItem.onPress.goto(SCREEN.DETAIL)
+  .parameter('id', '=@ctx.current.item.id')
+  .parameter('mode', 'view')
+
+// Read on destination
+detailText.value('=@ctx.jig.inputs.id')
+```
+
+#### Cleanup
+
+```typescript
+// ✅ Clear transient state on refresh/navigation
+screen.onRefresh.resetjigState({ keys: ['searchQuery', 'selected'] })
+screen.onLoad.resetjigState({ keys: ['error', 'draft'] })
+```
+
+## State Core operations
+
+### **Initialize state:**&#x20;
+
+* Sets up the initial state structure when the screen loads
+* Defines default values to avoid `undefined` errors
+* Creates the state "schema" for your screen
+
+<pre class="language-yaml"><code class="lang-yaml"><strong>state:
+</strong>  StateKey1: 
+    # String
+    initialValue: 
+      value: string
+  StateKey2: 
+    # Array
+    initialValue: 
+      - one
+      - two
+      - three
+  StateKey3:
+    # object
+    initialValue:
+      - property: value
+</code></pre>
+
+### **Update state:**
+
+* Updates only the specified state key
+* Triggers re-render only for components that use that state
+* Can chain multiple state changes
+* Works with expressions and static values
+
+{% tabs %}
+{% tab title="solution" %}
+```yaml
+actions:
+- numberOfVisibleActions: 1
+  children:
+    - type: action.reset-solution-state
+      options:
+        changes:
+          - StateKey1
+```
+{% endtab %}
+
+{% tab title="jig/screen" %}
+```yaml
+actions:
+  - numberOfVisibleActions: 1
+    children:
+      - type: action.set-jig-state
+        options:
+          changes: 
+            StateKey1: "New Value"       
+```
+{% endtab %}
+
+{% tab title="component" %}
+```yaml
+actions:
+- numberOfVisibleActions: 1
+  children:
+    - type: action.execute-entity
+      options:
+        title: Update Record
+        provider: DATA_PROVIDER_LOCAL
+        entity: products
+        method: update
+        data:
+          textInput: =@ctx.components.textInput.state.value
+```
+{% endtab %}
+{% endtabs %}
+
+### **Clear state:**
+
+* Resets specified keys back to their `initialValue`
+* Can reset multiple keys at once
+* Useful for cleanup and form resets
+
+{% tabs %}
+{% tab title="solution" %}
+```javascript
+actions:
+- numberOfVisibleActions: 1
+  children:
+    - type: action.reset-solution-state
+      options:
+        changes:
+          - StateKey1
+          - StateKey2
+          - StateKey3
+```
+{% endtab %}
+
+{% tab title="jig/screen" %}
+```yaml
+actions:
+- numberOfVisibleActions: 1
+  children:
+    - type: action.reset-jig-state
+      options:
+        changes: 
+          - StateKey1
+          - StateKey2
+          - StateKey3
+```
+{% endtab %}
+
+{% tab title="component" %}
+```yaml
+actions:
+- numberOfVisibleActions: 1
+  children:
+    - type: action.reset-state
+      options:
+        state: =@ctx.components.instanceid.state.value
+```
+{% endtab %}
+{% endtabs %}
 
 ## How to use State
 
-## Solution state (global read and write state)
+### Solution state (global read and write state)
 
 You can define your solution state to store objects and values temporarily and then read them in multiple places in your solution. These are not stored in any local or remote data store but only in live memory. If you log out your solution state is cleared.
 
 * Configure the initial solution state in the **index.jigx** file by providing a `State Key` with a value.
 * You can update the state using the `action.set-solution-state` action.
 * To revert back to the initial state, simply use the `action.reset-solution-state` action.
-* Multiple states can be added in index.jigx and `initialValues` support nested objects.
-* To call nested objects in a state expression use `=@ctx.solution.state.state-key.objectName`
+* Multiple states can be added in index.jigx and `initialValues` support nested objects, strings, and arrays.
+* To call nested objects in a state expression use: `=@ctx.solution.state.state-key.objectName`
 
-### Write solution state
+#### Write solution state
 
-Define your state key in the solution, either in a jig or in the index.jigx file. The value can be any value or object, and you can access it anywhere within your solution. The set-solution-state and [set-state](https://docs.jigx.com/examples/readme/actions/set-state) action are easy ways to define the solution state.
+Define your state key in the solution, either in a jig or in the index.jigx file. The value can be any value or object, and you can access it anywhere within your solution. The set-solution-state action are easy ways to define the solution state.
 
-### Read solution state
+#### Read solution state
 
 To access your custom solution state, use the expression path below and replace \[key] with your custom solution state key.
 
@@ -119,7 +312,7 @@ actions:
 # Reset the solution state key to the initial value.
 actions:
   - children:
-      - type: action.reset-jig-state
+      - type: action.reset-solution-state
         options:
           title: Rest state
           changes:
@@ -127,7 +320,7 @@ actions:
 ```
 {% endtab %}
 
-{% tab title="Untitled" %}
+{% tab title="Read state value" %}
 ```yaml
 children:
   - type: component.entity
@@ -144,9 +337,9 @@ children:
 {% endtab %}
 {% endtabs %}
 
-## Jig state (read and write state)
+### Jig state (read and write state)
 
-Defines the state \[key] for jig that can be read from within the current jig.
+Defines the state \[key] for the jig/screen that can be read from within the current jig.
 
 * Configure the initial jig state in the desired jig file.
 * In any jig, you can update the state using the `action.set-jig-state` action.
@@ -154,11 +347,11 @@ Defines the state \[key] for jig that can be read from within the current jig.
 * Multiple states can be added and `initialValues` support nested objects.
 * To call nested objects in a state expression use `=@ctx.jig.state.state-key.objectName`
 
-### Within the jig
+#### Within the jig
 
 Reads the value in the jig's context (the jig where the expression is used), for example: `@ctx.jig.state.[key]`
 
-Define your state key in the jig file. The value can be any value or object, and you can access it anywhere within the jig. The 'set-jig-state' action is an easy way to define the jig state and 'r'eset-jig-state' action sets the state back to the initial key values.
+Define your state key in the jig file. The value can be any string, array, or object, and you can access it anywhere within the jig. The `set-jig-state` action is an easy way to define the jig state and `reset-jig-state` action sets the state back to the initial key values.
 
 {% tabs %}
 {% tab title="jig-initial-state.jigx" %}
@@ -217,25 +410,25 @@ type: jig.default
 {% endtab %}
 {% endtabs %}
 
-## Component state (read state)
+### Component state (read state)
 
 Define your state \[key] for a single component or all components in a jig. Navigating away from the jig clears your component's state as the data is stored in the live memory.
 
-### Within the current component
+#### Within the current component
 
-Reads the value of \[key] in the current component (the component where the expression is used), for example: `@ctx.component.state.[key]`
+Reads the value of \[key] in the current component (the component where the expression is used), for example: `=@ctx.component.state.[key]`
 
-### Within all components in the current jig
+#### Within all components in the current jig
 
-Reads the value of \[key] in the current jig and components with `instanceId`, for example:`@ctx.components.[instanceId].state.[key]`
+Reads the value of \[key] in the current jig and components with `instanceId`, for example:`=@ctx.components.[instanceId].state.[key]`
 
-### Within all jigs and components in the solution
+#### Within all jigs and components in the solution
 
-Reads the value of \[key] from the available jigs with `jigId` and components with `instanceId`. For example: `@ctx.jigs.[jigId].components.[instanceId].state.[key]`
+Reads the value of \[key] from the available jigs with `jigId` and components with `instanceId`. For example: `=@ctx.jigs.[jigId].components.[instanceId].state.[key]`
 
-## Action state (write state)
+### Action state (write state)
 
-You can use actions to set or reset a state either in a solution, jig, or component. These actions can be configured under the `actions` node or under an event node, such as `onPress`.
+You can use actions to set (update) or reset (clear) a state either in a solution, jig, or component. These actions can be configured under the `actions` node or under an event node, such as `onPress`.
 
 The following **set-state** actions are available:
 
@@ -255,7 +448,7 @@ The only difference between these states are the scope where they are used. See 
 
 <table data-full-width="true"><thead><tr><th width="319.76953125">Action</th><th width="102.91796875">Solution</th><th width="67.47265625">Jig</th><th width="124.7421875">Component</th><th>custom component (alpha)</th></tr></thead><tbody><tr><td><code>action.set-state</code></td><td>✅</td><td></td><td>✅</td><td></td></tr><tr><td><code>action.reset-state</code></td><td>✅</td><td></td><td>✅</td><td></td></tr><tr><td><code>action.set-solution-state</code></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.reset-solution-state</code></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.set-jig-state</code></td><td></td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.reset-jig-state</code></td><td></td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.set-custom-component-state</code></td><td></td><td></td><td></td><td>✅</td></tr><tr><td><code>action.reset-custom-component-state</code></td><td></td><td></td><td></td><td>✅</td></tr></tbody></table>
 
-### Setting a state using an action (set-states)
+#### Setting a state using an action (set-states)
 
 The basic `set-state` actions code structures are shown below:
 
@@ -303,7 +496,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Reset a state using an action (reset-states)
+#### Reset a state using an action (reset-states)
 
 The basic `reset-state` actions code structures are shown below:
 
@@ -343,7 +536,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### Setting a state on an event using an action
+#### Setting a state on an event using an action
 
 You can use the `set-states` or `reset-states` actions with the following events:
 
@@ -362,6 +555,102 @@ onFocus:
       status: =@ctx.datasources.company[0].mottos
 ```
 {% endcode %}
+
+#### Action state patterns
+
+{% tabs %}
+{% tab title="Async Operations" %}
+```typescript
+// ✅ Pattern: Action states are automatic
+buttons.add.executeEntity({ instanceId: 'save-action' })
+
+// Read states
+spinner.isVisible('=@ctx.actions.save-action.state.isPending')
+successMsg.isVisible('=@ctx.actions.save-action.state.isSuccess')
+errorMsg.text('=@ctx.actions.save-action.state.error.message')
+
+// Access outputs
+detailText.value('=@ctx.actions.save-action.outputs.recordId')
+```
+{% endtab %}
+
+{% tab title="Loading States" %}
+```typescript
+// ✅ Pattern: Loading with error handling
+screen.setState({ 
+  isLoading: { initialValue: false },
+  loadError: { initialValue: null }
+})
+
+buttons.add.sequential().actions
+  .setScreenState().change('isLoading', true)
+  .executeEntity({ provider: 'DATA_PROVIDER_REST', functionId: 'fetchData' })
+  .setScreenState().change('isLoading', false)
+
+// UI responds to states
+spinner.isVisible('=@ctx.jig.state.isLoading')
+errorMessage.isVisible('=@ctx.jig.state.loadError != null')
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+message = "hello world"
+puts message
+```
+{% endtab %}
+{% endtabs %}
+
+### Quick Validation
+
+```typescript
+// State exists check
+when: =@ctx.jig.state.searchQuery != null and @ctx.jig.state.searchQuery != ''
+
+// Type safety  
+when: =@ctx.jig.state.count ~> $type = 'number'
+
+// Default values
+text: =@ctx.jig.state.title ?: 'Default Title'
+```
+
+## Common state use cases (patterns)
+
+* **Search & Filter** \
+  Mirrors UI state to bind to datasource \
+  Filter: `=@ctx.components.filter.state.value`\
+  Query parameter: `=@ctx.jig.state.category`
+* **List Selection**\
+  Tracks selection in `jig.state`\
+  The `onPress` action uses the `selectedId` of  `=@ctx.current.item.id`\
+  Once selected uses `isSelected` of the `=@ctx.current.item.id`  in `=@ctx.jig.state.selectedId`
+* **Field Validation**\
+  Real-time validation with `errorText`
+
+{% tabs %}
+{% tab title="email-field" %}
+<pre class="language-yaml"><code class="lang-yaml"><strong>errorText: =@ctx.components.email.state.isValid = false ? "Invalid email format" : null
+</strong></code></pre>
+{% endtab %}
+
+{% tab title="text-field" %}
+```yaml
+errorText: =$length(@ctx.components.username.state.value) < 3 ? "Too short" : null'
+```
+{% endtab %}
+
+{% tab title="number-field" %}
+```ruby
+errorText: =@ctx.components.phone.state.value ~> /^[0-9]{10}$/ ? null : "Must be 10 digits"
+```
+{% endtab %}
+{% endtabs %}
+
+* **Form Dirty Tracking**\
+  Track changes for discard alert.\
+  \- Set jig state ({ formIsDirty: { initialValue: false } })\
+  \- `onFocus` then set jig state and change ('formIsDirty', true)\
+  \- On the form `isDiscardChangesAlertEnabled` ('=@ctx.jig.state.formIsDirty')
 
 ## Examples of state
 
