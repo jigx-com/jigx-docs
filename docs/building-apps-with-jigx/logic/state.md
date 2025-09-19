@@ -134,7 +134,7 @@ screen.onLoad.resetjigState({ keys: ['error', 'draft'] })
 
 ## State Core operations
 
-### **Initialize state:**&#x20;
+### **Initialize state**
 
 * Sets up the initial state structure when the screen loads
 * Defines default values to avoid `undefined` errors
@@ -157,7 +157,7 @@ screen.onLoad.resetjigState({ keys: ['error', 'draft'] })
       - property: value
 </code></pre>
 
-### **Update state:**
+### **Update state**
 
 * Updates only the specified state key
 * Triggers re-render only for components that use that state
@@ -206,7 +206,7 @@ actions:
 {% endtab %}
 {% endtabs %}
 
-### **Clear state:**
+### **Clear state**
 
 * Resets specified keys back to their `initialValue`
 * Can reset multiple keys at once
