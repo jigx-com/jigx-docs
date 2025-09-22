@@ -23,7 +23,7 @@ Datasources are sets of data used in Jigx solutions and are used to reference da
 
 There are three types of datasources available in Jigx Builder.
 
-1. [sqlite.md](datasources/sqlite.md "mention")- Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite](https://docs.jigx.com/examples/readme/datasource/sqlite).
+1. [sqlite](datasources/sqlite/ "mention")- Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite](https://docs.jigx.com/examples/readme/datasource/sqlite).
 2. **Static** - Static lists are typically used when data needs to be accessed but hardly ever changed. Static Data is helpful because it can be created quickly inside the jig, and there is no need to specify any database connections or set up tables. The amount of records that can be created in Static data is unlimited. Static data is commonly used to bind data to the UI components. For code examples and snippets, see [Static](https://docs.jigx.com/examples/readme/datasource/static).
 3. **System** - The system datasource is used to get a list of icons for jig components. For code examples and snippets, see [system](https://docs.jigx.com/examples/readme/datasource/system).
 
