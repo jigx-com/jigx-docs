@@ -107,7 +107,7 @@
             * [Using the OAuth configuration in a Jigx solution](building-apps-with-jigx/data/data-providers/rest/microsoft-graph-oauth/configuring-oauth-for-ms-graph/using-the-oauth-configuration-in-a-jigx-solution.md)
       * [Salesforce](building-apps-with-jigx/data/data-providers/salesforce/salesforce.md)
         * [Using the Salesforce provider](building-apps-with-jigx/data/data-providers/salesforce/using-the-salesforce-provider.md)
-    * [Datasources](building-apps-with-jigx/data/datasources/README.md)
+    * [Datasources](building-apps-with-jigx/data/datasources.md)
       * [SQLite](building-apps-with-jigx/data/datasources/sqlite.md)
   * [UI](building-apps-with-jigx/ui/ui.md)
     * [Home Hub](building-apps-with-jigx/ui/home-hub/home-hub.md)

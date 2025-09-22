@@ -17,19 +17,19 @@ layout:
 
 # Datasources
 
-Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](../data-providers/).
+Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/).
 
 ## Types
 
 There are three types of datasources available in Jigx Builder.
 
-1. **SQLite** - Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite](https://docs.jigx.com/examples/readme/datasource/sqlite).
+1. [sqlite.md](datasources/sqlite.md "mention")- Using the SQLite datasource provides the ability to write SQL queries to get data from Dynamic Data and local data providers. For code examples and snippets, see [sqlite](https://docs.jigx.com/examples/readme/datasource/sqlite).
 2. **Static** - Static lists are typically used when data needs to be accessed but hardly ever changed. Static Data is helpful because it can be created quickly inside the jig, and there is no need to specify any database connections or set up tables. The amount of records that can be created in Static data is unlimited. Static data is commonly used to bind data to the UI components. For code examples and snippets, see [Static](https://docs.jigx.com/examples/readme/datasource/static).
 3. **System** - The system datasource is used to get a list of icons for jig components. For code examples and snippets, see [system](https://docs.jigx.com/examples/readme/datasource/system).
 
 ## Configuration options
 
-<table><thead><tr><th width="153.67578125">Property</th><th width="323.7421875">Description</th><th>Code Examples</th></tr></thead><tbody><tr><td><code>isDocument</code></td><td>When the <code>isDocument</code> property is set to <code>true</code> on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the <code>initialValues</code> for a <a href="https://docs.jigx.com/examples/readme/components/form">form</a>, set it on the form level and in the datasource <code>isDocument: true</code>, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.</td><td><a href="https://docs.jigx.com/examples/readme/components/form#zUejA">new-contact.jigx</a></td></tr><tr><td><code>jsonProperties</code></td><td>Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use <code>jsonProperties</code> to specify the exact property in the array or nested object that you require. See <a href="../data-providers/rest/rest-best-practice.md">Working with complex REST structures</a>.</td><td><a href="https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR">view-customer-details.jigx</a></td></tr></tbody></table>
+<table><thead><tr><th width="153.67578125">Property</th><th width="323.7421875">Description</th><th>Code Examples</th></tr></thead><tbody><tr><td><code>isDocument</code></td><td>When the <code>isDocument</code> property is set to <code>true</code> on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the <code>initialValues</code> for a <a href="https://docs.jigx.com/examples/readme/components/form">form</a>, set it on the form level and in the datasource <code>isDocument: true</code>, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.</td><td><a href="https://docs.jigx.com/examples/readme/components/form#zUejA">new-contact.jigx</a></td></tr><tr><td><code>jsonProperties</code></td><td>Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use <code>jsonProperties</code> to specify the exact property in the array or nested object that you require. See <a href="data-providers/rest/rest-best-practice.md">Working with complex REST structures</a>.</td><td><a href="https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR">view-customer-details.jigx</a></td></tr></tbody></table>
 
 ### isDocument example
 
@@ -299,7 +299,7 @@ item:
 
 Datasources are defined once and are available throughout your solution to be reused in multiple jigs. Adding a global datasource improves performance as the data is retrieved once rather than multiple times.
 
-<figure><img src="../../../.gitbook/assets/DS-global.gif" alt="Global datasource"><figcaption><p>Global datasource</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/DS-global.gif" alt="Global datasource"><figcaption><p>Global datasource</p></figcaption></figure>
 
 1. Open your solution in Jigx Builder and navigate to the **datasources** folder of your solution.
 2. Create a new file called _\<your\_datasource\_name>.jigx._
@@ -311,7 +311,7 @@ Datasources are defined once and are available throughout your solution to be re
 
 The data sets are defined in the datasources inside the individual jig generally under the `datasources:` property. Use datasources locally if you only need the data in that specific jig.
 
-<figure><img src="../../../.gitbook/assets/DS-local.gif" alt="Local datasource"><figcaption><p>Local datasource</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/DS-local.gif" alt="Local datasource"><figcaption><p>Local datasource</p></figcaption></figure>
 
 1. Open your solution in Jigx Builder and navigate to the jig.
 2. Under the `datasources:` property, replaces the `mydata:` property with a unique name for the data set.
@@ -324,4 +324,4 @@ The data sets are defined in the datasources inside the individual jig generally
 * [static](https://docs.jigx.com/examples/static) datasource examples
 * [sqlite](https://docs.jigx.com/examples/readme/datasource/static) datasource examples
 * [system](https://docs.jigx.com/examples/system)
-* [File handling](../file-handling.md)
+* [File handling](file-handling.md)

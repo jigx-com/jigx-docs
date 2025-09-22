@@ -165,3 +165,5 @@ json_extract(data, '$.isActive') = 1
   * Field extraction
   * Unqualified tables
   * direct column access
+
+See [sqlite](https://docs.jigx.com/examples/readme/datasource/sqlite) for examples of SQLite datasources used in Jigx.&#x20;

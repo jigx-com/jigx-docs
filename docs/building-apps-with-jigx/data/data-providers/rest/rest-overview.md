@@ -37,7 +37,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
    * [Convert](functions/conversions.md) images and files from local-uri to an acceptable storage format, such as base64 or buffer.
    * Add [Continuation](functions/continuation.md) if the REST services limit the number of items to be returned. Jigx REST calls can automatically repeat calls by specifying a continuation block.
 6. **Bind data to the UI by referencing the local data and functions in jig﻿s**
-   * Use the data from the local database in [datasources](../../datasources/) in jigs and components\
+   * Use the data from the local database in [datasources](../../datasources.md) in jigs and components\
      [components](../../../ui/components-_controls_/components-_controls_.md) to build the required UI.
    * Reference the function﻿ in your jig﻿s in [actions](../../../ui/actions.md). This step is crucial for integrating the API data seamlessly into your Jigx﻿ solution.
 7. **Publish your solution**:

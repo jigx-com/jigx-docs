@@ -116,7 +116,7 @@ procedure: sp_GetAllCustomers
 
 ## Parameters
 
-Function parameters are used to pass data into the function definition from the jig that uses the function. See the [Datasources](../../datasources/) section of the documentation. Parameters are defined by naming them and describing the properties of that parameter. Parameter names are used when the parameters are referred to in the SQL query.
+Function parameters are used to pass data into the function definition from the jig that uses the function. See the [Datasources](../../datasources.md) section of the documentation. Parameters are defined by naming them and describing the properties of that parameter. Parameter names are used when the parameters are referred to in the SQL query.
 
 ### Function parameter properties
 
