@@ -81,7 +81,7 @@ Expressions allow you to structure data before binding it to the UI components. 
 
 ## Datasources
 
-[Datasources](../building-apps-with-jigx/data/datasources.md) are sets of data that are available throughout your whole solution (global) or only inside a jig (local). Datasources can be static or dynamic. Jigx **Dynamic Data** is a built-in database that can be used to create, read, update, and delete data in an app. The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record. Jigx Dynamic Data is managed in Jigx Management. For more information, see [Dynamic Data](../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md) and [Dynamic Data examples](<Jigx Concepts.md>) .
+[Datasources](../building-apps-with-jigx/data/datasources/) are sets of data that are available throughout your whole solution (global) or only inside a jig (local). Datasources can be static or dynamic. Jigx **Dynamic Data** is a built-in database that can be used to create, read, update, and delete data in an app. The underlying data store for Dynamic Data is a NoSQL store. This means that each record can have its own field structure, and you can add or remove any fields on a per-record basis. Only the id column is a system column and cannot be changed or removed from the record. Jigx Dynamic Data is managed in Jigx Management. For more information, see [Dynamic Data](../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md) and [Dynamic Data examples](<Jigx Concepts.md>) .
 
 ## Database
 

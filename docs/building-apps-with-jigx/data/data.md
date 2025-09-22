@@ -44,10 +44,10 @@ This section covers data concepts, lifecycles, syncing and loading data, and dat
 
 ### Datasources
 
-[Datasources](datasources.md) are sets of data referenced when building solutions in Jigx. These are:
+[Datasources](datasources/) are sets of data referenced when building solutions in Jigx. These are:
 
-1. [Global](datasources.md) - the data set is defined once and is available throughout your solution to be reused in multiple jigs.
-2. [Local](datasources.md) - the data sets are available inside the individual jig.
+1. [Global](datasources/) - the data set is defined once and is available throughout your solution to be reused in multiple jigs.
+2. [Local](datasources/) - the data sets are available inside the individual jig.
 
 ### Entities
 
