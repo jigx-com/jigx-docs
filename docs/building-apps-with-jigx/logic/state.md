@@ -68,7 +68,7 @@ Need data across multiple screens?
 * **Clean Up**: Reset transient state after actions/navigation
 * **Pass vs Store**: Prefer navigation parameters over state storage
 * **Passing data**: Pass data via parameters, not state
-* **Clear  state**: on refresh/navigation
+* **Clear state**: on refresh/navigation
 
 ## State syntax
 
@@ -216,7 +216,7 @@ actions:
 
 {% tabs %}
 {% tab title="solution" %}
-```javascript
+```yaml
 actions:
 - numberOfVisibleActions: 1
   children:
