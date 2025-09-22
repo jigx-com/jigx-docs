@@ -101,8 +101,8 @@ Avoid using state keywords, such as `component`, as `instanceId` values in expre
 * `jig.state`: per jig instance; persists while on navigation stack; resets on new instance.
 * `component.state`: per component; cleared when navigating away from jig.
 
-#### Initialization
-
+{% tabs %}
+{% tab title="Initialization" %}
 ```typescript
 // ✅ Always use initialValue
 jig.setState({ 
@@ -111,9 +111,9 @@ jig.setState({
   selected: { initialValue: [] }
 })
 ```
+{% endtab %}
 
-#### Navigation
-
+{% tab title="Navigation" %}
 ```typescript
 // ✅ Pass data via parameters, not state
 listItem.onPress.goto(SCREEN.DETAIL)
@@ -123,14 +123,16 @@ listItem.onPress.goto(SCREEN.DETAIL)
 // Read on destination
 detailText.value('=@ctx.jig.inputs.id')
 ```
+{% endtab %}
 
-#### Cleanup
-
+{% tab title="Cleanup" %}
 ```typescript
 // ✅ Clear transient state on refresh/navigation
 screen.onRefresh.resetjigState({ keys: ['searchQuery', 'selected'] })
 screen.onLoad.resetjigState({ keys: ['error', 'draft'] })
 ```
+{% endtab %}
+{% endtabs %}
 
 ## State Core operations
 
@@ -592,25 +594,18 @@ spinner.isVisible('=@ctx.jig.state.isLoading')
 errorMessage.isVisible('=@ctx.jig.state.loadError != null')
 ```
 {% endtab %}
-
-{% tab title="Ruby" %}
-```ruby
-message = "hello world"
-puts message
-```
-{% endtab %}
 {% endtabs %}
 
 ### Quick Validation
 
-```typescript
-// State exists check
+```yaml
+# State exists check
 when: =@ctx.jig.state.searchQuery != null and @ctx.jig.state.searchQuery != ''
 
-// Type safety  
+# Type safety  
 when: =@ctx.jig.state.count ~> $type = 'number'
 
-// Default values
+# Default values
 text: =@ctx.jig.state.title ?: 'Default Title'
 ```
 
@@ -648,9 +643,9 @@ errorText: =@ctx.components.phone.state.value ~> /^[0-9]{10}$/ ? null : "Must be
 
 * **Form Dirty Tracking**\
   Track changes for discard alert.\
-  \- Set jig state ({ formIsDirty: { initialValue: false } })\
-  \- `onFocus` then set jig state and change ('formIsDirty', true)\
-  \- On the form `isDiscardChangesAlertEnabled` ('=@ctx.jig.state.formIsDirty')
+  \- Set jig state  `formIsDirty`:  `initialValue: false` \
+  \- `onFocus`  set jig state and change `formIsDirty`: `true`\
+  \- On the form `isDiscardChangesAlertEnabled` use `=@ctx.jig.state.formIsDirty`
 
 ## Examples of state
 
