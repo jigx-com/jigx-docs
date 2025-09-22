@@ -130,6 +130,8 @@
     * [Assets](building-apps-with-jigx/ui/assets.md)
   * [Logic](building-apps-with-jigx/logic/logic.md)
     * [Expressions](building-apps-with-jigx/logic/expressions.md)
+      * [Expressions - Common Patterns](building-apps-with-jigx/logic/expressions/expressions-common-patterns.md)
+      * [Expression - Quick Reference](building-apps-with-jigx/logic/expressions/expression-quick-reference.md)
       * [Expressions - cheatsheet](building-apps-with-jigx/logic/expressions-cheatsheet.md)
     * [State](building-apps-with-jigx/logic/state.md)
     * [Navigation](building-apps-with-jigx/logic/navigation.md)

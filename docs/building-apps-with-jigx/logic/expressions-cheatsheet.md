@@ -23,7 +23,7 @@ Jigx wants to help you build solutions quickly and easily. To help you do this, 
 Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
 {% endhint %}
 
-### Create Filters on a list (Path Operator expression)
+## Create Filters on a list (Path Operator expression)
 
 {% code overflow="wrap" %}
 ```yaml
@@ -31,7 +31,13 @@ Expressions are JSONata language-based. Learn more about [JSONata](https://jsona
 ```
 {% endcode %}
 
-### Create Search for a list (Path Operator expression)
+## OData filter generation
+
+```yaml
+=($map(@ctx.datasources.employee-customer-detail-string, function($v) { "CustomerID eq " & $v.AccountID}) ~> $join(" or "))
+```
+
+## Create Search for a list (Path Operator expression)
 
 {% code overflow="wrap" %}
 ```yaml
@@ -39,7 +45,7 @@ Expressions are JSONata language-based. Learn more about [JSONata](https://jsona
 ```
 {% endcode %}
 
-### Create a placeholder (Boolean expression)
+## Create a placeholder (Boolean expression)
 
 See [tips and tricks when using placeholders](https://community.jigx.com/t/tips-tricks-use-placeholders/78) for additional information.
 
@@ -50,7 +56,7 @@ placeholders:
     icon: missing-data
 ```
 
-### Check if a field's value is Null (Boolean expression)
+## Check if a field's value is Null (Boolean expression)
 
 ```yaml
 =@ctx.solution.state.missionNumber != null ? true: false
@@ -64,7 +70,9 @@ placeholders:
 =$count(@ctx.datasources.data.id) = 0 true:false
 ```
 
-### Evaluate PathsData (String Function expression)
+## Evaluate&#x20;
+
+### PathsData (String Function expression)
 
 ```yaml
 =$eval(@ctx.current.item.pathsData)
@@ -76,13 +84,13 @@ placeholders:
 =$eval(@ctx.datasources.weatherData.temperatures_max)
 ```
 
-### Base64 image (String expression)
+## Base64 image (String expression)
 
 ```yaml
 ="data:image/png;base64," & @ctx.datasources.mydata.data
 ```
 
-### String to number (String expression)
+## String to number (String expression)
 
 ```yaml
 =($number(@ctx.datasources.tmra-graph.Total) >= 5)
@@ -92,25 +100,27 @@ placeholders:
 =($number(@ctx.datasources.tmra-graph.Total) < 8) ? true : false
 ```
 
-### Number to string (String expression)
+## Number to string (String expression)
 
 ```yaml
 =$string(@ctx.current.item.ID)
 ```
 
-### Combining first and last name (Concatenate)
+## Combining first and last name (Concatenate)
 
 ```yaml
 =(@ctx.current.item.firstName & ' ' & @ctx.current.item.lastName)
 ```
 
-### Splitting display name into first and last name (String expression)
+## Splitting display name into first and last name (String expression)
 
 {% code overflow="wrap" %}
 ```yaml
 =$substring($substringBefore(@ctx.inputs.info.FromUserDisplayName, ' '), 0, 1)
 ```
 {% endcode %}
+
+### Displaying text
 
 ### Show text and split name and surname and only displaying name (String expression)
 
@@ -132,13 +142,13 @@ placeholders:
 ```
 {% endcode %}
 
-### True or False ? (Boolean expression)
+## True or False ? (Boolean expression)
 
 ```yaml
 =$boolean(@ctx.datasources.tmra.TwoPilots) ? true : false
 ```
 
-### Adding an expression into a string
+## Adding an expression into a string
 
 ```yaml
 ('Hello, my name is ' & @ctx.user.displayname)
@@ -146,7 +156,7 @@ placeholders:
 "Day one agenda"
 ```
 
-### Working with Date and Time expressions
+## Working with Date and Time expressions
 
 ### Convert UTC to milliseconds
 
@@ -192,6 +202,8 @@ placeholders:
 ```
 {% endcode %}
 
+## System variables
+
 ### Get currently logged in user (Jigx system expression)
 
 Results can include id, email, name.
@@ -208,17 +220,19 @@ Results can include id, email, name.
 
 ### Get country flag icons using system (Jigx system expression)
 
-### Create a unique GUID
+## Create a unique GUID
 
 ```yaml
 =$uuid()
 ```
 
-### Formatting Numbers (Numeric functions)
+## Formatting Numbers (Numeric functions)
 
 ```yaml
 =$formatNumber(@ctx.inputs.info.TotalSQft, '#,###')
 ```
+
+## Using objects in expressions
 
 ### Sorting an array of objects using a lambda (embedded) function
 
@@ -240,7 +254,7 @@ $.{"message": {"subject": subject,"body": {"contentType": "Text","content":
   {"address":$}}[]}}
 ```
 
-### Create a basic join on a static datasource to a local datasource
+## Create a basic join on a static datasource to a local datasource
 
 {% code overflow="wrap" %}
 ```yaml
@@ -248,7 +262,7 @@ $.{"message": {"subject": subject,"body": {"contentType": "Text","content":
 ```
 {% endcode %}
 
-### Transform longitude and latitude data to show markers on a location component
+## Transform longitude and latitude data to show markers on a location component
 
 {% code overflow="wrap" %}
 ```yaml
@@ -257,6 +271,8 @@ markers:
         =@ctx.datasources.jobs.{"lng": $number($.lng), "lat": $number($.lat)}
 ```
 {% endcode %}
+
+## Working with values
 
 ### Find the value relative to the current node so all paths are relative to it
 
@@ -272,13 +288,13 @@ Jigx converts `@ctx.` to `$$.` when executing expressions in jsonata
 =$$.path.to.value
 ```
 
-### Use the JSONata built-in index parameter combined with a filter
+## Use the JSONata built-in index parameter combined with a filter
 
 ```yaml
 =@ctx.datasources.questions#$i.answer[$i=3]
 ```
 
-### Update multiple records in execute-entities (operators > transform)
+## Update multiple records in execute-entities (operators > transform)
 
 To update multiple records using the [Execute-entities](https://docs.jigx.com/examples/readme/actions/execute-entities) action, you can use the expression below.
 
@@ -288,11 +304,11 @@ data: =ctx.datasources.customers ~> | $ | { "customerType": "Bronze "} |
 ```
 {% endcode %}
 
-### Validate text fields using JSONata + Regex expression
+## Validate text fields using JSONata + Regex expression
 
 See the examples provided in [Regex expressions](https://docs.jigx.com/expressions#PD18u).
 
-### Use JavaScript functions in expressions
+## Use JavaScript functions in expressions
 
 See more examples provided in [JavaScript expressions](https://docs.jigx.com/expressions#_q4V3).
 

@@ -20,8 +20,79 @@ layout:
 Expressions allow you to structure and manipulate data before binding it to the UI components. Expressions are JSONata-based. JSONata is a lightweight query and transformation language for JSON data. It also provides a rich complement of built-in operators and functions for manipulating and combining data.
 
 {% hint style="info" %}
-Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "$$." in JSONata Exerciser (e.g. @ctx.data vs.$$.data). Jigx supports shorthand $ expressions for JSONata.
+Expressions are JSONata language-based. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files always starts with "@ctx" vs. "\$$." in JSONata Exerciser (e.g. @ctx.data vs .\$$.data). Jigx supports shorthand $ expressions for JSONata.
 {% endhint %}
+
+## Syntax Rules
+
+### **Essential Rules**:
+
+* All expressions start with `=`
+* Use `@ctx.*` for context access
+* Use `&` for string concatenation (not `+`)
+* Use `=` for equality (not `==` or `===`)
+* Use `and`/`or`/`$not()` for logical operations (not `&&`/`||`/`!`)
+* Avoid `$$` and `$` root references - use `@ctx` instead
+
+### **Operators**:
+
+* **Equality**: `=` (never `==`)
+* **Inequality**: `!=` (never `!==`, `<>`)
+* **Logical**: `and`, `or`, `$not()` (never `&&`, `||`, `!`)
+* **Concat**: `&` (never `+` except for math)
+* **Elvis**: `?:` (falsy fallback)
+* **Null coalesce**: `??` (null/undefined fallback)
+* **Conditional**: `condition ? value_if_true : value_if_false`
+* **Type check**: `value ~> $type = 'string'`
+* **Regex**: `value ~> /pattern/`
+
+## Expression structure
+
+{% hint style="warning" %}
+Avoid using state keywords, such as `component`, as `instanceId` values in expressions. Doing so will cause an "Expression is not valid" error in the app.
+{% endhint %}
+
+Using IntelliSense in Jigx Builder shows where and when you can add an expression by displaying the `=$` or `=@ctx`. In Jigx expressions always start with `=`. Jigx converts `@ctx.` to `$$.` when executing expressions in JSONata.
+
+Adding an empty array index \[] in the path forces jsonata to return an array of one item versuses the normal behavior where it returns the item directly.
+
+```none
+=@ctx.datasources.value
+[{}] => {}
+[{},{}] => [{},{}]
+
+=@ctx.datasources.value[]
+[{}] => [{}] ← notice array of one
+[{},{}] => [{},{}]
+```
+
+## Advanced expressions
+
+Advanced expressions are helpful when you need to filter an array of records to display specific data and perform expression transformations over the data. So, instead of writing complicated procedures and statements, you can run [JSONata expressions](https://docs.jigx.com/examples/readme/expressions/advanced-expressions) to get the result. You can format the expression strings and have them inline or multi line.
+
+### Inline
+
+When you are writing advanced expressions, make sure you have the expression starting with '=' inside the quotes, as shown below:
+
+{% code title="advanced-expression.jigx" %}
+```yaml
+text: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
+  & ' ' &
+  (@ctx.datasources.table.field2 = '2' ? 'Derek' :'Doe')"
+```
+{% endcode %}
+
+### Multiline
+
+You can write advanced expressions as multiline, for better readability and cleaner code formatting. When writing a multiline expression, make sure you have the expression in quotes and the next line must be indented on the same level as shown below.
+
+{% code title="advanced-expression.jigx" %}
+```yaml
+title: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
+  & ' ' &
+  (@ctx.datasources.table.field2 = '2' ? 'Derek' :'Doe')"
+```
+{% endcode %}
 
 ## Shared expressions
 
@@ -40,6 +111,14 @@ name: jigx-samples
 expressions:
   lat: =@ctx.system.geolocation.coords.latitude
   lng: =@ctx.system.geolocation.coords.longitude
+  formatPrice: |
+    =function($price, $currency) {
+      $currency & $formatNumber($price, '#,##0.00')
+    }
+  userInitials: |
+    =$uppercase($substring(@ctx.user.displayName, 0, 1) & 
+    $substring($substringAfter(@ctx.user.displayName, ' '), 0, 1))
+
 ```
 {% endtab %}
 
@@ -64,6 +143,10 @@ children:
                 options:
                   label: Current Longitude
                   value: =@ctx.expressions.lng
+              - type: component.entity-field
+                options:
+                  label: Formatted Price
+                  value: =@ctx.expressions.formatPrice(99.99, '$')
 ```
 {% endtab %}
 {% endtabs %}
@@ -145,57 +228,36 @@ datasources:
 {% endtab %}
 {% endtabs %}
 
-## Expression structure
+### Reusable functions
 
-{% hint style="warning" %}
-Avoid using state keywords, such as `component`, as `instanceId` values in expressions. Doing so will cause an "Expression is not valid" error in the app.
-{% endhint %}
+Define reusable functions in Shared Expressions (`@ctx.expressions`).
 
-Using IntelliSense in Jigx Builder shows where and when you can add an expression by displaying the `=$` or `=@ctx`. In Jigx expressions always start with `=`. Jigx converts `@ctx.` to `$$.` when executing expressions in JSONata.
-
-Adding an empty array index \[] in the path forces jsonata to return an array of one item versuses the normal behavior where it returns the item directly.
-
-```none
-=@ctx.datasources.value
-[{}] => {}
-[{},{}] => [{},{}]
-
-=@ctx.datasources.value[]
-[{}] => [{}] ← notice array of one
-[{},{}] => [{},{}]
-```
-
-Expressions can be used in many ways when creating apps, here are common use cases:
-
-<table><thead><tr><th width="142.046875">Use</th><th width="221.66015625">Description</th><th>Example</th></tr></thead><tbody><tr><td>datasource</td><td>To call data from a datasource</td><td><code>=@ctx.datasource.mydata.datacolumn</code></td></tr><tr><td>component</td><td>Used inside a component to reference data in that component</td><td><code>=@ctx.component.state.value</code></td></tr><tr><td>components</td><td>Used in a jig to reference data from various components in that jig</td><td><code>=@ctx.components.list.state.filter</code></td></tr><tr><td>current item</td><td>Use data in the current component</td><td><code>=@ctx.current.item.value</code></td></tr><tr><td>jig</td><td>Pull data in from another jig</td><td><code>=@ctx.jig.inputs.jigname.description</code></td></tr><tr><td>jigs</td><td>Pull data in from multiple jigs</td><td><code>=@ctx.jigs.</code></td></tr><tr><td>organization</td><td>Reference the name or id of the Jigx <a href="https://docs.jigx.com/organization-settings">organization</a></td><td><code>=@ctx.organization.name</code></td></tr><tr><td>solution</td><td>Reference the Jigx <a href="https://docs.jigx.com/solution-details">solution</a></td><td><code>=@ctx.solution.name</code></td></tr><tr><td>system</td><td>Get data about various <a href="https://docs.jigx.com/examples/readme/expressions/jigx-variables#system">system</a> values such as offline status</td><td><code>=@ctx.system.isOffline</code></td></tr><tr><td>user</td><td>Reference data about the current Jigx <a href="https://docs.jigx.com/users">user</a></td><td><code>=@ctx.user.displayName</code></td></tr></tbody></table>
-
-## Advanced expressions
-
-Advanced expressions are helpful when you need to filter an array of records to display specific data and perform expression transformations over the data. So, instead of writing complicated procedures and statements, you can run [JSONata expressions](https://docs.jigx.com/examples/readme/expressions/advanced-expressions) to get the result. You can format the expression strings and have them inline or multi line.
-
-### Inline
-
-When you are writing advanced expressions, make sure you have the expression starting with '=' inside the quotes, as shown below:
-
-{% code title="advanced-expression.jigx" %}
 ```yaml
-text: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
-  & ' ' &
-  (@ctx.datasources.table.field2 = '2' ? 'Derek' :'Doe')"
+# Define once, call many times
+$add := function($a, $b){ $a + $b }
+$add(2, 3)  # 5
+
+# Optional/default handling via ?: / $exists
+$greet := function($name){ ($name ?: 'World') & '!' }
+$greet('Jigx') # "Jigx!"
+
+# Pipe into functions (left value is first arg)
+10 ~> $add(5)  # 15
+$inc := function($x){ $x+1 }
+41 ~> $inc()  # 42
+
+# Closures (capture lexical variables)
+$rate := 1.2
+$mul := function($x){ $x * $rate }
+$map([10, 20, 30], $mul)  # [12,24,36]
+
+# Recursion
+$fact := function($n){ $n <= 1 ? 1 : $n * $fact($n-1) }
+$fact(5)  # 120
+
+# Callbacks: ($v, $i, $a) = value, 1-based index, source array
+$map(['a','b'], function($v, $i){ $i & ':' & $v })  # ["1:a","2:b"]
 ```
-{% endcode %}
-
-### Multiline
-
-You can write advanced expressions as multiline, for better readability and cleaner code formatting. When writing a multiline expression, make sure you have the expression in quotes and the next line must be indented on the same level as shown below.
-
-{% code title="advanced-expression.jigx" %}
-```yaml
-title: "=(@ctx.datasources.table.field1 = '1' ? 'Jane' :'Rob')
-  & ' ' &
-  (@ctx.datasources.table.field2 = '2' ? 'Derek' :'Doe')"
-```
-{% endcode %}
 
 ## JavaScript expressions
 
@@ -243,6 +305,71 @@ Wherever you can add an expression, you can use JSONata, Regex, JavaScript funct
 
 In Jigx you can combine a JSONata expression with a Regex expression to create a validation pattern and provide a message if the pattern does not match. See [validation](validation.md) and [regex expression examples](https://docs.jigx.com/examples/readme/expressions/regex-expressions) for more information.
 
+## Best Practice
+
+* Use the following in expressions:
+  * &#x20;`@ctx.*`
+  * `&` for concat
+  * `=` for equality
+  * `and`/`or`/`$not()` for logic
+  * &#x20;`?:` for defaults
+  * leading `=`
+* Avoid using the following in expressions:
+  * &#x20;`$$`/`$` roots
+  * &#x20;`+` for strings
+  * `==`/`===`/`!==`/`<>`
+  * `&&`/`||`/`!`
+  * undefined access
+* Optimize data access in expressions with a single datasource access that uses multiple variables.
+
+{% tabs %}
+{% tab title="Recommended" %}
+```yaml
+# Efficient - single access with variable
+=@ctx.datasources.users[0].('name' & ' - ' & 'email')
+```
+{% endtab %}
+
+{% tab title="Avoid" %}
+```yaml
+# Inefficient - multiple datasource calls
+=@ctx.datasources.users[0].name & ' - ' & @ctx.datasources.users[0].email
+```
+{% endtab %}
+{% endtabs %}
+
+* Use the following recommended expressions common and navigational functionality.
+
+{% tabs %}
+{% tab title="Common" %}
+```yaml
+# Common
+=@ctx.user.displayName ?: @ctx.user.email ?: 'Anonymous'
+=@ctx.current.item.name ?: '-'
+=$sum($map(@ctx.datasources.items, function($v){ $v.price }))
+=$count(@ctx.jig.state.selected) > 0
+=@ctx.solution.state[@ctx.user.id & '_preferences']
+=$in(@ctx.solution.state.userRole, ['admin', 'manager'])
+```
+{% endtab %}
+
+{% tab title="Navigation" %}
+```python
+# Navigation
+.parameter('id', '=@ctx.current.item.id')
+.parameter('formData', '=@ctx.components.form.state.value')
+.parameter('resultId', '=@ctx.actions.save.state.response.id')
+```
+{% endtab %}
+{% endtabs %}
+
+* **Advanced Semantics**
+  * Path projection flattens: applying `.field` to an array projects and flattens one level.
+  * Predicate truthiness: empty sequence → false; non-empty sequence → true.
+  * Function pipe `~>`: left value becomes first argument; use parentheses to pass extras (e.g., `value ~> $type`).
+  * Function callbacks receive `($v, $i, $a)` = value, 1-based index, source array.
+  * Variables: assign with `:=` inside expressions; lexical scope.
+
 ## Expression examples
 
 Expressions are a powerful and flexible way to transform and extract data for use in a Jigx App. Below are links to examples showing how JSONata expressions can be used when creating apps.
@@ -251,7 +378,7 @@ Expressions are a powerful and flexible way to transform and extract data for us
 
 ### See Also
 
-* [Expressions - cheatsheet](expressions-1/expressions-cheatsheet.md)
-* [Expression Examples](https://docs.jigx.com/examples/readme/expressions)
-* [Regex expressions](https://docs.jigx.com/examples/readme/expressions/regex-expressions)
-* [JavaScript expressions](https://docs.jigx.com/examples/readme/expressions/javascript-expressions)
+* [expressions-common-patterns.md](expressions/expressions-common-patterns.md "mention")
+* [expression-quick-reference.md](expressions/expression-quick-reference.md "mention")
+* [expressions-cheatsheet.md](expressions-cheatsheet.md "mention")
+* [Expression - examples](https://docs.jigx.com/examples/readme/expressions)
