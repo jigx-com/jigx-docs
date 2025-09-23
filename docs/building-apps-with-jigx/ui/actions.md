@@ -26,14 +26,27 @@ Actions refer to specific controls or operations that respond to an event or inp
 
 Actions allow you to do many things in an app; below are the types of actions that can be configured when creating a solution.
 
+* _Display -_ Action used to display a modal or popup containing a message.
+  * [confirm](https://docs.jigx.com/examples/readme/actions/confirm)
+  * [info-modal](https://docs.jigx.com/examples/readme/actions/info-modal)
 * _Execution_ - actions to interact with data.
   * [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity)
   * [execute-entities](https://docs.jigx.com/examples/execute-entities)
+  * [execute-sql](https://docs.jigx.com/examples/readme/actions/execute-sql)
+  * [find-replace](https://docs.jigx.com/examples/readme/actions/find-replace)
+  * [generate-file](https://docs.jigx.com/examples/readme/actions/generate-file)
+  * [generate-pdf](https://docs.jigx.com/examples/readme/actions/generate-pdf)
+  * [print](https://docs.jigx.com/examples/readme/actions/print)
+  * [share](https://docs.jigx.com/examples/readme/actions/share)
   * [submit-form](https://docs.jigx.com/examples/readme/actions/submit-form)
   * [sync-entities](https://docs.jigx.com/examples/readme/actions/sync-entities) for getting data to the device.
+  * [update-profile](https://docs.jigx.com/examples/readme/actions/update-profile)
 * _Navigational_ - actions used to navigate to another jig or Home Hub.
   * [go-to](https://docs.jigx.com/examples/readme/actions/go-to)
   * [go-back](https://docs.jigx.com/examples/go-back)
+  * [set-active-tab](https://docs.jigx.com/examples/readme/actions/set-active-tab)
+* _Grouping_ - Multiple actions can be grouped to run with a single user interaction. The actions can be run sequentially or executed in bulk.
+  * [action-list](https://docs.jigx.com/examples/readme/actions/action-list)
 * Actions to _open_ components.
   * [open-scanner](https://docs.jigx.com/examples/open-scanner)
   * [open-url](https://docs.jigx.com/examples/open-url)
