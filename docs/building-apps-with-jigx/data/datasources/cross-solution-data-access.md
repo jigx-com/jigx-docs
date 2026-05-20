@@ -198,4 +198,4 @@ guard:
 
 ## Examples and code snippets
 
-For a simple working example see the [Cross Solution Datasource](https://docs.jigx.com/examples/readme/datasource) example.&#x20;
+For a simple working example see the [Cross Solution Datasource](https://docs.jigx.com/examples/readme/datasource/cross-solution-datasource-access) example.&#x20;

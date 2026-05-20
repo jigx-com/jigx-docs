@@ -12,8 +12,9 @@ Actions allow you to do many things in an app; below are the types of actions th
 * _Display -_ Action used to display a modal or popup containing a message.
   * [confirm](https://docs.jigx.com/examples/readme/actions/confirm)
   * [info-modal](https://docs.jigx.com/examples/readme/actions/info-modal)
-  * show-alert
+  * [show-alert](https://docs.jigx.com/examples/readme/actions/show-alert)
 * _Execution_ - actions to interact with data.
+  * [evaluate](https://docs.jigx.com/examples/readme/actions/evaluate)
   * [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity)
   * [execute-entities](https://docs.jigx.com/examples/readme/actions)
   * [execute-sql](https://docs.jigx.com/examples/readme/actions/execute-sql)
@@ -24,6 +25,9 @@ Actions allow you to do many things in an app; below are the types of actions th
   * [share](https://docs.jigx.com/examples/readme/actions/share)
   * [submit-form](https://docs.jigx.com/examples/readme/actions/submit-form)
   * [sync-entities](https://docs.jigx.com/examples/readme/actions/sync-entities) for getting data to the device.
+  * [delete-sync-scope](https://docs.jigx.com/examples/readme/actions/sync-actions/delete-sync-scope)
+  * [delete-sync-status](https://docs.jigx.com/examples/readme/actions/sync-actions/delete-sync-status)
+  * [start-sync-scope](https://docs.jigx.com/examples/readme/actions/sync-actions/start-sync-scope)
   * [update-profile](https://docs.jigx.com/examples/readme/actions/update-profile)
 * _Navigational_ - actions used to navigate to another jig or Home Hub.
   * [go-to](https://docs.jigx.com/examples/readme/actions/go-to)
@@ -38,11 +42,13 @@ Actions allow you to do many things in an app; below are the types of actions th
   * [open-map](https://docs.jigx.com/examples/readme/actions/open-map)
   * [open-app-setting](https://docs.jigx.com/examples/readme/actions/open-app-settings)
 * _State_ - actions used to determine a specific status or value of a property or component.
-  * solution-state (set & reset)
-  * jig-state (set & reset)
+  * [solution-state (set & reset)](https://docs.jigx.com/examples/readme/actions/state-actions/solution-state-set-and-reset)
+  * [jig-state (set & reset)](https://docs.jigx.com/examples/readme/actions/state-actions/jig-state-set-and-reset)
+  * [component-state (set & reset)](https://docs.jigx.com/examples/readme/actions/state-actions/component-state-set-and-reset)
   * [set-state](https://docs.jigx.com/examples/readme/actions/set-state)
   * [reset-state](https://docs.jigx.com/examples/readme/actions/reset-state)
-* _Events_ - actions that execute after a user or device performs a trigger.
+* [_Events_](https://docs.jigx.com/examples/readme/events) - actions that execute after a user or device performs a trigger.
+  * onBlur
   * onRefresh
   * onFocus
   * onPress
