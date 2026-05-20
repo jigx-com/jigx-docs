@@ -165,3 +165,7 @@ The following examples with code snippets are provided:
 4. [jig.list](https://jig.listhttps/docs.jigx.com/examples/readme/jig-types/jig_list)
 5. [jig.composite](https://jig.compositehttps/docs.jigx.com/examples/readme/jig-types/jig_composite)
 6. [jig.fullscreen](https://docs.jigx.com/examples/jigfullscreen)
+7. [jig.grid](https://docs.jigx.com/examples/readme/jig-types/jig_grid)
+8. [jig.tabs](https://jig.tabshttps/docs.jigx.com/examples/readme/jig-types/jig_tabs)
+9. [jig.tables](https://jig.tableshttps/docs.jigx.com/examples/readme/jig-types/jig_table)
+10. [jig.gallery](https://jig.galleryhttps/docs.jigx.com/examples/readme/jig-types/jig.gallery)
