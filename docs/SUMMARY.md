@@ -144,6 +144,7 @@
     * [Localization](building-apps-with-jigx/additional-functionality/localization.md)
   * [Best practice](<building-apps-with-jigx/Best practice/Best practice.md>)
     * [Migration plan](<building-apps-with-jigx/Best practice/Migration plan.md>)
+    * [Performance of List](building-apps-with-jigx/best-practice/performance-of-list.md)
 * [Administration](administration/README.md)
   * [Management Overview](<Administration/Management Overview.md>)
   * [Permissions - User Roles](<Administration/Permissions - User Roles.md>)
