@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # REST Authentication
 
 Jigx supports OAuth, tokens, Basic Auth credentials, secrets, and API keys as authentication methods. These result in entries added to the request's header unless the authentication parameters' location is specified differently. We **do not recommend** building solutions with Jigx where credentials are stored in the YAML of the Jigx solutions. Jigx provides a secure mechanism for defining, storing, and retrieving authentication information during runtime.

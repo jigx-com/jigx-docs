@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Actions
 
 Actions refer to specific controls or operations that respond to an event or input. They range from simple operations like clicking a submit button or navigating to a previous screen to more complex tasks like data interaction.
@@ -29,9 +12,10 @@ Actions allow you to do many things in an app; below are the types of actions th
 * _Display -_ Action used to display a modal or popup containing a message.
   * [confirm](https://docs.jigx.com/examples/readme/actions/confirm)
   * [info-modal](https://docs.jigx.com/examples/readme/actions/info-modal)
+  * show-alert
 * _Execution_ - actions to interact with data.
   * [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity)
-  * [execute-entities](https://docs.jigx.com/examples/execute-entities)
+  * [execute-entities](https://docs.jigx.com/examples/readme/actions)
   * [execute-sql](https://docs.jigx.com/examples/readme/actions/execute-sql)
   * [find-replace](https://docs.jigx.com/examples/readme/actions/find-replace)
   * [generate-file](https://docs.jigx.com/examples/readme/actions/generate-file)
@@ -43,19 +27,21 @@ Actions allow you to do many things in an app; below are the types of actions th
   * [update-profile](https://docs.jigx.com/examples/readme/actions/update-profile)
 * _Navigational_ - actions used to navigate to another jig or Home Hub.
   * [go-to](https://docs.jigx.com/examples/readme/actions/go-to)
-  * [go-back](https://docs.jigx.com/examples/go-back)
+  * [go-back](https://docs.jigx.com/examples/readme/actions/go-back)
   * [set-active-tab](https://docs.jigx.com/examples/readme/actions/set-active-tab)
 * _Grouping_ - Multiple actions can be grouped to run with a single user interaction. The actions can be run sequentially or executed in bulk.
   * [action-list](https://docs.jigx.com/examples/readme/actions/action-list)
 * Actions to _open_ components.
-  * [open-scanner](https://docs.jigx.com/examples/open-scanner)
-  * [open-url](https://docs.jigx.com/examples/open-url)
-  * [open-media-picker](https://docs.jigx.com/examples/open-media-picker)
-  * [open-map](https://docs.jigx.com/examples/open-map)
-  * [open-app-setting](https://docs.jigx.com/examples/open-app-settings)
+  * [open-scanner](https://docs.jigx.com/examples/readme/actions/open-scanner)
+  * [open-url](https://docs.jigx.com/examples/readme/actions/open-url)
+  * [open-media-picker](https://docs.jigx.com/examples/readme/actions/open-media-picker)
+  * [open-map](https://docs.jigx.com/examples/readme/actions/open-map)
+  * [open-app-setting](https://docs.jigx.com/examples/readme/actions/open-app-settings)
 * _State_ - actions used to determine a specific status or value of a property or component.
+  * solution-state (set & reset)
+  * jig-state (set & reset)
   * [set-state](https://docs.jigx.com/examples/readme/actions/set-state)
-  * [reset-state](https://docs.jigx.com/examples/reset-state)
+  * [reset-state](https://docs.jigx.com/examples/readme/actions/reset-state)
 * _Events_ - actions that execute after a user or device performs a trigger.
   * onRefresh
   * onFocus
@@ -64,7 +50,7 @@ Actions allow you to do many things in an app; below are the types of actions th
   * onChange
   * onDelete
   * onButtonPress (only on calendar jigs)
-  * [onTableChanged](https://docs.jigx.com/examples/ontablechanged)
+  * [onTableChanged](https://docs.jigx.com/examples/readme/events/ontablechange)
 
 For the complete list and code examples of available actions, see [actions](https://docs.jigx.com/examples/readme/actions).
 
@@ -373,7 +359,7 @@ actions:
    * `action.submit.form` is not available in global actions because the configuration is specific for each form using the `formId`.
    * `action.open-scanner` action is not available in global actions.
 3. The `when:` proprerty can be used to determine when the global action executes in a jig.
-4. Actions can be combined with components in the UI, for example [summary](https://docs.jigx.com/examples/summary) component.
+4. Actions can be combined with components in the UI, for example [summary](https://docs.jigx.com/examples/readme/components/summary) component.
 5. When using the `actions.action-list` as a global action you can call another global action in the global action list.
 
 {% tabs %}

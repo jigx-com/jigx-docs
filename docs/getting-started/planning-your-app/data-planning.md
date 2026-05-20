@@ -3,20 +3,6 @@ title: Data planning
 slug: sgE5-data-planning
 createdAt: Wed Jul 12 2023 18:38:34 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jul 17 2023 14:55:27 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Data planning
@@ -49,6 +35,6 @@ Why create a data plan? Data is used throughout the Jigx App, knowing where the 
 
 * Having to create a database can be time-consuming or daunting, use tools such as ChatGPT to create a database, a database script, or build a CSV file for a data structure.
 * For Dynamic Data a CSV file can be [uploaded](../../administration/solutions/data.md) to Jigx Management to create the tables and data.
-* In Jigx use [actions](https://docs.jigx.com/actions) to move data from screen to screen.
+* In Jigx use [actions](../../building-apps-with-jigx/ui/actions.md) to move data from screen to screen.
 * When using REST or SQL, you need functions and stored procedures. Decide what the functions will do. Use Postman to understand the properties required.
 * Be smart in the design of data by thinking of creating experiences, for example, data can be shown as charts rather than lists.

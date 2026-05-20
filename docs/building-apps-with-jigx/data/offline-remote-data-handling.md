@@ -1,23 +1,6 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Offline remote data handling
 
-Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. Queue operations provide the functionality needed when the device regains network connectivity and manages a sequence of elements in a specific order. The commands in the queue can be manipulated to reduce the number of calls to the remote data store.
+Dealing with offline remote data is fundamental to ensuring data synchronization and consistency between the mobile app and the remote data source, allowing users to continue using the app and performing actions without interruption. Queue operations provide the functionality needed when the device regains network connectivity and manages a sequence of elements in a specific order. The commands in the queue can be manipulated to reduce the number of calls to the remote data store or Dynamic Data.
 
 ## What happens to data when you are offline?
 
@@ -34,10 +17,10 @@ Dealing with offline remote data is fundamental to ensuring data synchronization
 
 In the [execute-entity](https://docs.jigx.com/examples/readme/actions/execute-entity), [execute-entities](https://docs.jigx.com/examples/readme/actions/execute-entities) , and [submit-form](https://docs.jigx.com/examples/readme/actions/submit-form) actions, the `queueOperation` property is configured to determine how the record must be handled in the queue when the device is offline. There are two configuration options:
 
-<table><thead><tr><th width="137.48046875">Property</th><th>description</th></tr></thead><tbody><tr><td><code>replace</code></td><td>All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits. The <code>queueOperation: replace</code> requires an <code>id</code> (must be in lowercase). This can either be configured in the: <code>Parameter</code> of the <code>execute-entity</code> action with an <code>id</code> configured in the <code>parameters</code> of the function file. <code>data</code> property in the <code>execute-entity</code> action.</td></tr><tr><td><code>add</code></td><td>All commands are added to the queue. When the <code>queueOperation</code> property is omitted, the default is <code>add</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="137.48046875">Property</th><th>description</th></tr></thead><tbody><tr><td><code>replace</code></td><td><p>All queued commands for the specified record and method type are replaced with the current action. For example, a record is created and then updated a few times. Using replace for the update method results in only two commands in the queue for the record: create and update. If replace is not used, there will be a command for every action: create, update, update, update. Replace is recommended for backend systems with rate limits. The <code>queueOperation: replace</code> requires an <code>id</code> (must be in lowercase). This is configured in the: </p><ul><li><code>Parameter</code> of the <code>execute-entity</code> action with an <code>id</code> configured in the <code>parameters</code> of the function file.</li><li><code>data</code> property in the <code>execute-entity</code> action.</li></ul></td></tr><tr><td><code>add</code></td><td>All commands are added to the queue. When the <code>queueOperation</code> property is omitted, the default is <code>add</code>.</td></tr></tbody></table>
 
 {% tabs %}
-{% tab title="execute-entity-replace" %}
+{% tab title="execute-entity-replace (REST)" %}
 ```yaml
 actions:
   - children:
@@ -75,7 +58,7 @@ actions:
 ```
 {% endtab %}
 
-{% tab title="execute-entity-add" %}
+{% tab title="execute-entity-add (REST)" %}
 ```yaml
 actions:
   - children:
@@ -110,6 +93,59 @@ actions:
             address: =@ctx.components.address.state.value
             city: =@ctx.components.city.state.value
             email: =$lowercase(@ctx.components.email.state.value)   
+```
+{% endtab %}
+
+{% tab title="execute-entity-replace (DD)" %}
+```yaml
+actions:
+ - children:
+    - type: action.execute-entity
+      options:
+        title: Create Record
+        provider: DATA_PROVIDER_DYNAMIC
+        entity: default/customers
+        method: update
+        # Use replace to ensure you only have one update on the queue related
+        # to a record. Not adding the replace will not break the solution but
+        # will help to avoid chattiness and scenarios where backends have 
+        # rate limits.
+        queueOperation: replace
+        # Data records to update in Dynamic data tables. 
+        data:
+          # id is a required property for the replace queue.
+          id: =@ctx.jig.inputs.customer.id
+          firstName: =@ctx.components.firstName.state.value
+          lastName: =@ctx.components.lastName.state.value
+          companyName: =@ctx.components.companyName.state.value
+          address: =@ctx.components.address.state.value
+          city: =@ctx.components.city.state.value
+          email: =$lowercase(@ctx.components.email.state.value)
+```
+{% endtab %}
+
+{% tab title="execute-entity-add (DD)" %}
+```yaml
+actions:
+ - children:
+    - type: action.execute-entity
+      options:
+        title: Create Record
+        provider: DATA_PROVIDER_DYNAMIC
+        entity: default/customers
+        method: update
+        # Using add will add a command for every update to the queue related
+        # to a record. 
+        queueOperation: add
+        # Data records to update in the Dynamic Data table.
+        data:
+          id: =@ctx.jig.inputs.customer.id
+          firstName: =@ctx.components.firstName.state.value
+          lastName: =@ctx.components.lastName.state.value
+          companyName: =@ctx.components.companyName.state.value
+          address: =@ctx.components.address.state.value
+          city: =@ctx.components.city.state.value
+          email: =$lowercase(@ctx.components.email.state.value)
 ```
 {% endtab %}
 {% endtabs %}
@@ -199,7 +235,7 @@ actions:
 
 ## How to clear the queue
 
-For scenarios where operations on a record must be treated as draft and all queued commands must be removed without impacting the local record, use the `clear-queue` action, and specify the `id` of the record and a `title` for the action. See [clear all commands in the queue ](https://docs.jigx.com/offline-remote-data-handling#wzf1K)example.
+For scenarios where operations on a record must be treated as draft and all queued commands must be removed without impacting the local record, use the `clear-queue` action, and specify the `id` of the record and a `title` for the action. See [clear all commands in the queue](offline-remote-data-handling.md#clear-commands-in-the-queue-for-a-record) example.
 
 {% code title="clear-queue-action" %}
 ```yaml
@@ -216,11 +252,16 @@ actions:
 
 When using the `replace` property with a `delete` method, all commands on the queue for the specified record are removed. The delete method will still delete the local entity record as expected, for example while offline a record is created with a tempId, then updated, and then deleted with a `queueOperations: replace`, the commands for that record are removed from the queue and local entity will also be deleted. This avoids the need for the full cycle of calls to be sent to the backend (create, update, delete) if the end result is that the record is deleted.
 
-If the record to be delete has a valid Id then the `queueOperations: add` is used to add the record to the queue, when the device is back online the queue is processed and the record is deleted using the function.
+If the record to be deleted has a valid Id then the `queueOperations: add` is used to add the record to the queue, when the device is back online the queue is processed and the record is deleted using the function.
 
 If you want to cater for both tempId and a valid Id records when offline in one `queueOperation` configuration use the following expression `=$isTempId(@ctx.current.item.id) ? replace:add`
 
-{% code title="execute-entity-delete" %}
+{% hint style="danger" %}
+**Note** that `queueOperation: replace` with the `delete` method does not behave the same for Dynamic Data as it does for REST. Dynamic Data does not generate a tempId, so the `$isTempId()` check is not applicable. When working with Dynamic Data, you must use `queueOperation: add` for delete operations, as `replace` clears the queue without executing the delete method.
+{% endhint %}
+
+{% tabs %}
+{% tab title="execute-entity-delete (REST)" %}
 ```yaml
 actions:
   - children:
@@ -242,13 +283,59 @@ actions:
           data:
             id: =@ctx.current.item.id
 ```
-{% endcode %}
+
+
+{% endtab %}
+
+{% tab title="execute-entity-delete (Dynamic Data)" %}
+```yaml
+actions:
+ - children:
+    - type: action.execute-entity
+      options:
+        title: Create Record
+        provider: DATA_PROVIDER_DYNAMIC
+        entity: default/customers
+        method: delete
+        # The record id will be used to add it on the queue, which will delete the 
+        # record from the Dynamic Data. 
+        # Do not use replace as the queue is cleared without executing the delete method.
+        queueOperation: add
+        data:
+          id: =@ctx.current.item.id
+```
+{% endtab %}
+{% endtabs %}
 
 ## Handling TempIds
 
-All tempIds for a record are replaced in all other queued commands if a valid id is returned. If you use a record's id in another record while offline and a valid id is returned back when the device is back online, Jigx updates the tempId used in all the other records that used it with the valid id. This makes for smoother integration with backend systems as the ids will match up. See [working with REST ids](data-providers/rest/rest-best-practice.md) for more information on returning the id.
+All tempIds for a record are replaced in all other queued commands if a valid id is returned. If you use a record's id in another record while offline and a valid id is returned back when the device is back online, Jigx updates the tempId used in all the other records that used it with the valid id. This makes for smoother integration with backend systems as the ids will match up. This is applicable to remote stores, but not to Dynamic Data which does not generate tempIds. See [working with REST ids](data-providers/rest/rest-best-practice.md) for more information on returning the id.
+
+## Dynamic Data change tracking & queuing
+
+What you need to know about how Dynamic Data table changes are tracked and queued:
+
+* Applies to Dynamic Data tables defined as `default/table name`&#x20;
+* All changes made to the tables are automatically queued
+* Purpose is to facilitate offline sync / cloud sync support
+* Supported operations are:
+  * CRUD operations
+  * SQL execution
+  * Find & replace
+* Behavior is automatic and consistent
+* Use `queueOperations` with `add` or `replace`
+
+#### Behavior overview
+
+The change tracking and queuing is executed in the following way:&#x20;
+
+Update Dynamic Data table **→** Temp table created **→** Changes detected **→** Batch queued **→** Temp cleaned up
 
 ## Examples and code snippets
+
+{% hint style="info" %}
+See the [Dynamic data examples](https://docs.jigx.com/examples/readme/data-providers/dynamic-data) for examples demonstrating how to use `queueOperation` with the `execute-entity` action when working with a Dynamic Data database.
+{% endhint %}
 
 ### Execute-entity with queueOperation (replace)
 
@@ -874,7 +961,7 @@ inputTransform: |
 In this example, when the device is offline and a customer record is updated multiple times , all the update commands are queued. When the device is back online the queue is cleared.
 
 {% tabs %}
-{% tab title="update-customer.jigx" %}
+{% tab title="update-customer.jigx (REST)" %}
 ```yaml
 title: Update Customer
 type: jig.default
@@ -1235,8 +1322,8 @@ datasources:
           json_extract(cus.data, '$.logo') AS logo
         FROM
           [customers] AS cus
-        -- ORDER BY
-        --  json_extract(cus.data, '$.companyName')
+        ORDER BY
+          json_extract(cus.data, '$.companyName')
 
 data: =@ctx.datasources.customers
 item:
@@ -1320,7 +1407,7 @@ parameters:
 
 ### Execute-entity with queueOperations when no id is returned
 
-In this example, the remote data store does not return an id, and we need to sync the data before we get the correct backend id for the record. We need to be careful not to create and update the same record on the queue because the backend cannot associate the records after the sync. To accomodate for this in the update-customer jig we configure two `execute-entity` actions.
+In this example, the remote data store does not return an id, and we need to sync the data before we get the correct backend id for the record. We need to be careful not to create and update the same record on the queue because the backend cannot associate the records after the sync. To accommodate for this in the update-customer jig we configure two `execute-entity` actions.
 
 * The first action checks to see if a record has a tempId by using the following expression `when: =$isTempId(@ctx.jig.inputs.customer.id)`. If the record on the queue has a tempId, we replace it using the **create** method with a new item that will be placed on the queue.
 * The second action checks to see if the record has a valid Id rather than a tempId by using the following expression `when: =$not($isTempId(@ctx.jig.inputs.customer.id))`. If the record on the queue has a valid id, we replace it using the **update** method with an item that will be placed on the queue.
@@ -1871,10 +1958,12 @@ inputTransform: |
 {% endtab %}
 {% endtabs %}
 
-### Clear all commands in the queue for record
+### Clear commands in the queue for a record
 
-In this example, a secondary button is added to clear the queue for all commands using the `action.clear-queue`.
+In this example, a secondary button is added to clear the queue for commands for a specific record using the `action.clear-queue`.&#x20;
 
+{% tabs %}
+{% tab title="clear-customer-updates.jigx" %}
 {% code title="clear-customer-updates.jigx" %}
 ```yaml
 title: Update Customer
@@ -1889,60 +1978,6 @@ header:
       options:
         source:
           uri: https://www.dropbox.com/scl/fi/ha9zh6wnixblrbubrfg3e/business-5475661_640.jpg?rlkey=anemjh5c9qsspvzt5ri0i9hva&raw=1
-
-datasources:
-  region:
-    type: datasource.static
-    options:
-      data:
-        - id: 1
-          region: US Central
-        - id: 2
-          region: US East
-        - id: 3
-          region: US West
-  customerType:
-    type: datasource.static
-    options:
-      data:
-        - id: 1
-          type: New
-          value:
-        - id: 2
-          type: Gold
-          value: Gold
-        - id: 3
-          type: Silver
-          value: Silver
-  customers:
-    type: datasource.sqlite
-    options:
-      provider: DATA_PROVIDER_LOCAL
-      entities:
-        - entity: customers
-      query: |
-        SELECT 
-          cus.id AS id, 
-          json_extract(cus.data, '$.firstName') AS firstName, 
-          json_extract(cus.data, '$.lastName') AS lastName,
-          json_extract(cus.data, '$.companyName') AS companyName,
-          json_extract(cus.data, '$.address') AS address,
-          json_extract(cus.data, '$.city') AS city,
-          json_extract(cus.data, '$.state') AS state,
-          json_extract(cus.data, '$.zip') AS zip,
-          json_extract(cus.data, '$.phone1') AS phone1,
-          json_extract(cus.data, '$.phone2') AS phone2,
-          json_extract(cus.data, '$.email') AS email,
-          json_extract(cus.data, '$.web') AS web,
-          json_extract(cus.data, '$.customerType') AS customerType,
-          json_extract(cus.data, '$.jobTitle') AS jobTitle,
-          json_extract(cus.data, '$.region') AS region
-        FROM 
-          [customers] AS cus
-        WHERE id = @custId
-
-      queryParameters:
-        custId: =@ctx.jig.inputs.customer.id
 
 children:
   - type: component.form
@@ -2047,7 +2082,7 @@ actions:
           method: update
           # Use replace to ensure you only have one update on the queue related 
           # to a record. Not doing this will not break the solution but will 
-          # help to avoid chattiness and scenarios where backends have rate limits
+          # help to avoid chattiness and scenarios where backends have rate limits.
           queueOperation: replace
           function: rest-update-customer
           parameters:
@@ -2082,14 +2117,73 @@ actions:
             state: =@ctx.components.state.state.value
             web: =$lowercase(@ctx.components.web.state.value)
             zip: =@ctx.components.zip.state.value   
-      # Use the clear-queue to discard any commands in the queue while the
-      #  device is offline.
+      # Use the clear-queue to discard any commands in the queue for this record
+      # while the device is offline.
       - type: action.clear-queue
         options:
-          title: Cancel all updates
+          title: Cancel updates
           id: =@ctx.jig.inputs.customer.id
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="datasources" %}
+```yaml
+datasources:
+  region:
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          region: US Central
+        - id: 2
+          region: US East
+        - id: 3
+          region: US West
+  customerType:
+    type: datasource.static
+    options:
+      data:
+        - id: 1
+          type: New
+          value:
+        - id: 2
+          type: Gold
+          value: Gold
+        - id: 3
+          type: Silver
+          value: Silver
+  customers:
+    type: datasource.sqlite
+    options:
+      provider: DATA_PROVIDER_LOCAL
+      entities:
+        - entity: customers
+      query: |
+        SELECT 
+          cus.id AS id, 
+          json_extract(cus.data, '$.firstName') AS firstName, 
+          json_extract(cus.data, '$.lastName') AS lastName,
+          json_extract(cus.data, '$.companyName') AS companyName,
+          json_extract(cus.data, '$.address') AS address,
+          json_extract(cus.data, '$.city') AS city,
+          json_extract(cus.data, '$.state') AS state,
+          json_extract(cus.data, '$.zip') AS zip,
+          json_extract(cus.data, '$.phone1') AS phone1,
+          json_extract(cus.data, '$.phone2') AS phone2,
+          json_extract(cus.data, '$.email') AS email,
+          json_extract(cus.data, '$.web') AS web,
+          json_extract(cus.data, '$.customerType') AS customerType,
+          json_extract(cus.data, '$.jobTitle') AS jobTitle,
+          json_extract(cus.data, '$.region') AS region
+        FROM 
+          [customers] AS cus
+        WHERE id = @custId
+      queryParameters:
+        custId: =@ctx.jig.inputs.customer.id
+```
+{% endtab %}
+{% endtabs %}
 
 ### Testing and debugging queues
 

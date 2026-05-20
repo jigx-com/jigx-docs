@@ -3,20 +3,6 @@ title: Microsoft OneDrive
 slug: ew-X-onedrive
 createdAt: Thu May 25 2023 15:27:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Thu Nov 23 2023 07:36:14 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Microsoft OneDrive
@@ -51,7 +37,7 @@ There are two supported base entities myfiles and shared.
 ### Supported methods:
 
 * [Create](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/create-a-file)
-* [Update](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/updatesave-a-file)
+* [Update](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/update_save-a-file)
 * **Save** - Using the `method: save` will create a new file if the filename does not exist, otherwise, the save will function as an update method.
 * [Delete](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/delete-a-file)
 * [List](https://docs.jigx.com/examples/readme/data-providers/microsoft-onedrive/list-files)

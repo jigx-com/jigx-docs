@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Deep links
 
 Deep linking in mobile apps is a powerful tool that enhances user experience by creating seamless navigation between the app and external sources. Deep linking allows you to land directly on specific content or pages within an app, bypassing the need to navigate through a series of menus. This is particularly useful in marketing campaigns, social media links, or emails where you want to direct a person to a specific product, article, or feature within your app.
@@ -27,7 +10,7 @@ Contact [_support@jigx.com_](mailto:support@jigx.com) to get your branded app's 
 
 Deep linking uses a uniform resource identifier (URI) to link to an app or a specific location within a mobile application. The deep link is built up in stages, and the depth depends on where in the app you want to land. The full URI format is shown below:
 
-`https://{app.domainname.com}/{appname}/app/solution/{solutionId}/jig/{jigname}?{inputname=inputvalue}`
+`https://app.jigx.com/{appname}/app/solution/{solutionId}/jig/{jigname}?{inputname=inputvalue}`
 
 An example of a built-up deep link:
 
@@ -35,13 +18,15 @@ An example of a built-up deep link:
 
 The URI is built up with the following values:
 
-<table><thead><tr><th width="132.19140625">URI elements</th><th>Description</th></tr></thead><tbody><tr><td>app.jigx.com</td><td>For all jigx apps, use the app domain app.jigx.com.</td></tr><tr><td>jigx</td><td>name of the app.</td></tr><tr><td>solutionId</td><td>The solutionId is found in , for example, 8e535f78-4e36-4716-8c01-3465bea60bj9.</td></tr><tr><td>jigname</td><td>jigId/jig-name, for example, support-form.</td></tr><tr><td>inputname</td><td>The name used in the input expression, i.e. <code>=@ctx.jig.input.{inputname}</code>.</td></tr><tr><td>inputvalue</td><td>The value to be used as the input.</td></tr></tbody></table>
+<table><thead><tr><th width="132.19140625">URI elements</th><th>Description</th></tr></thead><tbody><tr><td>app.jigx.com</td><td>For all jigx apps, use the app domain app.jigx.com, this includes the branded apps.</td></tr><tr><td>appname</td><td>Name of the app, in the case of Jigx apps, the name is jigx. If you have a branded app, use the name listed in the Apple or Google Play stores.</td></tr><tr><td>solutionId</td><td>The solutionId is found in , for example, 8e535f78-4e36-4716-8c01-3465bea60bj9.</td></tr><tr><td>jigname</td><td>jigId/jig-name, for example, support-form.</td></tr><tr><td>inputname</td><td>The name used in the input expression, i.e. <code>=@ctx.jig.input.{inputname}</code>.</td></tr><tr><td>inputvalue</td><td>The value to be used as the input.</td></tr></tbody></table>
 
 ### Link to an app
 
 To open a Jigx or branded app, use the following deep link:
 
-`https://{app.jigx.com}/{jigx}/app/`
+Jigx app: `https://app.jigx.com/jigx/app/`
+
+Branded app: `https://app.jigx.com/{appname}/app/`
 
 * If you are logged out of the app and click the link, you will be directed to the login screen.
 * If you are currently logged into the app, the link will open the app and display the Home Hub.
@@ -50,15 +35,15 @@ To open a Jigx or branded app, use the following deep link:
 
 A deep link to a jig screen directs you to a specific location within the app if it has already been installed.
 
-`https://{app.jigx.com}/{jigx}/app/solution/{solutionId}/jig/{jigname}`
+`https://app.jigx.com/{appname}/app/solution/{solutionId}/jig/{jigname}`
 
 ### Link to a jig with inputs (contextual deep link)
 
-A contextual deep link includes additional information, such as user data, input value, or a parameter, providing a personalized experience. For example, a link that opens a form and prepopulates a field with an email address.
+A contextual deep link includes additional information, such as user data, input value, or a parameter, providing a personalized experience. For example, a link that opens a form and pre populates a field with an email address.
 
 **Input:**
 
-`https://{app.domainname.com}/{appname}/app/solution/{solutionId}/jig/{jigname}?{inputname=inputvalue}`
+`https://app.jigx.com/{appname}/app/solution/{solutionId}/jig/{jigname}?{inputname=inputvalue}`
 
 An example of the built-up deep link:
 

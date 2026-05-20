@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Dynamic files
 
 Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with records. Files are physically stored in Amazon S3, offering a combination of simplicity, security, and portability.
@@ -225,6 +208,10 @@ Permissions are managed at the solution level in Jigx Management and Jigx Builde
 
 * `Ownership` and `membership` are specified at the record level.
 * Multiple `owners`/`groups` can be assigned.
+
+{% hint style="info" %}
+For optimal performance and security with Dynamic Files, enable **owner-only** policies on the **read** method for any tables containing dynamic files. This ensures that files are only downloaded to the devices of users who own the records, rather than syncing all files to every user's device.
+{% endhint %}
 
 See [Row Level Security](../../../administration/solutions/row-level-security/row-level-security.md) and [Data policies](../../../administration/solutions/row-level-security/data-policies.md) for more information.
 

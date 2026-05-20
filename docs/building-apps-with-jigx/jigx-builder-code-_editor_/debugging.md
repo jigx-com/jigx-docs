@@ -3,20 +3,6 @@ title: Debugging
 slug: pSqd-debugging-and-testing
 createdAt: Tue Jun 20 2023 08:34:28 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Nov 05 2024 11:18:17 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Debugging
@@ -71,7 +57,7 @@ Use the Jigx Console to debug your data and functions.
 
 <figure><img src="../../.gitbook/assets/JB-Console.gif" alt="Debugging data in Jigx Console"><figcaption><p>Debugging data in Jigx Console</p></figcaption></figure>
 
-1. [Connect your device to Jigx Dev Tools](https://docs.jigx.com/debugging#p8neI)
+1. [Connect your device to Jigx Dev Tools](debugging.md#connecting-your-device-to-jigx-dev-tools)
 2. Under the **Device** node, click on the **data** node and select the SQLite data table.
 3. Use the **▷** icon to run the SQL query in the Jigx Console.
 4. You can run multiple SQLite queries and functions simultaneously, as each one opens in a new tab in the console panel.

@@ -3,20 +3,6 @@ title: Create an app from scratch
 slug: s2xAkEBhQIcz1yt3BtEmf
 createdAt: Tue Apr 04 2023 06:20:14 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Feb 21 2025 14:24:14 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Create an app from scratch
@@ -44,7 +30,7 @@ The solution is named **Hello-Jigx** and consists of a map showing a location, a
 
 ### Solution Steps
 
-There are several [types](https://docs.jigx.com/examples/jig-types) of jigs you can build. They are default, document, calendar, composite, and list. Below are step-by-step guides that use these jig types. Each solution step builds on the previous step until you have a functioning mobile app. Each solution provides an overview, explaining the Jigx's concepts introduced in the step, and code samples with comments.
+There are several [types](../../building-apps-with-jigx/ui/jigs-_screens_/jigs-_screens_.md#jig-types) of jigs you can build. They are default, document, calendar, composite, and list. Below are step-by-step guides that use these jig types. Each solution step builds on the previous step until you have a functioning mobile app. Each solution provides an overview, explaining the Jigx's concepts introduced in the step, and code samples with comments.
 
 [Step 1: Create the Hello Jigx solution project](create-the-hello-jigx-solution-project.md) Start by creating the Hello Jigx project in VS Code \
 **Build time**: 2 min

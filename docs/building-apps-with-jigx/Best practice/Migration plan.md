@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Migration plan
 
 [Release 2025.1](https://docs.jigx.com/release-notes#affhn) - introduces several updates to the index.jigx file, widgets, and location. Some properties have been deprecated, and a new grid jig type and a grid-item component have been added. These updates provide more versatility in app design, enhance layout options, and optimize screen space usage. To take advantage of these new features in your existing solutions, follow the guidance below to update your implementation.
@@ -44,7 +27,7 @@ New solutions now offer greater versatility.
 
 The table below outlines the areas impacted by the introduction of bottom tab navigation, and the deprecation of the `stories`, `home`, and `widgets` properties in the index.jigx file.
 
-<table><thead><tr><th width="282.3046875">Old</th><th>New</th></tr></thead><tbody><tr><td><code>widgets</code> property in index.jigx file.</td><td><code>tabs</code> property in index.jigx file. See for more information.</td></tr><tr><td><code>widgets</code> property in jig files.</td><td><code>widgets</code> in jig files now require a <code>widgetId</code> (Widget Name) property and remove the size, e.g. <code>1x1</code>.</td></tr><tr><td><code>stories</code> property in index.jigx <code>story-group</code> component</td><td>Deprecated.</td></tr><tr><td><code>home</code> property in index.jigx file.</td><td>Reference the jig previously referenced in <code>home</code> as the custom Home Hub now in the <code>tabs</code> property. The first jig configured under the <code>tabs</code> property becomes is the first screen displayed when the app is opened.</td></tr><tr><td>N/A</td><td><code>jig-grid</code> - a new jig type used to configure jigs and components in a grid layout. See for more information.</td></tr><tr><td><code>component.widgets</code></td><td><code>grid</code> and <code>grid-item</code> component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See and <a href="https://docs.jigx.com/examples/grid-item">grid-item</a> for more information.</td></tr><tr><td>User profile</td><td>User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.</td></tr><tr><td>Solutions (Home)</td><td><p>Solution switching has moved into the user profile screen. A <em>switch</em> button opens the solution list for selection. :</p><p>[]{src="" size="44" position="center" caption="Switch solutions" alt="Switch solutions"}</p></td></tr><tr><td><code>component.location</code></td><td>The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.</td></tr></tbody></table>
+<table><thead><tr><th width="282.3046875">Old</th><th>New</th></tr></thead><tbody><tr><td><code>widgets</code> property in index.jigx file.</td><td><code>tabs</code> property in index.jigx file. See for more information.</td></tr><tr><td><code>widgets</code> property in jig files.</td><td><code>widgets</code> in jig files now require a <code>widgetId</code> (Widget Name) property and remove the size, e.g. <code>1x1</code>.</td></tr><tr><td><code>stories</code> property in index.jigx <code>story-group</code> component</td><td>Deprecated.</td></tr><tr><td><code>home</code> property in index.jigx file.</td><td>Reference the jig previously referenced in <code>home</code> as the custom Home Hub now in the <code>tabs</code> property. The first jig configured under the <code>tabs</code> property becomes is the first screen displayed when the app is opened.</td></tr><tr><td>N/A</td><td><code>jig-grid</code> - a new jig type used to configure jigs and components in a grid layout. See for more information.</td></tr><tr><td><code>component.widgets</code></td><td><code>grid</code> and <code>grid-item</code> component - a new component used to add a grid layout in a jig. This allows you to combine a grid layout with other components. See <a href="https://docs.jigx.com/examples/readme/components/grid/grid-item">grid-item</a> for more information.</td></tr><tr><td>User profile</td><td>User profile has moved to the bottom tabs navigation. The user avatar will always show as the last tab in the navigation bar.</td></tr><tr><td>Solutions (Home)</td><td><p>Solution switching has moved into the user profile screen. A <em>switch</em> button opens the solution list for selection. :</p><p>[]{src="" size="44" position="center" caption="Switch solutions" alt="Switch solutions"}</p></td></tr><tr><td><code>component.location</code></td><td>The location component's YAML structure now supports custom markers, state-based markers, user location display, and location tracking.</td></tr></tbody></table>
 
 ## Migration steps
 

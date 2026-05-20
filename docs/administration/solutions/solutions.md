@@ -3,20 +3,6 @@ title: Solutions
 slug: anNr-solutions
 createdAt: Tue Jun 07 2022 09:54:15 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:21:39 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Solutions
@@ -35,7 +21,7 @@ Click on the solution's name in the list, the solutions menu opens and the optio
 
 * [Groups](groups.md)
 * User [Permissions](permissions.md) and group memberships
-* [Data](https://docs.jigx.com/data) stored in Dynamic Data tables
+* [Data](data.md) stored in Dynamic Data tables
 * [Credentials](credentials.md) such as API Keys
 * [Connections](connections.md) such as Azure SQL DB connections
 * [SQL Functions](sql-functions.md) / Stored Procedures including a "Run now" feature

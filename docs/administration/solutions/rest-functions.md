@@ -1,24 +1,7 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # REST Functions
 
 {% hint style="info" %}
-REST functions are only visible in the list if the Solution Creator defined functions that use the [REST data provider](https://docs.jigx.com/rest). Make sure that credentials such as API Keys are set up correctly in [Credentials](credentials.md) if they are being referenced in the function definition.
+REST functions are only visible in the list if the Solution Creator defined functions that use the [REST data provider](../../building-apps-with-jigx/data/data-providers/rest/rest.md). Make sure that credentials such as API Keys are set up correctly in [Credentials](credentials.md) if they are being referenced in the function definition.
 {% endhint %}
 
 You can try out all functions of the solutions that use the REST data provider.

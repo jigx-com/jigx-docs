@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Salesforce
 
 Jigx easily integrates with your Salesforce instance, allowing you to share data about customers, sales processes, marketing campaigns, and more. The Jigx Salesforce provider exposes the standard and custom Salesforce objects. You can manage your customer data, such as leads, contacts, accounts, and opportunities, using CRUD methods.
@@ -23,7 +6,7 @@ Jigx easily integrates with your Salesforce instance, allowing you to share data
 
 {% columns %}
 {% column %}
-The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/charts), [lists](https://docs.jigx.com/examples/readme/components/list), [widgets](salesforce.md), or [steppers](https://docs.jigx.com/examples/stepper).
+The endless possibilities depend on your specific needs and objectives and the type of data you want to show in your app. Build an app that provides current data about sales opportunities; deals won, leading sales teams, and open cases or tasks, through interactive Jigx components such as [charts](https://docs.jigx.com/examples/readme/components/charts), [lists](https://docs.jigx.com/examples/readme/components/list), [widgets](https://docs.jigx.com/examples/readme/widgets), or [steppers](https://docs.jigx.com/examples/readme/components/stepper).
 {% endcolumn %}
 
 {% column %}
@@ -43,11 +26,11 @@ The Salesforce provider uses the Jigx Cloud service, where the data passes throu
 
 ## Supported methods:
 
-* [Create](https://docs.jigx.com/examples/create-records-in-objects)
-* [Delete](https://docs.jigx.com/examples/delete-records-in-objects)
-* [Save](https://docs.jigx.com/examples/save-and-update-records-in-objects)
-* [Update](https://docs.jigx.com/examples/save-and-update-records-in-objects)
-* [Read/list](https://docs.jigx.com/examples/list-records-in-objects)
+* [Create](https://docs.jigx.com/examples/readme/data-providers/salesforce/create-records-in-objects)
+* [Delete](https://docs.jigx.com/examples/readme/data-providers/salesforce/delete-records-in-objects)
+* [Save](https://docs.jigx.com/examples/readme/data-providers/salesforce/save-_-update-records-in-objects)
+* [Update](https://docs.jigx.com/examples/readme/data-providers/salesforce/save-_-update-records-in-objects)
+* [Read/list](https://docs.jigx.com/examples/readme/data-providers/salesforce/list-records-in-objects)
 
 ## Syncing data
 

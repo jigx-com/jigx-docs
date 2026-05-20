@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # REST Overview
 
 ## Configuring the REST data provider
@@ -33,7 +16,7 @@ To use the REST data provider in Jigx , follow these high-level steps:
    * Set up different methods your application can perform using this API, such as GET, POST, PUT, DELETE, etc.
    * For each method, create a new function to specify the endpoint, required headers, URL parameters, input and output transforms, continuation, and body content if applicable.
 5. Configure properties to handle API limits, errors and file storage.
-   * In the function configure the REST provider to cater for [errors](rest-error-handling.md), such as 403, 404 or 500.
+   * In the function configure the REST provider to cater for [errors](rest-error-handling/), such as 403, 404 or 500.
    * [Convert](functions/conversions.md) images and files from local-uri to an acceptable storage format, such as base64 or buffer.
    * Add [Continuation](functions/continuation.md) if the REST services limit the number of items to be returned. Jigx REST calls can automatically repeat calls by specifying a continuation block.
 6. **Bind data to the UI by referencing the local data and functions in jig﻿s**

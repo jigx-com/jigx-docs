@@ -3,20 +3,6 @@ title: Offline Solutions
 slug: 8G5Q-offline-solutions
 createdAt: Tue Jun 07 2022 09:48:47 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Jan 15 2024 09:38:53 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Offline Solutions
@@ -33,7 +19,7 @@ Data is synced to the device from one of five supported locations:
 
 When the app is online, data is synced from the cloud to the local SQLite database, from where it is accessed using data sources in jigs.
 
-The command is put on a queue when data is saved to the cloud. The queue is immediately executed when the device is online, and the data is sent to the applicable cloud service. When the device is offline, the cloud commands continue to be added to the queue until the device goes online.
+The command is put on a [queue](offline-remote-data-handling.md) when data is saved to the cloud. The queue is immediately executed when the device is online, and the data is sent to the applicable cloud service. When the device is offline, the cloud commands continue to be added to the queue until the device goes online.
 
 The best practice for a robust offline solution is to sync as much data as is needed as early as possible in the usage cycle. This is typically when the solution launches. After that, the solution design should ensure the latest data is synced to the device to avoid just-in-time data loading.
 

@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Expressions - cheatsheet
 
 Jigx wants to help you build solutions quickly and easily. To help you do this, here is a list of functionality or data results you might want to use in your app with the expression used to achieve it. This is a starting point; you can adapt or add to the expression as needed to get the expected data results when building solutions. Refer to the [Expressions](https://docs.jigx.com/expressions) section in the **Examples** tab for working examples and code snippets for various JSONata expressions.

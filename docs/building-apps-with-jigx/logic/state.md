@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # State
 
 State manages the data within Jigx solutions, jigs, and components and controls the UI dynamically. The state allows solutions and components to change their output in response to user inputs and actions. Often, the state is used as a global variable that can be used throughout the solution or as a local state used only in that specific jig or component.
@@ -84,10 +67,10 @@ Avoid using state keywords, such as `component`, as `instanceId` values in expre
 
 ### Jig (local) State
 
-| Syntax               | Key                                                                                                                                                                                  | Area                                                                                                           |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| =@ctx.jig.state.     | <p>activeItem <br>activeItemId<br>amounts</p><p>filter </p><p>isHorizontal </p><p>isRefreshing </p><p>isSelectable isSelectActive </p><p>searchText </p><p>selected </p><p>value</p> | <p></p><ul><li>Applies to a list jig.</li></ul><ul><li>The creator configures the state in the YAML.</li></ul> |
-| =@ctx.jig.instanceId |                                                                                                                                                                                      | <p></p><ul><li>Used to push the jig instance (state) to the navigation stack.</li></ul>                        |
+| Syntax               | Key                                                                                                                                                                                  | Area                                                                                                  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| =@ctx.jig.state.     | <p>activeItem <br>activeItemId<br>amounts</p><p>filter </p><p>isHorizontal </p><p>isRefreshing </p><p>isSelectable isSelectActive </p><p>searchText </p><p>selected </p><p>value</p> | <p></p><ul><li>Applies to a list jig.</li><li>The creator configures the state in the YAML.</li></ul> |
+| =@ctx.jig.instanceId |                                                                                                                                                                                      | <p></p><ul><li>Used to push the jig instance (state) to the navigation stack.</li></ul>               |
 
 ### Component (local) State
 
@@ -145,8 +128,7 @@ screen.onLoad.resetjigState({ keys: ['error', 'draft'] })
 <pre class="language-yaml"><code class="lang-yaml"><strong>state:
 </strong>  StateKey1: 
     # String
-    initialValue: 
-      value: string
+    initialValue: value
   StateKey2: 
     # Array
     initialValue: 
@@ -156,7 +138,7 @@ screen.onLoad.resetjigState({ keys: ['error', 'draft'] })
   StateKey3:
     # object
     initialValue:
-      - property: value
+       property: value
 </code></pre>
 
 ### **Update state**
@@ -247,10 +229,16 @@ actions:
 ```yaml
 actions:
 - numberOfVisibleActions: 1
-  children:
-    - type: action.reset-state
-      options:
-        state: =@ctx.components.instanceid.state.value
+# Reset specific components by instanceId
+- type: action.reset-component-state
+  options:
+    instanceIds:
+      - product-1
+      - product-2
+
+# Reset all solution state keys (new behavior)
+- type: action.reset-solution-state
+  options: {} # Changes omitted = reset all
 ```
 {% endtab %}
 {% endtabs %}
@@ -445,10 +433,11 @@ The following **reset-state** actions are available:
 * `action.reset-solution-state`
 * `action.reset-jig-state`
 * `action.reset-custom-component-state`
+* `action.reset-component-state`
 
 The only difference between these states are the scope where they are used. See the table below.
 
-<table data-full-width="true"><thead><tr><th width="319.76953125">Action</th><th width="102.91796875">Solution</th><th width="67.47265625">Jig</th><th width="124.7421875">Component</th><th>custom component (alpha)</th></tr></thead><tbody><tr><td><code>action.set-state</code></td><td>✅</td><td></td><td>✅</td><td></td></tr><tr><td><code>action.reset-state</code></td><td>✅</td><td></td><td>✅</td><td></td></tr><tr><td><code>action.set-solution-state</code></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.reset-solution-state</code></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.set-jig-state</code></td><td></td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.reset-jig-state</code></td><td></td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.set-custom-component-state</code></td><td></td><td></td><td></td><td>✅</td></tr><tr><td><code>action.reset-custom-component-state</code></td><td></td><td></td><td></td><td>✅</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="319.76953125">Action</th><th width="102.91796875">Solution</th><th width="67.47265625">Jig</th><th width="124.7421875">Component</th><th>custom component (alpha)</th></tr></thead><tbody><tr><td><code>action.set-state</code></td><td>✅</td><td></td><td>✅</td><td></td></tr><tr><td><code>action.reset-state</code></td><td>✅</td><td></td><td>✅</td><td></td></tr><tr><td><code>action.set-solution-state</code></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.reset-solution-state</code></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.set-jig-state</code></td><td></td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.reset-jig-state</code></td><td></td><td>✅</td><td></td><td>✅</td></tr><tr><td><code>action.set-custom-component-state</code></td><td></td><td></td><td></td><td>✅</td></tr><tr><td><code>action.reset-custom-component-state</code></td><td></td><td></td><td></td><td>✅</td></tr><tr><td><code>action.reset-component-state</code></td><td></td><td></td><td>✅</td><td></td></tr></tbody></table>
 
 #### Setting a state using an action (set-states)
 
@@ -525,6 +514,22 @@ actions:
           changes:
             - predefinedtext
             - address
+```
+{% endtab %}
+
+{% tab title="reset-component-state-action" %}
+```yaml
+# Reset the component state keys to their initial values.
+# Reset specific components by instanceId
+- type: action.reset-component-state
+  options:
+    instanceIds:
+      - product-1
+      - product-2
+
+# Reset all solution state keys (new behavior)
+- type: action.reset-solution-state
+  options: {} # Changes omitted = reset all
 ```
 {% endtab %}
 

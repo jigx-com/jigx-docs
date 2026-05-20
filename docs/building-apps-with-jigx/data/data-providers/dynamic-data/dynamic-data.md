@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Dynamic Data
 
 Apps need data, while [static](https://docs.jigx.com/examples/readme/datasource/static) allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.
@@ -38,6 +21,7 @@ We can visualize how dynamic data works by following the steps below:
 * Changes made on your device are stored locally and immediately reflected in the cloud-hosted database.
 * Realtime data syncing between your device, Dynamic data in the cloud, and other devices.
 * Devices continue to operate offline and any local changes will be synced to the database once the device established a connection.
+* To understand how Dynamic Data functions when the app is offline see [Dynamic Data change tracking & queuing](../../offline-remote-data-handling.md#dynamic-data-change-tracking-and-queuing).
 
 {% hint style="warning" %}
 Jigx does not recommend storing images in Dynamic Data (via any conversion), as the max file size per record is 350K.

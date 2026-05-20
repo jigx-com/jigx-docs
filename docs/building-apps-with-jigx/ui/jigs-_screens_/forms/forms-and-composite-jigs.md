@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Forms and Composite Jigs
 
 In this section, we will have a look at how you can create and update forms using composite jigs. For more information see the [jig.composite](https://docs.jigx.com/examples/jigcomposite) topic.
@@ -85,9 +68,7 @@ children:
 
 1.  Now we have two jigs where we have two forms. Let's back to the composite jig that we create at the start on the top of this section. Change the myjig1 and 2 to the name-form and personal-info-form and add the instanceId: thanks to instanceId we can refer to the children in the specific jig.&#x20;
 
-    {% code title="composite-form.jigx" %}
-    ```yaml
-    title: Composite
+    <pre class="language-yaml" data-title="composite-form.jigx"><code class="lang-yaml">title: Composite
     type: jig.composite
 
     children:
@@ -95,8 +76,7 @@ children:
         instanceId: names
       - jigId: personal-info-form
         instanceId: infos
-    ```
-    {% endcode %}
+    </code></pre>
 2. For saving our data from we need to create action with action.execute-entity but now our section data will look a little different. The syntax for first-name will be as follows - _**firstname: =@ctx.jigs.names.components.first-name.state.value**_ _**=@ctx.jigs.names**_ - will refer to the specific jig _**components.first-name.state.value**_ - will refer to the specific component inside the jig that we refer before.
 
 {% code title="composite-form.jigx" %}

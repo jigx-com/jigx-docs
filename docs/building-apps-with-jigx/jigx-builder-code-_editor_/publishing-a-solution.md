@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Publishing a solution
 
 After building the solution in Jigx Builder, you publish the solution to Jigx Cloud. The solution is immediately available in the Jigx App.
@@ -46,8 +29,7 @@ To publish a **single** file in the solution follow the steps below:
 
 1. In Jigx Builder locate the file in the side bar explorer that you want to publish.
 2. Right-click on the file and click **Publish Jigx file**. If you not signed in you will be asked to enter your Jigx username and password, organization and region. Alternatively you can use the shortcut keys given below. \
-   ![](../../.gitbook/assets/JB-SinglePub.png)\
-
+   ![](../../.gitbook/assets/JB-SinglePub.png)<br>
 
 ## Publishing shortcuts
 

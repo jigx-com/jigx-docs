@@ -1,41 +1,67 @@
 # forRowsWithMatchingids
 
-By default, the JSON payload returned from the REST call replaces all existing data in the SQLite database. However, when `forRowsWithMatchingIds` is specified, Jigx performs an **upsert** operation, updating or inserting records based on a matching id.
-
-The `outputTransform` must include a field named id, which Jigx uses to match against the id column in the target table.
-
-* If a record with the specified id already exists in the table, it will be **updated**.
-* If no matching id is found, a **new row** will be **inserted**.
-* **No rows are deleted** when using `forRowsWithMatchingIds`.
+By default, the JSON payload returned from the REST call replaces all existing data in the SQLite database. However, the `forRowsWithMatchingIds` property controls how data from REST API responses is synchronized with the local SQLite database.&#x20;
 
 This approach is useful for incrementally syncing data without affecting unrelated records, making it ideal for scenarios where partial updates or record-level inserts are required.
 
-## Example code
+### Understanding data sync behavior
+
+The behavior of data synchronization depends on whether `forRowsWithMatchingIds` and explicit `operations` are specified. When using explicit `operations`, you lose the automatic upsert-merge behavior provided with the `forRowsWithMatchingIds` and must define all desired operations yourself. The `id` field in your `outputTransform` is critical for matching records. \
+There are three scenarios:
+
+<table><thead><tr><th width="123.12109375">Scenario</th><th width="401.5">Combinations</th><th>Results</th></tr></thead><tbody><tr><td>Scenario 1 <br>(Default)</td><td>No <code>forRowsWithMatchingIds</code> + no <code>operations</code></td><td>Wipe and sync</td></tr><tr><td>Scenario 2 (Automatic)</td><td><code>forRowsWithMatchingIds: true</code> + no <code>operations</code> </td><td> Automatic upsert-merge</td></tr><tr><td>Scenario 3 (Manual)</td><td><code>forRowsWithMatchingIds</code> + explicit <code>operations</code> </td><td>You control the behavior</td></tr></tbody></table>
+
+<details>
+
+<summary><strong>Scenario 1</strong>: No <code>forRowsWithMatchingIds</code>, no <code>operations</code> (Default behavior)</summary>
+
+**Use case:** When you want to completely refresh the table contents.
+
+When neither `forRowsWithMatchingIds` nor explicit `operations` are specified, Jigx performs a **wipe and sync**:
+
+* **Deletes** all existing records in the table
+* **Inserts** all new records from the API response
+
+This is the standard default operation that completely replaces the table contents.
 
 ```yaml
-
-# REST Data Provider with forRowsInRange function example
-# This example fetches earthquake data and updates only rows within a magnitude range
 provider: DATA_PROVIDER_REST
 method: GET
-url: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
-useLocalCall: true  
-# Update existing records or inserts new ones based on ID matching.
-forRowsWithMatchingIds: true
-# Input parameters for the range values
-parameters:
-  mag:
-    type: number
-    location: query
-    required: false
-    value: 2.0
-  dmin:  
-    type: number
-    location: query
-    required: false
-    value: 5.0
+url: https://api.example.com/data
+useLocalCall: true
+outputTransform: |
+  {
+    "data": $.items
+  }
+# No forRowsWithMatchingIds specified
+# No operations specified
+# Result: Complete table replacement (wipe and sync)
+```
 
-# Transform the earthquake data
+</details>
+
+<details>
+
+<summary><strong>Scenario 2</strong>: <code>forRowsWithMatchingIds</code> specified, no <code>operations</code></summary>
+
+**Use case**: Use for simple incremental syncing without deletions.
+
+When `forRowsWithMatchingIds: true` is specified **without** any explicit `operations`, Jigx automatically performs an **upsert-merge** operation:
+
+* **Updates** existing records where the `id` matches
+* **Inserts** new records where no matching `id` exists
+* **Preserves** existing records that are not in the API response (no deletion)
+
+The `outputTransform` must include a field named `id`, which Jigx uses to match against the `id` column in the target table.
+
+```yaml
+provider: DATA_PROVIDER_REST
+method: GET
+url: https://{api.example.com}/data
+useLocalCall: true
+# Automatically performs upsert-merge when no operations are specified
+forRowsWithMatchingIds: true
+
 outputTransform: |
   {
     "earthquakes": features[].{
@@ -47,17 +73,68 @@ outputTransform: |
       "depth": geometry.coordinates[2]
     }
   }
-operations:
-  - type: operation.delete-insert
-    table: earthquake_data
-    records: |
-      =$.earthquakes.{
-      "id": id,
-      "place": place,
-      "mag": mag,
-      "time": time,
-      "longitude": coordinates[0],
-      "latitude": coordinates[1],
-      "depth": depth
-      }
+# No operations specified - automatic upsert-merge behavior applies.
 ```
+
+</details>
+
+<details>
+
+<summary><strong>Scenario 3:</strong> <code>forRowsWithMatchingIds</code> with explicit <code>operations</code></summary>
+
+**Use case**: When you need custom logic, such as handling server-side deletions or complex synchronization.
+
+<mark style="color:red;">**IMPORTANT:**</mark> When you specify explicit `operations`, `forRowsWithMatchingIds` loses its automatic upsert-merge behavior. You must explicitly define the `operations` you want to perform.
+
+This scenario is useful when you need custom synchronization logic, such as:
+
+* Deleting records that no longer exist on the server
+* Combining upsert with cleanup operations
+
+```yaml
+provider: DATA_PROVIDER_REST
+method: GET
+useLocalCall: true
+url: https://{api.example.com}/ExpenseReceipt
+records: =$.data
+# forRowsWithMatchingIds is used with explicit operations.
+forRowsWithMatchingIds: true
+
+outputTransform: >-
+  ={
+    "top": @ctx.parameters."$top",
+    "skip": @ctx.parameters."$skip",
+    "data": @ctx.response.body ? $map(@ctx.response.body, function($item){
+      $merge([$item, { "Remote": true }])
+    }) : []
+  }
+
+operations:
+  # First operation: 
+  # Delete local records that no longer exist on the server.
+  - type: operation.execute-sql
+    statements:
+      - statement: |
+          ="DELETE FROM [expense-receipts] WHERE [id] NOT IN (" & 
+          $join($map(@ctx.response.body.id, function($v) { "'" & $v & "'" }), ", ") & 
+          ")"
+    tables:
+      - expense-receipts
+  
+  # Second operation: 
+  # Explicitly define upsert-merge for matching records.
+  - type: operation.upsert-merge
+    table: expense-receipts
+    records: |
+      =@ctx.response.body ? $map(@ctx.response.body, function($item){
+        $merge([$item, { "Remote": true }])
+      }) : []
+```
+
+</details>
+
+### Considerations
+
+* Always ensure your `outputTransform` includes an `id` field when using `forRowsWithMatchingIds`.
+* When using explicit `operations` ([Scenario 3](forrowswithmatchingids.md#scenario-3-forrowswithmatchingids-with-explicit-operations)), carefully plan your operation sequence.
+* Test your synchronization logic thoroughly, especially when handling deletions.

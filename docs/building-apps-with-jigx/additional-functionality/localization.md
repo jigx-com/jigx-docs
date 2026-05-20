@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Localization
 
 Jigx mobile app supports multiple languages, significantly enhancing its market presence, user engagement, and overall success by appealing to a broader and more diverse audience. The real power of the Jigx localization functionality lies in using a single jig that can have multiple translations associated with the jig, the app respects the language setting of the device and renders the jigin that language if the corresponding language file is found or defaults to English.

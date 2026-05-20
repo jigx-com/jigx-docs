@@ -3,20 +3,6 @@ title: Create a new Jigx Solution
 slug: 01r5-creating-a-new-solution
 createdAt: Tue Jun 20 2023 08:34:30 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 18:39:01 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Create a new Jigx Solution
@@ -47,4 +33,4 @@ Every Jigx solution requires the following:
 5. Select a local folder or Git repository where the project files are saved too.
 6. Your Jigx [solution scaffolding](editor.md) opens in the VS Code editor with the .jigx extensions ready for editing.
 
-Follow the steps in the getting started section to [build your first Jigx solution](https://docs.jigx.com/create-an-app-from-scratch).
+Follow the steps in the getting started section to [build your first Jigx solution](../../getting-started/create-an-app-from-scratch/create-an-app-from-scratch.md).

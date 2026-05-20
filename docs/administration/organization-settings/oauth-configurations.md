@@ -3,20 +3,6 @@ title: OAuth Configurations
 slug: qj0_-oauth-configurations
 createdAt: Wed Jun 07 2023 08:05:42 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Apr 15 2024 08:45:06 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # OAuth Configurations
@@ -76,6 +62,79 @@ Before removing the OAuth configuration, check where the OAuth key is referenced
 When your app has multiple users that register and log in from external sources for example a retail app, you do not know the domain they using, however you want the domain to use the OAuth configuration you have set up. Simply set up a wildcard (\*) in the domain setting in the OAuth Configuration, which will include all domains.
 
 <figure><img src="../../.gitbook/assets/Domain_wildcard.png" alt="Domain wildcard"><figcaption><p>Domain wildcard</p></figcaption></figure>
+
+### Configuring OAuth error messages
+
+When an OAuth authentication fails or expires in the mobile app, you need to provide clear, actionable feedback to the end users. By default a generic message is shown, however, you can customize the error message displayed when authentication issues occur, helping users understand what went wrong and how to resolve it.
+
+* The error handling is configured within your [REST function](../solutions/rest-functions.md) using the `error` array.&#x20;
+* Each `error` configuration consists of a conditional `when` trigger that checks the error name using: `when: =@ctx.error.name = "OAuthCredentialsMissingError` .
+* The error handling must be configured in each REST function to ensure that the customized message is shown. If this is not configured a combination of the customized and default message be shown depending on the REST function used.
+* To avoid multiple error messages displaying for the OAuth error message, configure the `groupId` in the error handler in all functions so it only pops up once. The `groupId` must be the same in each function.
+
+{% code title="function.jigx" lineNumbers="true" %}
+```yaml
+provider: DATA_PROVIDER_REST
+method: GET
+url: url
+useLocalCall: true
+
+error:
+  # This condition catches the specific scenario where OAuth credentials are 
+  # missing or invalid, which occurs when; a user's session has expired, 
+  # authorization was revoked, initial authentication failed or was blocked.
+  - when: =@ctx.error.name = 'OAuthCredentialsMissingError'
+    title: Failed to get credentials. Authorization request blocked
+    # Determine if the message is shown or hidden.
+    notification: true
+    # The operations section logs the error details for debugging and audit purposes.
+    operations:
+      - type: operation.upsert-merge
+        table: ='restFunctionErrors'
+        records: |
+          ={
+            "id": $uuid(),
+            "user": @ctx.user.email,
+            "correlationId": @ctx.correlationId,
+            "error": "Unable to sign in",
+            "errorDetail": @ctx.error.message,
+            "errorBody": @ctx.error.message,
+            "entity": @ctx.entity
+          }
+    # The alert section defines what the end user sees in the error message.     
+    alert:
+      # Use manage.jig.com to define customer name as a custom setting for your solution.
+      title: ='Unable to sign in to ' & @ctx.solution.settings.custom.{CustomerName} 
+      description: We couldn't connect to your {CustomerName} work account to complete your sign-in. 
+      Please try again or contact your admin if the issue continues.
+      icon: lock-2
+      # Group related errors together to prevent duplicate alerts.
+      group:
+        id: no-credentials
+      # Configure the UI error layout type, wither modal or toast. 
+      presentAs: modal
+      # Define custom action buttons for user recovery options, 
+      # use IntelliSense for the available list.
+      actions: 
+```
+{% endcode %}
+
+#### Setting Your Customer Name
+
+The error message references `@ctx.solution.settings.custom.{CustomerName}`. To configure this:
+
+1. Navigate to your [solution settings](../solutions/solution-settings/solution-settings.md#custom-variables) in manage.jig.com
+2. Add a custom variable with the key `CustomerName`
+3. Set the value to your organization's display name or the name the OAuth relates to.
+
+This ensures error messages are branded appropriately: "Unable to sign in to Acme Corp" instead of a generic message.
+
+#### **Best practices:**
+
+* Keep the message concise and non-technical
+* Explain what happened in plain language
+* Provide clear next steps (try again, contact admin)
+* Avoid jargon like "OAuth" or "credentials"
 
 ### Considerations
 

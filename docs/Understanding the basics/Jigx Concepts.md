@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Jigx Concepts
 
 Jigx uses concepts, terminology, and elements you might not be familiar with. Below is an explanation of the main core concepts to help you understand and use Jigx better.
@@ -33,7 +16,7 @@ The _home hub_ is the first screen you see when you open and sign into the Jigx 
 
 ## Jigx Builder
 
-Native mobile solutions are built in Microsoft Visual Studio Code, a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the [Jigx Builder](../building-apps-with-jigx/jigx-builder-code-editor/jigx-builder-code-editor.md), which is an extension that allows you to build, test, and publish Jigx mobile app solutions. The **Jigx Builder** extension uses YAML, SQL, JSON, and JSONata. A YAML editor is provided that includes IntelliSense, which allows for code completion by simultaneously pressing the control and spacebar (ctrl+space) keys. Only valid options in the current cursor context are displayed in the code popup. There is built-in [debugging](../building-apps-with-jigx/jigx-builder-code-editor/debugging.md) functionality to assist with troubleshooting your development. Predefined code snippets are provided in the .jigx files to help make development easier and faster. The Jigx Builder loads with a [folder structure](../building-apps-with-jigx/jigx-builder-code-editor/editor.md) to categorize the various files needed to build app solutions. These folders are actions, assets, databases, datasources, functions, jigs, and translations.
+Native mobile solutions are built in Microsoft Visual Studio Code, a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the [Jigx Builder](../building-apps-with-jigx/jigx-builder-code-editor/jigx-builder-code-editor.md), which is an extension that allows you to build, test, and publish Jigx mobile app solutions. The **Jigx Builder** extension uses YAML, SQL, JSON, and JSONata. A YAML editor is provided that includes IntelliSense, which allows for code completion by simultaneously pressing the control and spacebar (ctrl+space) keys. Only valid options in the current cursor context are displayed in the code popup. There is built-in [debugging](../building-apps-with-jigx/jigx-builder-code-_editor_/debugging.md) functionality to assist with troubleshooting your development. Predefined code snippets are provided in the .jigx files to help make development easier and faster. The Jigx Builder loads with a [folder structure](../building-apps-with-jigx/jigx-builder-code-editor/editor.md) to categorize the various files needed to build app solutions. These folders are actions, assets, databases, datasources, functions, jigs, and translations.
 
 <figure><img src="../.gitbook/assets/Debug-1.png" alt=""><figcaption></figcaption></figure>
 
@@ -75,7 +58,7 @@ Functions enable integration with other platforms through data providers. Creati
 
 ## Expressions
 
-Expressions allow you to structure data before binding it to the UI components. Expressions are **JSONata** language-based. JSONata is a lightweight query and transformation language for JSON data. JSONata is a rich complement of built-in operators and functions providing options to manipulate and combine data. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files starts with "@ctx" vs. "$." in JSONata Exerciser (e.g., @ctx.data vs. $.data). Jigx supports shorthand $ expressions for JSONata. For more information, see [Expressions](../building-apps-with-jigx/logic/expressions.md), [Expressions - cheatsheet](../building-apps-with-jigx/logic/expressions-1/expressions-cheatsheet.md) and [Expression examples](<Jigx Concepts.md>).
+Expressions allow you to structure data before binding it to the UI components. Expressions are **JSONata** language-based. JSONata is a lightweight query and transformation language for JSON data. JSONata is a rich complement of built-in operators and functions providing options to manipulate and combine data. Learn more about [JSONata](https://jsonata.org/) and try out your expressions in their [JSONata Exerciser](https://try.jsonata.org/). The root element of Expressions in .jigx files starts with "@ctx" vs. "$." in JSONata Exerciser (e.g., @ctx.data vs. $.data). Jigx supports shorthand $ expressions for JSONata. For more information, see [Expressions](../building-apps-with-jigx/logic/expressions.md), [Expressions - cheatsheet](../building-apps-with-jigx/logic/expressions-cheatsheet.md) and [Expression examples](<Jigx Concepts.md>).
 
 <figure><img src="../.gitbook/assets/jigx-exp.png" alt=""><figcaption></figcaption></figure>
 
@@ -85,7 +68,7 @@ Expressions allow you to structure data before binding it to the UI components. 
 
 ## Database
 
-A [data provider](broken-reference) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](broken-reference) and [Data Provider examples](<Jigx Concepts.md>).
+A [data provider](/broken/pages/Kab75zJjT8KXG00IP7pK) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](/broken/pages/Kab75zJjT8KXG00IP7pK) and [Data Provider examples](<Jigx Concepts.md>).
 
 ## Entities
 

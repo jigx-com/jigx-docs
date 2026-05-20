@@ -1,23 +1,6 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Datasources
 
-Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/).
+Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/). When data required by a solution resides in a different solution, [cross-solution datasource access](datasources/cross-solution-data-access.md#cross-package-datasources-and-action-execution) allows you to reference and query that external solution's data directly.
 
 ## Types
 
@@ -29,7 +12,7 @@ There are three types of datasources available in Jigx Builder.
 
 ## Configuration options
 
-<table><thead><tr><th width="153.67578125">Property</th><th width="323.7421875">Description</th><th>Code Examples</th></tr></thead><tbody><tr><td><code>isDocument</code></td><td>When the <code>isDocument</code> property is set to <code>true</code> on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the <code>initialValues</code> for a <a href="https://docs.jigx.com/examples/readme/components/form">form</a>, set it on the form level and in the datasource <code>isDocument: true</code>, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.</td><td><a href="https://docs.jigx.com/examples/readme/components/form#zUejA">new-contact.jigx</a></td></tr><tr><td><code>jsonProperties</code></td><td>Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use <code>jsonProperties</code> to specify the exact property in the array or nested object that you require. See <a href="data-providers/rest/rest-best-practice.md">Working with complex REST structures</a>.</td><td><a href="https://docs.jigx.com/examples/list-and-view-customers-get#nQfCR">view-customer-details.jigx</a></td></tr></tbody></table>
+<table><thead><tr><th width="153.67578125">Property</th><th width="323.7421875">Description</th><th>Code Examples</th></tr></thead><tbody><tr><td><code>isDocument</code></td><td>When the <code>isDocument</code> property is set to <code>true</code> on a datasource, the datasource will return as a single record (object) to be displayed on a component instead of an array. The first matching row becomes the datasource without wrapping the array. If there is no match it is NULL. If you want to set the <code>initialValues</code> for a <a href="https://docs.jigx.com/examples/readme/components/form">form</a>, set it on the form level and in the datasource <code>isDocument: true</code>, this way you don't have to set it up in the individual components. It is set up in one place and form will match the components to the column names of the datasource.</td><td><a href="https://docs.jigx.com/examples/readme/components/form#zUejA">new-contact.jigx</a></td></tr><tr><td><code>jsonProperties</code></td><td>Working with complex objects can be tricky, as they include arrays, nested objects, and other complex data structures. When integrating and manipulating these JSON structures you can use <code>jsonProperties</code> to specify the exact property in the array or nested object that you require. See <a href="data-providers/rest/rest-best-practice.md">Working with complex REST structures</a>.</td><td><a href="https://docs.jigx.com/examples/readme/data-providers/rest/create-an-app-using-rest-apis/list-_-view-customers-_get_">view-customer-details.jigx</a></td></tr></tbody></table>
 
 ### isDocument example
 
@@ -304,8 +287,104 @@ Datasources are defined once and are available throughout your solution to be re
 1. Open your solution in Jigx Builder and navigate to the **datasources** folder of your solution.
 2. Create a new file called _\<your\_datasource\_name>.jigx._
 3. Invoke IntelliSense (ctrl+space) for the list of available datasources.
-4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Dataor SQL data, you can write SQL queries to return the data you want to use in the solution.
+4. Select the datasource you want to use and configure the properties with values. When choosing Dynamic Data or SQL data, you can write SQL queries to return the data you want to use in the solution.
 5. Next, open the jigs where you want to use the data, use expressions with the datasource option to reference the global datasource file, for example, `=@ctx.datasources.employee`.
+
+### Global Datasource Inputs
+
+This feature extends the global datasource system to support **input passing**, allowing a single global datasource to be instantiated multiple times within a jig with different input values per instance. This mirrors the existing input pattern available in [custom components](../ui/custom-components-_alpha_/inputs-_-outputs-_alpha_.md). Each reference to a global datasource can supply its own `inputs` block, creating an isolated local instance of that datasource scoped to the values provided.
+
+* If you have required parameters you have to use datasource to be able to validate that they exist. If you do not have required parameters you can choose to not use input definitions (within the datasource) and just use normal inputs.
+
+#### How It Works
+
+When a Jig references a global datasource, the runtime now:
+
+1. Detects that the datasource reference points to a global configuration.
+2. Retrieves the global datasource configuration.
+3. Wraps it in an `InputContext` containing the supplied `inputs`.
+4. Creates a local datasource instance the same mechanism used when providing a full inline configuration.
+
+This means two references to the same global datasource with different inputs are completely independent instances at runtime.
+
+#### Configuration
+
+Define the global datasource under the `datasources` folder. Configure the following properties:
+
+<table><thead><tr><th width="160.3515625">Field</th><th>Description</th></tr></thead><tbody><tr><td><code>datasourceId</code></td><td>The ID of the global datasource file to reference. This is referenced in multiple jigs using <code>datasource.reference</code>. </td></tr><tr><td><code>inputs</code></td><td>Key-value pairs passed into the global datasource. Values can be static or dynamic expressions.</td></tr></tbody></table>
+
+{% tabs %}
+{% tab title="Global Datasource" %}
+<pre class="language-yaml"><code class="lang-yaml">type: datasource.sqlite
+# Provide a reference
+datasourceId: contactsDatasource
+options:
+  provider: DATA_PROVIDER_DYNAMIC
+  entities:
+    - default/contacts
+  query: |
+    SELECT 
+      id,
+      '$.firstName',
+      '$.lastName',
+      '$.jobTitle',
+      '$.companyName',
+      '$.phone',
+      '$.email' 
+    FROM 
+      [default/contacts]
+    WHERE
+      id = @contactId or @contactId IS NULL
+  queryParameters:
+    # Access the global data inputs
+    contactId: =@ctx.inputs.contactId
+<strong># Define the inputs 
+</strong>inputs:
+  contactId:
+    type: string
+    required: false
+</code></pre>
+{% endtab %}
+
+{% tab title="datasource" %}
+```yaml
+datasources:
+  first:
+    datasourceId: global-static
+    inputs:
+      name: John
+      surname: Smith
+  second:
+    datasourceId: global-static
+    inputs:
+      name: Vallarie
+      surname: =@ctx.components.surname.state.value
+```
+{% endtab %}
+{% endtabs %}
+
+Inside the global datasource file, inputs are accessed using the standard `ctx.inputs` context,  the same pattern used in custom components.
+
+```yaml
+# In global-static datasource configuration
+=@ctx.inputs.name
+=@ctx.inputs.surname
+```
+
+In the jigs' referencing the global datasource use the `datasource.reference` with the `datasourceId`.
+
+```yaml
+datasources:
+  contactData:
+    type: datasource.reference
+    datasourceId: contactsDatasource
+```
+
+### Naming: `datasourceId` vs `instanceId`
+
+The codebase distinguishes more clearly between two related but different concepts:
+
+<table><thead><tr><th width="156.875">Term</th><th>Meaning</th></tr></thead><tbody><tr><td><code>datasourceId</code></td><td>The identifier of the <strong>datasource file</strong> (analogous to <code>JigId</code> or <code>ComponentId</code>). Used to locate or reference the global configuration on disk.</td></tr><tr><td><code>instanceId</code></td><td>The identifier of a <strong>specific instantiation</strong> of a datasource within a Jig. </td></tr></tbody></table>
 
 ### Local within a jig
 
@@ -321,7 +400,7 @@ The data sets are defined in the datasources inside the individual jig generally
 
 ### See Also
 
-* [static](https://docs.jigx.com/examples/static) datasource examples
-* [sqlite](https://docs.jigx.com/examples/readme/datasource/static) datasource examples
-* [system](https://docs.jigx.com/examples/system)
+* [static](https://docs.jigx.com/examples/readme/datasource/static) datasource examples
+* [sqlite](https://docs.jigx.com/examples/readme/datasource/sqlite) datasource examples
+* [system](https://docs.jigx.com/examples/readme/datasource/system)
 * [File handling](file-handling.md)

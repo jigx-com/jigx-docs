@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # REST
 
 This section explains how to configure the REST data provider to call external REST API endpoints. Use it to fetch data, send updates, or trigger external services in response to user interaction. The REST data provider is one of the most commonly used in Jigx solutions, enabling data exchange with REST services that accept or return JSON, XML, or binary data.

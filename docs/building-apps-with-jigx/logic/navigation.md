@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Navigation
 
 Navigation allows you to flow through the app. Whenever you [go-to](https://docs.jigx.com/examples/readme/actions/go-to) a jig, the jig is added to the history, this allows you to go back and visit the jigs you visited before, and either show the history (data) on the UI or a new (clear) jig. This is helpful in complex flows, for example, adding multiple lines to an invoice and then submitting the invoice, or adding the details for each guest in a booking.

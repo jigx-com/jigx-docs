@@ -3,20 +3,6 @@ title: Best practice
 slug: ipWT-state
 createdAt: Mon Sep 02 2024 12:33:26 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Dec 03 2024 11:46:39 GMT+0000 (Coordinated Universal Time)
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Best practice
@@ -33,8 +19,8 @@ layout:
 
 1. Set the **ID** to be stored in the solution state, using the `set-state` action. The ID is the least amount of data required to identify each job uniquely. The ID is used throughout the solution to reference the necessary data in each of the solution's jigs.
 2. In the datasource queries use the ID to return the required data.
-   * In a [global datasource](https://docs.jigx.com/datasources#gCN9o) query reference the data required. The global datasource is referenced in each jig where the data is required.
-   * In the individual jig 's [datasource](https://docs.jigx.com/datasources#2AD3k) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
+   * In a [global datasource](../data/datasources.md#in-a-global-file) query reference the data required. The global datasource is referenced in each jig where the data is required.
+   * In the individual jig 's [datasource](../data/datasources.md) query. The query is configured to only return the exact data required for that jig using the ID as the unique identifier.
 
 {% tabs %}
 {% tab title="set-solution-state (action)" %}

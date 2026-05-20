@@ -24,7 +24,11 @@
 ## Actions Context
 
 ```yaml
-=@ctx.actions.save.state.isPending    # Action status
+=@ctx.actions.save.state.isPending    # Action status - tracks whether an async action is 
+                                      # currently executing. Returns true while an async action 
+                                      # is in progress and false when idle. 
+                                      # Supported for all async actions. Sync-only actions
+                                      # (e.g. go-to, set-state, reset-state) always return false.
 =@ctx.actions.save.state.response     # Action result
 =@ctx.actions.save.state.value        # Action value
 =@ctx.actions.export.outputs.fileUri  # Action outputs

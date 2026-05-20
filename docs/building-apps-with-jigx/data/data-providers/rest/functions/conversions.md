@@ -6,6 +6,10 @@ Likewise, when retrieving files from a REST endpoint, they are often returned in
 
 This is achieved by using `conversions` in functions. See [File handling](../../../file-handling.md) for detailed information on working with files and converting them into the correct format.
 
+{% hint style="warning" %}
+Operations are not aware of `conversions` configured at the function level. Each operation must define its own `conversions` property to handle file format transformations. Function-level conversions do not cascade to individual operations.
+{% endhint %}
+
 ## Example and code snippet
 
 ### Incoming and outgoing conversions

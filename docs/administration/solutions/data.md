@@ -1,20 +1,3 @@
----
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
----
-
 # Data
 
 The Data tab allows you to manage all the [Dynamic Data](../../building-apps-with-jigx/data/data-providers/dynamic-data/dynamic-data.md) tables and table contents used by the solution. All changes made in Jigx Management will be synced bi-directionally with the devices in real-time.
@@ -96,7 +79,7 @@ To delete a table, follow these steps:
 * The _Unused tab_ is only visible to the solution `owner`.
 * Removing a table from default.jigx file in Jigx Builder and publishing the solution means the table is no longer used in the solution. In Jigx Management under Data, the table moves to the _Unused tab_.
 * If there are no unused tables the _Unused tab_ is not visible in the Data option.
-* [Authorized Users (RLS)](docId:xy4a9JXqIEBPICKan-N0M) still applies to the data records in the unused table. Even as the solution owner, you will only see data records you are authorized to see. It is important to note that even though you cannot see all the data, deleting the table will delete _ALL_ records and the table.
+* [Authorized Users (RLS)](row-level-security/authorized-users.md)) still applies to the data records in the unused table. Even as the solution owner, you will only see data records you are authorized to see. It is important to note that even though you cannot see all the data, deleting the table will delete _ALL_ records and the table.
 * You can choose to only delete the records in the unused table by selecting the checkbox in front of the record. The **Delete Selected** button appears at the top.
 * Make a backup of the unused table's data by clicking the **Download** button at the top of the screen. The data is downloaded in a JSON file. If needed, you can reuse the data by importing (upload) data into a new table. _Important_: the data in the downloaded JSON file is the data you are authorized to see.
 * Existing records in the unused table can be edited, but you cannot add new records.
