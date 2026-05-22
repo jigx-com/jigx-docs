@@ -195,7 +195,7 @@ For more details and examples refer to the _Shared Expressions_ section in [Expr
 
 ## Dependencies
 
-In the `dependencies` property, you can define the mobile app build version compatible with the YAML configuration.
+In the `dependencies` property, you can define the mobile app build version and app bundle IDs compatible with the YAML configuration.
 
 {% columns %}
 {% column %}
@@ -213,6 +213,39 @@ dependencies:
 <figure><img src="../../../.gitbook/assets/AppOutDate.png" alt="Out of date app screen" width="188"><figcaption><p>Out of date app screen</p></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
+
+Use `bundleId` to restrict a solution to specific mobile app builds.
+
+* If `bundleId` is omitted, the solution is compatible with all app bundle IDs.
+* If `'*'` is included, the solution is compatible with any app bundle ID.
+* If the current app bundle ID does not match an entry in the list, the solution does not render in that app.
+
+{% tabs %}
+{% tab title="index.jigx (single bundle ID)" %}
+```yaml
+dependencies:
+  bundleId:
+    - com.jigx.app
+```
+{% endtab %}
+
+{% tab title="index.jigx (multiple bundle IDs)" %}
+```yaml
+dependencies:
+  bundleId:
+    - com.jigx.app
+    - com.jigx.enterprise
+```
+{% endtab %}
+
+{% tab title="index.jigx (wildcard)" %}
+```yaml
+dependencies:
+  bundleId:
+    - '*'
+```
+{% endtab %}
+{% endtabs %}
 
 ## See Also
 

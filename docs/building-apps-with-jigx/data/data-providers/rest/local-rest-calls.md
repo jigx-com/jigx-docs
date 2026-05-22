@@ -15,7 +15,6 @@ A **local REST function** call allows the mobile app to perform all the processi
 ### Considerations
 
 * Only **OAuth** authentication can be used with local REST calls.
-* When `useLocalCall: true` is set, functions that rely on secrets or other authentication mechanisms not available locally will not execute.
 * Setting `useLocal: false` limits support for REST robustness and `@ctx` features, and may slow down data syncing between the device and the remote system.
 
 ### Example
