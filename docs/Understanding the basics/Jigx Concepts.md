@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Jigx Concepts
 
 Jigx uses concepts, terminology, and elements you might not be familiar with. Below is an explanation of the main core concepts to help you understand and use Jigx better.
@@ -16,7 +37,7 @@ The _home hub_ is the first screen you see when you open and sign into the Jigx 
 
 ## Jigx Builder
 
-Native mobile solutions are built in Microsoft Visual Studio Code, a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the [Jigx Builder](../building-apps-with-jigx/jigx-builder-code-editor/jigx-builder-code-editor.md), which is an extension that allows you to build, test, and publish Jigx mobile app solutions. The **Jigx Builder** extension uses YAML, SQL, JSON, and JSONata. A YAML editor is provided that includes IntelliSense, which allows for code completion by simultaneously pressing the control and spacebar (ctrl+space) keys. Only valid options in the current cursor context are displayed in the code popup. There is built-in [debugging](../building-apps-with-jigx/jigx-builder-code-_editor_/debugging.md) functionality to assist with troubleshooting your development. Predefined code snippets are provided in the .jigx files to help make development easier and faster. The Jigx Builder loads with a [folder structure](../building-apps-with-jigx/jigx-builder-code-editor/editor.md) to categorize the various files needed to build app solutions. These folders are actions, assets, databases, datasources, functions, jigs, and translations.
+Native mobile solutions are built in Microsoft Visual Studio Code, a development environment installed on many platforms, including Windows and Mac. Jigx extends VS Code with the [Jigx Builder](../building-apps-with-jigx/jigx-builder-code-editor/jigx-builder-code-editor.md), which is an extension that allows you to build, test, and publish Jigx mobile app solutions. The **Jigx Builder** extension uses YAML, SQL, JSON, and JSONata. A YAML editor is provided that includes IntelliSense, which allows for code completion by simultaneously pressing the control and spacebar (ctrl+space) keys. Only valid options in the current cursor context are displayed in the code popup. There is built-in [debugging](../building-apps-with-jigx/jigx-builder-code-_editor_/debugging.md) functionality to assist with troubleshooting your development. Predefined code snippets are provided in the .jigx files to help make development easier and faster. The Jigx Builder loads with a [folder structure](../building-apps-with-jigx/jigx-builder-code-_editor_/editor.md#solution-scaffolding) to categorize the various files needed to build app solutions. These folders are actions, assets, databases, datasources, functions, jigs, and translations.
 
 <figure><img src="../.gitbook/assets/Debug-1.png" alt=""><figcaption></figcaption></figure>
 
@@ -68,11 +89,11 @@ Expressions allow you to structure data before binding it to the UI components. 
 
 ## Database
 
-A [data provider](/broken/pages/Kab75zJjT8KXG00IP7pK) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](/broken/pages/Kab75zJjT8KXG00IP7pK) and [Data Provider examples](<Jigx Concepts.md>).
+A [data provider](../building-apps-with-jigx/data/data-providers/) is a service that accepts data inputs and returns data outputs. Jigx data providers include dynamic, local, REST, Salesforce, SOAP and SQL. For more information see [Data Providers](../building-apps-with-jigx/data/data-providers/) and [Data Provider examples](<Jigx Concepts.md>).
 
 ## Entities
 
-Entities are tables in Jigx Dynamic Data or other databases where your data gets saved, created, updated, and deleted. Use an action such as execute-entity to work with the data. Jigx data is managed in the [Data](../administration/solutions/data.md) menu option in Jigx Management. Other databases are managed using the [connections](https://docs.jigx.com/connections), [SQL Functions](../administration/solutions/sql-functions.md), [REST Functions](../administration/solutions/rest-functions.md), and [SOAP Functions](../administration/solutions/soap-functions.md) in Jigx Management. For more information, see [execute-entity](<Jigx Concepts.md>).
+Entities are tables in Jigx Dynamic Data or other databases where your data gets saved, created, updated, and deleted. Use an action such as execute-entity to work with the data. Jigx data is managed in the [Data](../administration/solutions/data.md) menu option in Jigx Management. Other databases are managed using the [connections](../administration/solutions/connections.md), [SQL Functions](../administration/solutions/sql-functions.md), [REST Functions](../administration/solutions/rest-functions.md), and [SOAP Functions](../administration/solutions/soap-functions.md) in Jigx Management. For more information, see [execute-entity](<Jigx Concepts.md>).
 
 ## Jigx Management
 

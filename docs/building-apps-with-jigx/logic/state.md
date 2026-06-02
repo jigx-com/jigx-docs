@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # State
 
 State manages the data within Jigx solutions, jigs, and components and controls the UI dynamically. The state allows solutions and components to change their output in response to user inputs and actions. Often, the state is used as a global variable that can be used throughout the solution or as a local state used only in that specific jig or component.
@@ -423,17 +444,18 @@ You can use actions to set (update) or reset (clear) a state either in a solutio
 The following **set-state** actions are available:
 
 * [action.set-state](https://docs.jigx.com/examples/readme/actions/set-state)
-* `action.set-solution-state`
-* `action.set-jig-state`
+* [action.set-solution-state](https://docs.jigx.com/examples/readme/actions/state-actions/solution-state-set-and-reset)
+* [action.set-jig-state](https://docs.jigx.com/examples/readme/actions/state-actions/jig-state-set-and-reset)
+* [action.set.component-state](https://docs.jigx.com/examples/readme/actions/state-actions/jig-state-set-and-reset)
 * `action.set-custom-component-state`
 
 The following **reset-state** actions are available:
 
-* [action.reset-state](https://docs.jigx.com/examples/reset-state)
-* `action.reset-solution-state`
-* `action.reset-jig-state`
+* [action.reset-state](https://docs.jigx.com/examples/readme/actions/state-actions/reset-state)
+* [action.reset-solution-state](https://docs.jigx.com/examples/readme/actions/state-actions/solution-state-set-and-reset)
+* [action.reset-jig-state](https://docs.jigx.com/examples/readme/actions/state-actions/jig-state-set-and-reset)
+* [action.reset.component-state](https://docs.jigx.com/examples/readme/actions/state-actions/jig-state-set-and-reset)
 * `action.reset-custom-component-state`
-* `action.reset-component-state`
 
 The only difference between these states are the scope where they are used. See the table below.
 

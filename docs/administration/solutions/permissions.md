@@ -3,11 +3,29 @@ title: Permissions
 slug: YycW-permissions
 createdAt: Thu Jun 09 2022 09:03:09 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 08:50:38 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Permissions
 
-Access to the solution is managed on the **Permissions** tab. Here, you can give users access to the solution, define their role in the solution scope, and assign `Solution Group` membership for the visibility of [Widgets](../../Administration/Solutions/Widgets.md).
+Access to the solution is managed on the **Permissions** tab. Here, you can give users access to the solution, define their role in the solution scope, and assign `Solution Group` membership for the visibility of [Widgets](https://docs.jigx.com/examples/readme/widgets).
 
 <figure><img src="../../.gitbook/assets/JM-PermissionsL.png" alt="Managing user permissions in a solution"><figcaption><p>Managing user permissions in a solution</p></figcaption></figure>
 

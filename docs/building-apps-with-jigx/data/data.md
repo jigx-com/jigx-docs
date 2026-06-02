@@ -3,6 +3,24 @@ title: Data
 slug: aI2F-data
 createdAt: Fri Jun 17 2022 09:30:01 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Mar 26 2024 12:20:36 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Data
@@ -21,7 +39,7 @@ This section covers data concepts, lifecycles, syncing and loading data, and dat
 ### Data Providers
 
 1. [Dynamic Data](data-providers/dynamic-data/dynamic-data.md) is a Jigx-specific data source that automatically syncs data in real time between devices. It is a great platform for disposable data, defining data that is not already available in existing systems, and how to sync data in real time between users and their devices, regardless of where it is updated.
-2. [Microsoft Azure SQL](https://docs.jigx.com/microsoft-azure-sql) provides an overview of working with Microsoft Azure SQL and a guide on configuring secure access and Jigx functions to read, update and delete data with queries and stored procedures.
+2. [Microsoft Azure SQL](https://docs.jigx.com/examples/readme/data-providers/microsoft-azure-sql) provides an overview of working with Microsoft Azure SQL and a guide on configuring secure access and Jigx functions to read, update and delete data with queries and stored procedures.
 3. [Microsoft OneDrive](data-providers/microsoft-onedrive.md) integration allows you to create, updated, and delete files in OneDrive. In a solution, you can list, and download files from OneDrive.
 4. [REST](data-providers/rest/rest.md) provides an overview of working with REST services, including how data is returned, transformed, and used in the solution. This section explains selective data updates and how to configure security and more complex REST calls.
 5. [Salesforce](data-providers/salesforce/salesforce.md) provider allows you to integrate with your Salesforce instance, with access to share data about sales, customers
