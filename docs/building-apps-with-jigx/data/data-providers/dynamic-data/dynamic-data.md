@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Dynamic Data
 
 Apps need data, while [static](https://docs.jigx.com/examples/readme/datasource/static) allows you to add static or testing data into a jig it is very limiting, and you will want access to a database for data. Jigx **Dynamic Data** is a built-in database used to create, read, update, and delete data in an app.

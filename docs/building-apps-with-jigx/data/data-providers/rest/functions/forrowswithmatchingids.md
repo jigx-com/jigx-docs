@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # forRowsWithMatchingids
 
 By default, the JSON payload returned from the REST call replaces all existing data in the SQLite database. However, the `forRowsWithMatchingIds` property controls how data from REST API responses is synchronized with the local SQLite database.&#x20;

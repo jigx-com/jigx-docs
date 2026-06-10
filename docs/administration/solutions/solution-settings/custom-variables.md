@@ -3,6 +3,24 @@ title: Custom variables
 slug: f4oT-custom
 createdAt: Wed Aug 14 2024 09:07:45 GMT+0000 (Coordinated Universal Time)
 updatedAt: Tue Apr 15 2025 13:23:50 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Custom variables

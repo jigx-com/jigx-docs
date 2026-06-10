@@ -3,6 +3,24 @@ title: Widgets
 slug: I2vz-widgets
 createdAt: Wed Jan 17 2024 12:27:32 GMT+0000 (Coordinated Universal Time)
 updatedAt: Fri Mar 07 2025 09:34:40 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Widgets

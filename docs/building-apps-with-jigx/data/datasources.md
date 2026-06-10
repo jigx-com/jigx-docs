@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Datasources
 
 Datasources are sets of data used in Jigx solutions and are used to reference data from the various [Data Providers](data-providers/). When data required by a solution resides in a different solution, [cross-solution datasource access](datasources/cross-solution-data-access.md#cross-package-datasources-and-action-execution) allows you to reference and query that external solution's data directly.

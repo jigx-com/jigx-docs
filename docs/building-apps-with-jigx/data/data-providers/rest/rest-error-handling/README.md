@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # REST error handling
 
 REST errors returned by the endpoints in an app are often too technical for end-users to comprehend. Jigx allows you to customize these error messages to improve user experience, communicate more effectively, and ensure users understand that errors are not their fault. By configuring custom error handling, you can:

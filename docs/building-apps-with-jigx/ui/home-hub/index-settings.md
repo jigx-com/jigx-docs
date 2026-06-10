@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Index settings
 
 In the `index.jigx` file, you set solution settings, including the primary information about the solution, the [Home Hub](home-hub.md) set up, and properties reusable throughout the solution.

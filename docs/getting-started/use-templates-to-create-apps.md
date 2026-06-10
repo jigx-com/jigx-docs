@@ -3,6 +3,24 @@ title: Use templates to create apps
 slug: vBJW-Ha5s0EJ6Ht4s93-e
 createdAt: Tue Apr 04 2023 06:20:14 GMT+0000 (Coordinated Universal Time)
 updatedAt: Wed Feb 12 2025 17:54:39 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Use templates to create apps

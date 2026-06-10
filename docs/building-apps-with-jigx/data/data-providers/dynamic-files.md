@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Dynamic files
 
 Dynamic Files extend Jigx's Dynamic Data entities to include file references, allowing files to be securely stored and associated with records. Files are physically stored in Amazon S3, offering a combination of simplicity, security, and portability.

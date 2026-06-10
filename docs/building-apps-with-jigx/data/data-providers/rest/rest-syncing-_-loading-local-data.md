@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # REST syncing & loading local Data
 
 <figure><img src="../../../../.gitbook/assets/REST-datasync.png" alt="" width="563"><figcaption></figcaption></figure>

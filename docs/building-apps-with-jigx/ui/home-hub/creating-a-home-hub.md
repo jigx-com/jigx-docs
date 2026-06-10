@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Creating a Home Hub
 
 Creating a home screen (hub) for a mobile app can be a great way to enhance the user experience and provide more functionality. In this section, we will explore the benefits of creating a home screen and the steps involved in configuring one.

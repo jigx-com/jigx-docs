@@ -3,6 +3,24 @@ title: Groups
 slug: dgNv-groups
 createdAt: Tue Jun 07 2022 10:00:03 GMT+0000 (Coordinated Universal Time)
 updatedAt: Mon Dec 09 2024 09:18:00 GMT+0000 (Coordinated Universal Time)
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # Groups

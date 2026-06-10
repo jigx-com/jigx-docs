@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Install
 
 This section covers installing the Jigx Builder extension, versions, updates, uninstalling, and the recommended source control. The numbered image below indicates each of these areas in the Jigx Builder.

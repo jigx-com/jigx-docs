@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Actions
 
 Actions refer to specific controls or operations that respond to an event or input. They range from simple operations like clicking a submit button or navigating to a previous screen to more complex tasks like data interaction.

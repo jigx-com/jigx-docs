@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Salesforce
 
 Jigx easily integrates with your Salesforce instance, allowing you to share data about customers, sales processes, marketing campaigns, and more. The Jigx Salesforce provider exposes the standard and custom Salesforce objects. You can manage your customer data, such as leads, contacts, accounts, and opportunities, using CRUD methods.

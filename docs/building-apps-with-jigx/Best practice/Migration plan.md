@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Migration plan
 
 [Release 2025.1](https://docs.jigx.com/release-notes#affhn) - introduces several updates to the index.jigx file, widgets, and location. Some properties have been deprecated, and a new grid jig type and a grid-item component have been added. These updates provide more versatility in app design, enhance layout options, and optimize screen space usage. To take advantage of these new features in your existing solutions, follow the guidance below to update your implementation.

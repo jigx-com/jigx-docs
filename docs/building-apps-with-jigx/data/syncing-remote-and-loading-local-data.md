@@ -1,3 +1,24 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Syncing remote and loading local Data
 
 <figure><img src="../../.gitbook/assets/data-remotesync.png" alt="" width="563"><figcaption></figcaption></figure>

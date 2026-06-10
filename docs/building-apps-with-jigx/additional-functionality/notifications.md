@@ -1,8 +1,29 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
 # Notifications
 
-Notifications are a powerful way to grab your user's attention. With Jigx, notifications appear on the user's device as push and in-app notifications.
+Notifications are a powerful way to grab your user's attention. With Jigx, notifications appear on the user's device as push and in-app notifications. Manage notifications in the app using filters, the _Mark All as Read_ icon, and the _Trash_ icon to delete read or all notifications.
 
-<figure><img src="../../.gitbook/assets/notofications.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JM-Notifications.PNG" alt="In-app and push notifications" width="375"><figcaption><p>In-app and push notifications</p></figcaption></figure>
 
 There are three different ways to create notifications:
 
