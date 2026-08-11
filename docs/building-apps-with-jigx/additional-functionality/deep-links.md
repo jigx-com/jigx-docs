@@ -141,3 +141,7 @@ actions:
 ```
 {% endtab %}
 {% endtabs %}
+
+### Link to a jig inside a package
+
+Deep link to a jig inside a [package](../data/datasources/cross-solution-data-access.md), the URL shape is `//app/solution/{rootSolutionId}/package/{packageIdOrName}/jig/{jigId}`
